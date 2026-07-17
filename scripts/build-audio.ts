@@ -154,6 +154,50 @@ function fillBlanks(stem: string, answers: string[]): string {
   return stem.split(BLANK).reduce((acc, part, idx) => (idx === 0 ? part : acc + (answers[i++] ?? BLANK) + part));
 }
 
+/** Dos voces contrastantes para los diálogos anónimos A:/B: de los ejercicios. */
+const DIALOGUE_VOICES: Record<string, { kokoro: string; lang: string }> = {
+  A: { kokoro: 'af_bella', lang: 'en-US' },
+  B: { kokoro: 'am_michael', lang: 'en-US' },
+};
+
+/**
+ * Parte "A: ...  B: ..." en turnos, o null si no hay marcadores.
+ *
+ * Las etiquetas "A:"/"B:" NO van al audio: son señales de turno, no habla. Sin
+ * esto el TTS leía literalmente "A" y "B", que sonaba raro.
+ */
+function parseTurns(text: string): { label: string; text: string }[] | null {
+  if (!/\b[A-Z]:\s/.test(text)) return null;
+  const parts = text.split(/\b([A-Z]):\s*/).filter((s, i) => i > 0 || s.trim());
+  const turns: { label: string; text: string }[] = [];
+  for (let i = 0; i < parts.length - 1; i += 2) {
+    const label = parts[i]!.trim();
+    const body = parts[i + 1]!.trim();
+    if (label && body) turns.push({ label, text: body });
+  }
+  return turns.length >= 2 ? turns : null;
+}
+
+/** Emite un audio de diálogo A:/B: con una voz por hablante (solo Kokoro). */
+function pushDialogue(key: string, turns: { label: string; text: string }[]): void {
+  if (PROVIDER_ID === 'azure') {
+    // Azure multi-voz se maneja con segments igual; abajo se arma el SSML.
+  }
+  const known = Object.keys(DIALOGUE_VOICES);
+  const segments = turns.map((t) => {
+    const v = DIALOGUE_VOICES[t.label] ?? DIALOGUE_VOICES[known[0]!]!;
+    return { text: t.text, voice: v.kokoro, lang: v.lang };
+  });
+  utterances.push({
+    key,
+    text: turns.map((t) => t.text).join(' '), // referencia para el hash y el fallback
+    voice: segments[0]!.voice,
+    rate: 0.95,
+    lang: 'en-US',
+    segments,
+  });
+}
+
 for (const atom of atoms) {
   switch (atom.kind) {
     case 'phrase': {
@@ -197,7 +241,11 @@ for (const atom of atoms) {
           atom.format === 'cloze'
             ? fillBlanks(item.stem, (item.blanks ?? []).map((b) => b.accept[0]!))
             : item.answer?.accept[0];
-        if (text) push(`${atom.id}.item.${i}`, text, speaker);
+        if (!text) return;
+        // Si el ítem es un diálogo A:/B:, dos voces sin leer las etiquetas.
+        const turns = parseTurns(text);
+        if (turns) pushDialogue(`${atom.id}.item.${i}`, turns);
+        else push(`${atom.id}.item.${i}`, text, speaker);
       });
       break;
     }
@@ -249,8 +297,13 @@ const manifest: Manifest = existsSync(MANIFEST_PATH)
  */
 const MULTI_SENTENCE_PIPELINE = 'v2-split';
 const hashOf = (u: Utterance): string => {
-  const tag = splitSentences(u.text).length > 1 ? `|${MULTI_SENTENCE_PIPELINE}` : '';
-  return createHash('sha256').update(`${u.text}|${u.voice}|${u.rate}|${u.lang}${tag}`).digest('hex').slice(0, 16);
+  // Los segmentos (diálogo A:/B: con dos voces) definen el audio: van al hash.
+  const segTag = u.segments ? '|seg:' + u.segments.map((s) => `${s.voice}:${s.text}`).join('|') : '';
+  const tag = !u.segments && splitSentences(u.text).length > 1 ? `|${MULTI_SENTENCE_PIPELINE}` : '';
+  return createHash('sha256')
+    .update(`${u.text}|${u.voice}|${u.rate}|${u.lang}${tag}${segTag}`)
+    .digest('hex')
+    .slice(0, 16);
 };
 
 const srcOf = (key: string): string => `/audio/${key.split('.').slice(0, 2).join('/')}/${key}.mp3`;

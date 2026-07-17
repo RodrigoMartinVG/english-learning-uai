@@ -21,6 +21,8 @@ const MP3_BITRATE = 64;
 
 /** Silencio entre oraciones. Un punto tiene que pausar más que una coma. */
 const SENTENCE_GAP_MS = 300;
+/** Silencio entre turnos de distinto hablante: más largo que entre oraciones. */
+const TURN_GAP_MS = 450;
 /** Debajo de esto es silencio: se recorta de los extremos de cada oración. */
 const SILENCE_THRESHOLD = 0.01;
 
@@ -31,6 +33,18 @@ function trimSilence(a: Float32Array): Float32Array {
   while (s < e && Math.abs(a[s]!) < SILENCE_THRESHOLD) s++;
   while (e > s && Math.abs(a[e]!) < SILENCE_THRESHOLD) e--;
   return a.subarray(s, e + 1);
+}
+
+/** Une trozos de audio con `gapSamples` de silencio entre cada uno. */
+function concat(pieces: Float32Array[], gapSamples: number): Float32Array {
+  const total = pieces.reduce((n, p) => n + p.length, 0) + gapSamples * (pieces.length - 1);
+  const merged = new Float32Array(Math.max(0, total));
+  let offset = 0;
+  pieces.forEach((p, i) => {
+    merged.set(p, offset);
+    offset += p.length + (i < pieces.length - 1 ? gapSamples : 0);
+  });
+  return merged;
 }
 
 type KokoroModel = {
@@ -56,6 +70,7 @@ export function createKokoroProvider(dtype: 'q8' | 'fp32' = 'q8'): TtsProvider {
 
     async synth(u: Utterance): Promise<SynthResult> {
       if (!model) throw new Error('kokoro: init() no fue llamado');
+      const m = model; // referencia no-null para los closures de abajo
       if (!(u.voice in model.voices)) {
         throw new Error(
           `kokoro: la voz "${u.voice}" no existe (emisión "${u.key}"). ` +
@@ -63,39 +78,35 @@ export function createKokoroProvider(dtype: 'q8' | 'fp32' = 'q8'): TtsProvider {
         );
       }
 
-      const sentences = splitSentences(u.text);
+      let sampleRate = 24000;
 
-      // Una sola oración: camino directo, sin recorte ni concatenación.
-      if (sentences.length === 1) {
-        const out = await model.generate(u.text, { voice: u.voice, speed: u.rate });
+      // Genera un texto de una voz, partiendo en oraciones para que los puntos pausen.
+      const sayOneVoice = async (text: string, voice: string): Promise<Float32Array> => {
+        const sentences = splitSentences(text);
+        const pieces: Float32Array[] = [];
+        for (const s of sentences) {
+          const out = await m.generate(s, { voice, speed: u.rate });
+          sampleRate = out.sampling_rate;
+          pieces.push(trimSilence(out.audio));
+        }
+        return concat(pieces, Math.round((sampleRate * SENTENCE_GAP_MS) / 1000));
+      };
+
+      // Multi-voz (ejercicio A:/B:): un trozo por turno, con su voz, y pausa de turno.
+      if (u.segments && u.segments.length > 0) {
+        const turns: Float32Array[] = [];
+        for (const seg of u.segments) turns.push(await sayOneVoice(seg.text, seg.voice));
+        const merged = concat(turns, Math.round((sampleRate * TURN_GAP_MS) / 1000));
         return {
-          data: await encodeMp3(out.audio, out.sampling_rate, MP3_BITRATE),
-          durationMs: Math.round((out.audio.length / out.sampling_rate) * 1000),
+          data: await encodeMp3(merged, sampleRate, MP3_BITRATE),
+          durationMs: Math.round((merged.length / sampleRate) * 1000),
         };
       }
 
-      // Varias oraciones: cada una por separado, recortada, unidas con un silencio
-      // real. Es lo que le da al punto la pausa que Kokoro no le da solo.
-      let sampleRate = 24000;
-      const pieces: Float32Array[] = [];
-      for (const s of sentences) {
-        const out = await model.generate(s, { voice: u.voice, speed: u.rate });
-        sampleRate = out.sampling_rate;
-        pieces.push(trimSilence(out.audio));
-      }
-
-      const gap = Math.round((sampleRate * SENTENCE_GAP_MS) / 1000);
-      const totalLen = pieces.reduce((n, p) => n + p.length, 0) + gap * (pieces.length - 1);
-      const merged = new Float32Array(totalLen);
-      let offset = 0;
-      pieces.forEach((p, i) => {
-        merged.set(p, offset);
-        offset += p.length + (i < pieces.length - 1 ? gap : 0);
-      });
-
+      const merged = await sayOneVoice(u.text, u.voice);
       return {
         data: await encodeMp3(merged, sampleRate, MP3_BITRATE),
-        durationMs: Math.round((totalLen / sampleRate) * 1000),
+        durationMs: Math.round((merged.length / sampleRate) * 1000),
       };
     },
   };

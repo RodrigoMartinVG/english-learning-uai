@@ -29,12 +29,14 @@ function ratePercent(rate: number): string {
 }
 
 function ssml(u: Utterance): string {
-  return (
-    `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="${u.lang}">` +
-    `<voice name="${u.voice}">` +
-    `<prosody rate="${ratePercent(u.rate)}">${escapeXml(u.text)}</prosody>` +
-    `</voice></speak>`
-  );
+  const rate = ratePercent(u.rate);
+  // Diálogo A:/B: → un <voice> por turno. Azure sí soporta varias voces por speak.
+  const body = u.segments
+    ? u.segments
+        .map((s) => `<voice name="${s.voice}"><prosody rate="${rate}">${escapeXml(s.text)}</prosody></voice>`)
+        .join('<break time="450ms"/>')
+    : `<voice name="${u.voice}"><prosody rate="${rate}">${escapeXml(u.text)}</prosody></voice>`;
+  return `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="${u.lang}">${body}</speak>`;
 }
 
 export function createAzureProvider(key: string, region: string): TtsProvider {

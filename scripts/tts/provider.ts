@@ -8,6 +8,13 @@
 
 export type ProviderId = 'kokoro' | 'azure';
 
+/** Un turno de un audio multi-voz: su texto y con qué voz se dice. */
+export interface Segment {
+  text: string;
+  voice: string;
+  lang: string;
+}
+
 /** Una emisión a sintetizar: el texto de un átomo con la voz de su speaker. */
 export interface Utterance {
   /** Clave estable en el manifest. Ej: "en1.u1.p.007" o "en1.u1.qa.001.reply.0" */
@@ -22,6 +29,14 @@ export interface Utterance {
    * Azure lo usa para el truco de acento: texto inglés con locale portugués.
    */
   lang: string;
+  /**
+   * Turnos con voces distintas, para los ejercicios de diálogo (A:/B:).
+   *
+   * Cuando está presente, el audio se arma con estos segmentos —cada uno con su
+   * voz— y `text`/`voice` se ignoran. Es lo que convierte "A: What do you do?
+   * B: I'm a teacher" en dos voces de verdad, sin leer las etiquetas "A" y "B".
+   */
+  segments?: Segment[];
 }
 
 export interface SynthResult {
