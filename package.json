@@ -21,7 +21,9 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@breezystack/lamejs": "^1.2.7",
     "@types/node": "^26.1.1",
+    "kokoro-js": "^1.2.1",
     "tsx": "^4.23.1",
     "typescript": "^7.0.2"
   },

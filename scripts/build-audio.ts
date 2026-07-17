@@ -7,11 +7,14 @@
  * El contenido NO se toca: los mp3 y el manifest son derivados. El manifest es
  * el índice que la app cruza con los átomos en runtime.
  *
+ * Proveedor por defecto: Kokoro, local y libre. No hace falta ninguna credencial.
+ *
  * Uso:
- *   npm run build:audio -- --dry-run     reporta qué haría y cuántos chars cuesta
- *   npm run build:audio                  sintetiza lo que falta
- *   npm run build:audio -- --force       re-sintetiza todo
- *   npm run build:audio -- --only=en1.u1.p   filtra por prefijo de clave
+ *   npm run build:audio -- --dry-run          reporta qué haría, sin sintetizar
+ *   npm run build:audio                       sintetiza lo que falta (Kokoro)
+ *   npm run build:audio -- --force            re-sintetiza todo
+ *   npm run build:audio -- --only=en1.u1.p    filtra por prefijo de clave
+ *   npm run build:audio -- --provider=azure   usa Azure (necesita .env)
  */
 
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
@@ -26,7 +29,8 @@ import {
   type Speaker,
 } from '../content/schema.ts';
 import { createAzureProvider } from './tts/azure.ts';
-import { estimateDurationMs, type TtsProvider, type Utterance } from './tts/provider.ts';
+import { createKokoroProvider } from './tts/kokoro.ts';
+import type { ProviderId, TtsProvider, Utterance } from './tts/provider.ts';
 
 const ROOT = join(import.meta.dirname, '..');
 const CONTENT_DIR = join(ROOT, 'content');
@@ -43,6 +47,13 @@ const args = process.argv.slice(2);
 const DRY_RUN = args.includes('--dry-run');
 const FORCE = args.includes('--force');
 const ONLY = args.find((a) => a.startsWith('--only='))?.slice('--only='.length);
+const PROVIDER_ID = (args.find((a) => a.startsWith('--provider='))?.slice('--provider='.length) ??
+  'kokoro') as ProviderId;
+
+if (PROVIDER_ID !== 'kokoro' && PROVIDER_ID !== 'azure') {
+  console.error(`✗ proveedor desconocido: "${PROVIDER_ID}". Usá kokoro (default) o azure.`);
+  process.exit(1);
+}
 
 /* ────────────────────────────────── carga ───────────────────────────────────────── */
 
@@ -67,12 +78,13 @@ const byId = new Map(atoms.map((a) => [a.id, a]));
 /* ──────────────────────────── recolección de emisiones ──────────────────────────── */
 
 /**
- * xml:lang sale de la VOZ, no del contenido.
+ * En Azure el xml:lang sale de la VOZ, no del contenido.
  *
  * Es deliberado: para los acentos no nativos le damos texto en inglés a una voz
  * portuguesa/alemana/rusa. Con el locale de la voz, Azure lo lee con la fonología
  * de ese idioma → inglés con acento. Es una aproximación, no un modelo real de
  * interlengua, pero es lo más cerca que se llega sin grabar hablantes reales.
+ * Kokoro ignora este campo: su voz ya fija el idioma.
  */
 function langOf(voice: string): string {
   const parts = voice.split('-');
@@ -88,14 +100,19 @@ function push(key: string, text: string, speakerId: string, rateFactor = 1): voi
     missingVoice.push(`${key} → speaker "${speakerId}" no existe`);
     return;
   }
+  const voice = PROVIDER_ID === 'azure' ? sp.voice.azure : sp.voice.kokoro;
+  if (!voice) {
+    missingVoice.push(`${key} → speaker "${speakerId}" no tiene voz para "${PROVIDER_ID}"`);
+    return;
+  }
   const clean = text.trim();
   if (!clean) return;
   utterances.push({
     key,
     text: clean,
-    voice: sp.ttsVoice,
+    voice,
     rate: Number((sp.rate * rateFactor).toFixed(3)),
-    lang: langOf(sp.ttsVoice),
+    lang: PROVIDER_ID === 'azure' ? langOf(voice) : sp.accent,
   });
 }
 
@@ -207,9 +224,12 @@ const stale = selected.filter((u) => {
 const chars = (list: Utterance[]) => list.reduce((n, u) => n + u.text.length, 0);
 const FREE_TIER_CHARS = 500_000;
 
-console.log(`\nátomos: ${atoms.length}  ·  emisiones: ${utterances.length}${ONLY ? ` (filtradas: ${selected.length})` : ''}`);
+console.log(`\nproveedor: ${PROVIDER_ID}${PROVIDER_ID === 'kokoro' ? ' (local, libre, sin credenciales)' : ''}`);
+console.log(`átomos: ${atoms.length}  ·  emisiones: ${utterances.length}${ONLY ? ` (filtradas: ${selected.length})` : ''}`);
 console.log(`caracteres totales: ${chars(selected).toLocaleString('es')}`);
-console.log(`  = ${((chars(selected) / FREE_TIER_CHARS) * 100).toFixed(1)}% de la capa gratuita mensual de Azure (500.000)`);
+if (PROVIDER_ID === 'azure') {
+  console.log(`  = ${((chars(selected) / FREE_TIER_CHARS) * 100).toFixed(1)}% de la capa gratuita mensual de Azure (500.000)`);
+}
 console.log(`a sintetizar ahora: ${stale.length}  (${chars(stale).toLocaleString('es')} chars)`);
 console.log(`ya en cache: ${selected.length - stale.length}`);
 
@@ -229,36 +249,43 @@ if (!stale.length) {
 
 /* ──────────────────────────────────── síntesis ──────────────────────────────────── */
 
-const key = process.env.AZURE_SPEECH_KEY;
-const region = process.env.AZURE_SPEECH_REGION;
-if (!key || !region) {
-  console.error(
-    '\n✗ faltan AZURE_SPEECH_KEY y/o AZURE_SPEECH_REGION.\n' +
-      '  Copiá .env.example a .env y completalo. Ver material/../README.md\n' +
-      '  Mientras tanto, `--dry-run` funciona sin credenciales.\n'
-  );
-  process.exit(1);
+function buildProvider(): TtsProvider {
+  if (PROVIDER_ID === 'kokoro') return createKokoroProvider();
+
+  const key = process.env.AZURE_SPEECH_KEY;
+  const region = process.env.AZURE_SPEECH_REGION;
+  if (!key || !region) {
+    console.error(
+      '\n✗ --provider=azure necesita AZURE_SPEECH_KEY y AZURE_SPEECH_REGION.\n' +
+        '  Copiá .env.example a .env y completalo.\n' +
+        '  O usá el proveedor por defecto (kokoro), que no necesita credenciales.\n'
+    );
+    process.exit(1);
+  }
+  return createAzureProvider(key, region);
 }
 
-const provider: TtsProvider = createAzureProvider(key, region);
-console.log(`\nproveedor: ${provider.name}\n`);
+const provider = buildProvider();
+if (provider.init) {
+  console.log(`\ncargando ${provider.name}… (la primera vez descarga el modelo, ~90 MB)`);
+  await provider.init();
+}
+console.log(`\nsintetizando con ${provider.name}\n`);
 
+const t0 = Date.now();
 let done = 0;
 for (const u of stale) {
-  const buf = await provider.synth(u);
+  const { data, durationMs } = await provider.synth(u);
   const src = srcOf(u.key);
   const out = join(ROOT, 'public', src);
   mkdirSync(dirname(out), { recursive: true });
-  writeFileSync(out, buf);
-  manifest.entries[u.key] = {
-    src,
-    durationMs: estimateDurationMs(buf.length, provider.format.bitrateKbps),
-    hash: hashOf(u),
-    chars: u.text.length,
-  };
+  writeFileSync(out, data);
+  manifest.entries[u.key] = { src, durationMs, hash: hashOf(u), chars: u.text.length };
   done++;
-  if (done % 20 === 0 || done === stale.length) {
-    console.log(`  ${done}/${stale.length}`);
+  if (done % 10 === 0 || done === stale.length) {
+    const rate = (Date.now() - t0) / done;
+    const etaMin = ((stale.length - done) * rate) / 60000;
+    console.log(`  ${done}/${stale.length}${etaMin > 0.2 ? `  (~${etaMin.toFixed(1)} min restantes)` : ''}`);
   }
 }
 

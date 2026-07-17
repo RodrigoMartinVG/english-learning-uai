@@ -417,11 +417,25 @@ export const speakerSchema = z.object({
   recurring: z.boolean().optional(),
   bio: z.string().optional(),
   accent: z.enum(['en-US', 'en-GB', 'en-AU']),
-  /** L1 del hablante, para acentos no nativos. Azure tiene voces multilingües. */
+  /**
+   * L1 del hablante (Pedro es portugués, Valentina rusa).
+   *
+   * Es una intención de diseño, no una garantía: solo Azure puede renderizar un
+   * acento no nativo, dándole texto inglés a una voz de ese idioma. Kokoro —el
+   * proveedor por defecto— solo tiene en-US y en-GB, así que con él este campo
+   * queda documentado pero no se oye. Ver ARQUITECTURA.md §5.4.
+   */
   l1: z.string().optional(),
   gender: z.enum(['female', 'male', 'neutral']),
-  /** Id de voz del proveedor: "en-US-AriaNeural". */
-  ttsVoice: z.string().min(1),
+  /**
+   * La voz de este personaje en cada proveedor. `kokoro` es obligatoria porque
+   * es el camino por defecto: local, libre y sin credenciales. `azure` es opcional
+   * y solo aporta los acentos no nativos.
+   */
+  voice: z.object({
+    kokoro: z.string().min(1),
+    azure: z.string().min(1).optional(),
+  }),
   /** Pistas para matchear una voz local si no hay mp3. Ver §5.3. */
   fallbackHint: z.array(z.string()).min(1),
   rate: z.number().min(0.5).max(1.5),

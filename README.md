@@ -61,27 +61,34 @@ npm run check                     # typecheck + validación de contenido. Corré
 npm run validate                  # solo el contenido: forma (Zod) + integridad referencial
 npm run typecheck                 # solo los tipos
 
-npm run build:audio -- --dry-run  # qué audio falta y cuántos caracteres cuesta (sin credenciales)
-npm run build:audio               # sintetiza lo que falta (necesita .env)
+npm run build:audio -- --dry-run  # qué audio falta y cuánto cuesta, sin sintetizar
+npm run build:audio               # sintetiza lo que falta (Kokoro, local, sin credenciales)
 npm run build:audio -- --force    # re-sintetiza todo
 ```
 
 ## El audio
 
-Se genera en build-time con Azure Neural y se sirve como mp3. La Web Speech API queda solo como
-fallback, porque su calidad depende del sistema operativo del usuario y la app entrena el oído:
-no podemos hacer que la Unidad 1 suene distinta en cada máquina.
+Se genera en build-time con **Kokoro-82M** —un modelo neuronal Apache-2.0 que corre **local**—
+y se sirve como mp3. **No hace falta ninguna API key, ni cuenta, ni conexión** (más allá de la
+primera descarga del modelo, ~90 MB).
 
-**Sale gratis.** Medido: la Unidad 1 completa son 7.898 caracteres, el 1,6% de los 500.000
-mensuales que Azure regala en su capa F0. Las cuatro materias entrarían en un 25%.
+La Web Speech API queda solo como fallback en runtime. No como fuente: su voz depende del sistema
+operativo del usuario, y la app entrena el oído — la Unidad 1 no puede sonar distinta en cada
+máquina.
 
-Para generarlo necesitás credenciales: copiá `.env.example` a `.env` y seguí las instrucciones
-de adentro. **`--dry-run` funciona sin credenciales**, y la app en runtime tampoco las usa —
-consume los mp3 ya generados.
+```bash
+npm run build:audio     # ~23 min la primera vez; después solo lo que cambió
+```
 
-El build es incremental por hash de `texto + voz + velocidad`: cambiar una frase regenera un
-archivo, no cuatrocientos. Los mp3 no se versionan (`.gitignore`); el manifest sí, porque es
-el cache que hace posible ese incremental.
+Medido: la Unidad 1 son 246 emisiones, ~5 MB de mp3. El build es incremental por hash de
+`texto + voz + velocidad`, así que cambiar una frase regenera un archivo, no cuatrocientos.
+Los mp3 no se versionan (`.gitignore`); el manifest sí, porque es el cache que hace posible
+ese incremental.
+
+**Límite conocido:** Kokoro solo tiene voces en-US y en-GB, así que los personajes con acento
+no nativo (Pedro portugués, Valentina rusa) suenan estadounidenses. Si querés esos acentos,
+`--provider=azure` los restituye — necesita `.env`, y no cambia nada del contenido. Ver
+`ARQUITECTURA.md` §5.4.
 
 ## Decisiones ya tomadas
 

@@ -1,14 +1,23 @@
 /**
- * azure.ts — proveedor TTS de Azure Speech (voces neuronales).
+ * azure.ts — proveedor TTS OPCIONAL: Azure Speech (voces neuronales).
  *
- * Capa gratuita F0: 500.000 caracteres/mes. Todo el curso (Inglés I–IV) entra
- * con margen. Ver ARQUITECTURA.md §5.4.
+ * El proveedor por defecto es Kokoro (local, libre, sin key). Azure existe por
+ * una sola razón: es el único que puede renderizar acentos no nativos, dándole
+ * texto en inglés a una voz portuguesa/alemana/rusa. Si eso no te importa, no
+ * lo necesitás. Ver ARQUITECTURA.md §5.4.
  *
+ * Capa gratuita F0: 500.000 caracteres/mes; el curso entero usa una fracción.
  * Usa la API REST directa en vez del SDK: es una sola llamada HTTP y evita
- * arrastrar una dependencia pesada a un script que corre en el build.
+ * arrastrar una dependencia pesada a un script de build.
  */
 
-import { escapeXml, estimateDurationMs, type TtsProvider, type Utterance } from './provider.ts';
+import {
+  escapeXml,
+  estimateDurationMs,
+  type SynthResult,
+  type TtsProvider,
+  type Utterance,
+} from './provider.ts';
 
 const OUTPUT_FORMAT = 'audio-24khz-48kbitrate-mono-mp3';
 const BITRATE_KBPS = 48;
@@ -32,10 +41,10 @@ export function createAzureProvider(key: string, region: string): TtsProvider {
   const endpoint = `https://${region}.tts.speech.microsoft.com/cognitiveservices/v1`;
 
   return {
+    id: 'azure',
     name: `azure(${region})`,
-    format: { ext: 'mp3', bitrateKbps: BITRATE_KBPS },
 
-    async synth(u: Utterance): Promise<Buffer> {
+    async synth(u: Utterance): Promise<SynthResult> {
       // 429 = límite de cuota por segundo, no un error real. Reintento con backoff.
       for (let attempt = 0; attempt < 4; attempt++) {
         const res = await fetch(endpoint, {
@@ -49,7 +58,10 @@ export function createAzureProvider(key: string, region: string): TtsProvider {
           body: ssml(u),
         });
 
-        if (res.ok) return Buffer.from(await res.arrayBuffer());
+        if (res.ok) {
+          const data = Buffer.from(await res.arrayBuffer());
+          return { data, durationMs: estimateDurationMs(data.length, BITRATE_KBPS) };
+        }
 
         if (res.status === 429 || res.status >= 500) {
           const waitMs = 500 * 2 ** attempt;
@@ -70,5 +82,3 @@ export function createAzureProvider(key: string, region: string): TtsProvider {
     },
   };
 }
-
-export { estimateDurationMs };

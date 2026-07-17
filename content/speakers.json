@@ -7,9 +7,17 @@
       "bio": "Systems manager. Personaje recurrente del material: aparece en las unidades 1, 3 y 4. En U1 conoce a Eric en el pasillo; en U3 y U4 ya tiene oficina propia. En U4 la nombran explícitamente ('You have got a beautiful office Mary').",
       "accent": "en-US",
       "gender": "female",
-      "ttsVoice": "en-US-AriaNeural",
-      "fallbackHint": ["Aria", "Google US English", "Zira", "Samantha"],
-      "rate": 0.92
+      "fallbackHint": [
+        "Aria",
+        "Google US English",
+        "Zira",
+        "Samantha"
+      ],
+      "rate": 0.92,
+      "voice": {
+        "kokoro": "af_heart",
+        "azure": "en-US-AriaNeural"
+      }
     },
     {
       "id": "eric",
@@ -17,9 +25,17 @@
       "bio": "Developer. Conoce a Mary en el pasillo de la empresa (U1, pág. 5).",
       "accent": "en-US",
       "gender": "male",
-      "ttsVoice": "en-US-GuyNeural",
-      "fallbackHint": ["Guy", "Google US English Male", "David", "Alex"],
-      "rate": 0.92
+      "fallbackHint": [
+        "Guy",
+        "Google US English Male",
+        "David",
+        "Alex"
+      ],
+      "rate": 0.92,
+      "voice": {
+        "kokoro": "am_eric",
+        "azure": "en-US-GuyNeural"
+      }
     },
     {
       "id": "colleague",
@@ -28,9 +44,16 @@
       "bio": "Colega de Mary en U3 y U4. El material nunca lo nombra. Tiene oficina propia y trabaja desde casa una vez por semana (U3). En el cómic de U4 hay una bandera de EE.UU. en su oficina.",
       "accent": "en-US",
       "gender": "male",
-      "ttsVoice": "en-US-ChristopherNeural",
-      "fallbackHint": ["Christopher", "David", "Google US English Male"],
-      "rate": 0.9
+      "fallbackHint": [
+        "Christopher",
+        "David",
+        "Google US English Male"
+      ],
+      "rate": 0.9,
+      "voice": {
+        "kokoro": "am_michael",
+        "azure": "en-US-ChristopherNeural"
+      }
     },
     {
       "id": "receptionist",
@@ -38,9 +61,16 @@
       "bio": "Registra los datos de Karel en la recepción (U1, Ejercitación 1).",
       "accent": "en-US",
       "gender": "female",
-      "ttsVoice": "en-US-JennyNeural",
-      "fallbackHint": ["Jenny", "Zira", "Google US English"],
-      "rate": 0.9
+      "fallbackHint": [
+        "Jenny",
+        "Zira",
+        "Google US English"
+      ],
+      "rate": 0.9,
+      "voice": {
+        "kokoro": "af_nicole",
+        "azure": "en-US-JennyNeural"
+      }
     },
     {
       "id": "karel",
@@ -48,10 +78,17 @@
       "bio": "Visitante de Holanda (Amsterdam). Deletrea su apellido en la recepción (U1, Ejercitación 1).",
       "accent": "en-US",
       "l1": "nl",
-      "ttsVoice": "nl-NL-MaartenNeural",
       "gender": "male",
-      "fallbackHint": ["Maarten", "Guy", "David"],
-      "rate": 0.88
+      "fallbackHint": [
+        "Maarten",
+        "Guy",
+        "David"
+      ],
+      "rate": 0.88,
+      "voice": {
+        "kokoro": "am_fenrir",
+        "azure": "nl-NL-MaartenNeural"
+      }
     },
     {
       "id": "cafe-woman",
@@ -59,9 +96,16 @@
       "bio": "Trabaja en la empresa. Conversa con un colega en la cafetería sobre horarios y rutinas (U2, pág. 5). El material no la nombra.",
       "accent": "en-US",
       "gender": "female",
-      "ttsVoice": "en-US-MichelleNeural",
-      "fallbackHint": ["Michelle", "Aria", "Zira"],
-      "rate": 0.92
+      "fallbackHint": [
+        "Michelle",
+        "Aria",
+        "Zira"
+      ],
+      "rate": 0.92,
+      "voice": {
+        "kokoro": "af_bella",
+        "azure": "en-US-MichelleNeural"
+      }
     },
     {
       "id": "cafe-man",
@@ -69,9 +113,16 @@
       "bio": "Diseña programas. Empieza a trabajar a las 8, a veces a las 7 (U2, pág. 5). El material no lo nombra.",
       "accent": "en-US",
       "gender": "male",
-      "ttsVoice": "en-US-DavisNeural",
-      "fallbackHint": ["Davis", "Guy", "David"],
-      "rate": 0.92
+      "fallbackHint": [
+        "Davis",
+        "Guy",
+        "David"
+      ],
+      "rate": 0.92,
+      "voice": {
+        "kokoro": "am_liam",
+        "azure": "en-US-DavisNeural"
+      }
     },
     {
       "id": "teacher",
@@ -79,9 +130,16 @@
       "bio": "Docente genérico del material (Mr. Lane, el profesor del laboratorio).",
       "accent": "en-GB",
       "gender": "male",
-      "ttsVoice": "en-GB-RyanNeural",
-      "fallbackHint": ["Ryan", "Google UK English Male", "George"],
-      "rate": 0.9
+      "fallbackHint": [
+        "Ryan",
+        "Google UK English Male",
+        "George"
+      ],
+      "rate": 0.9,
+      "voice": {
+        "kokoro": "bm_george",
+        "azure": "en-GB-RyanNeural"
+      }
     },
     {
       "id": "student",
@@ -89,9 +147,16 @@
       "bio": "Alumno genérico del material (Kate, Robert, Bill).",
       "accent": "en-US",
       "gender": "female",
-      "ttsVoice": "en-US-AmberNeural",
-      "fallbackHint": ["Amber", "Aria", "Zira"],
-      "rate": 0.95
+      "fallbackHint": [
+        "Amber",
+        "Aria",
+        "Zira"
+      ],
+      "rate": 0.95,
+      "voice": {
+        "kokoro": "af_jessica",
+        "azure": "en-US-AmberNeural"
+      }
     },
     {
       "id": "narrator",
@@ -99,9 +164,16 @@
       "bio": "Voz de los Listening Comprehension y de los textos de 'Ejemplo significativo'. Neutra y clara.",
       "accent": "en-GB",
       "gender": "female",
-      "ttsVoice": "en-GB-SoniaNeural",
-      "fallbackHint": ["Sonia", "Google UK English Female", "Hazel"],
-      "rate": 0.88
+      "fallbackHint": [
+        "Sonia",
+        "Google UK English Female",
+        "Hazel"
+      ],
+      "rate": 0.88,
+      "voice": {
+        "kokoro": "bf_emma",
+        "azure": "en-GB-SoniaNeural"
+      }
     },
     {
       "id": "examiner",
@@ -109,9 +181,16 @@
       "bio": "Voz del Oral Exam Simulator. Formal, pausada, sin calidez artificial: debe sonar a examen, no a app.",
       "accent": "en-GB",
       "gender": "male",
-      "ttsVoice": "en-GB-ThomasNeural",
-      "fallbackHint": ["Thomas", "George", "Google UK English Male"],
-      "rate": 0.85
+      "fallbackHint": [
+        "Thomas",
+        "George",
+        "Google UK English Male"
+      ],
+      "rate": 0.85,
+      "voice": {
+        "kokoro": "bm_lewis",
+        "azure": "en-GB-ThomasNeural"
+      }
     },
     {
       "id": "pedro",
@@ -120,9 +199,16 @@
       "accent": "en-US",
       "l1": "pt",
       "gender": "male",
-      "ttsVoice": "pt-BR-AntonioNeural",
-      "fallbackHint": ["Antonio", "Guy", "David"],
-      "rate": 0.9
+      "fallbackHint": [
+        "Antonio",
+        "Guy",
+        "David"
+      ],
+      "rate": 0.9,
+      "voice": {
+        "kokoro": "am_puck",
+        "azure": "pt-BR-AntonioNeural"
+      }
     },
     {
       "id": "anna",
@@ -131,9 +217,16 @@
       "accent": "en-US",
       "l1": "de",
       "gender": "female",
-      "ttsVoice": "de-DE-KatjaNeural",
-      "fallbackHint": ["Katja", "Aria", "Zira"],
-      "rate": 0.9
+      "fallbackHint": [
+        "Katja",
+        "Aria",
+        "Zira"
+      ],
+      "rate": 0.9,
+      "voice": {
+        "kokoro": "af_kore",
+        "azure": "de-DE-KatjaNeural"
+      }
     },
     {
       "id": "anna-town",
@@ -142,9 +235,16 @@
       "accent": "en-US",
       "l1": "de",
       "gender": "female",
-      "ttsVoice": "de-DE-AmalaNeural",
-      "fallbackHint": ["Amala", "Katja", "Aria"],
-      "rate": 0.88
+      "fallbackHint": [
+        "Amala",
+        "Katja",
+        "Aria"
+      ],
+      "rate": 0.88,
+      "voice": {
+        "kokoro": "af_nova",
+        "azure": "de-DE-AmalaNeural"
+      }
     },
     {
       "id": "valentina",
@@ -153,9 +253,16 @@
       "accent": "en-US",
       "l1": "ru",
       "gender": "female",
-      "ttsVoice": "ru-RU-SvetlanaNeural",
-      "fallbackHint": ["Svetlana", "Aria", "Zira"],
-      "rate": 0.9
+      "fallbackHint": [
+        "Svetlana",
+        "Aria",
+        "Zira"
+      ],
+      "rate": 0.9,
+      "voice": {
+        "kokoro": "af_river",
+        "azure": "ru-RU-SvetlanaNeural"
+      }
     },
     {
       "id": "mehmet",
@@ -164,9 +271,16 @@
       "accent": "en-US",
       "l1": "tr",
       "gender": "male",
-      "ttsVoice": "tr-TR-AhmetNeural",
-      "fallbackHint": ["Ahmet", "Guy", "David"],
-      "rate": 0.9
+      "fallbackHint": [
+        "Ahmet",
+        "Guy",
+        "David"
+      ],
+      "rate": 0.9,
+      "voice": {
+        "kokoro": "am_onyx",
+        "azure": "tr-TR-AhmetNeural"
+      }
     },
     {
       "id": "rosa",
@@ -175,9 +289,16 @@
       "accent": "en-US",
       "l1": "es",
       "gender": "female",
-      "ttsVoice": "es-ES-ElviraNeural",
-      "fallbackHint": ["Elvira", "Aria", "Zira"],
-      "rate": 0.9
+      "fallbackHint": [
+        "Elvira",
+        "Aria",
+        "Zira"
+      ],
+      "rate": 0.9,
+      "voice": {
+        "kokoro": "af_alloy",
+        "azure": "es-ES-ElviraNeural"
+      }
     }
   ]
 }

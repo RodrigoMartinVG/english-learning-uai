@@ -10,7 +10,7 @@
 | Framework | React + TypeScript + Vite | Deroga la sección 6.1 de `especificacion.txt` (Lit/Web Components) |
 | Audio | Híbrido: pregenerado en build + Web Speech API como fallback | Requiere paso de build y assets versionados |
 | Plataforma | Local-first, deploy estático, sin backend | IndexedDB para progreso; sync es una decisión futura, no un rediseño |
-| Proveedor TTS | Azure Neural, capa gratuita | Todo el curso entra en el free tier — ver §5.4 |
+| Proveedor TTS | **Kokoro-82M, local y libre**. Azure opcional | Sin credenciales, sin nube, sin límite — ver §5.4 |
 | Imágenes | Extracción selectiva (~6 por unidad) | Los cómics de pág. 5 son contenido, no decoración — ver §2.5 |
 
 ---
@@ -379,7 +379,59 @@ voz en-*` → error visible y honesto ("este audio no está disponible en tu dis
 
 Cola serializada: un solo audio suena a la vez, siempre. `cancel()` antes de cada `speak()`.
 
-### 5.4 Proveedor: por qué Azure, y por qué sale gratis
+### 5.4 Proveedor: Kokoro, local y libre
+
+**Decisión revisada.** Este documento recomendaba Azure porque su capa gratuita alcanzaba de
+sobra. Era cierto, pero "gratis" no es lo mismo que "libre": Azure exige cuenta, tarjeta de
+crédito en el alta, una API key que hay que custodiar, y conexión para cada build. Nada de eso
+hace falta.
+
+**El proveedor por defecto es [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M)**
+(Apache-2.0), corriendo local vía `kokoro-js`/ONNX. Sin key, sin cuenta, sin nube, sin límite
+de uso. El modelo (~90 MB en q8) se descarga una vez y después el build funciona offline.
+
+Medido en esta máquina, no estimado:
+
+| | |
+|---|---|
+| Voces | 28 (20 en-US, 8 en-GB), todas neuronales |
+| Carga del modelo | ~8,5 s, una vez por corrida |
+| Velocidad | ~0,35–0,58× tiempo real en CPU → las 246 emisiones de la U1 en **~23 min** |
+| Peso | mp3 64 kbps mono = **17%** del wav. La U1 entera ≈ 5 MB |
+| Control de velocidad | `speed` nativo: 0.75× re-articula de verdad, no es time-stretch |
+| Costo | **$0**, para siempre, sin cuota que se agote |
+
+Los 23 minutos se pagan **una sola vez**: el build es incremental por hash, así que después
+solo se sintetiza lo que cambió.
+
+#### Lo que se pierde, y es real
+
+Kokoro **solo tiene voces en-US y en-GB**. El acento no nativo del Diálogo 5 —Pedro portugués,
+Anna alemana, Valentina rusa, Mehmet turco— **no se renderiza**: suenan como estadounidenses.
+El campo `l1` de `speakers.json` queda documentado pero mudo.
+
+Es una pérdida pedagógica genuina: entrenar el oído en acentos variados era un objetivo del PRD.
+Pero es una pérdida **recuperable y aislada**: cada speaker declara su voz en cada proveedor
+(`voice: { kokoro, azure }`), así que `--provider=azure` restituye los acentos sin tocar una
+línea de contenido ni de mecánica. Es exactamente para esto que el proveedor está detrás de una
+interfaz.
+
+Orden de prioridades: un curso entero que suena bien y no depende de nadie vale más que cuatro
+frases con acento portugués.
+
+#### Alternativas evaluadas
+
+| Opción | Veredicto |
+|---|---|
+| **Kokoro** (local, Apache-2.0) | **Elegida.** Calidad neuronal, 28 voces, sin credenciales |
+| **Web Speech API** en runtime | Es lo que hacían los prototipos. Cero costo pero la voz depende del SO del usuario: la U1 sonaría distinta en cada máquina. Queda solo como fallback (§5.3) |
+| **Piper** (local, MIT) | Digno y liviano, con voces multilingües que sí darían acentos. Calidad por debajo de Kokoro. Segundo plan B |
+| **Azure Neural** | Opcional. Su capa F0 (500.000 chars/mes) cubre el curso entero varias veces, pero exige cuenta y key. Único camino a los acentos no nativos |
+| **`edge-tts`** | **No.** Excelente y sin key, pero es un endpoint no documentado de Edge, sin garantía de estabilidad y en zona gris de términos de uso |
+
+`build-audio.ts` habla con un `TtsProvider`. Cambiar de proveedor es un flag, no un refactor.
+
+### 5.4.1 Azure (opcional): por qué sigue documentado
 
 El volumen real, **medido** con `npm run build:audio -- --dry-run` sobre la Unidad 1 ya modelada
 (no estimado: el script cuenta los caracteres que se le mandarían a Azure):
@@ -403,21 +455,20 @@ El costo proyectado es **$0**, indefinidamente. Esto deja de ser una decisión e
 Una emisión no es un átomo: un `phrase` con dos alternativas y variante lenta son cuatro
 emisiones; un `dialogue` son cero (reusa las de sus `phrase`). De ahí 91 → 246.
 
-Azure gana además por lo que ninguna alternativa gratuita ofrece: **voces con acento no nativo
-real** (`pt-BR`, `de-DE`, `ru-RU`, `tr-TR` hablando inglés) y control fino de prosodia vía SSML,
-que es exactamente lo que necesitan el Diálogo 5 y el Intonation Trainer.
+Azure aporta una sola cosa que Kokoro no puede dar: **acento no nativo real**. Se logra dándole
+texto en inglés a una voz `pt-BR` / `de-DE` / `ru-RU` / `tr-TR`; el motor lo lee con la fonología
+de ese idioma. Es una aproximación —no un modelo de interlengua— pero es lo más cerca que se
+llega sin grabar hablantes reales.
 
-Alternativas evaluadas, por si Azure se cae:
+Con `--provider=azure`, el volumen medido de la U1 (7.898 chars) es el **1,6%** de los 500.000
+mensuales del free tier F0. Las 4 materias entrarían en ~25%.
 
-| Opción | Veredicto |
-|---|---|
-| **Piper** (local, MIT) | Plan B real. Gratis, offline, sin cuenta. Calidad claramente inferior pero digna. Cero riesgo de vendor lock-in |
-| **Kokoro-82M** (Apache 2.0, local) | Muy buena calidad para ser local. Menos voces/acentos que Azure |
-| **Google Cloud TTS** | Free tier también amplio; menos voces con acento no nativo |
-| **`edge-tts`** (endpoint no oficial de Edge) | **No.** Calidad excelente y sin API key, pero es un endpoint no documentado, sin garantía de estabilidad y en zona gris de términos de uso. No se construye la base de una app sobre eso |
+Se usa así, y solo si querés los acentos:
 
-`build-audio.ts` habla con un `TtsProvider` detrás de una interfaz. Cambiar Azure → Piper es
-un archivo, no un refactor.
+```bash
+cp .env.example .env          # completar AZURE_SPEECH_KEY y AZURE_SPEECH_REGION
+npm run build:audio -- --provider=azure
+```
 
 ### 5.5 Velocidades: no multiplicar los assets
 
