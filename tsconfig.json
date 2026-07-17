@@ -4,9 +4,13 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "types": ["node"],
+    "types": ["node", "vite/client"],
+    "jsx": "react-jsx",
 
     "strict": true,
+    /* Windows ignora mayúsculas en rutas; el CI y el deploy corren en Linux, que no.
+       Sin esto, un import mal capitalizado anda acá y explota solo en producción. */
+    "forceConsistentCasingInFileNames": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "noUnusedLocals": true,
