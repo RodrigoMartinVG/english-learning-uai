@@ -27,7 +27,7 @@ Lo que sigue, en una línea: **cerrar la deuda de la Unidad 1 y probar el diseñ
 | 1.2 | ✅ | **Atomizar los diálogos de la reconstrucción** (los 3: objetos de clase, equipo internacional, Kate/Robert) | Hecho. 25 frases, 3 diálogos, 3 voces nuevas (Rosa, Valentina, Robert). El perfil de Messi queda (ya cubierto por qa atoms) |
 | 1.3 | ✅ | **Fusionar "Números y edad"** en "Datos personales" | Hecho |
 | 1.4 | ✅ | **IPA en las frases** | Hecho: `npm run build:ipa` con el fonemizador de Kokoro (el IPA coincide con el audio). 67/67 frases. Shadowing lo muestra. **Desbloquea la pronunciación fina (§4.1)** |
-| 1.5 | ⬜ | **Tests del motor** (`npm test`): grading, FSRS, session builder | Los verifico con scripts que borro. Encontraron bugs reales (interleaving, escalera, rúbrica); sin tests no se re-chequean solos |
+| 1.5 | ✅ | **Tests del motor** (`npm test`): grading, FSRS, session, content-logic | Hecho: 33 tests con el runner de Node, sin dependencias. Cubren los bugs que encontramos usando la app |
 
 ---
 
@@ -35,6 +35,7 @@ Lo que sigue, en una línea: **cerrar la deuda de la Unidad 1 y probar el diseñ
 
 | | Estado | Qué |
 |---|---|---|
+| 2.0 | ✅ | **Plan de implementación** en `drafts/PLAN-unidad-2.md` (verificado: el schema ya tiene los tags de la U2, no hay que tocarlo) |
 | 2.1 | ⬜ | **Escribir `content/en1/unit-2.json`** (Estilo de vida: simple present, rutinas, frecuencia, hora) siguiendo el pipeline de `drafts/` |
 | 2.2 | ⬜ | **Transcribir el cómic de la pág. 5** de la U2 (la cafetería) — ya está en `drafts/situaciones-comunicacionales.md` |
 | 2.3 | ⬜ | Generar su audio, correr `audit` y `validate` |
