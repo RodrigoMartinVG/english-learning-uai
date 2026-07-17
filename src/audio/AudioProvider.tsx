@@ -32,3 +32,4 @@ export function useAudioState(): AudioState {
 }
 
 export { FlagAudioButton } from '../ui/FlagAudioButton.tsx';
+export { AltVoicesButton } from '../ui/AltVoicesButton.tsx';

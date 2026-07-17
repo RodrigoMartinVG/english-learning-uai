@@ -8,7 +8,7 @@
  */
 
 import { useMemo, useState, useSyncExternalStore } from 'react';
-import { AudioProvider, FlagAudioButton } from '../audio/AudioProvider.tsx';
+import { AudioProvider, FlagAudioButton, AltVoicesButton } from '../audio/AudioProvider.tsx';
 import { atomInAspect, type Aspect } from '../../content/schema.ts';
 import { atoms, units } from '../data/content.ts';
 import { mechanics } from '../mechanics/registry.ts';
@@ -68,6 +68,7 @@ export default function App() {
           </button>
           <div className="shell__actions">
             {/* En sesión, a mano: se marca justo cuando se oyó el audio raro. */}
+            {view.name === 'session' && <AltVoicesButton />}
             {view.name === 'session' && <FlagAudioButton />}
             {view.name !== 'home' && (
               <button className="shell__back" onClick={() => setView({ name: 'home' })}>

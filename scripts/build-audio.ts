@@ -44,6 +44,20 @@ const SLOW_RATE_FACTOR = 0.75;
 /** Las mecánicas de percepción necesitan una voz neutra y clara, no un personaje. */
 const NEUTRAL_SPEAKER = 'narrator';
 
+/**
+ * Voces alternativas para "escuchar en otra voz" (§ variabilidad fonética).
+ *
+ * Elegidas por diversidad de género y acento, no por personaje: el objetivo es
+ * que el alumno oiga la MISMA frase en timbres distintos y entrene el oído a no
+ * depender de una sola voz. Solo se generan para `phrase` —la unidad escuchable
+ * central— y solo con Kokoro. Se saltea la que coincida con la voz propia.
+ */
+const ALT_VOICES = [
+  { id: 'af_bella', label: 'US · fem' },
+  { id: 'am_michael', label: 'US · masc' },
+  { id: 'bm_george', label: 'GB · masc' },
+] as const;
+
 const args = process.argv.slice(2);
 const DRY_RUN = args.includes('--dry-run');
 const FORCE = args.includes('--force');
@@ -95,7 +109,8 @@ function langOf(voice: string): string {
 const utterances: Utterance[] = [];
 const missingVoice: string[] = [];
 
-function push(key: string, text: string, speakerId: string, rateFactor = 1): void {
+/** `alts`: además de la voz propia, generar la frase en las voces alternativas. */
+function push(key: string, text: string, speakerId: string, rateFactor = 1, alts = false): void {
   const sp = speakers.get(speakerId);
   if (!sp) {
     missingVoice.push(`${key} → speaker "${speakerId}" no existe`);
@@ -108,13 +123,29 @@ function push(key: string, text: string, speakerId: string, rateFactor = 1): voi
   }
   const clean = text.trim();
   if (!clean) return;
+  const rate = Number((sp.rate * rateFactor).toFixed(3));
   utterances.push({
     key,
     text: clean,
     voice,
-    rate: Number((sp.rate * rateFactor).toFixed(3)),
+    rate,
     lang: PROVIDER_ID === 'azure' ? langOf(voice) : sp.accent,
   });
+
+  // Voces alternativas: misma frase, otro timbre. Solo Kokoro y solo si se pidió
+  // (las frases sueltas sí; deletreo, ejercicios y narraciones largas no).
+  if (alts && PROVIDER_ID === 'kokoro') {
+    for (const alt of ALT_VOICES) {
+      if (alt.id === voice) continue;
+      utterances.push({
+        key: `${key}.v.${alt.id}`,
+        text: clean,
+        voice: alt.id,
+        rate,
+        lang: alt.id.startsWith('b') ? 'en-GB' : 'en-US',
+      });
+    }
+  }
 }
 
 /** Rellena los ___ de un stem con las respuestas, en orden. */
@@ -126,7 +157,8 @@ function fillBlanks(stem: string, answers: string[]): string {
 for (const atom of atoms) {
   switch (atom.kind) {
     case 'phrase': {
-      push(atom.id, atom.text, atom.speaker);
+      // La frase principal: además de su voz, en las voces alternativas.
+      push(atom.id, atom.text, atom.speaker, 1, true);
       if (atom.slowVariant) push(`${atom.id}.slow`, atom.text, atom.speaker, SLOW_RATE_FACTOR);
       // Las alternativas son la misma persona reformulando → misma voz.
       atom.alternatives?.forEach((t, i) => push(`${atom.id}.alt.${i}`, t, atom.speaker));
