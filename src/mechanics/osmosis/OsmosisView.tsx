@@ -11,6 +11,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useAudio, useAudioState } from '../../audio/AudioProvider.tsx';
 import { Waveform } from '../../ui/Waveform.tsx';
+import { AltVoices } from '../../ui/AltVoices.tsx';
 import { speakerById } from '../../data/content.ts';
 import type { PhraseAtom } from '../../../content/schema.ts';
 import type { MechanicViewProps } from '../types.ts';
@@ -63,6 +64,7 @@ export function OsmosisView({ round, onDone }: MechanicViewProps<OsmosisRound>) 
             🐢 Lento
           </button>
         </div>
+        <AltVoices audioKey={round.target.id} text={round.target.text} speakerId={round.target.speaker} />
         <p className="osmosis__hint">
           {answered ? (
             <>Habla <strong>{speaker?.displayName ?? round.target.speaker}</strong></>

@@ -1,6 +1,7 @@
 import { useCallback, useEffect } from 'react';
 import { useAudio, useAudioState } from '../../audio/AudioProvider.tsx';
 import { Waveform } from '../../ui/Waveform.tsx';
+import { AltVoices } from '../../ui/AltVoices.tsx';
 import { SpeakPanel } from '../../ui/SpeakPanel.tsx';
 import { speakerById } from '../../data/content.ts';
 import type { MechanicViewProps } from '../types.ts';
@@ -42,6 +43,7 @@ export function ShadowingView({ round, onDone }: MechanicViewProps<ShadowingRoun
             🐢 Lento
           </button>
         </div>
+        <AltVoices audioKey={target.id} text={target.text} speakerId={target.speaker} />
         <p className="osmosis__hint">
           Imitá a <strong>{speaker?.displayName ?? target.speaker}</strong>: el ritmo y la
           entonación, no solo las palabras
