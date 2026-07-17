@@ -1705,10 +1705,10 @@
         "origin": "synthetic",
         "page": 15,
         "section": "Listening Comprehension 1",
-        "note": "La narrativa NO está en el material: el PDF referencia un link externo ausente y solo trae las preguntas y la grilla. Escrita por nosotros con léxico exclusivo de la U1, respetando las tres respuestas oficiales. Ver ARQUITECTURA.md §5.6."
+        "note": "La narrativa NO está en el material: el PDF referencia un link externo ausente y solo trae las preguntas y la grilla. Escrita por nosotros con léxico exclusivo de la U1, respetando las tres respuestas oficiales. OJO: esta Anna NO es la de la Ejercitación 6 (que es de Hamburgo); la grilla exige 'from a small town'. El material reusa el nombre. Ver ARQUITECTURA.md §5.6."
       },
       "narrative": "Hello. My name is Anna. I am twenty-four years old. I am from a small town in Germany, so I am German. My town is very nice. There is a school, there is a big church and there are two small shops. My family is here. My mother is a teacher and my father is a doctor. But there isn't a job for me in my town. There isn't an office, there isn't a laboratory and there aren't computers. I am a systems engineer. So now I am in Berlin. Berlin is a big city and there are many enterprises here.",
-      "speaker": "anna",
+      "speaker": "anna-town",
       "questions": [
         { "q": "What's her name?", "accept": ["Her name is Anna.", "Anna."] },
         { "q": "Where is she from?", "accept": ["She is from a small town.", "She's from a small town.", "From a small town in Germany."] },

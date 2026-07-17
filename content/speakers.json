@@ -127,13 +127,24 @@
     {
       "id": "anna",
       "displayName": "Anna",
-      "bio": "De Hamburgo, alemana, casada. Ejercitación 6 de U1. También es la protagonista del Listening Comprehension 1.",
+      "bio": "De Hamburgo, alemana, casada. Su hobby favorito es el béisbol. Ejercitación 6 de U1.",
       "accent": "en-US",
       "l1": "de",
       "gender": "female",
       "ttsVoice": "de-DE-KatjaNeural",
       "fallbackHint": ["Katja", "Aria", "Zira"],
       "rate": 0.9
+    },
+    {
+      "id": "anna-town",
+      "displayName": "Anna (Listening 1)",
+      "bio": "Protagonista del Listening Comprehension 1 de U1. HOMÓNIMA, no la misma persona que la Anna de la Ejercitación 6: la grilla oficial exige que sea 'from a small town', mientras que la otra Anna es de Hamburgo. El material reusa el nombre sin conectarlas.",
+      "accent": "en-US",
+      "l1": "de",
+      "gender": "female",
+      "ttsVoice": "de-DE-AmalaNeural",
+      "fallbackHint": ["Amala", "Katja", "Aria"],
+      "rate": 0.88
     },
     {
       "id": "valentina",
