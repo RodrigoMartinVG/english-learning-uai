@@ -7,6 +7,8 @@
  * estructura, y se dice QUÉ palabra falló, que es lo accionable.
  */
 
+import { canonicalNumbers } from './numbers.ts';
+
 /** Contracciones del material. El ASR transcribe "I'm" o "I am" según le parece;
  *  penalizar esa diferencia sería castigar al alumno por un capricho del motor. */
 const CONTRACTIONS: [RegExp, string][] = [
@@ -22,21 +24,27 @@ const CONTRACTIONS: [RegExp, string][] = [
 ];
 
 /**
- * Normaliza para comparar.
+ * Normaliza para comparar. El orden de los pasos importa y cada uno arregla un
+ * caso donde el alumno decía bien y la app lo marcaba mal:
  *
- * La regex del PRD (quitar puntuación y colapsar espacios) es correcta pero
- * insuficiente: convierte "I'm" en "im" y "I am" en "i am", que ya no matchean.
- * El alumno diría bien y la app lo marcaría mal. Por eso se expanden las
- * contracciones ANTES de sacar los apóstrofes.
+ *  1. contracciones → "I'm" y "I am" son lo mismo; el ASR devuelve cualquiera.
+ *     La regex del PRD las volvía "im" vs "i am" y nunca matcheaban.
+ *  2. guiones → espacio, NO borrarlos. Borrarlos hacía "thirty-five" →
+ *     "thirtyfive", que ya no matchea con "thirty five".
+ *  3. números → dígitos. El material dice "tenth floor" (para que el TTS lo
+ *     pronuncie) y el ASR transcribe "10th floor".
  */
 export function normalize(text: string): string {
   let s = text.toLowerCase().trim();
   s = s.replace(/[’´`]/g, "'");
   for (const [re, to] of CONTRACTIONS) s = s.replace(re, to);
-  return s
+  s = s
+    .replace(/[-–—/]/g, ' ')
     .replace(/[^\w\s]|_/g, '')
     .replace(/\s+/g, ' ')
     .trim();
+  if (!s) return '';
+  return canonicalNumbers(s.split(' ')).join(' ');
 }
 
 export const words = (text: string): string[] => (normalize(text) ? normalize(text).split(' ') : []);
@@ -126,8 +134,24 @@ export function gradeSpeech(target: string, transcript: string): SpeechVerdict {
  *
  * Es la propiedad infrautilizada que señala el PRD: darle al navegador las
  * palabras que puede esperar mejora bastante el reconocimiento de frases cortas.
+ *
+ * OJO: acá NO se usa normalize(). Los hints son palabras que el alumno va a
+ * PRONUNCIAR, y normalize() canoniza a dígitos: pasarle "10th" o "93" a un motor
+ * de voz no le dice nada sobre qué sonido esperar. Se le pasa "tenth", "ninety".
  */
 export function grammarHints(targets: string[]): string {
-  const vocab = [...new Set(targets.flatMap((t) => words(t)))];
+  const vocab = [
+    ...new Set(
+      targets.flatMap((t) =>
+        t
+          .toLowerCase()
+          .replace(/[’´`]/g, "'")
+          .replace(/[-–—/]/g, ' ')
+          .replace(/[^\w\s]|_/g, '')
+          .split(/\s+/)
+          .filter(Boolean)
+      )
+    ),
+  ];
   return `#JSGF V1.0; grammar phrases; public <phrase> = ${vocab.join(' | ')};`;
 }
