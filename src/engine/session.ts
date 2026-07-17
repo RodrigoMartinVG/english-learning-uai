@@ -112,6 +112,40 @@ function pickBalanced(candidates: { step: Step }[], n: number): Step[] {
   return out;
 }
 
+/**
+ * La escalera de "Descubrir": empieza percibiendo y TERMINA produciendo.
+ *
+ * Ordenar por nivel y cortar en 12 parece la escalera y no lo es: con ~30
+ * candidatos de comprensión disponibles, los peldaños altos nunca entran en los
+ * 12 lugares y el alumno jamás llega a hablar. Medido: 12 de 12 pasos en niveles
+ * 1-2, cero producción. Una escalera que no sube no es una escalera.
+ *
+ * Se reparte por nivel (round-robin, cada peldaño aporta lo que puede) y recién
+ * después se ordena ascendente, para que la sesión efectivamente trepe.
+ */
+function climbLadder(candidates: { step: Step; level: number; difficulty: number }[], n: number): Step[] {
+  const byLevel = new Map<number, typeof candidates>();
+  for (const c of candidates) {
+    const g = byLevel.get(c.level) ?? [];
+    g.push(c);
+    byLevel.set(c.level, g);
+  }
+  // Dentro de un peldaño, primero lo más fácil.
+  for (const g of byLevel.values()) g.sort((a, b) => a.difficulty - b.difficulty);
+
+  const levels = [...byLevel.keys()].sort((a, b) => a - b);
+  const picked: typeof candidates = [];
+  while (picked.length < n && levels.some((l) => byLevel.get(l)!.length)) {
+    for (const l of levels) {
+      if (picked.length >= n) break;
+      const c = byLevel.get(l)!.shift();
+      if (c) picked.push(c);
+    }
+  }
+
+  return picked.sort((a, b) => a.level - b.level || a.difficulty - b.difficulty).map((c) => c.step);
+}
+
 export function buildSession(
   spec: SessionSpec,
   all: Atom[],
@@ -142,11 +176,7 @@ export function buildSession(
 
   let ordered: Step[];
   if (spec.mode === 'discover') {
-    // La escalera: primero percibir, después comprender, después producir.
-    ordered = candidates
-      .sort((a, b) => a.level - b.level || a.difficulty - b.difficulty)
-      .slice(0, spec.length)
-      .map((c) => c.step);
+    ordered = climbLadder(candidates, spec.length);
   } else {
     ordered = pickBalanced(candidates, spec.length);
   }

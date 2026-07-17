@@ -1,0 +1,128 @@
+.speak {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+.speak--blocked {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 14px;
+  gap: 12px;
+}
+.speak--blocked .btn {
+  max-width: 300px;
+}
+
+/* Touch target holgado: §9 pide 48px, y el micrófono es el botón que más se falla. */
+.mic {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: var(--surface-hi);
+  border: 1px solid var(--border);
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.mic:hover:not(:disabled) {
+  border-color: var(--accent);
+  transform: scale(1.02);
+}
+.mic:disabled {
+  cursor: default;
+}
+.mic__icon {
+  font-size: 34px;
+}
+.mic__label {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.mic--live {
+  border-color: var(--error);
+  background: color-mix(in srgb, var(--error) 10%, var(--surface-hi));
+}
+.mic--live .mic__label {
+  color: var(--error);
+}
+/* El pulso solo mientras graba: es el único momento en que el movimiento informa. */
+.mic--live::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  border: 2px solid var(--error);
+  animation: pulse 1.4s var(--ease) infinite;
+}
+@keyframes pulse {
+  to {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+.speak__interim {
+  min-height: 24px;
+  color: var(--text-dim);
+  font-size: 15px;
+  text-align: center;
+}
+.speak__heard {
+  font-size: 13px;
+  color: var(--text-faint);
+  font-family: var(--mono);
+}
+.speak__note {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: 6px;
+}
+
+.speak__diff {
+  font-size: 18px;
+  line-height: 1.9;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.w {
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+.w--ok {
+  color: var(--text);
+}
+.w--wrong {
+  color: var(--error);
+  background: color-mix(in srgb, var(--error) 14%, transparent);
+  text-decoration: underline wavy;
+}
+.w--missing {
+  color: var(--text-faint);
+  text-decoration: line-through;
+}
+.w--extra {
+  color: var(--text-faint);
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.ab {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.ab .btn {
+  flex: 1;
+  min-width: 120px;
+}

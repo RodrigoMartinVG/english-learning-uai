@@ -929,16 +929,19 @@ porque el lunes hay parcial de `there is/are` y el alumno tiene derecho a machac
 Con esta capa, el catálogo de mecánicas del §6.2 deja de ser una lista de deseos y pasa a ser
 **la cobertura del contenido**. Cada tipo de átomo sin mecánica es contenido muerto:
 
-| Tipo | Átomos U1 | Mecánica que lo rescata | Nivel |
-|---|---|---|---|
-| `phrase` | 42 | Ósmosis ✅, Audio Matching, Shadowing | 2, 2, 4 |
-| `lexeme` | 18 | Word Focus, Spelling Drill | 1, 4 |
-| `qa` | 12 | Ping-Pong, Ósmosis de respuestas | 4, 2 |
-| `exercise` | 9 | Cloze auditivo, Syntax Builder, Error Hunt | 3 |
-| `contrast` | 5 | Minimal Pairs | 1 |
-| `dialogue` | 2 | Role-play | 5 |
-| `production` | 2 | Oral Exam Simulator | 5 |
-| `listening` | 1 | Listening Comprehension | 2 |
+| Tipo | Átomos U1 | Mecánica que lo rescata | Nivel | Estado |
+|---|---|---|---|---|
+| `phrase` | 42 | Ósmosis ✅, Shadowing ✅, Audio Matching | 2, 4, 2 | vivo |
+| `contrast` | 5 | Minimal Pairs ✅ | 1 | vivo |
+| `qa` | 12 | Ping-Pong ✅, Ósmosis de respuestas | 4, 2 | vivo |
+| `lexeme` | 18 | Word Focus, Spelling Drill | 1, 4 | **muerto** |
+| `exercise` | 9 | Cloze auditivo, Syntax Builder, Error Hunt | 3 | **muerto** |
+| `dialogue` | 2 | Role-play | 5 | **muerto** |
+| `production` | 2 | Oral Exam Simulator | 5 | **muerto** |
+| `listening` | 1 | Listening Comprehension | 2 | **muerto** |
+
+Cobertura medida: **59/91**. El nivel 3 de la escalera sigue vacío (lo llena Cloze auditivo) y
+el 5 también (Role-play y Oral Exam).
 
 También queda visible un desbalance del contenido: **72 átomos en niveles 1-2 contra 7 en niveles
 4-5**. La escalera tiene base ancha y punta fina — justo la parte que lleva al final oral. Se
