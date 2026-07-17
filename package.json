@@ -1,0 +1,28 @@
+{
+  "name": "english-learning-uai",
+  "version": "0.0.0",
+  "description": "App de entrenamiento auditivo y oral para Ingles I (UAI)",
+  "scripts": {
+    "validate": "tsx scripts/validate-content.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run validate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodrigoMartinVG/english-learning-uai.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/RodrigoMartinVG/english-learning-uai/issues"
+  },
+  "homepage": "https://github.com/RodrigoMartinVG/english-learning-uai#readme",
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  },
+  "private": true
+}
