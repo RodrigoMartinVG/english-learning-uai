@@ -13,6 +13,7 @@ export type SessionMode = 'discover' | 'drill' | 'review' | 'exam';
 export type SessionScope =
   | { kind: 'aspect'; course: Course; unit: number; aspectId: string }
   | { kind: 'unit'; course: Course; unit: number }
+  | { kind: 'atoms'; atomIds: string[] }
   | { kind: 'due' };
 
 export interface SessionSpec {
@@ -83,6 +84,11 @@ export function atomsInScope(scope: SessionScope, all: Atom[], aspects: Aspect[]
       return all.filter(
         (a) => a.course === scope.course && a.unit === scope.unit && atomInAspect(a, aspect)
       );
+    }
+    case 'atoms': {
+      // Repaso dirigido: solo estos átomos (los que más fallás).
+      const ids = new Set(scope.atomIds);
+      return all.filter((a) => ids.has(a.id));
     }
     case 'due':
       // Fase 3: acá entra FSRS. Hasta entonces, todo es candidato — y se dice.

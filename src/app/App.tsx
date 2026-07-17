@@ -27,9 +27,11 @@ import {
   progressOf,
   statsFor,
   subscribeProgress,
+  weakSpots,
 } from '../data/progress.ts';
 import { SessionPlayer } from './SessionPlayer.tsx';
 import { ResetPanel } from './ResetPanel.tsx';
+import { DiagnosticsView } from './DiagnosticsView.tsx';
 import './app.css';
 
 /** Adapta el store de progreso al contrato que el motor espera. */
@@ -49,6 +51,7 @@ type View =
   | { name: 'home' }
   | { name: 'unit'; unit: number }
   | { name: 'session'; session: Session }
+  | { name: 'diagnostics' }
   | { name: 'reset' };
 
 export default function App() {
@@ -83,11 +86,15 @@ export default function App() {
               onUnit={(unit) => setView({ name: 'unit', unit })}
               onStart={start}
               onReset={() => setView({ name: 'reset' })}
+              onDiagnostics={() => setView({ name: 'diagnostics' })}
             />
           )}
           {view.name === 'unit' && <UnitView unit={view.unit} onStart={start} />}
           {view.name === 'session' && (
             <SessionPlayer session={view.session} onExit={() => setView({ name: 'home' })} />
+          )}
+          {view.name === 'diagnostics' && (
+            <DiagnosticsView onBack={() => setView({ name: 'home' })} onStart={start} />
           )}
           {view.name === 'reset' && <ResetPanel onBack={() => setView({ name: 'home' })} />}
         </main>
@@ -102,13 +109,16 @@ function Home({
   onUnit,
   onStart,
   onReset,
+  onDiagnostics,
 }: {
   onUnit: (u: number) => void;
   onStart: (s: Session) => void;
   onReset: () => void;
+  onDiagnostics: () => void;
 }) {
   useProgress();
   const stats = statsFor();
+  const weak = weakSpots();
   const allAspects = units.flatMap((u) => u.aspects);
 
   const today = () =>
@@ -143,6 +153,20 @@ function Home({
           </p>
         )}
       </section>
+
+      {/* Aparece solo cuando hay datos: un diagnóstico con dos errores mentiría. */}
+      {weak.length > 0 && (
+        <button className="weakcard" onClick={onDiagnostics}>
+          <div>
+            <p className="weakcard__eyebrow">Tus puntos débiles</p>
+            <p className="weakcard__top">
+              {weak.length} {weak.length === 1 ? 'foco' : 'focos'} para reforzar · lo peor:{' '}
+              {weak[0]!.kind === 'phoneme' ? `sonido /${weak[0]!.tag}/` : weak[0]!.tag.split('.')[0]}
+            </p>
+          </div>
+          <span aria-hidden="true">→</span>
+        </button>
+      )}
 
       <section>
         <h2 className="home__section">Unidades</h2>

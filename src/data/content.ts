@@ -40,6 +40,29 @@ export const voiceHints: Record<string, AudioVoiceHints> = Object.fromEntries(
 export const isPhrase = (a: Atom): a is PhraseAtom => a.kind === 'phrase';
 export const isQa = (a: Atom): a is QaAtom => a.kind === 'qa';
 
+/** Símbolos IPA que consideramos "fonema entrenables" para el diagnóstico. */
+const PHONEMES = new Set([
+  'θ', 'ð', 'tʃ', 'dʒ', 'ʃ', 'ʒ', 'ŋ', 'j', 'w', 'r', 'z', 'v',
+  'æ', 'e', 'ɪ', 'iː', 'ʊ', 'uː', 'ɔː', 'ɜː', 'ə',
+  'eɪ', 'aɪ', 'ɔɪ', 'əʊ', 'aʊ', 'ɪə', 'eə', 'ʊə',
+]);
+
+/**
+ * Las dimensiones por las que se diagnostican los errores de un átomo.
+ *
+ * Cuando fallás algo, no falla "el átomo en abstracto": falla una estructura
+ * gramatical y/o un sonido concreto. Agregar por estas etiquetas es lo que
+ * convierte "22 errores" en "fallás /θ/ y el interrogativo de be".
+ */
+export function diagnosticTags(atom: Atom): { grammar: string[]; phonemes: string[] } {
+  const grammar = [...atom.grammar];
+  const raw: string[] = [];
+  if (atom.kind === 'phrase') raw.push(...(atom.phoneticFocus ?? []));
+  if ('tags' in atom && atom.tags) raw.push(...atom.tags);
+  const phonemes = [...new Set(raw.filter((t) => PHONEMES.has(t)))];
+  return { grammar, phonemes };
+}
+
 /**
  * Tipos de átomo que publican audio bajo su propio id.
  *

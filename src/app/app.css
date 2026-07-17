@@ -116,3 +116,33 @@
 .reset__confirm { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: grid; place-items: center; padding: 24px; z-index: 100; }
 .reset__dialog { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; max-width: 400px; display: flex; flex-direction: column; gap: 16px; }
 .reset__hint { font-size: 13px; color: var(--text-dim); }
+
+/* ── Diagnóstico ─────────────────────────────────────────────────────────── */
+.weakcard {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  width: 100%; text-align: left; padding: 16px 18px;
+  background: color-mix(in srgb, var(--error) 8%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--error) 30%, var(--border));
+  border-radius: var(--radius); color: var(--text);
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.weakcard:hover { border-color: var(--error); transform: translateY(-1px); }
+.weakcard__eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--error); font-weight: 600; }
+.weakcard__top { font-size: 14px; color: var(--text-dim); margin-top: 2px; }
+
+.diag { display: flex; flex-direction: column; gap: 16px; }
+.diag h1 { font-size: 26px; }
+.diag__intro, .diag__empty { color: var(--text-dim); font-size: 14px; }
+.diag__list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.diag__row {
+  display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+}
+.diag__badge { flex: none; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; padding: 3px 8px; border-radius: 999px; }
+.diag__badge--grammar { background: color-mix(in srgb, var(--accent) 18%, var(--surface)); color: var(--accent); }
+.diag__badge--phoneme { background: color-mix(in srgb, #c98cff 18%, var(--surface)); color: #c98cff; }
+.diag__label { flex: 1; font-size: 14px; }
+.diag__rate { flex: none; display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 13px; color: var(--error); }
+.diag__rate em { color: var(--text-faint); font-style: normal; font-size: 11px; }
+.diag__bar { display: inline-block; width: 60px; height: 5px; background: var(--surface-hi); border-radius: 3px; overflow: hidden; }
+.diag__bar > span { display: block; height: 100%; background: var(--error); }
