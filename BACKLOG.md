@@ -36,13 +36,13 @@ Lo que sigue, en una línea: **cerrar la deuda de la Unidad 1 y probar el diseñ
 | | Estado | Qué |
 |---|---|---|
 | 2.0 | ✅ | **Plan de implementación** en `drafts/PLAN-unidad-2.md` (verificado: el schema ya tiene los tags de la U2, no hay que tocarlo) |
-| 2.1 | ⬜ | **Escribir `content/en1/unit-2.json`** (Estilo de vida: simple present, rutinas, frecuencia, hora) siguiendo el pipeline de `drafts/` |
-| 2.2 | ⬜ | **Transcribir el cómic de la pág. 5** de la U2 (la cafetería) — ya está en `drafts/situaciones-comunicacionales.md` |
-| 2.3 | ⬜ | Generar su audio, correr `audit` y `validate` |
+| 2.1 | ✅ | **Escribir `content/en1/unit-2.json`** — 73 átomos, 9 aspectos, las 9 ejercitaciones del TP, cómic, Venus, Peter, listening, composición (Estilo de vida: simple present, rutinas, frecuencia, hora) siguiendo el pipeline de `drafts/` |
+| 2.2 | ✅ | **Cómic de la cafetería** atomizado (Role-play desde ambos papeles) |
+| 2.3 | ✅ | Audio, IPA, `audit`, `validate`, `test` — todo verde |
 
-> **El test del diseño:** si la Unidad 2 entra sin tocar `src/`, la arquitectura está probada y
-> las unidades 3-4 son trabajo mecánico. Si hay que tocar código, mejor descubrirlo con una
-> unidad que con cuatro.
+> **El test del diseño: PASÓ.** La U2 apareció sola (home, temas, guía de expresiones, mecánicas).
+> La única línea de `src/` tocada fue hacer que `content.ts` auto-descubra las unidades con
+> `import.meta.glob` — una mejora, no un parche: **las unidades 3-4 ahora son cero código.**
 
 ---
 

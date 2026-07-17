@@ -9,13 +9,25 @@
  * por clave. Así los mp3 se regeneran sin tocar una sola línea de content/.
  */
 
-import unit1 from '../../content/en1/unit-1.json';
 import speakersFile from '../../content/speakers.json';
 import manifestJson from '../../public/audio/audio-manifest.json';
 import type { Atom, PhraseAtom, QaAtom, Speaker, UnitFile } from '../../content/schema.ts';
 import type { AudioManifest, AudioVoiceHints } from '../audio/AudioService.ts';
 
-export const units: UnitFile[] = [unit1 as UnitFile];
+/**
+ * Auto-descubre todas las unidades: `content/<curso>/unit-*.json`.
+ *
+ * Agregar una unidad (o un curso) es dejar el JSON en su carpeta — cero código.
+ * Es lo que el diseño prometía: el contenido y src/ no se conocen. Ordena por
+ * curso y número para que la home las muestre en orden.
+ */
+const unitModules = import.meta.glob<{ default: UnitFile }>('../../content/*/unit-*.json', {
+  eager: true,
+});
+
+export const units: UnitFile[] = Object.values(unitModules)
+  .map((m) => m.default)
+  .sort((a, b) => a.course.localeCompare(b.course) || a.unit - b.unit);
 export const speakers: Speaker[] = (speakersFile as { speakers: Speaker[] }).speakers;
 
 export const atoms: Atom[] = units.flatMap((u) => u.atoms);

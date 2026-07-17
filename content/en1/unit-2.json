@@ -1,0 +1,2752 @@
+{
+  "course": "en1",
+  "unit": 2,
+  "title": "Estilo de vida",
+  "goals": [
+    "¿Cómo describo mis rutinas?",
+    "Simple present, routines and activities, jobs, time.",
+    "Adverbios de frecuencia, have/has, la hora."
+  ],
+  "aspects": [
+    {
+      "id": "cafeteria",
+      "order": 1,
+      "title": "En la cafetería",
+      "summary": "Pedir permiso, preguntar por el trabajo, los horarios y la rutina.",
+      "match": {
+        "fn": [
+          "ask.permission",
+          "ask.routine"
+        ],
+        "topic": [
+          "workplace"
+        ]
+      },
+      "source": {
+        "page": 5,
+        "section": "Situación comunicacional"
+      }
+    },
+    {
+      "id": "present-affirmative",
+      "order": 2,
+      "title": "Presente simple: afirmativo",
+      "summary": "Rutinas y hechos. Tercera persona con -s / -es.",
+      "match": {
+        "grammar": [
+          "present-simple.affirmative",
+          "present-simple.third-person"
+        ]
+      },
+      "source": {
+        "page": 7,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "present-negative",
+      "order": 3,
+      "title": "Presente simple: negativo",
+      "summary": "don't / doesn't + verbo base.",
+      "match": {
+        "grammar": [
+          "present-simple.negative"
+        ]
+      },
+      "source": {
+        "page": 7,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "present-questions",
+      "order": 4,
+      "title": "Presente simple: preguntas",
+      "summary": "Preguntar con do/does y con be, y respuestas cortas (Yes, I do / Yes, I am).",
+      "match": {
+        "grammar": [
+          "present-simple.interrogative",
+          "present-simple.short-answer",
+          "be.present.interrogative",
+          "be.present.short-answer"
+        ]
+      },
+      "source": {
+        "page": 7,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "frequency",
+      "order": 5,
+      "title": "Adverbios de frecuencia",
+      "summary": "always…never, y dónde se ubican en la oración.",
+      "match": {
+        "grammar": [
+          "frequency-adverbs"
+        ],
+        "fn": [
+          "ask.frequency"
+        ]
+      },
+      "source": {
+        "page": 8,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "time",
+      "order": 6,
+      "title": "La hora",
+      "summary": "Preguntar y decir la hora con at.",
+      "match": {
+        "grammar": [
+          "time.at"
+        ],
+        "fn": [
+          "ask.time"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "have-has",
+      "order": 7,
+      "title": "have / has",
+      "summary": "Posesión: have con I/you/we/they, has con he/she/it.",
+      "match": {
+        "grammar": [
+          "have-has"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "routines",
+      "order": 8,
+      "title": "Rutinas y actividades",
+      "summary": "Vocabulario del día a día: levantarse, desayunar, salir de casa…",
+      "match": {
+        "fn": [
+          "describe.routine"
+        ],
+        "topic": [
+          "routine",
+          "leisure"
+        ]
+      },
+      "source": {
+        "page": 9,
+        "section": "Words and phrases to learn"
+      }
+    },
+    {
+      "id": "wh-questions-u2",
+      "order": 9,
+      "title": "Preguntas con Wh-",
+      "summary": "What, when, who, where, what time + do/does.",
+      "match": {
+        "grammar": [
+          "wh-questions"
+        ]
+      },
+      "source": {
+        "page": 7,
+        "section": "Grammar Tips"
+      }
+    }
+  ],
+  "atoms": [
+    {
+      "id": "en1.u2.p.001",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Can I sit here?",
+      "gloss": "¿Puedo sentarme acá?",
+      "speaker": "cafe-man",
+      "intonation": "rising",
+      "grammar": [
+        "can.request"
+      ],
+      "fn": [
+        "ask.permission",
+        "make-request"
+      ],
+      "topic": [
+        "workplace",
+        "routine"
+      ],
+      "difficulty": 2,
+      "ipa": "kæn aɪ sˈɪt hˈɪɹ"
+    },
+    {
+      "id": "en1.u2.p.002",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Yes, please.",
+      "gloss": "Sí, por favor.",
+      "speaker": "cafe-woman",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "accept-plan"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 1,
+      "ipa": "jˈɛs plˈiːz"
+    },
+    {
+      "id": "en1.u2.p.003",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Do you work here?",
+      "gloss": "¿Trabajás acá?",
+      "speaker": "cafe-man",
+      "intonation": "rising",
+      "grammar": [
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.routine"
+      ],
+      "topic": [
+        "workplace",
+        "occupation"
+      ],
+      "difficulty": 2,
+      "replies": [
+        "Yes, I do. What about you?",
+        "No, I don't."
+      ],
+      "ipa": "dˈuː juː wˈɜːk hˈɪɹ"
+    },
+    {
+      "id": "en1.u2.p.004",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Yes, I do. What about you?",
+      "gloss": "Sí. ¿Y vos?",
+      "speaker": "cafe-woman",
+      "intonation": "rising",
+      "grammar": [
+        "present-simple.short-answer"
+      ],
+      "fn": [
+        "confirm",
+        "ask.routine"
+      ],
+      "topic": [
+        "workplace"
+      ],
+      "difficulty": 2,
+      "ipa": "jˈɛs aɪ dˈuː wˌʌt ɐbˈaʊt juː"
+    },
+    {
+      "id": "en1.u2.p.005",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "I work here too.",
+      "gloss": "Yo también trabajo acá.",
+      "speaker": "cafe-man",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "ask.routine"
+      ],
+      "topic": [
+        "workplace"
+      ],
+      "difficulty": 1,
+      "ipa": "aɪ wˈɜːk hˈɪɹ tˈuː"
+    },
+    {
+      "id": "en1.u2.p.006",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "What do you do?",
+      "gloss": "¿A qué te dedicás?",
+      "speaker": "cafe-woman",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.occupation"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 2,
+      "alternatives": [
+        "What's your job?",
+        "What do you do for a living?"
+      ],
+      "replies": [
+        "I design programs.",
+        "I'm a teacher."
+      ],
+      "ipa": "wˌʌt dˈuː juː dˈuː"
+    },
+    {
+      "id": "en1.u2.p.007",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "I design programs.",
+      "gloss": "Diseño programas.",
+      "speaker": "cafe-man",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "ask.occupation"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ dɪzˈaɪn pɹˈoʊɡɹæmz"
+    },
+    {
+      "id": "en1.u2.p.008",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "What time do you start working?",
+      "gloss": "¿A qué hora empezás a trabajar?",
+      "speaker": "cafe-woman",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.interrogative",
+        "wh-questions",
+        "time.at"
+      ],
+      "fn": [
+        "ask.time",
+        "ask.routine"
+      ],
+      "topic": [
+        "routine",
+        "time"
+      ],
+      "difficulty": 3,
+      "alternatives": [
+        "When do you start work?"
+      ],
+      "replies": [
+        "At eight o'clock.",
+        "At nine."
+      ],
+      "ipa": "wˌʌt tˈaɪm dˈuː juː stˈɑːɹt wˈɜːkɪŋ"
+    },
+    {
+      "id": "en1.u2.p.009",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "At eight o'clock.",
+      "gloss": "A las ocho.",
+      "speaker": "cafe-man",
+      "intonation": "falling",
+      "grammar": [
+        "time.at"
+      ],
+      "fn": [
+        "ask.time"
+      ],
+      "topic": [
+        "time"
+      ],
+      "difficulty": 1,
+      "ipa": "æɾ ˈeɪt əklˈɑːk"
+    },
+    {
+      "id": "en1.u2.p.010",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Do you always start at eight o'clock?",
+      "gloss": "¿Siempre empezás a las ocho?",
+      "speaker": "cafe-woman",
+      "intonation": "rising",
+      "grammar": [
+        "present-simple.interrogative",
+        "frequency-adverbs",
+        "time.at"
+      ],
+      "fn": [
+        "ask.frequency",
+        "ask.routine"
+      ],
+      "topic": [
+        "routine",
+        "time"
+      ],
+      "difficulty": 3,
+      "ipa": "dˈuː juː ˈɔːlweɪz stˈɑːɹt æɾ ˈeɪt əklˈɑːk"
+    },
+    {
+      "id": "en1.u2.p.011",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "No, I sometimes start at seven o'clock.",
+      "gloss": "No, a veces empiezo a las siete.",
+      "speaker": "cafe-man",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative",
+        "frequency-adverbs",
+        "time.at"
+      ],
+      "fn": [
+        "ask.frequency",
+        "describe.routine"
+      ],
+      "topic": [
+        "routine",
+        "time"
+      ],
+      "difficulty": 3,
+      "ipa": "nˈoʊ aɪ sˈʌmtaɪmz stˈɑːɹt æt sˈɛvən əklˈɑːk"
+    },
+    {
+      "id": "en1.u2.p.012",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Does the cafeteria open at seven o'clock?",
+      "gloss": "¿La cafetería abre a las siete?",
+      "speaker": "cafe-woman",
+      "intonation": "rising",
+      "grammar": [
+        "present-simple.interrogative",
+        "present-simple.third-person",
+        "time.at"
+      ],
+      "fn": [
+        "ask.time"
+      ],
+      "topic": [
+        "routine",
+        "time"
+      ],
+      "difficulty": 3,
+      "replies": [
+        "No, it doesn't. It opens at eight.",
+        "Yes, it does."
+      ],
+      "ipa": "dˈʌz ðə kˌæfɪtˈɪɹiə ˈoʊpən æt sˈɛvən əklˈɑːk"
+    },
+    {
+      "id": "en1.u2.p.013",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "No, it doesn't. It opens at eight o'clock.",
+      "gloss": "No. Abre a las ocho.",
+      "speaker": "cafe-man",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.negative",
+        "present-simple.third-person",
+        "present-simple.short-answer",
+        "time.at"
+      ],
+      "fn": [
+        "deny",
+        "ask.time"
+      ],
+      "topic": [
+        "routine",
+        "time"
+      ],
+      "difficulty": 3,
+      "ipa": "nˈoʊ ɪt dˈʌzənt ɪɾ ˈoʊpənz æɾ ˈeɪt əklˈɑːk"
+    },
+    {
+      "id": "en1.u2.p.014",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "I usually wait one hour to have my coffee.",
+      "gloss": "Normalmente espero una hora para tomar mi café.",
+      "speaker": "cafe-man",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 3,
+      "ipa": "aɪ jˈuːʒuːəli wˈeɪt wˈʌn ˈaʊɚ tə hæv maɪ kˈɔfi"
+    },
+    {
+      "id": "en1.u2.d.001",
+      "kind": "dialogue",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional"
+      },
+      "title": "En la cafetería",
+      "situation": "Dos empleados coinciden en la cafetería de la empresa y hablan de su trabajo y sus horarios.",
+      "turns": [
+        {
+          "speaker": "cafe-man",
+          "phraseId": "en1.u2.p.001"
+        },
+        {
+          "speaker": "cafe-woman",
+          "phraseId": "en1.u2.p.002"
+        },
+        {
+          "speaker": "cafe-man",
+          "phraseId": "en1.u2.p.003"
+        },
+        {
+          "speaker": "cafe-woman",
+          "phraseId": "en1.u2.p.004"
+        },
+        {
+          "speaker": "cafe-man",
+          "phraseId": "en1.u2.p.005"
+        },
+        {
+          "speaker": "cafe-woman",
+          "phraseId": "en1.u2.p.006"
+        },
+        {
+          "speaker": "cafe-man",
+          "phraseId": "en1.u2.p.007"
+        },
+        {
+          "speaker": "cafe-woman",
+          "phraseId": "en1.u2.p.008"
+        },
+        {
+          "speaker": "cafe-man",
+          "phraseId": "en1.u2.p.009"
+        },
+        {
+          "speaker": "cafe-woman",
+          "phraseId": "en1.u2.p.010"
+        },
+        {
+          "speaker": "cafe-man",
+          "phraseId": "en1.u2.p.011"
+        },
+        {
+          "speaker": "cafe-woman",
+          "phraseId": "en1.u2.p.012"
+        },
+        {
+          "speaker": "cafe-man",
+          "phraseId": "en1.u2.p.013"
+        },
+        {
+          "speaker": "cafe-man",
+          "phraseId": "en1.u2.p.014"
+        }
+      ],
+      "variants": [
+        "Do you work here?",
+        "What time do you start?",
+        "What do you do?"
+      ],
+      "grammar": [
+        "present-simple.interrogative",
+        "present-simple.affirmative",
+        "frequency-adverbs",
+        "time.at"
+      ],
+      "fn": [
+        "ask.permission",
+        "ask.routine",
+        "ask.occupation",
+        "ask.time",
+        "ask.frequency"
+      ],
+      "topic": [
+        "workplace",
+        "routine",
+        "time"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u2.qa.001",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — Yes/No y Wh questions"
+      },
+      "prompt": "Do you drink coffee?",
+      "promptVariants": [
+        "Does he drink coffee?"
+      ],
+      "replies": [
+        "Yes, I do.",
+        "No, I don’t."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "present-simple.interrogative",
+        "present-simple.short-answer"
+      ],
+      "fn": [
+        "ask.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u2.qa.002",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — Yes/No y Wh questions"
+      },
+      "prompt": "Do you like Chinese food?",
+      "promptVariants": [
+        "Does she like Chinese food?"
+      ],
+      "replies": [
+        "No, I don’t.",
+        "Yes, I do."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "present-simple.interrogative",
+        "present-simple.short-answer"
+      ],
+      "fn": [
+        "ask.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u2.qa.003",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — Yes/No y Wh questions"
+      },
+      "prompt": "Do you play football?",
+      "promptVariants": [
+        "Do you study medicine?"
+      ],
+      "replies": [
+        "Yes, I do.",
+        "No, I don’t."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "present-simple.interrogative",
+        "present-simple.short-answer"
+      ],
+      "fn": [
+        "ask.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u2.qa.004",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — Yes/No y Wh questions"
+      },
+      "prompt": "When do you go to discos?",
+      "promptVariants": [
+        "When do you go out?"
+      ],
+      "replies": [
+        "On Saturdays.",
+        "On the weekend."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "present-simple.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.frequency",
+        "ask.routine"
+      ],
+      "topic": [
+        "leisure",
+        "time"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u2.qa.005",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — Yes/No y Wh questions"
+      },
+      "prompt": "Who do you go with?",
+      "promptVariants": [
+        "Who goes with you?"
+      ],
+      "replies": [
+        "My friends.",
+        "With my family."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "present-simple.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u2.qa.006",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 4"
+      },
+      "prompt": "What's your name?",
+      "promptVariants": [
+        "What is your name?"
+      ],
+      "replies": [
+        "William."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "wh-questions",
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "ask.name"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u2.qa.007",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 4"
+      },
+      "prompt": "Do you study?",
+      "promptVariants": [
+        "Do you work?"
+      ],
+      "replies": [
+        "Yes, full time. I work part time."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.routine",
+        "ask.occupation"
+      ],
+      "topic": [
+        "occupation",
+        "routine"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u2.qa.008",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 4"
+      },
+      "prompt": "Do you like your job?",
+      "promptVariants": [],
+      "replies": [
+        "Yes, I do."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "present-simple.interrogative",
+        "present-simple.short-answer"
+      ],
+      "fn": [
+        "ask.occupation"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u2.qa.009",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 4"
+      },
+      "prompt": "What do you do?",
+      "promptVariants": [
+        "What is your job?"
+      ],
+      "replies": [
+        "I'm a network support person."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "present-simple.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.occupation"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u2.qa.010",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 4"
+      },
+      "prompt": "When do you work?",
+      "promptVariants": [
+        "What are your hours?"
+      ],
+      "replies": [
+        "Five days a week, five hours a day."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "present-simple.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.time",
+        "ask.routine"
+      ],
+      "topic": [
+        "routine",
+        "time"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u2.qa.011",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 4"
+      },
+      "prompt": "Where do you live?",
+      "promptVariants": [],
+      "replies": [
+        "In Elmhurst. It's in New York."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "present-simple.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.address"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u2.qa.012",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 4"
+      },
+      "prompt": "Are you married?",
+      "promptVariants": [],
+      "replies": [
+        "Yes, I am."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "be.present.interrogative",
+        "be.present.short-answer"
+      ],
+      "fn": [
+        "ask.marital-status"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u2.qa.013",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 4"
+      },
+      "prompt": "Do you have children?",
+      "promptVariants": [],
+      "replies": [
+        "Yes, I have a daughter."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "present-simple.interrogative",
+        "have-has"
+      ],
+      "fn": [
+        "ask.routine"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u2.p.015",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "text": "What time does it start?",
+      "gloss": "¿A qué hora empieza?",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.interrogative",
+        "present-simple.third-person",
+        "wh-questions",
+        "time.at"
+      ],
+      "fn": [
+        "ask.time"
+      ],
+      "topic": [
+        "time"
+      ],
+      "difficulty": 3,
+      "ipa": "wˌʌt tˈaɪm dˈʌz ɪt stˈɑːɹt"
+    },
+    {
+      "id": "en1.u2.p.016",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "text": "Where does it leave from?",
+      "gloss": "¿De dónde sale?",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.interrogative",
+        "present-simple.third-person",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 3,
+      "ipa": "wˌɛɹ dˈʌz ɪt lˈiːv fɹʌm"
+    },
+    {
+      "id": "en1.u2.p.017",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "text": "How much does it cost?",
+      "gloss": "¿Cuánto cuesta?",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.interrogative",
+        "present-simple.third-person",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.price"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 3,
+      "ipa": "hˌaʊ mˈʌtʃ dˈʌz ɪt kˈɔst"
+    },
+    {
+      "id": "en1.u2.p.018",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "text": "She doesn't eat meat.",
+      "gloss": "Ella no come carne.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.negative",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2,
+      "ipa": "ʃiː dˈʌzənt ˈiːt mˈiːt"
+    },
+    {
+      "id": "en1.u2.p.019",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "text": "I want to be a pilot.",
+      "gloss": "Quiero ser piloto.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ wˈɔnt təbi ɐ pˈaɪlət"
+    },
+    {
+      "id": "en1.u2.p.020",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "text": "Do you take credit cards?",
+      "gloss": "¿Aceptan tarjetas de crédito?",
+      "speaker": "narrator",
+      "intonation": "rising",
+      "grammar": [
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.price",
+        "make-request"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "ipa": "dˈuː juː tˈeɪk kɹˈɛdɪt kˈɑːɹdz"
+    },
+    {
+      "id": "en1.u2.lx.001",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "word": "have breakfast",
+      "pos": "phrase",
+      "gloss": "desayunar",
+      "examplePhraseId": "en1.u2.p.021",
+      "focus": "translation",
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u2.p.021",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"have breakfast\"."
+      },
+      "text": "I have breakfast at seven.",
+      "gloss": "Desayuno a las siete.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative",
+        "time.at"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ hæv bɹˈɛkfəst æt sˈɛvən"
+    },
+    {
+      "id": "en1.u2.lx.002",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "word": "go running",
+      "pos": "phrase",
+      "gloss": "salir a correr",
+      "examplePhraseId": "en1.u2.p.022",
+      "focus": "translation",
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u2.p.022",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"go running\"."
+      },
+      "text": "She goes running every morning.",
+      "gloss": "Ella sale a correr todas las mañanas.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative",
+        "present-simple.third-person",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure",
+        "routine"
+      ],
+      "difficulty": 2,
+      "ipa": "ʃiː ɡoʊz ɹˈʌnɪŋ ˈɛvɹi mˈɔːɹnɪŋ"
+    },
+    {
+      "id": "en1.u2.lx.003",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "word": "leave home",
+      "pos": "phrase",
+      "gloss": "salir de casa",
+      "examplePhraseId": "en1.u2.p.023",
+      "focus": "translation",
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u2.p.023",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"leave home\"."
+      },
+      "text": "They leave home at eight.",
+      "gloss": "Salen de casa a las ocho.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative",
+        "time.at"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2,
+      "ipa": "ðeɪ lˈiːv hˈoʊm æɾ ˈeɪt"
+    },
+    {
+      "id": "en1.u2.lx.004",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "word": "meet new people",
+      "pos": "phrase",
+      "gloss": "conocer gente nueva",
+      "examplePhraseId": "en1.u2.p.024",
+      "focus": "translation",
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u2.p.024",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"meet new people\"."
+      },
+      "text": "I meet new people at work.",
+      "gloss": "Conozco gente nueva en el trabajo.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure",
+        "workplace"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ mˈiːt nˈuː pˈiːpəl æt wˈɜːk"
+    },
+    {
+      "id": "en1.u2.p.025",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Ejemplo significativo (rutina de Venus)"
+      },
+      "text": "Venus wakes up at seven in the morning.",
+      "gloss": "Venus se despierta a las siete de la mañana.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.third-person",
+        "time.at"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine",
+        "time"
+      ],
+      "difficulty": 2,
+      "ipa": "vˈiːnəs wˈeɪks ˌʌp æt sˈɛvən ɪnðə mˈɔːɹnɪŋ"
+    },
+    {
+      "id": "en1.u2.p.026",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Ejemplo significativo (rutina de Venus)"
+      },
+      "text": "She has a shower and brushes her teeth.",
+      "gloss": "Se ducha y se lava los dientes.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2,
+      "ipa": "ʃiː hɐz ɐ ʃˈaʊɚ ænd bɹˈʌʃᵻz hɜː tˈiːθ"
+    },
+    {
+      "id": "en1.u2.p.027",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Ejemplo significativo (rutina de Venus)"
+      },
+      "text": "She always goes walking in the park.",
+      "gloss": "Siempre sale a caminar por el parque.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.third-person",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure",
+        "routine"
+      ],
+      "difficulty": 3,
+      "ipa": "ʃiː ˈɔːlweɪz ɡoʊz wˈɔːkɪŋ ɪnðə pˈɑːɹk"
+    },
+    {
+      "id": "en1.u2.p.028",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Ejemplo significativo (rutina de Venus)"
+      },
+      "text": "She usually eats fish for dinner.",
+      "gloss": "Normalmente cena pescado.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.third-person",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 3,
+      "ipa": "ʃiː jˈuːʒuːəli ˈiːts fˈɪʃ fɔːɹ dˈɪnɚ"
+    },
+    {
+      "id": "en1.u2.p.029",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Ejemplo significativo (rutina de Venus)"
+      },
+      "text": "She never goes to bed after eleven.",
+      "gloss": "Nunca se acuesta después de las once.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.third-person",
+        "frequency-adverbs",
+        "time.at"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine",
+        "time"
+      ],
+      "difficulty": 3,
+      "ipa": "ʃiː nˈɛvɚ ɡoʊz tə bˈɛd ˈæftɚɹ ᵻlˈɛvən"
+    },
+    {
+      "id": "en1.u2.p.030",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerza have/has (posesión), tema flaco en la U2."
+      },
+      "text": "She has two brothers.",
+      "gloss": "Ella tiene dos hermanos.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-has",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "ipa": "ʃiː hɐz tˈuː bɹˈʌðɚz"
+    },
+    {
+      "id": "en1.u2.p.031",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerza have/has (posesión)."
+      },
+      "text": "I have a new computer.",
+      "gloss": "Tengo una computadora nueva.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-has"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ hæv ɐ nˈuː kəmpjˈuːɾɚ"
+    },
+    {
+      "id": "en1.u2.p.032",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"have fun\"."
+      },
+      "text": "We have fun at the party.",
+      "gloss": "Nos divertimos en la fiesta.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative",
+        "have-has"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "ipa": "wiː hæv fˈʌn æt ðə pˈɑːɹɾi"
+    },
+    {
+      "id": "en1.u2.p.033",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"we are fit\"."
+      },
+      "text": "We are fit because we go running.",
+      "gloss": "Estamos en forma porque salimos a correr.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "ipa": "wiː ɑːɹ fˈɪt bɪkˈʌz wiː ɡˌoʊ ɹˈʌnɪŋ"
+    },
+    {
+      "id": "en1.u2.p.034",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"listen to music\"."
+      },
+      "text": "I listen to music every day.",
+      "gloss": "Escucho música todos los días.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ lˈɪsən tə mjˈuːzɪk ˈɛvɹi dˈeɪ"
+    },
+    {
+      "id": "en1.u2.p.035",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "text": "Would you like the mountain tour?",
+      "gloss": "¿Le gustaría el tour de montaña?",
+      "speaker": "narrator",
+      "intonation": "rising",
+      "grammar": [
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "make-request",
+        "propose-plan"
+      ],
+      "topic": [
+        "leisure",
+        "shopping"
+      ],
+      "difficulty": 3,
+      "ipa": "wʊd juː lˈaɪk ðə mˈaʊntɪn tˈʊɹ"
+    },
+    {
+      "id": "en1.u2.p.036",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Grammar Tips — frequency examples"
+      },
+      "text": "Bill studies mathematics all of the time. He always studies.",
+      "gloss": "Bill estudia matemática todo el tiempo. Siempre estudia.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.third-person",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 3,
+      "ipa": "bˈɪl stˈʌdiz mˌæθɪmˈæɾɪks ˈɔːl ʌvðə tˈaɪm hiː ˈɔːlweɪz stˈʌdiz"
+    },
+    {
+      "id": "en1.u2.p.037",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Grammar Tips — frequency examples"
+      },
+      "text": "John almost never studies. He seldom studies.",
+      "gloss": "John casi nunca estudia. Rara vez estudia.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.third-person",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 3,
+      "ipa": "dʒˈɑːn ˈɔːlmoʊst nˈɛvɚ stˈʌdiz hiː sˈɛldəm stˈʌdiz"
+    },
+    {
+      "id": "en1.u2.p.038",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Grammar Tips — frequency examples"
+      },
+      "text": "The students are always at the university.",
+      "gloss": "Los estudiantes siempre están en la universidad.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "campus"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə stˈuːdənts ɑːɹ ˈɔːlweɪz æt ðə jˌuːnɪvˈɜːsᵻɾi"
+    },
+    {
+      "id": "en1.u2.p.039",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Grammar Tips — frequency examples"
+      },
+      "text": "The teacher is never in the cafeteria.",
+      "gloss": "El profesor nunca está en la cafetería.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "campus",
+        "workplace"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə tˈiːtʃɚɹ ɪz nˈɛvɚɹ ɪnðə kˌæfɪtˈɪɹiə"
+    },
+    {
+      "id": "en1.u2.pr.001",
+      "kind": "production",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Ejemplo significativo (rutina de Venus)"
+      },
+      "prompt": "Describe someone's daily routine, like Venus's. Use the third person (-s) and frequency adverbs.",
+      "modelAnswer": "Venus wakes up at seven in the morning. She gets up and has a shower. She brushes her teeth and has breakfast. She always goes walking in the park. At eleven, she plays tennis with her sister. She goes back home at one and has lunch. In the afternoon she plays tennis again. She has dinner with her family and she usually eats fish. She never goes to bed after eleven.",
+      "modelVariants": [
+        "My father gets up at six. He has a coffee and reads the news. He goes to work by train and he always starts at eight. He has lunch in the canteen. He usually finishes at five. In the evening he watches TV and he sometimes goes running. He goes to bed at eleven.",
+        "My sister wakes up late. She never has breakfast at home. She studies medicine and she goes to the university every day. She often meets her friends in the afternoon. She likes music and she listens to music at night. She goes to bed after midnight."
+      ],
+      "rubric": [
+        {
+          "text": "Usa la tercera persona con -s (wakes, has, goes)",
+          "detect": "\\b\\w+(s|es)\\b"
+        },
+        {
+          "text": "Usa adverbios de frecuencia (always, usually, never…)",
+          "detect": "\\b(always|usually|often|sometimes|seldom|never)\\b"
+        },
+        {
+          "text": "Menciona horas con at",
+          "detect": "\\bat \\d"
+        },
+        {
+          "text": "Describe varias acciones de la rutina en orden"
+        }
+      ],
+      "speaker": "narrator",
+      "grammar": [
+        "present-simple.third-person",
+        "frequency-adverbs",
+        "time.at"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine",
+        "time"
+      ],
+      "difficulty": 5
+    },
+    {
+      "id": "en1.u2.ex.001",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Ejercitación 1"
+      },
+      "prompt": "Complete the sentences with the correct form of the verb (smoke, meet, close, teach, go, like).",
+      "format": "cloze",
+      "audioViable": "native",
+      "items": [
+        {
+          "stem": "She’s very clever. She speaks four languages.",
+          "blanks": []
+        },
+        {
+          "stem": "Steve ___ twenty cigarettes a day.",
+          "blanks": [
+            {
+              "accept": [
+                "smokes"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The UAI university ___ at midnight.",
+          "blanks": [
+            {
+              "accept": [
+                "closes"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Tina is a teacher. She ___ mathematics to young children.",
+          "blanks": [
+            {
+              "accept": [
+                "teaches"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Your job is very interesting. You ___ a lot of people.",
+          "blanks": [
+            {
+              "accept": [
+                "meet"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I ___ plays. I often go to the theater.",
+          "blanks": [
+            {
+              "accept": [
+                "like"
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        "present-simple.affirmative",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "describe.routine",
+        "state.fact"
+      ],
+      "topic": [
+        "routine",
+        "occupation"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u2.ex.002",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Ejercitación 2"
+      },
+      "prompt": "Complete with have or has.",
+      "format": "cloze",
+      "audioViable": "native",
+      "items": [
+        {
+          "stem": "Sam ___ a PC, but he doesn’t ___ a printer.",
+          "blanks": [
+            {
+              "accept": [
+                "has"
+              ]
+            },
+            {
+              "accept": [
+                "have"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Do you ___ tea in the afternoon?",
+          "blanks": [
+            {
+              "accept": [
+                "have"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Sandy ___ hot dogs on Tuesdays.",
+          "blanks": [
+            {
+              "accept": [
+                "has"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Can I ___ my written test, please?",
+          "blanks": [
+            {
+              "accept": [
+                "have"
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        "have-has",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "ask.possession",
+        "describe.routine"
+      ],
+      "topic": [
+        "routine",
+        "objects"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u2.ex.003",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 3"
+      },
+      "prompt": "Write the sentence in the third person, as in the example.",
+      "format": "transform",
+      "audioViable": "native",
+      "items": [
+        {
+          "stem": "We live in a house. (she / flat)",
+          "answer": {
+            "accept": [
+              "She lives in a flat."
+            ]
+          }
+        },
+        {
+          "stem": "They watch CNN. (Bob / MTV)",
+          "answer": {
+            "accept": [
+              "Bob watches MTV."
+            ]
+          }
+        },
+        {
+          "stem": "You study systems. (Erica / history)",
+          "answer": {
+            "accept": [
+              "Erica studies history."
+            ]
+          }
+        },
+        {
+          "stem": "I read love novels. (Henry / war novels)",
+          "answer": {
+            "accept": [
+              "Henry reads war novels.",
+              "Henry loves war novels."
+            ]
+          }
+        },
+        {
+          "stem": "We travel by United Airlines. (Mrs. Lane / British Airways)",
+          "answer": {
+            "accept": [
+              "Mrs. Lane travels by British Airways."
+            ]
+          }
+        }
+      ],
+      "grammar": [
+        "present-simple.third-person",
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine",
+        "state.fact"
+      ],
+      "topic": [
+        "routine",
+        "leisure"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u2.ex.004",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 6"
+      },
+      "prompt": "Rewrite the sentence placing the frequency adverb in the right position.",
+      "format": "transform",
+      "audioViable": "native",
+      "items": [
+        {
+          "stem": "Mary drinks coffee in the morning. (always)",
+          "answer": {
+            "accept": [
+              "Mary always drinks coffee in the morning."
+            ]
+          }
+        },
+        {
+          "stem": "The teacher is in the office. (usually)",
+          "answer": {
+            "accept": [
+              "The teacher is usually in the office."
+            ]
+          }
+        },
+        {
+          "stem": "Bill and Bob study at night. (sometimes)",
+          "answer": {
+            "accept": [
+              "Bill and Bob sometimes study at night."
+            ]
+          }
+        },
+        {
+          "stem": "Sam reads French. (never)",
+          "answer": {
+            "accept": [
+              "Sam never reads French."
+            ]
+          }
+        },
+        {
+          "stem": "They are in the laboratory. (seldom)",
+          "answer": {
+            "accept": [
+              "They are seldom in the laboratory."
+            ]
+          }
+        }
+      ],
+      "grammar": [
+        "frequency-adverbs",
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u2.ex.005",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Ejercitación 9"
+      },
+      "prompt": "Put the sentences into the negative using the verb in brackets.",
+      "format": "cloze",
+      "audioViable": "native",
+      "items": [
+        {
+          "stem": "A keyboard ___ in alphabetical order. (to be)",
+          "blanks": [
+            {
+              "accept": [
+                "isn't",
+                "is not"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "They ___ computers in their jobs. (to use)",
+          "blanks": [
+            {
+              "accept": [
+                "don't use",
+                "do not use"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The cursor ___ very slowly. (to move)",
+          "blanks": [
+            {
+              "accept": [
+                "doesn't move",
+                "does not move"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "A mouse ___ ten keys. (to have)",
+          "blanks": [
+            {
+              "accept": [
+                "doesn't have",
+                "does not have"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The shop ___ free software. (to give)",
+          "blanks": [
+            {
+              "accept": [
+                "doesn't give",
+                "does not give"
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        "present-simple.negative",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "deny",
+        "state.fact"
+      ],
+      "topic": [
+        "routine",
+        "objects"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u2.ex.006",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Ejercitación 8"
+      },
+      "prompt": "Find the mistake and correct it.",
+      "format": "error-hunt",
+      "audioViable": "adapted",
+      "items": [
+        {
+          "stem": "I leave always home at 7:00 a.m.",
+          "answer": {
+            "accept": [
+              "I always leave home at 7:00 a.m."
+            ]
+          }
+        },
+        {
+          "stem": "She never doesn’t go to UAI on Saturdays.",
+          "answer": {
+            "accept": [
+              "She never goes to UAI on Saturdays."
+            ]
+          }
+        },
+        {
+          "stem": "Do Bill sometimes study in the library?",
+          "answer": {
+            "accept": [
+              "Does Bill sometimes study in the library?"
+            ]
+          }
+        },
+        {
+          "stem": "They don’t usually has a software class.",
+          "answer": {
+            "accept": [
+              "They don't usually have a software class.",
+              "They usually have a software class."
+            ]
+          }
+        }
+      ],
+      "grammar": [
+        "present-simple.interrogative",
+        "present-simple.negative",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "correct"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 5
+    },
+    {
+      "id": "en1.u2.ct.001",
+      "kind": "contrast",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips"
+      },
+      "pair": [
+        "do",
+        "does"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "syntax",
+      "examples": [
+        {
+          "text": "___ you work here?",
+          "correct": 0
+        },
+        {
+          "text": "___ he drink coffee?",
+          "correct": 1
+        },
+        {
+          "text": "___ the cafeteria open at eight?",
+          "correct": 1
+        },
+        {
+          "text": "___ they study medicine?",
+          "correct": 0
+        }
+      ],
+      "grammar": [
+        "present-simple.interrogative",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "ask.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u2.ls.001",
+      "kind": "listening",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "page": 13,
+        "section": "Listening Comprehension 2",
+        "note": "La narrativa NO está en el material (link externo ausente). Escrita por nosotros con léxico de la U2, consistente con las respuestas oficiales: se levanta a las 7, mira TV a las 4, se va a dormir a las 9."
+      },
+      "narrative": "Hello. My name is Laura. I get up at seven o’clock every morning. I have breakfast and I go to work by bus. I work in an office and I usually have lunch at one. I leave work at three. In the afternoon, I watch TV at four. Then I make dinner and I read a book. I go to bed at nine because I am always tired.",
+      "speaker": "narrator",
+      "questions": [
+        {
+          "q": "What time does she get up?",
+          "accept": [
+            "At seven.",
+            "At 7.",
+            "At seven o’clock."
+          ]
+        },
+        {
+          "q": "When does she watch TV?",
+          "accept": [
+            "At four.",
+            "At 4.",
+            "In the afternoon."
+          ]
+        },
+        {
+          "q": "What does she do at nine o’clock?",
+          "accept": [
+            "She goes to bed.",
+            "Goes to bed."
+          ]
+        }
+      ],
+      "grammar": [
+        "present-simple.affirmative",
+        "present-simple.third-person",
+        "time.at"
+      ],
+      "fn": [
+        "describe.routine",
+        "ask.time"
+      ],
+      "topic": [
+        "routine",
+        "time"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u2.pr.002",
+      "kind": "production",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Actividad de cierre — Composition My Life Chapter 2"
+      },
+      "prompt": "COMPOSITION: MY LIFE: CHAPTER 2. Write about your daily routine: get up, have breakfast, go to work, have lunch, leave work, have dinner, go to bed.",
+      "chapter": 2,
+      "modelAnswer": "I get up at seven o’clock. I go to the bathroom and I have a shower. Then I have breakfast and I leave home. I take the bus to work and I get to work at nine. I usually have lunch at one. I leave work at five and I go home. I have dinner with my family and I sometimes watch TV. I go to bed at eleven.",
+      "modelVariants": [
+        "I wake up early. I don’t have breakfast at home. I go to the university by train and I always arrive at eight. I have lunch in the canteen with my friends. In the afternoon I study and I often go running. At night I listen to music and I go to bed late."
+      ],
+      "rubric": [
+        {
+          "text": "Usa el presente simple en primera persona",
+          "detect": "\\bI (get|have|go|leave|take|study|watch|wake)\\b"
+        },
+        {
+          "text": "Menciona horas con at",
+          "detect": "\\bat \\d"
+        },
+        {
+          "text": "Usa al menos un adverbio de frecuencia",
+          "detect": "\\b(always|usually|often|sometimes|seldom|never)\\b"
+        },
+        {
+          "text": "Describe la rutina en orden (mañana → noche)"
+        }
+      ],
+      "speaker": "examiner",
+      "grammar": [
+        "present-simple.affirmative",
+        "time.at",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine",
+        "time"
+      ],
+      "difficulty": 5
+    },
+    {
+      "id": "en1.u2.lx.005",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "word": "have fun",
+      "pos": "phrase",
+      "gloss": "divertirse",
+      "examplePhraseId": "en1.u2.p.032",
+      "focus": "translation",
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u2.lx.006",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Words and phrases to learn"
+      },
+      "word": "listen to music",
+      "pos": "phrase",
+      "gloss": "escuchar música",
+      "examplePhraseId": "en1.u2.p.034",
+      "focus": "translation",
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u2.ex.007",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 5"
+      },
+      "prompt": "Rewrite the sentence replacing the phrase in italics with a frequency adverb.",
+      "format": "transform",
+      "audioViable": "native",
+      "items": [
+        {
+          "stem": "The teacher travels by bus most of the time.",
+          "answer": {
+            "accept": [
+              "The teacher usually travels by bus."
+            ]
+          }
+        },
+        {
+          "stem": "The French student almost never studies in the evening.",
+          "answer": {
+            "accept": [
+              "The French student seldom studies in the evening."
+            ]
+          }
+        },
+        {
+          "stem": "The Dean is in the university all the time.",
+          "answer": {
+            "accept": [
+              "The Dean is always in the university."
+            ]
+          }
+        },
+        {
+          "stem": "The Systems students don't attend classes on Saturdays.",
+          "answer": {
+            "accept": [
+              "The Systems students never attend classes on Saturdays."
+            ]
+          }
+        },
+        {
+          "stem": "The summer course students sit for their exams some of the time.",
+          "answer": {
+            "accept": [
+              "The summer course students sometimes sit for their exams."
+            ]
+          }
+        }
+      ],
+      "grammar": [
+        "frequency-adverbs",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine",
+        "campus"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u2.pr.003",
+      "kind": "production",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Ejercitación 7 (cuadro de la rutina de Peter)"
+      },
+      "prompt": "Talk about Peter's weekly routine using the chart. Use frequency adverbs: always, never, sometimes, usually, once/twice/three times a week.",
+      "modelAnswer": "Peter always leaves home at 7 a.m. He usually gets to school at 7:30. He sometimes has a morning meeting with the teachers. He usually has lunch in the canteen. He has an afternoon meeting twice a week. He always works in his office. He leaves work at 4 p.m. once a week. He never goes out with the students after work.",
+      "modelVariants": [
+        "My mother always gets up at six. She usually goes to work by car. She sometimes has meetings in the morning. She has lunch at home twice a week. She never works on Sundays."
+      ],
+      "rubric": [
+        {
+          "text": "Usa la tercera persona con -s",
+          "detect": "\\b(leaves|gets|has|works|goes)\\b"
+        },
+        {
+          "text": "Usa varios adverbios de frecuencia",
+          "detect": "\\b(always|usually|sometimes|never)\\b"
+        },
+        {
+          "text": "Usa expresiones de frecuencia (once/twice a week)",
+          "detect": "\\b(once|twice|three times) a week\\b"
+        },
+        {
+          "text": "Describe la semana de Peter en orden"
+        }
+      ],
+      "speaker": "narrator",
+      "grammar": [
+        "present-simple.third-person",
+        "frequency-adverbs",
+        "time.at"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine",
+        "workplace"
+      ],
+      "difficulty": 5
+    },
+    {
+      "id": "en1.u2.ct.002",
+      "kind": "contrast",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — spelling third person"
+      },
+      "pair": [
+        "work",
+        "works"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "syntax",
+      "examples": [
+        {
+          "text": "I ___ here too.",
+          "correct": 0
+        },
+        {
+          "text": "He ___ in an office.",
+          "correct": 1
+        },
+        {
+          "text": "They ___ every day.",
+          "correct": 0
+        },
+        {
+          "text": "She ___ part time.",
+          "correct": 1
+        }
+      ],
+      "grammar": [
+        "present-simple.third-person",
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine",
+        "workplace"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u2.ct.003",
+      "kind": "contrast",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — do/does spelling"
+      },
+      "pair": [
+        "study",
+        "studies"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "syntax",
+      "examples": [
+        {
+          "text": "You ___ systems.",
+          "correct": 0
+        },
+        {
+          "text": "Erica ___ history.",
+          "correct": 1
+        },
+        {
+          "text": "Bill and Bob ___ at night.",
+          "correct": 0
+        },
+        {
+          "text": "He ___ mathematics.",
+          "correct": 1
+        }
+      ],
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2
+    }
+  ]
+}
