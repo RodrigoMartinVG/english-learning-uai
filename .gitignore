@@ -1,0 +1,24 @@
+node_modules/
+dist/
+.vite/
+
+# Material oficial de la cátedra (UAI). NO se versiona: tiene derechos y no es nuestro
+# para redistribuir. Vive solo localmente y alimenta el pipeline de extracción.
+# Ver material/README.md para saber qué archivos poner ahí.
+material/*.pdf
+
+# Audio generado por scripts/build-audio.ts — derivado de content/, no fuente de verdad.
+# Se regenera con `npm run build:audio`. El manifest SÍ se versiona (es el cache de hashes).
+public/audio/
+!public/audio/audio-manifest.json
+
+# Credenciales del proveedor TTS. NUNCA commitear.
+.env
+.env.local
+
+# Artefactos temporales del pipeline
+scripts/.cache/
+*.log
+
+.DS_Store
+Thumbs.db

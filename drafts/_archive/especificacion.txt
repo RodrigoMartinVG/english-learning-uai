@@ -1,0 +1,159 @@
+Aquí tienes el documento maestro. Está estructurado específicamente como un **PRD (Product Requirements Document) y Especificación Técnica** para que cualquier IA de *vibecoding* (como Cursor, Copilot o Cline) entienda el contexto completo, las mecánicas, las APIs involucradas y la arquitectura deseada.
+
+Puedes copiar este bloque exacto y dárselo a tu asistente de código.
+
+---
+
+# Documento de Especificación: Oda Language Hub
+
+## 1. Visión General del Proyecto
+
+**Oda Language Hub** es una aplicación interactiva de aprendizaje de idiomas (Single Page Application) centrada en el entrenamiento auditivo avanzado y la corrección de pronunciación. Rompe con los esquemas pasivos tradicionales mediante mecánicas de decodificación activa, emparejamiento fonético y *Shadowing* (escuchar y repetir).
+
+La arquitectura objetivo apunta a un stack de alto rendimiento y agnóstico de frameworks pesados, priorizando el uso de **Vite, TypeScript y Web Components (Lit)** para asegurar modularidad, reactividad escalable y fluidez a 60fps.
+
+## 2. Fundamentos Pedagógicos
+
+El sistema opera sobre tres pilares cognitivos:
+
+* **Decodificación Activa (Ósmosis):** No se trata solo de traducir, sino de mapear un sonido a su significado, explorar variaciones semánticas (distintas formas de preguntar lo mismo) y asimilar respuestas naturales.
+* **Memoria de Trabajo (Matching):** Forzar al usuario a retener fragmentos fonéticos temporales mientras escanea estímulos visuales (texto), fortaleciendo las conexiones neuronales entre el sonido y la gramática.
+* **Shadowing (Imitación Estructural):** Escucha activa seguida de producción oral inmediata, evaluada por el sistema para ajustar la prosodia y la pronunciación.
+* **Repetición Espaciada (SRS):** (Implementación próxima). El sistema deberá registrar qué frases fallan y cuáles se aciertan, utilizando un algoritmo (tipo SM-2 o Leitner) para programar las revisiones en intervalos óptimos, maximizando la retención a largo plazo.
+
+## 3. Especificaciones Técnicas Fundamentales
+
+### 3.1. Gestión de Voz Sintética (TTS - Text-to-Speech)
+
+* **API:** `window.speechSynthesis` (Web Speech API).
+* **Filtro de Voces Naturales:** El sistema no usa la primera voz disponible. Filtra iterativamente el array devuelto por `getVoices()` buscando motores neuronales/naturales de alta fidelidad (identificables por descriptores como "Natural", "Guy", "Aria", "Google UK/US").
+* **Fallback:** Si no encuentra voces premium, selecciona por defecto aquellas cuyo idioma (`lang`) comience con `en-`.
+* **Parámetros:** La velocidad (`rate`) se ajusta dinámicamente entre `0.85` y `0.90` para simular habla natural sin ser ininteligible.
+
+### 3.2. Reconocimiento de Voz (STT - Speech-to-Text)
+
+* **API:** `window.SpeechRecognition` o `window.webkitSpeechRecognition`.
+* **Configuración:** * `lang`: 'en-US' (configurable según el idioma objetivo).
+* `interimResults`: `true` (Crucial: permite mostrar la transcripción en tiempo real en la UI para dar feedback visual inmediato).
+* `maxAlternatives`: 1.
+
+
+* **Normalización Estructural (Regex):** Para comparar lo que el usuario dice con la frase objetivo, el sistema aplica una función de limpieza estricta: `text.toLowerCase().replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ").trim()`. Esto evita que el usuario sea penalizado por la falta de un signo de interrogación o comas.
+
+### 3.3. Estructura de Datos (Single Source of Truth)
+
+La base de datos interna debe ser un objeto/array centralizado que alimente a todos los módulos. Esquema base requerido:
+
+```typescript
+interface LanguageItem {
+  id: string | number;
+  category: string; // ej: 'origin', 'occupation'
+  text: string; // Frase principal / Pregunta
+  replies: string[]; // Respuestas naturales válidas
+  alternatives?: string[]; // Otras formas de decir 'text'
+  srsData?: {
+    interval: number;
+    repetition: number;
+    efactor: number;
+    nextReviewDate: string;
+  };
+}
+
+```
+
+## 4. Módulos de Entrenamiento (Vistas de la SPA)
+
+### Módulo 1: Ósmosis & Listening
+
+* **Mecánica:** Se reproduce el audio de una frase (ciega). Se muestran 4 opciones de texto.
+* **Lógica de Distractores:** Las 3 opciones incorrectas deben generarse dinámicamente filtrando elementos de la base de datos que *no* pertenezcan a la misma `category` que la frase actual, para evitar ambigüedades.
+* **Fase de Expansión:** Tras acertar, la UI revela un panel de aprendizaje extra mostrando `alternatives` (otras formas de formular la pregunta) y `replies` (respuestas naturales), cada una con su propio botón para reproducir el audio.
+
+### Módulo 2: Audio Matching (Emparejamiento)
+
+* **Mecánica:** Pantalla dividida. Columna A (Botones solo con iconos de audio). Columna B (Cajas de texto).
+* **Dinámica de Fases:** Cada ronda agrupa frases de una misma categoría.
+* Fase 1: Emparejar las preguntas.
+* Fase 2: Emparejar las respuestas.
+
+
+* **Variabilidad Fonética:** Cada botón de audio (`🔊`) en la ronda debe instanciar una voz distinta al azar del pool de *voces naturales*, entrenando al oído a saltar entre diferentes acentos y tonos simultáneamente.
+
+### Módulo 3: Shadowing Lab
+
+* **Mecánica:** Muestra una frase y permite reproducirla. El usuario presiona un botón de micrófono para repetirla.
+* **Flujo UI:**
+1. Botón Mic presionado -> Inicia `recognition.start()`, UI muestra animación de "grabando" e indica los `interimResults`.
+2. Usuario se detiene / termina de hablar -> `recognition.onresult` captura el `isFinal`.
+3. Motor de validación -> Compara el string final (normalizado) con el objetivo (normalizado). Retorna éxito si hay match directo o un `includes()` recíproco.
+
+
+
+## 5. Arquitectura UI y Sistema de Diseño
+
+* **CSS Variables (Theming):** Uso estricto de variables en `:root` para manejo de paleta oscura: `--bg-color`, `--card-bg`, `--accent` (primario), `--success`, `--error`.
+* **Router Minimalista:** Un gestor de estado simple que oculta/muestra vistas agregando/quitando la clase `.active` de los contenedores principales.
+* **Prevención de Errores de Hardware:** La aplicación debe incluir un bloque de inicialización que detecte si el navegador soporta `webkitSpeechRecognition` y advierta al usuario en caso negativo. Además, debe montarse sobre HTTP/HTTPS (ej. Vite dev server) para que los permisos del micrófono persistan y no bloqueen la experiencia de usuario.
+
+## 6. Directivas para la IA Generadora (Próximos Pasos)
+
+1. **Refactorización a Web Components:** Convierte el código Vanilla JS y el DOM manipulado manualmente en componentes de **Lit** (ej. `<oda-router>`, `<osmosis-module>`, `<shadowing-lab>`).
+2. **Gestión de Estado (Signals o Context):** Extrae la lógica de las Web Speech APIs a un singleton o store de TypeScript para que cualquier componente pueda despachar un audio o solicitar escucha sin duplicar código.
+3. **Motor SRS:** Implementa la lógica matemática de Spaced Repetition dentro de la estructura de datos para que los módulos prioricen las frases con `nextReviewDate` vencido.
+
+
+
+Para que tu proyecto pase de ser un "prototipo funcional" a una **aplicación de nivel profesional** que realmente pueda usarse en un entorno educativo o comercial, hay varios "detalles" que, si los ignoras ahora, te obligarán a reescribir todo el código más adelante.
+
+Aquí tienes los aspectos críticos que cualquier IA de desarrollo o ingeniero senior te preguntaría para completar la arquitectura:
+
+### 1. Manejo de estados de "Carga y Fallo" (UX Robusta)
+
+En el desarrollo con APIs de voz, la red o el hardware pueden fallar. Tu app necesita un sistema de **gestión de estados de UI** para:
+
+* **Permissions Handling:** Qué pasa si el usuario deniega el acceso al micrófono. Debes tener un "botón de reseteo de permisos" o un modal que explique cómo habilitarlo en la configuración del navegador.
+* **Audio Queueing:** Si el usuario presiona "Play" mientras el sistema ya está hablando, la app debe cancelar la voz anterior (`speechSynthesis.cancel()`) antes de empezar la nueva para evitar que las voces se "solapen" (un problema común).
+* **Loading States:** Si el `SpeechRecognition` tarda en inicializarse, el botón de micrófono debe mostrar un estado de "Cargando..." en lugar de parecer que simplemente no funciona.
+
+### 2. Escalabilidad de Datos (Backend y Sincronización)
+
+Hoy tienes el dataset en un array. Eso está bien para empezar, pero para una aplicación real:
+
+* **Formato JSON externo:** Separa los datos del código. Crea un archivo `data.json` que el sistema cargue mediante un `fetch()`. Esto te permitirá actualizar el contenido del curso sin tocar la lógica de la aplicación.
+* **Categorización profunda:** Tu estructura actual es plana. Piensa en una jerarquía: `Nivel > Categoría > Frase > Variaciones`. Esto es clave para el **algoritmo de repetición espaciada (SRS)**.
+
+### 3. Accesibilidad (A11y) y Diseño Responsivo
+
+Un error común es ignorar la accesibilidad en apps educativas:
+
+* **Atributos ARIA:** Los botones de audio y micrófono deben tener `aria-label` para que los lectores de pantalla puedan decir "Botón de reproducir audio" o "Botón de grabación".
+* **Touch Targets:** En móviles, los botones como el del micrófono deben tener al menos 48x48px de área de clic activa. En tu diseño, los iconos deben ser lo suficientemente grandes para no fallar el clic.
+
+### 4. Calidad del Reconocimiento de Voz (El "Contexto" es rey)
+
+La API de Google es muy buena, pero puede fallar si la frase es corta.
+
+* **Grammar Hints:** La API de `SpeechRecognition` tiene una propiedad poco usada llamada `speechRecognitionList` que permite pasarle al navegador un "diccionario" de palabras esperadas. Esto mejora drásticamente el reconocimiento porque le "sopla" al navegador qué palabras debe escuchar.
+* **Timeout automático:** Configura un temporizador que detenga el reconocimiento después de 5-10 segundos de silencio. De lo contrario, si el usuario no dice nada, el micrófono quedará bloqueado escuchando ruido de fondo.
+
+### 5. Analíticas y Feedback al Usuario (Learning Analytics)
+
+Para que un alumno sienta que está aprendiendo, necesita **métrica**:
+
+* **Registro de Errores Comunes:** Guarda en `localStorage` qué palabras falla el usuario (ej: siempre falla al pronunciar "th" o "r").
+* **Dashboard de Progreso:** Una simple barra de progreso o un gráfico de radar que muestre "Nivel de pronunciación", "Vocabulario adquirido" y "Fluidez". Sin métricas, el usuario pierde interés rápidamente.
+
+### 6. Consideraciones de Latencia (Performance)
+
+* **Debounce/Throttle:** Asegúrate de que, al hacer clic en el botón de "Siguiente frase", la lógica de precarga del próximo audio sea asíncrona. Si el usuario hace clic muy rápido, el sistema no debería bloquearse.
+* **Service Workers:** Si quieres que la app funcione incluso si el usuario pierde la conexión a internet momentáneamente (modo offline), considera implementar un Service Worker básico para cachear los archivos estáticos.
+
+---
+
+### ¿Cómo visualizar estos componentes?
+
+Para entender mejor cómo estos elementos se integran en una arquitectura de software limpia y eficiente, considera este esquema lógico:
+
+### Mi recomendación para tu próximo paso:
+
+Antes de empezar a programar cada módulo, **define el modelo de datos final**. Si defines una estructura donde cada frase tenga metadatos claros (dificultad, categoría, tags de pronunciación), el resto de la aplicación (los juegos, el sistema de repetición espaciada y el dashboard) se construirá casi solo.
