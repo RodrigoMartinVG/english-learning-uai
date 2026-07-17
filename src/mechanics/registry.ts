@@ -12,9 +12,18 @@ import { osmosis } from './osmosis/mechanic.ts';
 import { minimalPairs } from './minimal-pairs/mechanic.ts';
 import { shadowing } from './shadowing/mechanic.ts';
 import { pingPong } from './ping-pong/mechanic.ts';
+import { rolePlay } from './role-play/mechanic.ts';
+import { oralExam } from './oral-exam/mechanic.ts';
 import type { Mechanic } from './types.ts';
 
 /** Ordenadas por la escalera de §2.3: percepción → comprensión → producción. */
-export const mechanics: Mechanic<any>[] = [minimalPairs, osmosis, pingPong, shadowing];
+export const mechanics: Mechanic<any>[] = [
+  minimalPairs,
+  osmosis,
+  pingPong,
+  shadowing,
+  rolePlay,
+  oralExam,
+];
 
 export const mechanicById = new Map(mechanics.map((m) => [m.id, m]));

@@ -11,6 +11,7 @@
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, basename } from 'node:path';
 import { z } from 'zod';
+import { normalize } from '../src/engine/grading/speech.ts';
 import {
   speakersFileSchema,
   unitFileSchema,
@@ -238,6 +239,35 @@ for (const { file, course, unit, aspects, atoms } of unitFiles) {
       atom.examples.forEach((ex, i) => {
         if (ex.phraseId) mustBePhrase(ex.phraseId, at(`examples.${i}.phraseId`));
       });
+    }
+
+    /**
+     * La respuesta modelo tiene que cumplir su propia rúbrica.
+     *
+     * Parece obvio y por eso hay que chequearlo: en JSON, "\b" NO es la
+     * palabra-límite del regex, es el carácter backspace. Los detectores quedaron
+     * con un carácter de control invisible adentro, nunca matchearon, y el schema
+     * los dio por válidos porque `new RegExp()` no protesta. El examen le habría
+     * dicho al alumno "te faltó todo" incluso recitando el modelo palabra por
+     * palabra. Un detector que no reconoce la respuesta ideal está roto.
+     */
+    if (atom.kind === 'production') {
+      const said = normalize(atom.modelAnswer);
+      for (const r of atom.rubric) {
+        if (!r.detect) continue;
+        try {
+          if (!new RegExp(r.detect, 'i').test(said)) {
+            err(
+              file,
+              at(`rubric["${r.text}"]`),
+              `el detector /${r.detect}/ no reconoce la propia modelAnswer → o el regex está mal ` +
+                `escrito (¿"\\b" en vez de "\\\\b"?) o la respuesta modelo no cumple la rúbrica`
+            );
+          }
+        } catch {
+          err(file, at(`rubric["${r.text}"]`), `detect no es un regex válido: ${r.detect}`);
+        }
+      }
     }
 
     // Regla §5.6: las narrativas de listening no existen en el material. Son nuestras.

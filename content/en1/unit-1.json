@@ -3903,11 +3903,25 @@
       ],
       "modelAnswer": "This is my study room. There is a big desk and there is a comfortable chair. On the desk, there is a modern computer and a small keyboard. Next to the computer, there is a cheap calculator. On the wall, there are two nice pictures and there is a big clock. There are interesting books on the shelves, and there are many notebooks in the drawers. However, there isn't a new printer inside this room, and there aren't cats in this room.",
       "rubric": [
-        "Usa 'there is' con sustantivos singulares",
-        "Usa 'there are' con sustantivos plurales",
-        "Incluye al menos dos oraciones negativas ('there isn't' / 'there aren't')",
-        "Coloca los adjetivos antes del sustantivo",
-        "Usa preposiciones de lugar (on, in, next to, inside)"
+        {
+          "text": "Usa 'there is' con sustantivos singulares",
+          "detect": "\\bthere is\\b"
+        },
+        {
+          "text": "Usa 'there are' con sustantivos plurales",
+          "detect": "\\bthere are\\b"
+        },
+        {
+          "text": "Incluye al menos una oración negativa",
+          "detect": "\\bthere (is not|are not)\\b"
+        },
+        {
+          "text": "Coloca los adjetivos antes del sustantivo"
+        },
+        {
+          "text": "Usa preposiciones de lugar (on, in, next to, inside)",
+          "detect": "\\b(on|in|inside|next to|under|behind|above)\\b"
+        }
       ],
       "speaker": "narrator",
       "grammar": [
@@ -3939,11 +3953,26 @@
       "chapter": 1,
       "modelAnswer": "Hello! My name is Karen. I am twenty-seven years old. I am from Germany, so I am German. I live in a big apartment. In my apartment, my favorite objects are my modern computer, my comfortable chair, and my yellow notebook. I also like my black sunglasses.",
       "rubric": [
-        "Dice el nombre (My name is... / I'm...)",
-        "Dice la edad con un número cardinal",
-        "Dice el país de origen con 'from'",
-        "Dice la nacionalidad (concordancia país/gentilicio)",
-        "Menciona objetos favoritos con adjetivos posesivos"
+        {
+          "text": "Dice su nombre",
+          "detect": "\\b(my name is|i am|i'm)\\b"
+        },
+        {
+          "text": "Dice la edad",
+          "detect": "\\b(years old|twenty|thirty|forty|fifty|nineteen|eighteen)\\b"
+        },
+        {
+          "text": "Dice el país de origen con 'from'",
+          "detect": "\\bfrom\\b"
+        },
+        {
+          "text": "Dice la nacionalidad",
+          "detect": "\\b(argentinean|german|spanish|russian|turkish|portuguese|american|italian|french|brazilian|dutch|japanese)\\b"
+        },
+        {
+          "text": "Menciona objetos favoritos con adjetivos posesivos",
+          "detect": "\\bmy \\w+"
+        }
       ],
       "speaker": "examiner",
       "grammar": [

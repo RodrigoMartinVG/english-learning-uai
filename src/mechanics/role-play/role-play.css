@@ -1,0 +1,84 @@
+.rp {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rp__head {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.rp__title {
+  font-weight: 600;
+}
+.rp__situation {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+.rp__role {
+  font-size: 13px;
+  color: var(--text-faint);
+  margin-top: 8px;
+}
+.rp__role strong {
+  color: var(--accent);
+}
+
+.rp__log {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 4px;
+}
+.rp__turn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  max-width: 82%;
+}
+.rp__turn--mine {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+.rp__who {
+  font-size: 11px;
+  color: var(--text-faint);
+  padding: 0 8px;
+}
+.rp__line {
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  text-align: left;
+  font-size: 15px;
+  transition: border-color var(--dur) var(--ease);
+}
+.rp__line:hover {
+  border-color: var(--accent);
+}
+.rp__turn--mine .rp__line {
+  background: color-mix(in srgb, var(--accent) 14%, var(--surface));
+  border-color: var(--accent-dim);
+}
+.rp__line--live {
+  color: var(--text-faint);
+}
+
+.rp__mine {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+.rp__cue {
+  text-align: center;
+  font-size: 19px;
+  line-height: 1.5;
+}

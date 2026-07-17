@@ -33,6 +33,14 @@ export interface ListenOptions {
   hints?: string;
   /** Corta si no se oye nada. Sin esto el micro queda colgado en ruido de fondo. */
   silenceMs?: number;
+  /**
+   * Seguir escuchando después de la primera pausa.
+   *
+   * Imprescindible para monólogos: sin esto, el reconocimiento se cierra apenas
+   * el alumno respira, y una respuesta de examen oral queda cortada en la primera
+   * coma. Para una frase suelta, en cambio, cortar rápido es lo que se quiere.
+   */
+  continuous?: boolean;
   /** Transcripción parcial, para dar feedback mientras habla. */
   onInterim?: (text: string) => void;
 }
@@ -97,7 +105,7 @@ export function createRecognizer(): Recognizer {
         rec.lang = opts.lang ?? 'en-US';
         rec.interimResults = true;
         rec.maxAlternatives = 1;
-        rec.continuous = false;
+        rec.continuous = opts.continuous ?? false;
 
         // Grammar hints: la propiedad infrautilizada del PRD. Puede no existir
         // (Firefox, versiones viejas) y no es motivo para no reconocer nada.

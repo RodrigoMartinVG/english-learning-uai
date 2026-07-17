@@ -378,8 +378,34 @@ export const productionAtomSchema = z.object({
   modelAnswer: z.string().min(1),
   /** "My Life: Chapter N" — hilo acumulativo. Al final de las 4, es el final oral. */
   chapter: z.number().int().positive().optional(),
-  /** Qué tiene que aparecer sí o sí. Lo chequea el Oral Exam Simulator. */
-  rubric: z.array(z.string().min(1)).min(1),
+  /**
+   * Qué tiene que aparecer sí o sí. Lo usa el Oral Exam Simulator.
+   *
+   * `detect` es un regex contra la transcripción normalizada. Es opcional a
+   * propósito: "coloca los adjetivos antes del sustantivo" no se detecta con una
+   * expresión regular, y fingir que sí sería peor que admitirlo. Sin `detect`,
+   * el ítem se ofrece como auto-chequeo contra la propia transcripción.
+   */
+  rubric: z
+    .array(
+      z.object({
+        text: z.string().min(1),
+        detect: z
+          .string()
+          .min(1)
+          .optional()
+          .refine((s) => {
+            if (!s) return true;
+            try {
+              new RegExp(s);
+              return true;
+            } catch {
+              return false;
+            }
+          }, 'detect debe ser un regex válido'),
+      })
+    )
+    .min(1),
   speaker: z.string().min(1),
 });
 
