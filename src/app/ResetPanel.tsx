@@ -8,6 +8,7 @@
 
 import { useState } from 'react';
 import { units } from '../data/content.ts';
+import { clearFlags, exportFlags, flagCount } from '../data/flags.ts';
 import { exportProgress, resetProgress, statsFor, type ResetScope } from '../data/progress.ts';
 
 export function ResetPanel({ onBack }: { onBack: () => void }) {
@@ -18,6 +19,14 @@ export function ResetPanel({ onBack }: { onBack: () => void }) {
     const n = resetProgress(scope);
     setPending(null);
     setMessage(n === 0 ? 'No había progreso que borrar.' : `Se borraron ${n} tarjeta(s).`);
+  };
+
+  const downloadFlags = () => {
+    const blob = new Blob([exportFlags()], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = `oda-audios-marcados-${new Date().toISOString().slice(0,10)}.json`; a.click();
+    URL.revokeObjectURL(url);
   };
 
   const download = () => {
@@ -71,6 +80,19 @@ export function ResetPanel({ onBack }: { onBack: () => void }) {
           Borrar todo el progreso
         </button>
       </section>
+
+      {flagCount() > 0 && (
+        <section className="reset__group">
+          <h2 className="home__section">Audios marcados ({flagCount()})</h2>
+          <p className="reset__hint">
+            Exportá este archivo y pasámelo: con él identifico qué voces cambiar y regenero los audios.
+          </p>
+          <button className="btn btn--wide" onClick={downloadFlags}>⬇ Exportar audios marcados</button>
+          <button className="btn" onClick={() => { clearFlags(); setMessage('Marcas de audio borradas.'); }}>
+            Borrar las marcas
+          </button>
+        </section>
+      )}
 
       <button className="btn btn--wide" onClick={onBack}>
         ← Volver

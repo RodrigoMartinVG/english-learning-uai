@@ -115,3 +115,4 @@
 .reset__danger:hover { background: color-mix(in srgb, var(--error) 12%, var(--surface)); }
 .reset__confirm { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: grid; place-items: center; padding: 24px; z-index: 100; }
 .reset__dialog { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; max-width: 400px; display: flex; flex-direction: column; gap: 16px; }
+.reset__hint { font-size: 13px; color: var(--text-dim); }

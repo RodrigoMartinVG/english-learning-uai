@@ -9,7 +9,8 @@
     "validate": "tsx scripts/validate-content.ts",
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && npm run validate",
-    "build:audio": "tsx scripts/build-audio.ts"
+    "build:audio": "tsx scripts/build-audio.ts",
+    "flags": "tsx scripts/review-flags.ts"
   },
   "repository": {
     "type": "git",

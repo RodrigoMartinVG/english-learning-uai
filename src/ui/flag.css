@@ -1,0 +1,10 @@
+.flagbtn {
+  min-height: 44px; min-width: 44px;
+  font-size: 17px; line-height: 1; color: var(--text-dim);
+  border-radius: var(--radius-sm);
+  transition: color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.flagbtn:hover:not(:disabled) { color: var(--error); background: var(--surface-hi); }
+.flagbtn:disabled { opacity: .35; cursor: default; }
+.flagbtn--on { color: var(--error); }
+.shell__actions { display: flex; align-items: center; gap: 4px; }

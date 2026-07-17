@@ -72,6 +72,14 @@ export type AudioSource = 'file' | 'synth' | 'none' | 'interrupted';
 /** ¿El audio sonó completo? Lo que casi siempre se quiere preguntar. */
 export const played = (r: AudioSource): boolean => r === 'file' || r === 'synth';
 
+/** Lo último que sonó. Es lo que el botón de "marcar audio" necesita señalar. */
+export interface LastPlayed {
+  key: string;
+  text: string;
+  speakerId: string;
+  source: AudioSource;
+}
+
 export interface AudioService {
   speak(req: SpeakRequest): Promise<AudioSource>;
   cancel(): void;
@@ -79,6 +87,8 @@ export interface AudioService {
   hasFile(key: string): boolean;
   getState(): AudioState;
   subscribe(fn: (s: AudioState) => void): () => void;
+  /** Qué sonó último, para poder marcarlo si suena mal. Null si nada sonó aún. */
+  getLastPlayed(): LastPlayed | null;
   /** Para el arranque: si esto es false, la app no puede cumplir su función. */
   isSupported(): boolean;
 }
@@ -162,6 +172,7 @@ export function createAudioService(
   let current: HTMLAudioElement | null = null;
   /** Cada speak() incrementa esto. Un token viejo que resuelve ya no manda. */
   let token = 0;
+  let lastPlayed: LastPlayed | null = null;
   const preloaded = new Map<string, HTMLAudioElement>();
 
   const setState = (s: AudioState) => {
@@ -246,6 +257,10 @@ export function createAudioService(
       return key in manifest.entries;
     },
 
+    getLastPlayed() {
+      return lastPlayed;
+    },
+
     getState() {
       return state;
     },
@@ -287,6 +302,12 @@ export function createAudioService(
       const rate = hints.rate * (req.rateFactor ?? 1);
       setState('loading');
 
+      const remember = (source: AudioSource) => {
+        // Solo lo que sonó de un archivo es marcable: la voz de fallback del
+        // navegador no la generamos nosotros, no tiene sentido reportarla.
+        lastPlayed = { key: req.key, text: req.text, speakerId: req.speakerId, source };
+      };
+
       const entry = manifest.entries[req.key];
       if (entry) {
         setState('speaking');
@@ -295,6 +316,7 @@ export function createAudioService(
         if (myToken !== token) return 'interrupted';
         if (ok) {
           setState('idle');
+          remember('file');
           return 'file';
         }
       }
@@ -303,6 +325,7 @@ export function createAudioService(
       const ok = await playSynth(req.text, hints, rate, myToken);
       if (myToken !== token) return 'interrupted';
       setState(ok ? 'idle' : 'error');
+      if (ok) remember('synth');
       return ok ? 'synth' : 'none';
     },
   };

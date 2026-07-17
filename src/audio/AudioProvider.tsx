@@ -30,3 +30,5 @@ export function useAudioState(): AudioState {
   useEffect(() => service.subscribe(setState), [service]);
   return state;
 }
+
+export { FlagAudioButton } from '../ui/FlagAudioButton.tsx';
