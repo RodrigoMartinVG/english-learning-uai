@@ -40,11 +40,26 @@ export const voiceHints: Record<string, AudioVoiceHints> = Object.fromEntries(
 export const isPhrase = (a: Atom): a is PhraseAtom => a.kind === 'phrase';
 export const isQa = (a: Atom): a is QaAtom => a.kind === 'qa';
 
-/** Cuántos átomos tienen su audio ya generado. Si es 0, la app corre en fallback. */
+/**
+ * Tipos de átomo que publican audio bajo su propio id.
+ *
+ * Los otros no son un agujero, son diseño: un `dialogue` reusa el audio de sus
+ * `phrase`, y `contrast`/`exercise` publican bajo claves derivadas (".pair.0",
+ * ".item.3") porque una sola pista no los representa.
+ */
+const OWNS_AUDIO = new Set(['phrase', 'qa', 'lexeme', 'production', 'listening']);
+
+/**
+ * Cobertura de audio pregenerado.
+ *
+ * Cuenta solo lo que DEBERÍA tener pista propia. Contar los 91 átomos daría
+ * 75/91 con el audio completo, y la app avisaría de una falta que no existe:
+ * una métrica que miente es peor que no tenerla.
+ */
 export function audioCoverage(): { withFile: number; total: number } {
-  const keys = atoms.map((a) => a.id);
+  const expected = atoms.filter((a) => OWNS_AUDIO.has(a.kind));
   return {
-    withFile: keys.filter((k) => k in manifest.entries).length,
-    total: keys.length,
+    withFile: expected.filter((a) => a.id in manifest.entries).length,
+    total: expected.length,
   };
 }
