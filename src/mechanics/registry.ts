@@ -9,6 +9,11 @@
  */
 
 import { osmosis } from './osmosis/mechanic.ts';
+import { wordFocus } from './word-focus/mechanic.ts';
+import { cloze } from './cloze/mechanic.ts';
+import { listening } from './listening/mechanic.ts';
+import { dictation } from './dictation/mechanic.ts';
+import { questionFormer } from './question-former/mechanic.ts';
 import { syntaxBuilder } from './syntax-builder/mechanic.ts';
 import { minimalPairs } from './minimal-pairs/mechanic.ts';
 import { shadowing } from './shadowing/mechanic.ts';
@@ -20,11 +25,16 @@ import type { Mechanic } from './types.ts';
 /** Ordenadas por la escalera de §2.3: percepción → comprensión → producción. */
 export const mechanics: Mechanic<any>[] = [
   minimalPairs,
+  wordFocus,
   osmosis,
+  listening,
   syntaxBuilder,
+  cloze,
+  dictation,
   pingPong,
   shadowing,
   rolePlay,
+  questionFormer,
   oralExam,
 ];
 

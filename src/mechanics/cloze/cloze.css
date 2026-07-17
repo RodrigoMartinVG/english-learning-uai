@@ -1,0 +1,39 @@
+.cz { display: flex; flex-direction: column; gap: 16px; }
+.cz__stem {
+  font-size: 19px; line-height: 2.1; text-align: center;
+  padding: 16px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius);
+}
+/* El hueco es un botón: se elige cuál llenar, no hay un orden forzado. */
+.cz__slot {
+  display: inline-block; min-width: 4.5em; min-height: 34px;
+  padding: 2px 8px; margin: 0 2px;
+  border: none; border-bottom: 2px dashed var(--text-faint);
+  color: var(--text); font: inherit; text-align: center;
+  transition: border-color var(--dur) var(--ease);
+}
+.cz__slot--active { border-bottom-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.cz__slot--ok { border-bottom: 2px solid var(--success); color: var(--success); }
+.cz__slot--bad { border-bottom: 2px solid var(--error); color: var(--error); }
+.cz__bank { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.cz__solution { font-family: var(--mono); font-size: 14px; color: var(--text-dim); }
+.wf__word { font-size: 20px; letter-spacing: -0.01em; }
+
+/* ── Dictado ─────────────────────────────────────────────────────────────── */
+.dict__raw {
+  text-align: center; font-family: var(--mono); font-size: 15px;
+  color: var(--text-faint); letter-spacing: .02em;
+}
+.dict__input {
+  width: 100%; min-height: 52px; padding: 12px 16px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); color: var(--text);
+  font: inherit; font-size: 18px;
+}
+.dict__input:focus { outline: none; border-color: var(--accent); }
+.dict__input:disabled { color: var(--text-dim); }
+.dict__diff { font-size: 16px; display: flex; gap: 10px; align-items: baseline; }
+.dict__label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--text-faint); flex: none; min-width: 68px;
+}

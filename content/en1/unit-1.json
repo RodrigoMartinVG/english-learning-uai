@@ -2693,11 +2693,11 @@
         "origin": "extracted",
         "page": 14,
         "section": "Ejercitación 4",
-        "note": "Ejercicio inherentemente ortográfico: mayúsculas, apóstrofes y signos no se oyen. En la app va como dictado/tipeo, y su versión auditiva es el Intonation Trainer. Ver ARQUITECTURA.md §6.3."
+        "note": "Ejercicio ortográfico: mayúsculas, apóstrofes y signos no suenan ('its' e \"it's\" son idénticos). Se convierte en dictado: el audio da el estímulo, escribirlo bien es la tarea. Ver ARQUITECTURA.md §6.3."
       },
       "prompt": "Punctuate the sentences",
       "format": "punctuate",
-      "audioViable": "text-only",
+      "audioViable": "adapted",
       "items": [
         {
           "stem": "is she french",

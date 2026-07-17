@@ -9,6 +9,7 @@ import { useMemo, useState } from 'react';
 import { atomById, atoms } from '../data/content.ts';
 import { mechanicById } from '../mechanics/registry.ts';
 import { views } from '../mechanics/views.tsx';
+import { recordAttempt } from '../data/progress.ts';
 import type { Session } from '../engine/session.ts';
 import './session.css';
 
@@ -43,6 +44,12 @@ export function SessionPlayer({ session, onExit }: { session: Session; onExit: (
   }
 
   const done = (correct: boolean) => {
+    // Acá se graba lo aprendido: es lo que hace que la app te recuerde mañana.
+    recordAttempt(
+      { atomId: step.atomId, skill: step.skill, variant: step.variant },
+      correct,
+      step.mechanicId
+    );
     setResults((r) => [...r, { step: i, correct }]);
     setI((n) => n + 1);
   };

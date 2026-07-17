@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T12:05:33.068Z",
+  "generatedAt": "2026-07-17T13:50:02.909Z",
   "provider": "kokoro(Kokoro-82M-v1.0-ONNX, q8)",
   "entries": {
     "en1.u1.p.001": {
@@ -1477,6 +1477,42 @@
       "durationMs": 3100,
       "hash": "31d2d43c5318c92d",
       "chars": 35
+    },
+    "en1.u1.ex.004.item.0": {
+      "src": "/audio/en1/u1/en1.u1.ex.004.item.0.mp3",
+      "durationMs": 1850,
+      "hash": "49d10e0ca3db7ebc",
+      "chars": 14
+    },
+    "en1.u1.ex.004.item.1": {
+      "src": "/audio/en1/u1/en1.u1.ex.004.item.1.mp3",
+      "durationMs": 2050,
+      "hash": "365571565a033630",
+      "chars": 15
+    },
+    "en1.u1.ex.004.item.2": {
+      "src": "/audio/en1/u1/en1.u1.ex.004.item.2.mp3",
+      "durationMs": 1975,
+      "hash": "a21db55e58f39a36",
+      "chars": 17
+    },
+    "en1.u1.ex.004.item.3": {
+      "src": "/audio/en1/u1/en1.u1.ex.004.item.3.mp3",
+      "durationMs": 2000,
+      "hash": "da97ebd019e998e6",
+      "chars": 17
+    },
+    "en1.u1.ex.004.item.4": {
+      "src": "/audio/en1/u1/en1.u1.ex.004.item.4.mp3",
+      "durationMs": 2250,
+      "hash": "84d152fd0c1b0319",
+      "chars": 15
+    },
+    "en1.u1.ex.004.item.5": {
+      "src": "/audio/en1/u1/en1.u1.ex.004.item.5.mp3",
+      "durationMs": 2075,
+      "hash": "92129b71c9c37a93",
+      "chars": 15
     }
   }
 }

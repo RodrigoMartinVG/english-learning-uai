@@ -19,6 +19,21 @@ export interface SessionSpec {
   scope: SessionScope;
   mode: SessionMode;
   length: number;
+  /** Entrenar UNA mecánica y nada más. Sin esto, caen las que toquen. */
+  mechanicId?: string;
+}
+
+/**
+ * Lo que el motor necesita saber del progreso, sin conocer dónde se guarda.
+ *
+ * El engine no importa data/: recibe esto. Así se puede razonar y probar la
+ * selección sin localStorage ni navegador.
+ */
+export interface Scheduler {
+  isDue(step: Step): boolean;
+  isNew(step: Step): boolean;
+  /** 0..1 — probabilidad de recordarlo hoy. Más bajo = más urgente. */
+  retrievability(step: Step): number;
 }
 
 export interface Step {
@@ -157,22 +172,22 @@ export function buildSession(
   spec: SessionSpec,
   all: Atom[],
   aspects: Aspect[],
-  title: string
+  title: string,
+  scheduler?: Scheduler
 ): Session {
   const pool = atomsInScope(spec.scope, all, aspects);
 
-  // Un candidato por (átomo × mecánica compatible): el mismo átomo puede
+  // Un candidato por (átomo × mecánica × variante): el mismo átomo puede
   // entrenarse de varias formas, y son tarjetas de SRS distintas.
   const candidates: { step: Step; level: number; difficulty: number }[] = [];
   const reachable = new Set<string>();
 
   for (const atom of pool) {
     for (const mechanic of mechanics) {
+      if (spec.mechanicId && mechanic.id !== spec.mechanicId) continue;
       if (!mechanic.accepts(atom)) continue;
       if (spec.mode === 'exam' && mechanic.level < 5) continue;
       reachable.add(atom.id);
-      // Sin variantes, un paso. Con variantes, uno por cada una: son formas
-      // distintas de entrenar lo mismo, no repeticiones.
       const variants = mechanic.variants?.(atom) ?? [undefined];
       for (const variant of variants) {
         candidates.push({
@@ -184,14 +199,57 @@ export function buildSession(
     }
   }
 
-  const unreachable = pool.filter((a) => !reachable.has(a.id));
+  const unreachable = spec.mechanicId ? [] : pool.filter((a) => !reachable.has(a.id));
 
   let ordered: Step[];
-  if (spec.mode === 'discover') {
+  if (spec.mode === 'review' && scheduler) {
+    ordered = scheduleReview(candidates, spec.length, scheduler);
+  } else if (spec.mode === 'discover') {
     ordered = climbLadder(candidates, spec.length);
   } else {
     ordered = pickBalanced(candidates, spec.length);
   }
 
   return { spec, title, steps: ordered, unreachable };
+}
+
+/**
+ * El repaso de verdad: lo vencido primero, lo más olvidado antes.
+ *
+ * Es lo que arregla el desbalance medido — sin SRS, el reparto por mecánica hacía
+ * que Examen oral (2 átomos) saliera todas las sesiones con los mismos dos, y un
+ * átomo apareciera 22 veces mientras otro 1. Con el scheduler, lo que aparece es
+ * lo que estás por olvidar, no lo que sobra en una mecánica escasa.
+ *
+ * Orden: vencidas (retrievability asc) → nuevas → el resto. Después interleaving,
+ * que sigue importando para no encadenar la misma mecánica.
+ */
+function scheduleReview(
+  candidates: { step: Step }[],
+  n: number,
+  sch: Scheduler
+): Step[] {
+  const due = candidates.filter((c) => sch.isDue(c.step)).sort(
+    (a, b) => sch.retrievability(a.step) - sch.retrievability(b.step)
+  );
+  const fresh = candidates.filter((c) => sch.isNew(c.step));
+  const rest = candidates.filter((c) => !sch.isDue(c.step) && !sch.isNew(c.step));
+
+  // Vencidas mandan; se completa con material nuevo antes que con repaso adelantado.
+  const chosen = [...due, ...shuffle(fresh), ...shuffle(rest)].slice(0, n);
+  return spaceOut(chosen.map((c) => c.step));
+}
+
+/** Evita dos pasos seguidos de la misma mecánica, sin reordenar por prioridad de más. */
+function spaceOut(steps: Step[]): Step[] {
+  const out: Step[] = [];
+  const pending = [...steps];
+  let last = '';
+  while (pending.length) {
+    const i = pending.findIndex((s) => s.mechanicId !== last);
+    const pick = pending.splice(i === -1 ? 0 : i, 1)[0]!;
+    out.push(pick);
+    last = pick.mechanicId;
+  }
+  return out;
 }

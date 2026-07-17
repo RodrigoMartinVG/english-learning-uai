@@ -91,3 +91,27 @@
 .aspect__n { flex: none; font-family: var(--mono); font-size: 12px; color: var(--text-faint); }
 .aspect__modes { display: flex; gap: 8px; padding: 0 16px 16px 56px; flex-wrap: wrap; }
 .aspect__gap { flex-basis: 100%; font-size: 12px; color: var(--text-faint); }
+
+/* ── Progreso ────────────────────────────────────────────────────────────── */
+.pbar { height: 4px; background: var(--surface-hi); border-radius: 2px; overflow: hidden; margin-top: 8px; }
+.pbar__fill { height: 100%; background: var(--success); transition: width var(--dur) var(--ease); }
+.today__stats { font-size: 12px; color: var(--text-faint); font-family: var(--mono); margin-top: 8px; }
+.home__reset { font-size: 12px; color: var(--text-faint); text-decoration: underline; align-self: flex-start; }
+.home__reset:hover { color: var(--error); }
+
+/* ── Acceso directo por mecánica ─────────────────────────────────────────── */
+.aspect__row { display: flex; gap: 8px; }
+.aspect__label { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); margin-top: 4px; }
+.aspect__chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* ── Reset ───────────────────────────────────────────────────────────────── */
+.reset { display: flex; flex-direction: column; gap: 16px; }
+.reset h1 { font-size: 26px; }
+.reset__msg { padding: 10px 14px; background: var(--surface-hi); border-radius: var(--radius-sm); font-size: 14px; color: var(--text-dim); }
+.reset__group { display: flex; flex-direction: column; gap: 8px; }
+.reset__row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+.reset__row em { color: var(--text-faint); font-style: normal; }
+.reset__danger { color: var(--error); border-color: color-mix(in srgb, var(--error) 40%, var(--border)); }
+.reset__danger:hover { background: color-mix(in srgb, var(--error) 12%, var(--surface)); }
+.reset__confirm { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: grid; place-items: center; padding: 24px; z-index: 100; }
+.reset__dialog { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; max-width: 400px; display: flex; flex-direction: column; gap: 16px; }
