@@ -1,16 +1,17 @@
 /**
- * registry.ts — el catálogo de mecánicas.
+ * registry.ts — el catálogo de mecánicas. Solo LÓGICA. Ver ARQUITECTURA.md §6.1.
  *
- * Agregar una mecánica es agregar una entrada acá. Nada más. Ninguna otra parte
- * de la app enumera mecánicas a mano. Ver ARQUITECTURA.md §6.1.
+ * No importa vistas ni CSS a propósito: el motor de sesiones depende de esto, y
+ * un motor que no puede correr sin un navegador no se puede testear ni razonar.
+ * Las vistas viven en views.tsx y solo las conoce la capa de UI.
  *
- * Hoy hay una sola: la Fase 2 es un slice vertical deliberado. Una mecánica
- * funcionando de punta a punta prueba el diseño; catorce a medias no prueban nada.
+ * Agregar una mecánica: una entrada acá y otra en views.tsx.
  */
 
 import { osmosis } from './osmosis/mechanic.ts';
-import type { MechanicMeta } from './types.ts';
+import { minimalPairs } from './minimal-pairs/mechanic.ts';
+import type { Mechanic } from './types.ts';
 
-export const mechanics = [osmosis] as const;
+export const mechanics: Mechanic<any>[] = [minimalPairs, osmosis];
 
-export const mechanicById = new Map<string, MechanicMeta>(mechanics.map((m) => [m.id, m]));
+export const mechanicById = new Map(mechanics.map((m) => [m.id, m]));

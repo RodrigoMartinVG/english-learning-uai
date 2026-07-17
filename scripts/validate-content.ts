@@ -15,8 +15,10 @@ import {
   speakersFileSchema,
   unitFileSchema,
   atomSchema,
+  atomInAspect,
   ATOM_ID_RE,
   KIND_CODE,
+  type Aspect,
   type Atom,
 } from '../content/schema.ts';
 
@@ -66,7 +68,13 @@ const unitHeaderSchema = unitFileSchema.omit({ atoms: true }).extend({
   atoms: z.array(z.unknown()).min(1),
 });
 
-const unitFiles: { file: string; course: string; unit: number; atoms: Atom[] }[] = [];
+const unitFiles: {
+  file: string;
+  course: string;
+  unit: number;
+  aspects: Aspect[];
+  atoms: Atom[];
+}[] = [];
 
 for (const course of readdirSync(CONTENT_DIR, { withFileTypes: true })) {
   if (!course.isDirectory()) continue;
@@ -104,7 +112,13 @@ for (const course of readdirSync(CONTENT_DIR, { withFileTypes: true })) {
       atoms.push(parsed.data);
     });
 
-    unitFiles.push({ file: rel, course: header.data.course, unit: header.data.unit, atoms });
+    unitFiles.push({
+      file: rel,
+      course: header.data.course,
+      unit: header.data.unit,
+      aspects: header.data.aspects,
+      atoms,
+    });
   }
 }
 
@@ -126,7 +140,28 @@ for (const { file, atoms } of unitFiles) {
 const speakerOf = (a: Atom): string | undefined =>
   'speaker' in a ? (a.speaker as string) : undefined;
 
-for (const { file, course, unit, atoms } of unitFiles) {
+for (const { file, course, unit, aspects, atoms } of unitFiles) {
+  /**
+   * Regla §14.2: todo átomo pertenece al menos a un aspecto.
+   *
+   * Un átomo huérfano existe, tiene audio, y NADIE puede llegar a él desde la
+   * navegación. Es exactamente el bug que dejó 52 de 91 átomos inalcanzables
+   * en la Fase 2, y que nadie vio hasta contarlos a mano.
+   */
+  const orphans = atoms.filter((a) => !aspects.some((asp) => atomInAspect(a, asp)));
+  for (const a of orphans) {
+    err(file, a.id, 'no pertenece a ningún aspecto → sería invisible en la navegación');
+  }
+
+  const ids = new Set<string>();
+  for (const asp of aspects) {
+    if (ids.has(asp.id)) err(file, `aspects.${asp.id}`, 'id de aspecto duplicado');
+    ids.add(asp.id);
+    const n = atoms.filter((a) => atomInAspect(a, asp)).length;
+    if (n === 0) err(file, `aspects.${asp.id}`, 'no selecciona ningún átomo: match muerto');
+    else if (n < 3) warn(file, `aspects.${asp.id}`, `solo ${n} átomo(s): no alcanza para una sesión`);
+  }
+
   // El nombre del archivo debe coincidir con su contenido.
   const expected = `unit-${unit}.json`;
   if (basename(file) !== expected) {

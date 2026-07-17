@@ -1,29 +1,45 @@
 /**
- * types.ts — el contrato de una mecánica. Ver ARQUITECTURA.md §6.1.
+ * types.ts — el contrato de una mecánica. Ver ARQUITECTURA.md §6.1 y §14.
  *
- * Una mecánica declara qué átomos sabe consumir (`accepts`) y cómo arma una ronda.
- * No conoce el contenido: recibe átomos. Por eso agregar una unidad no toca
- * mecánicas, y agregar una mecánica no toca contenido.
+ * Una mecánica declara qué átomos sabe consumir (`accepts`) y cómo arma una ronda
+ * para UNO de ellos. No elige qué se entrena: eso lo decide la sesión. Por eso
+ * `buildRound` recibe el objetivo desde afuera y el pool solo para distractores.
+ *
+ * Es el cambio que convierte a las mecánicas en pasos y no en destinos.
  */
 
+import type { ComponentType } from 'react';
 import type { Atom, Skill } from '../../content/schema.ts';
 
 export interface MechanicMeta {
   id: string;
   name: string;
-  /** Qué entrena. Define también qué tarjeta de SRS actualiza: (atomId, skill). */
+  /** Qué entrena. Define qué tarjeta de SRS actualiza: (atomId, skill). */
   skill: Skill;
-  /** Ruta de dificultad de §2.3: de lo más guiado a lo más libre. */
+  /** Peldaño de la escalera de §2.3: de lo más guiado a lo más libre. */
   level: 1 | 2 | 3 | 4 | 5;
-  /** Una línea, para la home. Qué hace el alumno, no cómo está implementado. */
+  /** Una línea: qué hace el alumno, no cómo está implementado. */
   blurb: string;
 }
 
-export interface Mechanic<TRound> extends MechanicMeta {
-  /** El selector. Decide si un átomo sirve para esta mecánica. */
+export interface Mechanic<TRound = unknown> extends MechanicMeta {
+  /** El selector. ¿Este átomo sirve para esta mecánica? */
   accepts(atom: Atom): boolean;
-  /** Cuántos átomos aceptados hacen falta para poder jugar. */
-  minAtoms: number;
-  /** Arma una ronda. `pool` ya viene filtrado por accepts(). */
-  buildRound(pool: Atom[]): TRound | null;
+  /**
+   * Arma una ronda para `target`. `pool` es el resto del contenido, solo para
+   * construir distractores; no para elegir el objetivo.
+   * Devuelve null si el pool no alcanza.
+   */
+  buildRound(target: Atom, pool: Atom[]): TRound | null;
+}
+
+export interface MechanicViewProps<TRound> {
+  round: TRound;
+  /** La mecánica reporta el resultado; la sesión decide qué viene después. */
+  onDone: (correct: boolean) => void;
+}
+
+export interface MechanicEntry<TRound = any> {
+  mechanic: Mechanic<TRound>;
+  View: ComponentType<MechanicViewProps<TRound>>;
 }

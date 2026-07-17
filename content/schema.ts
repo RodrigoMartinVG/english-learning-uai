@@ -448,6 +448,34 @@ export const speakersFileSchema = z.object({
 
 /* ────────────────────────────────── archivo de unidad ───────────────────────────── */
 
+/**
+ * Aspect — la unidad de estudio que ve el alumno. Ver ARQUITECTURA.md §14.2.
+ *
+ * Un tag NO es un tema: en la U1, `be.present.affirmative` está en 46 átomos y
+ * `be.present.negative` en 1. Exponer tags como temas sería confundir el mecanismo
+ * de selección con la interfaz. Los aspectos se curan a mano, siguiendo las
+ * secciones de Grammar Tips del material.
+ */
+export const aspectSchema = z.object({
+  id: z.string().regex(/^[a-z][a-z0-9-]*$/, 'id de aspecto: kebab-case'),
+  title: z.string().min(1),
+  /** Una línea para la tarjeta. Qué practica el alumno, no qué contiene. */
+  summary: z.string().min(1),
+  /** El orden en que el propio material lo enseña. */
+  order: z.number().int().positive(),
+  /** Un átomo pertenece al aspecto si solapa en CUALQUIERA de estas dimensiones. */
+  match: z
+    .object({
+      grammar: z.array(z.enum(GRAMMAR_TAGS)).optional(),
+      fn: z.array(z.enum(FUNCTION_TAGS)).optional(),
+      topic: z.array(z.enum(TOPIC_TAGS)).optional(),
+    })
+    .refine((m) => (m.grammar?.length ?? 0) + (m.fn?.length ?? 0) + (m.topic?.length ?? 0) > 0, {
+      message: 'un aspecto sin match no selecciona nada',
+    }),
+  source: z.object({ page: z.number().int().positive().optional(), section: z.string().optional() }).optional(),
+});
+
 export const unitFileSchema = z.object({
   $schema: z.string().optional(),
   course: z.enum(COURSES),
@@ -455,8 +483,23 @@ export const unitFileSchema = z.object({
   title: z.string().min(1),
   /** Metas de aprendizaje, tal como las declara el material. */
   goals: z.array(z.string()).min(1),
+  /** Los temas de la unidad. Sin esto no hay navegación: solo una bolsa de átomos. */
+  aspects: z.array(aspectSchema).min(1),
   atoms: z.array(atomSchema).min(1),
 });
+
+export type Aspect = z.infer<typeof aspectSchema>;
+
+/** ¿Este átomo cae dentro del aspecto? Es el selector, y vive acá para que la app
+ *  y el validador no puedan discrepar sobre qué contiene un aspecto. */
+export function atomInAspect(atom: Atom, aspect: Aspect): boolean {
+  const { grammar, fn, topic } = aspect.match;
+  return (
+    (grammar?.some((t) => (atom.grammar as string[]).includes(t)) ?? false) ||
+    (fn?.some((t) => (atom.fn as string[]).includes(t)) ?? false) ||
+    (topic?.some((t) => (atom.topic as string[]).includes(t)) ?? false)
+  );
+}
 
 /* ──────────────────────────────────── tipos ─────────────────────────────────────── */
 

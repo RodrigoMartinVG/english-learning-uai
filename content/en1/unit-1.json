@@ -7,6 +7,246 @@
     "Verb to be, personal information, jobs, countries and nationalities, classroom objects",
     "There is / there are, artículos a / an / the, adjetivos posesivos y demostrativos"
   ],
+  "aspects": [
+    {
+      "id": "greetings",
+      "order": 1,
+      "title": "Saludos y presentación",
+      "summary": "Saludar, decir cómo estás, presentarte y agradecer.",
+      "match": {
+        "fn": [
+          "greet",
+          "introduce-self",
+          "thank"
+        ]
+      },
+      "source": {
+        "page": 5,
+        "section": "Situación comunicacional"
+      }
+    },
+    {
+      "id": "be",
+      "order": 2,
+      "title": "El verbo be: formas y contracciones",
+      "summary": "Negativo, interrogativo, respuestas cortas y contracciones.",
+      "match": {
+        "grammar": [
+          "be.present.negative",
+          "be.present.interrogative",
+          "be.present.short-answer",
+          "be.contractions"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "personal-data",
+      "order": 3,
+      "title": "Datos personales",
+      "summary": "Nombre, apellido, edad, ocupación, estado civil y dirección.",
+      "match": {
+        "fn": [
+          "ask.name",
+          "ask.age",
+          "ask.occupation",
+          "ask.marital-status",
+          "ask.address",
+          "ask.identity"
+        ],
+        "topic": [
+          "personal_info",
+          "occupation"
+        ]
+      },
+      "source": {
+        "page": 12,
+        "section": "Ejemplo significativo / Ejercitación 1"
+      }
+    },
+    {
+      "id": "spelling",
+      "order": 4,
+      "title": "Deletreo",
+      "summary": "Preguntar cómo se escribe algo y deletrear letra por letra.",
+      "match": {
+        "grammar": [
+          "spelling.alphabet"
+        ],
+        "fn": [
+          "ask.spelling"
+        ]
+      },
+      "source": {
+        "page": 13,
+        "section": "Ejercitación 1"
+      }
+    },
+    {
+      "id": "origin",
+      "order": 5,
+      "title": "Países y nacionalidades",
+      "summary": "De dónde sos y qué nacionalidad tenés.",
+      "match": {
+        "grammar": [
+          "nationalities"
+        ],
+        "fn": [
+          "ask.origin",
+          "ask.nationality"
+        ],
+        "topic": [
+          "origin_nationality"
+        ]
+      },
+      "source": {
+        "page": 14,
+        "section": "Ejercitación 6"
+      }
+    },
+    {
+      "id": "possessives",
+      "order": 6,
+      "title": "Pronombres y adjetivos posesivos",
+      "summary": "I/he/she/it/we/they y my/your/his/her/its/our/their.",
+      "match": {
+        "grammar": [
+          "pronouns.subject",
+          "possessives.adjectives"
+        ]
+      },
+      "source": {
+        "page": 7,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "demonstratives",
+      "order": 7,
+      "title": "Demostrativos y posesión",
+      "summary": "this/that/these/those y de quién es cada cosa.",
+      "match": {
+        "grammar": [
+          "demonstratives"
+        ],
+        "fn": [
+          "ask.possession"
+        ]
+      },
+      "source": {
+        "page": 8,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "articles",
+      "order": 8,
+      "title": "Artículos: a, an, the",
+      "summary": "Cuándo va a, cuándo an (según el sonido) y cuándo the.",
+      "match": {
+        "grammar": [
+          "articles.indefinite",
+          "articles.definite"
+        ]
+      },
+      "source": {
+        "page": 9,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "there-is",
+      "order": 9,
+      "title": "There is / there are",
+      "summary": "Decir qué hay en un lugar, en afirmativo, negativo e interrogativo.",
+      "match": {
+        "grammar": [
+          "there-is.affirmative",
+          "there-is.negative",
+          "there-is.interrogative"
+        ],
+        "fn": [
+          "ask.existence",
+          "describe.place"
+        ]
+      },
+      "source": {
+        "page": 8,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "classroom",
+      "order": 11,
+      "title": "Objetos y vocabulario de clase",
+      "summary": "Las cosas del aula y de la mochila, y cómo pedir ayuda en clase.",
+      "match": {
+        "topic": [
+          "objects",
+          "classroom"
+        ],
+        "fn": [
+          "classroom-language"
+        ]
+      },
+      "source": {
+        "page": 12,
+        "section": "Words and phrases to learn"
+      }
+    },
+    {
+      "id": "wh-questions",
+      "order": 12,
+      "title": "Preguntas con Wh-",
+      "summary": "Who, Where, What, When, Why, What time.",
+      "match": {
+        "grammar": [
+          "wh-questions"
+        ]
+      },
+      "source": {
+        "page": 15,
+        "section": "Ejercitación 10"
+      }
+    },
+    {
+      "id": "numbers",
+      "order": 13,
+      "title": "Números y edad",
+      "summary": "Números cardinales, edades y direcciones.",
+      "match": {
+        "grammar": [
+          "numbers.cardinal"
+        ]
+      },
+      "source": {
+        "page": 12,
+        "section": "Ejemplo significativo"
+      }
+    },
+    {
+      "id": "places",
+      "order": 10,
+      "title": "Ubicar lugares",
+      "summary": "Dónde queda cada cosa en la oficina y en el campus.",
+      "match": {
+        "topic": [
+          "campus",
+          "workplace"
+        ],
+        "fn": [
+          "ask.location"
+        ]
+      },
+      "source": {
+        "page": 5,
+        "section": "Situación comunicacional"
+      }
+    }
+  ],
   "atoms": [
     {
       "id": "en1.u1.p.001",

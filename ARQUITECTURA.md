@@ -796,6 +796,156 @@ La mecánica destino, y el modo offline instalable.
 
 ---
 
+## 14. Arquitectura de sesiones (la capa que faltaba)
+
+> Añadida tras la Fase 2. El slice vertical funcionaba y aun así la dinámica se sentía pobre.
+> El diagnóstico, con números: **52 de 91 átomos eran inalcanzables** (ninguna mecánica los
+> consumía) y **una mecánica era un destino, no un paso**. Tocabas "Ósmosis" y entrabas a rondas
+> aleatorias infinitas: sin meta, sin largo, sin progresión, sin cierre. Un juguete, no una clase.
+
+### 14.1 El error: mecánica ≠ sesión
+
+El §6 modeló bien las mecánicas y el §7 el SRS, pero entre "hay 91 átomos" y "el alumno practica
+20 minutos" faltaba una capa. Sin ella, cada mecánica tiene que inventarse su propio ciclo de
+vida, su propio criterio de fin y su propia idea de progreso — y ninguna puede saber qué viene
+después, porque no hay un después.
+
+```
+Course → Unit → Aspect        ← QUÉ estudiar (contenido curado)
+                   ×
+                 Mode         ← CÓMO entrenarlo (forma)
+                   ↓
+                Session       ← meta + largo + escalera + cierre
+                   ↓
+                Step = (Mechanic, Atom[])
+```
+
+**Las mecánicas pasan a ser pasos, no destinos.** Es lo que vuelve consistente el crecimiento:
+la Unidad 2 no necesita código nuevo, necesita declarar sus aspectos.
+
+### 14.2 Aspect: la unidad de estudio
+
+Un tag no es un tema. Medido en la U1: `be.present.affirmative` está en **46** átomos —es aire,
+está en todos lados— y `be.present.negative` en **1**. Exponer 17 tags como si fueran 17 temas
+sería confundir el mecanismo de selección con la interfaz.
+
+Los aspectos se **curan a mano por unidad**, siguiendo las secciones de Grammar Tips del propio
+material. Es ~30 min por unidad y compra una progresión didáctica real.
+
+```typescript
+interface Aspect {
+  id: string;            // 'be' | 'articles' | 'there-is'
+  title: string;         // "El verbo be: formas y contracciones"
+  summary: string;       // una línea, para la tarjeta
+  order: number;         // el orden en que el material los enseña
+  /** Un átomo pertenece al aspecto si solapa en CUALQUIERA de estas dimensiones. */
+  match: { grammar?: GrammarTag[]; fn?: FunctionTag[]; topic?: TopicTag[] };
+  source?: { page?: number; section?: string };
+}
+```
+
+**Regla de integridad nueva:** todo átomo pertenece al menos a un aspecto. Un átomo huérfano es
+invisible en la navegación — existe, tiene audio, y nadie puede llegar a él. El validador lo
+reporta. Es la misma clase de bug que los 52 inalcanzables, y ahora se detecta solo.
+
+Los aspectos **se solapan a propósito**: `"What's your name?"` está en *Saludos*, en *Verbo be* y
+en *Datos personales*. Un mismo átomo entrenado desde tres ángulos distintos es interleaving
+gratis, no duplicación.
+
+### 14.3 Mode: cómo se entrena
+
+| Modo | Para qué | Selección | Escalera |
+|---|---|---|---|
+| **Descubrir** | Primer contacto con un aspecto | Átomos nuevos del aspecto | Sube 1→5: percepción → comprensión → recuperación → producción |
+| **Entrenar** | Machacar antes del parcial | Todo el aspecto, vencido o no | Fija en un nivel |
+| **Repasar** | El día a día | Tarjetas vencidas (FSRS), mezcladas entre aspectos y unidades | Mixta, interleaved |
+| **Examen** | Simulacro de final oral | `production` acumulados | Solo nivel 5 |
+
+**Descubrir** y **Repasar** son los dos modos que importan: uno construye, el otro sostiene.
+*Entrenar* existe porque un alumno real tiene parciales, y *Examen* porque hay un final oral.
+
+### 14.4 Session: meta, largo y cierre
+
+**Largo fijo: 12 ítems.** No por tiempo (corta a mitad de una grabación) ni "hasta saldar lo
+vencido" (un lunes con 140 tarjetas se abandona). Un largo fijo hace que el final sea predecible
+y visible —"7 de 12"— y que retomar sea barato.
+
+```typescript
+interface SessionSpec {
+  scope:
+    | { kind: 'aspect'; course: Course; unit: number; aspectId: string }
+    | { kind: 'unit'; course: Course; unit: number }
+    | { kind: 'due' };                    // lo que el SRS mandó a repasar
+  mode: 'discover' | 'drill' | 'review' | 'exam';
+  length: number;                         // 12
+}
+
+interface Step {
+  mechanicId: string;
+  atomIds: string[];                      // los que consume ese paso
+  skill: Skill;                           // qué tarjeta actualiza al resolverse
+}
+
+interface Session {
+  spec: SessionSpec;
+  title: string;
+  steps: Step[];
+}
+```
+
+El builder:
+
+```
+1. Reunir el pool según scope
+2. Ordenar por la escalera (difficulty asc) si el modo la usa
+3. Por cada átomo, elegir mecánicas compatibles (accepts) del nivel que toca
+4. Interleaving: nunca dos pasos seguidos de la misma mecánica si hay alternativa
+5. Cortar en `length`
+```
+
+Un átomo que ninguna mecánica acepta **no desaparece en silencio**: el builder lo cuenta y la
+sesión lo reporta. Es el mismo principio que §5.6 y §14.2 — el contenido inalcanzable es un bug,
+y un bug que no se ve es peor.
+
+### 14.5 Navegación: "Hoy" + libre
+
+Híbrido, y el orden importa:
+
+```
+Home
+├── HOY  ─── una sesión ya armada por el SRS (repasar + lo nuevo que toca)
+└── Unidades
+    └── Unidad 1 · Bienvenida
+        ├── progreso por aspecto
+        └── Aspecto → [Descubrir] [Entrenar]
+```
+
+**Hoy** es la puerta por defecto: sin parálisis de elección, y es lo que sostiene la retención
+entre unidades — el problema real de cursar la Unidad 4 mientras se olvida la 1. **Libre** existe
+porque el lunes hay parcial de `there is/are` y el alumno tiene derecho a machacar eso y nada más.
+
+### 14.6 Consecuencia: qué falta construir
+
+Con esta capa, el catálogo de mecánicas del §6.2 deja de ser una lista de deseos y pasa a ser
+**la cobertura del contenido**. Cada tipo de átomo sin mecánica es contenido muerto:
+
+| Tipo | Átomos U1 | Mecánica que lo rescata | Nivel |
+|---|---|---|---|
+| `phrase` | 42 | Ósmosis ✅, Audio Matching, Shadowing | 2, 2, 4 |
+| `lexeme` | 18 | Word Focus, Spelling Drill | 1, 4 |
+| `qa` | 12 | Ping-Pong, Ósmosis de respuestas | 4, 2 |
+| `exercise` | 9 | Cloze auditivo, Syntax Builder, Error Hunt | 3 |
+| `contrast` | 5 | Minimal Pairs | 1 |
+| `dialogue` | 2 | Role-play | 5 |
+| `production` | 2 | Oral Exam Simulator | 5 |
+| `listening` | 1 | Listening Comprehension | 2 |
+
+También queda visible un desbalance del contenido: **72 átomos en niveles 1-2 contra 7 en niveles
+4-5**. La escalera tiene base ancha y punta fina — justo la parte que lleva al final oral. Se
+corrige agregando átomos de producción, no código.
+
+---
+
 ## 13. Preguntas abiertas
 
 Resueltas: proveedor TTS (§5.4, Azure free tier, $0), audios de listening (§5.6, se escriben y

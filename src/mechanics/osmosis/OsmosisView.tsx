@@ -13,10 +13,11 @@ import { useAudio, useAudioState } from '../../audio/AudioProvider.tsx';
 import { Waveform } from '../../ui/Waveform.tsx';
 import { speakerById } from '../../data/content.ts';
 import type { PhraseAtom } from '../../../content/schema.ts';
+import type { MechanicViewProps } from '../types.ts';
 import type { OsmosisRound } from './mechanic.ts';
 import './osmosis.css';
 
-export function OsmosisView({ round, onNext }: { round: OsmosisRound; onNext: () => void }) {
+export function OsmosisView({ round, onDone }: MechanicViewProps<OsmosisRound>) {
   const audio = useAudio();
   const state = useAudioState();
   const [picked, setPicked] = useState<number | null>(null);
@@ -95,7 +96,7 @@ export function OsmosisView({ round, onNext }: { round: OsmosisRound; onNext: ()
         {answered ? (correct ? 'Correcto' : `Incorrecto. Era: ${round.target.text}`) : ''}
       </div>
 
-      {answered && <Expansion phrase={round.target} onNext={onNext} correct={correct} />}
+      {answered && <Expansion phrase={round.target} onNext={() => onDone(correct)} correct={correct} />}
     </div>
   );
 }

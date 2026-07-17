@@ -37,14 +37,12 @@ export const osmosis: Mechanic<OsmosisRound> = {
     return atom.kind === 'phrase' && atom.text.split(/\s+/).length >= 3;
   },
 
-  minAtoms: 4,
-
-  buildRound(pool: Atom[]): OsmosisRound | null {
-    const phrases = pool.filter((a): a is PhraseAtom => a.kind === 'phrase');
-    if (phrases.length < this.minAtoms) return null;
-
-    const target = phrases[Math.floor(Math.random() * phrases.length)]!;
-    const rest = phrases.filter((p) => p.id !== target.id && p.text !== target.text);
+  buildRound(target: Atom, pool: Atom[]): OsmosisRound | null {
+    if (target.kind !== 'phrase') return null;
+    // El pool es solo para distractores: quién es el objetivo lo decide la sesión.
+    const rest = pool
+      .filter((a): a is PhraseAtom => a.kind === 'phrase')
+      .filter((p) => p.id !== target.id && p.text !== target.text);
 
     /**
      * Los distractores comparten gramática y NO comparten tema.
