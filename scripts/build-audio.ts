@@ -31,6 +31,7 @@ import {
 import { createAzureProvider } from './tts/azure.ts';
 import { createKokoroProvider } from './tts/kokoro.ts';
 import { splitSentences } from './tts/sentences.ts';
+import { ALT_VOICES } from '../content/kokoro-voices.ts';
 import type { ProviderId, TtsProvider, Utterance } from './tts/provider.ts';
 
 const ROOT = join(import.meta.dirname, '..');
@@ -44,19 +45,7 @@ const SLOW_RATE_FACTOR = 0.75;
 /** Las mecánicas de percepción necesitan una voz neutra y clara, no un personaje. */
 const NEUTRAL_SPEAKER = 'narrator';
 
-/**
- * Voces alternativas para "escuchar en otra voz" (§ variabilidad fonética).
- *
- * Elegidas por diversidad de género y acento, no por personaje: el objetivo es
- * que el alumno oiga la MISMA frase en timbres distintos y entrene el oído a no
- * depender de una sola voz. Solo se generan para `phrase` —la unidad escuchable
- * central— y solo con Kokoro. Se saltea la que coincida con la voz propia.
- */
-const ALT_VOICES = [
-  { id: 'af_bella', label: 'US · fem' },
-  { id: 'am_michael', label: 'US · masc' },
-  { id: 'bm_george', label: 'GB · masc' },
-] as const;
+// Voces alternativas para "escuchar en otra voz": fuente única compartida con la UI.
 
 const args = process.argv.slice(2);
 const DRY_RUN = args.includes('--dry-run');

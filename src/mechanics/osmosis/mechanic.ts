@@ -6,6 +6,7 @@
  */
 
 import type { Atom, PhraseAtom } from '../../../content/schema.ts';
+import { shuffle } from '../../shared/shuffle.ts';
 import type { Mechanic } from '../types.ts';
 
 export interface OsmosisRound {
@@ -14,14 +15,6 @@ export interface OsmosisRound {
   correctIndex: number;
 }
 
-const shuffle = <T,>(arr: T[]): T[] => {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j]!, a[i]!];
-  }
-  return a;
-};
 
 const overlaps = (a: readonly string[], b: readonly string[]) => a.some((x) => b.includes(x));
 

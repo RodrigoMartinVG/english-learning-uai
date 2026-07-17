@@ -9,6 +9,7 @@
  */
 
 import type { Atom, LexemeAtom, PhraseAtom } from '../../../content/schema.ts';
+import { shuffle } from '../../shared/shuffle.ts';
 import type { Mechanic } from '../types.ts';
 
 export interface WordFocusRound {
@@ -18,14 +19,6 @@ export interface WordFocusRound {
   correctIndex: number;
 }
 
-const shuffle = <T,>(a: T[]): T[] => {
-  const x = [...a];
-  for (let i = x.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [x[i], x[j]] = [x[j]!, x[i]!];
-  }
-  return x;
-};
 
 export const wordFocus: Mechanic<WordFocusRound> = {
   id: 'word-focus',

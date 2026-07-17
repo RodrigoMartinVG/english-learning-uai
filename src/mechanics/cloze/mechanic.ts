@@ -13,6 +13,7 @@
  */
 
 import { BLANK, type Atom, type ExerciseAtom } from '../../../content/schema.ts';
+import { shuffle } from '../../shared/shuffle.ts';
 import type { Mechanic } from '../types.ts';
 
 export interface ClozeRound {
@@ -29,14 +30,6 @@ export interface ClozeRound {
   spoken: string;
 }
 
-const shuffle = <T,>(a: T[]): T[] => {
-  const x = [...a];
-  for (let i = x.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [x[i], x[j]] = [x[j]!, x[i]!];
-  }
-  return x;
-};
 
 export const fill = (stem: string, answers: string[]): string => {
   let i = 0;

@@ -15,6 +15,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { speakersFileSchema, unitFileSchema, type Atom, type Speaker } from '../content/schema.ts';
+import { KOKORO_VOICES } from '../content/kokoro-voices.ts';
 
 const ROOT = join(import.meta.dirname, '..');
 const manifestPath = join(ROOT, 'public', 'audio', 'audio-manifest.json');
@@ -54,16 +55,13 @@ for (const c of ['en1']) {
   }
 }
 
-// Voces Kokoro libres, para sugerir reemplazo del mismo tipo.
-const KOKORO = [
-  'af_heart', 'af_alloy', 'af_aoede', 'af_bella', 'af_jessica', 'af_kore', 'af_nicole', 'af_nova',
-  'af_river', 'af_sarah', 'af_sky', 'am_adam', 'am_echo', 'am_eric', 'am_fenrir', 'am_liam',
-  'am_michael', 'am_onyx', 'am_puck', 'am_santa', 'bf_emma', 'bf_isabella', 'bm_george',
-  'bm_lewis', 'bf_alice', 'bf_lily', 'bm_daniel', 'bm_fable',
-];
+// Voces libres del mismo tipo (género+región), para sugerir reemplazo.
 const inUse = new Set(speakers.map((s) => s.voice.kokoro));
-const gr = (v: string) => v.slice(0, 2); // af/am/bf/bm
-const freeLike = (v: string) => KOKORO.filter((k) => !inUse.has(k) && gr(k) === gr(v));
+const kind = (id: string) => KOKORO_VOICES.find((k) => k.id === id);
+const freeLike = (id: string) => {
+  const m = kind(id);
+  return KOKORO_VOICES.filter((k) => !inUse.has(k.id) && k.gender === m?.gender && k.region === m?.region).map((k) => k.id);
+};
 
 // Datos para el HTML, solo speakers con audio en la U1.
 const cards = [...samples.entries()]

@@ -8,12 +8,13 @@
     "preview": "vite preview",
     "validate": "tsx scripts/validate-content.ts",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && npm run validate",
+    "check": "npm run typecheck && npm run test && npm run validate",
     "build:audio": "tsx scripts/build-audio.ts",
     "flags": "tsx scripts/review-flags.ts",
     "audit": "tsx scripts/audit-content.ts",
     "audio:review": "tsx scripts/build-audio-review.ts",
-    "build:ipa": "tsx scripts/build-ipa.ts"
+    "build:ipa": "tsx scripts/build-ipa.ts",
+    "test": "tsx --test tests/*.test.ts"
   },
   "repository": {
     "type": "git",

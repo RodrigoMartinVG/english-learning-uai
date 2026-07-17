@@ -17,6 +17,7 @@
  */
 
 import type { Atom } from '../../../content/schema.ts';
+import { shuffle } from '../../shared/shuffle.ts';
 import type { Mechanic } from '../types.ts';
 
 export interface SyntaxRound {
@@ -41,14 +42,6 @@ export const toChips = (text: string): string[] =>
     .split(/\s+/)
     .filter(Boolean);
 
-const shuffle = <T,>(arr: T[]): T[] => {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j]!, a[i]!];
-  }
-  return a;
-};
 
 /** Mezcla garantizando que no salga ya ordenado: si sale armada, no hay ejercicio. */
 function scramble(chips: string[]): string[] {

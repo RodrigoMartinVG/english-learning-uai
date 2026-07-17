@@ -13,6 +13,7 @@
 
 import { readFileSync } from 'node:fs';
 import { speakersFileSchema, type Speaker } from '../content/schema.ts';
+import { KOKORO_VOICES } from '../content/kokoro-voices.ts';
 
 const path = process.argv[2];
 if (!path) {
@@ -38,12 +39,6 @@ const speakers = new Map<string, Speaker>(
 
 // Voces Kokoro que NO están en uso: candidatas de reemplazo.
 const inUse = new Set([...speakers.values()].map((s) => s.voice.kokoro));
-const KOKORO_ALL = [
-  'af_heart', 'af_alloy', 'af_aoede', 'af_bella', 'af_jessica', 'af_kore', 'af_nicole', 'af_nova',
-  'af_river', 'af_sarah', 'af_sky', 'am_adam', 'am_echo', 'am_eric', 'am_fenrir', 'am_liam',
-  'am_michael', 'am_onyx', 'am_puck', 'am_santa', 'bf_emma', 'bf_isabella', 'bm_george',
-  'bm_lewis', 'bf_alice', 'bf_lily', 'bm_daniel', 'bm_fable',
-];
 
 if (!flags.length) {
   console.log('\nNo hay audios marcados en el archivo.\n');
@@ -59,20 +54,19 @@ for (const f of flags) {
 
 console.log(`\n${flags.length} audio(s) marcado(s), en ${byVoice.size} voz(ces):\n`);
 
-// Kokoro nombra las voces <región><género>_: af_=US fem, am_=US masc, bf_=GB fem, bm_=GB masc.
-const gender = (v: string) => (v[1] === 'f' ? 'F' : 'M');
-const region = (v: string) => (v[0] === 'b' ? 'en-GB' : 'en-US');
+const meta = (v: string) => KOKORO_VOICES.find((k) => k.id === v);
 
 for (const [voice, fs] of [...byVoice.entries()].sort((a, b) => b[1].length - a[1].length)) {
   const spk = [...speakers.values()].find((s) => s.voice.kokoro === voice);
   console.log(`  ▓ ${voice}  (${spk?.displayName ?? '?'}, speaker "${spk?.id}")  — ${fs.length} marca(s)`);
   for (const f of fs) console.log(`      ${f.audioKey.padEnd(24)} "${f.text}"`);
 
-  if (fs.length >= 2 && spk) {
+  const m = meta(voice);
+  if (fs.length >= 2 && spk && m) {
     // Sugerir reemplazos libres del mismo género y región: mantiene la coherencia.
-    const alt = KOKORO_ALL.filter(
-      (v) => !inUse.has(v) && gender(v) === gender(voice) && region(v) === region(voice)
-    );
+    const alt = KOKORO_VOICES.filter(
+      (k) => !inUse.has(k.id) && k.gender === m.gender && k.region === m.region
+    ).map((k) => k.id);
     console.log(
       `      → varias marcas en esta voz. Probá cambiar speakers.json "${spk.id}".voice.kokoro a: ` +
         `${alt.slice(0, 4).join(', ') || '(no quedan libres del mismo tipo)'}`

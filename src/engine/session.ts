@@ -7,6 +7,7 @@
 
 import { atomInAspect, type Aspect, type Atom, type Course, type Skill } from '../../content/schema.ts';
 import { mechanics } from '../mechanics/registry.ts';
+import { shuffle } from '../shared/shuffle.ts';
 
 export type SessionMode = 'discover' | 'drill' | 'review' | 'exam';
 
@@ -65,14 +66,6 @@ export interface Session {
 
 export const DEFAULT_LENGTH = 12;
 
-const shuffle = <T,>(arr: T[]): T[] => {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j]!, a[i]!];
-  }
-  return a;
-};
 
 export function atomsInScope(scope: SessionScope, all: Atom[], aspects: Aspect[]): Atom[] {
   switch (scope.kind) {

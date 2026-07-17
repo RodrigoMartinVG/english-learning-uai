@@ -13,14 +13,9 @@
 
 import { useAudio } from '../audio/AudioProvider.tsx';
 import { manifest } from '../data/content.ts';
+import { ALT_VOICES as ALT } from '../../content/kokoro-voices.ts';
 import './altvoices.css';
 
-/** Debe coincidir con ALT_VOICES de scripts/build-audio.ts. */
-const ALT = [
-  { id: 'af_bella', label: 'US ♀' },
-  { id: 'am_michael', label: 'US ♂' },
-  { id: 'bm_george', label: 'GB ♂' },
-] as const;
 
 export interface AltVoicesProps {
   /** Clave base del audio: "en1.u1.p.007". Las alternativas cuelgan con ".v.<voz>". */
