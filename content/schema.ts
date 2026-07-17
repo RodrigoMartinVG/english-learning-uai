@@ -231,7 +231,14 @@ export const qaAtomSchema = z.object({
   prompt: z.string().min(1),
   promptVariants: z.array(z.string()),
   replies: z.array(z.string()).min(1),
+  /** Quién pregunta. Las promptVariants son la MISMA persona reformulando. */
   speaker: z.string().min(1),
+  /**
+   * Quién responde. Es otra persona: una pregunta y su respuesta no pueden
+   * salir de la misma voz sin romper la ilusión de diálogo. Sin esto, las
+   * replies no tienen voz asignada y se quedan sin audio.
+   */
+  replySpeaker: z.string().min(1),
   audio: audioRefSchema.optional(),
 });
 

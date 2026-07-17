@@ -157,6 +157,13 @@ for (const { file, course, unit, atoms } of unitFiles) {
     const sp = speakerOf(atom);
     if (sp && !speakerIds.has(sp)) err(file, at('speaker'), `speaker "${sp}" no existe en speakers.json`);
 
+    if (atom.kind === 'qa') {
+      if (!speakerIds.has(atom.replySpeaker))
+        err(file, at('replySpeaker'), `speaker "${atom.replySpeaker}" no existe en speakers.json`);
+      if (atom.replySpeaker === atom.speaker)
+        err(file, at('replySpeaker'), 'quien responde no puede ser quien pregunta: usá otra voz');
+    }
+
     // Regla §4.5.2: toda referencia resuelve, y al tipo correcto.
     const mustBePhrase = (ref: string, where: string) => {
       const target = allAtoms.get(ref);

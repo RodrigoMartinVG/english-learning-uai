@@ -9,7 +9,11 @@ material/*.pdf
 
 # Audio generado por scripts/build-audio.ts — derivado de content/, no fuente de verdad.
 # Se regenera con `npm run build:audio`. El manifest SÍ se versiona (es el cache de hashes).
-public/audio/
+#
+# OJO: tiene que ser "public/audio/*" y NO "public/audio/". Con la barra final git
+# excluye el directorio entero y ni siquiera desciende, así que el "!" de abajo nunca
+# llega a aplicarse y el manifest quedaría ignorado en silencio.
+public/audio/*
 !public/audio/audio-manifest.json
 
 # Credenciales del proveedor TTS. NUNCA commitear.

@@ -54,6 +54,35 @@ la app
 
 El cuello de botella real de este proyecto es la curación de contenido, no el código.
 
+## Comandos
+
+```bash
+npm run check                     # typecheck + validación de contenido. Corré esto siempre.
+npm run validate                  # solo el contenido: forma (Zod) + integridad referencial
+npm run typecheck                 # solo los tipos
+
+npm run build:audio -- --dry-run  # qué audio falta y cuántos caracteres cuesta (sin credenciales)
+npm run build:audio               # sintetiza lo que falta (necesita .env)
+npm run build:audio -- --force    # re-sintetiza todo
+```
+
+## El audio
+
+Se genera en build-time con Azure Neural y se sirve como mp3. La Web Speech API queda solo como
+fallback, porque su calidad depende del sistema operativo del usuario y la app entrena el oído:
+no podemos hacer que la Unidad 1 suene distinta en cada máquina.
+
+**Sale gratis.** Medido: la Unidad 1 completa son 7.898 caracteres, el 1,6% de los 500.000
+mensuales que Azure regala en su capa F0. Las cuatro materias entrarían en un 25%.
+
+Para generarlo necesitás credenciales: copiá `.env.example` a `.env` y seguí las instrucciones
+de adentro. **`--dry-run` funciona sin credenciales**, y la app en runtime tampoco las usa —
+consume los mp3 ya generados.
+
+El build es incremental por hash de `texto + voz + velocidad`: cambiar una frase regenera un
+archivo, no cuatrocientos. Los mp3 no se versionan (`.gitignore`); el manifest sí, porque es
+el cache que hace posible ese incremental.
+
 ## Decisiones ya tomadas
 
 React + TypeScript + Vite · audio pregenerado con Azure Neural (entra en el free tier, costo $0)

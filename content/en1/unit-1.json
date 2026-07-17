@@ -23,11 +23,25 @@
       "gloss": "¡Hola! ¿Cómo estás?",
       "speaker": "mary",
       "intonation": "falling",
-      "alternatives": ["How's it going?", "How are things?"],
-      "replies": ["Fine.", "OK. And you?"],
-      "grammar": ["be.present.interrogative", "wh-questions"],
-      "fn": ["greet"],
-      "topic": ["personal_info", "workplace"],
+      "alternatives": [
+        "How's it going?",
+        "How are things?"
+      ],
+      "replies": [
+        "Fine.",
+        "OK. And you?"
+      ],
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "greet"
+      ],
+      "topic": [
+        "personal_info",
+        "workplace"
+      ],
       "difficulty": 1
     },
     {
@@ -45,9 +59,16 @@
       "gloss": "Hola. Bien. ¿Y vos?",
       "speaker": "eric",
       "intonation": "rising",
-      "grammar": ["be.present.interrogative"],
-      "fn": ["greet"],
-      "topic": ["personal_info", "workplace"],
+      "grammar": [
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "greet"
+      ],
+      "topic": [
+        "personal_info",
+        "workplace"
+      ],
       "difficulty": 1
     },
     {
@@ -55,14 +76,24 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 5, "section": "Presentación de situación comunicacional (cómic)" },
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
       "text": "Fine.",
       "gloss": "Bien.",
       "speaker": "mary",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative"],
-      "fn": ["greet"],
-      "topic": ["personal_info"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "greet"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 1
     },
     {
@@ -80,28 +111,58 @@
       "gloss": "¿Cómo te llamás?",
       "speaker": "eric",
       "intonation": "falling",
-      "alternatives": ["What is your name?", "Could you tell me your name?"],
-      "replies": ["My name is Mary.", "Eric."],
-      "grammar": ["be.present.interrogative", "wh-questions", "possessives.adjectives"],
-      "fn": ["ask.name"],
-      "topic": ["personal_info"],
+      "alternatives": [
+        "What is your name?",
+        "Could you tell me your name?"
+      ],
+      "replies": [
+        "My name is Mary.",
+        "Eric."
+      ],
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.name"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 1,
-      "phoneticFocus": ["ts"]
+      "phoneticFocus": [
+        "ts"
+      ]
     },
     {
       "id": "en1.u1.p.005",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 5, "section": "Presentación de situación comunicacional (cómic)" },
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
       "text": "My name is Mary. And yours?",
       "gloss": "Mi nombre es Mary. ¿Y el tuyo?",
       "speaker": "mary",
       "intonation": "rising",
-      "alternatives": ["I'm Mary. What's your name?"],
-      "grammar": ["be.present.affirmative", "possessives.adjectives"],
-      "fn": ["introduce-self", "ask.name"],
-      "topic": ["personal_info"],
+      "alternatives": [
+        "I'm Mary. What's your name?"
+      ],
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "introduce-self",
+        "ask.name"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 1
     },
     {
@@ -109,16 +170,36 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 5, "section": "Presentación de situación comunicacional (cómic)" },
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
       "text": "Eric. What's your occupation?",
       "gloss": "Eric. ¿Cuál es tu ocupación?",
       "speaker": "eric",
       "intonation": "falling",
-      "alternatives": ["What do you do?", "What is your job?"],
-      "replies": ["I'm a systems manager.", "Oh, I'm a developer."],
-      "grammar": ["be.present.interrogative", "wh-questions", "possessives.adjectives"],
-      "fn": ["introduce-self", "ask.occupation"],
-      "topic": ["personal_info", "occupation"],
+      "alternatives": [
+        "What do you do?",
+        "What is your job?"
+      ],
+      "replies": [
+        "I'm a systems manager.",
+        "Oh, I'm a developer."
+      ],
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "introduce-self",
+        "ask.occupation"
+      ],
+      "topic": [
+        "personal_info",
+        "occupation"
+      ],
       "difficulty": 2
     },
     {
@@ -136,9 +217,19 @@
       "gloss": "Soy gerenta de sistemas.",
       "speaker": "mary",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "be.contractions", "articles.indefinite"],
-      "fn": ["ask.occupation", "introduce-self"],
-      "topic": ["occupation", "workplace"],
+      "grammar": [
+        "be.present.affirmative",
+        "be.contractions",
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.occupation",
+        "introduce-self"
+      ],
+      "topic": [
+        "occupation",
+        "workplace"
+      ],
       "difficulty": 2
     },
     {
@@ -146,14 +237,27 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 5, "section": "Presentación de situación comunicacional (cómic)" },
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
       "text": "Oh, I'm a developer.",
       "gloss": "Ah, yo soy desarrollador.",
       "speaker": "eric",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "be.contractions", "articles.indefinite"],
-      "fn": ["introduce-self"],
-      "topic": ["occupation", "workplace"],
+      "grammar": [
+        "be.present.affirmative",
+        "be.contractions",
+        "articles.indefinite"
+      ],
+      "fn": [
+        "introduce-self"
+      ],
+      "topic": [
+        "occupation",
+        "workplace"
+      ],
       "difficulty": 2
     },
     {
@@ -161,16 +265,34 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 5, "section": "Presentación de situación comunicacional (cómic)" },
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
       "text": "Is there a cafeteria inside the enterprise?",
       "gloss": "¿Hay una cafetería dentro de la empresa?",
       "speaker": "mary",
       "intonation": "rising",
-      "alternatives": ["Is there a cafeteria here?", "Where is the cafeteria?"],
-      "replies": ["Yes, there is a cafeteria on the tenth floor.", "No, there isn't."],
-      "grammar": ["there-is.interrogative", "articles.indefinite", "articles.definite"],
-      "fn": ["ask.existence"],
-      "topic": ["workplace"],
+      "alternatives": [
+        "Is there a cafeteria here?",
+        "Where is the cafeteria?"
+      ],
+      "replies": [
+        "Yes, there is a cafeteria on the tenth floor.",
+        "No, there isn't."
+      ],
+      "grammar": [
+        "there-is.interrogative",
+        "articles.indefinite",
+        "articles.definite"
+      ],
+      "fn": [
+        "ask.existence"
+      ],
+      "topic": [
+        "workplace"
+      ],
       "difficulty": 3,
       "slowVariant": true
     },
@@ -189,9 +311,18 @@
       "gloss": "Sí, hay una cafetería en el décimo piso.",
       "speaker": "eric",
       "intonation": "falling",
-      "grammar": ["there-is.affirmative", "articles.indefinite", "articles.definite"],
-      "fn": ["ask.existence", "state.fact"],
-      "topic": ["workplace"],
+      "grammar": [
+        "there-is.affirmative",
+        "articles.indefinite",
+        "articles.definite"
+      ],
+      "fn": [
+        "ask.existence",
+        "state.fact"
+      ],
+      "topic": [
+        "workplace"
+      ],
       "difficulty": 3,
       "slowVariant": true
     },
@@ -200,15 +331,27 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 5, "section": "Presentación de situación comunicacional (cómic)" },
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
       "text": "Fantastic, thank you.",
       "gloss": "Fantástico, gracias.",
       "speaker": "mary",
       "intonation": "falling",
-      "alternatives": ["Thanks a lot!"],
-      "grammar": ["be.present.affirmative"],
-      "fn": ["thank"],
-      "topic": ["personal_info"],
+      "alternatives": [
+        "Thanks a lot!"
+      ],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "thank"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 1
     },
     {
@@ -226,26 +369,48 @@
       "gloss": "De nada.",
       "speaker": "eric",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "be.contractions"],
-      "fn": ["thank"],
-      "topic": ["personal_info"],
+      "grammar": [
+        "be.present.affirmative",
+        "be.contractions"
+      ],
+      "fn": [
+        "thank"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 1
     },
-
     {
       "id": "en1.u1.p.013",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "text": "Good afternoon. What is your last name?",
       "gloss": "Buenas tardes. ¿Cuál es su apellido?",
       "speaker": "receptionist",
       "intonation": "falling",
-      "alternatives": ["What's your surname?", "What's your family name?"],
-      "grammar": ["be.present.interrogative", "wh-questions", "possessives.adjectives"],
-      "fn": ["greet", "ask.name"],
-      "topic": ["personal_info"],
+      "alternatives": [
+        "What's your surname?",
+        "What's your family name?"
+      ],
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "greet",
+        "ask.name"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 2
     },
     {
@@ -253,14 +418,25 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "text": "My last name is Schulz.",
       "gloss": "Mi apellido es Schulz.",
       "speaker": "karel",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "possessives.adjectives"],
-      "fn": ["ask.name"],
-      "topic": ["personal_info"],
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.name"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 2
     },
     {
@@ -268,15 +444,30 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "text": "Sorry? How do you spell it?",
       "gloss": "¿Perdón? ¿Cómo se escribe?",
       "speaker": "receptionist",
       "intonation": "rising",
-      "alternatives": ["Can you repeat that, please?", "How do you spell your last name?"],
-      "grammar": ["wh-questions", "spelling.alphabet"],
-      "fn": ["ask.spelling", "classroom-language"],
-      "topic": ["personal_info"],
+      "alternatives": [
+        "Can you repeat that, please?",
+        "How do you spell your last name?"
+      ],
+      "grammar": [
+        "wh-questions",
+        "spelling.alphabet"
+      ],
+      "fn": [
+        "ask.spelling",
+        "classroom-language"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 2
     },
     {
@@ -294,9 +485,15 @@
       "gloss": "S - C - H - U - L - Z.",
       "speaker": "karel",
       "intonation": "falling",
-      "grammar": ["spelling.alphabet"],
-      "fn": ["ask.spelling"],
-      "topic": ["personal_info"],
+      "grammar": [
+        "spelling.alphabet"
+      ],
+      "fn": [
+        "ask.spelling"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 3,
       "slowVariant": true
     },
@@ -305,14 +502,26 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "text": "And what is your first name?",
       "gloss": "¿Y cuál es su nombre?",
       "speaker": "receptionist",
       "intonation": "falling",
-      "grammar": ["be.present.interrogative", "wh-questions", "possessives.adjectives"],
-      "fn": ["ask.name"],
-      "topic": ["personal_info"],
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.name"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 2
     },
     {
@@ -320,14 +529,24 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "text": "Karel.",
       "gloss": "Karel.",
       "speaker": "karel",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative"],
-      "fn": ["ask.name"],
-      "topic": ["personal_info"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.name"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 1
     },
     {
@@ -335,16 +554,33 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "text": "Where are you from, Karel?",
       "gloss": "¿De dónde es, Karel?",
       "speaker": "receptionist",
       "intonation": "falling",
-      "alternatives": ["Where do you come from?", "Where's he from?"],
-      "replies": ["I am from Holland.", "I'm from Argentina."],
-      "grammar": ["be.present.interrogative", "wh-questions"],
-      "fn": ["ask.origin"],
-      "topic": ["origin_nationality"],
+      "alternatives": [
+        "Where do you come from?",
+        "Where's he from?"
+      ],
+      "replies": [
+        "I am from Holland.",
+        "I'm from Argentina."
+      ],
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.origin"
+      ],
+      "topic": [
+        "origin_nationality"
+      ],
       "difficulty": 2
     },
     {
@@ -352,14 +588,24 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "text": "I am from Holland.",
       "gloss": "Soy de Holanda.",
       "speaker": "karel",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative"],
-      "fn": ["ask.origin"],
-      "topic": ["origin_nationality"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.origin"
+      ],
+      "topic": [
+        "origin_nationality"
+      ],
       "difficulty": 2
     },
     {
@@ -367,15 +613,29 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "text": "Are you from Amsterdam?",
       "gloss": "¿Es de Ámsterdam?",
       "speaker": "receptionist",
       "intonation": "rising",
-      "replies": ["Yes, I am.", "No, I'm not."],
-      "grammar": ["be.present.interrogative"],
-      "fn": ["ask.origin", "confirm"],
-      "topic": ["origin_nationality"],
+      "replies": [
+        "Yes, I am.",
+        "No, I'm not."
+      ],
+      "grammar": [
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "ask.origin",
+        "confirm"
+      ],
+      "topic": [
+        "origin_nationality"
+      ],
       "difficulty": 2
     },
     {
@@ -383,14 +643,25 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "text": "Yes, I am.",
       "gloss": "Sí, lo soy.",
       "speaker": "karel",
       "intonation": "falling",
-      "grammar": ["be.present.short-answer", "be.present.affirmative"],
-      "fn": ["confirm"],
-      "topic": ["personal_info"],
+      "grammar": [
+        "be.present.short-answer",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "confirm"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 1
     },
     {
@@ -398,15 +669,30 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "text": "What is your address?",
       "gloss": "¿Cuál es su dirección?",
       "speaker": "receptionist",
       "intonation": "falling",
-      "alternatives": ["Where do you live?", "What's your house address?"],
-      "grammar": ["be.present.interrogative", "wh-questions", "possessives.adjectives"],
-      "fn": ["ask.address"],
-      "topic": ["personal_info"],
+      "alternatives": [
+        "Where do you live?",
+        "What's your house address?"
+      ],
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.address"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 2
     },
     {
@@ -424,90 +710,162 @@
       "gloss": "Mi dirección es Lamont Ave. 93.",
       "speaker": "karel",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "possessives.adjectives", "numbers.cardinal"],
-      "fn": ["ask.address"],
-      "topic": ["personal_info"],
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives",
+        "numbers.cardinal"
+      ],
+      "fn": [
+        "ask.address"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 3,
       "slowVariant": true
     },
-
     {
       "id": "en1.u1.p.025",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para el vocabulario suelto 'chair'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para el vocabulario suelto 'chair'."
+      },
       "text": "The chair is comfortable.",
       "gloss": "La silla es cómoda.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "articles.definite"],
-      "fn": ["describe.place"],
-      "topic": ["objects", "classroom"],
+      "grammar": [
+        "be.present.affirmative",
+        "articles.definite"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
       "difficulty": 1,
-      "phoneticFocus": ["tʃ"]
+      "phoneticFocus": [
+        "tʃ"
+      ]
     },
     {
       "id": "en1.u1.p.026",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'pen'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'pen'."
+      },
       "text": "His pen is on the desk.",
       "gloss": "Su lapicera está sobre el escritorio.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "possessives.adjectives", "articles.definite"],
-      "fn": ["ask.location"],
-      "topic": ["objects", "classroom"],
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives",
+        "articles.definite"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
       "difficulty": 1,
-      "phoneticFocus": ["e"]
+      "phoneticFocus": [
+        "e"
+      ]
     },
     {
       "id": "en1.u1.p.027",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'yellow'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'yellow'."
+      },
       "text": "My notebook is yellow.",
       "gloss": "Mi cuaderno es amarillo.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "possessives.adjectives"],
-      "fn": ["describe.place"],
-      "topic": ["objects", "classroom"],
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
       "difficulty": 1,
-      "phoneticFocus": ["j"]
+      "phoneticFocus": [
+        "j"
+      ]
     },
     {
       "id": "en1.u1.p.028",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 15, "section": "Ejercitación 10 (grilla)", "note": "Aparece en la clave de la Ejercitación 10 como respuesta. Se reutiliza como ejemplo de 'here'." },
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Ejercitación 10 (grilla)",
+        "note": "Aparece en la clave de la Ejercitación 10 como respuesta. Se reutiliza como ejemplo de 'here'."
+      },
       "text": "Mary is here in the morning.",
       "gloss": "Mary está acá a la mañana.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative"],
-      "fn": ["ask.location", "state.fact"],
-      "topic": ["campus", "time"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.location",
+        "state.fact"
+      ],
+      "topic": [
+        "campus",
+        "time"
+      ],
       "difficulty": 2,
-      "phoneticFocus": ["ɪə"]
+      "phoneticFocus": [
+        "ɪə"
+      ]
     },
     {
       "id": "en1.u1.p.029",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'mean'. Classroom language." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'mean'. Classroom language."
+      },
       "text": "What does this word mean?",
       "gloss": "¿Qué significa esta palabra?",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["wh-questions", "demonstratives"],
-      "fn": ["classroom-language"],
-      "topic": ["classroom"],
+      "grammar": [
+        "wh-questions",
+        "demonstratives"
+      ],
+      "fn": [
+        "classroom-language"
+      ],
+      "topic": [
+        "classroom"
+      ],
       "difficulty": 2
     },
     {
@@ -515,14 +873,27 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'spell'. Classroom language." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'spell'. Classroom language."
+      },
       "text": "How do you spell your last name?",
       "gloss": "¿Cómo se escribe tu apellido?",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["wh-questions", "spelling.alphabet", "possessives.adjectives"],
-      "fn": ["ask.spelling", "classroom-language"],
-      "topic": ["personal_info", "classroom"],
+      "grammar": [
+        "wh-questions",
+        "spelling.alphabet",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.spelling",
+        "classroom-language"
+      ],
+      "topic": [
+        "personal_info",
+        "classroom"
+      ],
       "difficulty": 2
     },
     {
@@ -530,62 +901,113 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'coins'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'coins'."
+      },
       "text": "These are my coins.",
       "gloss": "Estas son mis monedas.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "demonstratives", "possessives.adjectives"],
-      "fn": ["ask.possession"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative",
+        "demonstratives",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 1,
-      "phoneticFocus": ["z"]
+      "phoneticFocus": [
+        "z"
+      ]
     },
     {
       "id": "en1.u1.p.032",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'toothbrush'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'toothbrush'."
+      },
       "text": "My toothbrush is blue.",
       "gloss": "Mi cepillo de dientes es azul.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "possessives.adjectives"],
-      "fn": ["describe.place"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 2,
-      "phoneticFocus": ["θ", "ʃ"]
+      "phoneticFocus": [
+        "θ",
+        "ʃ"
+      ]
     },
     {
       "id": "en1.u1.p.033",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'charger'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'charger'."
+      },
       "text": "Is this your phone charger?",
       "gloss": "¿Este es tu cargador de teléfono?",
       "speaker": "student",
       "intonation": "rising",
-      "grammar": ["be.present.interrogative", "demonstratives", "possessives.adjectives"],
-      "fn": ["ask.possession"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.interrogative",
+        "demonstratives",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 2,
-      "phoneticFocus": ["tʃ", "dʒ"]
+      "phoneticFocus": [
+        "tʃ",
+        "dʒ"
+      ]
     },
     {
       "id": "en1.u1.p.034",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'return ticket'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'return ticket'."
+      },
       "text": "This is my return ticket.",
       "gloss": "Este es mi boleto de ida y vuelta.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "demonstratives", "possessives.adjectives"],
-      "fn": ["ask.possession"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative",
+        "demonstratives",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 2
     },
     {
@@ -593,30 +1015,53 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'stairs'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'stairs'."
+      },
       "text": "The stairs are on the left.",
       "gloss": "Las escaleras están a la izquierda.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "articles.definite"],
-      "fn": ["ask.location"],
-      "topic": ["campus", "objects"],
+      "grammar": [
+        "be.present.affirmative",
+        "articles.definite"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "campus",
+        "objects"
+      ],
       "difficulty": 2,
-      "phoneticFocus": ["eə"]
+      "phoneticFocus": [
+        "eə"
+      ]
     },
     {
       "id": "en1.u1.p.036",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'lift'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'lift'."
+      },
       "text": "The lift is near the office.",
       "gloss": "El ascensor está cerca de la oficina.",
       "speaker": "teacher",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "articles.definite"],
-      "fn": ["ask.location"],
-      "topic": ["workplace"],
+      "grammar": [
+        "be.present.affirmative",
+        "articles.definite"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "workplace"
+      ],
       "difficulty": 2
     },
     {
@@ -624,14 +1069,24 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'sunglasses'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'sunglasses'."
+      },
       "text": "Her sunglasses are new.",
       "gloss": "Sus anteojos de sol son nuevos.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "possessives.adjectives"],
-      "fn": ["describe.person"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 2
     },
     {
@@ -639,14 +1094,24 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'train station'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'train station'."
+      },
       "text": "The train station is big.",
       "gloss": "La estación de tren es grande.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "articles.definite"],
-      "fn": ["describe.place"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative",
+        "articles.definite"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 2
     },
     {
@@ -654,14 +1119,27 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 15, "section": "Ejercitación 8e", "note": "Oración de la clave oficial. Sirve de ejemplo para 'rucksack'." },
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Ejercitación 8e",
+        "note": "Oración de la clave oficial. Sirve de ejemplo para 'rucksack'."
+      },
       "text": "Our rucksacks are on the chair.",
       "gloss": "Nuestras mochilas están sobre la silla.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "possessives.adjectives"],
-      "fn": ["ask.location"],
-      "topic": ["objects", "classroom"],
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
       "difficulty": 2
     },
     {
@@ -669,49 +1147,86 @@
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'tie'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'tie'."
+      },
       "text": "This is your tie.",
       "gloss": "Esta es tu corbata.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "demonstratives", "possessives.adjectives"],
-      "fn": ["ask.possession"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative",
+        "demonstratives",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 1,
-      "phoneticFocus": ["aɪ"]
+      "phoneticFocus": [
+        "aɪ"
+      ]
     },
     {
       "id": "en1.u1.p.041",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'wardrobe'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'wardrobe'."
+      },
       "text": "This is his wardrobe.",
       "gloss": "Este es su ropero.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "demonstratives", "possessives.adjectives"],
-      "fn": ["ask.possession"],
-      "topic": ["objects", "home"],
+      "grammar": [
+        "be.present.affirmative",
+        "demonstratives",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects",
+        "home"
+      ],
       "difficulty": 1,
-      "phoneticFocus": ["ɔː"]
+      "phoneticFocus": [
+        "ɔː"
+      ]
     },
     {
       "id": "en1.u1.p.042",
       "kind": "phrase",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "synthetic", "note": "Oración de contexto para 'blouse'." },
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para 'blouse'."
+      },
       "text": "This is my blouse.",
       "gloss": "Esta es mi blusa.",
       "speaker": "student",
       "intonation": "falling",
-      "grammar": ["be.present.affirmative", "demonstratives", "possessives.adjectives"],
-      "fn": ["ask.possession"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative",
+        "demonstratives",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 1
     },
-
     {
       "id": "en1.u1.d.001",
       "kind": "dialogue",
@@ -726,27 +1241,79 @@
       "title": "El primer encuentro",
       "situation": "Mary y Eric se cruzan por primera vez en el pasillo de la empresa de servicios informáticos.",
       "turns": [
-        { "speaker": "mary", "phraseId": "en1.u1.p.001" },
-        { "speaker": "eric", "phraseId": "en1.u1.p.002" },
-        { "speaker": "mary", "phraseId": "en1.u1.p.003" },
-        { "speaker": "eric", "phraseId": "en1.u1.p.004" },
-        { "speaker": "mary", "phraseId": "en1.u1.p.005" },
-        { "speaker": "eric", "phraseId": "en1.u1.p.006" },
-        { "speaker": "mary", "phraseId": "en1.u1.p.007" },
-        { "speaker": "eric", "phraseId": "en1.u1.p.008" },
-        { "speaker": "mary", "phraseId": "en1.u1.p.009" },
-        { "speaker": "eric", "phraseId": "en1.u1.p.010" },
-        { "speaker": "mary", "phraseId": "en1.u1.p.011" },
-        { "speaker": "eric", "phraseId": "en1.u1.p.012" }
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u1.p.001"
+        },
+        {
+          "speaker": "eric",
+          "phraseId": "en1.u1.p.002"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u1.p.003"
+        },
+        {
+          "speaker": "eric",
+          "phraseId": "en1.u1.p.004"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u1.p.005"
+        },
+        {
+          "speaker": "eric",
+          "phraseId": "en1.u1.p.006"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u1.p.007"
+        },
+        {
+          "speaker": "eric",
+          "phraseId": "en1.u1.p.008"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u1.p.009"
+        },
+        {
+          "speaker": "eric",
+          "phraseId": "en1.u1.p.010"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u1.p.011"
+        },
+        {
+          "speaker": "eric",
+          "phraseId": "en1.u1.p.012"
+        }
       ],
       "variants": [
         "How's it going?",
         "What do you do?",
         "Is there a cafeteria here?"
       ],
-      "grammar": ["be.present.affirmative", "be.present.interrogative", "there-is.interrogative", "articles.indefinite"],
-      "fn": ["greet", "introduce-self", "ask.name", "ask.occupation", "ask.existence", "thank"],
-      "topic": ["personal_info", "occupation", "workplace"],
+      "grammar": [
+        "be.present.affirmative",
+        "be.present.interrogative",
+        "there-is.interrogative",
+        "articles.indefinite"
+      ],
+      "fn": [
+        "greet",
+        "introduce-self",
+        "ask.name",
+        "ask.occupation",
+        "ask.existence",
+        "thank"
+      ],
+      "topic": [
+        "personal_info",
+        "occupation",
+        "workplace"
+      ],
       "difficulty": 4
     },
     {
@@ -754,211 +1321,494 @@
       "kind": "dialogue",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "title": "El registro en la recepción",
       "situation": "Karel Schulz llega a la oficina y la recepcionista registra sus datos personales.",
       "turns": [
-        { "speaker": "receptionist", "phraseId": "en1.u1.p.013" },
-        { "speaker": "karel", "phraseId": "en1.u1.p.014" },
-        { "speaker": "receptionist", "phraseId": "en1.u1.p.015" },
-        { "speaker": "karel", "phraseId": "en1.u1.p.016" },
-        { "speaker": "receptionist", "phraseId": "en1.u1.p.017" },
-        { "speaker": "karel", "phraseId": "en1.u1.p.018" },
-        { "speaker": "receptionist", "phraseId": "en1.u1.p.019" },
-        { "speaker": "karel", "phraseId": "en1.u1.p.020" },
-        { "speaker": "receptionist", "phraseId": "en1.u1.p.021" },
-        { "speaker": "karel", "phraseId": "en1.u1.p.022" },
-        { "speaker": "receptionist", "phraseId": "en1.u1.p.023" },
-        { "speaker": "karel", "phraseId": "en1.u1.p.024" }
+        {
+          "speaker": "receptionist",
+          "phraseId": "en1.u1.p.013"
+        },
+        {
+          "speaker": "karel",
+          "phraseId": "en1.u1.p.014"
+        },
+        {
+          "speaker": "receptionist",
+          "phraseId": "en1.u1.p.015"
+        },
+        {
+          "speaker": "karel",
+          "phraseId": "en1.u1.p.016"
+        },
+        {
+          "speaker": "receptionist",
+          "phraseId": "en1.u1.p.017"
+        },
+        {
+          "speaker": "karel",
+          "phraseId": "en1.u1.p.018"
+        },
+        {
+          "speaker": "receptionist",
+          "phraseId": "en1.u1.p.019"
+        },
+        {
+          "speaker": "karel",
+          "phraseId": "en1.u1.p.020"
+        },
+        {
+          "speaker": "receptionist",
+          "phraseId": "en1.u1.p.021"
+        },
+        {
+          "speaker": "karel",
+          "phraseId": "en1.u1.p.022"
+        },
+        {
+          "speaker": "receptionist",
+          "phraseId": "en1.u1.p.023"
+        },
+        {
+          "speaker": "karel",
+          "phraseId": "en1.u1.p.024"
+        }
       ],
-      "variants": ["What's your surname?", "Can you repeat that, please?", "Where do you live?"],
-      "grammar": ["be.present.interrogative", "possessives.adjectives", "spelling.alphabet", "be.present.short-answer"],
-      "fn": ["greet", "ask.name", "ask.spelling", "ask.origin", "ask.address", "confirm"],
-      "topic": ["personal_info", "origin_nationality"],
+      "variants": [
+        "What's your surname?",
+        "Can you repeat that, please?",
+        "Where do you live?"
+      ],
+      "grammar": [
+        "be.present.interrogative",
+        "possessives.adjectives",
+        "spelling.alphabet",
+        "be.present.short-answer"
+      ],
+      "fn": [
+        "greet",
+        "ask.name",
+        "ask.spelling",
+        "ask.origin",
+        "ask.address",
+        "confirm"
+      ],
+      "topic": [
+        "personal_info",
+        "origin_nationality"
+      ],
       "difficulty": 4
     },
-
     {
       "id": "en1.u1.qa.001",
       "kind": "qa",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 5, "section": "Cómic / Ejercitación 1 / Perfil de Messi" },
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Cómic / Ejercitación 1 / Perfil de Messi"
+      },
       "prompt": "What's your name?",
-      "promptVariants": ["What is your first name?", "Who are you?"],
-      "replies": ["My name is Mary.", "Bruce Lennen.", "My name is Karel."],
+      "promptVariants": [
+        "What is your first name?",
+        "Who are you?"
+      ],
+      "replies": [
+        "My name is Mary.",
+        "Bruce Lennen.",
+        "My name is Karel."
+      ],
       "speaker": "receptionist",
-      "grammar": ["be.present.interrogative", "wh-questions"],
-      "fn": ["ask.name"],
-      "topic": ["personal_info"],
-      "difficulty": 1
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.name"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 1,
+      "replySpeaker": "karel"
     },
     {
       "id": "en1.u1.qa.002",
       "kind": "qa",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "prompt": "What's your last name?",
-      "promptVariants": ["What is your surname?", "What's your family name?"],
-      "replies": ["Schulz.", "My last name is Schulz.", "His surname is Messi."],
+      "promptVariants": [
+        "What is your surname?",
+        "What's your family name?"
+      ],
+      "replies": [
+        "Schulz.",
+        "My last name is Schulz.",
+        "His surname is Messi."
+      ],
       "speaker": "receptionist",
-      "grammar": ["be.present.interrogative", "wh-questions", "possessives.adjectives"],
-      "fn": ["ask.name"],
-      "topic": ["personal_info"],
-      "difficulty": 2
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.name"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 2,
+      "replySpeaker": "karel"
     },
     {
       "id": "en1.u1.qa.003",
       "kind": "qa",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "prompt": "How do you spell it?",
-      "promptVariants": ["How do you spell your last name?", "Spell your surname, please."],
-      "replies": ["S. C. H. U. L. Z."],
+      "promptVariants": [
+        "How do you spell your last name?",
+        "Spell your surname, please."
+      ],
+      "replies": [
+        "S. C. H. U. L. Z."
+      ],
       "speaker": "receptionist",
-      "grammar": ["wh-questions", "spelling.alphabet"],
-      "fn": ["ask.spelling"],
-      "topic": ["personal_info"],
-      "difficulty": 3
+      "grammar": [
+        "wh-questions",
+        "spelling.alphabet"
+      ],
+      "fn": [
+        "ask.spelling"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 3,
+      "replySpeaker": "karel"
     },
     {
       "id": "en1.u1.qa.004",
       "kind": "qa",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Ejemplo significativo (perfil de Lionel Messi)" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Ejemplo significativo (perfil de Lionel Messi)"
+      },
       "prompt": "How old are you?",
-      "promptVariants": ["What is your age?", "How old is Bill?"],
-      "replies": ["I am thirty-five.", "He's nineteen."],
+      "promptVariants": [
+        "What is your age?",
+        "How old is Bill?"
+      ],
+      "replies": [
+        "I am thirty-five.",
+        "He's nineteen."
+      ],
       "speaker": "receptionist",
-      "grammar": ["be.present.interrogative", "wh-questions", "numbers.cardinal"],
-      "fn": ["ask.age"],
-      "topic": ["personal_info"],
-      "difficulty": 2
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions",
+        "numbers.cardinal"
+      ],
+      "fn": [
+        "ask.age"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 2,
+      "replySpeaker": "student"
     },
     {
       "id": "en1.u1.qa.005",
       "kind": "qa",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Ejemplo significativo (perfil de Lionel Messi)" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Ejemplo significativo (perfil de Lionel Messi)"
+      },
       "prompt": "What's your marital status?",
-      "promptVariants": ["Are you married?", "Is he single?"],
-      "replies": ["He's married.", "No, I'm single."],
+      "promptVariants": [
+        "Are you married?",
+        "Is he single?"
+      ],
+      "replies": [
+        "He's married.",
+        "No, I'm single."
+      ],
       "speaker": "receptionist",
-      "grammar": ["be.present.interrogative", "wh-questions"],
-      "fn": ["ask.marital-status"],
-      "topic": ["personal_info"],
-      "difficulty": 2
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.marital-status"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 2,
+      "replySpeaker": "student"
     },
     {
       "id": "en1.u1.qa.006",
       "kind": "qa",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "prompt": "What is your address?",
-      "promptVariants": ["Where do you live?", "What's your house address?"],
-      "replies": ["My address is 93 Lamont Ave."],
+      "promptVariants": [
+        "Where do you live?",
+        "What's your house address?"
+      ],
+      "replies": [
+        "My address is 93 Lamont Ave."
+      ],
       "speaker": "receptionist",
-      "grammar": ["be.present.interrogative", "wh-questions", "possessives.adjectives"],
-      "fn": ["ask.address"],
-      "topic": ["personal_info"],
-      "difficulty": 2
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.address"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 2,
+      "replySpeaker": "karel"
     },
     {
       "id": "en1.u1.qa.007",
       "kind": "qa",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "prompt": "Where are you from?",
-      "promptVariants": ["Where is he from?", "Where's she from?", "Where do you come from?"],
-      "replies": ["I am from Holland.", "He's from Argentina.", "She's from Germany."],
+      "promptVariants": [
+        "Where is he from?",
+        "Where's she from?",
+        "Where do you come from?"
+      ],
+      "replies": [
+        "I am from Holland.",
+        "He's from Argentina.",
+        "She's from Germany."
+      ],
       "speaker": "receptionist",
-      "grammar": ["be.present.interrogative", "wh-questions"],
-      "fn": ["ask.origin"],
-      "topic": ["origin_nationality"],
-      "difficulty": 2
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.origin"
+      ],
+      "topic": [
+        "origin_nationality"
+      ],
+      "difficulty": 2,
+      "replySpeaker": "karel"
     },
     {
       "id": "en1.u1.qa.008",
       "kind": "qa",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 14, "section": "Ejercitación 6" },
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación 6"
+      },
       "prompt": "What's his nationality?",
-      "promptVariants": ["Is he Argentinean?", "Is she German?"],
-      "replies": ["He's Argentinean and Spanish.", "Yes, she is German.", "He's Portuguese."],
+      "promptVariants": [
+        "Is he Argentinean?",
+        "Is she German?"
+      ],
+      "replies": [
+        "He's Argentinean and Spanish.",
+        "Yes, she is German.",
+        "He's Portuguese."
+      ],
       "speaker": "receptionist",
-      "grammar": ["be.present.interrogative", "nationalities"],
-      "fn": ["ask.nationality"],
-      "topic": ["origin_nationality"],
-      "difficulty": 3
+      "grammar": [
+        "be.present.interrogative",
+        "nationalities"
+      ],
+      "fn": [
+        "ask.nationality"
+      ],
+      "topic": [
+        "origin_nationality"
+      ],
+      "difficulty": 3,
+      "replySpeaker": "valentina"
     },
     {
       "id": "en1.u1.qa.009",
       "kind": "qa",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 5, "section": "Cómic" },
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Cómic"
+      },
       "prompt": "What's your occupation?",
-      "promptVariants": ["What do you do?", "What is your job?"],
-      "replies": ["I'm a systems manager.", "Oh, I'm a developer.", "He's a football player."],
+      "promptVariants": [
+        "What do you do?",
+        "What is your job?"
+      ],
+      "replies": [
+        "I'm a systems manager.",
+        "Oh, I'm a developer.",
+        "He's a football player."
+      ],
       "speaker": "eric",
-      "grammar": ["be.present.interrogative", "wh-questions", "articles.indefinite"],
-      "fn": ["ask.occupation"],
-      "topic": ["occupation"],
-      "difficulty": 2
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions",
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.occupation"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 2,
+      "replySpeaker": "mary"
     },
     {
       "id": "en1.u1.qa.010",
       "kind": "qa",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 15, "section": "Ejercitación 8 / Grammar tips" },
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Ejercitación 8 / Grammar tips"
+      },
       "prompt": "Who's the Dean?",
-      "promptVariants": ["Who is the headmaster?", "Who is Mrs. Lane?"],
-      "replies": ["Mr. Newman.", "Mrs. Lane is a headmistress."],
+      "promptVariants": [
+        "Who is the headmaster?",
+        "Who is Mrs. Lane?"
+      ],
+      "replies": [
+        "Mr. Newman.",
+        "Mrs. Lane is a headmistress."
+      ],
       "speaker": "student",
-      "grammar": ["be.present.interrogative", "wh-questions", "articles.definite"],
-      "fn": ["ask.identity"],
-      "topic": ["campus"],
-      "difficulty": 2
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions",
+        "articles.definite"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "campus"
+      ],
+      "difficulty": 2,
+      "replySpeaker": "teacher"
     },
     {
       "id": "en1.u1.qa.011",
       "kind": "qa",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 5, "section": "Cómic" },
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Cómic"
+      },
       "prompt": "Is there a cafeteria inside the enterprise?",
-      "promptVariants": ["Is there a cafeteria here?", "Where is the cafeteria?"],
-      "replies": ["Yes, there is a cafeteria on the tenth floor.", "No, there isn't."],
+      "promptVariants": [
+        "Is there a cafeteria here?",
+        "Where is the cafeteria?"
+      ],
+      "replies": [
+        "Yes, there is a cafeteria on the tenth floor.",
+        "No, there isn't."
+      ],
       "speaker": "mary",
-      "grammar": ["there-is.interrogative", "articles.indefinite"],
-      "fn": ["ask.existence"],
-      "topic": ["workplace"],
-      "difficulty": 3
+      "grammar": [
+        "there-is.interrogative",
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.existence"
+      ],
+      "topic": [
+        "workplace"
+      ],
+      "difficulty": 3,
+      "replySpeaker": "eric"
     },
     {
       "id": "en1.u1.qa.012",
       "kind": "qa",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 2" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 2"
+      },
       "prompt": "Where's the laboratory?",
-      "promptVariants": ["Is the laboratory on the third floor?", "Where's my classroom?"],
-      "replies": ["It's on the third floor.", "Your classroom is on the third floor."],
+      "promptVariants": [
+        "Is the laboratory on the third floor?",
+        "Where's my classroom?"
+      ],
+      "replies": [
+        "It's on the third floor.",
+        "Your classroom is on the third floor."
+      ],
       "speaker": "student",
-      "grammar": ["be.present.interrogative", "wh-questions", "articles.definite"],
-      "fn": ["ask.location"],
-      "topic": ["campus"],
-      "difficulty": 2
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions",
+        "articles.definite"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "campus"
+      ],
+      "difficulty": 2,
+      "replySpeaker": "teacher"
     },
-
     {
       "id": "en1.u1.ct.001",
       "kind": "contrast",
@@ -970,18 +1820,41 @@
         "section": "Ejercitación 8f",
         "note": "El material trabaja el par sin nombrarlo. Acústicamente son idénticos: solo el contexto sintáctico los distingue."
       },
-      "pair": ["it's", "its"],
+      "pair": [
+        "it's",
+        "its"
+      ],
       "type": "homophone",
       "discriminator": "syntax",
       "examples": [
-        { "text": "___ a new school.", "correct": 0 },
-        { "text": "___ teachers are excellent.", "correct": 1 },
-        { "text": "___ an optical computer.", "correct": 0 },
-        { "text": "The computer is new and ___ mouse is optical.", "correct": 1 }
+        {
+          "text": "___ a new school.",
+          "correct": 0
+        },
+        {
+          "text": "___ teachers are excellent.",
+          "correct": 1
+        },
+        {
+          "text": "___ an optical computer.",
+          "correct": 0
+        },
+        {
+          "text": "The computer is new and ___ mouse is optical.",
+          "correct": 1
+        }
       ],
-      "grammar": ["be.contractions", "possessives.adjectives"],
-      "fn": ["state.fact"],
-      "topic": ["objects", "campus"],
+      "grammar": [
+        "be.contractions",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "objects",
+        "campus"
+      ],
       "difficulty": 1
     },
     {
@@ -989,19 +1862,47 @@
       "kind": "contrast",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 15, "section": "Ejercitación 8d" },
-      "pair": ["they're", "their"],
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Ejercitación 8d"
+      },
+      "pair": [
+        "they're",
+        "their"
+      ],
       "type": "homophone",
       "discriminator": "syntax",
       "examples": [
-        { "text": "___ Tim and Ann.", "correct": 0 },
-        { "text": "___ classroom is big.", "correct": 1 },
-        { "text": "___ in London.", "correct": 0 },
-        { "text": "___ university booklets are on the shelves.", "correct": 1 }
+        {
+          "text": "___ Tim and Ann.",
+          "correct": 0
+        },
+        {
+          "text": "___ classroom is big.",
+          "correct": 1
+        },
+        {
+          "text": "___ in London.",
+          "correct": 0
+        },
+        {
+          "text": "___ university booklets are on the shelves.",
+          "correct": 1
+        }
       ],
-      "grammar": ["be.contractions", "possessives.adjectives", "pronouns.subject"],
-      "fn": ["state.fact"],
-      "topic": ["classroom", "campus"],
+      "grammar": [
+        "be.contractions",
+        "possessives.adjectives",
+        "pronouns.subject"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom",
+        "campus"
+      ],
       "difficulty": 1
     },
     {
@@ -1015,19 +1916,44 @@
         "section": "Ejercitación 9",
         "note": "La elección depende del SONIDO inicial de la palabra siguiente, no de la letra. 'an hour' lleva an; 'a university' lleva a."
       },
-      "pair": ["a", "an"],
+      "pair": [
+        "a",
+        "an"
+      ],
       "type": "article-liaison",
       "discriminator": "phoneme",
       "examples": [
-        { "text": "Mrs. Taylor is ___ engineer.", "correct": 1 },
-        { "text": "My friend Paul is ___ excellent student.", "correct": 1 },
-        { "text": "Lucy is ___ very efficient employee.", "correct": 0 },
-        { "text": "It's ___ rainy day.", "correct": 0 },
-        { "text": "If you go out take ___ umbrella.", "correct": 1 }
+        {
+          "text": "Mrs. Taylor is ___ engineer.",
+          "correct": 1
+        },
+        {
+          "text": "My friend Paul is ___ excellent student.",
+          "correct": 1
+        },
+        {
+          "text": "Lucy is ___ very efficient employee.",
+          "correct": 0
+        },
+        {
+          "text": "It's ___ rainy day.",
+          "correct": 0
+        },
+        {
+          "text": "If you go out take ___ umbrella.",
+          "correct": 1
+        }
       ],
-      "grammar": ["articles.indefinite"],
-      "fn": ["state.fact"],
-      "topic": ["occupation", "objects"],
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "occupation",
+        "objects"
+      ],
       "difficulty": 1
     },
     {
@@ -1039,18 +1965,37 @@
         "origin": "synthetic",
         "note": "Par mínimo derivado del foco fonético que la reconstrucción sugiere para 'pen'. No es un ejercicio del material."
       },
-      "pair": ["pen", "pan"],
+      "pair": [
+        "pen",
+        "pan"
+      ],
       "type": "minimal-pair",
       "discriminator": "phoneme",
       "examples": [
-        { "text": "His ___ is on the desk.", "correct": 0, "phraseId": "en1.u1.p.026" },
-        { "text": "This is my black ___.", "correct": 0 }
+        {
+          "text": "His ___ is on the desk.",
+          "correct": 0,
+          "phraseId": "en1.u1.p.026"
+        },
+        {
+          "text": "This is my black ___.",
+          "correct": 0
+        }
       ],
-      "grammar": ["be.present.affirmative"],
-      "fn": ["state.fact"],
-      "topic": ["objects", "classroom"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
       "difficulty": 1,
-      "tags": ["vowel-contrast"]
+      "tags": [
+        "vowel-contrast"
+      ]
     },
     {
       "id": "en1.u1.ct.005",
@@ -1063,47 +2008,186 @@
         "section": "Ejercitación 8b",
         "note": "En habla continua 'He's' y 'His' son casi indistinguibles. Solo el contexto sintáctico decide."
       },
-      "pair": ["he's", "his"],
+      "pair": [
+        "he's",
+        "his"
+      ],
       "type": "homophone",
       "discriminator": "syntax",
       "examples": [
-        { "text": "___ name is Charly.", "correct": 1 },
-        { "text": "___ a student.", "correct": 0 },
-        { "text": "___ favorite hobby is baseball.", "correct": 1 },
-        { "text": "___ the Software teacher.", "correct": 0 }
+        {
+          "text": "___ name is Charly.",
+          "correct": 1
+        },
+        {
+          "text": "___ a student.",
+          "correct": 0
+        },
+        {
+          "text": "___ favorite hobby is baseball.",
+          "correct": 1
+        },
+        {
+          "text": "___ the Software teacher.",
+          "correct": 0
+        }
       ],
-      "grammar": ["be.contractions", "possessives.adjectives"],
-      "fn": ["describe.person"],
-      "topic": ["personal_info", "campus"],
+      "grammar": [
+        "be.contractions",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "personal_info",
+        "campus"
+      ],
       "difficulty": 2
     },
-
     {
       "id": "en1.u1.ex.001",
       "kind": "exercise",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 13, "section": "Ejercitación 1" },
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
       "prompt": "Complete the conversation: I / you / my / your",
       "format": "cloze",
       "audioViable": "native",
       "items": [
-        { "speaker": "receptionist", "stem": "Good afternoon. What is your last name?", "blanks": [] },
-        { "speaker": "karel", "stem": "___ last name is Schulz.", "blanks": [{ "accept": ["My"] }] },
-        { "speaker": "receptionist", "stem": "Sorry? How do ___ spell it?", "blanks": [{ "accept": ["you"] }] },
-        { "speaker": "karel", "stem": "S. C. H. U. L. Z.", "blanks": [] },
-        { "speaker": "receptionist", "stem": "And what is ___ first name?", "blanks": [{ "accept": ["your"] }] },
-        { "speaker": "karel", "stem": "Karel.", "blanks": [] },
-        { "speaker": "receptionist", "stem": "Where are ___ from, Karel?", "blanks": [{ "accept": ["you"] }] },
-        { "speaker": "karel", "stem": "___ am from Holland.", "blanks": [{ "accept": ["I"] }] },
-        { "speaker": "receptionist", "stem": "Are ___ from Amsterdam?", "blanks": [{ "accept": ["you"] }] },
-        { "speaker": "karel", "stem": "Yes, ___ am.", "blanks": [{ "accept": ["I"] }] },
-        { "speaker": "receptionist", "stem": "What is ___ address?", "blanks": [{ "accept": ["your"] }] },
-        { "speaker": "karel", "stem": "___ address is 93 Lamont Ave.", "blanks": [{ "accept": ["My"] }] }
+        {
+          "speaker": "receptionist",
+          "stem": "Good afternoon. What is your last name?",
+          "blanks": []
+        },
+        {
+          "speaker": "karel",
+          "stem": "___ last name is Schulz.",
+          "blanks": [
+            {
+              "accept": [
+                "My"
+              ]
+            }
+          ]
+        },
+        {
+          "speaker": "receptionist",
+          "stem": "Sorry? How do ___ spell it?",
+          "blanks": [
+            {
+              "accept": [
+                "you"
+              ]
+            }
+          ]
+        },
+        {
+          "speaker": "karel",
+          "stem": "S. C. H. U. L. Z.",
+          "blanks": []
+        },
+        {
+          "speaker": "receptionist",
+          "stem": "And what is ___ first name?",
+          "blanks": [
+            {
+              "accept": [
+                "your"
+              ]
+            }
+          ]
+        },
+        {
+          "speaker": "karel",
+          "stem": "Karel.",
+          "blanks": []
+        },
+        {
+          "speaker": "receptionist",
+          "stem": "Where are ___ from, Karel?",
+          "blanks": [
+            {
+              "accept": [
+                "you"
+              ]
+            }
+          ]
+        },
+        {
+          "speaker": "karel",
+          "stem": "___ am from Holland.",
+          "blanks": [
+            {
+              "accept": [
+                "I"
+              ]
+            }
+          ]
+        },
+        {
+          "speaker": "receptionist",
+          "stem": "Are ___ from Amsterdam?",
+          "blanks": [
+            {
+              "accept": [
+                "you"
+              ]
+            }
+          ]
+        },
+        {
+          "speaker": "karel",
+          "stem": "Yes, ___ am.",
+          "blanks": [
+            {
+              "accept": [
+                "I"
+              ]
+            }
+          ]
+        },
+        {
+          "speaker": "receptionist",
+          "stem": "What is ___ address?",
+          "blanks": [
+            {
+              "accept": [
+                "your"
+              ]
+            }
+          ]
+        },
+        {
+          "speaker": "karel",
+          "stem": "___ address is 93 Lamont Ave.",
+          "blanks": [
+            {
+              "accept": [
+                "My"
+              ]
+            }
+          ]
+        }
       ],
-      "grammar": ["pronouns.subject", "possessives.adjectives", "be.present.interrogative"],
-      "fn": ["ask.name", "ask.spelling", "ask.origin", "ask.address"],
-      "topic": ["personal_info"],
+      "grammar": [
+        "pronouns.subject",
+        "possessives.adjectives",
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "ask.name",
+        "ask.spelling",
+        "ask.origin",
+        "ask.address"
+      ],
+      "topic": [
+        "personal_info"
+      ],
       "difficulty": 4
     },
     {
@@ -1121,20 +2205,121 @@
       "format": "cloze",
       "audioViable": "native",
       "items": [
-        { "stem": "A: This is Sam. ___ my partner. B: Hi, Sam.", "blanks": [{ "accept": ["He's"] }] },
-        { "stem": "A: Where's the Hardware teacher? B: ___ in the Dean's office.", "blanks": [{ "accept": ["He's"] }] },
-        { "stem": "A: Hi! ___ Kate. B: Nice to meet you, Kate.", "blanks": [{ "accept": ["I'm"] }] },
-        { "stem": "I'm Mary, and this is Bill. ___ in this class.", "blanks": [{ "accept": ["We're"] }] },
-        { "stem": "A: How old is Bill? B: ___ nineteen.", "blanks": [{ "accept": ["He's"] }] },
-        { "stem": "A: Where's the laboratory? B: ___ on the third floor.", "blanks": [{ "accept": ["It's"] }] },
-        { "stem": "A: Who's that? B: Mr. Lane. ___ the Software teacher.", "blanks": [{ "accept": ["He's"] }] },
-        { "stem": "A: What do you do? B: ___ a teacher.", "blanks": [{ "accept": ["I'm"] }] },
-        { "stem": "A: Where are your parents? B: ___ in London.", "blanks": [{ "accept": ["They're"] }] },
-        { "stem": "My name is Robert. ___ a student.", "blanks": [{ "accept": ["I'm"] }] }
+        {
+          "stem": "A: This is Sam. ___ my partner. B: Hi, Sam.",
+          "blanks": [
+            {
+              "accept": [
+                "He's"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "A: Where's the Hardware teacher? B: ___ in the Dean's office.",
+          "blanks": [
+            {
+              "accept": [
+                "He's"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "A: Hi! ___ Kate. B: Nice to meet you, Kate.",
+          "blanks": [
+            {
+              "accept": [
+                "I'm"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I'm Mary, and this is Bill. ___ in this class.",
+          "blanks": [
+            {
+              "accept": [
+                "We're"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "A: How old is Bill? B: ___ nineteen.",
+          "blanks": [
+            {
+              "accept": [
+                "He's"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "A: Where's the laboratory? B: ___ on the third floor.",
+          "blanks": [
+            {
+              "accept": [
+                "It's"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "A: Who's that? B: Mr. Lane. ___ the Software teacher.",
+          "blanks": [
+            {
+              "accept": [
+                "He's"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "A: What do you do? B: ___ a teacher.",
+          "blanks": [
+            {
+              "accept": [
+                "I'm"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "A: Where are your parents? B: ___ in London.",
+          "blanks": [
+            {
+              "accept": [
+                "They're"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "My name is Robert. ___ a student.",
+          "blanks": [
+            {
+              "accept": [
+                "I'm"
+              ]
+            }
+          ]
+        }
       ],
-      "grammar": ["be.contractions", "pronouns.subject", "be.present.affirmative"],
-      "fn": ["introduce-self", "describe.person", "ask.location"],
-      "topic": ["campus", "personal_info"],
+      "grammar": [
+        "be.contractions",
+        "pronouns.subject",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "introduce-self",
+        "describe.person",
+        "ask.location"
+      ],
+      "topic": [
+        "campus",
+        "personal_info"
+      ],
       "difficulty": 3
     },
     {
@@ -1142,21 +2327,121 @@
       "kind": "exercise",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 14, "section": "Ejercitación 3", "note": "El ítem (a) viene resuelto como ejemplo en el material." },
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación 3",
+        "note": "El ítem (a) viene resuelto como ejemplo en el material."
+      },
       "prompt": "Complete the dialogues",
       "format": "cloze",
       "audioViable": "native",
       "items": [
-        { "stem": "Is he American? Yes, he is.", "blanks": [] },
-        { "stem": "Is it a library? No, it ___. It's a bookshop.", "blanks": [{ "accept": ["isn't"] }] },
-        { "stem": "Is ___ a TV? No, ___ isn't. It ___ a computer.", "blanks": [{ "accept": ["it"] }, { "accept": ["it"] }, { "accept": ["is"] }] },
-        { "stem": "___ it Japanese? Yes, ___ ___.", "blanks": [{ "accept": ["Is"] }, { "accept": ["it"] }, { "accept": ["is"] }] },
-        { "stem": "___ she a doctor? No, ___ isn't. ___ an engineer.", "blanks": [{ "accept": ["Is"] }, { "accept": ["she"] }, { "accept": ["She's"] }] },
-        { "stem": "Is your car German? No, ___ ___ Italian.", "blanks": [{ "accept": ["it"] }, { "accept": ["is"] }] }
+        {
+          "stem": "Is he American? Yes, he is.",
+          "blanks": []
+        },
+        {
+          "stem": "Is it a library? No, it ___. It's a bookshop.",
+          "blanks": [
+            {
+              "accept": [
+                "isn't"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Is ___ a TV? No, ___ isn't. It ___ a computer.",
+          "blanks": [
+            {
+              "accept": [
+                "it"
+              ]
+            },
+            {
+              "accept": [
+                "it"
+              ]
+            },
+            {
+              "accept": [
+                "is"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ it Japanese? Yes, ___ ___.",
+          "blanks": [
+            {
+              "accept": [
+                "Is"
+              ]
+            },
+            {
+              "accept": [
+                "it"
+              ]
+            },
+            {
+              "accept": [
+                "is"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ she a doctor? No, ___ isn't. ___ an engineer.",
+          "blanks": [
+            {
+              "accept": [
+                "Is"
+              ]
+            },
+            {
+              "accept": [
+                "she"
+              ]
+            },
+            {
+              "accept": [
+                "She's"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Is your car German? No, ___ ___ Italian.",
+          "blanks": [
+            {
+              "accept": [
+                "it"
+              ]
+            },
+            {
+              "accept": [
+                "is"
+              ]
+            }
+          ]
+        }
       ],
-      "grammar": ["be.present.interrogative", "be.present.negative", "be.present.short-answer", "articles.indefinite"],
-      "fn": ["confirm", "deny", "correct"],
-      "topic": ["objects", "occupation"],
+      "grammar": [
+        "be.present.interrogative",
+        "be.present.negative",
+        "be.present.short-answer",
+        "articles.indefinite"
+      ],
+      "fn": [
+        "confirm",
+        "deny",
+        "correct"
+      ],
+      "topic": [
+        "objects",
+        "occupation"
+      ],
       "difficulty": 3
     },
     {
@@ -1174,16 +2459,69 @@
       "format": "punctuate",
       "audioViable": "text-only",
       "items": [
-        { "stem": "is she french", "answer": { "accept": ["Is she French?"] } },
-        { "stem": "its brazilian", "answer": { "accept": ["It's Brazilian."] } },
-        { "stem": "whats your name", "answer": { "accept": ["What's your name?"] } },
-        { "stem": "wheres she from", "answer": { "accept": ["Where's she from?"] } },
-        { "stem": "my names vito", "answer": { "accept": ["My name's Vito."] } },
-        { "stem": "im from Italy", "answer": { "accept": ["I'm from Italy."] } }
+        {
+          "stem": "is she french",
+          "answer": {
+            "accept": [
+              "Is she French?"
+            ]
+          }
+        },
+        {
+          "stem": "its brazilian",
+          "answer": {
+            "accept": [
+              "It's Brazilian."
+            ]
+          }
+        },
+        {
+          "stem": "whats your name",
+          "answer": {
+            "accept": [
+              "What's your name?"
+            ]
+          }
+        },
+        {
+          "stem": "wheres she from",
+          "answer": {
+            "accept": [
+              "Where's she from?"
+            ]
+          }
+        },
+        {
+          "stem": "my names vito",
+          "answer": {
+            "accept": [
+              "My name's Vito."
+            ]
+          }
+        },
+        {
+          "stem": "im from Italy",
+          "answer": {
+            "accept": [
+              "I'm from Italy."
+            ]
+          }
+        }
       ],
-      "grammar": ["be.contractions", "nationalities", "wh-questions"],
-      "fn": ["ask.name", "ask.origin", "ask.nationality"],
-      "topic": ["personal_info", "origin_nationality"],
+      "grammar": [
+        "be.contractions",
+        "nationalities",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.name",
+        "ask.origin",
+        "ask.nationality"
+      ],
+      "topic": [
+        "personal_info",
+        "origin_nationality"
+      ],
       "difficulty": 2
     },
     {
@@ -1191,7 +2529,11 @@
       "kind": "exercise",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 14, "section": "Ejercitación 5" },
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación 5"
+      },
       "prompt": "Write the questions",
       "format": "reorder",
       "audioViable": "adapted",
@@ -1199,20 +2541,71 @@
         {
           "stem": "'s name his what?",
           "answer": {
-            "accept": ["What's his name?", "What is his name?"],
+            "accept": [
+              "What's his name?",
+              "What is his name?"
+            ],
             "officialKey": "What is his name?",
             "note": "La grilla responde 'What is his name?', pero las palabras a ordenar incluyen ''s' y no 'is'. La respuesta que se puede armar con las piezas dadas es 'What's his name?'. Se aceptan ambas."
           }
         },
-        { "stem": "she from where's?", "answer": { "accept": ["Where's she from?", "Where is she from?"] } },
-        { "stem": "is American Susan?", "answer": { "accept": ["Is Susan American?"] } },
-        { "stem": "from you where are?", "answer": { "accept": ["Where are you from?"] } },
-        { "stem": "name her what's?", "answer": { "accept": ["What's her name?", "What is her name?"] } },
-        { "stem": "German is she?", "answer": { "accept": ["Is she German?"] } }
+        {
+          "stem": "she from where's?",
+          "answer": {
+            "accept": [
+              "Where's she from?",
+              "Where is she from?"
+            ]
+          }
+        },
+        {
+          "stem": "is American Susan?",
+          "answer": {
+            "accept": [
+              "Is Susan American?"
+            ]
+          }
+        },
+        {
+          "stem": "from you where are?",
+          "answer": {
+            "accept": [
+              "Where are you from?"
+            ]
+          }
+        },
+        {
+          "stem": "name her what's?",
+          "answer": {
+            "accept": [
+              "What's her name?",
+              "What is her name?"
+            ]
+          }
+        },
+        {
+          "stem": "German is she?",
+          "answer": {
+            "accept": [
+              "Is she German?"
+            ]
+          }
+        }
       ],
-      "grammar": ["be.present.interrogative", "wh-questions", "possessives.adjectives"],
-      "fn": ["ask.name", "ask.origin", "ask.nationality"],
-      "topic": ["personal_info", "origin_nationality"],
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.name",
+        "ask.origin",
+        "ask.nationality"
+      ],
+      "topic": [
+        "personal_info",
+        "origin_nationality"
+      ],
       "difficulty": 3
     },
     {
@@ -1220,20 +2613,114 @@
       "kind": "exercise",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 14, "section": "Ejercitación 6", "note": "El ítem (a) viene resuelto como ejemplo guía." },
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación 6",
+        "note": "El ítem (a) viene resuelto como ejemplo guía."
+      },
       "prompt": "Complete the sentences",
       "format": "cloze",
       "audioViable": "native",
       "items": [
-        { "stem": "His name's Pedro. He's from Lisbon. He's Portuguese.", "blanks": [] },
-        { "stem": "___ name's Anna. ___ from Hamburg. ___ German.", "blanks": [{ "accept": ["Her"] }, { "accept": ["She's"] }, { "accept": ["She's"] }] },
-        { "stem": "___ name's Valentina. ___ from St. Petersburg. ___ Russian.", "blanks": [{ "accept": ["Her"] }, { "accept": ["She's"] }, { "accept": ["She's"] }] },
-        { "stem": "___ name's Mehmet. ___ from Istanbul. ___ Turkish.", "blanks": [{ "accept": ["His"] }, { "accept": ["He's"] }, { "accept": ["He's"] }] },
-        { "stem": "___ name's Rosa. ___ from Spain. ___ Spanish.", "blanks": [{ "accept": ["Her"] }, { "accept": ["She's"] }, { "accept": ["She's"] }] }
+        {
+          "stem": "His name's Pedro. He's from Lisbon. He's Portuguese.",
+          "blanks": []
+        },
+        {
+          "stem": "___ name's Anna. ___ from Hamburg. ___ German.",
+          "blanks": [
+            {
+              "accept": [
+                "Her"
+              ]
+            },
+            {
+              "accept": [
+                "She's"
+              ]
+            },
+            {
+              "accept": [
+                "She's"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ name's Valentina. ___ from St. Petersburg. ___ Russian.",
+          "blanks": [
+            {
+              "accept": [
+                "Her"
+              ]
+            },
+            {
+              "accept": [
+                "She's"
+              ]
+            },
+            {
+              "accept": [
+                "She's"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ name's Mehmet. ___ from Istanbul. ___ Turkish.",
+          "blanks": [
+            {
+              "accept": [
+                "His"
+              ]
+            },
+            {
+              "accept": [
+                "He's"
+              ]
+            },
+            {
+              "accept": [
+                "He's"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ name's Rosa. ___ from Spain. ___ Spanish.",
+          "blanks": [
+            {
+              "accept": [
+                "Her"
+              ]
+            },
+            {
+              "accept": [
+                "She's"
+              ]
+            },
+            {
+              "accept": [
+                "She's"
+              ]
+            }
+          ]
+        }
       ],
-      "grammar": ["possessives.adjectives", "be.contractions", "nationalities"],
-      "fn": ["describe.person", "ask.nationality"],
-      "topic": ["origin_nationality", "personal_info"],
+      "grammar": [
+        "possessives.adjectives",
+        "be.contractions",
+        "nationalities"
+      ],
+      "fn": [
+        "describe.person",
+        "ask.nationality"
+      ],
+      "topic": [
+        "origin_nationality",
+        "personal_info"
+      ],
       "difficulty": 3
     },
     {
@@ -1251,16 +2738,125 @@
       "format": "cloze",
       "audioViable": "native",
       "items": [
-        { "stem": "Hello, ___'m Sam Smith. ___'m a teacher. ___'m from USA. These are ___ friends.", "blanks": [{ "accept": ["I"] }, { "accept": ["I"] }, { "accept": ["I"] }, { "accept": ["my"] }] },
-        { "stem": "___ name is Charly. ___'s a student. ___ favorite hobby is baseball.", "blanks": [{ "accept": ["His"] }, { "accept": ["He"] }, { "accept": ["His"] }] },
-        { "stem": "___ name is Sally. ___'s a nice girl. Charly is ___ brother.", "blanks": [{ "accept": ["Her"] }, { "accept": ["She"] }, { "accept": ["her"] }] },
-        { "stem": "___'re Tim and Ann. ___ classroom is big.", "blanks": [{ "accept": ["They"] }, { "accept": ["Their"] }] },
-        { "stem": "Sam and I are in the cafeteria. ___ rucksacks are on the chair.", "blanks": [{ "accept": ["Our"] }] },
-        { "stem": "___'s a new school. ___ teachers are excellent.", "blanks": [{ "accept": ["It"] }, { "accept": ["Its"] }] }
+        {
+          "stem": "Hello, ___'m Sam Smith. ___'m a teacher. ___'m from USA. These are ___ friends.",
+          "blanks": [
+            {
+              "accept": [
+                "I"
+              ]
+            },
+            {
+              "accept": [
+                "I"
+              ]
+            },
+            {
+              "accept": [
+                "I"
+              ]
+            },
+            {
+              "accept": [
+                "my"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ name is Charly. ___'s a student. ___ favorite hobby is baseball.",
+          "blanks": [
+            {
+              "accept": [
+                "His"
+              ]
+            },
+            {
+              "accept": [
+                "He"
+              ]
+            },
+            {
+              "accept": [
+                "His"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ name is Sally. ___'s a nice girl. Charly is ___ brother.",
+          "blanks": [
+            {
+              "accept": [
+                "Her"
+              ]
+            },
+            {
+              "accept": [
+                "She"
+              ]
+            },
+            {
+              "accept": [
+                "her"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___'re Tim and Ann. ___ classroom is big.",
+          "blanks": [
+            {
+              "accept": [
+                "They"
+              ]
+            },
+            {
+              "accept": [
+                "Their"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Sam and I are in the cafeteria. ___ rucksacks are on the chair.",
+          "blanks": [
+            {
+              "accept": [
+                "Our"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___'s a new school. ___ teachers are excellent.",
+          "blanks": [
+            {
+              "accept": [
+                "It"
+              ]
+            },
+            {
+              "accept": [
+                "Its"
+              ]
+            }
+          ]
+        }
       ],
-      "grammar": ["pronouns.subject", "possessives.adjectives", "be.contractions"],
-      "fn": ["introduce-self", "describe.person"],
-      "topic": ["personal_info", "campus"],
+      "grammar": [
+        "pronouns.subject",
+        "possessives.adjectives",
+        "be.contractions"
+      ],
+      "fn": [
+        "introduce-self",
+        "describe.person"
+      ],
+      "topic": [
+        "personal_info",
+        "campus"
+      ],
       "difficulty": 3
     },
     {
@@ -1268,40 +2864,144 @@
       "kind": "exercise",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 15, "section": "Ejercitación 9" },
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Ejercitación 9"
+      },
       "prompt": "Complete with a, an or the",
       "format": "cloze",
       "audioViable": "native",
       "items": [
-        { "stem": "Mrs. Taylor is ___ engineer.", "blanks": [{ "accept": ["an"] }] },
-        { "stem": "___ teacher's name is George.", "blanks": [{ "accept": ["The"] }] },
-        { "stem": "___ students in my class behave well.", "blanks": [{ "accept": ["The"] }] },
-        { "stem": "My friend Paul is ___ excellent student.", "blanks": [{ "accept": ["an"] }] },
-        { "stem": "___ dictionary is on Sam's desk.", "blanks": [{ "accept": ["The"] }] },
+        {
+          "stem": "Mrs. Taylor is ___ engineer.",
+          "blanks": [
+            {
+              "accept": [
+                "an"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ teacher's name is George.",
+          "blanks": [
+            {
+              "accept": [
+                "The"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ students in my class behave well.",
+          "blanks": [
+            {
+              "accept": [
+                "The"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "My friend Paul is ___ excellent student.",
+          "blanks": [
+            {
+              "accept": [
+                "an"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ dictionary is on Sam's desk.",
+          "blanks": [
+            {
+              "accept": [
+                "The"
+              ]
+            }
+          ]
+        },
         {
           "stem": "It's ___ rainy day. If you go out take ___ umbrella.",
           "blanks": [
-            { "accept": ["a"] },
-            { "accept": ["an", "the"], "officialKey": "an", "note": "La grilla admite explícitamente 'the umbrella' como alternativa válida." }
+            {
+              "accept": [
+                "a"
+              ]
+            },
+            {
+              "accept": [
+                "an",
+                "the"
+              ],
+              "officialKey": "an",
+              "note": "La grilla admite explícitamente 'the umbrella' como alternativa válida."
+            }
           ]
         },
-        { "stem": "___ computer is in ___ laboratory.", "blanks": [{ "accept": ["The"] }, { "accept": ["the"] }] },
+        {
+          "stem": "___ computer is in ___ laboratory.",
+          "blanks": [
+            {
+              "accept": [
+                "The"
+              ]
+            },
+            {
+              "accept": [
+                "the"
+              ]
+            }
+          ]
+        },
         {
           "stem": "Mr. Benson is ___ instructor.",
           "blanks": [
             {
-              "accept": ["the", "an"],
+              "accept": [
+                "the",
+                "an"
+              ],
               "officialKey": "the",
               "note": "AMBIGÜEDAD REAL: 'an instructor' es gramaticalmente correcto (identifica profesión) y 'the instructor' también (el instructor específico). La grilla solo acepta 'the'. La app acepta ambas y avisa qué espera la cátedra."
             }
           ]
         },
-        { "stem": "___ pencils are in the pencil-box.", "blanks": [{ "accept": ["The"] }] },
-        { "stem": "Lucy is ___ very efficient employee.", "blanks": [{ "accept": ["a"] }] }
+        {
+          "stem": "___ pencils are in the pencil-box.",
+          "blanks": [
+            {
+              "accept": [
+                "The"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Lucy is ___ very efficient employee.",
+          "blanks": [
+            {
+              "accept": [
+                "a"
+              ]
+            }
+          ]
+        }
       ],
-      "grammar": ["articles.indefinite", "articles.definite"],
-      "fn": ["state.fact"],
-      "topic": ["occupation", "classroom", "objects"],
+      "grammar": [
+        "articles.indefinite",
+        "articles.definite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "occupation",
+        "classroom",
+        "objects"
+      ],
       "difficulty": 2
     },
     {
@@ -1319,101 +3019,217 @@
       "format": "transform",
       "audioViable": "native",
       "items": [
-        { "stem": "Mrs. Taylor is an engineer.", "answer": { "accept": ["Who is an engineer?", "Who's an engineer?"] } },
-        { "stem": "Your classroom is on the third floor.", "answer": { "accept": ["Where is my classroom?", "Where's my classroom?"] } },
-        { "stem": "Her pencil is pink.", "answer": { "accept": ["What color is her pencil?", "What colour is her pencil?"] } },
-        { "stem": "Mary is here in the morning.", "answer": { "accept": ["When is Mary here?", "When's Mary here?"] } },
-        { "stem": "Sandy is in the UAI because she is a student.", "answer": { "accept": ["Why is Sandy in the UAI?", "Why's Sandy in the UAI?"] } },
-        { "stem": "The Software class is at 4 p.m.", "answer": { "accept": ["What time is the Software class?"] } }
+        {
+          "stem": "Mrs. Taylor is an engineer.",
+          "answer": {
+            "accept": [
+              "Who is an engineer?",
+              "Who's an engineer?"
+            ]
+          }
+        },
+        {
+          "stem": "Your classroom is on the third floor.",
+          "answer": {
+            "accept": [
+              "Where is my classroom?",
+              "Where's my classroom?"
+            ]
+          }
+        },
+        {
+          "stem": "Her pencil is pink.",
+          "answer": {
+            "accept": [
+              "What color is her pencil?",
+              "What colour is her pencil?"
+            ]
+          }
+        },
+        {
+          "stem": "Mary is here in the morning.",
+          "answer": {
+            "accept": [
+              "When is Mary here?",
+              "When's Mary here?"
+            ]
+          }
+        },
+        {
+          "stem": "Sandy is in the UAI because she is a student.",
+          "answer": {
+            "accept": [
+              "Why is Sandy in the UAI?",
+              "Why's Sandy in the UAI?"
+            ]
+          }
+        },
+        {
+          "stem": "The Software class is at 4 p.m.",
+          "answer": {
+            "accept": [
+              "What time is the Software class?"
+            ]
+          }
+        }
       ],
-      "grammar": ["wh-questions", "be.present.interrogative"],
-      "fn": ["ask.identity", "ask.location", "ask.time"],
-      "topic": ["campus", "classroom"],
+      "grammar": [
+        "wh-questions",
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "ask.identity",
+        "ask.location",
+        "ask.time"
+      ],
+      "topic": [
+        "campus",
+        "classroom"
+      ],
       "difficulty": 5
     },
-
     {
       "id": "en1.u1.lx.001",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "chair",
       "pos": "noun",
       "gloss": "silla",
       "examplePhraseId": "en1.u1.p.025",
       "focus": "phonetic",
-      "grammar": ["be.present.affirmative"],
-      "fn": ["describe.place"],
-      "topic": ["objects", "classroom"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
       "difficulty": 1,
-      "tags": ["tʃ"]
+      "tags": [
+        "tʃ"
+      ]
     },
     {
       "id": "en1.u1.lx.002",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "pen",
       "pos": "noun",
       "gloss": "lapicera",
       "examplePhraseId": "en1.u1.p.026",
       "focus": "phonetic",
-      "grammar": ["be.present.affirmative"],
-      "fn": ["ask.location"],
-      "topic": ["objects", "classroom"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
       "difficulty": 1,
-      "tags": ["minimal-pair:pan"]
+      "tags": [
+        "minimal-pair:pan"
+      ]
     },
     {
       "id": "en1.u1.lx.003",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "yellow",
       "pos": "adjective",
       "gloss": "amarillo",
       "examplePhraseId": "en1.u1.p.027",
       "focus": "phonetic",
-      "grammar": ["be.present.affirmative"],
-      "fn": ["describe.place"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 1,
-      "tags": ["j"]
+      "tags": [
+        "j"
+      ]
     },
     {
       "id": "en1.u1.lx.004",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "here",
       "pos": "adverb",
       "gloss": "acá / aquí",
       "examplePhraseId": "en1.u1.p.028",
       "focus": "phonetic",
-      "grammar": ["be.present.affirmative"],
-      "fn": ["ask.location"],
-      "topic": ["campus"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "campus"
+      ],
       "difficulty": 1,
-      "tags": ["ɪə"]
+      "tags": [
+        "ɪə"
+      ]
     },
     {
       "id": "en1.u1.lx.005",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "mean",
       "pos": "verb",
       "gloss": "significar",
       "examplePhraseId": "en1.u1.p.029",
       "focus": "translation",
-      "grammar": ["wh-questions"],
-      "fn": ["classroom-language"],
-      "topic": ["classroom"],
+      "grammar": [
+        "wh-questions"
+      ],
+      "fn": [
+        "classroom-language"
+      ],
+      "topic": [
+        "classroom"
+      ],
       "difficulty": 2
     },
     {
@@ -1421,15 +3237,27 @@
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "spell",
       "pos": "verb",
       "gloss": "deletrear",
       "examplePhraseId": "en1.u1.p.030",
       "focus": "spelling",
-      "grammar": ["spelling.alphabet", "wh-questions"],
-      "fn": ["ask.spelling"],
-      "topic": ["personal_info", "classroom"],
+      "grammar": [
+        "spelling.alphabet",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.spelling"
+      ],
+      "topic": [
+        "personal_info",
+        "classroom"
+      ],
       "difficulty": 2
     },
     {
@@ -1437,67 +3265,120 @@
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "coins",
       "pos": "noun",
       "gloss": "monedas",
       "examplePhraseId": "en1.u1.p.031",
       "focus": "phonetic",
-      "grammar": ["be.present.affirmative", "demonstratives"],
-      "fn": ["ask.possession"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative",
+        "demonstratives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 1,
-      "tags": ["z", "plural"]
+      "tags": [
+        "z",
+        "plural"
+      ]
     },
     {
       "id": "en1.u1.lx.008",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "toothbrush",
       "pos": "noun",
       "gloss": "cepillo de dientes",
       "examplePhraseId": "en1.u1.p.032",
       "focus": "phonetic",
-      "grammar": ["be.present.affirmative"],
-      "fn": ["describe.place"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 2,
-      "tags": ["θ", "ʃ"]
+      "tags": [
+        "θ",
+        "ʃ"
+      ]
     },
     {
       "id": "en1.u1.lx.009",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "charger",
       "pos": "noun",
       "gloss": "cargador",
       "examplePhraseId": "en1.u1.p.033",
       "focus": "phonetic",
-      "grammar": ["be.present.interrogative"],
-      "fn": ["ask.possession"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 2,
-      "tags": ["tʃ", "dʒ"]
+      "tags": [
+        "tʃ",
+        "dʒ"
+      ]
     },
     {
       "id": "en1.u1.lx.010",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "return ticket",
       "pos": "noun",
       "gloss": "boleto de ida y vuelta",
       "examplePhraseId": "en1.u1.p.034",
       "focus": "variant",
-      "variantOf": { "uk": "return ticket", "us": "round-trip ticket" },
-      "grammar": ["be.present.affirmative"],
-      "fn": ["ask.possession"],
-      "topic": ["objects"],
+      "variantOf": {
+        "uk": "return ticket",
+        "us": "round-trip ticket"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 2
     },
     {
@@ -1505,33 +3386,58 @@
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "stairs",
       "pos": "noun",
       "gloss": "escaleras",
       "examplePhraseId": "en1.u1.p.035",
       "focus": "phonetic",
-      "grammar": ["be.present.affirmative"],
-      "fn": ["ask.location"],
-      "topic": ["campus"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "campus"
+      ],
       "difficulty": 2,
-      "tags": ["eə"]
+      "tags": [
+        "eə"
+      ]
     },
     {
       "id": "en1.u1.lx.012",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "lift",
       "pos": "noun",
       "gloss": "ascensor",
       "examplePhraseId": "en1.u1.p.036",
       "focus": "variant",
-      "variantOf": { "uk": "lift", "us": "elevator" },
-      "grammar": ["be.present.affirmative"],
-      "fn": ["ask.location"],
-      "topic": ["workplace"],
+      "variantOf": {
+        "uk": "lift",
+        "us": "elevator"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "workplace"
+      ],
       "difficulty": 2
     },
     {
@@ -1539,50 +3445,88 @@
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "sunglasses",
       "pos": "noun",
       "gloss": "anteojos de sol",
       "examplePhraseId": "en1.u1.p.037",
       "focus": "translation",
-      "grammar": ["be.present.affirmative"],
-      "fn": ["describe.person"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 2,
-      "tags": ["plural-agreement"]
+      "tags": [
+        "plural-agreement"
+      ]
     },
     {
       "id": "en1.u1.lx.014",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "train station",
       "pos": "noun",
       "gloss": "estación de tren",
       "examplePhraseId": "en1.u1.p.038",
       "focus": "phonetic",
-      "grammar": ["be.present.affirmative"],
-      "fn": ["describe.place"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 2,
-      "tags": ["connected-speech"]
+      "tags": [
+        "connected-speech"
+      ]
     },
     {
       "id": "en1.u1.lx.015",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "rucksack",
       "pos": "noun",
       "gloss": "mochila",
       "examplePhraseId": "en1.u1.p.039",
       "focus": "variant",
-      "variantOf": { "uk": "rucksack", "us": "backpack" },
-      "grammar": ["be.present.affirmative"],
-      "fn": ["ask.location"],
-      "topic": ["objects", "classroom"],
+      "variantOf": {
+        "uk": "rucksack",
+        "us": "backpack"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
       "difficulty": 2
     },
     {
@@ -1590,52 +3534,89 @@
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "tie",
       "pos": "noun",
       "gloss": "corbata",
       "examplePhraseId": "en1.u1.p.040",
       "focus": "phonetic",
-      "grammar": ["be.present.affirmative", "demonstratives"],
-      "fn": ["ask.possession"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative",
+        "demonstratives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 1,
-      "tags": ["aɪ"]
+      "tags": [
+        "aɪ"
+      ]
     },
     {
       "id": "en1.u1.lx.017",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "wardrobe",
       "pos": "noun",
       "gloss": "ropero",
       "examplePhraseId": "en1.u1.p.041",
       "focus": "phonetic",
-      "grammar": ["be.present.affirmative", "demonstratives"],
-      "fn": ["ask.possession"],
-      "topic": ["objects", "home"],
+      "grammar": [
+        "be.present.affirmative",
+        "demonstratives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects",
+        "home"
+      ],
       "difficulty": 1,
-      "tags": ["ɔː"]
+      "tags": [
+        "ɔː"
+      ]
     },
     {
       "id": "en1.u1.lx.018",
       "kind": "lexeme",
       "course": "en1",
       "unit": 1,
-      "source": { "origin": "extracted", "page": 12, "section": "Words and phrases to learn" },
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
       "word": "blouse",
       "pos": "noun",
       "gloss": "blusa",
       "examplePhraseId": "en1.u1.p.042",
       "focus": "translation",
-      "grammar": ["be.present.affirmative", "demonstratives"],
-      "fn": ["ask.possession"],
-      "topic": ["objects"],
+      "grammar": [
+        "be.present.affirmative",
+        "demonstratives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
       "difficulty": 1
     },
-
     {
       "id": "en1.u1.pr.001",
       "kind": "production",
@@ -1649,10 +3630,36 @@
       },
       "prompt": "Describe the room. Adjectives and Nouns. Write sentences (two negative ones). Use there is and there are.",
       "wordBank": [
-        "new", "big", "modern", "cheap", "boring", "dark", "nice", "comfortable", "small", "interesting", "ugly",
-        "books", "calculator", "mouse", "keyboard", "pictures", "clock", "wastepaper bin", "chair", "desk",
-        "table", "notebook", "shelves", "drawers", "pad", "cats",
-        "door", "printer", "monitor screen", "mouse pad"
+        "new",
+        "big",
+        "modern",
+        "cheap",
+        "boring",
+        "dark",
+        "nice",
+        "comfortable",
+        "small",
+        "interesting",
+        "ugly",
+        "books",
+        "calculator",
+        "mouse",
+        "keyboard",
+        "pictures",
+        "clock",
+        "wastepaper bin",
+        "chair",
+        "desk",
+        "table",
+        "notebook",
+        "shelves",
+        "drawers",
+        "pad",
+        "cats",
+        "door",
+        "printer",
+        "monitor screen",
+        "mouse pad"
       ],
       "modelAnswer": "This is my study room. There is a big desk and there is a comfortable chair. On the desk, there is a modern computer and a small keyboard. Next to the computer, there is a cheap calculator. On the wall, there are two nice pictures and there is a big clock. There are interesting books on the shelves, and there are many notebooks in the drawers. However, there isn't a new printer inside this room, and there aren't cats in this room.",
       "rubric": [
@@ -1663,9 +3670,18 @@
         "Usa preposiciones de lugar (on, in, next to, inside)"
       ],
       "speaker": "narrator",
-      "grammar": ["there-is.affirmative", "there-is.negative", "articles.indefinite"],
-      "fn": ["describe.place"],
-      "topic": ["objects", "home"],
+      "grammar": [
+        "there-is.affirmative",
+        "there-is.negative",
+        "articles.indefinite"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "objects",
+        "home"
+      ],
       "difficulty": 5
     },
     {
@@ -1690,12 +3706,23 @@
         "Menciona objetos favoritos con adjetivos posesivos"
       ],
       "speaker": "examiner",
-      "grammar": ["be.present.affirmative", "possessives.adjectives", "numbers.cardinal", "nationalities"],
-      "fn": ["introduce-self", "describe.person"],
-      "topic": ["personal_info", "origin_nationality", "objects"],
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives",
+        "numbers.cardinal",
+        "nationalities"
+      ],
+      "fn": [
+        "introduce-self",
+        "describe.person"
+      ],
+      "topic": [
+        "personal_info",
+        "origin_nationality",
+        "objects"
+      ],
       "difficulty": 5
     },
-
     {
       "id": "en1.u1.ls.001",
       "kind": "listening",
@@ -1710,13 +3737,45 @@
       "narrative": "Hello. My name is Anna. I am twenty-four years old. I am from a small town in Germany, so I am German. My town is very nice. There is a school, there is a big church and there are two small shops. My family is here. My mother is a teacher and my father is a doctor. But there isn't a job for me in my town. There isn't an office, there isn't a laboratory and there aren't computers. I am a systems engineer. So now I am in Berlin. Berlin is a big city and there are many enterprises here.",
       "speaker": "anna-town",
       "questions": [
-        { "q": "What's her name?", "accept": ["Her name is Anna.", "Anna."] },
-        { "q": "Where is she from?", "accept": ["She is from a small town.", "She's from a small town.", "From a small town in Germany."] },
-        { "q": "Is there a job for her in her town?", "accept": ["No, there isn't.", "No."] }
+        {
+          "q": "What's her name?",
+          "accept": [
+            "Her name is Anna.",
+            "Anna."
+          ]
+        },
+        {
+          "q": "Where is she from?",
+          "accept": [
+            "She is from a small town.",
+            "She's from a small town.",
+            "From a small town in Germany."
+          ]
+        },
+        {
+          "q": "Is there a job for her in her town?",
+          "accept": [
+            "No, there isn't.",
+            "No."
+          ]
+        }
       ],
-      "grammar": ["be.present.affirmative", "there-is.affirmative", "there-is.negative", "nationalities", "numbers.cardinal"],
-      "fn": ["introduce-self", "describe.place"],
-      "topic": ["personal_info", "origin_nationality", "city"],
+      "grammar": [
+        "be.present.affirmative",
+        "there-is.affirmative",
+        "there-is.negative",
+        "nationalities",
+        "numbers.cardinal"
+      ],
+      "fn": [
+        "introduce-self",
+        "describe.place"
+      ],
+      "topic": [
+        "personal_info",
+        "origin_nationality",
+        "city"
+      ],
       "difficulty": 4
     }
   ]

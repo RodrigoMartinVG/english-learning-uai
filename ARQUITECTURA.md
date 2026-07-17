@@ -381,18 +381,27 @@ Cola serializada: un solo audio suena a la vez, siempre. `cancel()` antes de cad
 
 ### 5.4 Proveedor: por qué Azure, y por qué sale gratis
 
-El volumen real del curso, estimado sobre el contenido auditado:
+El volumen real, **medido** con `npm run build:audio -- --dry-run` sobre la Unidad 1 ya modelada
+(no estimado: el script cuenta los caracteres que se le mandarían a Azure):
 
 ```
-~250 átomos pronunciables por unidad × ~55 caracteres ≈ 14.000 chars/unidad
-4 unidades de Inglés I                              ≈ 56.000 chars
-Inglés I + II + III + IV completos                  ≈ 224.000 chars
+Unidad 1:  91 átomos → 246 emisiones →  7.898 chars   = 1,6% del free tier mensual
+Inglés I (4 unidades, extrapolado)     ≈ 32.000 chars  ≈ 6%
+Inglés I + II + III + IV (extrapolado) ≈ 126.000 chars ≈ 25%
 ```
 
 La capa gratuita de Azure Speech (F0) cubre **500.000 caracteres de voz neuronal por mes**.
-Es decir: **el curso entero, las 4 materias, entra en el free tier con más del doble de margen** —
-y como el build es incremental por hash, un mes normal regenera decenas de frases, no miles.
+Las 4 materias completas entran en **una cuarta parte** del free tier, y la U1 es la unidad más
+larga de todas (20 páginas contra 13-16), así que la extrapolación peca de generosa. Como además
+el build es incremental por hash, un mes normal regenera decenas de emisiones y no miles.
 El costo proyectado es **$0**, indefinidamente. Esto deja de ser una decisión económica.
+
+> Nota: la primera estimación de este documento decía ~14.000 chars/unidad, casi el doble de lo
+> real. El error venía de contar átomos como emisiones y suponer frases más largas. Se corrige
+> con el dato medido; la conclusión no cambia, pero el margen es mayor del que se creía.
+
+Una emisión no es un átomo: un `phrase` con dos alternativas y variante lenta son cuatro
+emisiones; un `dialogue` son cero (reusa las de sus `phrase`). De ahí 91 → 246.
 
 Azure gana además por lo que ninguna alternativa gratuita ofrece: **voces con acento no nativo
 real** (`pt-BR`, `de-DE`, `ru-RU`, `tr-TR` hablando inglés) y control fino de prosodia vía SSML,
