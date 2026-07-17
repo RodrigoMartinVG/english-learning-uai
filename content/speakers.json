@@ -240,9 +240,9 @@
         "Katja",
         "Aria"
       ],
-      "rate": 0.88,
+      "rate": 0.85,
       "voice": {
-        "kokoro": "af_nova",
+        "kokoro": "af_sarah",
         "azure": "de-DE-AmalaNeural"
       }
     },

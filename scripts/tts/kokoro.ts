@@ -14,9 +14,24 @@
  */
 
 import { encodeMp3, type SynthResult, type TtsProvider, type Utterance } from './provider.ts';
+import { splitSentences } from './sentences.ts';
 
 const MODEL = 'onnx-community/Kokoro-82M-v1.0-ONNX';
 const MP3_BITRATE = 64;
+
+/** Silencio entre oraciones. Un punto tiene que pausar más que una coma. */
+const SENTENCE_GAP_MS = 300;
+/** Debajo de esto es silencio: se recorta de los extremos de cada oración. */
+const SILENCE_THRESHOLD = 0.01;
+
+/** Recorta el silencio de relleno que Kokoro agrega al principio y al final. */
+function trimSilence(a: Float32Array): Float32Array {
+  let s = 0;
+  let e = a.length - 1;
+  while (s < e && Math.abs(a[s]!) < SILENCE_THRESHOLD) s++;
+  while (e > s && Math.abs(a[e]!) < SILENCE_THRESHOLD) e--;
+  return a.subarray(s, e + 1);
+}
 
 type KokoroModel = {
   generate(text: string, opts: { voice: string; speed: number }): Promise<{
@@ -48,11 +63,39 @@ export function createKokoroProvider(dtype: 'q8' | 'fp32' = 'q8'): TtsProvider {
         );
       }
 
-      const out = await model.generate(u.text, { voice: u.voice, speed: u.rate });
+      const sentences = splitSentences(u.text);
+
+      // Una sola oración: camino directo, sin recorte ni concatenación.
+      if (sentences.length === 1) {
+        const out = await model.generate(u.text, { voice: u.voice, speed: u.rate });
+        return {
+          data: await encodeMp3(out.audio, out.sampling_rate, MP3_BITRATE),
+          durationMs: Math.round((out.audio.length / out.sampling_rate) * 1000),
+        };
+      }
+
+      // Varias oraciones: cada una por separado, recortada, unidas con un silencio
+      // real. Es lo que le da al punto la pausa que Kokoro no le da solo.
+      let sampleRate = 24000;
+      const pieces: Float32Array[] = [];
+      for (const s of sentences) {
+        const out = await model.generate(s, { voice: u.voice, speed: u.rate });
+        sampleRate = out.sampling_rate;
+        pieces.push(trimSilence(out.audio));
+      }
+
+      const gap = Math.round((sampleRate * SENTENCE_GAP_MS) / 1000);
+      const totalLen = pieces.reduce((n, p) => n + p.length, 0) + gap * (pieces.length - 1);
+      const merged = new Float32Array(totalLen);
+      let offset = 0;
+      pieces.forEach((p, i) => {
+        merged.set(p, offset);
+        offset += p.length + (i < pieces.length - 1 ? gap : 0);
+      });
+
       return {
-        data: await encodeMp3(out.audio, out.sampling_rate, MP3_BITRATE),
-        // Duración exacta: la sabemos por las muestras, no hace falta estimarla.
-        durationMs: Math.round((out.audio.length / out.sampling_rate) * 1000),
+        data: await encodeMp3(merged, sampleRate, MP3_BITRATE),
+        durationMs: Math.round((totalLen / sampleRate) * 1000),
       };
     },
   };

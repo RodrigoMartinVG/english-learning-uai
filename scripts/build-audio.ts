@@ -30,6 +30,7 @@ import {
 } from '../content/schema.ts';
 import { createAzureProvider } from './tts/azure.ts';
 import { createKokoroProvider } from './tts/kokoro.ts';
+import { splitSentences } from './tts/sentences.ts';
 import type { ProviderId, TtsProvider, Utterance } from './tts/provider.ts';
 
 const ROOT = join(import.meta.dirname, '..');
@@ -206,9 +207,19 @@ const manifest: Manifest = existsSync(MANIFEST_PATH)
   ? manifestSchema.parse(JSON.parse(readFileSync(MANIFEST_PATH, 'utf8')))
   : { generatedAt: '', provider: '', entries: {} };
 
-/** El hash cubre todo lo que cambia el audio. Si algo de esto cambia, se re-sintetiza. */
-const hashOf = (u: Utterance): string =>
-  createHash('sha256').update(`${u.text}|${u.voice}|${u.rate}|${u.lang}`).digest('hex').slice(0, 16);
+/**
+ * El hash cubre todo lo que cambia el audio. Si algo cambia, se re-sintetiza.
+ *
+ * Incluye la versión del pipeline SOLO para textos multi-oración: el split por
+ * oraciones cambió cómo suenan (pausas reales, y sin el truncado a ~27s de
+ * Kokoro con textos largos). Los de una sola oración salen idénticos, así que su
+ * hash no cambia y no se regeneran de gusto.
+ */
+const MULTI_SENTENCE_PIPELINE = 'v2-split';
+const hashOf = (u: Utterance): string => {
+  const tag = splitSentences(u.text).length > 1 ? `|${MULTI_SENTENCE_PIPELINE}` : '';
+  return createHash('sha256').update(`${u.text}|${u.voice}|${u.rate}|${u.lang}${tag}`).digest('hex').slice(0, 16);
+};
 
 const srcOf = (key: string): string => `/audio/${key.split('.').slice(0, 2).join('/')}/${key}.mp3`;
 
