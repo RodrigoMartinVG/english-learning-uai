@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useAudio, useAudioState } from '../../audio/AudioProvider.tsx';
 import { Waveform } from '../../ui/Waveform.tsx';
+import { AltVoices } from '../../ui/AltVoices.tsx';
 import type { MechanicViewProps } from '../types.ts';
 import type { WordFocusRound } from './mechanic.ts';
 
@@ -38,6 +39,7 @@ export function WordFocusView({ round, onDone }: MechanicViewProps<WordFocusRoun
             🐢 Lento
           </button>
         </div>
+        <AltVoices audioKey={target.id} text={target.word} speakerId={speakerId} />
         {/* La palabra escrita aparece recién al responder: si no, esto es leer. */}
         <p className="osmosis__hint">
           {answered ? <strong className="wf__word">{target.word}</strong> : '¿Qué palabra es?'}

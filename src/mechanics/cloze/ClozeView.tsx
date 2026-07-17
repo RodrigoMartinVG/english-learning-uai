@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useAudio, useAudioState } from '../../audio/AudioProvider.tsx';
 import { Waveform } from '../../ui/Waveform.tsx';
+import { AltVoices } from '../../ui/AltVoices.tsx';
 import { normalize } from '../../engine/grading/speech.ts';
 import { BLANK } from '../../../content/schema.ts';
 import type { MechanicViewProps } from '../types.ts';
@@ -65,6 +66,7 @@ export function ClozeView({ round, onDone }: MechanicViewProps<ClozeRound>) {
             🐢 Lento
           </button>
         </div>
+        <AltVoices audioKey={round.audioKey} text={round.spoken} speakerId={round.speakerId} />
         <p className="osmosis__hint">Suena completa. Reponé lo que falta.</p>
       </div>
 

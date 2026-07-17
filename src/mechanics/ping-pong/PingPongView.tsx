@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useAudio, useAudioState } from '../../audio/AudioProvider.tsx';
 import { Waveform } from '../../ui/Waveform.tsx';
+import { AltVoices } from '../../ui/AltVoices.tsx';
 import { SpeakPanel } from '../../ui/SpeakPanel.tsx';
 import { speakerById } from '../../data/content.ts';
 import type { MechanicViewProps } from '../types.ts';
@@ -34,6 +35,7 @@ export function PingPongView({ round, onDone }: MechanicViewProps<PingPongRound>
             {state === 'speaking' ? '◼ Preguntando' : '▶ Repetir pregunta'}
           </button>
         </div>
+        <AltVoices audioKey={target.id} text={target.prompt} speakerId={target.speaker} />
         <p className="osmosis__hint">
           Te pregunta <strong>{asker?.displayName ?? target.speaker}</strong>. Contestá en voz alta.
         </p>

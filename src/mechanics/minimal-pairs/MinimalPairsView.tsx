@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useAudio, useAudioState } from '../../audio/AudioProvider.tsx';
 import { Waveform } from '../../ui/Waveform.tsx';
+import { AltVoices } from '../../ui/AltVoices.tsx';
 import type { MechanicViewProps } from '../types.ts';
 import type { MinimalPairsRound } from './mechanic.ts';
 
@@ -45,6 +46,7 @@ export function MinimalPairsView({ round, onDone }: MechanicViewProps<MinimalPai
             🐢 Lento
           </button>
         </div>
+        <AltVoices audioKey={audioKey(round)} text={round.spoken} speakerId="narrator" />
         <p className="osmosis__hint">
           {round.atom.discriminator === 'syntax'
             ? 'Suenan igual: decidilo por el contexto, no por el oído'

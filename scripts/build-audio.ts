@@ -109,8 +109,7 @@ function langOf(voice: string): string {
 const utterances: Utterance[] = [];
 const missingVoice: string[] = [];
 
-/** `alts`: además de la voz propia, generar la frase en las voces alternativas. */
-function push(key: string, text: string, speakerId: string, rateFactor = 1, alts = false): void {
+function push(key: string, text: string, speakerId: string, rateFactor = 1): void {
   const sp = speakers.get(speakerId);
   if (!sp) {
     missingVoice.push(`${key} → speaker "${speakerId}" no existe`);
@@ -123,29 +122,38 @@ function push(key: string, text: string, speakerId: string, rateFactor = 1, alts
   }
   const clean = text.trim();
   if (!clean) return;
-  const rate = Number((sp.rate * rateFactor).toFixed(3));
   utterances.push({
     key,
     text: clean,
     voice,
-    rate,
+    rate: Number((sp.rate * rateFactor).toFixed(3)),
     lang: PROVIDER_ID === 'azure' ? langOf(voice) : sp.accent,
   });
+}
 
-  // Voces alternativas: misma frase, otro timbre. Solo Kokoro y solo si se pidió
-  // (las frases sueltas sí; deletreo, ejercicios y narraciones largas no).
-  if (alts && PROVIDER_ID === 'kokoro') {
-    for (const alt of ALT_VOICES) {
-      if (alt.id === voice) continue;
-      utterances.push({
-        key: `${key}.v.${alt.id}`,
-        text: clean,
-        voice: alt.id,
-        rate,
-        lang: alt.id.startsWith('b') ? 'en-GB' : 'en-US',
-      });
-    }
-  }
+/** Longitud máxima para tener voces alternativas: por encima son narraciones. */
+const ALT_MAX_CHARS = 110;
+
+/**
+ * ¿Esta emisión merece voces alternativas?
+ *
+ * Casi todo el habla las tiene, para que el alumno pueda oír cualquier frase en
+ * otro timbre. Se excluyen solo los casos donde no aportan o son un derroche:
+ *  · diálogos A:/B: (ya tienen dos voces)
+ *  · variantes .slow (misma voz más lenta: sería redundante)
+ *  · variantes de frase .alt.N (contenido secundario del panel de expansión)
+ *  · narraciones largas (>110 chars): 3× de audio para un ejercicio de un solo relator
+ *  · alt-de-alt (una clave que ya es alternativa)
+ */
+function wantsAlts(u: Utterance): boolean {
+  return (
+    PROVIDER_ID === 'kokoro' &&
+    !u.segments &&
+    u.text.length <= ALT_MAX_CHARS &&
+    !u.key.includes('.v.') &&
+    !u.key.includes('.alt.') &&
+    !u.key.endsWith('.slow')
+  );
 }
 
 /** Rellena los ___ de un stem con las respuestas, en orden. */
@@ -201,8 +209,7 @@ function pushDialogue(key: string, turns: { label: string; text: string }[]): vo
 for (const atom of atoms) {
   switch (atom.kind) {
     case 'phrase': {
-      // La frase principal: además de su voz, en las voces alternativas.
-      push(atom.id, atom.text, atom.speaker, 1, true);
+      push(atom.id, atom.text, atom.speaker);
       if (atom.slowVariant) push(`${atom.id}.slow`, atom.text, atom.speaker, SLOW_RATE_FACTOR);
       // Las alternativas son la misma persona reformulando → misma voz.
       atom.alternatives?.forEach((t, i) => push(`${atom.id}.alt.${i}`, t, atom.speaker));
@@ -263,6 +270,22 @@ for (const atom of atoms) {
     case 'dialogue':
       // Un diálogo es una secuencia de phrases: su audio ya existe. No se duplica.
       break;
+  }
+}
+
+// Segunda pasada: por cada emisión que califica, sus voces alternativas.
+// Se hace acá, sobre la lista ya armada, en vez de esparcir flags por cada push.
+for (const u of [...utterances]) {
+  if (!wantsAlts(u)) continue;
+  for (const alt of ALT_VOICES) {
+    if (alt.id === u.voice) continue;
+    utterances.push({
+      key: `${u.key}.v.${alt.id}`,
+      text: u.text,
+      voice: alt.id,
+      rate: u.rate,
+      lang: alt.id.startsWith('b') ? 'en-GB' : 'en-US',
+    });
   }
 }
 
