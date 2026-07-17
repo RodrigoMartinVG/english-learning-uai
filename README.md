@@ -9,6 +9,7 @@ para escalar a Inglés II, III y IV sin refactor.
 ## Por dónde empezar
 
 **Leé `ARQUITECTURA.md`.** Es la fuente de verdad del diseño. Todo lo demás deriva de ahí.
+**`BACKLOG.md`** tiene el estado: qué está hecho, qué falta y qué es deseable.
 
 La idea central, en una línea: *el contenido no son ejercicios, son átomos con metadatos, y las
 mecánicas son funciones que los consumen.* Por eso agregar una unidad no toca código, y agregar

@@ -1,0 +1,115 @@
+# Backlog — Oda Language Hub
+
+> Documento vivo. Lo que está hecho, lo que falta, y lo deseable. Para no perdernos.
+> El diseño de cada cosa vive en `ARQUITECTURA.md`; acá está el estado y la prioridad.
+>
+> Convención de estado: ✅ hecho · 🔨 en curso · ⬜ pendiente · 💡 idea/deseable
+
+Última actualización: 2026-07-17.
+
+---
+
+## Dónde estamos (resumen)
+
+La Unidad 1 está completa y jugable de punta a punta: 91 átomos, 13 aspectos, **12 mecánicas**
+cubriendo los 5 niveles de la escalera (percepción → producción), audio neuronal local (Kokoro,
+sin key), micrófono, repetición espaciada (FSRS) con persistencia, y diagnóstico de errores.
+
+Lo que sigue, en una línea: **cerrar la deuda de la Unidad 1 y probar el diseño con la Unidad 2.**
+
+---
+
+## 1. Antes de la Unidad 2 (deuda a cerrar)
+
+| | Estado | Qué | Por qué importa |
+|---|---|---|---|
+| 1.1 | ⬜ | **Balance de dificultad**: solo 7 átomos en niveles 4-5 contra 72 en 1-2 | La punta de la escalera —la que lleva al final oral— es finita. Lo marca `npm run audit` |
+| 1.2 | ⬜ | **Atomizar los diálogos de la reconstrucción** (Kate/Robert, objetos de clase, equipo internacional) + perfil de Messi | Producción ya redactada que llena 1.1 y enriquece aspectos flacos. Es contenido, no código |
+| 1.3 | ⬜ | **Fusionar "Números y edad"** (4 átomos) con "Datos personales", o enriquecerlo | Aspecto flaco: las sesiones repiten. Decisión de curación |
+| 1.4 | ⬜ | **IPA en las frases** (0/42 hoy) | Shadowing no puede mostrar fonética. Además, **desbloquea la pronunciación fina** (§4.1) |
+| 1.5 | ⬜ | **Tests del motor** (`npm test`): grading, FSRS, session builder | Los verifico con scripts que borro. Encontraron bugs reales (interleaving, escalera, rúbrica); sin tests no se re-chequean solos |
+
+---
+
+## 2. La prueba de fuego: Unidad 2
+
+| | Estado | Qué |
+|---|---|---|
+| 2.1 | ⬜ | **Escribir `content/en1/unit-2.json`** (Estilo de vida: simple present, rutinas, frecuencia, hora) siguiendo el pipeline de `drafts/` |
+| 2.2 | ⬜ | **Transcribir el cómic de la pág. 5** de la U2 (la cafetería) — ya está en `drafts/situaciones-comunicacionales.md` |
+| 2.3 | ⬜ | Generar su audio, correr `audit` y `validate` |
+
+> **El test del diseño:** si la Unidad 2 entra sin tocar `src/`, la arquitectura está probada y
+> las unidades 3-4 son trabajo mecánico. Si hay que tocar código, mejor descubrirlo con una
+> unidad que con cuatro.
+
+---
+
+## 3. Mejoras pedagógicas (deseables)
+
+| | Estado | Qué | Impacto |
+|---|---|---|---|
+| 3.1 | ✅ | **Diagnóstico de errores** ("tus puntos débiles" por gramática y fonema) | El de mayor impacto. Hecho |
+| 3.2 | 💡 | **Drills por fonema**: una mecánica que agrupe "todas tus palabras con /θ/" | Ataca la debilidad fonética específica (clave para acento rioplatense) |
+| 3.3 | 💡 | **Hilo "My Life" como artefacto acumulativo**: los 4 capítulos como *tu* monólogo de final, que crece por unidad | Da sentido de progreso hacia el examen real |
+| 3.4 | 💡 | **Modo historia con Mary** (personaje recurrente en U1/U3/U4): una espina narrativa entre unidades | Engancha más que ejercicios sueltos |
+| 3.5 | 💡 | **Radar de habilidades** (percepción/comprensión/recuperación/producción) | El SRS ya tiene los datos por habilidad |
+| 3.6 | 💡 | **FSRS con 4 notas** (fácil/difícil), no 2 | Solo si al usar se siente que falta matiz. Hoy es a propósito 2 (acierto/fallo) |
+
+---
+
+## 4. Features grandes (deseables, con costo real)
+
+### 4.1 💡 Reconocedor de pronunciación fino (sílaba por sílaba, coloreado) — **con Azure**
+
+**Decidido: se hace con Azure Pronunciation Assessment.** Feature *separada y avanzada*: cuando
+una palabra no sale en el reconocedor general (texto), se entra a una pantalla fina que puntúa
+**por sílaba y por fonema** y las pinta verde/amarillo/rojo. Ver la discusión completa en el
+historial; resumen técnico:
+
+- **Por qué Azure y no local:** el reconocedor general (Web Speech) es a nivel texto, no puede
+  puntuar fonemas. Azure Pronunciation Assessment devuelve puntaje 0-100 por sílaba/fonema +
+  tipo de error, y el coloreo sale directo. El camino local (wav2vec2 en el navegador) es pesado
+  y falla con acento marcado —justo el caso rioplatense—, así que daría rojos falsos que frustran.
+- **Costo:** key de Azure + red, **solo para esta pantalla** (el resto de la app sigue sin key).
+  Entra en la capa gratuita de Azure Speech (verificar límite mensual).
+- **Cómo:** interfaz `PronunciationAssessor` (como `TtsProvider`), implementación Azure por
+  defecto. Pantalla: palabra partida en sílabas → tocás una para oír ese pedazo → grabás →
+  se colorea → repetís sonido por sonido.
+- **Depende de 1.4** (IPA / silabificación del objetivo).
+- **Estado:** pendiente deseable. No bloquea nada.
+
+### 4.2 💡 Escuchar la misma frase en más acentos (no nativos)
+
+Hoy las voces alternativas son US/GB (límite de Kokoro). Acentos no nativos (Pedro portugués,
+Valentina rusa) necesitarían Azure. Deseable, no urgente.
+
+---
+
+## 5. Infraestructura y despliegue
+
+| | Estado | Qué |
+|---|---|---|
+| 5.1 | ⬜ | **Deploy** (GitHub Pages o Netlify): hoy corre solo local |
+| 5.2 | ⬜ | **Hosting de los mp3**: ~15 MB. Git LFS vs generar en CI y publicar como artefacto |
+| 5.3 | ⬜ | **Cargar el contenido por `fetch`** en vez de empaquetarlo en el JS: con 4 unidades el bundle crece |
+| 5.4 | 💡 | **PWA instalable** + Service Worker: estudiar offline en el celular (el audio ya es local) |
+| 5.5 | 💡 | **Sync multi-dispositivo** (backend): hoy el progreso vive en localStorage de un navegador |
+
+---
+
+## 6. Herramientas del pipeline (ya existen)
+
+- ✅ `npm run validate` — forma (Zod) + integridad referencial
+- ✅ `npm run audit` — calidad del contenido (dificultad, aspectos flacos, IPA, ejercicios chicos)
+- ✅ `npm run build:audio` — TTS incremental por hash (Kokoro; Azure con `--provider=azure`)
+- ✅ `npm run audio:review` — página para revisar voces de a puñado
+- ✅ `npm run flags` — procesa audios marcados como robóticos → plan de reemplazo
+
+---
+
+## Cómo usar este backlog
+
+- Al terminar algo, marcarlo ✅ y mover la fecha de "última actualización".
+- Antes de empezar una tanda, mirar §1 y §2: eso es lo que desbloquea todo lo demás.
+- Las ideas 💡 no tienen orden entre sí; se eligen por ganas y contexto.
