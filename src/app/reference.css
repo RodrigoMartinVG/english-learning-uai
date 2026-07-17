@@ -1,0 +1,35 @@
+.ref { display: flex; flex-direction: column; gap: 16px; }
+.ref h1 { font-size: 26px; letter-spacing: -.02em; }
+.ref__intro { color: var(--text-dim); font-size: 14px; }
+
+.ref__tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--border); }
+.ref__tab {
+  padding: 10px 4px; margin-bottom: -1px; color: var(--text-dim); font-size: 14px;
+  border-bottom: 2px solid transparent;
+}
+.ref__tab--on { color: var(--text); border-bottom-color: var(--accent); }
+
+.ref__guide, .ref__scripts { display: flex; flex-direction: column; gap: 20px; }
+.ref__group h2 { font-size: 15px; color: var(--accent); margin-bottom: 8px; }
+.ref__sublabel {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--text-faint); margin: 10px 0 6px;
+}
+.ref__lines { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.ref__line {
+  width: 100%; text-align: left; padding: 10px 14px; border-radius: var(--radius-sm);
+  background: var(--surface); border: 1px solid var(--border); color: var(--text);
+  font-size: 15px; transition: border-color var(--dur) var(--ease);
+}
+.ref__line:hover { border-color: var(--accent); }
+.ref__line--reply { background: var(--surface-hi); color: var(--text-dim); font-size: 14px; }
+
+.ref__script { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+.ref__script h2 { font-size: 18px; }
+.ref__prompt { font-size: 13px; color: var(--text-faint); margin: 4px 0 14px; }
+.ref__version { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 12px; }
+.ref__version:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.ref__version-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.ref__version-head span { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); }
+.ref__play { font-size: 13px; color: var(--accent); min-height: 36px; padding: 0 8px; }
+.ref__model { font-size: 15px; line-height: 1.7; color: var(--text); }

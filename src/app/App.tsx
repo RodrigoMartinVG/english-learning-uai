@@ -32,6 +32,7 @@ import {
 import { SessionPlayer } from './SessionPlayer.tsx';
 import { ResetPanel } from './ResetPanel.tsx';
 import { DiagnosticsView } from './DiagnosticsView.tsx';
+import { ReferenceView } from './ReferenceView.tsx';
 import './app.css';
 
 /** Adapta el store de progreso al contrato que el motor espera. */
@@ -50,6 +51,7 @@ function useProgress() {
 type View =
   | { name: 'home' }
   | { name: 'unit'; unit: number }
+  | { name: 'reference'; unit: number }
   | { name: 'session'; session: Session }
   | { name: 'diagnostics' }
   | { name: 'reset' };
@@ -89,7 +91,19 @@ export default function App() {
               onDiagnostics={() => setView({ name: 'diagnostics' })}
             />
           )}
-          {view.name === 'unit' && <UnitView unit={view.unit} onStart={start} />}
+          {view.name === 'unit' && (
+            <UnitView
+              unit={view.unit}
+              onStart={start}
+              onReference={() => setView({ name: 'reference', unit: view.unit })}
+            />
+          )}
+          {view.name === 'reference' && (
+            <ReferenceView
+              unit={units.find((u) => u.unit === view.unit)!}
+              onBack={() => setView({ name: 'unit', unit: view.unit })}
+            />
+          )}
           {view.name === 'session' && (
             <SessionPlayer session={view.session} onExit={() => setView({ name: 'home' })} />
           )}
@@ -212,7 +226,15 @@ function ProgressBar({ learned, total }: { learned: number; total: number }) {
 
 /* ───────────────────────────────────── unidad ───────────────────────────────────── */
 
-function UnitView({ unit, onStart }: { unit: number; onStart: (s: Session) => void }) {
+function UnitView({
+  unit,
+  onStart,
+  onReference,
+}: {
+  unit: number;
+  onStart: (s: Session) => void;
+  onReference: () => void;
+}) {
   useProgress();
   const u = units.find((x) => x.unit === unit)!;
   const [open, setOpen] = useState<string | null>(null);
@@ -245,6 +267,9 @@ function UnitView({ unit, onStart }: { unit: number; onStart: (s: Session) => vo
             <li key={g}>{g}</li>
           ))}
         </ul>
+        <button className="unit__reference" onClick={onReference}>
+          📖 Cómo decir las cosas — guía de expresiones y scripts modelo →
+        </button>
       </section>
 
       <section>

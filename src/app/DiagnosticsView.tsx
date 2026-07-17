@@ -10,50 +10,12 @@
 
 import { weakSpots, weakestAtoms, type WeakSpot } from '../data/progress.ts';
 import { atoms, units } from '../data/content.ts';
+import { grammarLabel, phonemeLabel } from '../shared/labels.ts';
 import { buildSession, DEFAULT_LENGTH, type Session } from '../engine/session.ts';
 
-/** Etiquetas legibles para las estructuras gramaticales. */
-const GRAMMAR_LABEL: Record<string, string> = {
-  'be.present.affirmative': 'Verbo be — afirmativo',
-  'be.present.negative': 'Verbo be — negativo',
-  'be.present.interrogative': 'Verbo be — preguntas',
-  'be.present.short-answer': 'Respuestas cortas (Yes, I am)',
-  'be.contractions': 'Contracciones (I\'m, he\'s)',
-  'pronouns.subject': 'Pronombres (I, you, he…)',
-  'possessives.adjectives': 'Posesivos (my, your, his…)',
-  'demonstratives': 'Demostrativos (this, that…)',
-  'articles.indefinite': 'Artículos a / an',
-  'articles.definite': 'Artículo the',
-  'there-is.affirmative': 'There is / are',
-  'there-is.negative': 'There isn\'t / aren\'t',
-  'there-is.interrogative': 'Is there…? / Are there…?',
-  'wh-questions': 'Preguntas con Wh-',
-  'numbers.cardinal': 'Números',
-  'nationalities': 'Nacionalidades',
-  'spelling.alphabet': 'Deletreo',
-};
 
-/** El sonido, con una palabra de ejemplo para que se entienda cuál es. */
-const PHONEME_LABEL: Record<string, string> = {
-  θ: '/θ/ — el sonido de “th” en think',
-  ð: '/ð/ — el “th” de this',
-  tʃ: '/tʃ/ — “ch” de chair',
-  dʒ: '/dʒ/ — “j” de charger',
-  ʃ: '/ʃ/ — “sh” de shell',
-  ŋ: '/ŋ/ — “ng” de morning',
-  j: '/j/ — “y” de yellow',
-  z: '/z/ — “s” sonora de coins',
-  æ: '/æ/ — la “a” de pan',
-  e: '/e/ — la “e” de pen',
-  eɪ: '/eɪ/ — el diptongo de day',
-  aɪ: '/aɪ/ — el diptongo de tie',
-  ɪə: '/ɪə/ — el diptongo de here',
-  eə: '/eə/ — el diptongo de stairs',
-  ɔː: '/ɔː/ — la vocal de wardrobe',
-};
 
-const label = (w: WeakSpot) =>
-  w.kind === 'grammar' ? (GRAMMAR_LABEL[w.tag] ?? w.tag) : (PHONEME_LABEL[w.tag] ?? `/${w.tag}/`);
+const label = (w: WeakSpot) => (w.kind === 'grammar' ? grammarLabel(w.tag) : phonemeLabel(w.tag));
 
 export function DiagnosticsView({
   onBack,

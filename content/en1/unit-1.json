@@ -4879,7 +4879,11 @@
         "objects",
         "home"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "modelVariants": [
+        "This is my office. There is a modern computer on the desk and there are two nice pictures on the wall. There are interesting books on the shelves. However, there isn't a printer, and there aren't plants in this room.",
+        "This is my bedroom. There is a small table and there is a big wardrobe. There are yellow curtains and there is a dark clock. There isn't a TV, and there aren't chairs in this room."
+      ]
     },
     {
       "id": "en1.u1.pr.002",
@@ -4933,7 +4937,11 @@
         "origin_nationality",
         "objects"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "modelVariants": [
+        "Hi! I'm Bruce. I am thirty-five years old. I am from Argentina, so I am Argentinean. My favorite objects are my new phone, my blue toothbrush, and my optical mouse.",
+        "Hello. My name is Anna. I am twenty-four years old. I am from Germany, so I am German. These are my favorite things: my pink pencil, my charger, and my black sunglasses."
+      ]
     },
     {
       "id": "en1.u1.ls.001",

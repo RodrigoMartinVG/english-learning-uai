@@ -376,6 +376,8 @@ export const productionAtomSchema = z.object({
   wordBank: z.array(z.string()).optional(),
   /** Referencia para shadowing de alta dificultad y para el examinador. */
   modelAnswer: z.string().min(1),
+  /** Versiones alternativas del modelo, para la guía de expresiones (§ referencia). */
+  modelVariants: z.array(z.string().min(1)).optional(),
   /** "My Life: Chapter N" — hilo acumulativo. Al final de las 4, es el final oral. */
   chapter: z.number().int().positive().optional(),
   /**
