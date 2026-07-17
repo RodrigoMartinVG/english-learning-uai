@@ -57,8 +57,20 @@ export interface AudioManifest {
 
 export type AudioState = 'idle' | 'loading' | 'speaking' | 'error';
 
-/** De dónde salió el audio que sonó. La UI puede avisar cuando cae al fallback. */
-export type AudioSource = 'file' | 'synth' | 'none';
+/**
+ * Cómo terminó un speak().
+ *
+ * `file` y `synth` significan SONÓ ENTERO. `interrupted` significa que otro
+ * speak() o un cancel() lo pisó; `none` que no había con qué reproducirlo.
+ *
+ * La distinción no es cosmética: sin ella, la promesa de speak() resuelve igual
+ * al terminar que al ser cancelada, y quien haga `.then(avanzar)` avanza de más.
+ * Fue exactamente el bug del Role-play, que se comía un turno entero.
+ */
+export type AudioSource = 'file' | 'synth' | 'none' | 'interrupted';
+
+/** ¿El audio sonó completo? Lo que casi siempre se quiere preguntar. */
+export const played = (r: AudioSource): boolean => r === 'file' || r === 'synth';
 
 export interface AudioService {
   speak(req: SpeakRequest): Promise<AudioSource>;
@@ -177,17 +189,22 @@ export function createAudioService(
     try {
       await el.play();
     } catch {
-      return false; // 404, formato no soportado, o autoplay bloqueado.
+      return false; // 404, formato no soportado, autoplay bloqueado, o lo cancelaron.
     }
 
     await new Promise<void>((resolve) => {
       const done = () => {
         el.removeEventListener('ended', done);
         el.removeEventListener('error', done);
+        // 'pause' es indispensable: cancel() llama pause(), que NO dispara
+        // 'ended' ni 'error'. Sin escucharlo, esta promesa quedaba colgada para
+        // siempre y sus listeners nunca se soltaban.
+        el.removeEventListener('pause', done);
         resolve();
       };
       el.addEventListener('ended', done);
       el.addEventListener('error', done);
+      el.addEventListener('pause', done);
     });
 
     if (myToken === token) current = null;
@@ -274,7 +291,8 @@ export function createAudioService(
       if (entry) {
         setState('speaking');
         const ok = await playFile(entry.src, req.rateFactor ?? 1, myToken);
-        if (myToken !== token) return 'file'; // nos cancelaron: no tocar el estado
+        // Nos pisó otro speak(): ni tocamos el estado ni mentimos diciendo que sonó.
+        if (myToken !== token) return 'interrupted';
         if (ok) {
           setState('idle');
           return 'file';
@@ -283,7 +301,7 @@ export function createAudioService(
 
       setState('speaking');
       const ok = await playSynth(req.text, hints, rate, myToken);
-      if (myToken !== token) return 'synth';
+      if (myToken !== token) return 'interrupted';
       setState(ok ? 'idle' : 'error');
       return ok ? 'synth' : 'none';
     },

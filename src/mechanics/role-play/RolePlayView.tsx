@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useAudio } from '../../audio/AudioProvider.tsx';
+import { played } from '../../audio/AudioService.ts';
 import { SpeakPanel } from '../../ui/SpeakPanel.tsx';
 import { speakerById } from '../../data/content.ts';
 import type { MechanicViewProps } from '../types.ts';
@@ -22,11 +23,26 @@ export function RolePlayView({ round, onDone }: MechanicViewProps<RolePlayRound>
     [audio]
   );
 
-  // Los turnos del otro se reproducen solos: es una conversación, no una lista.
+  /**
+   * Los turnos del otro se reproducen solos: es una conversación, no una lista.
+   *
+   * Dos guardas, y las dos hacen falta:
+   *  · `played(r)` — avanzar solo si el audio SONÓ ENTERO. Antes se avanzaba
+   *    también cuando lo cancelaban, y el diálogo se comía un turno.
+   *  · `alive` — el cleanup de React. StrictMode corre el efecto dos veces en
+   *    desarrollo: sin esto, la primera ejecución (ya cancelada) igual avanzaba.
+   */
   useEffect(() => {
     if (!turn || turn.mine) return;
-    void say(turn.phrase.id, turn.phrase.text, turn.speaker).then(() => setI((n) => n + 1));
-  }, [turn, say]);
+    let alive = true;
+    const at = i;
+    void say(turn.phrase.id, turn.phrase.text, turn.speaker).then((r) => {
+      if (alive && played(r)) setI((n) => (n === at ? n + 1 : n));
+    });
+    return () => {
+      alive = false;
+    };
+  }, [turn, say, i]);
 
   useEffect(() => {
     log.current?.scrollTo({ top: log.current.scrollHeight, behavior: 'smooth' });
