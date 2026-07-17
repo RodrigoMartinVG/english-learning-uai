@@ -47,7 +47,7 @@
       "id": "personal-data",
       "order": 3,
       "title": "Datos personales",
-      "summary": "Nombre, apellido, edad, ocupación, estado civil y dirección.",
+      "summary": "Nombre, apellido, edad, números, ocupación, estado civil y dirección.",
       "match": {
         "fn": [
           "ask.name",
@@ -60,6 +60,9 @@
         "topic": [
           "personal_info",
           "occupation"
+        ],
+        "grammar": [
+          "numbers.cardinal"
         ]
       },
       "source": {
@@ -210,21 +213,6 @@
       "source": {
         "page": 15,
         "section": "Ejercitación 10"
-      }
-    },
-    {
-      "id": "numbers",
-      "order": 13,
-      "title": "Números y edad",
-      "summary": "Números cardinales, edades y direcciones.",
-      "match": {
-        "grammar": [
-          "numbers.cardinal"
-        ]
-      },
-      "source": {
-        "page": 12,
-        "section": "Ejemplo significativo"
       }
     },
     {
@@ -1468,6 +1456,683 @@
       "difficulty": 1
     },
     {
+      "id": "en1.u1.p.043",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Excuse me. Is this my notebook on your desk?",
+      "gloss": "Disculpe. ¿Este es mi cuaderno sobre su escritorio?",
+      "speaker": "student",
+      "intonation": "rising",
+      "grammar": [
+        "be.present.interrogative",
+        "demonstratives",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.possession",
+        "classroom-language"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.044",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "No, it isn't. That is my notebook.",
+      "gloss": "No, no lo es. Ese es mi cuaderno.",
+      "speaker": "teacher",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.negative",
+        "be.present.short-answer",
+        "demonstratives",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "deny",
+        "ask.possession"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.045",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "What about these pencils? Are they pink?",
+      "gloss": "¿Y estos lápices? ¿Son rosados?",
+      "speaker": "student",
+      "intonation": "rising",
+      "grammar": [
+        "be.present.interrogative",
+        "demonstratives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.046",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "His pencil is pink, and her book is interesting.",
+      "gloss": "Su lápiz (de él) es rosado, y su libro (de ella) es interesante.",
+      "speaker": "teacher",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.047",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Is that a computer on the big table?",
+      "gloss": "¿Eso es una computadora sobre la mesa grande?",
+      "speaker": "student",
+      "intonation": "rising",
+      "grammar": [
+        "be.present.interrogative",
+        "demonstratives",
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.existence"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.048",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Yes, it is. It's an optical computer, and its mouse is optical too.",
+      "gloss": "Sí. Es una computadora óptica, y su mouse también es óptico.",
+      "speaker": "teacher",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.short-answer",
+        "be.contractions",
+        "articles.indefinite",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "confirm",
+        "describe.place"
+      ],
+      "topic": [
+        "objects",
+        "classroom"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u1.p.049",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Are those university booklets on the shelves?",
+      "gloss": "¿Esos son los folletos de la universidad en los estantes?",
+      "speaker": "student",
+      "intonation": "rising",
+      "grammar": [
+        "be.present.interrogative",
+        "demonstratives"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "objects",
+        "campus"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.050",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Yes, their booklets are there.",
+      "gloss": "Sí, sus folletos (de ellos) están ahí.",
+      "speaker": "teacher",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "objects",
+        "campus"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.051",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Valentina, who is our new partner? What's his name?",
+      "gloss": "Valentina, ¿quién es nuestro nuevo compañero? ¿Cómo se llama?",
+      "speaker": "rosa",
+      "intonation": "falling",
+      "grammar": [
+        "wh-questions",
+        "be.present.interrogative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.name",
+        "ask.identity"
+      ],
+      "topic": [
+        "personal_info",
+        "occupation"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.052",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "His name is Pedro. He's from Lisbon.",
+      "gloss": "Se llama Pedro. Es de Lisboa.",
+      "speaker": "valentina",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "be.contractions",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.name",
+        "ask.origin"
+      ],
+      "topic": [
+        "personal_info",
+        "origin_nationality"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.053",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Oh, so he's Portuguese! Is he a developer?",
+      "gloss": "¡Ah, entonces es portugués! ¿Es desarrollador?",
+      "speaker": "rosa",
+      "intonation": "rising",
+      "grammar": [
+        "be.present.interrogative",
+        "nationalities",
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.nationality",
+        "ask.occupation"
+      ],
+      "topic": [
+        "origin_nationality",
+        "occupation"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u1.p.054",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Yes, he is. Her name is Anna, from Hamburg.",
+      "gloss": "Sí. Ella se llama Anna, de Hamburgo.",
+      "speaker": "valentina",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.short-answer",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "confirm",
+        "ask.name",
+        "ask.origin"
+      ],
+      "topic": [
+        "personal_info",
+        "origin_nationality"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.055",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "She's German. What's her marital status?",
+      "gloss": "Es alemana. ¿Cuál es su estado civil?",
+      "speaker": "rosa",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "nationalities",
+        "wh-questions",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.nationality",
+        "ask.marital-status"
+      ],
+      "topic": [
+        "origin_nationality",
+        "personal_info"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u1.p.056",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "She's married. Her favorite hobby is baseball.",
+      "gloss": "Está casada. Su pasatiempo favorito es el béisbol.",
+      "speaker": "valentina",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.marital-status",
+        "describe.person"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.057",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "And Mehmet? He's from Istanbul, so he's Turkish.",
+      "gloss": "¿Y Mehmet? Es de Estambul, así que es turco.",
+      "speaker": "rosa",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "be.contractions",
+        "nationalities"
+      ],
+      "fn": [
+        "ask.origin",
+        "ask.nationality"
+      ],
+      "topic": [
+        "origin_nationality"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u1.p.058",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Our team is very international!",
+      "gloss": "¡Nuestro equipo es muy internacional!",
+      "speaker": "valentina",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.059",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Hi! I'm Kate. Nice to meet you.",
+      "gloss": "¡Hola! Soy Kate. Encantada de conocerte.",
+      "speaker": "student",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "be.contractions"
+      ],
+      "fn": [
+        "greet",
+        "introduce-self"
+      ],
+      "topic": [
+        "personal_info",
+        "campus"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u1.p.060",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Hi, Kate. My name is Robert. I'm a student here.",
+      "gloss": "Hola, Kate. Me llamo Robert. Soy estudiante acá.",
+      "speaker": "student-m",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "be.contractions",
+        "possessives.adjectives",
+        "articles.indefinite"
+      ],
+      "fn": [
+        "introduce-self"
+      ],
+      "topic": [
+        "personal_info",
+        "campus"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u1.p.061",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Who's that over there? Is he the Hardware teacher?",
+      "gloss": "¿Quién es aquel de allá? ¿Es el profesor de Hardware?",
+      "speaker": "student",
+      "intonation": "rising",
+      "grammar": [
+        "wh-questions",
+        "be.present.interrogative",
+        "articles.definite"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "campus"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.062",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "No, he isn't. He's Mr. Lane. He's the Software teacher.",
+      "gloss": "No, no lo es. Es el señor Lane. Es el profesor de Software.",
+      "speaker": "student-m",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.negative",
+        "be.present.short-answer",
+        "be.contractions",
+        "articles.definite"
+      ],
+      "fn": [
+        "deny",
+        "ask.identity"
+      ],
+      "topic": [
+        "campus"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.063",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Oh, and where is the Hardware teacher?",
+      "gloss": "Ah, ¿y dónde está el profesor de Hardware?",
+      "speaker": "student",
+      "intonation": "falling",
+      "grammar": [
+        "wh-questions",
+        "be.present.interrogative",
+        "articles.definite"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "campus"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u1.p.064",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "He's in the Dean's office on the third floor.",
+      "gloss": "Está en la oficina del Decano, en el tercer piso.",
+      "speaker": "student-m",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "be.contractions",
+        "articles.definite"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "campus"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.065",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Thank you. This is Bill. We are in this networks class.",
+      "gloss": "Gracias. Este es Bill. Estamos en esta clase de redes.",
+      "speaker": "student",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "demonstratives",
+        "pronouns.subject"
+      ],
+      "fn": [
+        "thank",
+        "introduce-self"
+      ],
+      "topic": [
+        "campus",
+        "classroom"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.066",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Hi, Bill. Are Mary, Rose, and Susan in your class too?",
+      "gloss": "Hola, Bill. ¿Mary, Rose y Susan también están en tu clase?",
+      "speaker": "student-m",
+      "intonation": "rising",
+      "grammar": [
+        "be.present.interrogative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "campus",
+        "classroom"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u1.p.067",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md)."
+      },
+      "text": "Yes, they are. They're all in the classroom now.",
+      "gloss": "Sí, lo están. Están todos en el aula ahora.",
+      "speaker": "student",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.short-answer",
+        "be.contractions",
+        "pronouns.subject"
+      ],
+      "fn": [
+        "confirm"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3
+    },
+    {
       "id": "en1.u1.d.001",
       "kind": "dialogue",
       "course": "en1",
@@ -1640,6 +2305,217 @@
       "topic": [
         "personal_info",
         "origin_nationality"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u1.d.003",
+      "kind": "dialogue",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md), con léxico y estructuras de la unidad."
+      },
+      "title": "Los objetos de la clase",
+      "situation": "Un alumno y el profesor ordenan y reconocen los materiales en el laboratorio de computación.",
+      "turns": [
+        {
+          "speaker": "student",
+          "phraseId": "en1.u1.p.043"
+        },
+        {
+          "speaker": "teacher",
+          "phraseId": "en1.u1.p.044"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en1.u1.p.045"
+        },
+        {
+          "speaker": "teacher",
+          "phraseId": "en1.u1.p.046"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en1.u1.p.047"
+        },
+        {
+          "speaker": "teacher",
+          "phraseId": "en1.u1.p.048"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en1.u1.p.049"
+        },
+        {
+          "speaker": "teacher",
+          "phraseId": "en1.u1.p.050"
+        }
+      ],
+      "variants": [
+        "Whose pencil is this?",
+        "Is that a computer over there?"
+      ],
+      "grammar": [
+        "demonstratives",
+        "possessives.adjectives",
+        "articles.indefinite",
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "ask.possession",
+        "ask.existence",
+        "ask.location",
+        "describe.person"
+      ],
+      "topic": [
+        "objects",
+        "classroom",
+        "campus"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u1.d.004",
+      "kind": "dialogue",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md), con léxico y estructuras de la unidad."
+      },
+      "title": "El equipo internacional",
+      "situation": "Rosa y Valentina conversan en una videollamada sobre los perfiles del equipo de trabajo internacional.",
+      "turns": [
+        {
+          "speaker": "rosa",
+          "phraseId": "en1.u1.p.051"
+        },
+        {
+          "speaker": "valentina",
+          "phraseId": "en1.u1.p.052"
+        },
+        {
+          "speaker": "rosa",
+          "phraseId": "en1.u1.p.053"
+        },
+        {
+          "speaker": "valentina",
+          "phraseId": "en1.u1.p.054"
+        },
+        {
+          "speaker": "rosa",
+          "phraseId": "en1.u1.p.055"
+        },
+        {
+          "speaker": "valentina",
+          "phraseId": "en1.u1.p.056"
+        },
+        {
+          "speaker": "rosa",
+          "phraseId": "en1.u1.p.057"
+        },
+        {
+          "speaker": "valentina",
+          "phraseId": "en1.u1.p.058"
+        }
+      ],
+      "variants": [
+        "Where does Pedro come from?",
+        "Is Anna single or married?"
+      ],
+      "grammar": [
+        "be.present.affirmative",
+        "nationalities",
+        "possessives.adjectives",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.name",
+        "ask.origin",
+        "ask.nationality",
+        "ask.marital-status",
+        "describe.person"
+      ],
+      "topic": [
+        "origin_nationality",
+        "personal_info",
+        "occupation"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u1.d.005",
+      "kind": "dialogue",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo sintético de la reconstrucción didáctica (drafts/unidad-1.reconstruccion.md), con léxico y estructuras de la unidad."
+      },
+      "title": "Presentando a los colegas",
+      "situation": "Dos estudiantes se conocen en el hall de la UAI y conversan sobre el personal docente y sus compañeros.",
+      "turns": [
+        {
+          "speaker": "student",
+          "phraseId": "en1.u1.p.059"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en1.u1.p.060"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en1.u1.p.061"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en1.u1.p.062"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en1.u1.p.063"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en1.u1.p.064"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en1.u1.p.065"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en1.u1.p.066"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en1.u1.p.067"
+        }
+      ],
+      "variants": [
+        "Let me introduce myself, I'm Kate.",
+        "Is that Mr. Lane?",
+        "Are they in the same class?"
+      ],
+      "grammar": [
+        "be.present.affirmative",
+        "be.present.interrogative",
+        "be.contractions",
+        "articles.definite"
+      ],
+      "fn": [
+        "greet",
+        "introduce-self",
+        "ask.identity",
+        "ask.location",
+        "confirm"
+      ],
+      "topic": [
+        "campus",
+        "classroom",
+        "personal_info"
       ],
       "difficulty": 4
     },

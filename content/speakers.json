@@ -159,6 +159,24 @@
       }
     },
     {
+      "id": "student-m",
+      "displayName": "Student (masc.)",
+      "bio": "Alumno genérico masculino del material (Robert, Bill). Distinto de student (femenina) para los diálogos entre dos estudiantes.",
+      "accent": "en-US",
+      "gender": "male",
+      "fallbackHint": [
+        "Adam",
+        "Guy",
+        "David",
+        "Google US English Male"
+      ],
+      "rate": 0.95,
+      "voice": {
+        "kokoro": "am_adam",
+        "azure": "en-US-BrandonNeural"
+      }
+    },
+    {
       "id": "narrator",
       "displayName": "Narrador",
       "bio": "Voz de los Listening Comprehension y de los textos de 'Ejemplo significativo'. Neutra y clara.",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T19:02:45.586Z",
+  "generatedAt": "2026-07-17T19:41:02.303Z",
   "provider": "kokoro(Kokoro-82M-v1.0-ONNX, q8)",
   "entries": {
     "en1.u1.p.001": {
@@ -4915,6 +4915,582 @@
       "durationMs": 2746,
       "hash": "acec7b6ad72ea7e6",
       "chars": 35
+    },
+    "en1.u1.p.043": {
+      "src": "/audio/en1/u1/en1.u1.p.043.mp3",
+      "durationMs": 3225,
+      "hash": "ab75ad803fcf08d3",
+      "chars": 44
+    },
+    "en1.u1.p.044": {
+      "src": "/audio/en1/u1/en1.u1.p.044.mp3",
+      "durationMs": 3273,
+      "hash": "5021646140e62a6d",
+      "chars": 34
+    },
+    "en1.u1.p.045": {
+      "src": "/audio/en1/u1/en1.u1.p.045.mp3",
+      "durationMs": 2890,
+      "hash": "2090f49a9b11448b",
+      "chars": 40
+    },
+    "en1.u1.p.046": {
+      "src": "/audio/en1/u1/en1.u1.p.046.mp3",
+      "durationMs": 3376,
+      "hash": "0befc3f8a41b1408",
+      "chars": 48
+    },
+    "en1.u1.p.047": {
+      "src": "/audio/en1/u1/en1.u1.p.047.mp3",
+      "durationMs": 2107,
+      "hash": "d3b8f3585519b72d",
+      "chars": 36
+    },
+    "en1.u1.p.048": {
+      "src": "/audio/en1/u1/en1.u1.p.048.mp3",
+      "durationMs": 5724,
+      "hash": "5eb41df396b07994",
+      "chars": 67
+    },
+    "en1.u1.p.049": {
+      "src": "/audio/en1/u1/en1.u1.p.049.mp3",
+      "durationMs": 2541,
+      "hash": "b8cb8da2422910be",
+      "chars": 45
+    },
+    "en1.u1.p.050": {
+      "src": "/audio/en1/u1/en1.u1.p.050.mp3",
+      "durationMs": 1979,
+      "hash": "f12acf3505eaa9e2",
+      "chars": 30
+    },
+    "en1.u1.p.051": {
+      "src": "/audio/en1/u1/en1.u1.p.051.mp3",
+      "durationMs": 3562,
+      "hash": "7b8be39d9a6fae09",
+      "chars": 51
+    },
+    "en1.u1.p.052": {
+      "src": "/audio/en1/u1/en1.u1.p.052.mp3",
+      "durationMs": 3020,
+      "hash": "ceedab7672c9e3fc",
+      "chars": 36
+    },
+    "en1.u1.p.053": {
+      "src": "/audio/en1/u1/en1.u1.p.053.mp3",
+      "durationMs": 3693,
+      "hash": "7efd7a2297a564d6",
+      "chars": 42
+    },
+    "en1.u1.p.054": {
+      "src": "/audio/en1/u1/en1.u1.p.054.mp3",
+      "durationMs": 3319,
+      "hash": "adfee1f69252206d",
+      "chars": 43
+    },
+    "en1.u1.p.055": {
+      "src": "/audio/en1/u1/en1.u1.p.055.mp3",
+      "durationMs": 3061,
+      "hash": "aab25f229a77ae81",
+      "chars": 40
+    },
+    "en1.u1.p.056": {
+      "src": "/audio/en1/u1/en1.u1.p.056.mp3",
+      "durationMs": 3227,
+      "hash": "aca84de0fac1a27d",
+      "chars": 46
+    },
+    "en1.u1.p.057": {
+      "src": "/audio/en1/u1/en1.u1.p.057.mp3",
+      "durationMs": 3532,
+      "hash": "549e2b6cee9033a7",
+      "chars": 48
+    },
+    "en1.u1.p.058": {
+      "src": "/audio/en1/u1/en1.u1.p.058.mp3",
+      "durationMs": 1899,
+      "hash": "e03472a0815966f1",
+      "chars": 31
+    },
+    "en1.u1.p.043.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.043.v.af_bella.mp3",
+      "durationMs": 2660,
+      "hash": "faabcf481796269c",
+      "chars": 44
+    },
+    "en1.u1.p.043.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.043.v.am_michael.mp3",
+      "durationMs": 3148,
+      "hash": "637bed782124e99e",
+      "chars": 44
+    },
+    "en1.u1.p.043.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.043.v.bm_george.mp3",
+      "durationMs": 3786,
+      "hash": "d5250749fe4ed046",
+      "chars": 44
+    },
+    "en1.u1.p.044.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.044.v.af_bella.mp3",
+      "durationMs": 2351,
+      "hash": "05aeb1acfc56cbc1",
+      "chars": 34
+    },
+    "en1.u1.p.044.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.044.v.am_michael.mp3",
+      "durationMs": 2669,
+      "hash": "ac661b435fe508c6",
+      "chars": 34
+    },
+    "en1.u1.p.045.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.045.v.af_bella.mp3",
+      "durationMs": 2275,
+      "hash": "f347e2102abe077f",
+      "chars": 40
+    },
+    "en1.u1.p.045.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.045.v.am_michael.mp3",
+      "durationMs": 2610,
+      "hash": "038bea20e4fcc048",
+      "chars": 40
+    },
+    "en1.u1.p.045.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.045.v.bm_george.mp3",
+      "durationMs": 2917,
+      "hash": "f06c9b70f32d5f00",
+      "chars": 40
+    },
+    "en1.u1.p.046.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.046.v.af_bella.mp3",
+      "durationMs": 2841,
+      "hash": "f64436c17cddcee1",
+      "chars": 48
+    },
+    "en1.u1.p.046.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.046.v.am_michael.mp3",
+      "durationMs": 3162,
+      "hash": "1bbd5724c253f7a3",
+      "chars": 48
+    },
+    "en1.u1.p.047.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.047.v.af_bella.mp3",
+      "durationMs": 1820,
+      "hash": "e99fdbb91dbae1f4",
+      "chars": 36
+    },
+    "en1.u1.p.047.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.047.v.am_michael.mp3",
+      "durationMs": 2076,
+      "hash": "c078840ec32f9041",
+      "chars": 36
+    },
+    "en1.u1.p.047.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.047.v.bm_george.mp3",
+      "durationMs": 2636,
+      "hash": "857ec3c725fc4a27",
+      "chars": 36
+    },
+    "en1.u1.p.048.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.048.v.af_bella.mp3",
+      "durationMs": 4877,
+      "hash": "d20a46cec35ef52e",
+      "chars": 67
+    },
+    "en1.u1.p.048.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.048.v.am_michael.mp3",
+      "durationMs": 5175,
+      "hash": "1fd634ff9a7c22d3",
+      "chars": 67
+    },
+    "en1.u1.p.049.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.049.v.af_bella.mp3",
+      "durationMs": 2170,
+      "hash": "8e879a9adc0e97f8",
+      "chars": 45
+    },
+    "en1.u1.p.049.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.049.v.am_michael.mp3",
+      "durationMs": 2573,
+      "hash": "91aea6187824e88d",
+      "chars": 45
+    },
+    "en1.u1.p.049.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.049.v.bm_george.mp3",
+      "durationMs": 2972,
+      "hash": "db658c6ac01ca2db",
+      "chars": 45
+    },
+    "en1.u1.p.050.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.050.v.af_bella.mp3",
+      "durationMs": 1627,
+      "hash": "b7601c8869c9423d",
+      "chars": 30
+    },
+    "en1.u1.p.050.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.050.v.am_michael.mp3",
+      "durationMs": 1684,
+      "hash": "0ef897d06999fc39",
+      "chars": 30
+    },
+    "en1.u1.p.051.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.051.v.af_bella.mp3",
+      "durationMs": 3205,
+      "hash": "3b361be1035fe8d6",
+      "chars": 51
+    },
+    "en1.u1.p.051.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.051.v.am_michael.mp3",
+      "durationMs": 3662,
+      "hash": "ff0767b78012bafa",
+      "chars": 51
+    },
+    "en1.u1.p.051.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.051.v.bm_george.mp3",
+      "durationMs": 4047,
+      "hash": "722524d2c7dd7342",
+      "chars": 51
+    },
+    "en1.u1.p.052.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.052.v.af_bella.mp3",
+      "durationMs": 2338,
+      "hash": "252412dad64337e8",
+      "chars": 36
+    },
+    "en1.u1.p.052.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.052.v.am_michael.mp3",
+      "durationMs": 2736,
+      "hash": "0faceaf403437aa1",
+      "chars": 36
+    },
+    "en1.u1.p.052.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.052.v.bm_george.mp3",
+      "durationMs": 3345,
+      "hash": "ed9446bdae483347",
+      "chars": 36
+    },
+    "en1.u1.p.053.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.053.v.af_bella.mp3",
+      "durationMs": 2793,
+      "hash": "f374aa14dd5b67ec",
+      "chars": 42
+    },
+    "en1.u1.p.053.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.053.v.am_michael.mp3",
+      "durationMs": 3195,
+      "hash": "80769e79f1689c2e",
+      "chars": 42
+    },
+    "en1.u1.p.053.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.053.v.bm_george.mp3",
+      "durationMs": 3828,
+      "hash": "7ca930a8999add2e",
+      "chars": 42
+    },
+    "en1.u1.p.054.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.054.v.af_bella.mp3",
+      "durationMs": 2995,
+      "hash": "b014ac3fd29f19f8",
+      "chars": 43
+    },
+    "en1.u1.p.054.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.054.v.am_michael.mp3",
+      "durationMs": 3213,
+      "hash": "62abbcc4696b5b2b",
+      "chars": 43
+    },
+    "en1.u1.p.054.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.054.v.bm_george.mp3",
+      "durationMs": 4030,
+      "hash": "55d1bdeb2eadd3cf",
+      "chars": 43
+    },
+    "en1.u1.p.055.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.055.v.af_bella.mp3",
+      "durationMs": 2464,
+      "hash": "016d12e61a55ace0",
+      "chars": 40
+    },
+    "en1.u1.p.055.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.055.v.am_michael.mp3",
+      "durationMs": 2841,
+      "hash": "0c3c3f297efe3886",
+      "chars": 40
+    },
+    "en1.u1.p.055.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.055.v.bm_george.mp3",
+      "durationMs": 3325,
+      "hash": "43d5f85aeb64c235",
+      "chars": 40
+    },
+    "en1.u1.p.056.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.056.v.af_bella.mp3",
+      "durationMs": 2843,
+      "hash": "82d11bf872ee53f6",
+      "chars": 46
+    },
+    "en1.u1.p.056.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.056.v.am_michael.mp3",
+      "durationMs": 3131,
+      "hash": "91703c7551f858e1",
+      "chars": 46
+    },
+    "en1.u1.p.056.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.056.v.bm_george.mp3",
+      "durationMs": 3817,
+      "hash": "56670cca2b30a082",
+      "chars": 46
+    },
+    "en1.u1.p.057.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.057.v.af_bella.mp3",
+      "durationMs": 3226,
+      "hash": "61444f0e02353247",
+      "chars": 48
+    },
+    "en1.u1.p.057.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.057.v.am_michael.mp3",
+      "durationMs": 3316,
+      "hash": "1060e1eac836a20b",
+      "chars": 48
+    },
+    "en1.u1.p.057.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.057.v.bm_george.mp3",
+      "durationMs": 3942,
+      "hash": "4ed682ef8c675c25",
+      "chars": 48
+    },
+    "en1.u1.p.058.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.058.v.af_bella.mp3",
+      "durationMs": 1679,
+      "hash": "b528e465382dbd81",
+      "chars": 31
+    },
+    "en1.u1.p.058.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.058.v.am_michael.mp3",
+      "durationMs": 2054,
+      "hash": "dff95e26f2c834fe",
+      "chars": 31
+    },
+    "en1.u1.p.058.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.058.v.bm_george.mp3",
+      "durationMs": 2494,
+      "hash": "1a17876f6cdc93c3",
+      "chars": 31
+    },
+    "en1.u1.p.059": {
+      "src": "/audio/en1/u1/en1.u1.p.059.mp3",
+      "durationMs": 3399,
+      "hash": "d0d5c635aabd707c",
+      "chars": 31
+    },
+    "en1.u1.p.060": {
+      "src": "/audio/en1/u1/en1.u1.p.060.mp3",
+      "durationMs": 3646,
+      "hash": "261033707df4707e",
+      "chars": 48
+    },
+    "en1.u1.p.061": {
+      "src": "/audio/en1/u1/en1.u1.p.061.mp3",
+      "durationMs": 3185,
+      "hash": "3dbf78566b5c0c42",
+      "chars": 50
+    },
+    "en1.u1.p.062": {
+      "src": "/audio/en1/u1/en1.u1.p.062.mp3",
+      "durationMs": 3920,
+      "hash": "36aa1d586c6ee4ff",
+      "chars": 55
+    },
+    "en1.u1.p.063": {
+      "src": "/audio/en1/u1/en1.u1.p.063.mp3",
+      "durationMs": 2138,
+      "hash": "fec4bf30d078b5aa",
+      "chars": 38
+    },
+    "en1.u1.p.064": {
+      "src": "/audio/en1/u1/en1.u1.p.064.mp3",
+      "durationMs": 2239,
+      "hash": "3be9e6a49f2c835a",
+      "chars": 45
+    },
+    "en1.u1.p.065": {
+      "src": "/audio/en1/u1/en1.u1.p.065.mp3",
+      "durationMs": 4204,
+      "hash": "a68267a8ab7bd0ca",
+      "chars": 55
+    },
+    "en1.u1.p.066": {
+      "src": "/audio/en1/u1/en1.u1.p.066.mp3",
+      "durationMs": 3429,
+      "hash": "ba1ad83854d796c1",
+      "chars": 54
+    },
+    "en1.u1.p.067": {
+      "src": "/audio/en1/u1/en1.u1.p.067.mp3",
+      "durationMs": 2971,
+      "hash": "c8c97b071297c5c4",
+      "chars": 48
+    },
+    "en1.u1.p.059.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.059.v.af_bella.mp3",
+      "durationMs": 2572,
+      "hash": "ff43abae598d8fb4",
+      "chars": 31
+    },
+    "en1.u1.p.059.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.059.v.am_michael.mp3",
+      "durationMs": 2960,
+      "hash": "16a0662d94f160fe",
+      "chars": 31
+    },
+    "en1.u1.p.059.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.059.v.bm_george.mp3",
+      "durationMs": 3482,
+      "hash": "f366a0cc7c232c31",
+      "chars": 31
+    },
+    "en1.u1.p.060.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.060.v.af_bella.mp3",
+      "durationMs": 3311,
+      "hash": "0659637e26cd8d00",
+      "chars": 48
+    },
+    "en1.u1.p.060.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.060.v.am_michael.mp3",
+      "durationMs": 3787,
+      "hash": "e66c1c592d669851",
+      "chars": 48
+    },
+    "en1.u1.p.060.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.060.v.bm_george.mp3",
+      "durationMs": 4833,
+      "hash": "666ef5e90bca7eb1",
+      "chars": 48
+    },
+    "en1.u1.p.061.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.061.v.af_bella.mp3",
+      "durationMs": 2581,
+      "hash": "364cb23e5193652f",
+      "chars": 50
+    },
+    "en1.u1.p.061.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.061.v.am_michael.mp3",
+      "durationMs": 3189,
+      "hash": "aa136524901f007f",
+      "chars": 50
+    },
+    "en1.u1.p.061.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.061.v.bm_george.mp3",
+      "durationMs": 3794,
+      "hash": "5f48ff970f1bffcd",
+      "chars": 50
+    },
+    "en1.u1.p.062.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.062.v.af_bella.mp3",
+      "durationMs": 3639,
+      "hash": "76d91c27b8b98a21",
+      "chars": 55
+    },
+    "en1.u1.p.062.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.062.v.am_michael.mp3",
+      "durationMs": 4051,
+      "hash": "dbbbc38d44e73a4d",
+      "chars": 55
+    },
+    "en1.u1.p.062.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.062.v.bm_george.mp3",
+      "durationMs": 4938,
+      "hash": "6b215fbfbb52bfcc",
+      "chars": 55
+    },
+    "en1.u1.p.063.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.063.v.af_bella.mp3",
+      "durationMs": 2075,
+      "hash": "ce0af74281f894f2",
+      "chars": 38
+    },
+    "en1.u1.p.063.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.063.v.am_michael.mp3",
+      "durationMs": 2128,
+      "hash": "d3c585028233772b",
+      "chars": 38
+    },
+    "en1.u1.p.063.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.063.v.bm_george.mp3",
+      "durationMs": 2403,
+      "hash": "fb3cfe41c7426b49",
+      "chars": 38
+    },
+    "en1.u1.p.064.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.064.v.af_bella.mp3",
+      "durationMs": 2125,
+      "hash": "cab5f073b09de3d7",
+      "chars": 45
+    },
+    "en1.u1.p.064.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.064.v.am_michael.mp3",
+      "durationMs": 2354,
+      "hash": "c77c7945aafd6d2f",
+      "chars": 45
+    },
+    "en1.u1.p.064.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.064.v.bm_george.mp3",
+      "durationMs": 2874,
+      "hash": "aead26b40e3e4f62",
+      "chars": 45
+    },
+    "en1.u1.p.065.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.065.v.af_bella.mp3",
+      "durationMs": 3323,
+      "hash": "e131caf39c2f26b0",
+      "chars": 55
+    },
+    "en1.u1.p.065.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.065.v.am_michael.mp3",
+      "durationMs": 4055,
+      "hash": "4a70ae49bc6cad12",
+      "chars": 55
+    },
+    "en1.u1.p.065.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.065.v.bm_george.mp3",
+      "durationMs": 4886,
+      "hash": "1f131578b262d797",
+      "chars": 55
+    },
+    "en1.u1.p.066.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.066.v.af_bella.mp3",
+      "durationMs": 3601,
+      "hash": "46b62ab2a97df489",
+      "chars": 54
+    },
+    "en1.u1.p.066.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.066.v.am_michael.mp3",
+      "durationMs": 3733,
+      "hash": "0a1ef840cc775500",
+      "chars": 54
+    },
+    "en1.u1.p.066.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.066.v.bm_george.mp3",
+      "durationMs": 4499,
+      "hash": "0f4ec25acfbca0f4",
+      "chars": 54
+    },
+    "en1.u1.p.067.v.af_bella": {
+      "src": "/audio/en1/u1/en1.u1.p.067.v.af_bella.mp3",
+      "durationMs": 2463,
+      "hash": "09cad4b9c2b15fc6",
+      "chars": 48
+    },
+    "en1.u1.p.067.v.am_michael": {
+      "src": "/audio/en1/u1/en1.u1.p.067.v.am_michael.mp3",
+      "durationMs": 2986,
+      "hash": "bb03217c62941c90",
+      "chars": 48
+    },
+    "en1.u1.p.067.v.bm_george": {
+      "src": "/audio/en1/u1/en1.u1.p.067.v.bm_george.mp3",
+      "durationMs": 3589,
+      "hash": "100833a9b1f8a2fa",
+      "chars": 48
     }
   }
 }
