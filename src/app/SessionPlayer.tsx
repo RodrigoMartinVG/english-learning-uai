@@ -28,8 +28,8 @@ export function SessionPlayer({ session, onExit }: { session: Session; onExit: (
 
   const round = useMemo(() => {
     if (!mechanic || !target) return null;
-    return mechanic.buildRound(target, atoms);
-  }, [mechanic, target]);
+    return mechanic.buildRound(target, atoms, step?.variant);
+  }, [mechanic, target, step?.variant]);
 
   if (!step || !mechanic || !View || !target) {
     return <Summary session={session} results={results} onExit={onExit} />;
@@ -62,8 +62,9 @@ export function SessionPlayer({ session, onExit }: { session: Session; onExit: (
         <div style={{ width: `${(i / session.steps.length) * 100}%` }} />
       </div>
 
-      {/* key: fuerza el remount por paso, así ninguna mecánica arrastra estado. */}
-      <View key={`${step.mechanicId}:${step.atomId}:${i}`} round={round} onDone={done} />
+      {/* key: fuerza el remount por paso, así ninguna mecánica arrastra estado.
+          Incluye la variante: el mismo diálogo con otro papel es otro ejercicio. */}
+      <View key={`${step.mechanicId}:${step.atomId}:${step.variant ?? ''}:${i}`} round={round} onDone={done} />
     </div>
   );
 }

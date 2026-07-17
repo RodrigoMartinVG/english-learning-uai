@@ -25,12 +25,26 @@ export interface MechanicMeta {
 export interface Mechanic<TRound = unknown> extends MechanicMeta {
   /** El selector. ¿Este átomo sirve para esta mecánica? */
   accepts(atom: Atom): boolean;
+
+  /**
+   * Formas distintas de entrenar el MISMO átomo, si las hay.
+   *
+   * Existe por el Role-play: un diálogo se practica desde cada papel, y no son
+   * intercambiables. Medido en la U1: en el diálogo de la recepción, solo la
+   * recepcionista formula preguntas y solo Karel da respuestas cortas y números.
+   * Haciendo siempre el mismo papel se pierde la mitad de la gramática.
+   *
+   * El orden importa: la primera variante es la que conviene practicar antes.
+   * Sin variantes, el átomo da un solo paso.
+   */
+  variants?(atom: Atom): string[];
+
   /**
    * Arma una ronda para `target`. `pool` es el resto del contenido, solo para
    * construir distractores; no para elegir el objetivo.
    * Devuelve null si el pool no alcanza.
    */
-  buildRound(target: Atom, pool: Atom[]): TRound | null;
+  buildRound(target: Atom, pool: Atom[], variant?: string): TRound | null;
 }
 
 export interface MechanicViewProps<TRound> {

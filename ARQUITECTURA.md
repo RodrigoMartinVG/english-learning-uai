@@ -882,8 +882,9 @@ interface SessionSpec {
 
 interface Step {
   mechanicId: string;
-  atomIds: string[];                      // los que consume ese paso
+  atomId: string;
   skill: Skill;                           // qué tarjeta actualiza al resolverse
+  variant?: string;                       // qué forma del átomo — ver abajo
 }
 
 interface Session {
@@ -892,6 +893,12 @@ interface Session {
   steps: Step[];
 }
 ```
+
+**`variant`** existe porque un átomo puede entrenarse de formas que no son
+intercambiables. El caso que lo motivó: un `dialogue` se practica desde **cada papel**, y no da
+igual cuál. Medido en la U1: en el diálogo de la recepción, solo la recepcionista formula
+preguntas y solo Karel da respuestas cortas y números; quien haga siempre de Karel nunca produce
+una interrogativa. Una mecánica declara `variants(atom)` y el builder emite un paso por cada una.
 
 El builder:
 

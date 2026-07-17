@@ -25,6 +25,13 @@ export interface Step {
   mechanicId: string;
   atomId: string;
   skill: Skill;
+  /**
+   * Qué forma del átomo se entrena, si la mecánica ofrece varias.
+   *
+   * Hoy: el papel que toma el alumno en un Role-play. Un diálogo genera un paso
+   * por papel, porque hacer siempre de Karel jamás te hace formular una pregunta.
+   */
+  variant?: string;
 }
 
 export interface Session {
@@ -164,11 +171,16 @@ export function buildSession(
       if (!mechanic.accepts(atom)) continue;
       if (spec.mode === 'exam' && mechanic.level < 5) continue;
       reachable.add(atom.id);
-      candidates.push({
-        step: { mechanicId: mechanic.id, atomId: atom.id, skill: mechanic.skill },
-        level: mechanic.level,
-        difficulty: atom.difficulty,
-      });
+      // Sin variantes, un paso. Con variantes, uno por cada una: son formas
+      // distintas de entrenar lo mismo, no repeticiones.
+      const variants = mechanic.variants?.(atom) ?? [undefined];
+      for (const variant of variants) {
+        candidates.push({
+          step: { mechanicId: mechanic.id, atomId: atom.id, skill: mechanic.skill, variant },
+          level: mechanic.level,
+          difficulty: atom.difficulty,
+        });
+      }
     }
   }
 

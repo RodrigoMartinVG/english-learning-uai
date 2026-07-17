@@ -39,17 +39,33 @@ export const rolePlay: Mechanic<RolePlayRound> = {
     return atom.kind === 'dialogue' && atom.turns.length >= 2;
   },
 
-  buildRound(target: Atom, pool: Atom[]): RolePlayRound | null {
+  /**
+   * Un papel, una variante. Los dos se practican, en momentos distintos.
+   *
+   * No es simetría por prolijidad: cada papel produce gramática distinta. En el
+   * diálogo de la recepción, solo la recepcionista formula preguntas y solo Karel
+   * da respuestas cortas y dice números. Quien haga siempre de Karel nunca va a
+   * preguntar nada.
+   *
+   * Primero el que responde y después el que abre: entrar contestando es más
+   * fácil que arrancar la conversación en frío.
+   */
+  variants(atom: Atom): string[] {
+    if (atom.kind !== 'dialogue') return [];
+    const roles = [...new Set(atom.turns.map((t) => t.speaker))];
+    const first = atom.turns[0]!.speaker;
+    return [...roles.filter((r) => r !== first), ...roles.filter((r) => r === first)];
+  },
+
+  buildRound(target: Atom, pool: Atom[], variant?: string): RolePlayRound | null {
     if (target.kind !== 'dialogue') return null;
 
     const byId = new Map(pool.filter((a): a is PhraseAtom => a.kind === 'phrase').map((p) => [p.id, p]));
     const roles = [...new Set(target.turns.map((t) => t.speaker))];
     if (roles.length < 2) return null;
 
-    // El alumno toma el papel de quien MENOS habla primero: entrar respondiendo
-    // es más fácil que abrir la conversación en frío.
     const first = target.turns[0]!.speaker;
-    const myRole = roles.find((r) => r !== first) ?? roles[1]!;
+    const myRole = variant && roles.includes(variant) ? variant : (roles.find((r) => r !== first) ?? roles[1]!);
     const partner = roles.find((r) => r !== myRole) ?? first;
 
     const turns: RolePlayTurn[] = [];
