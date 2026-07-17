@@ -1,0 +1,75 @@
+.sb {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sb__answer {
+  min-height: 76px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8px;
+  padding: 14px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  /* Punteado: comunica "acá va algo" sin competir con el audio. */
+  border: 1px dashed var(--border);
+  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.sb__answer--ok {
+  border-style: solid;
+  border-color: var(--success);
+  background: color-mix(in srgb, var(--success) 10%, var(--surface));
+}
+.sb__answer--bad {
+  border-style: solid;
+  border-color: var(--error);
+  background: color-mix(in srgb, var(--error) 10%, var(--surface));
+}
+
+.sb__bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 52px;
+  padding: 4px 0;
+}
+
+.sb__placeholder {
+  color: var(--text-faint);
+  font-size: 13px;
+  align-self: center;
+}
+
+/* 44px de alto: una ficha que se falla al tocar arruina la mecánica. */
+.sb__chip {
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-hi);
+  border: 1px solid var(--border);
+  font-size: 16px;
+  cursor: grab;
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.sb__chip:hover:not(:disabled) {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.sb__chip:active {
+  cursor: grabbing;
+}
+.sb__chip:disabled {
+  cursor: default;
+}
+.sb__chip--placed {
+  background: color-mix(in srgb, var(--accent) 16%, var(--surface));
+  border-color: var(--accent-dim);
+}
+
+.sb__solution {
+  font-size: 18px;
+  color: var(--text);
+  padding: 8px 0;
+}

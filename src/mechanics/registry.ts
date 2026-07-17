@@ -9,6 +9,7 @@
  */
 
 import { osmosis } from './osmosis/mechanic.ts';
+import { syntaxBuilder } from './syntax-builder/mechanic.ts';
 import { minimalPairs } from './minimal-pairs/mechanic.ts';
 import { shadowing } from './shadowing/mechanic.ts';
 import { pingPong } from './ping-pong/mechanic.ts';
@@ -20,6 +21,7 @@ import type { Mechanic } from './types.ts';
 export const mechanics: Mechanic<any>[] = [
   minimalPairs,
   osmosis,
+  syntaxBuilder,
   pingPong,
   shadowing,
   rolePlay,
