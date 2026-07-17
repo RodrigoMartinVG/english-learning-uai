@@ -11,6 +11,27 @@
  *
  * Cascada: mp3 pregenerado → Web Speech con la voz sugerida → Web Speech con
  * cualquier voz del acento → error honesto. Ver ARQUITECTURA.md §5.3.
+ *
+ * ── Por qué Web Speech es el fallback y no la fuente ──────────────────────────
+ *
+ * Las voces neuronales del navegador (Edge: "Aria Online (Natural)"; Chrome:
+ * "Google US English") son excelentes y gratis. Pero no pueden ser la fuente:
+ *
+ *  · No se pueden grabar. La Web Speech API no expone el audio: no hay forma de
+ *    capturar las muestras. Sirve para reproducir en vivo, nunca para pregenerar.
+ *  · Son de nube. El "Online" del nombre es literal: salen de un servidor. Sin
+ *    internet no hay voz, y adiós al modo offline.
+ *  · Dependen del navegador. Las Natural solo están en Edge. En Firefox quedan
+ *    las SAPI de Windows (David, Zira), de otra década. La misma frase sonaría
+ *    distinta —o robótica— según dónde abras la app.
+ *  · Cortan las frases largas. Chrome trunca las emisiones de más de ~15s. La
+ *    narrativa del Listening 1 dura 35s: el contenido más valioso de la unidad
+ *    es justo el que se rompe.
+ *  · El `rate` estira, no re-articula. Un TTS lento de verdad vuelve a
+ *    pronunciar; esto solo alarga.
+ *
+ * Con mp3 pregenerado nada de eso pasa, y este fallback sigue estando para
+ * cuando un audio falte. No se pierde nada: se gana un piso.
  */
 
 export interface SpeakRequest {
@@ -73,25 +94,50 @@ function voicesReady(timeoutMs = 2000): Promise<SpeechSynthesisVoice[]> {
 }
 
 /**
- * Elige la voz local menos mala para un speaker.
+ * Marcadores de voz neuronal en el nombre que expone el navegador.
  *
- * Los prototipos sorteaban una voz al azar en cada reproducción. Acá el orden es
- * determinista a propósito: la misma frase suena siempre igual, o el alumno
- * termina entrenando el oído contra ruido en vez de contra un hablante.
+ * Edge publica las voces de Azure como "Microsoft Aria Online (Natural)"; Chrome
+ * publica las de Google como "Google US English". Suenan muy por encima de las
+ * SAPI locales de Windows (David, Zira), que son de otra década.
+ *
+ * La idea y la lista vienen del NATURAL_RE de los prototipos: filtraban por
+ * naturalidad antes que por cualquier otra cosa, y tenían razón.
+ */
+const NATURAL_RE = /natural|neural|online|premium|enhanced|google (uk|us)|aria|guy|jenny|emma|sonia|ryan/i;
+
+/**
+ * Elige la mejor voz disponible para un speaker.
+ *
+ * Dos reglas, en este orden:
+ *  1. Naturalidad: una voz neuronal siempre le gana a una SAPI, aunque el
+ *     personaje pidiera otro nombre. Es preferible que Mary suene natural con
+ *     otra voz a que suene a robot con "la suya".
+ *  2. Determinismo: nunca al azar. Los prototipos sorteaban una voz por
+ *     reproducción; así el alumno entrena el oído contra ruido en vez de contra
+ *     un hablante. Se ordena por nombre para que el desempate no dependa del
+ *     orden en que el navegador devuelva la lista.
  */
 function pickVoice(voices: SpeechSynthesisVoice[], hints: AudioVoiceHints): SpeechSynthesisVoice | null {
-  const byName = (needle: string) =>
-    voices.find((v) => v.name.toLowerCase().includes(needle.toLowerCase()));
+  const en = [...voices]
+    .filter((v) => v.lang.toLowerCase().startsWith('en'))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  if (!en.length) return null;
 
-  for (const hint of hints.fallbackHint) {
-    const v = byName(hint);
-    if (v) return v;
-  }
-  // Mismo acento exacto (en-GB para un personaje británico).
-  const exact = voices.find((v) => v.lang.replace('_', '-') === hints.accent);
-  if (exact) return exact;
-  // Cualquier inglés antes que nada.
-  return voices.find((v) => v.lang.toLowerCase().startsWith('en')) ?? null;
+  const accent = hints.accent.toLowerCase();
+  const sameAccent = (v: SpeechSynthesisVoice) => v.lang.replace('_', '-').toLowerCase() === accent;
+  const named = (v: SpeechSynthesisVoice) =>
+    hints.fallbackHint.some((h) => v.name.toLowerCase().includes(h.toLowerCase()));
+  const natural = (v: SpeechSynthesisVoice) => NATURAL_RE.test(v.name);
+
+  return (
+    en.find((v) => named(v) && natural(v)) ??       // la voz del personaje, y además neuronal
+    en.find((v) => natural(v) && sameAccent(v)) ??  // otra neuronal, mismo acento
+    en.find((v) => natural(v)) ??                   // cualquier neuronal
+    en.find((v) => named(v)) ??                     // la del personaje, aunque sea SAPI
+    en.find(sameAccent) ??
+    en[0] ??
+    null
+  );
 }
 
 export function createAudioService(
