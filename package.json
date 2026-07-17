@@ -12,7 +12,8 @@
     "build:audio": "tsx scripts/build-audio.ts",
     "flags": "tsx scripts/review-flags.ts",
     "audit": "tsx scripts/audit-content.ts",
-    "audio:review": "tsx scripts/build-audio-review.ts"
+    "audio:review": "tsx scripts/build-audio-review.ts",
+    "build:ipa": "tsx scripts/build-ipa.ts"
   },
   "repository": {
     "type": "git",

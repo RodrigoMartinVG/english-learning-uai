@@ -23,10 +23,10 @@ Lo que sigue, en una línea: **cerrar la deuda de la Unidad 1 y probar el diseñ
 
 | | Estado | Qué | Por qué importa |
 |---|---|---|---|
-| 1.1 | ⬜ | **Balance de dificultad**: solo 7 átomos en niveles 4-5 contra 72 en 1-2 | La punta de la escalera —la que lleva al final oral— es finita. Lo marca `npm run audit` |
-| 1.2 | ⬜ | **Atomizar los diálogos de la reconstrucción** (Kate/Robert, objetos de clase, equipo internacional) + perfil de Messi | Producción ya redactada que llena 1.1 y enriquece aspectos flacos. Es contenido, no código |
-| 1.3 | ⬜ | **Fusionar "Números y edad"** (4 átomos) con "Datos personales", o enriquecerlo | Aspecto flaco: las sesiones repiten. Decisión de curación |
-| 1.4 | ⬜ | **IPA en las frases** (0/42 hoy) | Shadowing no puede mostrar fonética. Además, **desbloquea la pronunciación fina** (§4.1) |
+| 1.1 | 🔨 | **Balance de dificultad**: niveles 4-5 vs 1-2 | Mejorado con los diálogos (16→41 en niveles 3-4), pero el audit todavía lo marca. Se cierra con más producción |
+| 1.2 | ✅ | **Atomizar los diálogos de la reconstrucción** (los 3: objetos de clase, equipo internacional, Kate/Robert) | Hecho. 25 frases, 3 diálogos, 3 voces nuevas (Rosa, Valentina, Robert). El perfil de Messi queda (ya cubierto por qa atoms) |
+| 1.3 | ✅ | **Fusionar "Números y edad"** en "Datos personales" | Hecho |
+| 1.4 | ✅ | **IPA en las frases** | Hecho: `npm run build:ipa` con el fonemizador de Kokoro (el IPA coincide con el audio). 67/67 frases. Shadowing lo muestra. **Desbloquea la pronunciación fina (§4.1)** |
 | 1.5 | ⬜ | **Tests del motor** (`npm test`): grading, FSRS, session builder | Los verifico con scripts que borro. Encontraron bugs reales (interleaving, escalera, rúbrica); sin tests no se re-chequean solos |
 
 ---
@@ -76,7 +76,7 @@ historial; resumen técnico:
 - **Cómo:** interfaz `PronunciationAssessor` (como `TtsProvider`), implementación Azure por
   defecto. Pantalla: palabra partida en sílabas → tocás una para oír ese pedazo → grabás →
   se colorea → repetís sonido por sonido.
-- **Depende de 1.4** (IPA / silabificación del objetivo).
+- **Depende de 1.4** (IPA / silabificación del objetivo). ✅ El IPA por frase ya existe; falta la silabificación por palabra (la puede hacer Azure al alinear).
 - **Estado:** pendiente deseable. No bloquea nada.
 
 ### 4.2 💡 Escuchar la misma frase en más acentos (no nativos)
@@ -101,6 +101,7 @@ Valentina rusa) necesitarían Azure. Deseable, no urgente.
 ## 6. Herramientas del pipeline (ya existen)
 
 - ✅ `npm run validate` — forma (Zod) + integridad referencial
+- ✅ `npm run build:ipa` — IPA de cada frase con el fonemizador de Kokoro (coincide con el audio)
 - ✅ `npm run audit` — calidad del contenido (dificultad, aspectos flacos, IPA, ejercicios chicos)
 - ✅ `npm run build:audio` — TTS incremental por hash (Kokoro; Azure con `--provider=azure`)
 - ✅ `npm run audio:review` — página para revisar voces de a puñado
