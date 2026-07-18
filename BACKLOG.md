@@ -11,7 +11,7 @@
 
 ## Dónde estamos (resumen)
 
-La Unidad 1 está completa y jugable de punta a punta: 91 átomos, 13 aspectos, **12 mecánicas**
+La Unidad 3 ya está. Las Unidades 1, 2 y 3 están completas y jugables de punta a punta. La Unidad 1: 91 átomos, 13 aspectos, **12 mecánicas**
 cubriendo los 5 niveles de la escalera (percepción → producción), audio neuronal local (Kokoro,
 sin key), micrófono, repetición espaciada (FSRS) con persistencia, y diagnóstico de errores.
 

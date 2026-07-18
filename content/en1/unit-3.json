@@ -1,0 +1,2240 @@
+{
+  "course": "en1",
+  "unit": 3,
+  "title": "Gente",
+  "goals": [
+    "¿Cómo expreso lo que disfruto hacer con mi familia y amigos?",
+    "Have/has got, adverbs of frequency, arrangements, time expressions.",
+    "Hablar de la familia y coordinar planes."
+  ],
+  "aspects": [
+    {
+      "id": "office",
+      "order": 1,
+      "title": "La oficina",
+      "summary": "Mostrar tu espacio, hablar de posesión y coordinar un plan.",
+      "match": {
+        "fn": [
+          "ask.possession",
+          "propose-plan"
+        ],
+        "topic": [
+          "workplace"
+        ]
+      },
+      "source": {
+        "page": 5,
+        "section": "Situación comunicacional"
+      }
+    },
+    {
+      "id": "have-got-aff",
+      "order": 2,
+      "title": "have got: afirmativo",
+      "summary": "Tener algo o a alguien. have con I/you/we/they, has con he/she/it.",
+      "match": {
+        "grammar": [
+          "have-got.affirmative"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "have-got-neg",
+      "order": 3,
+      "title": "have got: negativo",
+      "summary": "haven't got / hasn't got.",
+      "match": {
+        "grammar": [
+          "have-got.negative"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "have-got-q",
+      "order": 4,
+      "title": "have got: preguntas",
+      "summary": "Have you got…? Has she got…? y respuestas cortas.",
+      "match": {
+        "grammar": [
+          "have-got.interrogative"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "family",
+      "order": 5,
+      "title": "La familia",
+      "summary": "Hermanos, hijos, abuelos: describir a tu familia y a la gente.",
+      "match": {
+        "grammar": [
+          "family"
+        ],
+        "topic": [
+          "family"
+        ],
+        "fn": [
+          "describe.person"
+        ]
+      },
+      "source": {
+        "page": 10,
+        "section": "Family relationships"
+      }
+    },
+    {
+      "id": "frequency-u3",
+      "order": 6,
+      "title": "Frecuencia y how often",
+      "summary": "Con qué frecuencia hacés algo (how often, once/twice a week).",
+      "match": {
+        "grammar": [
+          "frequency-adverbs",
+          "how-often"
+        ],
+        "fn": [
+          "ask.frequency"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "arrangements",
+      "order": 7,
+      "title": "Coordinar planes",
+      "summary": "Are you free? How about…? What time is good for you?",
+      "match": {
+        "grammar": [
+          "arrangements",
+          "would-like"
+        ],
+        "fn": [
+          "propose-plan",
+          "accept-plan"
+        ]
+      },
+      "source": {
+        "page": 8,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "time-prep",
+      "order": 8,
+      "title": "La hora y las preposiciones",
+      "summary": "at con horas, on con días, in con meses.",
+      "match": {
+        "grammar": [
+          "prepositions.time",
+          "time.at"
+        ],
+        "fn": [
+          "ask.time"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "Grammar Tips"
+      }
+    }
+  ],
+  "atoms": [
+    {
+      "id": "en1.u3.p.001",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Here we are. This is my office. There is a PC, a desk and a comfortable chair.",
+      "gloss": "Acá estamos. Esta es mi oficina. Hay una PC, un escritorio y una silla cómoda.",
+      "speaker": "colleague",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "demonstratives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "workplace"
+      ],
+      "difficulty": 3,
+      "ipa": "hˈɪɹ wiː ɑːɹ ðɪs ɪz maɪ ˈɑːfɪs ðɛɹ ɪz ɐ pˌiːsˈiː ɐ dˈɛsk ænd ɐ kˈʌmftəbəl tʃˈɛɹ"
+    },
+    {
+      "id": "en1.u3.p.002",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Oh, it's nice.",
+      "gloss": "Ah, qué linda.",
+      "speaker": "mary",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "be.contractions"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "workplace"
+      ],
+      "difficulty": 1,
+      "ipa": "ˈoʊ ɪts nˈaɪs"
+    },
+    {
+      "id": "en1.u3.p.003",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "corrected",
+        "page": 5,
+        "section": "Cómic",
+        "note": "El cómic dice \"Have got your own office?\", omitiendo el sujeto. Corregido a la forma correcta que enseña la unidad."
+      },
+      "text": "Have you got your own office?",
+      "gloss": "¿Tenés tu propia oficina?",
+      "speaker": "mary",
+      "intonation": "rising",
+      "grammar": [
+        "have-got.interrogative",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "workplace"
+      ],
+      "difficulty": 3,
+      "replies": [
+        "Yes, I have.",
+        "No, I haven't."
+      ],
+      "ipa": "hæv juː ɡɑːt jʊɹ ˈoʊn ˈɑːfɪs"
+    },
+    {
+      "id": "en1.u3.p.004",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Yes, I have.",
+      "gloss": "Sí.",
+      "speaker": "colleague",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.affirmative"
+      ],
+      "fn": [
+        "confirm"
+      ],
+      "topic": [
+        "workplace"
+      ],
+      "difficulty": 1,
+      "ipa": "jˈɛs aɪ hˈæv"
+    },
+    {
+      "id": "en1.u3.p.005",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "How often do you work there?",
+      "gloss": "¿Con qué frecuencia trabajás ahí?",
+      "speaker": "mary",
+      "intonation": "falling",
+      "grammar": [
+        "how-often",
+        "frequency-adverbs",
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.frequency"
+      ],
+      "topic": [
+        "workplace",
+        "routine"
+      ],
+      "difficulty": 3,
+      "replies": [
+        "I usually work there.",
+        "Twice a week."
+      ],
+      "ipa": "hˌaʊ ˈɔfən dˈuː juː wˈɜːk ðˈɛɹ"
+    },
+    {
+      "id": "en1.u3.p.006",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "I usually work there, but I work at home once a week.",
+      "gloss": "Normalmente trabajo ahí, pero trabajo desde casa una vez por semana.",
+      "speaker": "colleague",
+      "intonation": "falling",
+      "grammar": [
+        "frequency-adverbs",
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "ask.frequency",
+        "describe.routine"
+      ],
+      "topic": [
+        "workplace",
+        "routine"
+      ],
+      "difficulty": 4,
+      "ipa": "aɪ jˈuːʒuːəli wˈɜːk ðˈɛɹ bˌʌt aɪ wˈɜːk æt hˈoʊm wˈʌns ɐ wˈiːk"
+    },
+    {
+      "id": "en1.u3.p.007",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Are you free now?",
+      "gloss": "¿Estás libre ahora?",
+      "speaker": "mary",
+      "intonation": "rising",
+      "grammar": [
+        "arrangements",
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "propose-plan"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "replies": [
+        "Yes!",
+        "No, I'm busy."
+      ],
+      "ipa": "ɑːɹ juː fɹˈiː nˈaʊ"
+    },
+    {
+      "id": "en1.u3.p.008",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "How about going to my office?",
+      "gloss": "¿Qué tal si vamos a mi oficina?",
+      "speaker": "mary",
+      "intonation": "rising",
+      "grammar": [
+        "arrangements"
+      ],
+      "fn": [
+        "propose-plan"
+      ],
+      "topic": [
+        "leisure",
+        "workplace"
+      ],
+      "difficulty": 3,
+      "alternatives": [
+        "How about coming to my office?",
+        "Would you like to go to my office?"
+      ],
+      "ipa": "hˌaʊ ɐbˌaʊt ɡˌoʊɪŋ tə maɪ ˈɑːfɪs"
+    },
+    {
+      "id": "en1.u3.p.009",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Great!",
+      "gloss": "¡Genial!",
+      "speaker": "colleague",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "accept-plan"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 1,
+      "ipa": "ɡɹˈeɪt"
+    },
+    {
+      "id": "en1.u3.d.001",
+      "kind": "dialogue",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "title": "La oficina propia",
+      "situation": "Un colega le muestra a Mary su oficina y coordinan pasar a la de ella.",
+      "turns": [
+        {
+          "speaker": "colleague",
+          "phraseId": "en1.u3.p.001"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u3.p.002"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u3.p.003"
+        },
+        {
+          "speaker": "colleague",
+          "phraseId": "en1.u3.p.004"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u3.p.005"
+        },
+        {
+          "speaker": "colleague",
+          "phraseId": "en1.u3.p.006"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u3.p.007"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u3.p.008"
+        },
+        {
+          "speaker": "colleague",
+          "phraseId": "en1.u3.p.009"
+        }
+      ],
+      "variants": [
+        "Have you got an office?",
+        "How often do you work here?",
+        "Are you free?"
+      ],
+      "grammar": [
+        "have-got.interrogative",
+        "how-often",
+        "arrangements"
+      ],
+      "fn": [
+        "ask.possession",
+        "ask.frequency",
+        "propose-plan"
+      ],
+      "topic": [
+        "workplace",
+        "leisure"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u3.p.010",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — have got"
+      },
+      "text": "I have got two sisters.",
+      "gloss": "Tengo dos hermanas.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "ask.possession",
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ hæv ɡɑːt tˈuː sˈɪstɚz"
+    },
+    {
+      "id": "en1.u3.p.011",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — have got"
+      },
+      "text": "She has got a big family.",
+      "gloss": "Ella tiene una familia grande.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "ipa": "ʃiː hɐz ɡɑːt ɐ bˈɪɡ fˈæmɪli"
+    },
+    {
+      "id": "en1.u3.p.012",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — have got"
+      },
+      "text": "They haven't got a car.",
+      "gloss": "No tienen auto.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.negative"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "ipa": "ðeɪ hˈævənt ɡɑːt ɐ kˈɑːɹ"
+    },
+    {
+      "id": "en1.u3.p.013",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — have got"
+      },
+      "text": "He hasn't got a brother.",
+      "gloss": "Él no tiene hermano.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.negative",
+        "family"
+      ],
+      "fn": [
+        "ask.possession",
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "ipa": "hiː hˈæzənt ɡɑːt ɐ bɹˈʌðɚ"
+    },
+    {
+      "id": "en1.u3.p.014",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — have got"
+      },
+      "text": "Have you got a brother?",
+      "gloss": "¿Tenés un hermano?",
+      "speaker": "narrator",
+      "intonation": "rising",
+      "grammar": [
+        "have-got.interrogative",
+        "family"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "replies": [
+        "Yes, I have.",
+        "No, I haven't."
+      ],
+      "ipa": "hæv juː ɡɑːt ɐ bɹˈʌðɚ"
+    },
+    {
+      "id": "en1.u3.p.015",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — have got"
+      },
+      "text": "Has she got a dog?",
+      "gloss": "¿Ella tiene un perro?",
+      "speaker": "narrator",
+      "intonation": "rising",
+      "grammar": [
+        "have-got.interrogative"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "replies": [
+        "Yes, she has.",
+        "No, she hasn't."
+      ],
+      "ipa": "hɐz ʃiː ɡɑːt ɐ dˈɑːɡ"
+    },
+    {
+      "id": "en1.u3.lx.001",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Words and phrases / Family relationships"
+      },
+      "word": "brother",
+      "pos": "noun",
+      "gloss": "hermano",
+      "examplePhraseId": "en1.u3.p.016",
+      "focus": "translation",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u3.p.016",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"brother\"."
+      },
+      "text": "My brother is a student.",
+      "gloss": "Mi hermano es estudiante.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1,
+      "ipa": "maɪ bɹˈʌðɚɹ ɪz ɐ stˈuːdənt"
+    },
+    {
+      "id": "en1.u3.lx.002",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Words and phrases / Family relationships"
+      },
+      "word": "sister",
+      "pos": "noun",
+      "gloss": "hermana",
+      "examplePhraseId": "en1.u3.p.010",
+      "focus": "translation",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u3.lx.003",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Words and phrases / Family relationships"
+      },
+      "word": "son",
+      "pos": "noun",
+      "gloss": "hijo",
+      "examplePhraseId": "en1.u3.p.017",
+      "focus": "translation",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u3.p.017",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Word Quiz"
+      },
+      "text": "He has got two sons.",
+      "gloss": "Él tiene dos hijos.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "ipa": "hiː hɐz ɡɑːt tˈuː sˈʌnz"
+    },
+    {
+      "id": "en1.u3.lx.004",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Words and phrases / Family relationships"
+      },
+      "word": "daughter",
+      "pos": "noun",
+      "gloss": "hija",
+      "examplePhraseId": "en1.u3.p.018",
+      "focus": "translation",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u3.p.018",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"daughter\"."
+      },
+      "text": "They have got a daughter.",
+      "gloss": "Tienen una hija.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "ipa": "ðeɪ hæv ɡɑːt ɐ dˈɔːɾɚ"
+    },
+    {
+      "id": "en1.u3.lx.005",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Words and phrases / Family relationships"
+      },
+      "word": "grandmother",
+      "pos": "noun",
+      "gloss": "abuela",
+      "examplePhraseId": "en1.u3.p.019",
+      "focus": "translation",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u3.p.019",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Word Quiz"
+      },
+      "text": "We often visit our grandmother.",
+      "gloss": "Visitamos seguido a nuestra abuela.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative",
+        "frequency-adverbs",
+        "family"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "ipa": "wiː ˈɔfən vˈɪzɪt ˌaʊɚ ɡɹˈændmʌðɚ"
+    },
+    {
+      "id": "en1.u3.lx.006",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Words and phrases / Family relationships"
+      },
+      "word": "husband",
+      "pos": "noun",
+      "gloss": "esposo",
+      "examplePhraseId": "en1.u3.p.020",
+      "focus": "translation",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u3.p.020",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 4"
+      },
+      "text": "She has got a husband.",
+      "gloss": "Ella tiene esposo.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1,
+      "ipa": "ʃiː hɐz ɡɑːt ɐ hˈʌsbənd"
+    },
+    {
+      "id": "en1.u3.lx.007",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Words and phrases / Family relationships"
+      },
+      "word": "wife",
+      "pos": "noun",
+      "gloss": "esposa",
+      "examplePhraseId": "en1.u3.p.021",
+      "focus": "translation",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u3.p.021",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"wife\"."
+      },
+      "text": "His wife is very friendly.",
+      "gloss": "Su esposa es muy simpática.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "possessives.adjectives",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "ipa": "hɪz wˈaɪf ɪz vˈɛɹi fɹˈɛndli"
+    },
+    {
+      "id": "en1.u3.p.022",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Words and phrases to learn"
+      },
+      "text": "They live together.",
+      "gloss": "Viven juntos.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1,
+      "ipa": "ðeɪ lˈɪv təɡˈɛðɚ"
+    },
+    {
+      "id": "en1.u3.p.023",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Words and phrases to learn"
+      },
+      "text": "She's very friendly.",
+      "gloss": "Ella es muy simpática.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "be.contractions"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1,
+      "ipa": "ʃiːz vˈɛɹi fɹˈɛndli"
+    },
+    {
+      "id": "en1.u3.p.024",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Words and phrases to learn"
+      },
+      "text": "That book is boring.",
+      "gloss": "Ese libro es aburrido.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "demonstratives"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 1,
+      "ipa": "ðæt bˈʊk ɪz bˈoːɹɪŋ"
+    },
+    {
+      "id": "en1.u3.p.025",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Words and phrases to learn"
+      },
+      "text": "She goes to the cinema twice a week.",
+      "gloss": "Va al cine dos veces por semana.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.third-person",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "ask.frequency",
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "ipa": "ʃiː ɡoʊz tə ðə sˈɪnəmə twˈaɪs ɐ wˈiːk"
+    },
+    {
+      "id": "en1.u3.qa.001",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — frequency adverbs"
+      },
+      "prompt": "How often do you play tennis?",
+      "promptVariants": [
+        "How often does she play tennis?"
+      ],
+      "replies": [
+        "On Mondays.",
+        "Twice a week.",
+        "I never play tennis."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "how-often",
+        "present-simple.interrogative",
+        "prepositions.time"
+      ],
+      "fn": [
+        "ask.frequency"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u3.qa.002",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — frequency adverbs"
+      },
+      "prompt": "How often do you visit your family?",
+      "promptVariants": [],
+      "replies": [
+        "Once a week.",
+        "Every weekend."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "how-often",
+        "present-simple.interrogative",
+        "family"
+      ],
+      "fn": [
+        "ask.frequency"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u3.qa.003",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — have got"
+      },
+      "prompt": "Have you got any brothers or sisters?",
+      "promptVariants": [
+        "Have you got a big family?"
+      ],
+      "replies": [
+        "Yes, I have got two sisters.",
+        "No, I haven't got any."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "have-got.interrogative",
+        "family"
+      ],
+      "fn": [
+        "ask.possession",
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u3.qa.004",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — have got"
+      },
+      "prompt": "Has your family got a car?",
+      "promptVariants": [
+        "Has he got a car?"
+      ],
+      "replies": [
+        "Yes, they have.",
+        "No, they haven't."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "have-got.interrogative"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "family",
+        "objects"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u3.qa.005",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Grammar Tips — arrangements"
+      },
+      "prompt": "Would you like to go to the cinema?",
+      "promptVariants": [
+        "Would you like to eat out?",
+        "How about going to the cinema?"
+      ],
+      "replies": [
+        "Yes, I'd love to.",
+        "Great! What time?"
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "arrangements",
+        "would-like"
+      ],
+      "fn": [
+        "propose-plan",
+        "accept-plan"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u3.qa.006",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Grammar Tips — arrangements (eating out)"
+      },
+      "prompt": "Is there a restaurant near here?",
+      "promptVariants": [
+        "Is there a cinema near here?"
+      ],
+      "replies": [
+        "Yes, near the Colon Theatre.",
+        "Yes, there is one."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "there-is.interrogative",
+        "arrangements"
+      ],
+      "fn": [
+        "ask.existence",
+        "propose-plan"
+      ],
+      "topic": [
+        "leisure",
+        "city"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u3.qa.007",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Word Quiz"
+      },
+      "prompt": "How often does she go to the cinema?",
+      "promptVariants": [
+        "How often do they go out?"
+      ],
+      "replies": [
+        "Twice a week.",
+        "Every weekend."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "how-often",
+        "present-simple.third-person",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "ask.frequency"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u3.p.026",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Grammar Tips — arrangements / Ejercitación 3"
+      },
+      "text": "Are you free tonight?",
+      "gloss": "¿Estás libre esta noche?",
+      "speaker": "student",
+      "intonation": "rising",
+      "grammar": [
+        "arrangements",
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "propose-plan"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "replies": [
+        "Yes. What would you like to do?",
+        "No, I'm busy."
+      ],
+      "ipa": "ɑːɹ juː fɹˈiː tənˈaɪt"
+    },
+    {
+      "id": "en1.u3.p.027",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Grammar Tips — arrangements / Ejercitación 3"
+      },
+      "text": "What would you like to do?",
+      "gloss": "¿Qué te gustaría hacer?",
+      "speaker": "student-m",
+      "intonation": "falling",
+      "grammar": [
+        "arrangements",
+        "would-like"
+      ],
+      "fn": [
+        "propose-plan"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "ipa": "wˌʌt wʊd juː lˈaɪk tə dˈuː"
+    },
+    {
+      "id": "en1.u3.p.028",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Grammar Tips — arrangements / Ejercitación 3"
+      },
+      "text": "How about going to the cinema?",
+      "gloss": "¿Qué tal si vamos al cine?",
+      "speaker": "student",
+      "intonation": "rising",
+      "grammar": [
+        "arrangements"
+      ],
+      "fn": [
+        "propose-plan"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "alternatives": [
+        "How about eating out?",
+        "Would you like to go to the cinema?"
+      ],
+      "ipa": "hˌaʊ ɐbˌaʊt ɡˌoʊɪŋ tə ðə sˈɪnəmə"
+    },
+    {
+      "id": "en1.u3.p.029",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Grammar Tips — arrangements / Ejercitación 3"
+      },
+      "text": "What time does it start?",
+      "gloss": "¿A qué hora empieza?",
+      "speaker": "student-m",
+      "intonation": "falling",
+      "grammar": [
+        "arrangements",
+        "present-simple.third-person",
+        "time.at"
+      ],
+      "fn": [
+        "ask.time"
+      ],
+      "topic": [
+        "leisure",
+        "time"
+      ],
+      "difficulty": 3,
+      "replies": [
+        "It starts at nine.",
+        "At eight thirty."
+      ],
+      "ipa": "wˌʌt tˈaɪm dˈʌz ɪt stˈɑːɹt"
+    },
+    {
+      "id": "en1.u3.p.030",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Grammar Tips — arrangements / Ejercitación 3"
+      },
+      "text": "What time is good for you?",
+      "gloss": "¿A qué hora te viene bien?",
+      "speaker": "student",
+      "intonation": "falling",
+      "grammar": [
+        "arrangements",
+        "time.at"
+      ],
+      "fn": [
+        "propose-plan",
+        "ask.time"
+      ],
+      "topic": [
+        "leisure",
+        "time"
+      ],
+      "difficulty": 3,
+      "ipa": "wˌʌt tˈaɪm ɪz ɡˈʊd fɔːɹ juː"
+    },
+    {
+      "id": "en1.u3.d.002",
+      "kind": "dialogue",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Grammar Tips — arrangements / Ejercitación 3"
+      },
+      "title": "Coordinar una salida",
+      "situation": "Dos amigos organizan ir al cine: proponen, eligen la película y acuerdan la hora.",
+      "turns": [
+        {
+          "speaker": "student",
+          "phraseId": "en1.u3.p.026"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en1.u3.p.027"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en1.u3.p.028"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en1.u3.p.029"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en1.u3.p.030"
+        }
+      ],
+      "variants": [
+        "Are you free tonight?",
+        "How about eating out?",
+        "What time is good for you?"
+      ],
+      "grammar": [
+        "arrangements",
+        "would-like",
+        "time.at"
+      ],
+      "fn": [
+        "propose-plan",
+        "ask.time",
+        "accept-plan"
+      ],
+      "topic": [
+        "leisure",
+        "time"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u3.p.031",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Ejemplo significativo (familia de Bill Skarsgård)"
+      },
+      "text": "Bill has got a big family.",
+      "gloss": "Bill tiene una familia grande.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "ipa": "bˈɪl hɐz ɡɑːt ɐ bˈɪɡ fˈæmɪli"
+    },
+    {
+      "id": "en1.u3.p.032",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Ejemplo significativo (familia de Bill Skarsgård)"
+      },
+      "text": "He has got four brothers and one sister.",
+      "gloss": "Tiene cuatro hermanos y una hermana.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 3,
+      "ipa": "hiː hɐz ɡɑːt fˈoːɹ bɹˈʌðɚz ænd wˈʌn sˈɪstɚ"
+    },
+    {
+      "id": "en1.u3.p.033",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — prepositions of time"
+      },
+      "text": "I play tennis on Mondays.",
+      "gloss": "Juego al tenis los lunes.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "prepositions.time",
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine",
+        "ask.frequency"
+      ],
+      "topic": [
+        "leisure",
+        "time"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ plˈeɪ tˈɛnɪs ˌɔn mˈʌndeɪz"
+    },
+    {
+      "id": "en1.u3.p.034",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — prepositions of time"
+      },
+      "text": "I visit my grandmother in January.",
+      "gloss": "Visito a mi abuela en enero.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "prepositions.time",
+        "present-simple.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "family",
+        "time"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ vˈɪzɪt maɪ ɡɹˈændmʌðɚɹ ɪn dʒˈænjuːˌɛɹi"
+    },
+    {
+      "id": "en1.u3.p.035",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — prepositions of time"
+      },
+      "text": "She has breakfast at seven.",
+      "gloss": "Ella desayuna a las siete.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "prepositions.time",
+        "time.at",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "describe.routine",
+        "ask.time"
+      ],
+      "topic": [
+        "routine",
+        "time"
+      ],
+      "difficulty": 2,
+      "ipa": "ʃiː hɐz bɹˈɛkfəst æt sˈɛvən"
+    },
+    {
+      "id": "en1.u3.p.036",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — prepositions of time"
+      },
+      "text": "We go on holiday in December.",
+      "gloss": "Nos vamos de vacaciones en diciembre.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "prepositions.time",
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure",
+        "time"
+      ],
+      "difficulty": 2,
+      "ipa": "wiː ɡˌoʊ ˌɔn hˈɑːlɪdˌeɪ ɪn dᵻsˈɛmbɚ"
+    },
+    {
+      "id": "en1.u3.p.037",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerza have got negativo, aspecto flaco."
+      },
+      "text": "I haven't got a sister.",
+      "gloss": "No tengo hermana.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.negative",
+        "family"
+      ],
+      "fn": [
+        "ask.possession",
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ hˈævənt ɡɑːt ɐ sˈɪstɚ"
+    },
+    {
+      "id": "en1.u3.p.038",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerza have got negativo."
+      },
+      "text": "We haven't got children.",
+      "gloss": "No tenemos hijos.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.negative",
+        "family"
+      ],
+      "fn": [
+        "ask.possession",
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "ipa": "wiː hˈævənt ɡɑːt tʃˈɪldɹən"
+    },
+    {
+      "id": "en1.u3.pr.001",
+      "kind": "production",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Ejemplo significativo (familia de Bill Skarsgård)"
+      },
+      "prompt": "Describe someone's family, like Bill's. Use has got, family words, and their names.",
+      "modelAnswer": "Bill has got a big family. His father is an actor and his name is Stellan. He has got four brothers: Alexander, Gustaf, Valter and Sam. He has got one sister and her name is Eija. They all live together in a big house. Bill often visits his family.",
+      "modelVariants": [
+        "My friend has got a small family. She has got one brother and no sisters. Her mother is a teacher and her father is a doctor. They have got a dog. They usually have dinner together.",
+        "I have got a big family. I have got two sisters and one brother. My grandmother lives with us. We often visit our cousins on Sundays. My family is very friendly."
+      ],
+      "rubric": [
+        {
+          "text": "Usa has got / have got",
+          "detect": "\\b(has|have) got\\b"
+        },
+        {
+          "text": "Usa palabras de familia (brother, sister, father…)",
+          "detect": "\\b(family|father|mother|brother|sister|son|daughter|grandmother|husband|wife)\\b"
+        },
+        {
+          "text": "Menciona nombres o cantidades",
+          "detect": "\\b\\d"
+        },
+        {
+          "text": "Describe a la familia en oraciones completas"
+        }
+      ],
+      "speaker": "narrator",
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 5
+    },
+    {
+      "id": "en1.u3.ex.001",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 1"
+      },
+      "prompt": "Complete with have got or has got (affirmative, negative or interrogative).",
+      "format": "cloze",
+      "audioViable": "native",
+      "items": [
+        {
+          "stem": "She ___ a boyfriend. (not)",
+          "blanks": [
+            {
+              "accept": [
+                "hasn't got",
+                "has not got"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "They ___ two houses.",
+          "blanks": [
+            {
+              "accept": [
+                "have got"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ he ___ a dog?",
+          "blanks": [
+            {
+              "accept": [
+                "Has"
+              ]
+            },
+            {
+              "accept": [
+                "got"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ they ___ friends?",
+          "blanks": [
+            {
+              "accept": [
+                "Have"
+              ]
+            },
+            {
+              "accept": [
+                "got"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I ___ a notebook.",
+          "blanks": [
+            {
+              "accept": [
+                "have got"
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        "have-got.affirmative",
+        "have-got.negative",
+        "have-got.interrogative"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "family",
+        "objects"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u3.ex.002",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 2"
+      },
+      "prompt": "Rewrite the sentence with the frequency adverb in brackets.",
+      "format": "transform",
+      "audioViable": "native",
+      "items": [
+        {
+          "stem": "She plays tennis. (sometimes)",
+          "answer": {
+            "accept": [
+              "She sometimes plays tennis."
+            ]
+          }
+        },
+        {
+          "stem": "They are boring. (always)",
+          "answer": {
+            "accept": [
+              "They are always boring."
+            ]
+          }
+        },
+        {
+          "stem": "He is happy. (never)",
+          "answer": {
+            "accept": [
+              "He is never happy."
+            ]
+          }
+        },
+        {
+          "stem": "They work at the cinema. (usually)",
+          "answer": {
+            "accept": [
+              "They usually work at the cinema."
+            ]
+          }
+        },
+        {
+          "stem": "I write letters. (seldom)",
+          "answer": {
+            "accept": [
+              "I seldom write letters."
+            ]
+          }
+        }
+      ],
+      "grammar": [
+        "frequency-adverbs",
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u3.ex.003",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejercitación 4"
+      },
+      "prompt": "Correct the mistake in the sentence.",
+      "format": "error-hunt",
+      "audioViable": "adapted",
+      "items": [
+        {
+          "stem": "Jenny haven't got a car.",
+          "answer": {
+            "accept": [
+              "Jenny hasn't got a car."
+            ]
+          }
+        },
+        {
+          "stem": "They has got brothers.",
+          "answer": {
+            "accept": [
+              "They have got brothers."
+            ]
+          }
+        },
+        {
+          "stem": "Have he got sisters?",
+          "answer": {
+            "accept": [
+              "Has he got sisters?"
+            ]
+          }
+        },
+        {
+          "stem": "She have got a husband.",
+          "answer": {
+            "accept": [
+              "She has got a husband."
+            ]
+          }
+        },
+        {
+          "stem": "We has got three cars.",
+          "answer": {
+            "accept": [
+              "We have got three cars."
+            ]
+          }
+        }
+      ],
+      "grammar": [
+        "have-got.affirmative",
+        "have-got.negative",
+        "have-got.interrogative"
+      ],
+      "fn": [
+        "correct"
+      ],
+      "topic": [
+        "family",
+        "objects"
+      ],
+      "difficulty": 5
+    },
+    {
+      "id": "en1.u3.ct.001",
+      "kind": "contrast",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — have got"
+      },
+      "pair": [
+        "have got",
+        "has got"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "syntax",
+      "examples": [
+        {
+          "text": "I ___ two sisters.",
+          "correct": 0
+        },
+        {
+          "text": "She ___ a big family.",
+          "correct": 1
+        },
+        {
+          "text": "They ___ a car.",
+          "correct": 0
+        },
+        {
+          "text": "He ___ a brother.",
+          "correct": 1
+        }
+      ],
+      "grammar": [
+        "have-got.affirmative"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u3.ct.002",
+      "kind": "contrast",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — have got"
+      },
+      "pair": [
+        "haven't got",
+        "hasn't got"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "syntax",
+      "examples": [
+        {
+          "text": "They ___ a car.",
+          "correct": 0
+        },
+        {
+          "text": "Jenny ___ a car.",
+          "correct": 1
+        },
+        {
+          "text": "We ___ children.",
+          "correct": 0
+        },
+        {
+          "text": "He ___ a dog.",
+          "correct": 1
+        }
+      ],
+      "grammar": [
+        "have-got.negative"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "family",
+        "objects"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u3.ls.001",
+      "kind": "listening",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "La narrativa NO está en el material (link ausente). Escrita con léxico de la U3, consistente con las respuestas oficiales: no le gusta la TV, juega action games una hora o dos, sí navega internet.",
+        "page": 12,
+        "section": "Listening Comprehension 3"
+      },
+      "narrative": "Hi. My name is Sofia. I have got a computer and a phone. I don’t like TV — I never watch it. But I love video games. I usually spend an hour or two playing action games every day. I have got many friends online. I also surf the net a lot: I read the news and I chat with my family. On Saturdays I go out with my friends.",
+      "speaker": "narrator",
+      "questions": [
+        {
+          "q": "Does she like TV?",
+          "accept": [
+            "No, she doesn't.",
+            "No."
+          ]
+        },
+        {
+          "q": "How much time does she spend playing action games?",
+          "accept": [
+            "An hour or two.",
+            "One or two hours."
+          ]
+        },
+        {
+          "q": "Does she surf the net?",
+          "accept": [
+            "Yes, she does.",
+            "Yes."
+          ]
+        }
+      ],
+      "grammar": [
+        "have-got.affirmative",
+        "present-simple.affirmative",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "describe.person",
+        "ask.frequency"
+      ],
+      "topic": [
+        "leisure",
+        "family"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u3.pr.002",
+      "kind": "production",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Actividad de cierre — Composition My Life Chapter 3"
+      },
+      "prompt": "COMPOSITION: MY LIFE: CHAPTER 3. Write about the members of your family. Describe them briefly.",
+      "chapter": 3,
+      "modelAnswer": "I have got a big family. My father is a teacher and my mother is a doctor. I have got two sisters and one brother. My brother is very friendly and he plays football. My sisters are students. We have got a dog too. My grandmother lives near us and we visit her once a week. My family is very important to me.",
+      "modelVariants": [
+        "I have got a small family. I have not got any brothers or sisters. My mother works in an office and my father is a pilot. We have got two cats. We often have dinner together and we watch movies on Fridays."
+      ],
+      "rubric": [
+        {
+          "text": "Usa have got / has got",
+          "detect": "\\b(have|has) got\\b"
+        },
+        {
+          "text": "Menciona miembros de la familia",
+          "detect": "\\b(father|mother|brother|sister|son|daughter|grandmother|family)\\b"
+        },
+        {
+          "text": "Describe a los miembros (son estudiantes, es simpático…)",
+          "detect": "\\b(is|are|plays|works|likes)\\b"
+        },
+        {
+          "text": "Escribe un párrafo coherente sobre la familia"
+        }
+      ],
+      "speaker": "examiner",
+      "grammar": [
+        "have-got.affirmative",
+        "family",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 5
+    }
+  ]
+}
