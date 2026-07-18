@@ -1,0 +1,3013 @@
+{
+  "course": "en1",
+  "unit": 4,
+  "title": "Lugares",
+  "goals": [
+    "¿Cómo hablo de mi lugar de residencia?",
+    "There is/there are, can, shopping phrases, prepositions, places, rooms and furniture.",
+    "Describir espacios, comprar y dar direcciones."
+  ],
+  "aspects": [
+    {
+      "id": "office-museum",
+      "order": 1,
+      "title": "La oficina y el museo",
+      "summary": "Describir un espacio, coordinar una salida y preguntar horarios.",
+      "match": {
+        "fn": [
+          "propose-plan",
+          "ask.time",
+          "describe.place"
+        ],
+        "topic": [
+          "workplace",
+          "city"
+        ]
+      },
+      "source": {
+        "page": 5,
+        "section": "Situación comunicacional"
+      }
+    },
+    {
+      "id": "there-is-u4",
+      "order": 2,
+      "title": "There is / there are",
+      "summary": "Decir qué hay: afirmativo, negativo e interrogativo.",
+      "match": {
+        "grammar": [
+          "there-is.affirmative",
+          "there-is.negative",
+          "there-is.interrogative"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "can",
+      "order": 3,
+      "title": "Can: poder y pedir",
+      "summary": "Habilidades, lo que se puede hacer en un lugar, y pedidos.",
+      "match": {
+        "grammar": [
+          "can.ability",
+          "can.request",
+          "can.negative"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "prepositions-place",
+      "order": 4,
+      "title": "Preposiciones de lugar",
+      "summary": "in, on, under, next to, opposite, behind…",
+      "match": {
+        "grammar": [
+          "prepositions.place"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "some-any",
+      "order": 5,
+      "title": "some / any",
+      "summary": "some en afirmativas, any en negativas y preguntas.",
+      "match": {
+        "grammar": [
+          "some-any"
+        ]
+      },
+      "source": {
+        "page": 13,
+        "section": "Ejercitación 3"
+      }
+    },
+    {
+      "id": "how-much-many",
+      "order": 6,
+      "title": "how much / how many",
+      "summary": "how many con contables, how much con incontables y precios.",
+      "match": {
+        "grammar": [
+          "how-much-many"
+        ]
+      },
+      "source": {
+        "page": 12,
+        "section": "Links"
+      }
+    },
+    {
+      "id": "shopping",
+      "order": 7,
+      "title": "En la tienda",
+      "summary": "Pedir un talle, preguntar el precio y comprar.",
+      "match": {
+        "topic": [
+          "shopping"
+        ],
+        "fn": [
+          "ask.price",
+          "offer-help"
+        ]
+      },
+      "source": {
+        "page": 10,
+        "section": "Shopping phrases"
+      }
+    },
+    {
+      "id": "directions",
+      "order": 8,
+      "title": "Dar direcciones",
+      "summary": "Seguí derecho, doblá a la izquierda, está en la esquina…",
+      "match": {
+        "grammar": [
+          "directions"
+        ],
+        "fn": [
+          "give-directions"
+        ]
+      },
+      "source": {
+        "page": 7,
+        "section": "Grammar Tips"
+      }
+    },
+    {
+      "id": "home-vocab",
+      "order": 9,
+      "title": "Casa y muebles",
+      "summary": "Las habitaciones y los objetos de la casa.",
+      "match": {
+        "topic": [
+          "home"
+        ],
+        "fn": [
+          "describe.place"
+        ]
+      },
+      "source": {
+        "page": 12,
+        "section": "Words and phrases to learn"
+      }
+    }
+  ],
+  "atoms": [
+    {
+      "id": "en1.u4.p.001",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "You have got a beautiful office, Mary. There's a coffee machine on that table, a plant next to the window, and a lamp behind the armchair.",
+      "gloss": "Tenés una oficina hermosa, Mary. Hay una cafetera en esa mesa, una planta al lado de la ventana y una lámpara detrás del sillón.",
+      "speaker": "colleague",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place",
+        "have-got.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "workplace",
+        "home"
+      ],
+      "difficulty": 4,
+      "ipa": "juː hæv ɡɑːt ɐ bjˈuːɾifəl ˈɑːfɪs mˈɛɹi ðɛɹz ɐ kˈɔfi məʃˈiːn ˌɔn ðæt tˈeɪbəl ɐ plˈænt nˈɛkst tə ðə wˈɪndoʊ ænd ɐ lˈæmp bᵻhˌaɪnd ðɪ ˈɑːɹmtʃɛɹ"
+    },
+    {
+      "id": "en1.u4.p.002",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Thank you! We can see the Museum opposite our building.",
+      "gloss": "¡Gracias! Podemos ver el museo enfrente de nuestro edificio.",
+      "speaker": "mary",
+      "intonation": "falling",
+      "grammar": [
+        "can.ability",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "ipa": "θˈæŋk juː wiː kæn sˈiː ðə mjuːzˈiəm ˈɑːpəzˌɪt ˌaʊɚ bˈɪldɪŋ"
+    },
+    {
+      "id": "en1.u4.p.003",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Would you like to go to the Museum?",
+      "gloss": "¿Te gustaría ir al museo?",
+      "speaker": "colleague",
+      "intonation": "rising",
+      "grammar": [
+        "would-like"
+      ],
+      "fn": [
+        "propose-plan"
+      ],
+      "topic": [
+        "city",
+        "leisure"
+      ],
+      "difficulty": 2,
+      "replies": [
+        "Yes. What time does it open?",
+        "Yes, I'd love to."
+      ],
+      "ipa": "wʊd juː lˈaɪk tə ɡˌoʊ tə ðə mjuːzˈiəm"
+    },
+    {
+      "id": "en1.u4.p.004",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "What time does it open?",
+      "gloss": "¿A qué hora abre?",
+      "speaker": "mary",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.third-person",
+        "wh-questions",
+        "time.at"
+      ],
+      "fn": [
+        "ask.time"
+      ],
+      "topic": [
+        "city",
+        "time"
+      ],
+      "difficulty": 2,
+      "replies": [
+        "It opens at eleven and closes at ten."
+      ],
+      "ipa": "wˌʌt tˈaɪm dˈʌz ɪɾ ˈoʊpən"
+    },
+    {
+      "id": "en1.u4.p.005",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "It opens at eleven and closes at ten.",
+      "gloss": "Abre a las once y cierra a las diez.",
+      "speaker": "colleague",
+      "intonation": "falling",
+      "grammar": [
+        "present-simple.third-person",
+        "time.at"
+      ],
+      "fn": [
+        "ask.time"
+      ],
+      "topic": [
+        "city",
+        "time"
+      ],
+      "difficulty": 3,
+      "ipa": "ɪɾ ˈoʊpənz æɾ ᵻlˈɛvən ænd klˈoʊzᵻz æt tˈɛn"
+    },
+    {
+      "id": "en1.u4.p.006",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "We can go there after work.",
+      "gloss": "Podemos ir después del trabajo.",
+      "speaker": "mary",
+      "intonation": "falling",
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "propose-plan",
+        "accept-plan"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "ipa": "wiː kæn ɡˌoʊ ðɛɹ ˈæftɚ wˈɜːk"
+    },
+    {
+      "id": "en1.u4.p.007",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "There's a cafeteria next to the Museum.",
+      "gloss": "Hay una cafetería al lado del museo.",
+      "speaker": "mary",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place",
+        "ask.existence"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðɛɹz ɐ kˌæfɪtˈɪɹiə nˈɛkst tə ðə mjuːzˈiəm"
+    },
+    {
+      "id": "en1.u4.p.008",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "text": "Are there buses late at night?",
+      "gloss": "¿Hay colectivos tarde a la noche?",
+      "speaker": "colleague",
+      "intonation": "rising",
+      "grammar": [
+        "there-is.interrogative"
+      ],
+      "fn": [
+        "ask.existence"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "replies": [
+        "Yes, there are.",
+        "No, there aren't."
+      ],
+      "ipa": "ɑːɹ ðɛɹ bˈʌsᵻz lˈeɪt æt nˈaɪt"
+    },
+    {
+      "id": "en1.u4.d.001",
+      "kind": "dialogue",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Presentación de situación comunicacional (cómic)"
+      },
+      "title": "La oficina y el museo",
+      "situation": "El colega admira la oficina de Mary y coordinan ir al museo de enfrente.",
+      "turns": [
+        {
+          "speaker": "colleague",
+          "phraseId": "en1.u4.p.001"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u4.p.002"
+        },
+        {
+          "speaker": "colleague",
+          "phraseId": "en1.u4.p.003"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u4.p.004"
+        },
+        {
+          "speaker": "colleague",
+          "phraseId": "en1.u4.p.005"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u4.p.006"
+        },
+        {
+          "speaker": "mary",
+          "phraseId": "en1.u4.p.007"
+        },
+        {
+          "speaker": "colleague",
+          "phraseId": "en1.u4.p.008"
+        }
+      ],
+      "variants": [
+        "There is a plant next to the window.",
+        "Would you like to go to the museum?",
+        "Are there buses at night?"
+      ],
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place",
+        "can.ability",
+        "would-like"
+      ],
+      "fn": [
+        "describe.place",
+        "propose-plan",
+        "ask.existence"
+      ],
+      "topic": [
+        "workplace",
+        "city"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u4.p.009",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Shopping phrases / Ejercitación 4"
+      },
+      "text": "Hi. Can I help you?",
+      "gloss": "Hola. ¿Te puedo ayudar?",
+      "speaker": "shopkeeper",
+      "intonation": "rising",
+      "grammar": [
+        "can.request"
+      ],
+      "fn": [
+        "offer-help"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "ipa": "hˈaɪ kæn aɪ hˈɛlp juː"
+    },
+    {
+      "id": "en1.u4.p.010",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Shopping phrases / Ejercitación 4"
+      },
+      "text": "Have you got this sweater in small?",
+      "gloss": "¿Tenés este suéter en talle chico?",
+      "speaker": "student-m",
+      "intonation": "rising",
+      "grammar": [
+        "have-got.interrogative"
+      ],
+      "fn": [
+        "ask.existence",
+        "make-request"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 3,
+      "ipa": "hæv juː ɡɑːt ðɪs swˈɛɾɚɹ ɪn smˈɔːl"
+    },
+    {
+      "id": "en1.u4.p.011",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Shopping phrases / Ejercitación 4"
+      },
+      "text": "Just a moment. Here you are.",
+      "gloss": "Un momento. Acá tenés.",
+      "speaker": "shopkeeper",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "offer-help"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 1,
+      "ipa": "dʒˈʌst ɐ mˈoʊmənt hˈɪɹ juː ɑːɹ"
+    },
+    {
+      "id": "en1.u4.p.012",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Shopping phrases / Ejercitación 4"
+      },
+      "text": "Oh no. It's too small.",
+      "gloss": "Ay no. Es demasiado chico.",
+      "speaker": "student-m",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "ipa": "ˈoʊ nˈoʊ ɪts tˈuː smˈɔːl"
+    },
+    {
+      "id": "en1.u4.p.013",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Shopping phrases / Ejercitación 4"
+      },
+      "text": "We've got it in medium.",
+      "gloss": "Lo tenemos en talle mediano.",
+      "speaker": "shopkeeper",
+      "intonation": "falling",
+      "grammar": [
+        "have-got.affirmative"
+      ],
+      "fn": [
+        "offer-help"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "ipa": "wiːv ɡɑːt ɪɾ ɪn mˈiːdiəm"
+    },
+    {
+      "id": "en1.u4.p.014",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Shopping phrases / Ejercitación 4"
+      },
+      "text": "Great. How much is it?",
+      "gloss": "Genial. ¿Cuánto sale?",
+      "speaker": "student-m",
+      "intonation": "falling",
+      "grammar": [
+        "how-much-many"
+      ],
+      "fn": [
+        "ask.price"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "replies": [
+        "It's thirty dollars.",
+        "It's $30."
+      ],
+      "ipa": "ɡɹˈeɪt hˌaʊ mˈʌtʃ ɪz ɪt"
+    },
+    {
+      "id": "en1.u4.p.015",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Shopping phrases / Ejercitación 4"
+      },
+      "text": "It's thirty dollars.",
+      "gloss": "Sale treinta dólares.",
+      "speaker": "shopkeeper",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative",
+        "numbers.cardinal"
+      ],
+      "fn": [
+        "ask.price"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "ipa": "ɪts θˈɜːɾi dˈɑːlɚz"
+    },
+    {
+      "id": "en1.u4.p.016",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Shopping phrases / Ejercitación 4"
+      },
+      "text": "Great. I'll take it.",
+      "gloss": "Genial. Me lo llevo.",
+      "speaker": "student-m",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "accept-plan"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "ipa": "ɡɹˈeɪt aɪl tˈeɪk ɪt"
+    },
+    {
+      "id": "en1.u4.d.002",
+      "kind": "dialogue",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Shopping phrases / Ejercitación 4"
+      },
+      "title": "En la tienda",
+      "situation": "Un cliente busca un suéter en su talle, pregunta el precio y lo compra.",
+      "turns": [
+        {
+          "speaker": "shopkeeper",
+          "phraseId": "en1.u4.p.009"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en1.u4.p.010"
+        },
+        {
+          "speaker": "shopkeeper",
+          "phraseId": "en1.u4.p.011"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en1.u4.p.012"
+        },
+        {
+          "speaker": "shopkeeper",
+          "phraseId": "en1.u4.p.013"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en1.u4.p.014"
+        },
+        {
+          "speaker": "shopkeeper",
+          "phraseId": "en1.u4.p.015"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en1.u4.p.016"
+        }
+      ],
+      "variants": [
+        "Have you got this jacket in large?",
+        "How much is it?",
+        "I'll take it."
+      ],
+      "grammar": [
+        "can.request",
+        "have-got.interrogative",
+        "how-much-many"
+      ],
+      "fn": [
+        "offer-help",
+        "ask.price",
+        "make-request"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u4.p.017",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — there is/are"
+      },
+      "text": "There is a sofa in the living room.",
+      "gloss": "Hay un sillón en el living.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 2,
+      "ipa": "ðɛɹ ɪz ɐ sˈoʊfə ɪnðə lˈɪvɪŋ ɹˈuːm"
+    },
+    {
+      "id": "en1.u4.p.018",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — there is/are"
+      },
+      "text": "There aren't students in the classroom.",
+      "gloss": "No hay estudiantes en el aula.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.negative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "ipa": "ðɛɹ ˌɑːɹnt stˈuːdənts ɪnðə klˈæsɹuːm"
+    },
+    {
+      "id": "en1.u4.p.019",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — there is/are"
+      },
+      "text": "Is there a swimming pool in the hotel?",
+      "gloss": "¿Hay una pileta en el hotel?",
+      "speaker": "narrator",
+      "intonation": "rising",
+      "grammar": [
+        "there-is.interrogative"
+      ],
+      "fn": [
+        "ask.existence"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "replies": [
+        "Yes, there is.",
+        "No, there isn't."
+      ],
+      "ipa": "ɪz ðɛɹ ɐ swˈɪmɪŋ pˈuːl ɪnðə hoʊtˈɛl"
+    },
+    {
+      "id": "en1.u4.p.020",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — there is/are"
+      },
+      "text": "What is there on the top floor?",
+      "gloss": "¿Qué hay en el último piso?",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.existence"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 3,
+      "ipa": "wˌʌt ɪz ðɛɹ ɔnðə tˈɑːp flˈoːɹ"
+    },
+    {
+      "id": "en1.u4.p.021",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — can"
+      },
+      "text": "You can look at paintings in an art gallery.",
+      "gloss": "Podés ver cuadros en una galería de arte.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "ipa": "juː kæn lˈʊk æt pˈeɪntɪŋz ɪn ɐn ˈɑːɹt ɡˈælɚɹi"
+    },
+    {
+      "id": "en1.u4.p.022",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — can"
+      },
+      "text": "Can I have a cup of coffee?",
+      "gloss": "¿Me das un café?",
+      "speaker": "narrator",
+      "intonation": "rising",
+      "grammar": [
+        "can.request"
+      ],
+      "fn": [
+        "make-request"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "alternatives": [
+        "Could I have a coffee?",
+        "Can I get a coffee?"
+      ],
+      "ipa": "kæn aɪ hæv ɐ kˈʌp ʌv kˈɔfi"
+    },
+    {
+      "id": "en1.u4.p.023",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — can"
+      },
+      "text": "I can't swim.",
+      "gloss": "No sé nadar.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "can.negative"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ kˈænt swˈɪm"
+    },
+    {
+      "id": "en1.u4.p.024",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — can"
+      },
+      "text": "Can you play the guitar?",
+      "gloss": "¿Sabés tocar la guitarra?",
+      "speaker": "narrator",
+      "intonation": "rising",
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "ask.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "replies": [
+        "Yes, I can.",
+        "No, I can't."
+      ],
+      "ipa": "kæn juː plˈeɪ ðə ɡɪtˈɑːɹ"
+    },
+    {
+      "id": "en1.u4.p.025",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — prepositions of place"
+      },
+      "text": "The book is on the table.",
+      "gloss": "El libro está sobre la mesa.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "prepositions.place",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðə bˈʊk ɪz ɔnðə tˈeɪbəl"
+    },
+    {
+      "id": "en1.u4.p.026",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — prepositions of place"
+      },
+      "text": "The cat is under the chair.",
+      "gloss": "El gato está debajo de la silla.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "prepositions.place",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðə kˈæt ɪz ˌʌndɚ ðə tʃˈɛɹ"
+    },
+    {
+      "id": "en1.u4.p.027",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — prepositions of place"
+      },
+      "text": "The restaurant is next to the library.",
+      "gloss": "El restaurante está al lado de la biblioteca.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "prepositions.place",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə ɹˈɛstɹɑːnt ɪz nˈɛkst tə ðə lˈaɪbɹɛɹi"
+    },
+    {
+      "id": "en1.u4.p.028",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — prepositions of place"
+      },
+      "text": "The park is opposite the museum.",
+      "gloss": "El parque está enfrente del museo.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "prepositions.place",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə pˈɑːɹk ɪz ˈɑːpəzˌɪt ðə mjuːzˈiəm"
+    },
+    {
+      "id": "en1.u4.p.029",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — prepositions of place"
+      },
+      "text": "Room 435 is on the third floor.",
+      "gloss": "La habitación 435 está en el tercer piso.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "prepositions.place",
+        "be.present.affirmative",
+        "numbers.cardinal"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 2,
+      "ipa": "ɹˈuːm fˈoːɹhˈʌndɹɪd θˈɜːɾi fˈaɪv ɪz ɔnðə θˈɜːd flˈoːɹ"
+    },
+    {
+      "id": "en1.u4.p.030",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — directions"
+      },
+      "text": "Go straight on until you get to the roundabout.",
+      "gloss": "Seguí derecho hasta llegar a la rotonda.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "ipa": "ɡˌoʊ stɹˈeɪt ˌɔn ʌntˈɪl juː ɡɛt tə ðə ɹˈaʊndɐbˌaʊt"
+    },
+    {
+      "id": "en1.u4.p.031",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — directions"
+      },
+      "text": "Turn left at the traffic light.",
+      "gloss": "Doblá a la izquierda en el semáforo.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "tˈɜːn lˈɛft æt ðə tɹˈæfɪk lˈaɪt"
+    },
+    {
+      "id": "en1.u4.p.032",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — directions"
+      },
+      "text": "It's on the corner of Upper Street.",
+      "gloss": "Está en la esquina de Upper Street.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "ipa": "ɪts ɔnðə kˈɔːɹnɚɹ ʌv ˌʌpɚ stɹˈiːt"
+    },
+    {
+      "id": "en1.u4.p.033",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — directions"
+      },
+      "text": "Go past the library and cross the road.",
+      "gloss": "Pasá la biblioteca y cruzá la calle.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "ipa": "ɡˌoʊ pˈæst ðə lˈaɪbɹɛɹi ænd kɹˈɔs ðə ɹˈoʊd"
+    },
+    {
+      "id": "en1.u4.qa.001",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — directions"
+      },
+      "prompt": "Excuse me, how do I get to the museum?",
+      "promptVariants": [
+        "Where is the museum?"
+      ],
+      "replies": [
+        "Go straight on and turn left.",
+        "It's next to the library."
+      ],
+      "speaker": "student",
+      "replySpeaker": "narrator",
+      "grammar": [
+        "directions",
+        "wh-questions"
+      ],
+      "fn": [
+        "give-directions",
+        "ask.location"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u4.lx.001",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "kitchen",
+      "pos": "noun",
+      "gloss": "cocina",
+      "examplePhraseId": "en1.u4.p.034",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.p.034",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"kitchen\"."
+      },
+      "text": "There is a fridge in the kitchen.",
+      "gloss": "Hay una heladera en la cocina.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðɛɹ ɪz ɐ fɹˈɪdʒ ɪnðə kˈɪtʃən"
+    },
+    {
+      "id": "en1.u4.lx.002",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "bathroom",
+      "pos": "noun",
+      "gloss": "baño",
+      "examplePhraseId": "en1.u4.p.035",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.p.035",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"bathroom\"."
+      },
+      "text": "There is a mirror in the bathroom.",
+      "gloss": "Hay un espejo en el baño.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðɛɹ ɪz ɐ mˈɪɹɚɹ ɪnðə bˈæθɹuːm"
+    },
+    {
+      "id": "en1.u4.lx.003",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "garden",
+      "pos": "noun",
+      "gloss": "jardín",
+      "examplePhraseId": "en1.u4.p.036",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.p.036",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"garden\"."
+      },
+      "text": "There are flowers in the garden.",
+      "gloss": "Hay flores en el jardín.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðɛɹˌɑːɹ flˈaʊɚz ɪnðə ɡˈɑːɹdən"
+    },
+    {
+      "id": "en1.u4.lx.004",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "armchair",
+      "pos": "noun",
+      "gloss": "sillón",
+      "examplePhraseId": "en1.u4.p.037",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.p.037",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"armchair\"."
+      },
+      "text": "The armchair is very comfortable.",
+      "gloss": "El sillón es muy cómodo.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðɪ ˈɑːɹmtʃɛɹ ɪz vˈɛɹi kˈʌmftəbəl"
+    },
+    {
+      "id": "en1.u4.lx.005",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "balcony",
+      "pos": "noun",
+      "gloss": "balcón",
+      "examplePhraseId": "en1.u4.p.038",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.p.038",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"balcony\"."
+      },
+      "text": "There is a table on the balcony.",
+      "gloss": "Hay una mesa en el balcón.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðɛɹ ɪz ɐ tˈeɪbəl ɔnðə bˈælkəni"
+    },
+    {
+      "id": "en1.u4.lx.006",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "washing machine",
+      "pos": "noun",
+      "gloss": "lavarropas",
+      "examplePhraseId": "en1.u4.p.039",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.p.039",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"washing machine\"."
+      },
+      "text": "There isn't a washing machine here.",
+      "gloss": "No hay lavarropas acá.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.negative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 2,
+      "ipa": "ðɛɹ ˌɪzənt ɐ wˈɑːʃɪŋ məʃˈiːn hˈɪɹ"
+    },
+    {
+      "id": "en1.u4.lx.007",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "curtains",
+      "pos": "noun",
+      "gloss": "cortinas",
+      "examplePhraseId": "en1.u4.p.040",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.p.040",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"curtains\"."
+      },
+      "text": "The curtains are blue.",
+      "gloss": "Las cortinas son azules.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðə kˈɜːtənz ɑːɹ blˈuː"
+    },
+    {
+      "id": "en1.u4.lx.008",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "pharmacy",
+      "pos": "noun",
+      "gloss": "farmacia",
+      "examplePhraseId": "en1.u4.p.041",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.p.041",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para \"pharmacy\"."
+      },
+      "text": "There is a pharmacy next to the square.",
+      "gloss": "Hay una farmacia al lado de la plaza.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 1,
+      "ipa": "ðɛɹ ɪz ɐ fˈɑːɹməsi nˈɛkst tə ðə skwˈɛɹ"
+    },
+    {
+      "id": "en1.u4.p.042",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejemplo significativo (Centro Cultural Kirchner)"
+      },
+      "text": "There are five auditoriums and forty rooms for exhibitions.",
+      "gloss": "Hay cinco auditorios y cuarenta salas para exposiciones.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "numbers.cardinal"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "ipa": "ðɛɹˌɑːɹ fˈaɪv ˌɔːdɪtˈoːɹiəmz ænd fˈɔːɹɾi ɹˈuːmz fɔːɹ ɛksɪbˈɪʃənz"
+    },
+    {
+      "id": "en1.u4.p.043",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejemplo significativo (Centro Cultural Kirchner)"
+      },
+      "text": "You can listen to music, have a coffee, or see paintings there.",
+      "gloss": "Ahí podés escuchar música, tomar un café o ver cuadros.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city",
+        "leisure"
+      ],
+      "difficulty": 3,
+      "ipa": "juː kæn lˈɪsən tə mjˈuːzɪk hæv ɐ kˈɔfi ɔːɹ sˈiː pˈeɪntɪŋz ðˈɛɹ"
+    },
+    {
+      "id": "en1.u4.p.044",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Grammar Tips — some/any"
+      },
+      "text": "There is some milk in the fridge.",
+      "gloss": "Hay leche en la heladera.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "some-any",
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 2,
+      "ipa": "ðɛɹ ɪz sˌʌm mˈɪlk ɪnðə fɹˈɪdʒ"
+    },
+    {
+      "id": "en1.u4.p.045",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Grammar Tips — some/any"
+      },
+      "text": "There aren't any chairs in the kitchen.",
+      "gloss": "No hay sillas en la cocina.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "some-any",
+        "there-is.negative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 2,
+      "ipa": "ðɛɹ ˌɑːɹnt ˌɛni tʃˈɛɹz ɪnðə kˈɪtʃən"
+    },
+    {
+      "id": "en1.u4.p.046",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerza any en preguntas."
+      },
+      "text": "Have you got any brothers?",
+      "gloss": "¿Tenés hermanos?",
+      "speaker": "narrator",
+      "intonation": "rising",
+      "grammar": [
+        "some-any",
+        "have-got.interrogative"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "ipa": "hæv juː ɡɑːt ˌɛni bɹˈʌðɚz"
+    },
+    {
+      "id": "en1.u4.p.047",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — directions"
+      },
+      "text": "Go over the bridge and turn right.",
+      "gloss": "Cruzá el puente y doblá a la derecha.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "ipa": "ɡˌoʊ ˌoʊvɚ ðə bɹˈɪdʒ ænd tˈɜːn ɹˈaɪt"
+    },
+    {
+      "id": "en1.u4.p.048",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — directions"
+      },
+      "text": "It's between the car park and the shopping centre.",
+      "gloss": "Está entre el estacionamiento y el centro comercial.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "ipa": "ɪts bᵻtwˌiːn ðə kˈɑːɹ pˈɑːɹk ænd ðə ʃˈɑːpɪŋ sˈɛntɚ"
+    },
+    {
+      "id": "en1.u4.p.049",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Grammar Tips — directions"
+      },
+      "text": "Take the first street on the left.",
+      "gloss": "Tomá la primera calle a la izquierda.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "ipa": "tˈeɪk ðə fˈɜːst stɹˈiːt ɔnðə lˈɛft"
+    },
+    {
+      "id": "en1.u4.p.050",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para vocabulario."
+      },
+      "text": "There is a shower in the bathroom.",
+      "gloss": "Hay una ducha en el baño.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðɛɹ ɪz ɐ ʃˈaʊɚɹ ɪnðə bˈæθɹuːm"
+    },
+    {
+      "id": "en1.u4.p.051",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para vocabulario."
+      },
+      "text": "There are books on the shelves.",
+      "gloss": "Hay libros en los estantes.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðɛɹˌɑːɹ bˈʊks ɔnðə ʃˈɛlvz"
+    },
+    {
+      "id": "en1.u4.p.052",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para vocabulario."
+      },
+      "text": "The door is next to the window.",
+      "gloss": "La puerta está al lado de la ventana.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðə dˈoːɹ ɪz nˈɛkst tə ðə wˈɪndoʊ"
+    },
+    {
+      "id": "en1.u4.p.053",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para vocabulario."
+      },
+      "text": "There is a terrace on the top floor.",
+      "gloss": "Hay una terraza en el último piso.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðɛɹ ɪz ɐ tˈɛɹɪs ɔnðə tˈɑːp flˈoːɹ"
+    },
+    {
+      "id": "en1.u4.p.054",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para vocabulario."
+      },
+      "text": "The cups are in the cupboard.",
+      "gloss": "Las tazas están en la alacena.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðə kˈʌps ɑːɹ ɪnðə kˈʌbəd"
+    },
+    {
+      "id": "en1.u4.p.055",
+      "kind": "phrase",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Oración de contexto para vocabulario."
+      },
+      "text": "There is a carpet in the living room.",
+      "gloss": "Hay una alfombra en el living.",
+      "speaker": "narrator",
+      "intonation": "falling",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1,
+      "ipa": "ðɛɹ ɪz ɐ kˈɑːɹpɪt ɪnðə lˈɪvɪŋ ɹˈuːm"
+    },
+    {
+      "id": "en1.u4.pr.001",
+      "kind": "production",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Ejemplo significativo (Centro Cultural Kirchner)"
+      },
+      "prompt": "Describe a place (a building, a cultural centre). Say what there is and what you can do there.",
+      "modelAnswer": "The CCK is the biggest Cultural Centre in Latin America. It is in Buenos Aires. There are five auditoriums, forty rooms and two terraces. There are also coffee shops and restaurants. Its design is French. There is a beautiful statue opposite the building. You can listen to music, have a cup of coffee, see paintings, or just relax there. All events are free.",
+      "modelVariants": [
+        "The museum is in the centre of the city. There are three floors and many rooms. There is a café on the ground floor. You can see paintings and sculptures. There is a shop next to the entrance. It opens at ten and it is free on Sundays.",
+        "The shopping centre is near my house. There are many shops and two restaurants. There is a big car park under the building. You can buy clothes, eat something, or watch a movie. There is a pharmacy on the first floor."
+      ],
+      "rubric": [
+        {
+          "text": "Usa there is / there are",
+          "detect": "\\bthere (is|are)\\b"
+        },
+        {
+          "text": "Usa can para lo que se puede hacer",
+          "detect": "\\byou can\\b"
+        },
+        {
+          "text": "Usa preposiciones de lugar",
+          "detect": "\\b(in|on|next to|opposite|under|near|behind)\\b"
+        },
+        {
+          "text": "Describe el lugar con varios detalles"
+        }
+      ],
+      "speaker": "narrator",
+      "grammar": [
+        "there-is.affirmative",
+        "can.ability",
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 5
+    },
+    {
+      "id": "en1.u4.qa.002",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Links — how much / how many"
+      },
+      "prompt": "How many rooms are there in your flat?",
+      "promptVariants": [
+        "How many chairs are there?"
+      ],
+      "replies": [
+        "There are three.",
+        "Four rooms."
+      ],
+      "speaker": "student",
+      "replySpeaker": "student-m",
+      "grammar": [
+        "how-much-many",
+        "there-is.interrogative"
+      ],
+      "fn": [
+        "ask.existence"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u4.qa.003",
+      "kind": "qa",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Links — how much / how many"
+      },
+      "prompt": "How much is that jacket?",
+      "promptVariants": [
+        "How much is it?"
+      ],
+      "replies": [
+        "It's thirty dollars.",
+        "Thirty-five dollars."
+      ],
+      "speaker": "student",
+      "replySpeaker": "shopkeeper",
+      "grammar": [
+        "how-much-many"
+      ],
+      "fn": [
+        "ask.price"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u4.ex.001",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
+      "prompt": "Complete with there is or there are.",
+      "format": "cloze",
+      "audioViable": "native",
+      "items": [
+        {
+          "stem": "___ six chairs in the dining room.",
+          "blanks": [
+            {
+              "accept": [
+                "There are"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ any shelves in my bedroom.",
+          "blanks": [
+            {
+              "accept": [
+                "There aren't",
+                "There are not"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ museums in the city?",
+          "blanks": [
+            {
+              "accept": [
+                "Are there"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ some books in the library.",
+          "blanks": [
+            {
+              "accept": [
+                "There are"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ a bus station next to the restaurant?",
+          "blanks": [
+            {
+              "accept": [
+                "Is there"
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        "there-is.affirmative",
+        "there-is.negative",
+        "there-is.interrogative"
+      ],
+      "fn": [
+        "describe.place",
+        "ask.existence"
+      ],
+      "topic": [
+        "home",
+        "city"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u4.ex.002",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 2"
+      },
+      "prompt": "Complete the questions with how much or how many.",
+      "format": "cloze",
+      "audioViable": "native",
+      "items": [
+        {
+          "stem": "___ tables are there in your flat?",
+          "blanks": [
+            {
+              "accept": [
+                "How many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ is that jacket?",
+          "blanks": [
+            {
+              "accept": [
+                "How much"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ neighbors have you got?",
+          "blanks": [
+            {
+              "accept": [
+                "How many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ cups of coffee do you want?",
+          "blanks": [
+            {
+              "accept": [
+                "How many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ schools are there in this town?",
+          "blanks": [
+            {
+              "accept": [
+                "How many"
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        "how-much-many"
+      ],
+      "fn": [
+        "ask.existence",
+        "ask.price"
+      ],
+      "topic": [
+        "home",
+        "shopping"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u4.ex.003",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 3"
+      },
+      "prompt": "Complete with some or any.",
+      "format": "cloze",
+      "audioViable": "native",
+      "items": [
+        {
+          "stem": "There are ___ books.",
+          "blanks": [
+            {
+              "accept": [
+                "some"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "There aren't ___ tables.",
+          "blanks": [
+            {
+              "accept": [
+                "any"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Are there ___ beds in this room?",
+          "blanks": [
+            {
+              "accept": [
+                "any"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Are there ___ universities in Madrid?",
+          "blanks": [
+            {
+              "accept": [
+                "any"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "There are ___ nice jackets over there.",
+          "blanks": [
+            {
+              "accept": [
+                "some"
+              ]
+            }
+          ]
+        }
+      ],
+      "grammar": [
+        "some-any",
+        "there-is.affirmative",
+        "there-is.negative",
+        "there-is.interrogative"
+      ],
+      "fn": [
+        "describe.place",
+        "ask.existence"
+      ],
+      "topic": [
+        "home",
+        "shopping"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u4.ex.004",
+      "kind": "exercise",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación 5"
+      },
+      "prompt": "Write a request with can for each situation.",
+      "format": "transform",
+      "audioViable": "native",
+      "items": [
+        {
+          "stem": "You want a student's telephone number.",
+          "answer": {
+            "accept": [
+              "Can you give me your telephone number?",
+              "Can I have your telephone number?"
+            ]
+          }
+        },
+        {
+          "stem": "You want to know the date of the conference.",
+          "answer": {
+            "accept": [
+              "Can you tell me the date of the conference?"
+            ]
+          }
+        },
+        {
+          "stem": "You want the book that he has got.",
+          "answer": {
+            "accept": [
+              "Can you give me your book?",
+              "Can I have the book?"
+            ]
+          }
+        },
+        {
+          "stem": "You call room service for some coffee.",
+          "answer": {
+            "accept": [
+              "Can you bring some coffee?",
+              "Can I have some coffee?"
+            ]
+          }
+        }
+      ],
+      "grammar": [
+        "can.request"
+      ],
+      "fn": [
+        "make-request"
+      ],
+      "topic": [
+        "shopping",
+        "city"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u4.ct.001",
+      "kind": "contrast",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Links — how much / how many"
+      },
+      "pair": [
+        "how much",
+        "how many"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "syntax",
+      "examples": [
+        {
+          "text": "___ is that jacket?",
+          "correct": 0
+        },
+        {
+          "text": "___ chairs are there?",
+          "correct": 1
+        },
+        {
+          "text": "___ coffee do you want?",
+          "correct": 0
+        },
+        {
+          "text": "___ rooms are there?",
+          "correct": 1
+        }
+      ],
+      "grammar": [
+        "how-much-many"
+      ],
+      "fn": [
+        "ask.existence",
+        "ask.price"
+      ],
+      "topic": [
+        "home",
+        "shopping"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u4.ct.002",
+      "kind": "contrast",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación 3"
+      },
+      "pair": [
+        "some",
+        "any"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "syntax",
+      "examples": [
+        {
+          "text": "There are ___ books.",
+          "correct": 0
+        },
+        {
+          "text": "There aren't ___ tables.",
+          "correct": 1
+        },
+        {
+          "text": "Are there ___ beds?",
+          "correct": 1
+        },
+        {
+          "text": "There are ___ nice jackets.",
+          "correct": 0
+        }
+      ],
+      "grammar": [
+        "some-any"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home",
+        "shopping"
+      ],
+      "difficulty": 3
+    },
+    {
+      "id": "en1.u4.ct.003",
+      "kind": "contrast",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Grammar Tips — there is/are"
+      },
+      "pair": [
+        "there is",
+        "there are"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "syntax",
+      "examples": [
+        {
+          "text": "___ a sofa in the room.",
+          "correct": 0
+        },
+        {
+          "text": "___ six chairs here.",
+          "correct": 1
+        },
+        {
+          "text": "___ a pharmacy near the square.",
+          "correct": 0
+        },
+        {
+          "text": "___ some books on the shelf.",
+          "correct": 1
+        }
+      ],
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 2
+    },
+    {
+      "id": "en1.u4.ls.001",
+      "kind": "listening",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "La narrativa NO está en el material (link ausente). Escrita con léxico de la U4, consistente con la grilla: 4 sillas en el living, sí hay heladera, 3 dormitorios.",
+        "page": 15,
+        "section": "Listening Comprehension 4"
+      },
+      "narrative": "Welcome to my house. This is the living room. There are four chairs and a big sofa. There is a television on the wall. Next to the living room there is the kitchen. In the kitchen there is a fridge and a washing machine. There are three bedrooms upstairs. There is a bathroom next to my bedroom. In the garden there are some flowers and a small table. I love my house.",
+      "speaker": "narrator",
+      "questions": [
+        {
+          "q": "How many chairs are there in the living room?",
+          "accept": [
+            "There are four.",
+            "Four."
+          ]
+        },
+        {
+          "q": "Is there a fridge in the kitchen?",
+          "accept": [
+            "Yes, there is.",
+            "Yes."
+          ]
+        },
+        {
+          "q": "How many bedrooms are there?",
+          "accept": [
+            "There are three.",
+            "Three."
+          ]
+        }
+      ],
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place",
+        "how-much-many"
+      ],
+      "fn": [
+        "describe.place",
+        "ask.existence"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 4
+    },
+    {
+      "id": "en1.u4.pr.002",
+      "kind": "production",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Actividad de cierre — Composition My Life Chapter 4"
+      },
+      "prompt": "COMPOSITION: MY LIFE: CHAPTER 4. Describe the place where you live. Mention your house and your town or city.",
+      "chapter": 4,
+      "modelAnswer": "I live in a small apartment in the city. There is a living room, a kitchen and two bedrooms. There is a big window in the living room and there is a balcony. My town is nice. There is a square near my house and there is a pharmacy next to it. There are many shops and restaurants. You can walk everywhere. I love the place where I live.",
+      "modelVariants": [
+        "I live in a big house with a garden. There are three bedrooms and two bathrooms. There is a garage next to the kitchen. My city is very big. There is a river and there are many parks. You can go running or ride a bike there."
+      ],
+      "rubric": [
+        {
+          "text": "Usa there is / there are",
+          "detect": "\\bthere (is|are)\\b"
+        },
+        {
+          "text": "Usa preposiciones de lugar",
+          "detect": "\\b(in|on|next to|near|opposite|behind)\\b"
+        },
+        {
+          "text": "Menciona la casa y la ciudad",
+          "detect": "\\b(house|apartment|flat|town|city)\\b"
+        },
+        {
+          "text": "Describe el lugar con varios detalles"
+        }
+      ],
+      "speaker": "examiner",
+      "grammar": [
+        "there-is.affirmative",
+        "prepositions.place",
+        "can.ability"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home",
+        "city"
+      ],
+      "difficulty": 5
+    },
+    {
+      "id": "en1.u4.lx.009",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "window",
+      "pos": "noun",
+      "gloss": "ventana",
+      "examplePhraseId": "en1.u4.p.001",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.lx.010",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "paintings",
+      "pos": "noun",
+      "gloss": "cuadros",
+      "examplePhraseId": "en1.u4.p.021",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.lx.011",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "museum",
+      "pos": "noun",
+      "gloss": "museo",
+      "examplePhraseId": "en1.u4.p.028",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.lx.012",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "library",
+      "pos": "noun",
+      "gloss": "biblioteca",
+      "examplePhraseId": "en1.u4.p.027",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.lx.013",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "chair",
+      "pos": "noun",
+      "gloss": "silla",
+      "examplePhraseId": "en1.u4.p.026",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.lx.014",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "mirror",
+      "pos": "noun",
+      "gloss": "espejo",
+      "examplePhraseId": "en1.u4.p.035",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.lx.015",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "square",
+      "pos": "noun",
+      "gloss": "plaza",
+      "examplePhraseId": "en1.u4.p.041",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.lx.016",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "shower",
+      "pos": "noun",
+      "gloss": "ducha",
+      "examplePhraseId": "en1.u4.p.050",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.lx.017",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "shelves",
+      "pos": "noun",
+      "gloss": "estantes",
+      "examplePhraseId": "en1.u4.p.051",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.lx.018",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "door",
+      "pos": "noun",
+      "gloss": "puerta",
+      "examplePhraseId": "en1.u4.p.052",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.lx.019",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "terrace",
+      "pos": "noun",
+      "gloss": "terraza",
+      "examplePhraseId": "en1.u4.p.053",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.lx.020",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "cupboard",
+      "pos": "noun",
+      "gloss": "alacena",
+      "examplePhraseId": "en1.u4.p.054",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    },
+    {
+      "id": "en1.u4.lx.021",
+      "kind": "lexeme",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Words and phrases to learn"
+      },
+      "word": "carpet",
+      "pos": "noun",
+      "gloss": "alfombra",
+      "examplePhraseId": "en1.u4.p.055",
+      "focus": "translation",
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 1
+    }
+  ]
+}

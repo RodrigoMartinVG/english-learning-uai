@@ -177,6 +177,23 @@
       }
     },
     {
+      "id": "shopkeeper",
+      "displayName": "Vendedor/a",
+      "bio": "Atiende en la tienda (U4). Diálogo de compras: talles, precios.",
+      "accent": "en-US",
+      "gender": "female",
+      "fallbackHint": [
+        "Aoede",
+        "Aria",
+        "Zira"
+      ],
+      "rate": 0.92,
+      "voice": {
+        "kokoro": "af_aoede",
+        "azure": "en-US-SaraNeural"
+      }
+    },
+    {
       "id": "narrator",
       "displayName": "Narrador",
       "bio": "Voz de los Listening Comprehension y de los textos de 'Ejemplo significativo'. Neutra y clara.",
