@@ -5,17 +5,23 @@
 >
 > Convención de estado: ✅ hecho · 🔨 en curso · ⬜ pendiente · 💡 idea/deseable
 
-Última actualización: 2026-07-17.
+Última actualización: 2026-07-18.
 
 ---
 
 ## Dónde estamos (resumen)
 
-**Inglés I está completo: las 4 unidades** (Bienvenida, Estilo de vida, Gente, Lugares), jugables de punta a punta. La Unidad 1: 91 átomos, 13 aspectos, **12 mecánicas**
-cubriendo los 5 niveles de la escalera (percepción → producción), audio neuronal local (Kokoro,
-sin key), micrófono, repetición espaciada (FSRS) con persistencia, y diagnóstico de errores.
+**Inglés I está completo: las 4 unidades** (Bienvenida, Estilo de vida, Gente, Lugares), jugables
+de punta a punta. ~316 átomos, **12 mecánicas** cubriendo los 5 niveles de la escalera
+(percepción → producción), audio neuronal local (Kokoro, sin key) con voces alternativas e IPA,
+micrófono, repetición espaciada (FSRS) con persistencia, diagnóstico de errores, y guía de
+expresiones por unidad. 38 tests, `validate` y `audit` en verde.
 
-Lo que sigue, en una línea: **cerrar la deuda de la Unidad 1 y probar el diseño con la Unidad 2.**
+**El diseño se probó cuatro veces:** cada unidad entró sin tocar `src/` (el schema ya preveía los
+tags, y el contenido se auto-descubre). Agregar Inglés II/III/IV es el mismo pipeline.
+
+Lo que sigue, en una línea: **poder usarlo de verdad — el deploy (§5.1) es lo que falta para
+estudiar desde el celular.**
 
 ---
 
