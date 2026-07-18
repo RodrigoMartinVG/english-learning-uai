@@ -80,6 +80,20 @@ historial; resumen técnico:
 - **Depende de 1.4** (IPA / silabificación del objetivo). ✅ El IPA por frase ya existe; falta la silabificación por palabra (la puede hacer Azure al alinear).
 - **Estado:** pendiente deseable. No bloquea nada.
 
+### 4.3 💡 Entonación de preguntas de sí/no (limitación de Kokoro)
+
+**Confirmado con medición.** Kokoro no sube el tono en las preguntas de sí/no ("Are you free
+now?", "Have you got…?"), donde el inglés debe subir. Las preguntas con Wh- sí bajan, y eso es
+correcto. Kokoro no tiene control de prosodia (a diferencia de Azure/SSML).
+
+- Ya tenemos la data: ~27 frases marcadas `intonation: 'rising'` en las 3 unidades.
+- Medido (af_heart): "Are you free now?" termina en 195Hz contra 214Hz en el medio → baja en vez
+  de subir.
+- **Dos arreglos posibles:** (a) DSP local — subir el tono de la última parte de las frases
+  `rising` (sin key, pero riesgo de sonar artificial; hay que escucharlo antes de aplicarlo);
+  (b) Azure — regenerar solo esas ~27 frases con Azure, que hace bien la entonación (necesita key).
+- **Estado:** anotado, no bloquea. Decidir DSP vs Azure más adelante.
+
 ### 4.2 💡 Escuchar la misma frase en más acentos (no nativos)
 
 Hoy las voces alternativas son US/GB (límite de Kokoro). Acentos no nativos (Pedro portugués,
