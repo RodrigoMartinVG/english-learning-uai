@@ -1,7 +1,9 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useAudio } from '../../audio/AudioProvider.tsx';
 import { played } from '../../audio/AudioService.ts';
 import { SpeakPanel } from '../../ui/SpeakPanel.tsx';
+import { LiveDictation } from '../../ui/LiveDictation.tsx';
+import { contentWords } from '../../engine/grading/speech.ts';
 import { speakerById } from '../../data/content.ts';
 import type { MechanicViewProps } from '../types.ts';
 import type { RolePlayRound } from './mechanic.ts';
@@ -11,7 +13,11 @@ export function RolePlayView({ round, onDone }: MechanicViewProps<RolePlayRound>
   const audio = useAudio();
   const [i, setI] = useState(0);
   const [ok, setOk] = useState<boolean[]>([]);
+  const [improv, setImprov] = useState(false);
+  const [didImprov, setDidImprov] = useState(false);
   const log = useRef<HTMLDivElement>(null);
+  // Vocabulario del diálogo, para el verde cuando improvisás.
+  const expected = useMemo(() => contentWords(round.neighbourhood.join(' ')), [round]);
 
   const me = speakerById.get(round.myRole);
   const partner = speakerById.get(round.partner);
@@ -59,6 +65,12 @@ export function RolePlayView({ round, onDone }: MechanicViewProps<RolePlayRound>
           Sos <strong>{me?.displayName ?? round.myRole}</strong> · habla{' '}
           {partner?.displayName ?? round.partner}
         </p>
+        <label className="rp__toggle">
+          <input type="checkbox" checked={improv} onChange={(e) => setImprov(e.target.checked)} />
+          <span>
+            Improvisar mis turnos <em>— respondé con tus palabras; se transcribe en vivo</em>
+          </span>
+        </label>
       </div>
 
       <div className="rp__log" ref={log}>
@@ -84,20 +96,43 @@ export function RolePlayView({ round, onDone }: MechanicViewProps<RolePlayRound>
 
       {turn && turn.mine && (
         <div className="rp__mine">
-          {/* Tu línea SÍ se muestra: es role-play guiado, no improvisación.
-              La improvisación sin guion es el Examen oral. */}
-          <p className="rp__cue">{turn.phrase.text}</p>
-          <SpeakPanel
-            key={i}
-            targets={[turn.phrase.text]}
-            neighbourhood={round.neighbourhood}
-            lang={me?.accent ?? 'en-US'}
-            onPlayReference={() => void say(turn.phrase.id, turn.phrase.text, turn.speaker)}
-            onDone={(correct) => {
-              setOk((r) => [...r, correct]);
-              setI((n) => n + 1);
-            }}
-          />
+          {improv ? (
+            <>
+              {/* Improvisás: respondés con tus palabras. La línea del guion queda como
+                  pista opcional, no como objetivo. */}
+              <details className="rp__peek">
+                <summary>Ver la línea sugerida</summary>
+                <p className="rp__cue">{turn.phrase.text}</p>
+              </details>
+              <LiveDictation
+                key={i}
+                expected={expected}
+                lang={me?.accent ?? 'en-US'}
+                onDone={(r) => {
+                  r.recording?.revoke();
+                  setDidImprov(true);
+                  setOk((o) => [...o, true]);
+                  setI((n) => n + 1);
+                }}
+              />
+            </>
+          ) : (
+            <>
+              {/* Guiado: tu línea se muestra y se coteja contra el guion. */}
+              <p className="rp__cue">{turn.phrase.text}</p>
+              <SpeakPanel
+                key={i}
+                targets={[turn.phrase.text]}
+                neighbourhood={round.neighbourhood}
+                lang={me?.accent ?? 'en-US'}
+                onPlayReference={() => void say(turn.phrase.id, turn.phrase.text, turn.speaker)}
+                onDone={(correct) => {
+                  setOk((r) => [...r, correct]);
+                  setI((n) => n + 1);
+                }}
+              />
+            </>
+          )}
         </div>
       )}
 
@@ -105,7 +140,9 @@ export function RolePlayView({ round, onDone }: MechanicViewProps<RolePlayRound>
         <div className="expansion">
           <p className="verdict verdict--ok">Conversación completa</p>
           <p className="expansion__gloss">
-            {ok.filter(Boolean).length} de {ok.length} de tus líneas salieron como el guion.
+            {didImprov
+              ? 'Improvisaste tus turnos y sostuviste la conversación.'
+              : `${ok.filter(Boolean).length} de ${ok.length} de tus líneas salieron como el guion.`}
           </p>
           <button
             className="btn btn--primary btn--wide"

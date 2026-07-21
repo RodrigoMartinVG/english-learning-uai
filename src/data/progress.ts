@@ -187,6 +187,78 @@ export function weakestAtoms(limit = 12): string[] {
     .map(([id]) => id);
 }
 
+/**
+ * Cobertura por átomo: cuántos ya PRACTICASTE (tienen tarjeta) y cuántos DOMINÁS
+ * (estabilidad ≥ 21 días), sobre el total. Cuenta átomos distintos, no tarjetas —
+ * así el progreso por tema se lee 1:1 con los átomos y avanza apenas practicás,
+ * en vez de quedarse en 0 hasta dominar (que lleva repeticiones espaciadas).
+ */
+export function coverageOf(atomIds: string[]): { started: number; learned: number; total: number } {
+  const ids = new Set(atomIds);
+  const started = new Set<string>();
+  const learned = new Set<string>();
+  for (const [k, c] of Object.entries(store.cards)) {
+    const atomId = k.split('|')[0]!;
+    if (!ids.has(atomId)) continue;
+    started.add(atomId);
+    if (c.stability >= LEARNED_DAYS) learned.add(atomId);
+  }
+  return { started: started.size, learned: learned.size, total: atomIds.length };
+}
+
+/** El estado de UN átomo, agregando todas sus tarjetas (percepción, producción…). */
+export interface AtomProgress {
+  started: boolean;
+  reps: number;
+  lapses: number;
+  due: boolean;
+  mastered: boolean;
+}
+
+/**
+ * Estado de UN átomo en UNA habilidad, agregando sus variantes. La memoria se
+ * lleva por (átomo, habilidad): varios modos de la misma habilidad comparten
+ * tarjeta (Shadowing y "Al oído · decir" son ambos producción). Devuelve la misma
+ * clase que usa el punto del desglose: 'new' | 'prog' | 'due' | 'ok'.
+ */
+export function skillStateOf(
+  atomId: string,
+  skill: Skill,
+  now = new Date()
+): 'new' | 'prog' | 'due' | 'ok' {
+  let started = false;
+  let due = false;
+  let mastered = false;
+  for (const [k, c] of Object.entries(store.cards)) {
+    const [aid, sk] = k.split('|');
+    if (aid !== atomId || sk !== skill) continue;
+    started = true;
+    if (isDue(c, now)) due = true;
+    if (c.stability >= LEARNED_DAYS) mastered = true;
+  }
+  if (!started) return 'new';
+  if (mastered) return 'ok';
+  return due ? 'due' : 'prog';
+}
+
+/** Progreso detallado de un átomo, para el desglose por ítem del tema. */
+export function atomProgress(atomId: string, now = new Date()): AtomProgress {
+  let started = false;
+  let reps = 0;
+  let lapses = 0;
+  let due = false;
+  let mastered = false;
+  for (const [k, c] of Object.entries(store.cards)) {
+    if (k.split('|')[0] !== atomId) continue;
+    started = true;
+    reps += c.reps;
+    lapses += c.lapses;
+    if (isDue(c, now)) due = true;
+    if (c.stability >= LEARNED_DAYS) mastered = true;
+  }
+  return { started, reps, lapses, due, mastered };
+}
+
 /** Cuántas tarjetas de estos átomos ya se saben. Para el progreso por aspecto. */
 export function progressOf(atomIds: string[], now = new Date()): Stats {
   const ids = new Set(atomIds);

@@ -263,7 +263,11 @@
         "workplace"
       ],
       "difficulty": 1,
-      "ipa": "jˈɛs aɪ hˈæv"
+      "ipa": "jˈɛs aɪ hˈæv",
+      "alternatives": [
+        "Yes, of course.",
+        "Sure, I have."
+      ]
     },
     {
       "id": "en1.u3.p.005",
@@ -1127,7 +1131,8 @@
       },
       "prompt": "How often do you play tennis?",
       "promptVariants": [
-        "How often does she play tennis?"
+        "How often does she play tennis?",
+        "When do you usually play tennis?"
       ],
       "replies": [
         "On Mondays.",
@@ -1160,10 +1165,15 @@
         "section": "Grammar Tips — frequency adverbs"
       },
       "prompt": "How often do you visit your family?",
-      "promptVariants": [],
+      "promptVariants": [
+        "How often do you see your family?",
+        "Do you visit your family often?"
+      ],
       "replies": [
         "Once a week.",
-        "Every weekend."
+        "Every weekend.",
+        "Once a month.",
+        "Almost every day."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -1192,7 +1202,8 @@
       },
       "prompt": "Have you got any brothers or sisters?",
       "promptVariants": [
-        "Have you got a big family?"
+        "Have you got a big family?",
+        "Do you have any siblings?"
       ],
       "replies": [
         "Yes, I have got two sisters.",
@@ -1225,11 +1236,14 @@
       },
       "prompt": "Has your family got a car?",
       "promptVariants": [
-        "Has he got a car?"
+        "Has he got a car?",
+        "Do they have a car?"
       ],
       "replies": [
         "Yes, they have.",
-        "No, they haven't."
+        "No, they haven't.",
+        "Yes, they've got two.",
+        "No, they use the bus."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -1291,7 +1305,8 @@
       },
       "prompt": "Is there a restaurant near here?",
       "promptVariants": [
-        "Is there a cinema near here?"
+        "Is there a cinema near here?",
+        "Is there a good place to eat nearby?"
       ],
       "replies": [
         "Yes, near the Colon Theatre.",
@@ -1325,7 +1340,8 @@
       },
       "prompt": "How often does she go to the cinema?",
       "promptVariants": [
-        "How often do they go out?"
+        "How often do they go out?",
+        "How often does she watch films?"
       ],
       "replies": [
         "Twice a week.",
@@ -1819,7 +1835,25 @@
       "topic": [
         "family"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "steps": [
+        {
+          "prompt": "How big is Bill's family?",
+          "segment": "Bill has got a big family."
+        },
+        {
+          "prompt": "What does his father do?",
+          "segment": "His father is an actor and his name is Stellan."
+        },
+        {
+          "prompt": "How many brothers and sisters has he got?",
+          "segment": "He has got four brothers: Alexander, Gustaf, Valter and Sam, and one sister called Eija."
+        },
+        {
+          "prompt": "Where do they live, and how often does Bill visit?",
+          "segment": "They all live together in a big house, and Bill often visits his family."
+        }
+      ]
     },
     {
       "id": "en1.u3.ex.001",
@@ -2234,7 +2268,333 @@
       "topic": [
         "family"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "steps": [
+        {
+          "prompt": "How big is your family?",
+          "segment": "I have got a big family."
+        },
+        {
+          "prompt": "What do your parents do?",
+          "segment": "My father is a teacher and my mother is a doctor."
+        },
+        {
+          "prompt": "How many brothers and sisters have you got?",
+          "segment": "I have got two sisters and one brother."
+        },
+        {
+          "prompt": "Describe your brother and your sisters.",
+          "segment": "My brother is very friendly and he plays football. My sisters are students."
+        },
+        {
+          "prompt": "Any other family members or pets?",
+          "segment": "We have got a dog too. My grandmother lives near us and we visit her once a week."
+        },
+        {
+          "prompt": "Why is your family important to you?",
+          "segment": "My family is very important to me."
+        }
+      ]
+    },
+    {
+      "id": "en1.u3.pr.003",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Produccion nuestra (cierra nivel 5)."
+      },
+      "grammar": [
+        "have-got.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 5,
+      "kind": "production",
+      "prompt": "Say three things your family hasn't got.",
+      "modelAnswer": "My family hasn't got a car. My brother hasn't got a dog. We haven't got a garden.",
+      "rubric": [
+        {
+          "text": "Usás la forma negativa (hasn't / haven't got)",
+          "detect": "hasn'?t|haven'?t|has not|have not"
+        },
+        {
+          "text": "Das tres cosas"
+        },
+        {
+          "text": "Mencionás a distintos miembros de la familia",
+          "detect": "family|brother|sister|mother|father|parents|\\bwe\\b"
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "My family hasn't got a big house. My sister hasn't got a bike. We haven't got a swimming pool."
+      ],
+      "scaffold": [
+        "Say the first thing your family hasn't got.",
+        "Say the second thing.",
+        "And the third thing."
+      ],
+      "steps": [
+        {
+          "prompt": "Say the first thing your family hasn't got.",
+          "segment": "My family hasn't got a car."
+        },
+        {
+          "prompt": "Say the second thing.",
+          "segment": "My brother hasn't got a dog."
+        },
+        {
+          "prompt": "And the third thing.",
+          "segment": "We haven't got a garden."
+        }
+      ]
+    },
+    {
+      "id": "en1.u3.p.039",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "have-got.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "She hasn't got a laptop.",
+      "gloss": "No tiene una laptop.",
+      "speaker": "narrator",
+      "ipa": "ʃiː hˈæzənt ɡɑːt ɐ lˈæptɑːp"
+    },
+    {
+      "id": "en1.u3.p.040",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "have-got.interrogative"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Has he got any children?",
+      "gloss": "Tiene hijos?",
+      "speaker": "narrator",
+      "ipa": "hɐz hiː ɡɑːt ˌɛni tʃˈɪldɹən"
+    },
+    {
+      "id": "en1.u3.p.041",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "prepositions.time",
+        "time.at"
+      ],
+      "fn": [
+        "ask.time"
+      ],
+      "topic": [
+        "time"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "The meeting is at three o'clock on Friday.",
+      "gloss": "La reunion es a las tres en punto el viernes.",
+      "speaker": "narrator",
+      "ipa": "ðə mˈiːɾɪŋ ɪz æt θɹˈiː əklˈɑːk ˌɔn fɹˈaɪdeɪ"
+    },
+    {
+      "id": "en1.u3.lx.008",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "workplace"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "desk",
+      "pos": "noun",
+      "gloss": "escritorio",
+      "examplePhraseId": "en1.u3.p.001",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u3.lx.009",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "frequency-adverbs",
+        "how-often"
+      ],
+      "fn": [
+        "ask.frequency"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "twice",
+      "pos": "adverb",
+      "gloss": "dos veces",
+      "examplePhraseId": "en1.u3.p.025",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u3.lx.010",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "prepositions.time"
+      ],
+      "fn": [
+        "ask.time"
+      ],
+      "topic": [
+        "time"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "on",
+      "pos": "preposition",
+      "gloss": "en / los (con dias: on Mondays)",
+      "examplePhraseId": "en1.u3.p.033",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u3.lx.011",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "arrangements"
+      ],
+      "fn": [
+        "propose-plan"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "free",
+      "pos": "adjective",
+      "gloss": "libre, disponible",
+      "examplePhraseId": "en1.u3.p.007",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u3.ct.003",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par minimo nuestro para entrenar el sonido."
+      },
+      "grammar": [
+        "have-got.negative"
+      ],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "kind": "contrast",
+      "pair": [
+        "car",
+        "care"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "They haven't got a ___.",
+          "correct": 0
+        },
+        {
+          "text": "I take ___ of my sister.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en1.u3.ct.004",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par minimo nuestro para entrenar el sonido."
+      },
+      "grammar": [
+        "have-got.interrogative"
+      ],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "kind": "contrast",
+      "pair": [
+        "got",
+        "goat"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "Have you ___ a brother?",
+          "correct": 0
+        },
+        {
+          "text": "The farm has a ___.",
+          "correct": 1
+        }
+      ]
     }
   ]
 }

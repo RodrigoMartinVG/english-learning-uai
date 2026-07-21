@@ -1,0 +1,1510 @@
+{
+  "$schema": "../unit.schema.json",
+  "course": "en1",
+  "unit": 6,
+  "title": "Examen oral — Preparación",
+  "goals": [
+    "Preparate para el Speaking Test de Inglés I: exposición de un texto, datos personales y profundización.",
+    "Paso 1: exponé uno de los textos de matemática de la Unidad 5. Pasos 2 y 3: preguntas con respuesta modelo y variantes para practicar con Ping-Pong."
+  ],
+  "aspects": [
+    {
+      "id": "step1-presentacion",
+      "title": "Paso 1 — Exponé un texto (1–1½ min)",
+      "summary": "Preparás y grabás tu exposición oral sobre uno de los textos de matemática de la Unidad 5: título, tema, ideas principales, un ejemplo y la conclusión.",
+      "order": 1,
+      "match": {
+        "textId": [
+          "presentacion"
+        ]
+      },
+      "source": {
+        "section": "Step 1"
+      }
+    },
+    {
+      "id": "step2-datos",
+      "title": "Paso 2 — Datos personales",
+      "summary": "Las preguntas de datos personales del examen, con respuestas y variantes.",
+      "order": 2,
+      "match": {
+        "textId": [
+          "datos"
+        ]
+      },
+      "source": {
+        "section": "Step 2"
+      }
+    },
+    {
+      "id": "step3-profundizacion",
+      "title": "Paso 3 — Profundización",
+      "summary": "Las preguntas de profundización: familia, barrio, rutinas, frecuencia y más.",
+      "order": 3,
+      "match": {
+        "textId": [
+          "profundizacion"
+        ]
+      },
+      "source": {
+        "section": "Step 3"
+      }
+    },
+    {
+      "id": "step4-frases",
+      "title": "Frases útiles del examen",
+      "summary": "Pedí que repitan, ganá tiempo, decí que no sabés una palabra, saludá y cerrá con naturalidad.",
+      "order": 4,
+      "match": {
+        "textId": [
+          "examphrases"
+        ]
+      },
+      "source": {
+        "section": "Toolkit"
+      }
+    }
+  ],
+  "atoms": [
+    {
+      "id": "en1.u6.p.001",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de apoyo para abrir la exposicion de un texto."
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "presentacion",
+      "kind": "phrase",
+      "text": "Today I'm going to talk about a text called 'What is a square?'.",
+      "gloss": "Hoy voy a hablar de un texto llamado '¿Qué es un cuadrado?'.",
+      "speaker": "narrator",
+      "ipa": "tədˈeɪ aɪm ɡˌoʊɪŋ tə tˈɔːk ɐbˌaʊt ɐ tˈɛkst kˈɔːld wʌt ɪz ɐ skwˈɛɹ"
+    },
+    {
+      "id": "en1.u6.p.002",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de apoyo para explicar el tema del texto."
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "presentacion",
+      "kind": "phrase",
+      "text": "The text explains what a square is and what happens on curved surfaces.",
+      "gloss": "El texto explica qué es un cuadrado y qué pasa en superficies curvas.",
+      "speaker": "narrator",
+      "ipa": "ðə tˈɛkst ɛksplˈeɪnz wʌt ɐ skwˈɛɹ ɪz ænd wʌt hˈæpənz ˌɔn kˈɜːvd sˈɜːfɪsᵻz"
+    },
+    {
+      "id": "en1.u6.p.003",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de apoyo para cerrar la exposicion."
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "presentacion",
+      "kind": "phrase",
+      "text": "In conclusion, that's the main idea of the text. Thank you.",
+      "gloss": "En conclusión, esa es la idea principal del texto. Gracias.",
+      "speaker": "narrator",
+      "ipa": "ɪn kəŋklˈuːʒən ðæts ðə mˈeɪn aɪdˈiə ʌvðə tˈɛkst θˈæŋk juː"
+    },
+    {
+      "id": "en1.u6.pr.001",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Exposicion oral del Paso 1 del Speaking Test (1-1.5 min): presentar uno de los textos de la Unidad 5. El modelo usa 'What is a square?'."
+      },
+      "grammar": [
+        "be.present.affirmative",
+        "present-simple.affirmative",
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 5,
+      "textId": "presentacion",
+      "kind": "production",
+      "prompt": "Present one of the maths texts from Unit 5 for one to one-and-a-half minutes, as in the oral exam (Step 1): title, topic, main ideas, an example and a conclusion.",
+      "modelAnswer": "Today I'm going to talk about a text called 'What is a square?', by Hannah Darken. The text is about the definition of a square and how it changes on curved surfaces. First, it explains that on a flat surface, a shape with four equal sides and four right angles is a square. Then it introduces curvature: a plane is flat, a sphere curves outward, and a saddle has negative curvature. For example, on a sphere you can draw a triangle with three right angles that add up to two hundred and seventy degrees. On a pseudosphere, you can even draw shapes with equal sides and right angles that have more than four sides. In conclusion, equal sides and right angles do not always make a square: it all depends on the curvature of the space. That's my presentation. Thank you.",
+      "modelVariants": [
+        "Today I'm going to talk about a text called 'Should people learn maths until age 18?'. The text argues that everyone should study maths until eighteen. First, it says maths opens doors to many careers, because it is the language of science and technology. Then it explains that maths is useful for everyday life: it helps us make informed decisions and understand statistics. The text also says maths teaches transferable skills, like problem-solving and healthy skepticism. In conclusion, learning maths until eighteen widens opportunities and develops skills for life. Thank you.",
+        "Today I'm going to talk about an interview called 'Why 2 Is the Best Number', from Scientific American. It is about a mathematician, Melanie Wood, who works in number theory. She explains that her job is to invent new methods, not just to apply them. Her tools are looking at many examples, finding patterns, and learning from her mistakes. Her favourite number is two, because it is simple but powerful: it creates the idea of even and odd numbers. In conclusion, the text shows that mathematics also needs creativity. Thank you."
+      ],
+      "scaffold": [
+        "Decí el título del texto y de qué trata.",
+        "Presentá la idea principal.",
+        "Explicá los puntos o secciones clave, en orden.",
+        "Dá un ejemplo del texto.",
+        "Cerrá con la conclusión o tu opinión, y agradecé."
+      ],
+      "steps": [
+        {
+          "prompt": "What is the title of the text and what is it about?",
+          "segment": "Today I'm going to talk about a text called 'What is a square?'. It is about the definition of a square and how it changes on curved surfaces."
+        },
+        {
+          "prompt": "What is the main idea?",
+          "segment": "On a flat surface, a shape with four equal sides and four right angles is a square."
+        },
+        {
+          "prompt": "What are the key points?",
+          "segment": "The text explains curvature: a plane is flat, a sphere curves outward, and a saddle has negative curvature."
+        },
+        {
+          "prompt": "Can you give an example from the text?",
+          "segment": "For example, on a sphere you can draw a triangle with three right angles that add up to two hundred and seventy degrees."
+        },
+        {
+          "prompt": "What is the conclusion or your opinion?",
+          "segment": "In conclusion, equal sides and right angles do not always make a square: it depends on the curvature of the space."
+        }
+      ],
+      "rubric": [
+        {
+          "text": "Decís el título del texto",
+          "detect": "\\b(text|title|called)\\b"
+        },
+        {
+          "text": "Decís de qué trata",
+          "detect": "\\babout\\b"
+        },
+        {
+          "text": "Explicás los puntos principales en orden",
+          "detect": "\\b(first|then|explains|main)\\b"
+        },
+        {
+          "text": "Das un ejemplo",
+          "detect": "\\bexample\\b"
+        },
+        {
+          "text": "Cerrás con una conclusión",
+          "detect": "\\b(conclusion|opinion)\\b"
+        }
+      ],
+      "speaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.001",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.name"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 3,
+      "textId": "datos",
+      "kind": "qa",
+      "prompt": "What's your surname?",
+      "promptVariants": [
+        "What is your family name?",
+        "Could you tell me your surname?"
+      ],
+      "replies": [
+        "My surname is Garcia.",
+        "It's Garcia, G-A-R-C-I-A.",
+        "Garcia. It's a Spanish surname.",
+        "My family name is Martinez.",
+        "It's Rossi, an Italian surname."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.002",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "spelling.alphabet",
+        "can.request"
+      ],
+      "fn": [
+        "ask.spelling"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 3,
+      "textId": "datos",
+      "kind": "qa",
+      "prompt": "Can you spell it, please?",
+      "promptVariants": [
+        "How do you spell it?",
+        "Could you spell your surname?"
+      ],
+      "replies": [
+        "Yes, of course: G-A-R-C-I-A.",
+        "Sure, it's G-A-R-C-I-A.",
+        "G, A, R, C, I, A.",
+        "It's M-A-R-T-I-N-E-Z.",
+        "Of course. R, O, S, S, I. Rossi."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.003",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "be.present.interrogative",
+        "numbers.cardinal"
+      ],
+      "fn": [
+        "ask.age"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 3,
+      "textId": "datos",
+      "kind": "qa",
+      "prompt": "How old are you?",
+      "promptVariants": [
+        "What's your age?",
+        "Can I ask how old you are?"
+      ],
+      "replies": [
+        "I am twenty-five years old.",
+        "I'm twenty-five.",
+        "Twenty-five.",
+        "I've just turned thirty.",
+        "I'm nineteen years old."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.004",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "ask.origin"
+      ],
+      "topic": [
+        "origin_nationality"
+      ],
+      "difficulty": 3,
+      "textId": "datos",
+      "kind": "qa",
+      "prompt": "Where are you from?",
+      "promptVariants": [
+        "Where do you come from?",
+        "What's your hometown?"
+      ],
+      "replies": [
+        "I am from Rosario, in Argentina.",
+        "I'm from Argentina.",
+        "I come from Rosario, a city in the centre of the country.",
+        "I'm Argentinian. I'm from Cordoba.",
+        "Originally, I'm from a small town near Buenos Aires."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.005",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "numbers.cardinal"
+      ],
+      "fn": [
+        "ask.address"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 4,
+      "textId": "datos",
+      "kind": "qa",
+      "prompt": "What's your telephone number, email or street address?",
+      "promptVariants": [
+        "Can you give me your phone number?",
+        "What's your address?"
+      ],
+      "replies": [
+        "My telephone number is three four one, five five five, one two three four.",
+        "My email is ana at example dot com.",
+        "I live at twelve Lamont Avenue.",
+        "My address is forty-five Green Street, flat three.",
+        "My mobile number is one one, five five five, six seven eight nine."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.006",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "be.present.interrogative",
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.occupation"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 3,
+      "textId": "datos",
+      "kind": "qa",
+      "prompt": "What's your job?",
+      "promptVariants": [
+        "What do you do?",
+        "What's your occupation?"
+      ],
+      "replies": [
+        "I am a student.",
+        "I'm a shop assistant.",
+        "I work as a nurse in a hospital.",
+        "I'm an engineer, and I really like my job.",
+        "I don't work at the moment; I'm still studying."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.007",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "be.present.interrogative",
+        "be.present.short-answer"
+      ],
+      "fn": [
+        "ask.marital-status"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 3,
+      "textId": "datos",
+      "kind": "qa",
+      "prompt": "Are you married?",
+      "promptVariants": [
+        "What's your marital status?",
+        "Have you got a partner?"
+      ],
+      "replies": [
+        "No, I'm single.",
+        "Yes, I am married.",
+        "No, I'm not. I'm single.",
+        "I'm divorced.",
+        "No, but I've got a partner."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.008",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "have-got.interrogative",
+        "have-has"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 3,
+      "textId": "datos",
+      "kind": "qa",
+      "prompt": "Do you have any brothers or sisters?",
+      "promptVariants": [
+        "Have you got any siblings?",
+        "How many brothers and sisters have you got?"
+      ],
+      "replies": [
+        "Yes, I have got two sisters and a brother.",
+        "No, I'm an only child.",
+        "Yes, I have one brother.",
+        "I've got a younger sister and an older brother.",
+        "Yes, three: two brothers and a sister."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.009",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.address"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 3,
+      "textId": "datos",
+      "kind": "qa",
+      "prompt": "Do you live in a big house?",
+      "promptVariants": [
+        "Do you live in a house or a flat?",
+        "Is your house big?"
+      ],
+      "replies": [
+        "No, I live in a small apartment.",
+        "Yes, I live in a big house.",
+        "I live in a flat near the centre.",
+        "No, it's a small flat, but it's very cosy.",
+        "Yes, we have a big house with a garden."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.010",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "textId": "datos",
+      "kind": "qa",
+      "prompt": "Can you play a musical instrument? What can you play?",
+      "promptVariants": [
+        "Do you play any instrument?",
+        "What instruments can you play?"
+      ],
+      "replies": [
+        "Yes, I can play the guitar.",
+        "No, I can't play any instrument.",
+        "Yes, I can play the piano a little.",
+        "I can play the violin, but not very well.",
+        "No, I can't, but I'd love to learn the drums."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.011",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "present-simple.interrogative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "ask.address"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "Where do you live?",
+      "promptVariants": [
+        "Whereabouts do you live?",
+        "What area do you live in?"
+      ],
+      "replies": [
+        "I live in a small apartment near the centre of the city.",
+        "I live in Rosario, in the north of the city.",
+        "I live with my family in a flat downtown.",
+        "I live in a quiet suburb, about twenty minutes from the centre.",
+        "I live near the university, so I can walk to class."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.012",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 4,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "Can you describe your family?",
+      "promptVariants": [
+        "Tell me about your family.",
+        "What is your family like?"
+      ],
+      "replies": [
+        "I have got a big family. My father is a teacher and my mother is a doctor. I have got two sisters and a brother.",
+        "My family is small: my parents and me.",
+        "I've got a brother and a sister, and we have a dog too.",
+        "I live with my parents, my grandmother and my younger brother.",
+        "My husband and I have two children, a boy and a girl."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.013",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "there-is.affirmative",
+        "there-is.interrogative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 4,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "Can you describe your neighborhood?",
+      "promptVariants": [
+        "What's your neighborhood like?",
+        "Tell me about the area where you live."
+      ],
+      "replies": [
+        "There is a park and there are many shops near my house.",
+        "It's a quiet area. There is a school and a supermarket.",
+        "There are cafes and a cinema, and there is a nice square.",
+        "It's a lively neighbourhood. There are lots of restaurants and a market.",
+        "There isn't much traffic, and there are trees on every street."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.014",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "there-is.interrogative",
+        "some-any"
+      ],
+      "fn": [
+        "ask.existence"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "Are there shopping centers, supermarkets, parks or schools near your house?",
+      "promptVariants": [
+        "Is there a supermarket near you?",
+        "What is there near your house?"
+      ],
+      "replies": [
+        "Yes, there is a supermarket and a park.",
+        "Yes, there are two schools and a shopping centre.",
+        "There isn't a shopping centre, but there is a small market.",
+        "There are some shops and a park, but there aren't any schools nearby.",
+        "Yes, there's a big shopping centre and there are several parks."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.015",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "present-simple.affirmative",
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 4,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "What do you do in a typical day?",
+      "promptVariants": [
+        "Describe a typical day.",
+        "What's your daily routine?"
+      ],
+      "replies": [
+        "I get up at seven, I have breakfast, and I go to university. In the afternoon I study, and in the evening I watch TV.",
+        "I work all morning, have lunch at one, and go home at six.",
+        "I usually get up early, go to work, and relax at night.",
+        "First I take my children to school, then I go to work, and I cook dinner in the evening.",
+        "I start work at nine, I have a break at noon, and I finish at five."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.016",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "ask.routine",
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "What do you enjoy doing at weekends?",
+      "promptVariants": [
+        "What do you like doing at the weekend?",
+        "How do you spend your weekends?"
+      ],
+      "replies": [
+        "I enjoy meeting my friends and going to the cinema.",
+        "I like cooking and reading at weekends.",
+        "I usually play football and watch films.",
+        "I love going to the countryside and taking photos.",
+        "At weekends I relax, do some sport, and visit my family."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.017",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "how-often",
+        "frequency-adverbs",
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.frequency"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "How often do you meet your friends?",
+      "promptVariants": [
+        "How often do you see your friends?",
+        "Do you see your friends a lot?"
+      ],
+      "replies": [
+        "I meet my friends twice a week.",
+        "I see them every weekend.",
+        "Not very often, maybe once a month.",
+        "I see my close friends almost every day.",
+        "About three times a month, usually on Fridays."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.018",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "What do you do when you go out with them?",
+      "promptVariants": [
+        "Where do you go with your friends?",
+        "What do you usually do together?"
+      ],
+      "replies": [
+        "We go to the cinema or have a coffee.",
+        "We usually go dancing or eat out.",
+        "We play sports and talk a lot.",
+        "We often go for a walk and then have dinner together.",
+        "Sometimes we go to a concert, or we just stay at home and chat."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.019",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "present-simple.interrogative",
+        "frequency-adverbs",
+        "how-often"
+      ],
+      "fn": [
+        "ask.frequency"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 3,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "Do you prepare lunch? How often?",
+      "promptVariants": [
+        "Do you cook? How often?",
+        "Who cooks in your house?"
+      ],
+      "replies": [
+        "Yes, I prepare lunch every day.",
+        "No, my mother usually cooks.",
+        "Yes, but only sometimes, on weekends.",
+        "I cook almost every day, but my partner cooks at weekends.",
+        "Not often. I usually eat at the university canteen."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.020",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "extracted",
+        "note": "Pregunta del Speaking Test oficial (Level 1). Respuestas y variantes nuestras.",
+        "page": 1
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 4,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "What does your best friend do every day?",
+      "promptVariants": [
+        "Tell me about your best friend's routine.",
+        "What's a normal day for your best friend?"
+      ],
+      "replies": [
+        "My best friend works in a hospital. She gets up early and finishes late.",
+        "He studies at university and plays football in the evening.",
+        "She teaches English and reads a lot.",
+        "My best friend works from home. He starts early and takes a long lunch break.",
+        "She goes to the gym every morning and works in a bank."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.p.004",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de interacción para el examen oral."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "greet"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "textId": "examphrases",
+      "kind": "phrase",
+      "text": "Good morning. Nice to meet you.",
+      "gloss": "Buenos días. Encantado/a de conocerlo/a.",
+      "speaker": "narrator",
+      "ipa": "ɡˈʊd mˈɔːɹnɪŋ nˈaɪs tə mˈiːt juː",
+      "alternatives": [
+        "Good afternoon. Pleased to meet you.",
+        "Hello. It's a pleasure to meet you."
+      ]
+    },
+    {
+      "id": "en1.u6.p.005",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de interacción para el examen oral."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "greet"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "textId": "examphrases",
+      "kind": "phrase",
+      "text": "I'm ready when you are.",
+      "gloss": "Estoy listo/a cuando usted quiera.",
+      "speaker": "narrator",
+      "ipa": "aɪm ɹˈɛdi wˈɛn juː ɑːɹ",
+      "alternatives": [
+        "I'm ready to start.",
+        "Yes, I'm ready, thank you."
+      ]
+    },
+    {
+      "id": "en1.u6.p.006",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de interacción para el examen oral."
+      },
+      "grammar": [
+        "can.request"
+      ],
+      "fn": [
+        "make-request"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "textId": "examphrases",
+      "kind": "phrase",
+      "text": "Sorry, could you repeat that, please?",
+      "gloss": "Perdón, ¿podría repetir eso, por favor?",
+      "speaker": "narrator",
+      "ipa": "sˈɑːɹi kʊd juː ɹᵻpˈiːt ðˈæt plˈiːz",
+      "alternatives": [
+        "Could you say that again, please?",
+        "Pardon? Could you repeat the question?"
+      ]
+    },
+    {
+      "id": "en1.u6.p.007",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de interacción para el examen oral."
+      },
+      "grammar": [
+        "can.request"
+      ],
+      "fn": [
+        "make-request"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "textId": "examphrases",
+      "kind": "phrase",
+      "text": "Could you speak more slowly, please?",
+      "gloss": "¿Podría hablar más despacio, por favor?",
+      "speaker": "narrator",
+      "ipa": "kʊd juː spˈiːk mˈoːɹ slˈoʊli plˈiːz",
+      "alternatives": [
+        "A little slower, please.",
+        "Could you slow down a bit, please?"
+      ]
+    },
+    {
+      "id": "en1.u6.p.008",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de interacción para el examen oral."
+      },
+      "grammar": [
+        "present-simple.negative"
+      ],
+      "fn": [
+        "make-request"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "textId": "examphrases",
+      "kind": "phrase",
+      "text": "Sorry, I don't understand the question.",
+      "gloss": "Perdón, no entiendo la pregunta.",
+      "speaker": "narrator",
+      "ipa": "sˈɑːɹi aɪ dˈoʊnt ˌʌndɚstˈænd ðə kwˈɛstʃən",
+      "alternatives": [
+        "What do you mean, exactly?",
+        "Could you explain the question, please?"
+      ]
+    },
+    {
+      "id": "en1.u6.p.009",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de interacción para el examen oral."
+      },
+      "grammar": [],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "textId": "examphrases",
+      "kind": "phrase",
+      "text": "Let me think for a moment.",
+      "gloss": "Déjeme pensar un momento.",
+      "speaker": "narrator",
+      "ipa": "lˈɛt mˌiː θˈɪŋk fɚɹə mˈoʊmənt",
+      "alternatives": [
+        "Let me see…",
+        "Just a second, let me think."
+      ]
+    },
+    {
+      "id": "en1.u6.p.010",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de interacción para el examen oral."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "textId": "examphrases",
+      "kind": "phrase",
+      "text": "That's an interesting question.",
+      "gloss": "Esa es una pregunta interesante.",
+      "speaker": "narrator",
+      "ipa": "ðæts ɐn ˈɪntɹɛstɪŋ kwˈɛstʃən",
+      "alternatives": [
+        "That's a good question.",
+        "Mmm, good question."
+      ]
+    },
+    {
+      "id": "en1.u6.p.011",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de interacción para el examen oral."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "textId": "examphrases",
+      "kind": "phrase",
+      "text": "I'm not sure how to say it in English.",
+      "gloss": "No estoy seguro/a de cómo decirlo en inglés.",
+      "speaker": "narrator",
+      "ipa": "aɪm nˌɑːt ʃˈʊɹ hˌaʊ tə sˈeɪ ɪɾ ɪn ˈɪŋɡlɪʃ",
+      "alternatives": [
+        "I don't know the word in English, sorry.",
+        "How do you say this in English?"
+      ]
+    },
+    {
+      "id": "en1.u6.p.012",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de interacción para el examen oral."
+      },
+      "grammar": [],
+      "fn": [
+        "thank"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 1,
+      "textId": "examphrases",
+      "kind": "phrase",
+      "text": "Thank you very much.",
+      "gloss": "Muchas gracias.",
+      "speaker": "narrator",
+      "ipa": "θˈæŋk juː vˈɛɹi mˈʌtʃ",
+      "alternatives": [
+        "Thanks a lot.",
+        "Thank you."
+      ]
+    },
+    {
+      "id": "en1.u6.p.013",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de interacción para el examen oral."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "thank"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "textId": "examphrases",
+      "kind": "phrase",
+      "text": "That's all. Thank you.",
+      "gloss": "Eso es todo. Gracias.",
+      "speaker": "narrator",
+      "ipa": "ðæts ˈɔːl θˈæŋk juː",
+      "alternatives": [
+        "That's everything, thank you.",
+        "I think that's all, thank you."
+      ]
+    },
+    {
+      "id": "en1.u6.p.014",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Conector genérico para exponer un texto (Paso 1)."
+      },
+      "grammar": [],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "presentacion",
+      "kind": "phrase",
+      "text": "First, I'll tell you what the text is about.",
+      "gloss": "Primero, les voy a contar de qué trata el texto.",
+      "speaker": "narrator",
+      "ipa": "fˈɜːst aɪl tˈɛl juː wʌt ðə tˈɛkst ɪz ɐbˈaʊt",
+      "alternatives": [
+        "Let me start with the main idea.",
+        "I'll begin with what the text is about."
+      ]
+    },
+    {
+      "id": "en1.u6.p.015",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Conector genérico para exponer un texto (Paso 1)."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "presentacion",
+      "kind": "phrase",
+      "text": "In my opinion, this text is very interesting.",
+      "gloss": "En mi opinión, este texto es muy interesante.",
+      "speaker": "narrator",
+      "ipa": "ɪn maɪ əpˈɪniən ðɪs tˈɛkst ɪz vˈɛɹi ˈɪntɹɛstɪŋ",
+      "alternatives": [
+        "I find this text interesting.",
+        "I think this topic is important."
+      ]
+    },
+    {
+      "id": "en1.u6.p.016",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Conector genérico para exponer un texto (Paso 1)."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "presentacion",
+      "kind": "phrase",
+      "text": "To sum up, that is the main idea.",
+      "gloss": "En resumen, esa es la idea principal.",
+      "speaker": "narrator",
+      "ipa": "tə sˈʌm ˈʌp ðæt ɪz ðə mˈeɪn aɪdˈiə",
+      "alternatives": [
+        "In short, that's the key point.",
+        "So, that's the main idea of the text."
+      ]
+    },
+    {
+      "id": "en1.u6.qa.021",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta adicional de práctica (no del Speaking Test oficial)."
+      },
+      "grammar": [
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.occupation"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 3,
+      "textId": "datos",
+      "kind": "qa",
+      "prompt": "Do you work or study?",
+      "promptVariants": [
+        "What do you do — work or study?",
+        "Are you a student, or do you work?"
+      ],
+      "replies": [
+        "I study at university.",
+        "I work and I also study.",
+        "I work in an office.",
+        "I'm a full-time student.",
+        "I study in the morning and work in the afternoon."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.022",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta adicional de práctica (no del Speaking Test oficial)."
+      },
+      "grammar": [
+        "have-got.interrogative"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 3,
+      "textId": "datos",
+      "kind": "qa",
+      "prompt": "Have you got any pets?",
+      "promptVariants": [
+        "Do you have any pets?",
+        "Have you got an animal at home?"
+      ],
+      "replies": [
+        "Yes, I've got a dog.",
+        "No, I haven't got any pets.",
+        "Yes, I have got two cats.",
+        "I've got a dog and a cat.",
+        "No, but I'd like to have a dog."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.023",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta adicional de práctica (no del Speaking Test oficial)."
+      },
+      "grammar": [
+        "be.present.affirmative",
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 4,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "Tell me about your city.",
+      "promptVariants": [
+        "Can you describe your city?",
+        "What's your city like?"
+      ],
+      "replies": [
+        "My city is big and busy.",
+        "It's a quiet city with nice parks.",
+        "I live in a small town near the mountains.",
+        "It's an old city with a beautiful historic centre.",
+        "My city is on the coast, so it has lovely beaches."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.024",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta adicional de práctica (no del Speaking Test oficial)."
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "ask.routine"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "What's your favourite hobby?",
+      "promptVariants": [
+        "What do you like doing in your free time?",
+        "Have you got a hobby?"
+      ],
+      "replies": [
+        "My favourite hobby is reading.",
+        "I love playing football.",
+        "I enjoy cooking and photography.",
+        "I really like painting and drawing.",
+        "In my free time, I play the guitar and listen to music."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u6.qa.025",
+      "course": "en1",
+      "unit": 6,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta adicional de práctica (no del Speaking Test oficial)."
+      },
+      "grammar": [
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.occupation"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 4,
+      "textId": "profundizacion",
+      "kind": "qa",
+      "prompt": "Do you like your job or your studies? Why?",
+      "promptVariants": [
+        "Do you enjoy what you do?",
+        "Do you like your work or studies? Why?"
+      ],
+      "replies": [
+        "Yes, I like it because it's interesting.",
+        "It's hard, but I enjoy it.",
+        "Yes, I love studying maths.",
+        "I like my job because I work with nice people.",
+        "Not really, it's a bit boring, but the salary is good."
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    }
+  ]
+}

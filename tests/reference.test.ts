@@ -47,9 +47,11 @@ test('las expresiones traen su clave de audio', () => {
 test('modelScripts: producción con sus versiones', () => {
   const s = modelScripts(unit.atoms);
   assert.ok(s.length >= 1);
-  const intro = s.find((x) => /presentarte/i.test(x.title));
-  assert.ok(intro, 'debería estar el script de presentarse');
+  // El capstone acumulativo (My Life) es uno de los scripts de la unidad.
+  const capstone = s.find((x) => /monólogo final|my life/i.test(x.title));
+  assert.ok(capstone, 'debería estar el monólogo final (My Life)');
   // modelAnswer + modelVariants.
-  assert.ok(intro!.versions.length >= 2, 'debería tener versiones alternativas');
-  assert.ok(intro!.versions[0]!.audioKey, 'la primera versión (modelAnswer) tiene audio');
+  assert.ok(capstone!.versions.length >= 2, 'debería tener versiones alternativas');
+  assert.ok(capstone!.versions[0]!.audioKey, 'la primera versión (modelAnswer) tiene audio');
+  assert.ok(capstone!.buildable, 'el capstone tiene pasos: debería ser reconstruible');
 });

@@ -12,6 +12,14 @@
 .shell__back { color: var(--text-dim); min-height: 44px; padding: 0 8px; }
 .shell__back:hover { color: var(--text); }
 
+/* Parar audio: aparece solo mientras algo suena; visible pero sin robar foco. */
+.shell__stop {
+  min-height: 44px; padding: 0 12px; border-radius: var(--radius);
+  color: var(--error); border: 1px solid color-mix(in srgb, var(--error) 40%, var(--border));
+  font-size: 13px; font-weight: 600;
+}
+.shell__stop:hover { background: color-mix(in srgb, var(--error) 12%, transparent); }
+
 .shell__main { flex: 1; width: 100%; max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
 
 .home { display: flex; flex-direction: column; gap: 40px; }
@@ -89,12 +97,23 @@
 .aspect__body strong { font-size: 15px; font-weight: 600; }
 .aspect__body span { font-size: 13px; color: var(--text-dim); }
 .aspect__n { flex: none; font-family: var(--mono); font-size: 12px; color: var(--text-faint); }
-.aspect__modes { display: flex; gap: 8px; padding: 0 16px 16px 56px; flex-wrap: wrap; }
+.aspect__modes { display: flex; flex-direction: column; gap: 16px; padding: 4px 16px 18px 56px; }
 .aspect__gap { flex-basis: 100%; font-size: 12px; color: var(--text-faint); }
+.aspect__resources { display: flex; flex-direction: column; gap: 8px; }
+.aspect__group { display: flex; flex-direction: column; gap: 8px; }
+.aspect__grouplabel { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); margin: 0; }
 
 /* ── Progreso ────────────────────────────────────────────────────────────── */
-.pbar { height: 4px; background: var(--surface-hi); border-radius: 2px; overflow: hidden; margin-top: 8px; }
+.pbar-wrap { margin-top: 8px; }
+.pbar { height: 4px; background: var(--surface-hi); border-radius: 2px; overflow: hidden; }
 .pbar__fill { height: 100%; background: var(--success); transition: width var(--dur) var(--ease); }
+.pbar__meta { display: flex; align-items: baseline; gap: 8px; margin-top: 6px; }
+.pbar__pct { font-size: 13px; font-weight: 700; color: var(--success); font-family: var(--mono); }
+.pbar__count { font-size: 12px; color: var(--text-faint); }
+
+/* Progreso global dentro de la unidad (no desaparece al entrar). */
+.unit__progress { margin-top: 16px; }
+.unit__progress-label { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); }
 .today__stats { font-size: 12px; color: var(--text-faint); font-family: var(--mono); margin-top: 8px; }
 .home__reset { font-size: 12px; color: var(--text-faint); text-decoration: underline; align-self: flex-start; }
 .home__reset:hover { color: var(--error); }
@@ -103,6 +122,37 @@
 .aspect__row { display: flex; gap: 8px; }
 .aspect__label { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); margin-top: 4px; }
 .aspect__chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip--on { border-color: var(--accent); color: var(--text); }
+.chip__count {
+  font-family: var(--mono); font-size: 10px; color: var(--text-faint);
+  background: var(--surface); border-radius: 999px; padding: 0 5px;
+}
+/* Selector de guion: elegir cuál reconstruir/rendir, sin ir en fila. */
+.aspect__pick { display: flex; flex-direction: column; gap: 5px; margin-top: 2px; padding-left: 10px; border-left: 2px solid var(--accent); }
+.aspect__pickhint { font-size: 11px; color: var(--text-faint); margin: 0 0 2px; }
+.aspect__pickitem {
+  text-align: left; font-size: 13px; color: var(--text-dim);
+  padding: 8px 12px; border-radius: var(--radius-sm);
+  background: var(--surface-hi); border: 1px solid var(--border);
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.aspect__pickitem:hover { border-color: var(--accent); color: var(--text); }
+
+/* ── Guías de uso (UX) ───────────────────────────────────────────────────── */
+.aspect__hint { font-size: 12px; color: var(--text-faint); line-height: 1.5; margin: 6px 0 0; }
+.aspect__hint strong { color: var(--text-dim); }
+.aspect__hint--practice { margin-top: 2px; }
+
+.howto { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0 14px; margin-bottom: 12px; }
+.howto > summary { cursor: pointer; padding: 12px 0; font-size: 13px; color: var(--accent); list-style: none; }
+.howto > summary::-webkit-details-marker { display: none; }
+.howto > summary::before { content: '＋  '; font-family: var(--mono); }
+.howto[open] > summary::before { content: '－  '; }
+.howto__body { padding-bottom: 12px; }
+.howto__body p { font-size: 13px; color: var(--text-dim); line-height: 1.55; margin: 0 0 8px; }
+.howto__body p:last-child { margin-bottom: 0; }
+.howto__body strong { color: var(--text); }
+.howto__body em { color: var(--accent); font-style: normal; }
 
 /* ── Reset ───────────────────────────────────────────────────────────────── */
 .reset { display: flex; flex-direction: column; gap: 16px; }
@@ -154,3 +204,38 @@
   transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
 }
 .unit__reference:hover { border-color: var(--accent); transform: translateY(-1px); }
+
+/* Capstone: dictado final de la unidad (verde, para distinguirlo). */
+.unit__capstone { color: var(--success); display: flex; align-items: center; gap: 10px; }
+.unit__capstone-text { flex: 1; min-width: 0; }
+/* Indicador de hito: hecho / pendiente, con su punto de color. */
+.capstone-badge {
+  flex: none; display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 999px;
+  background: var(--surface); color: var(--text-faint);
+}
+.capstone-badge--ok { color: var(--success); }
+.capstone-badge--due { color: var(--accent); }
+.capstone-badge--prog { color: var(--success); }
+
+/* ── Desglose por ítem del tema ──────────────────────────────────────────── */
+.pdetail > summary { cursor: pointer; font-size: 12px; color: var(--accent); list-style: none; padding: 4px 0; }
+.pdetail > summary::-webkit-details-marker { display: none; }
+.pdetail > summary::before { content: '＋  '; font-family: var(--mono); }
+.pdetail[open] > summary::before { content: '－  '; }
+.pdetail__list { list-style: none; margin: 6px 0 0; display: flex; flex-direction: column; gap: 2px; }
+.pdetail__row { display: flex; flex-direction: column; gap: 4px; padding: 6px; border-radius: var(--radius-sm); font-size: 13px; }
+.pdetail__row:hover { background: var(--surface-hi); }
+.pdetail__main { display: flex; align-items: center; gap: 8px; }
+/* Apertura por habilidad: memoria (átomo × habilidad), no por modo. */
+.pdetail__skills { display: flex; flex-wrap: wrap; gap: 10px; padding-left: 16px; }
+.pskill { display: inline-flex; align-items: center; gap: 4px; font-size: 10.5px; color: var(--text-faint); }
+.pskill .pdot { width: 6px; height: 6px; }
+.pdetail__label { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-dim); }
+.pdetail__status { flex: none; font-size: 11px; color: var(--text-faint); font-family: var(--mono); }
+.pdetail__status--ok { color: var(--success); }
+.pdetail__status--due { color: var(--accent); }
+.pdot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
+.pdot--prog { background: #c99a3a; }
+.pdot--due { background: var(--accent); }
+.pdot--ok { background: var(--success); }

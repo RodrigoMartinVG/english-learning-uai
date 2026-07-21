@@ -27,6 +27,16 @@
 .ref__script { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
 .ref__script h2 { font-size: 18px; }
 .ref__prompt { font-size: 13px; color: var(--text-faint); margin: 4px 0 14px; }
+/* Reconstruir el guion desde acá mismo (verde, es una acción de producción). */
+.ref__reconstruct {
+  display: block; width: 100%; text-align: left; margin: 0 0 14px;
+  padding: 10px 14px; border-radius: var(--radius);
+  background: color-mix(in srgb, var(--success) 12%, var(--surface-hi));
+  border: 1px solid color-mix(in srgb, var(--success) 40%, var(--border));
+  color: var(--success); font-size: 13px; font-weight: 600;
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.ref__reconstruct:hover { transform: translateY(-1px); }
 .ref__version { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 12px; }
 .ref__version:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
 .ref__version-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }

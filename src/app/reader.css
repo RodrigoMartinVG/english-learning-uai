@@ -1,0 +1,125 @@
+/* ReaderView — el texto de estudio como recurso (Unidad 5). */
+
+.reader {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.reader__title {
+  margin-bottom: 0.25rem;
+}
+
+.reader__credit {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+.reader__credit a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.reader__credit a:hover {
+  text-decoration: underline;
+}
+
+.reader__hint {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.reader__section {
+  margin-bottom: 1.75rem;
+}
+
+.reader__heading {
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Un bloque = el texto con su botón de play al costado. */
+.reader__block {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin-bottom: 0.9rem;
+}
+
+.reader__para {
+  flex: 1;
+  min-width: 0;
+}
+.reader__para p {
+  line-height: 1.65;
+  margin: 0;
+}
+
+.reader__list {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.65;
+}
+.reader__list li {
+  margin-bottom: 0.25rem;
+}
+
+.reader__play {
+  flex: none;
+  background: var(--surface-hi);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1;
+  padding: 0.35rem 0.5rem;
+  margin-top: 0.1rem;
+  transition: background var(--dur) var(--ease);
+}
+.reader__play:hover {
+  background: var(--accent-dim);
+}
+
+.reader__figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+.reader__figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  background: #fff; /* las figuras son diagramas sobre fondo claro */
+  padding: 0.5rem;
+}
+.reader__figure figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.reader__task {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+  margin: 1.5rem 0;
+}
+.reader__task-label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}

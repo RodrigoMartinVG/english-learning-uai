@@ -10,8 +10,9 @@
  */
 
 import speakersFile from '../../content/speakers.json';
+import coursesFile from '../../content/courses.json';
 import manifestJson from '../../public/audio/audio-manifest.json';
-import type { Atom, PhraseAtom, QaAtom, Speaker, UnitFile } from '../../content/schema.ts';
+import type { Atom, Course, PhraseAtom, QaAtom, Speaker, UnitFile } from '../../content/schema.ts';
 import type { AudioManifest, AudioVoiceHints } from '../audio/AudioService.ts';
 
 /**
@@ -29,6 +30,22 @@ export const units: UnitFile[] = Object.values(unitModules)
   .map((m) => m.default)
   .sort((a, b) => a.course.localeCompare(b.course) || a.unit - b.unit);
 export const speakers: Speaker[] = (speakersFile as { speakers: Speaker[] }).speakers;
+
+/** Un nivel/curso, para el selector y el encabezado. */
+export interface CourseMeta {
+  id: Course;
+  name: string;
+  subtitle?: string;
+  order: number;
+}
+const courseMeta = (coursesFile as { courses: CourseMeta[] }).courses;
+/** Solo los cursos que YA tienen contenido, en orden. Agregar en2 = dejar sus units. */
+export const courses: CourseMeta[] = courseMeta
+  .filter((c) => units.some((u) => u.course === c.id))
+  .sort((a, b) => a.order - b.order);
+/** Nombre visible de un curso (fallback al id si no hay metadatos). */
+export const courseName = (id: string): string =>
+  courseMeta.find((c) => c.id === id)?.name ?? id;
 
 export const atoms: Atom[] = units.flatMap((u) => u.atoms);
 export const atomById = new Map(atoms.map((a) => [a.id, a]));

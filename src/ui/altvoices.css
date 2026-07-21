@@ -33,3 +33,12 @@
 .altvoices__voice:active {
   transform: scale(0.97);
 }
+/* Voces del navegador (en vivo): tono verde para distinguirlas de las de Kokoro. */
+.altvoices__voice--browser {
+  border-color: var(--success);
+  color: var(--success);
+  opacity: 0.85;
+}
+.altvoices__voice--browser:hover {
+  opacity: 1;
+}

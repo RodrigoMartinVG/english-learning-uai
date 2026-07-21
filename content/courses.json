@@ -1,0 +1,8 @@
+{
+  "courses": [
+    { "id": "en1", "name": "Inglés 1", "subtitle": "Elementary", "order": 1 },
+    { "id": "en2", "name": "Inglés 2", "subtitle": "Pre-Intermediate", "order": 2 },
+    { "id": "en3", "name": "Inglés 3", "subtitle": "Intermediate", "order": 3 },
+    { "id": "en4", "name": "Inglés 4", "subtitle": "Upper-Intermediate", "order": 4 }
+  ]
+}

@@ -82,3 +82,14 @@
   font-size: 19px;
   line-height: 1.5;
 }
+
+/* Toggle "improvisar mis turnos" y la línea sugerida (peek). */
+.rp__toggle {
+  display: flex; gap: 8px; align-items: flex-start; cursor: pointer;
+  margin-top: 10px; font-size: 13px; color: var(--text-dim); line-height: 1.4;
+}
+.rp__toggle em { color: var(--text-faint); font-style: normal; }
+.rp__peek { margin-bottom: 10px; }
+.rp__peek > summary { cursor: pointer; font-size: 12px; color: var(--text-faint); list-style: none; }
+.rp__peek > summary::-webkit-details-marker { display: none; }
+.rp__peek > summary::before { content: '👁  '; }

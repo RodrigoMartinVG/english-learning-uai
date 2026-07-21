@@ -31,14 +31,26 @@ export interface ListenOptions {
   lang?: string;
   /** Léxico esperado (JSGF). Mejora bastante el reconocimiento de frases cortas. */
   hints?: string;
-  /** Corta si no se oye nada. Sin esto el micro queda colgado en ruido de fondo. */
+  /**
+   * Tolerancia a la pausa DENTRO de la frase: cuánto silencio aguantar, ya
+   * habiendo empezado a hablar, antes de dar por cerrada la toma. Subirlo = el
+   * micro perdona pausas más largas para pensar la palabra siguiente. Sin esto
+   * el micro queda colgado en ruido de fondo.
+   */
   silenceMs?: number;
+  /**
+   * Cuánto esperar a que ARRANQUE a hablar, antes de la primera palabra. Es un
+   * tiempo aparte y más largo: el alumno lee la consigna y duda. Confundirlo con
+   * `silenceMs` es lo que hacía que cortara "muy rápido". Por defecto, `silenceMs`.
+   */
+  leadMs?: number;
   /**
    * Seguir escuchando después de la primera pausa.
    *
    * Imprescindible para monólogos: sin esto, el reconocimiento se cierra apenas
    * el alumno respira, y una respuesta de examen oral queda cortada en la primera
-   * coma. Para una frase suelta, en cambio, cortar rápido es lo que se quiere.
+   * coma. Conviene también para frases sueltas: deja que `silenceMs`/`leadMs`
+   * gobiernen el corte en vez del fin-de-habla agresivo del navegador.
    */
   continuous?: boolean;
   /** Transcripción parcial, para dar feedback mientras habla. */
@@ -135,25 +147,33 @@ export function createRecognizer(): Recognizer {
         };
 
         // El reloj se reinicia con cada palabra: mide silencio, no duración total.
+        // Y usa DOS tiempos: uno largo para que arranque a hablar (leadMs) y otro
+        // más corto para tolerar pausas ya empezada la frase (silenceMs). Antes era
+        // uno solo, y una pausa para pensar se leía como "terminó" → cortaba rápido.
+        let heardSpeech = false;
         let silence: ReturnType<typeof setTimeout>;
-        const resetSilence = () => {
+        const armSilence = () => {
           clearTimeout(silence);
+          const ms = heardSpeech
+            ? opts.silenceMs ?? 2500
+            : opts.leadMs ?? opts.silenceMs ?? 8000;
           silence = setTimeout(() => {
             try {
               rec.stop();
             } catch {
               /* ya estaba parado */
             }
-          }, opts.silenceMs ?? 7000);
+          }, ms);
         };
 
         rec.onstart = () => {
           setState('listening');
-          resetSilence();
+          armSilence();
         };
 
         rec.onresult = (e: any) => {
-          resetSilence();
+          heardSpeech = true;
+          armSilence();
           let interim = '';
           for (let i = e.resultIndex; i < e.results.length; i++) {
             const r = e.results[i];

@@ -116,6 +116,22 @@
   opacity: 0.6;
 }
 
+/* "Dar por bueno": secundario y discreto — es una salida honesta cuando el ASR
+   falla, no el camino fácil. Verde para que se lea como aceptación, sin gritar. */
+.speak__accept {
+  align-self: center;
+  background: none;
+  border: 1px solid color-mix(in srgb, var(--success) 45%, var(--border));
+  color: var(--success);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  font-size: 13px;
+  transition: background var(--dur) var(--ease);
+}
+.speak__accept:hover {
+  background: color-mix(in srgb, var(--success) 12%, transparent);
+}
+
 .ab {
   display: flex;
   gap: 8px;

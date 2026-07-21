@@ -155,3 +155,14 @@
 .exam__checks em {
   font-size: 12px;
 }
+
+/* Esquema de la exposición (Unidad 5): el andamiaje del modo ensayo. */
+.exam__scaffold {
+  margin: 0 0 0.75rem;
+  padding-left: 1.3rem;
+  line-height: 1.5;
+}
+.exam__scaffold li {
+  margin-bottom: 0.3rem;
+  color: var(--text-dim);
+}

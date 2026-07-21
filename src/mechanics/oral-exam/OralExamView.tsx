@@ -73,6 +73,7 @@ export function OralExamView({ round, onDone }: MechanicViewProps<OralExamRound>
         lang: 'en-US',
         // continuous: sin esto el examen se corta en la primera respiración.
         continuous: true,
+        leadMs: 10000,
         silenceMs: 4000,
         hints: grammarHints([target.modelAnswer, ...(target.wordBank ?? [])]),
         onInterim: setInterim,
@@ -154,8 +155,24 @@ export function OralExamView({ round, onDone }: MechanicViewProps<OralExamRound>
 
         {warmUp && (
           <div className="exam__aid">
-            <h3>Banco de palabras</h3>
-            <p className="exam__bank">{(target.wordBank ?? []).join(' · ') || '—'}</p>
+            {/* El esquema de la exposición: el andamiaje que se apoya en ensayo y se
+                retira en el examen real (Unidad 5, capa 6). */}
+            {target.scaffold?.length ? (
+              <>
+                <h3>Esquema de la exposición</h3>
+                <ol className="exam__scaffold">
+                  {target.scaffold.map((s) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ol>
+              </>
+            ) : null}
+            {target.wordBank?.length ? (
+              <>
+                <h3>Banco de palabras</h3>
+                <p className="exam__bank">{target.wordBank.join(' · ')}</p>
+              </>
+            ) : null}
             <h3>Se espera que uses</h3>
             <ul className="exam__rubric">
               {target.rubric.map((r) => (
@@ -201,7 +218,7 @@ export function OralExamView({ round, onDone }: MechanicViewProps<OralExamRound>
         <section className="exam__block">
           <h3>Escuchate</h3>
           <div className="ab">
-            <button className="btn" onClick={() => void new Audio(mine.url).play()}>
+            <button className="btn" onClick={() => void audio.playClip(mine.url)}>
               🎤 Tu respuesta
             </button>
             <button

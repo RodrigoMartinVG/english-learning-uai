@@ -1,0 +1,176 @@
+
+===== U1 maxids={'p': 67, 'd': 5, 'qa': 12, 'ct': 5, 'ex': 9, 'lx': 18, 'pr': 2, 'ls': 1} =====
+-- greetings [SIN-LEX]  match={'fn': ['greet', 'introduce-self', 'thank']}
+     en1.u1.p.001  «Hi! How are you?»
+     en1.u1.p.002  «Hi. OK. And you?»
+     en1.u1.p.003  «Fine.»
+-- be  match={'grammar': ['be.present.negative', 'be.present.interrogative', 'be.present.short-answer', 'be.contractions']}
+     en1.u1.p.001  «Hi! How are you?»
+     en1.u1.p.002  «Hi. OK. And you?»
+     en1.u1.p.004  «What's your name?»
+-- personal-data  match={'fn': ['ask.name', 'ask.age', 'ask.occupation', 'ask.marital-status', 'ask.address', 'ask.identity'], 'topic': ['personal_info', 'occupation'], 'grammar': ['numbers.cardinal']}
+     en1.u1.p.001  «Hi! How are you?»
+     en1.u1.p.002  «Hi. OK. And you?»
+     en1.u1.p.003  «Fine.»
+-- spelling  match={'grammar': ['spelling.alphabet'], 'fn': ['ask.spelling']}
+     en1.u1.p.015  «Sorry? How do you spell it?»
+     en1.u1.p.016  «S. C. H. U. L. Z.»
+     en1.u1.p.030  «How do you spell your last name?»
+-- origin [SIN-LEX]  match={'grammar': ['nationalities'], 'fn': ['ask.origin', 'ask.nationality'], 'topic': ['origin_nationality']}
+     en1.u1.p.019  «Where are you from, Karel?»
+     en1.u1.p.020  «I am from Holland.»
+     en1.u1.p.021  «Are you from Amsterdam?»
+-- possessives [SIN-LEX]  match={'grammar': ['pronouns.subject', 'possessives.adjectives']}
+     en1.u1.p.004  «What's your name?»
+     en1.u1.p.005  «My name is Mary. And yours?»
+     en1.u1.p.006  «Eric. What's your occupation?»
+-- demonstratives  match={'grammar': ['demonstratives'], 'fn': ['ask.possession']}
+     en1.u1.p.029  «What does this word mean?»
+     en1.u1.p.031  «These are my coins.»
+     en1.u1.p.033  «Is this your phone charger?»
+-- articles [SIN-LEX]  match={'grammar': ['articles.indefinite', 'articles.definite']}
+     en1.u1.p.007  «I'm a systems manager.»
+     en1.u1.p.008  «Oh, I'm a developer.»
+     en1.u1.p.009  «Is there a cafeteria inside the enterprise?»
+-- there-is  match={'grammar': ['there-is.affirmative', 'there-is.negative', 'there-is.interrogative'], 'fn': ['ask.existence', 'describe.place']}
+     en1.u1.p.009  «Is there a cafeteria inside the enterprise?»
+     en1.u1.p.010  «Yes, there is a cafeteria on the tenth floor.»
+     en1.u1.p.025  «The chair is comfortable.»
+-- classroom  match={'topic': ['objects', 'classroom'], 'fn': ['classroom-language']}
+     en1.u1.p.015  «Sorry? How do you spell it?»
+     en1.u1.p.025  «The chair is comfortable.»
+     en1.u1.p.026  «His pen is on the desk.»
+-- wh-questions  match={'grammar': ['wh-questions']}
+     en1.u1.p.001  «Hi! How are you?»
+     en1.u1.p.004  «What's your name?»
+     en1.u1.p.006  «Eric. What's your occupation?»
+-- places  match={'topic': ['campus', 'workplace'], 'fn': ['ask.location']}
+     en1.u1.p.001  «Hi! How are you?»
+     en1.u1.p.002  «Hi. OK. And you?»
+     en1.u1.p.007  «I'm a systems manager.»
+
+===== U2 maxids={'p': 44, 'd': 1, 'qa': 15, 'lx': 6, 'pr': 3, 'ex': 7, 'ct': 3, 'ls': 1} =====
+-- cafeteria [SIN-LEX]  match={'fn': ['ask.permission', 'ask.routine'], 'topic': ['workplace']}
+     en1.u2.p.001  «Can I sit here?»
+     en1.u2.p.003  «Do you work here?»
+     en1.u2.p.004  «Yes, I do. What about you?»
+-- present-affirmative  match={'grammar': ['present-simple.affirmative', 'present-simple.third-person']}
+     en1.u2.p.005  «I work here too.»
+     en1.u2.p.007  «I design programs.»
+     en1.u2.p.011  «No, I sometimes start at seven o'clock.»
+-- present-negative [SIN-LEX]  match={'grammar': ['present-simple.negative']}
+     en1.u2.p.013  «No, it doesn't. It opens at eight o'clock.»
+     en1.u2.p.018  «She doesn't eat meat.»
+     en1.u2.p.040  «I don't drink coffee in the morning.»
+-- present-questions [SIN-LEX]  match={'grammar': ['present-simple.interrogative', 'present-simple.short-answer', 'be.present.interrogative', 'be.present.short-answer']}
+     en1.u2.p.003  «Do you work here?»
+     en1.u2.p.004  «Yes, I do. What about you?»
+     en1.u2.p.006  «What do you do?»
+-- frequency [SIN-LEX]  match={'grammar': ['frequency-adverbs'], 'fn': ['ask.frequency']}
+     en1.u2.p.010  «Do you always start at eight o'clock?»
+     en1.u2.p.011  «No, I sometimes start at seven o'clock.»
+     en1.u2.p.014  «I usually wait one hour to have my coffee.»
+-- time [SIN-LEX]  match={'grammar': ['time.at'], 'fn': ['ask.time']}
+     en1.u2.p.008  «What time do you start working?»
+     en1.u2.p.009  «At eight o'clock.»
+     en1.u2.p.010  «Do you always start at eight o'clock?»
+-- have-has [SIN-LEX]  match={'grammar': ['have-has']}
+     en1.u2.p.030  «She has two brothers.»
+     en1.u2.p.031  «I have a new computer.»
+     en1.u2.p.032  «We have fun at the party.»
+-- routines  match={'fn': ['describe.routine'], 'topic': ['routine', 'leisure']}
+     en1.u2.p.001  «Can I sit here?»
+     en1.u2.p.002  «Yes, please.»
+     en1.u2.p.008  «What time do you start working?»
+-- wh-questions-u2 [SIN-LEX]  match={'grammar': ['wh-questions']}
+     en1.u2.p.006  «What do you do?»
+     en1.u2.p.008  «What time do you start working?»
+     en1.u2.p.015  «What time does it start?»
+
+===== U3 maxids={'p': 38, 'd': 2, 'lx': 7, 'qa': 7, 'pr': 2, 'ex': 3, 'ct': 2, 'ls': 1} =====
+-- office [SIN-LEX]  match={'fn': ['ask.possession', 'propose-plan'], 'topic': ['workplace']}
+     en1.u3.p.001  «Here we are. This is my office. There is a PC, a desk a»
+     en1.u3.p.002  «Oh, it's nice.»
+     en1.u3.p.003  «Have you got your own office?»
+-- have-got-aff  match={'grammar': ['have-got.affirmative']}
+     en1.u3.p.004  «Yes, I have.»
+     en1.u3.p.010  «I have got two sisters.»
+     en1.u3.p.011  «She has got a big family.»
+-- have-got-neg [SIN-LEX]  match={'grammar': ['have-got.negative']}
+     en1.u3.p.012  «They haven't got a car.»
+     en1.u3.p.013  «He hasn't got a brother.»
+     en1.u3.p.037  «I haven't got a sister.»
+-- have-got-q [SIN-LEX]  match={'grammar': ['have-got.interrogative']}
+     en1.u3.p.003  «Have you got your own office?»
+     en1.u3.p.014  «Have you got a brother?»
+     en1.u3.p.015  «Has she got a dog?»
+-- family  match={'grammar': ['family'], 'topic': ['family'], 'fn': ['describe.person']}
+     en1.u3.p.010  «I have got two sisters.»
+     en1.u3.p.011  «She has got a big family.»
+     en1.u3.p.013  «He hasn't got a brother.»
+-- frequency-u3 [SIN-LEX]  match={'grammar': ['frequency-adverbs', 'how-often'], 'fn': ['ask.frequency']}
+     en1.u3.p.005  «How often do you work there?»
+     en1.u3.p.006  «I usually work there, but I work at home once a week.»
+     en1.u3.p.019  «We often visit our grandmother.»
+-- arrangements [SIN-LEX]  match={'grammar': ['arrangements', 'would-like'], 'fn': ['propose-plan', 'accept-plan']}
+     en1.u3.p.007  «Are you free now?»
+     en1.u3.p.008  «How about going to my office?»
+     en1.u3.p.009  «Great!»
+-- time-prep [SIN-LEX]  match={'grammar': ['prepositions.time', 'time.at'], 'fn': ['ask.time']}
+     en1.u3.p.029  «What time does it start?»
+     en1.u3.p.030  «What time is good for you?»
+     en1.u3.p.033  «I play tennis on Mondays.»
+
+===== U4 maxids={'p': 58, 'd': 2, 'qa': 8, 'lx': 21, 'pr': 2, 'ex': 4, 'ct': 3, 'ls': 1} =====
+-- office-museum  match={'fn': ['propose-plan', 'ask.time', 'describe.place'], 'topic': ['workplace', 'city']}
+     en1.u4.p.001  «You have got a beautiful office, Mary. There's a coffee»
+     en1.u4.p.002  «Thank you! We can see the Museum opposite our building.»
+     en1.u4.p.003  «Would you like to go to the Museum?»
+-- there-is-u4  match={'grammar': ['there-is.affirmative', 'there-is.negative', 'there-is.interrogative']}
+     en1.u4.p.001  «You have got a beautiful office, Mary. There's a coffee»
+     en1.u4.p.007  «There's a cafeteria next to the Museum.»
+     en1.u4.p.008  «Are there buses late at night?»
+-- can [SIN-LEX]  match={'grammar': ['can.ability', 'can.request', 'can.negative']}
+     en1.u4.p.002  «Thank you! We can see the Museum opposite our building.»
+     en1.u4.p.006  «We can go there after work.»
+     en1.u4.p.009  «Hi. Can I help you?»
+-- prepositions-place [SIN-LEX]  match={'grammar': ['prepositions.place']}
+     en1.u4.p.001  «You have got a beautiful office, Mary. There's a coffee»
+     en1.u4.p.002  «Thank you! We can see the Museum opposite our building.»
+     en1.u4.p.007  «There's a cafeteria next to the Museum.»
+-- some-any [SIN-LEX]  match={'grammar': ['some-any']}
+     en1.u4.p.044  «There is some milk in the fridge.»
+     en1.u4.p.045  «There aren't any chairs in the kitchen.»
+     en1.u4.p.046  «Have you got any brothers?»
+-- how-much-many [SIN-LEX]  match={'grammar': ['how-much-many']}
+     en1.u4.p.014  «Great. How much is it?»
+-- shopping [SIN-LEX]  match={'topic': ['shopping'], 'fn': ['ask.price', 'offer-help']}
+     en1.u4.p.009  «Hi. Can I help you?»
+     en1.u4.p.010  «Have you got this sweater in small?»
+     en1.u4.p.011  «Just a moment. Here you are.»
+-- directions [SIN-LEX]  match={'grammar': ['directions'], 'fn': ['give-directions']}
+     en1.u4.p.030  «Go straight on until you get to the roundabout.»
+     en1.u4.p.031  «Turn left at the traffic light.»
+     en1.u4.p.032  «It's on the corner of Upper Street.»
+-- home-vocab  match={'topic': ['home'], 'fn': ['describe.place']}
+     en1.u4.p.001  «You have got a beautiful office, Mary. There's a coffee»
+     en1.u4.p.002  «Thank you! We can see the Museum opposite our building.»
+     en1.u4.p.007  «There's a cafeteria next to the Museum.»
+
+===== U5 maxids={'rd': 4, 'p': 34, 'lx': 38, 'qa': 32, 'ex': 5, 'pr': 14} =====
+-- text-square  match={'textId': ['square']}
+     en1.u5.p.001  «A square is a shape with four straight sides of equal l»
+     en1.u5.p.002  «On a sphere, the curvature is constant and positive.»
+     en1.u5.p.003  «The pseudosphere is a surface with constant negative cu»
+-- text-why2  match={'textId': ['why2']}
+     en1.u5.p.015  «She is fascinated by prime numbers.»
+     en1.u5.p.016  «Prime numbers are whole numbers greater than 1 that can»
+     en1.u5.p.017  «My favorite number is 2, so it is definitely my favorit»
+-- text-four-years  match={'textId': ['four-years']}
+     en1.u5.p.023  «Missing foundational courses can limit college options.»
+     en1.u5.p.024  «More years of math can improve college readiness and co»
+     en1.u5.p.025  «Early numeracy can support later success.»
+-- text-until-18  match={'textId': ['until-18']}
+     en1.u5.p.029  «Maths is the language of science, engineering, and tech»
+     en1.u5.p.030  «Statistics are essential in medicine, marketing, and fi»
+     en1.u5.p.031  «Maths also teaches transferable skills like problem-sol»

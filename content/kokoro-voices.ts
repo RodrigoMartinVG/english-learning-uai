@@ -42,3 +42,22 @@ export const ALT_VOICES = [
   { id: 'am_michael', label: 'US ♂' },
   { id: 'bm_george', label: 'GB ♂' },
 ] as const;
+
+/**
+ * Voces para los "Scripts modelo" (las producciones largas de la guía).
+ *
+ * Ahí sí vale la pena ofrecer MÁS timbres que las tres de siempre: es donde el
+ * alumno escucha el texto completo y elige con qué voz estudiarlo. Incluye las
+ * tres alternativas habituales, la voz del narrador `bf_emma` (GB ♀, la que se
+ * oye en los "Ejemplo significativo" y que faltaba como alternativa) y un par de
+ * timbres distintivos. Solo se generan para las claves `.model`, no para todo el
+ * habla: ver `build-audio` (se saltea el tope de largo para estos).
+ */
+export const MODEL_VOICES = [
+  { id: 'af_bella', label: 'Bella · US ♀' },
+  { id: 'am_michael', label: 'Michael · US ♂' },
+  { id: 'bf_emma', label: 'Emma · GB ♀' },
+  { id: 'bm_george', label: 'George · GB ♂' },
+  { id: 'am_onyx', label: 'Onyx · US ♂' },
+  { id: 'af_nicole', label: 'Nicole · US ♀' },
+] as const;

@@ -15,7 +15,7 @@ export type SessionScope =
   | { kind: 'aspect'; course: Course; unit: number; aspectId: string }
   | { kind: 'unit'; course: Course; unit: number }
   | { kind: 'atoms'; atomIds: string[] }
-  | { kind: 'due' };
+  | { kind: 'due'; course?: Course };
 
 export interface SessionSpec {
   scope: SessionScope;
@@ -84,8 +84,8 @@ export function atomsInScope(scope: SessionScope, all: Atom[], aspects: Aspect[]
       return all.filter((a) => ids.has(a.id));
     }
     case 'due':
-      // Fase 3: acá entra FSRS. Hasta entonces, todo es candidato — y se dice.
-      return all;
+      // Repaso global: todos los átomos del curso elegido (o todos, si no se acota).
+      return scope.course ? all.filter((a) => a.course === scope.course) : all;
   }
 }
 
@@ -202,7 +202,10 @@ export function buildSession(
 
   let ordered: Step[];
   if (spec.mode === 'review' && scheduler) {
-    ordered = scheduleReview(candidates, spec.length, scheduler);
+    // El repaso GLOBAL (scope 'due') es repaso puro: solo lo ya estudiado, nunca
+    // material nuevo — es la acción de fijar la repetición espaciada. El repaso de
+    // UN tema sí incorpora lo nuevo del tema, para poder avanzarlo.
+    ordered = scheduleReview(candidates, spec.length, scheduler, spec.scope.kind !== 'due');
   } else if (spec.mode === 'discover') {
     ordered = climbLadder(candidates, spec.length);
   } else {
@@ -222,19 +225,24 @@ export function buildSession(
  *
  * Orden: vencidas (retrievability asc) → nuevas → el resto. Después interleaving,
  * que sigue importando para no encadenar la misma mecánica.
+ *
+ * `includeFresh=false` deja el repaso PURO: sin átomos nuevos, solo vencidos y
+ * repaso adelantado de lo ya estudiado. Lo usa el repaso global.
  */
 function scheduleReview(
   candidates: { step: Step }[],
   n: number,
-  sch: Scheduler
+  sch: Scheduler,
+  includeFresh = true
 ): Step[] {
   const due = candidates.filter((c) => sch.isDue(c.step)).sort(
     (a, b) => sch.retrievability(a.step) - sch.retrievability(b.step)
   );
-  const fresh = candidates.filter((c) => sch.isNew(c.step));
+  const fresh = includeFresh ? candidates.filter((c) => sch.isNew(c.step)) : [];
   const rest = candidates.filter((c) => !sch.isDue(c.step) && !sch.isNew(c.step));
 
-  // Vencidas mandan; se completa con material nuevo antes que con repaso adelantado.
+  // Vencidas mandan; se completa con material nuevo (si se permite) antes que con
+  // repaso adelantado.
   const chosen = [...due, ...shuffle(fresh), ...shuffle(rest)].slice(0, n);
   return spaceOut(chosen.map((c) => c.step));
 }

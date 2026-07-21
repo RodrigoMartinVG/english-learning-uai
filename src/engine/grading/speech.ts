@@ -49,6 +49,22 @@ export function normalize(text: string): string {
 
 export const words = (text: string): string[] => (normalize(text) ? normalize(text).split(' ') : []);
 
+/** Palabras "gramaticales" que no cuentan como vocabulario de contenido. */
+const STOP = new Set(
+  ('the a an this that these those is are am was were be i you we they he she it to of and or but ' +
+    'in on at for with my your his her our their so do does did not no yes can could would will ' +
+    'what where when how who why also because about there here have has had one two of at as').split(' ')
+);
+
+/**
+ * El conjunto de palabras de CONTENIDO de un texto (normalizadas, sin palabras
+ * gramaticales). Se usa para el resaltado verde de "¿usaste el vocabulario del
+ * tema?" en la dictación en vivo (Creá tu propio guion / Role-play improvisado).
+ */
+export function contentWords(text: string): Set<string> {
+  return new Set(words(text).filter((t) => t.length > 2 && !STOP.has(t)));
+}
+
 export type WordStatus = 'ok' | 'missing' | 'wrong' | 'extra';
 
 export interface WordResult {

@@ -17,6 +17,7 @@ import {
   type RecognitionState,
 } from '../audio/Recognition.ts';
 import { createRecorder, isRecordingSupported, type Recording } from '../audio/Recorder.ts';
+import { useAudio } from '../audio/AudioProvider.tsx';
 import { gradeSpeech, grammarHints, type SpeechVerdict } from '../engine/grading/speech.ts';
 import './speak.css';
 
@@ -34,11 +35,16 @@ export interface SpeakPanelProps {
 export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDone }: SpeakPanelProps) {
   const recognizer = useRef(createRecognizer()).current;
   const recorder = useRef(createRecorder()).current;
+  const audio = useAudio();
 
   const [state, setState] = useState<RecognitionState>(recognizer.getState());
   const [interim, setInterim] = useState('');
   const [verdict, setVerdict] = useState<SpeechVerdict | null>(null);
   const [mine, setMine] = useState<Recording | null>(null);
+  // "Dar por bueno": el ASR transcribe, no juzga pronunciación. Si una palabra
+  // rara no quedó bien detectada pero el alumno la dijo bien, puede darla por
+  // buena y que cuente como correcta. Es honesto con lo que la API sí puede hacer.
+  const [accepted, setAccepted] = useState(false);
 
   useEffect(() => recognizer.subscribe(setState), [recognizer]);
   useEffect(
@@ -55,6 +61,7 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
   const listen = useCallback(async () => {
     setVerdict(null);
     setInterim('');
+    setAccepted(false);
     mine?.revoke();
     setMine(null);
 
@@ -72,6 +79,12 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
       const { transcript } = await recognizer.listen({
         lang,
         hints: grammarHints(neighbourhood),
+        // continuous + tiempos holgados: el navegador ya no corta en la primera
+        // pausa. leadMs da tiempo a arrancar; silenceMs perdona una pausa para
+        // pensar la palabra siguiente antes de cerrar la toma.
+        continuous: true,
+        leadMs: 8000,
+        silenceMs: 3000,
         onInterim: setInterim,
       });
       const rec = await recorder.stop();
@@ -144,8 +157,12 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
 
       {verdict && (
         <div className="expansion">
-          <p className={'verdict ' + (verdict.match ? 'verdict--ok' : 'verdict--bad')}>
-            {verdict.match ? 'Dijiste lo correcto' : 'No es lo que había que decir'}
+          <p className={'verdict ' + (verdict.match || accepted ? 'verdict--ok' : 'verdict--bad')}>
+            {verdict.match
+              ? 'Dijiste lo correcto'
+              : accepted
+                ? 'Dada por buena ✓'
+                : 'No es lo que había que decir'}
           </p>
 
           <p className="speak__diff">
@@ -165,7 +182,7 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
                 <button className="btn" onClick={onPlayReference}>
                   🔊 Referencia
                 </button>
-                <button className="btn" onClick={() => void new Audio(mine.url).play()}>
+                <button className="btn" onClick={() => void audio.playClip(mine.url)}>
                   🎤 Vos
                 </button>
               </div>
@@ -175,11 +192,25 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
             </section>
           )}
 
+          {!verdict.match && !accepted && (
+            <button
+              className="speak__accept"
+              onClick={() => setAccepted(true)}
+              title="El reconocedor transcribe, no puntúa pronunciación. Si la dijiste bien, contala como correcta."
+            >
+              ✓ La dije bien — el micro no la tomó
+            </button>
+          )}
+
           <div className="ab">
             <button className="btn" onClick={listen}>
               Reintentar
             </button>
-            <button className="btn btn--primary" onClick={() => onDone(verdict.match)} autoFocus>
+            <button
+              className="btn btn--primary"
+              onClick={() => onDone(verdict.match || accepted)}
+              autoFocus
+            >
               Siguiente →
             </button>
           </div>

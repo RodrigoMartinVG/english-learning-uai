@@ -1,0 +1,5419 @@
+{
+  "$schema": "../unit.schema.json",
+  "course": "en1",
+  "unit": 5,
+  "title": "Textos — apropiate de uno y exponelo",
+  "goals": [
+    "Elegí un texto, estudialo a fondo y aprendé a hablar de él: explicarlo, exponerlo, responder preguntas e improvisar.",
+    "Cada texto es una parte completa: leelo, aprendé su vocabulario, respondé sobre él y preparate para exponerlo."
+  ],
+  "aspects": [
+    {
+      "id": "text-square",
+      "title": "Texto 2 — What is a square?",
+      "summary": "Apropiate del texto de Hannah Darken hasta poder exponerlo y responder sobre él.",
+      "order": 2,
+      "match": {
+        "textId": [
+          "square"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "Text N°2"
+      }
+    },
+    {
+      "id": "text-why2",
+      "title": "Texto 1 — Why 2 Is the Best Number",
+      "summary": "Apropiate de la entrevista a Melanie Matchett Wood hasta poder comentarla y exponerla.",
+      "order": 1,
+      "match": {
+        "textId": [
+          "why2"
+        ]
+      },
+      "source": {
+        "page": 3,
+        "section": "Text N°1"
+      }
+    },
+    {
+      "id": "text-four-years",
+      "title": "Texto 3 — Do Students Need Four Years of High School Math?",
+      "summary": "Apropiate del debate sobre cuánta matemática hace falta hasta poder exponerlo y opinar.",
+      "order": 3,
+      "match": {
+        "textId": [
+          "four-years"
+        ]
+      },
+      "source": {
+        "page": 9,
+        "section": "Text N°3"
+      }
+    },
+    {
+      "id": "text-until-18",
+      "title": "Texto 4 — Should people learn maths until age 18?",
+      "summary": "Apropiate del argumento a favor de estudiar matemática hasta los 18 para exponerlo y debatirlo.",
+      "order": 4,
+      "match": {
+        "textId": [
+          "until-18"
+        ]
+      },
+      "source": {
+        "page": 12,
+        "section": "Text N°4"
+      }
+    }
+  ],
+  "atoms": [
+    {
+      "id": "en1.u5.rd.001",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Text N°2",
+        "note": "Texto reproducido del cuadernillo. Los epígrafes de las figuras (salvo el del cuadrado, que es del original) son nuestros, descriptivos."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 1,
+      "textId": "square",
+      "kind": "reading",
+      "title": "What is a square?",
+      "credit": {
+        "author": "Hannah Darken",
+        "publication": "plus.maths.org",
+        "url": "https://plus.maths.org/content/what-square"
+      },
+      "speaker": "narrator",
+      "sections": [
+        {
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "A square is a shape with four straight sides of equal length and four angles of 90 degrees. On the flat surface we use in school, called the Euclidean plane, this definition is strict: any closed figure with equal sides and right angles must have four sides."
+            },
+            {
+              "kind": "figure",
+              "image": {
+                "src": "/img/en1-u5/square-honest.png",
+                "role": "illustration",
+                "alt": "A blue square with small red marks in its four corners showing the four 90-degree angles."
+              },
+              "caption": "An honest square: it has four straight sides of equal length and four 90 degree angles."
+            },
+            {
+              "kind": "para",
+              "text": "But what happens if we change the surface? Geometry can also be studied on curved spaces, and then surprising things occur."
+            }
+          ]
+        },
+        {
+          "heading": "Curvature of surfaces",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Mathematician Carl Friedrich Gauss introduced the idea of Gaussian curvature to measure how bent a surface is."
+            },
+            {
+              "kind": "list",
+              "items": [
+                "A plane has zero curvature: it is flat.",
+                "A sphere has positive curvature: it curves outward in all directions.",
+                "A saddle has negative curvature: it curves down in one direction and up in another."
+              ]
+            },
+            {
+              "kind": "para",
+              "text": "On a sphere, the curvature is constant and positive. On a saddle, the curvature is negative and changes depending on where you sit."
+            },
+            {
+              "kind": "figure",
+              "image": {
+                "src": "/img/en1-u5/curvature-saddle.png",
+                "role": "illustration",
+                "alt": "A saddle-shaped surface that curves up in one direction and down in the other, with two lines crossing on it."
+              },
+              "caption": "A saddle curves up one way and down the other: this is negative curvature."
+            }
+          ]
+        },
+        {
+          "heading": "Shapes on a sphere",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Imagine the Earth with its equator and North pole. Walk along a line of longitude from the equator to the pole, then turn 90 degrees and walk down another longitude back to the equator. Finally, walk along the equator to your starting point."
+            },
+            {
+              "kind": "para",
+              "text": "You have created a triangle with three equal sides and three right angles! On the sphere, the angles of a triangle can add up to more than 180 degrees. In this case, they add up to 270."
+            },
+            {
+              "kind": "figure",
+              "image": {
+                "src": "/img/en1-u5/sphere-triangle.png",
+                "role": "illustration",
+                "alt": "A blue sphere with a triangle drawn on it, formed by two lines of longitude and the equator, meeting at right angles."
+              },
+              "caption": "A triangle on a sphere can have three right angles that add up to 270 degrees."
+            },
+            {
+              "kind": "para",
+              "text": "Even stranger, you can draw a two-sided figure called a digon. It is formed by two half great circles meeting at right angles."
+            }
+          ]
+        },
+        {
+          "heading": "Shapes on a pseudosphere",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "The pseudosphere is a surface with constant negative curvature. On it, you can draw shapes with equal sides and right angles that have more than four sides. For example, a five-sided figure with all sides equal and all angles 90 degrees."
+            },
+            {
+              "kind": "figure",
+              "image": {
+                "src": "/img/en1-u5/pseudosphere-pentagon.png",
+                "role": "illustration",
+                "alt": "A funnel-shaped pseudosphere surface with a red five-sided figure drawn on it."
+              },
+              "caption": "On a pseudosphere, a shape with equal sides and right angles can have more than four sides."
+            },
+            {
+              "kind": "para",
+              "text": "Although the sides look curved to our eyes, they are actually straight in the sense of geodesics—the shortest paths on the surface."
+            }
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "So, if you thought that equal sides and right angles always define a square, think again. On curved surfaces, you can have triangles, digons, or pentagons with those properties. It all depends on the curvature of the space."
+            }
+          ]
+        }
+      ],
+      "afterReadingTask": "Find 5 example sentences which use the Verb To Be in the text."
+    },
+    {
+      "id": "en1.u5.p.001",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "A square is a shape with four straight sides of equal length and four angles of 90 degrees.",
+      "gloss": "Un cuadrado es una figura de cuatro lados rectos e iguales y cuatro ángulos de 90 grados.",
+      "speaker": "narrator",
+      "ipa": "ɐ skwˈɛɹ ɪz ɐ ʃˈeɪp wɪð fˈoːɹ stɹˈeɪt sˈaɪdz ʌv ˈiːkwəl lˈɛŋθ ænd fˈoːɹ ˈæŋɡəlz ʌv nˈaɪnti dᵻɡɹˈiːz"
+    },
+    {
+      "id": "en1.u5.p.002",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "On a sphere, the curvature is constant and positive.",
+      "gloss": "En una esfera, la curvatura es constante y positiva.",
+      "speaker": "narrator",
+      "ipa": "ˌɔn ɐ sfˈɪɹ ðə kˈɜːvətʃɚɹ ɪz kˈɑːnstənt ænd pˈɑːzᵻtˌɪv"
+    },
+    {
+      "id": "en1.u5.p.003",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "The pseudosphere is a surface with constant negative curvature.",
+      "gloss": "La pseudoesfera es una superficie de curvatura negativa constante.",
+      "speaker": "narrator",
+      "ipa": "ðə sˈuːdoʊsfˌɪɹ ɪz ɐ sˈɜːfɪs wɪð kˈɑːnstənt nˈɛɡətˌɪv kˈɜːvətʃɚ"
+    },
+    {
+      "id": "en1.u5.p.004",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "Although the sides look curved to our eyes, they are actually straight in the sense of geodesics.",
+      "gloss": "Aunque los lados parecen curvos a nuestros ojos, en realidad son rectos en el sentido de las geodésicas.",
+      "speaker": "narrator",
+      "ipa": "ɔːlðˈoʊ ðə sˈaɪdz lˈʊk kˈɜːvd tʊ ˌaʊɚɹ ˈaɪz ðeɪ ɑːɹ ˈæktʃuːəli stɹˈeɪt ɪnðə sˈɛns ʌv dʒˌiːoʊdˈɛsɪks"
+    },
+    {
+      "id": "en1.u5.p.005",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "It is formed by two half great circles meeting at right angles.",
+      "gloss": "Está formado por dos semicírculos máximos que se encuentran en ángulo recto.",
+      "speaker": "narrator",
+      "ipa": "ɪɾ ɪz fˈɔːɹmd baɪ tˈuː hˈæf ɡɹˈeɪt sˈɜːkəlz mˈiːɾɪŋ æt ɹˈaɪt ˈæŋɡəlz"
+    },
+    {
+      "id": "en1.u5.p.006",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "You can draw a two-sided figure called a digon.",
+      "gloss": "Podés dibujar una figura de dos lados llamada dígono.",
+      "speaker": "narrator",
+      "ipa": "juː kæn dɹˈɔː ɐ tˈuːsˈaɪdᵻd fˈɪɡjɚ kˈɔːld ɐ dˈɪɡɑːn"
+    },
+    {
+      "id": "en1.u5.lx.001",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "curvature",
+      "pos": "noun",
+      "gloss": "curvatura: cuánto se dobla una superficie",
+      "examplePhraseId": "en1.u5.p.002",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.002",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "geodesic",
+      "pos": "noun",
+      "gloss": "geodésica: el camino más corto sobre una superficie (la 'recta' de un espacio curvo)",
+      "examplePhraseId": "en1.u5.p.004",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.003",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "sphere",
+      "pos": "noun",
+      "gloss": "esfera: superficie perfectamente redonda, como una pelota",
+      "examplePhraseId": "en1.u5.p.002",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.004",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "pseudosphere",
+      "pos": "noun",
+      "gloss": "pseudoesfera: superficie de curvatura negativa constante, con forma de trompeta",
+      "examplePhraseId": "en1.u5.p.003",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.005",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "right angle",
+      "pos": "noun",
+      "gloss": "ángulo recto: un ángulo de 90 grados",
+      "examplePhraseId": "en1.u5.p.005",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.006",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "digon",
+      "pos": "noun",
+      "gloss": "dígono: una figura de dos lados (imposible en el plano)",
+      "examplePhraseId": "en1.u5.p.006",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.qa.001",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "What is a square on the Euclidean plane?",
+      "promptVariants": [
+        "How does the text define a square on a flat surface?"
+      ],
+      "replies": [
+        "A shape with four equal straight sides and four right angles."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says a square is a shape with four straight sides of equal length and four angles of 90 degrees."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "It's a flat shape with four equal sides and four ninety-degree corners."
+        },
+        {
+          "mode": "connect",
+          "text": "On the flat Euclidean plane the definition is strict, so only a four-sided figure can be a square."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.002",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "Can a triangle have three right angles?",
+      "promptVariants": [
+        "Is it possible for a triangle to have three ninety-degree angles?"
+      ],
+      "replies": [
+        "Yes, on a sphere.",
+        "Yes, on a sphere a triangle can have three right angles."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says that on the sphere the angles of a triangle add up to 270, so yes — it can have three right angles."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "Yes. On a curved surface the angles of a triangle add up to more than 180 degrees, so all three can be right angles."
+        },
+        {
+          "mode": "connect",
+          "text": "This happens because the sphere has positive curvature, the idea of Gaussian curvature the text introduces earlier."
+        },
+        {
+          "mode": "personal",
+          "text": "What surprised me is that this triangle looks impossible on paper, but on a globe it is just the equator and two lines of longitude."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.003",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "What is a digon?",
+      "promptVariants": [
+        "What kind of shape is a digon?"
+      ],
+      "replies": [
+        "A two-sided figure formed by two half great circles."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says a digon is a two-sided figure, formed by two half great circles meeting at right angles."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "It's a shape with only two sides, made by two half circles on a sphere."
+        },
+        {
+          "mode": "connect",
+          "text": "Like the spherical triangle, it is another shape that is impossible on the flat plane but appears once the surface is curved."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.004",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta interpretativa nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "Why do the sides of these shapes look curved but are actually straight?",
+      "promptVariants": [
+        "The sides look curved. Why does the text say they are really straight?"
+      ],
+      "replies": [
+        "Because they are geodesics, the shortest paths on the surface."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says they are actually straight in the sense of geodesics, the shortest paths on the surface."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "On a curved surface, straight means the shortest route, and that route looks bent to our eyes."
+        },
+        {
+          "mode": "connect",
+          "text": "That is why a triangle on a sphere can have three right angles: its sides are geodesics, not flat lines."
+        },
+        {
+          "mode": "personal",
+          "text": "For me this is the key idea of the text: straight depends on the surface, not on how it looks."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.005",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de síntesis nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "What does the whole text want you to rethink?",
+      "promptVariants": [
+        "What is the main point of the text?"
+      ],
+      "replies": [
+        "That equal sides and right angles do not always mean a square."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The conclusion says: if you thought that equal sides and right angles always define a square, think again."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "That the definition of a square is not fixed: it depends on the surface you draw it on."
+        },
+        {
+          "mode": "connect",
+          "text": "Because curvature changes the rules, you can get triangles, digons or pentagons with equal sides and right angles."
+        },
+        {
+          "mode": "personal",
+          "text": "It made me realise that geometry can be very different from what we learn at school."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.006",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de exposición nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "How would you explain Gaussian curvature to a friend?",
+      "promptVariants": [
+        "In simple words, what is Gaussian curvature?"
+      ],
+      "replies": [
+        "It measures how much a surface bends: zero for a plane, positive for a sphere, negative for a saddle."
+      ],
+      "answers": [
+        {
+          "mode": "paraphrase",
+          "text": "It's a number that tells you how bent a surface is."
+        },
+        {
+          "mode": "connect",
+          "text": "A plane has zero, a sphere is positive and a saddle is negative, and that is what decides which shapes are possible."
+        },
+        {
+          "mode": "personal",
+          "text": "I would use a ball and a saddle, or a Pringle chip, to show positive and negative curvature."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.ex.001",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Resumen del Texto 2 escrito por nosotros para practicar los términos clave."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "exercise",
+      "prompt": "Completá el resumen del texto con los términos clave.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "A square on the flat ___ plane has four equal sides and four right angles.",
+          "blanks": [
+            {
+              "accept": [
+                "Euclidean"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "On a ___, a triangle can have three right angles.",
+          "blanks": [
+            {
+              "accept": [
+                "sphere"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "On a ___, a shape with right angles can have more than four sides.",
+          "blanks": [
+            {
+              "accept": [
+                "pseudosphere"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The sides only look curved: they are really ___, the shortest paths on the surface.",
+          "blanks": [
+            {
+              "accept": [
+                "geodesics",
+                "geodesic"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "adapted"
+    },
+    {
+      "id": "en1.u5.pr.001",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna de reformulación nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "square",
+      "kind": "production",
+      "prompt": "Explain in your own words what Gaussian curvature is.",
+      "modelAnswer": "Gaussian curvature is a way to measure how bent a surface is. A plane has zero curvature because it is flat. A sphere has positive curvature because it curves outward everywhere. A saddle has negative curvature because it curves up one way and down the other.",
+      "modelVariants": [
+        "Gaussian curvature tells us how bent a surface is: it is zero on a plane, positive on a sphere, and negative on a saddle."
+      ],
+      "scaffold": [
+        "Say what it measures (how bent a surface is).",
+        "Give the three cases: plane, sphere, saddle.",
+        "Say what zero, positive and negative curvature mean."
+      ],
+      "rubric": [
+        {
+          "text": "Nombrás la curvatura",
+          "detect": "\\bcurvature\\b"
+        },
+        {
+          "text": "Das los tres casos (plane / sphere / saddle)",
+          "detect": "\\b(plane|sphere|saddle)\\b"
+        },
+        {
+          "text": "Explicás qué significa cada tipo de curvatura"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "What does Gaussian curvature measure?",
+          "segment": "Gaussian curvature is a way to measure how bent a surface is."
+        },
+        {
+          "prompt": "What is the curvature of a plane?",
+          "segment": "A plane has zero curvature because it is flat."
+        },
+        {
+          "prompt": "What is the curvature of a sphere?",
+          "segment": "A sphere has positive curvature because it curves outward everywhere."
+        },
+        {
+          "prompt": "What is the curvature of a saddle?",
+          "segment": "A saddle has negative curvature because it curves up one way and down the other."
+        }
+      ]
+    },
+    {
+      "id": "en1.u5.pr.002",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna de exposición nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 5,
+      "textId": "square",
+      "kind": "production",
+      "prompt": "Give a one to two minute presentation about the text 'What is a square?'.",
+      "modelAnswer": "This text asks a simple question: what is a square? On the flat surface we use at school, the Euclidean plane, a square is a shape with four equal sides and four right angles, and the definition is strict. But if we change the surface, surprising things happen. Gauss measured how bent a surface is with curvature: a plane has zero curvature, a sphere has positive curvature, and a saddle has negative curvature. On a sphere you can draw a triangle with three right angles, and on a pseudosphere a shape with equal sides and right angles can have more than four sides. The sides look curved, but they are actually straight: they are geodesics, the shortest paths on the surface. So the conclusion is that equal sides and right angles do not always mean a square. It all depends on the curvature of the space.",
+      "scaffold": [
+        "Open with the question: what is a square?",
+        "On the flat plane: four equal sides and four right angles.",
+        "Change the surface: introduce curvature (plane, sphere, saddle).",
+        "Give an example: a triangle on a sphere with three right angles.",
+        "Key idea: the sides are geodesics — straight means the shortest path.",
+        "Conclude: the definition depends on the curvature of the space."
+      ],
+      "rubric": [
+        {
+          "text": "Das la definición en el plano (right angles / sides)",
+          "detect": "\\bright angle"
+        },
+        {
+          "text": "Mencionás la curvatura",
+          "detect": "\\bcurvature\\b"
+        },
+        {
+          "text": "Das un ejemplo en una superficie curva (sphere / pseudosphere)",
+          "detect": "\\b(sphere|pseudosphere)\\b"
+        },
+        {
+          "text": "Mencionás las geodésicas",
+          "detect": "\\bgeodesic"
+        },
+        {
+          "text": "Concluís que depende de la curvatura del espacio"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "What question does the text ask?",
+          "segment": "This text asks a simple question: what is a square?"
+        },
+        {
+          "prompt": "How is a square defined on the flat Euclidean plane?",
+          "segment": "On the Euclidean plane, a square is a shape with four equal sides and four right angles, and the definition is strict.",
+          "hint": "four equal sides, four right angles"
+        },
+        {
+          "prompt": "What happens if you change the surface, and what does curvature measure?",
+          "segment": "But if we change the surface, surprising things happen. Gauss measured how bent a surface is with curvature: a plane has zero, a sphere positive, and a saddle negative."
+        },
+        {
+          "prompt": "Give an example of a strange shape on a curved surface.",
+          "segment": "On a sphere you can draw a triangle with three right angles, and on a pseudosphere a shape with right angles can have more than four sides."
+        },
+        {
+          "prompt": "Why do the sides look curved but are actually straight?",
+          "segment": "The sides look curved, but they are actually straight: they are geodesics, the shortest paths on the surface.",
+          "hint": "geodesics = shortest paths"
+        },
+        {
+          "prompt": "What is the conclusion?",
+          "segment": "So equal sides and right angles do not always mean a square. It all depends on the curvature of the space."
+        }
+      ],
+      "modelVariants": [
+        "A square usually has four equal sides and four right angles, but only on a flat plane. On a curved surface the rules change: a sphere has positive curvature and a saddle negative. On a sphere a triangle can have three right angles, and on a pseudosphere a shape can have more than four sides. The sides look curved but are really geodesics, the shortest paths. So what counts as a square depends on the curvature of the space."
+      ]
+    },
+    {
+      "id": "en1.u5.p.007",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "Geometry can also be studied on curved spaces.",
+      "gloss": "La geometría también puede estudiarse en espacios curvos.",
+      "speaker": "narrator",
+      "ipa": "dʒiˈɑːmətɹi kæn ˈɔːlsoʊ biː stˈʌdid ˌɔn kˈɜːvd spˈeɪsᵻz"
+    },
+    {
+      "id": "en1.u5.p.008",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "A plane has zero curvature: it is flat.",
+      "gloss": "Un plano tiene curvatura cero: es plano.",
+      "speaker": "narrator",
+      "ipa": "ɐ plˈeɪn hɐz zˈiəɹoʊ kˈɜːvətʃɚ ɪɾ ɪz flˈæt"
+    },
+    {
+      "id": "en1.u5.p.009",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Reformulación en presente de la definición del texto, para dar ejemplo al léxico."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "Gaussian curvature is a measure of how bent a surface is.",
+      "gloss": "La curvatura de Gauss es una medida de cuánto se dobla una superficie.",
+      "speaker": "narrator",
+      "ipa": "ɡˈaʊʃən kˈɜːvətʃɚɹ ɪz ɐ mˈɛʒɚɹ ʌv hˌaʊ bˈɛnt ɐ sˈɜːfɪs ɪz"
+    },
+    {
+      "id": "en1.u5.p.010",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "On the flat surface we use in school, called the Euclidean plane, this definition is strict.",
+      "gloss": "En la superficie plana que usamos en la escuela, llamada plano euclidiano, esta definición es estricta.",
+      "speaker": "narrator",
+      "ipa": "ɔnðə flˈæt sˈɜːfɪs wiː jˈuːz ɪn skˈuːl kˈɔːld ðə juːklˈɪdiːən plˈeɪn ðɪs dˌɛfɪnˈɪʃən ɪz stɹˈɪkt"
+    },
+    {
+      "id": "en1.u5.p.011",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "On the sphere, the angles of a triangle can add up to more than 180 degrees.",
+      "gloss": "En la esfera, los ángulos de un triángulo pueden sumar más de 180 grados.",
+      "speaker": "narrator",
+      "ipa": "ɔnðə sfˈɪɹ ðɪ ˈæŋɡəlz əvə tɹˈaɪæŋɡəl kæn ˈæd ˌʌp tə mˈoːɹ ðɐn wˈʌnhˈʌndɹɪd ˈeɪɾi dᵻɡɹˈiːz"
+    },
+    {
+      "id": "en1.u5.p.012",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Reformulación en presente del recorrido descrito en el texto."
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "A line of longitude runs from the equator to the pole.",
+      "gloss": "Una línea de longitud va del ecuador al polo.",
+      "speaker": "narrator",
+      "ipa": "ɐ lˈaɪn ʌv lˈɔndʒɪtˌuːd ɹˈʌnz fɹʌmðɪ ɪkwˈeɪɾɚ tə ðə pˈoʊl"
+    },
+    {
+      "id": "en1.u5.p.013",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "On a saddle, the curvature is negative and changes depending on where you sit.",
+      "gloss": "En una silla de montar, la curvatura es negativa y cambia según dónde estés.",
+      "speaker": "narrator",
+      "ipa": "ˌɔn ɐ sˈædəl ðə kˈɜːvətʃɚɹ ɪz nˈɛɡətˌɪv ænd tʃˈeɪndʒᵻz dᵻpˈɛndɪŋ ˌɔn wˌɛɹ juː sˈɪt"
+    },
+    {
+      "id": "en1.u5.p.014",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "On curved surfaces, you can have triangles, digons, or pentagons with those properties.",
+      "gloss": "En superficies curvas, podés tener triángulos, dígonos o pentágonos con esas propiedades.",
+      "speaker": "narrator",
+      "ipa": "ˌɔn kˈɜːvd sˈɜːfɪsᵻz juː kæn hæv tɹˈaɪæŋɡəlz dˈɪɡɑːnz ɔːɹ pˈɛntæɡənz wɪð ðoʊz pɹˈɑːpɚɾiz"
+    },
+    {
+      "id": "en1.u5.lx.007",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "Euclidean plane",
+      "pos": "noun",
+      "gloss": "plano euclidiano: la superficie plana de la geometría escolar",
+      "examplePhraseId": "en1.u5.p.010",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.008",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "Gaussian curvature",
+      "pos": "noun",
+      "gloss": "curvatura de Gauss: cuánto se dobla una superficie",
+      "examplePhraseId": "en1.u5.p.009",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.009",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "surface",
+      "pos": "noun",
+      "gloss": "superficie",
+      "examplePhraseId": "en1.u5.p.009",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.010",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "angle",
+      "pos": "noun",
+      "gloss": "ángulo",
+      "examplePhraseId": "en1.u5.p.011",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.011",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "degree",
+      "pos": "noun",
+      "gloss": "grado (de un ángulo)",
+      "examplePhraseId": "en1.u5.p.011",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.012",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "longitude",
+      "pos": "noun",
+      "gloss": "longitud (línea que va de polo a polo)",
+      "examplePhraseId": "en1.u5.p.012",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.013",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "equator",
+      "pos": "noun",
+      "gloss": "ecuador (la línea del medio de la Tierra)",
+      "examplePhraseId": "en1.u5.p.012",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.014",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "great circle",
+      "pos": "noun",
+      "gloss": "círculo máximo: el círculo más grande posible sobre una esfera",
+      "examplePhraseId": "en1.u5.p.005",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.015",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "geometry",
+      "pos": "noun",
+      "gloss": "geometría",
+      "examplePhraseId": "en1.u5.p.007",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.016",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "flat",
+      "pos": "adjective",
+      "gloss": "plano / chato (sin curvatura)",
+      "examplePhraseId": "en1.u5.p.008",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.017",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "saddle",
+      "pos": "noun",
+      "gloss": "silla de montar: superficie de curvatura negativa",
+      "examplePhraseId": "en1.u5.p.013",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.018",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 7,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "lexeme",
+      "word": "pentagon",
+      "pos": "noun",
+      "gloss": "pentágono: figura de cinco lados",
+      "examplePhraseId": "en1.u5.p.014",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.qa.007",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "What is the Euclidean plane?",
+      "promptVariants": [
+        "What do we call the flat surface of school geometry?"
+      ],
+      "replies": [
+        "The flat surface we use in school."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text calls it the flat surface we use in school, where the definition of a square is strict."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "It's the ordinary flat surface of school geometry, with no curvature."
+        },
+        {
+          "mode": "connect",
+          "text": "It has zero curvature, so on it a square must have exactly four sides."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.008",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "How can you draw a triangle with three right angles on the Earth?",
+      "promptVariants": [
+        "Describe the walk that makes a triangle with three right angles."
+      ],
+      "replies": [
+        "Walk from the equator to the pole, turn 90 degrees, come back, and follow the equator."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says to walk along a longitude from the equator to the pole, turn 90 degrees, walk down another longitude, and follow the equator back."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "You go from the equator up to the pole, turn a right angle, come back down, and close the triangle along the equator."
+        },
+        {
+          "mode": "personal",
+          "text": "I like this one because you can actually trace it on a globe with your finger."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.009",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "What is the difference between a plane, a sphere and a saddle?",
+      "promptVariants": [
+        "Compare the curvature of a plane, a sphere and a saddle."
+      ],
+      "replies": [
+        "Their curvature: zero, positive and negative."
+      ],
+      "answers": [
+        {
+          "mode": "paraphrase",
+          "text": "A plane is flat, a sphere curves outward everywhere, and a saddle curves up one way and down the other."
+        },
+        {
+          "mode": "connect",
+          "text": "That difference is their Gaussian curvature: zero, positive and negative, and it decides which shapes are possible."
+        },
+        {
+          "mode": "personal",
+          "text": "I picture a table, a ball and a Pringle chip to remember the three cases."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.010",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "Why does the author begin with the school definition of a square?",
+      "promptVariants": [
+        "What is the point of starting from the familiar definition?"
+      ],
+      "replies": [
+        "To set up a rule that the curved surfaces then break."
+      ],
+      "answers": [
+        {
+          "mode": "connect",
+          "text": "The strict four-sided definition on the plane is the expectation that the rest of the text overturns with curved surfaces."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "She starts from what everyone knows, so the surprising examples feel stronger."
+        },
+        {
+          "mode": "personal",
+          "text": "For me it makes the text feel like a small trick: first the obvious, then 'think again'."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.011",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "Can you give another strange shape from the text?",
+      "promptVariants": [
+        "Besides the spherical triangle, what other shape appears?"
+      ],
+      "replies": [
+        "A digon, or a five-sided figure with right angles on a pseudosphere."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text mentions a digon, a two-sided figure, and a five-sided figure with equal sides and right angles on a pseudosphere."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "Besides the spherical triangle, there is the two-sided digon and a right-angled pentagon on a pseudosphere."
+        },
+        {
+          "mode": "personal",
+          "text": "The digon surprised me most: a shape with only two sides sounds impossible."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.012",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "What does 'straight' mean on a curved surface?",
+      "promptVariants": [
+        "On a curved surface, what makes a line count as straight?"
+      ],
+      "replies": [
+        "The shortest path, called a geodesic."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says the sides are straight in the sense of geodesics, the shortest paths on the surface."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "Straight means the shortest route between two points, even if it looks curved to us."
+        },
+        {
+          "mode": "connect",
+          "text": "That is why these shapes can have right angles: their sides are geodesics, not flat lines."
+        },
+        {
+          "mode": "personal",
+          "text": "This is the single idea I would keep from the whole text."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.013",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 5,
+      "textId": "square",
+      "kind": "qa",
+      "prompt": "Do you find this idea useful, or just curious? Why?",
+      "promptVariants": [
+        "What is your opinion of the text's main idea?"
+      ],
+      "replies": [
+        "Both: it is curious, but it also shows geometry depends on the surface."
+      ],
+      "answers": [
+        {
+          "mode": "paraphrase",
+          "text": "I think it is surprising, and it also teaches that the rules of geometry change with the surface."
+        },
+        {
+          "mode": "connect",
+          "text": "It connects to real things like maps and the Earth, where the surface is a sphere, not a plane."
+        },
+        {
+          "mode": "personal",
+          "text": "For me it is mostly beautiful: it shows that 'obvious' rules are only obvious on flat paper."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.ex.002",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Cloze nuestro para practicar los tipos de curvatura."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "exercise",
+      "prompt": "Completá con el tipo de curvatura de cada superficie.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "The curvature of a plane is ___.",
+          "blanks": [
+            {
+              "accept": [
+                "zero"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The curvature of a sphere is ___.",
+          "blanks": [
+            {
+              "accept": [
+                "positive"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The curvature of a saddle is ___.",
+          "blanks": [
+            {
+              "accept": [
+                "negative"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "On a sphere, the angles of a triangle add up to ___ degrees.",
+          "blanks": [
+            {
+              "accept": [
+                "270"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "adapted"
+    },
+    {
+      "id": "en1.u5.pr.003",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna de producción nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "square",
+      "kind": "production",
+      "prompt": "Explain the text to a friend who has never studied geometry, in simple words.",
+      "modelAnswer": "Imagine a square: four equal sides and four square corners. On flat paper that always means four sides. But if you draw on a ball or another curved surface, the rules change. On a ball you can make a triangle with three square corners, and on a trumpet-shaped surface a shape can have five sides with square corners. The sides look bent, but they are the shortest paths, so they count as straight. So a square is not always a square: it depends on the surface.",
+      "scaffold": [
+        "Start from the everyday square.",
+        "Say the flat rule: always four sides.",
+        "Change to a ball or a curved surface.",
+        "Give one simple example.",
+        "End: it depends on the surface."
+      ],
+      "rubric": [
+        {
+          "text": "Partís del cuadrado cotidiano",
+          "detect": "\\bsquare\\b"
+        },
+        {
+          "text": "Cambiás a una superficie curva",
+          "detect": "\\b(ball|curved|surface)\\b"
+        },
+        {
+          "text": "Das un ejemplo (triángulo)",
+          "detect": "\\btriangle\\b"
+        },
+        {
+          "text": "Cerrás con que depende de la superficie"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "Start from an everyday square: what is it?",
+          "segment": "Imagine a square: four equal sides and four square corners."
+        },
+        {
+          "prompt": "What is the rule on flat paper?",
+          "segment": "On flat paper that always means four sides."
+        },
+        {
+          "prompt": "What happens on a curved surface?",
+          "segment": "But if you draw on a ball or another curved surface, the rules change."
+        },
+        {
+          "prompt": "Give a simple example.",
+          "segment": "On a ball you can make a triangle with three square corners, and on a trumpet-shaped surface a shape can have five sides with square corners."
+        },
+        {
+          "prompt": "Why are the bent-looking sides straight?",
+          "segment": "The sides look bent, but they are the shortest paths, so they count as straight."
+        },
+        {
+          "prompt": "What is the point?",
+          "segment": "So a square is not always a square: it depends on the surface."
+        }
+      ],
+      "modelVariants": [
+        "Think of a square: four equal sides and square corners. On flat paper that means four sides. But on a ball or a curved surface the rules change, so you can get a triangle with three square corners. The sides look bent but they are the shortest paths, so they are really straight. A square isn't always a square: it depends on the surface."
+      ]
+    },
+    {
+      "id": "en1.u5.pr.004",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna de producción nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 5,
+      "textId": "square",
+      "kind": "production",
+      "prompt": "Choose the sphere and explain what strange shapes appear on it.",
+      "modelAnswer": "On a sphere the curvature is positive and constant. Because of that, the angles of a triangle add up to more than 180 degrees, so you can draw a triangle with three right angles. You just walk from the equator to the pole, turn, come back, and follow the equator. You can even draw a digon, a figure with only two sides, formed by two half great circles. On a sphere, straight lines are the shortest paths, so these sides are really straight even if they look curved.",
+      "scaffold": [
+        "Name the sphere's curvature (positive).",
+        "Explain the triangle with three right angles.",
+        "Describe how to build it (equator, pole).",
+        "Add the digon.",
+        "Note that the sides are geodesics (shortest paths)."
+      ],
+      "rubric": [
+        {
+          "text": "Nombrás la curvatura de la esfera",
+          "detect": "\\bcurvature\\b"
+        },
+        {
+          "text": "Explicás el triángulo de ángulos rectos",
+          "detect": "\\bright angle"
+        },
+        {
+          "text": "Mencionás el dígono",
+          "detect": "\\bdigon\\b"
+        },
+        {
+          "text": "Aclarás que los lados son geodésicas",
+          "detect": "\\b(straight|shortest|geodesic)\\b"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "What is the curvature of a sphere?",
+          "segment": "On a sphere the curvature is positive and constant."
+        },
+        {
+          "prompt": "What does that do to a triangle?",
+          "segment": "Because of that, the angles of a triangle add up to more than 180 degrees, so you can draw a triangle with three right angles."
+        },
+        {
+          "prompt": "How do you build that triangle on the Earth?",
+          "segment": "You just walk from the equator to the pole, turn, come back, and follow the equator."
+        },
+        {
+          "prompt": "What other strange shape can you draw?",
+          "segment": "You can even draw a digon, a figure with only two sides, formed by two half great circles."
+        },
+        {
+          "prompt": "Why are the sides really straight?",
+          "segment": "On a sphere, straight lines are the shortest paths, so these sides are really straight even if they look curved."
+        }
+      ],
+      "modelVariants": [
+        "A sphere has positive curvature, so a triangle there can have three right angles: just walk from the equator to the pole, turn, and come back along the equator. You can even draw a digon, a two-sided figure. The sides are geodesics, so they are straight even if they look curved."
+      ]
+    },
+    {
+      "id": "en1.u5.pr.005",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna de producción nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 5,
+      "textId": "square",
+      "kind": "production",
+      "prompt": "Give your opinion: does this text change how we should think about geometry?",
+      "modelAnswer": "In my opinion, this text changes how we think about geometry. At school we learn that a square always has four sides, and we believe it is a fixed truth. But the text shows that this is only true on a flat plane. On curved surfaces the same rules give triangles, digons or pentagons with equal sides and right angles. So geometry is not one fixed set of rules: it depends on the space. I think this is important because the real world, like the surface of the Earth, is curved, not flat.",
+      "scaffold": [
+        "State your opinion clearly.",
+        "Say what we usually believe.",
+        "Contrast with what the text shows.",
+        "Give the reason (curvature / the space).",
+        "Connect to the real world."
+      ],
+      "rubric": [
+        {
+          "text": "Das tu opinión",
+          "detect": "\\b(opinion|think|believe)\\b"
+        },
+        {
+          "text": "Contrastás plano vs superficie curva",
+          "detect": "\\b(flat|curved|surface|plane)\\b"
+        },
+        {
+          "text": "Justificás con la curvatura o el espacio",
+          "detect": "\\b(curved|space)\\b"
+        },
+        {
+          "text": "Conectás con el mundo real"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "What is your opinion?",
+          "segment": "In my opinion, this text changes how we think about geometry."
+        },
+        {
+          "prompt": "What do we usually believe?",
+          "segment": "At school we learn that a square always has four sides, and we believe it is a fixed truth."
+        },
+        {
+          "prompt": "What does the text show instead?",
+          "segment": "But the text shows that this is only true on a flat plane. On curved surfaces the same rules give triangles, digons or pentagons with equal sides and right angles."
+        },
+        {
+          "prompt": "What is the general conclusion?",
+          "segment": "So geometry is not one fixed set of rules: it depends on the space."
+        },
+        {
+          "prompt": "Why does it matter?",
+          "segment": "I think this is important because the real world, like the surface of the Earth, is curved, not flat."
+        }
+      ],
+      "modelVariants": [
+        "I think this text changes how we see geometry. We learn at school that a square always has four sides, but that is only true on a flat plane. On curved surfaces you get other shapes with equal sides and right angles. So geometry depends on the space, which matters because the real world is curved, not flat."
+      ]
+    },
+    {
+      "id": "en1.u5.p.015",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "phrase",
+      "text": "She is fascinated by prime numbers.",
+      "gloss": "Le fascinan los números primos.",
+      "speaker": "narrator",
+      "ipa": "ʃiː ɪz fˈæsᵻnˌeɪɾᵻd baɪ pɹˈaɪm nˈʌmbɚz"
+    },
+    {
+      "id": "en1.u5.p.016",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "phrase",
+      "text": "Prime numbers are whole numbers greater than 1 that can only be divided by 1 and themselves.",
+      "gloss": "Los números primos son enteros mayores que 1 que solo pueden dividirse por 1 y por sí mismos.",
+      "speaker": "narrator",
+      "ipa": "pɹˈaɪm nˈʌmbɚz ɑːɹ hˈoʊl nˈʌmbɚz ɡɹˈeɪɾɚ ðɐn wˈʌn ðæt kæn ˈoʊnli biː dᵻvˈaɪdᵻd baɪ wˈʌn ænd ðɛmsˈɛlvz"
+    },
+    {
+      "id": "en1.u5.p.017",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 4,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "phrase",
+      "text": "My favorite number is 2, so it is definitely my favorite prime.",
+      "gloss": "Mi número favorito es el 2, así que es sin duda mi primo favorito.",
+      "speaker": "narrator",
+      "ipa": "maɪ fˈeɪvɚɹᵻt nˈʌmbɚɹ ɪz tˈuː sˌoʊ ɪɾ ɪz dˈɛfɪnətli maɪ fˈeɪvɚɹᵻt pɹˈaɪm"
+    },
+    {
+      "id": "en1.u5.p.018",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 4,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "phrase",
+      "text": "2 is responsible for the concept of even and odd numbers.",
+      "gloss": "El 2 es responsable del concepto de números pares e impares.",
+      "speaker": "narrator",
+      "ipa": "tˈuː ɪz ɹᵻspˈɑːnsᵻbəl fɚðə kˈɑːnsɛpt ʌv ˈiːvən ænd ˈɑːd nˈʌmbɚz"
+    },
+    {
+      "id": "en1.u5.p.019",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "phrase",
+      "text": "Arithmetic statistics studies patterns in the behavior of primes and other numbers.",
+      "gloss": "La estadística aritmética estudia patrones en el comportamiento de los primos y otros números.",
+      "speaker": "narrator",
+      "ipa": "ɚɹˈɪθmətˌɪk stɐtˈɪstɪks stˈʌdiz pˈætɚnz ɪnðə bᵻhˈeɪvjɚɹ ʌv pɹˈaɪmz ænd ˈʌðɚ nˈʌmbɚz"
+    },
+    {
+      "id": "en1.u5.p.020",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "phrase",
+      "text": "Her research in number theory focuses on whole numbers.",
+      "gloss": "Su investigación en teoría de números se centra en los números enteros.",
+      "speaker": "narrator",
+      "ipa": "hɜː ɹᵻsˈɜːtʃ ɪn nˈʌmbɚ θˈiəɹi fˈoʊkəsᵻz ˌɔn hˈoʊl nˈʌmbɚz"
+    },
+    {
+      "id": "en1.u5.p.021",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "phrase",
+      "text": "The fellowship celebrates creativity.",
+      "gloss": "La beca celebra la creatividad.",
+      "speaker": "narrator",
+      "ipa": "ðə fˈɛloʊʃˌɪp sˈɛləbɹˌeɪts kɹiːˌeɪtˈɪvᵻɾi"
+    },
+    {
+      "id": "en1.u5.p.022",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 4,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "phrase",
+      "text": "I am drawn to questions about foundational structures.",
+      "gloss": "Me atraen las preguntas sobre estructuras fundamentales.",
+      "speaker": "narrator",
+      "ipa": "aɪɐm dɹˈɔːn tə kwˈɛstʃənz ɐbˌaʊt faʊndˈeɪʃənəl stɹˈʌktʃɚz"
+    },
+    {
+      "id": "en1.u5.lx.019",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "lexeme",
+      "word": "prime number",
+      "pos": "noun",
+      "gloss": "número primo: entero mayor que 1 divisible solo por 1 y por sí mismo",
+      "examplePhraseId": "en1.u5.p.016",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.020",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "lexeme",
+      "word": "whole number",
+      "pos": "noun",
+      "gloss": "número entero (1, 2, 3, …)",
+      "examplePhraseId": "en1.u5.p.016",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.021",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "lexeme",
+      "word": "number theory",
+      "pos": "noun",
+      "gloss": "teoría de números",
+      "examplePhraseId": "en1.u5.p.020",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.022",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "lexeme",
+      "word": "fellowship",
+      "pos": "noun",
+      "gloss": "beca o distinción (aquí, la MacArthur)",
+      "examplePhraseId": "en1.u5.p.021",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.023",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "lexeme",
+      "word": "even",
+      "pos": "adjective",
+      "gloss": "par (número divisible por 2)",
+      "examplePhraseId": "en1.u5.p.018",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.024",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "lexeme",
+      "word": "odd",
+      "pos": "adjective",
+      "gloss": "impar (número no divisible por 2)",
+      "examplePhraseId": "en1.u5.p.018",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.025",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "lexeme",
+      "word": "arithmetic statistics",
+      "pos": "noun",
+      "gloss": "estadística aritmética: patrones en el comportamiento de los números",
+      "examplePhraseId": "en1.u5.p.019",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.026",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "lexeme",
+      "word": "foundational",
+      "pos": "adjective",
+      "gloss": "fundamental, de base",
+      "examplePhraseId": "en1.u5.p.022",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.qa.014",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "qa",
+      "prompt": "What is a prime number?",
+      "promptVariants": [
+        "How does the text define a prime number?"
+      ],
+      "replies": [
+        "A whole number greater than 1 that can only be divided by 1 and itself."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says prime numbers are whole numbers greater than 1 that can only be divided by 1 and themselves, such as 2, 3, or 7."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "It is a number bigger than 1 with no divisors except 1 and itself."
+        },
+        {
+          "mode": "connect",
+          "text": "These are exactly the numbers Wood studies in number theory."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.015",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "qa",
+      "prompt": "What is Wood's favorite number, and why?",
+      "promptVariants": [
+        "Why does she love the number 2?"
+      ],
+      "replies": [
+        "Two, because it is simple but powerful and creates even and odd numbers."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "She says her favorite number is 2, and that 2 is responsible for the concept of even and odd numbers."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "Her favorite is two: it looks simple but it is very powerful."
+        },
+        {
+          "mode": "personal",
+          "text": "I like that her favorite is the smallest prime, not a complicated one."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.016",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "why2",
+      "kind": "qa",
+      "prompt": "How does Wood describe the nature of her work?",
+      "promptVariants": [
+        "What does she say her work is really about?"
+      ],
+      "replies": [
+        "Finding a method for a question that has no known method."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "She says: here is a question we have no method to solve, so come up with a method."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "Her job is to invent ways to solve problems that nobody knows how to solve yet."
+        },
+        {
+          "mode": "connect",
+          "text": "That is why she compares it to writing a book instead of reading one."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.017",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "why2",
+      "kind": "qa",
+      "prompt": "How is her work different from school mathematics?",
+      "promptVariants": [
+        "What is the difference between her work and maths at school?"
+      ],
+      "replies": [
+        "School maths is like reading a book; her work is like writing one."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "She says it is like the difference between reading a book and writing a book."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "At school you apply methods you already know; she has to create new ones."
+        },
+        {
+          "mode": "personal",
+          "text": "This changed how I think about what mathematicians actually do."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.018",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "why2",
+      "kind": "qa",
+      "prompt": "What tools does Wood use to solve problems?",
+      "promptVariants": [
+        "What is in her mathematical tool belt?"
+      ],
+      "replies": [
+        "Concrete examples, ideas from other areas, and learning from failed attempts."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "She mentions looking at many concrete examples, bringing in ideas from areas like probability or geometry, and learning from things that do not work."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "She tries examples, borrows ideas from other fields, and learns from her failures."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.019",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "why2",
+      "kind": "qa",
+      "prompt": "Why does Wood connect mathematics with creativity?",
+      "promptVariants": [
+        "What does she say about creativity in maths?"
+      ],
+      "replies": [
+        "Because solving unknown questions requires imagination, like the arts."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "She says the fellowship celebrates creativity, and that solving questions no one knows how to answer also requires imagination."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "For her, inventing new methods is a creative act, not just following rules."
+        },
+        {
+          "mode": "personal",
+          "text": "I agree; I used to think maths had no room for creativity."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.020",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 5,
+      "textId": "why2",
+      "kind": "qa",
+      "prompt": "What did you find most interesting in the interview?",
+      "promptVariants": [
+        "What is your own view of the interview?"
+      ],
+      "replies": [
+        "Open answer: your own opinion about the interview."
+      ],
+      "answers": [
+        {
+          "mode": "paraphrase",
+          "text": "I found it interesting that a top mathematician's favorite number is just 2."
+        },
+        {
+          "mode": "personal",
+          "text": "For me, the idea that maths is like writing a book, not reading one, is the most striking."
+        },
+        {
+          "mode": "connect",
+          "text": "It connects to the main point: maths is creative, not only memorizing rules."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.ex.003",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Cloze nuestro sobre el Texto 1."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "exercise",
+      "prompt": "Completá el resumen de la entrevista.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "A ___ number can only be divided by 1 and itself.",
+          "blanks": [
+            {
+              "accept": [
+                "prime"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Wood studies number ___, which focuses on whole numbers.",
+          "blanks": [
+            {
+              "accept": [
+                "theory"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Her favorite number is ___.",
+          "blanks": [
+            {
+              "accept": [
+                "2",
+                "two"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "She believes mathematics needs ___, like the arts.",
+          "blanks": [
+            {
+              "accept": [
+                "creativity",
+                "imagination"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "adapted"
+    },
+    {
+      "id": "en1.u5.pr.006",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna de producción nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.person",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "why2",
+      "kind": "production",
+      "prompt": "Give a short presentation about the interview with Melanie Matchett Wood.",
+      "modelAnswer": "This text is an interview with Melanie Matchett Wood, a mathematician who won a MacArthur Fellowship. She works in number theory, and she is fascinated by prime numbers. She says her work is about finding methods for questions that have no known method, which is very different from school mathematics. Her favorite number is 2, because it is simple but powerful and it creates even and odd numbers. She also believes that mathematics needs creativity and imagination, just like the arts.",
+      "scaffold": [
+        "Say who the interview is with and what she won.",
+        "Name her field and what fascinates her.",
+        "Explain how she describes her work.",
+        "Give her favorite number and why.",
+        "End with her idea about creativity."
+      ],
+      "rubric": [
+        {
+          "text": "Nombrás la teoría de números",
+          "detect": "\\bnumber theory\\b"
+        },
+        {
+          "text": "Mencionás los números primos",
+          "detect": "\\bprime\\b"
+        },
+        {
+          "text": "Hablás de creatividad o imaginación",
+          "detect": "\\b(creativity|imagination)\\b"
+        },
+        {
+          "text": "Explicás por qué su número favorito es el 2"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "Who is the interview with, and what did she win?",
+          "segment": "This text is an interview with Melanie Matchett Wood, a mathematician who won a MacArthur Fellowship."
+        },
+        {
+          "prompt": "What is her field, and what fascinates her?",
+          "segment": "She works in number theory, and she is fascinated by prime numbers."
+        },
+        {
+          "prompt": "How does she describe her work?",
+          "segment": "She says her work is about finding methods for questions that have no known method, which is very different from school mathematics."
+        },
+        {
+          "prompt": "What is her favorite number, and why?",
+          "segment": "Her favorite number is 2, because it is simple but powerful and it creates even and odd numbers."
+        },
+        {
+          "prompt": "What does she say about creativity?",
+          "segment": "She also believes that mathematics needs creativity and imagination, just like the arts."
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "This is an interview with Melanie Matchett Wood, a mathematician who won a MacArthur Fellowship. She studies number theory and loves prime numbers. She says her work is inventing methods for problems nobody can solve yet, unlike school maths. Her favorite number is 2, and she believes maths needs creativity, like the arts."
+      ]
+    },
+    {
+      "id": "en1.u5.pr.007",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna de producción nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.person",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "why2",
+      "kind": "production",
+      "prompt": "Explain why the mathematician loves the number 2.",
+      "modelAnswer": "In the interview, Wood says her favorite prime number is 2. It seems simple, but it is very powerful, because 2 is responsible for the idea of even and odd numbers. She also tells a story: on her university math team other students chose numbers like pi, but she chose 2, and when she graduated they retired her jersey with the number 2.",
+      "scaffold": [
+        "Say which number is her favorite.",
+        "Explain why it is powerful (even and odd).",
+        "Tell the story of the math jersey."
+      ],
+      "rubric": [
+        {
+          "text": "Decís que es su primo favorito",
+          "detect": "\\bprime\\b"
+        },
+        {
+          "text": "Mencionás pares e impares",
+          "detect": "\\b(even|odd)\\b"
+        },
+        {
+          "text": "Contás la historia de la camiseta"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "What is Wood's favorite number?",
+          "segment": "In the interview, Wood says her favorite prime number is 2."
+        },
+        {
+          "prompt": "Why does she like it?",
+          "segment": "It seems simple, but it is very powerful, because 2 is responsible for the idea of even and odd numbers."
+        },
+        {
+          "prompt": "What story does she tell about it?",
+          "segment": "On her university math team, other students chose numbers like pi, but she chose 2, and they later retired her jersey with the number 2."
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "Wood's favorite prime is 2. It looks simple but it is powerful, because it creates even and odd numbers. On her university team others chose numbers like pi, but she chose 2, and they later retired her jersey with that number."
+      ]
+    },
+    {
+      "id": "en1.u5.pr.008",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna de producción nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.person",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 5,
+      "textId": "why2",
+      "kind": "production",
+      "prompt": "Do you agree that mathematics needs creativity? Give your opinion.",
+      "modelAnswer": "In my opinion, mathematics does need creativity. Many people think maths is only about rules and correct answers. But Wood shows that a mathematician invents methods for questions that nobody knows how to solve. That is a creative act, like writing a book instead of reading one. So I agree that solving hard math problems requires imagination, just like art.",
+      "scaffold": [
+        "State your opinion.",
+        "Say what many people think.",
+        "Say what Wood shows instead.",
+        "Give your conclusion."
+      ],
+      "rubric": [
+        {
+          "text": "Das tu opinión",
+          "detect": "\\b(opinion|think|agree)\\b"
+        },
+        {
+          "text": "Hablás de creatividad o imaginación",
+          "detect": "\\b(creativity|creative|imagination)\\b"
+        },
+        {
+          "text": "Contrastás con lo que la gente cree"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "What is your opinion?",
+          "segment": "In my opinion, mathematics does need creativity."
+        },
+        {
+          "prompt": "What do many people think?",
+          "segment": "Many people think maths is only about rules and correct answers."
+        },
+        {
+          "prompt": "What does Wood show instead?",
+          "segment": "But Wood shows that a mathematician invents methods for questions that nobody knows how to solve."
+        },
+        {
+          "prompt": "What is your conclusion?",
+          "segment": "So I agree that solving hard math problems requires imagination, just like art."
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "I agree that maths needs creativity. People think it is only rules and right answers, but Wood invents new methods for unsolved problems. That is creative, like writing a book instead of reading one, and it needs imagination like art."
+      ]
+    },
+    {
+      "id": "en1.u5.rd.002",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 3,
+        "section": "Text N°1",
+        "note": "Recurso de estudio: resumen fiel y atribuido de la entrevista, con citas breves. El artículo completo está en la fuente enlazada."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 1,
+      "textId": "why2",
+      "kind": "reading",
+      "title": "Why 2 Is the Best Number",
+      "credit": {
+        "author": "Rachel Crowell",
+        "publication": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/why-2-is-the-best-number-and-other-secrets-from-a-macarthur-winning-mathematician/"
+      },
+      "speaker": "narrator",
+      "sections": [
+        {
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "This text is an interview with Melanie Matchett Wood, a mathematician at Harvard University who recently won a MacArthur Fellowship, also called a genius grant, for her work on open problems in mathematics."
+            },
+            {
+              "kind": "para",
+              "text": "She works in number theory, the study of the whole numbers: 1, 2, 3, and so on. She is fascinated by prime numbers, which are whole numbers greater than 1 that can only be divided by 1 and themselves, such as 2, 3, or 7."
+            }
+          ]
+        },
+        {
+          "heading": "The nature of the work",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Wood describes her work as inventing methods, not just applying them. In her words: here is a question we have no method to solve, so come up with a method. She compares it to the difference between reading a book and writing a book, which is very different from most people's experience of mathematics at school."
+            }
+          ]
+        },
+        {
+          "heading": "What makes a question intriguing",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "She is drawn to questions about foundational structures, such as the whole numbers, that we do not yet have tools to answer. These structures underpin everything in mathematics, and their difficulty is exactly what excites her."
+            }
+          ]
+        },
+        {
+          "heading": "Her mathematical toolbox",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Her key tools are looking at many concrete examples to see what patterns emerge, bringing in ideas from other areas like probability or geometry, and being willing to try things that do not work and still learn from those failures."
+            }
+          ]
+        },
+        {
+          "heading": "Why 2 is her favorite number",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Her favorite number, and favorite prime, is 2. It seems simple, she says, but it is very powerful: 2 is responsible for the concept of even and odd numbers."
+            },
+            {
+              "kind": "para",
+              "text": "She even tells a story. On her university math team the students wore shirts with numbers, and many chose numbers like pi. Hers was 2, and when she graduated they retired her math jersey with the number 2."
+            }
+          ]
+        },
+        {
+          "heading": "What the MacArthur prize means to her",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "For Wood, the prize is a tremendous honor, especially because the fellowship celebrates creativity. Most people associate creativity with the arts, but she points out that solving math questions no one knows how to answer also requires imagination."
+            }
+          ]
+        }
+      ],
+      "afterReadingTask": "Find 5 example sentences in the Present Simple Tense in the text."
+    },
+    {
+      "id": "en1.u5.p.023",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "phrase",
+      "text": "Missing foundational courses can limit college options.",
+      "gloss": "No cursar materias de base puede limitar las opciones universitarias.",
+      "speaker": "narrator",
+      "ipa": "mˈɪsɪŋ faʊndˈeɪʃənəl kˈoːɹsᵻz kæn lˈɪmɪt kˈɑːlɪdʒ ˈɑːpʃənz"
+    },
+    {
+      "id": "en1.u5.p.024",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "phrase",
+      "text": "More years of math can improve college readiness and confidence.",
+      "gloss": "Más años de matemática pueden mejorar la preparación para la universidad y la confianza.",
+      "speaker": "narrator",
+      "ipa": "mˈoːɹ jˈɪɹz ʌv mˈæθ kæn ɪmpɹˈuːv kˈɑːlɪdʒ ɹˈɛdinəs ænd kˈɑːnfɪdəns"
+    },
+    {
+      "id": "en1.u5.p.025",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "four-years",
+      "kind": "phrase",
+      "text": "Early numeracy can support later success.",
+      "gloss": "La habilidad numérica temprana puede favorecer el éxito posterior.",
+      "speaker": "narrator",
+      "ipa": "ˈɜːli nˈuːmɚɹəsi kæn səpˈoːɹt lˈeɪɾɚ səksˈɛs"
+    },
+    {
+      "id": "en1.u5.p.026",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "four-years",
+      "kind": "phrase",
+      "text": "Most U.S. students take math throughout high school.",
+      "gloss": "La mayoría de los estudiantes de EE.UU. cursa matemática durante toda la secundaria.",
+      "speaker": "narrator",
+      "ipa": "mˈoʊst jˌuːˈɛs stˈuːdənts tˈeɪk mˈæθ θɹuːˈaʊt hˈaɪ skˈuːl"
+    },
+    {
+      "id": "en1.u5.p.027",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "phrase",
+      "text": "In England, students take exams called GCSEs, and many stop math after age 16.",
+      "gloss": "En Inglaterra los estudiantes rinden exámenes llamados GCSE, y muchos dejan la matemática después de los 16.",
+      "speaker": "narrator",
+      "ipa": "ɪn ˈɪŋɡlənd stˈuːdənts tˈeɪk ɛɡzˈæmz kˈɔːld dʒˌiːsˌiːˌɛsˈiː ænd mˈɛni stˈɑːp mˈæθ ˈæftɚɹ ˈeɪdʒ sˈɪkstiːn"
+    },
+    {
+      "id": "en1.u5.p.028",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "phrase",
+      "text": "For some experts, more math is an equity issue.",
+      "gloss": "Para algunos expertos, más matemática es una cuestión de equidad.",
+      "speaker": "narrator",
+      "ipa": "fɔːɹ sˌʌm ˈɛkspɜːts mˈoːɹ mˈæθ ɪz ɐn ˈɛkwᵻɾi ˈɪʃuː"
+    },
+    {
+      "id": "en1.u5.lx.027",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "lexeme",
+      "word": "numeracy",
+      "pos": "noun",
+      "gloss": "habilidad numérica: saber usar los números",
+      "examplePhraseId": "en1.u5.p.025",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.028",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "lexeme",
+      "word": "foundational course",
+      "pos": "noun",
+      "gloss": "materia de base (Álgebra, Geometría)",
+      "examplePhraseId": "en1.u5.p.023",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.029",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "lexeme",
+      "word": "college readiness",
+      "pos": "noun",
+      "gloss": "preparación para la universidad",
+      "examplePhraseId": "en1.u5.p.024",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.030",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "lexeme",
+      "word": "equity",
+      "pos": "noun",
+      "gloss": "equidad: igualdad de oportunidades",
+      "examplePhraseId": "en1.u5.p.028",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.031",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "four-years",
+      "kind": "lexeme",
+      "word": "high school",
+      "pos": "noun",
+      "gloss": "escuela secundaria (EE.UU.)",
+      "examplePhraseId": "en1.u5.p.026",
+      "focus": "variant",
+      "variantOf": {
+        "uk": "secondary school",
+        "us": "high school"
+      }
+    },
+    {
+      "id": "en1.u5.lx.032",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "lexeme",
+      "word": "GCSE",
+      "pos": "noun",
+      "gloss": "examen británico al terminar los 15-16 años",
+      "examplePhraseId": "en1.u5.p.027",
+      "focus": "spelling"
+    },
+    {
+      "id": "en1.u5.qa.021",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Text N°3."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "qa",
+      "prompt": "What does the British prime minister want?",
+      "promptVariants": [
+        "What is Rishi Sunak's proposal about maths?"
+      ],
+      "replies": [
+        "He wants all students to study maths until age 18."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says the prime minister wants all students to study maths through secondary school, until age 18."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "He wants every student in England to keep studying maths, not stop at 16."
+        },
+        {
+          "mode": "connect",
+          "text": "He argues students need maths to manage their finances and to work in a world full of data."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.022",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Text N°3."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "four-years",
+      "kind": "qa",
+      "prompt": "How is maths education different in England and the United States?",
+      "promptVariants": [
+        "Compare the two systems."
+      ],
+      "replies": [
+        "In England many students stop maths at 16; in the U.S. most continue through high school."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says that in England many students stop maths after 16, while in the U.S. most students take maths throughout high school."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "English students can drop maths earlier, but American students usually study it for more years."
+        },
+        {
+          "mode": "connect",
+          "text": "That is why the prime minister's proposal would be a major change for England."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.023",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Text N°3."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "qa",
+      "prompt": "How many years of maths do U.S. states require?",
+      "promptVariants": [
+        "What are the maths requirements in the U.S.?"
+      ],
+      "replies": [
+        "Many states require three courses, and some require four."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says twenty-seven states require three maths courses and seventeen states plus Washington require four."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "Most states ask for three courses, and quite a few ask for four."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.024",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Text N°3."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "four-years",
+      "kind": "qa",
+      "prompt": "Does taking more maths lead to better outcomes?",
+      "promptVariants": [
+        "Is more maths actually better?"
+      ],
+      "replies": [
+        "Research suggests yes, but it is not the only factor."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says research suggests that students who take more years of maths have better post-secondary outcomes."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "More maths seems to help, even for students who don't choose maths careers."
+        },
+        {
+          "mode": "connect",
+          "text": "But the text warns that results also depend on teaching quality, equity and early support."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.025",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Text N°3."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "four-years",
+      "kind": "qa",
+      "prompt": "Why does the author include international comparisons?",
+      "promptVariants": [
+        "What is the purpose of comparing countries?"
+      ],
+      "replies": [
+        "To show that more maths does not guarantee better results."
+      ],
+      "answers": [
+        {
+          "mode": "connect",
+          "text": "The comparison shows that many countries require maths until 18, yet their results vary a lot."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "It reminds us that outcomes depend on many factors, not just years of study."
+        },
+        {
+          "mode": "personal",
+          "text": "For me this is the most honest part: it avoids a simple answer."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.026",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Text N°3."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 5,
+      "textId": "four-years",
+      "kind": "qa",
+      "prompt": "Do you think students should study maths for more years? Why?",
+      "promptVariants": [
+        "What is your opinion on the debate?"
+      ],
+      "replies": [
+        "Open answer: your own opinion."
+      ],
+      "answers": [
+        {
+          "mode": "paraphrase",
+          "text": "I think more maths helps, because it prepares students for many careers."
+        },
+        {
+          "mode": "personal",
+          "text": "In my opinion it should be required, but with better teaching, not just more hours."
+        },
+        {
+          "mode": "connect",
+          "text": "The text shows outcomes also depend on equity and support, so I would change those too."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.ex.004",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Cloze nuestro sobre el Text N°3."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "exercise",
+      "prompt": "Completá el resumen del texto.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "In England, many students stop maths after age ___.",
+          "blanks": [
+            {
+              "accept": [
+                "16",
+                "sixteen"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "In the United States, most students take maths throughout ___ school.",
+          "blanks": [
+            {
+              "accept": [
+                "high"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "For some experts, more maths is an ___ issue.",
+          "blanks": [
+            {
+              "accept": [
+                "equity"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The U.S. scores below the international average on the ___ test.",
+          "blanks": [
+            {
+              "accept": [
+                "PISA"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "adapted"
+    },
+    {
+      "id": "en1.u5.pr.009",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Producción nuestra sobre el Text N°3."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "four-years",
+      "kind": "production",
+      "prompt": "Give a short presentation about the text on years of high school maths.",
+      "modelAnswer": "This text asks how much maths students really need at school. In England, many students stop studying maths after age 16, but the prime minister wants everyone to continue until 18. In the United States, most students take maths throughout high school, and many states require three or four courses. Research suggests that more years of maths can improve college readiness and confidence, and experts also see it as an equity issue. The text compares different countries and concludes that outcomes depend not only on more maths, but also on teaching quality and early support.",
+      "scaffold": [
+        "State the question of the text.",
+        "Describe England.",
+        "Describe the United States.",
+        "Say whether more maths helps.",
+        "Give the conclusion."
+      ],
+      "rubric": [
+        {
+          "text": "Mencionás Inglaterra",
+          "detect": "\\bengland\\b"
+        },
+        {
+          "text": "Hablás de equidad",
+          "detect": "\\bequity\\b"
+        },
+        {
+          "text": "Mencionás la universidad",
+          "detect": "\\bcollege\\b"
+        },
+        {
+          "text": "Cerrás con que depende de varios factores"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "What question does the text ask?",
+          "segment": "This text asks how much maths students really need at school."
+        },
+        {
+          "prompt": "What is the situation in England?",
+          "segment": "In England, many students stop studying maths after age 16, but the prime minister wants everyone to continue until 18."
+        },
+        {
+          "prompt": "What about the United States?",
+          "segment": "In the United States, most students take maths throughout high school, and many states require three or four courses."
+        },
+        {
+          "prompt": "Does more maths help?",
+          "segment": "Research suggests that more years of maths can improve college readiness and confidence, and experts also see it as an equity issue."
+        },
+        {
+          "prompt": "What is the conclusion?",
+          "segment": "Outcomes depend not only on more maths, but also on teaching quality and early support."
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "The text asks how much maths students really need. In England many stop at 16, but the prime minister wants everyone to continue until 18. In the United States most study maths through high school. More maths seems to help college readiness, and it is also an equity issue, but results also depend on teaching and support."
+      ]
+    },
+    {
+      "id": "en1.u5.pr.010",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Producción nuestra sobre el Text N°3."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "four-years",
+      "kind": "production",
+      "prompt": "Compare maths education in England and the United States.",
+      "modelAnswer": "The text compares maths education in England and the United States. In England, students take exams called GCSEs at fifteen or sixteen, and after that they are not required to continue with maths. In the United States, most students study maths throughout high school, and many states require three or four courses like Algebra and Geometry. So American students usually study maths for more years than English students.",
+      "scaffold": [
+        "Say the two countries you compare.",
+        "Describe England (GCSEs, stop at 16).",
+        "Describe the United States (high school, more courses).",
+        "Give the difference."
+      ],
+      "rubric": [
+        {
+          "text": "Mencionás Inglaterra",
+          "detect": "\\bengland\\b"
+        },
+        {
+          "text": "Mencionás los GCSE",
+          "detect": "\\bgcse"
+        },
+        {
+          "text": "Mencionás la secundaria de EE.UU.",
+          "detect": "\\bhigh school\\b"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "Which two systems does the text compare?",
+          "segment": "The text compares maths education in England and the United States."
+        },
+        {
+          "prompt": "What happens in England?",
+          "segment": "In England, students take exams called GCSEs at fifteen or sixteen, and after that they are not required to continue with maths."
+        },
+        {
+          "prompt": "What happens in the United States?",
+          "segment": "In the United States, most students study maths throughout high school, and many states require three or four courses like Algebra and Geometry."
+        },
+        {
+          "prompt": "What is the main difference?",
+          "segment": "So American students usually study maths for more years than English students."
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "The text compares England and the United States. In England students take GCSEs at fifteen or sixteen and can then stop maths. In the United States most keep studying maths through high school, with three or four required courses. So American students usually study maths for longer."
+      ]
+    },
+    {
+      "id": "en1.u5.pr.011",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Producción nuestra sobre el Text N°3."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 5,
+      "textId": "four-years",
+      "kind": "production",
+      "prompt": "Do you think students should study maths for more years? Give your opinion.",
+      "modelAnswer": "In my opinion, students should study maths for more years. Maths is not only about exams; it helps people manage money, understand statistics, and make good decisions. Of course, more maths does not automatically mean better results, because teaching quality and support also matter. But giving every student a strong maths foundation keeps more doors open for the future.",
+      "scaffold": [
+        "State your opinion.",
+        "Say why maths is useful.",
+        "Admit that more maths is not automatic.",
+        "Give your conclusion."
+      ],
+      "rubric": [
+        {
+          "text": "Das tu opinión",
+          "detect": "\\b(opinion|think)\\b"
+        },
+        {
+          "text": "Mencionás estadística",
+          "detect": "\\bstatistics\\b"
+        },
+        {
+          "text": "Reconocés el rol de la enseñanza o el apoyo",
+          "detect": "\\b(teaching|support)\\b"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "What is your opinion?",
+          "segment": "In my opinion, students should study maths for more years."
+        },
+        {
+          "prompt": "Why is maths useful?",
+          "segment": "Maths is not only about exams; it helps people manage money, understand statistics, and make good decisions."
+        },
+        {
+          "prompt": "Is more maths automatically better?",
+          "segment": "Of course, more maths does not automatically mean better results, because teaching quality and support also matter."
+        },
+        {
+          "prompt": "What is your conclusion?",
+          "segment": "But giving every student a strong maths foundation keeps more doors open for the future."
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "I think students should study maths for more years. It is not only about exams: it helps with money, statistics and decisions. More maths is not automatic, because teaching and support matter too, but a strong foundation keeps more doors open."
+      ]
+    },
+    {
+      "id": "en1.u5.rd.003",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 9,
+        "section": "Text N°3",
+        "note": "Recurso de estudio: resumen fiel y atribuido del artículo, con citas breves. El artículo completo está en la fuente enlazada."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 1,
+      "textId": "four-years",
+      "kind": "reading",
+      "title": "Do Students Need Four Years of High School Math?",
+      "credit": {
+        "author": "Sarah Schwartz",
+        "publication": "Education Week",
+        "url": "https://www.edweek.org/teaching-learning/do-students-need-four-years-of-high-school-math/2023/01"
+      },
+      "speaker": "narrator",
+      "sections": [
+        {
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "This text discusses how much mathematics students should study at school. It compares the systems in the United Kingdom and the United States, after the British prime minister said he wants all students to study maths for longer."
+            }
+          ]
+        },
+        {
+          "heading": "Maths in England",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "In England, many students stop taking maths after age 16. Students take exams called GCSEs at fifteen or sixteen, and they must pass maths or retake it. After that, they are not required to continue. For university, they take specialized courses called A-Levels in the subjects they want to study."
+            }
+          ]
+        },
+        {
+          "heading": "Maths in the United States",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "In contrast, most students in the United States take maths throughout high school. Many states require three maths courses to graduate, and some require four. The traditional sequence is Algebra 1, Geometry and Algebra 2, but many students follow other paths."
+            }
+          ]
+        },
+        {
+          "heading": "Does more maths matter?",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Research suggests that students who take more years of maths have better outcomes later, even if they do not choose maths-heavy careers. For some experts this is also an equity issue, because students from disadvantaged backgrounds benefit from stronger maths preparation."
+            }
+          ]
+        },
+        {
+          "heading": "International comparisons",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Many countries, including Canada, France, Germany, Finland and Japan, require maths until age 18, but their results vary. The United States scores below the international average on the PISA test, while countries like China and Vietnam score much higher. Experts warn that results depend on many factors, such as teaching methods and social conditions."
+            }
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "The debate reflects a global question: how much maths is enough? More years of study may improve college readiness and confidence, but outcomes also depend on equity, teaching quality and early support."
+            }
+          ]
+        }
+      ],
+      "afterReadingTask": "Find 5 example sentences which use the Verb Can in the text."
+    },
+    {
+      "id": "en1.u5.p.029",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "until-18",
+      "kind": "phrase",
+      "text": "Maths is the language of science, engineering, and technology.",
+      "gloss": "La matemática es el lenguaje de la ciencia, la ingeniería y la tecnología.",
+      "speaker": "narrator",
+      "ipa": "mˈæθs ɪz ðə lˈæŋɡwɪdʒ ʌv sˈaɪəns ˌɛndʒɪnˈɪɹɪŋ ænd tɛknˈɑːlədʒi"
+    },
+    {
+      "id": "en1.u5.p.030",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "until-18",
+      "kind": "phrase",
+      "text": "Statistics are essential in medicine, marketing, and finance.",
+      "gloss": "La estadística es esencial en la medicina, el marketing y las finanzas.",
+      "speaker": "narrator",
+      "ipa": "stɐtˈɪstɪks ɑːɹ ᵻsˈɛnʃəl ɪn mˈɛdəsən mˈɑːɹkɪɾɪŋ ænd fˈaɪnæns"
+    },
+    {
+      "id": "en1.u5.p.031",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "until-18",
+      "kind": "phrase",
+      "text": "Maths also teaches transferable skills like problem-solving and logical thinking.",
+      "gloss": "La matemática también enseña habilidades transferibles como la resolución de problemas y el pensamiento lógico.",
+      "speaker": "narrator",
+      "ipa": "mˈæθs ˈɔːlsoʊ tˈiːtʃᵻz tɹænsfˈɜːɹəbəl skˈɪlz lˈaɪk pɹˈɑːbləmsˈɑːlvɪŋ ænd lˈɑːdʒɪkəl θˈɪŋkɪŋ"
+    },
+    {
+      "id": "en1.u5.p.032",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "present-simple.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "until-18",
+      "kind": "phrase",
+      "text": "Mathematicians do not accept ideas without proof, so maths develops healthy skepticism.",
+      "gloss": "Los matemáticos no aceptan ideas sin demostración, así que la matemática desarrolla un escepticismo sano.",
+      "speaker": "narrator",
+      "ipa": "mˌæθɪmɐtˈɪʃənz duːnˌɑːt ɐksˈɛpt aɪdˈiəz wɪðˌaʊt pɹˈuːf sˌoʊ mˈæθs dɪvˈɛləps hˈɛlθi skˈɛptɪsˌɪzəm"
+    },
+    {
+      "id": "en1.u5.p.033",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "present-simple.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "until-18",
+      "kind": "phrase",
+      "text": "Even people who do not use maths in their jobs face decisions every day.",
+      "gloss": "Incluso las personas que no usan matemática en su trabajo enfrentan decisiones todos los días.",
+      "speaker": "narrator",
+      "ipa": "ˈiːvən pˈiːpəl hˌuː duːnˌɑːt jˈuːz mˈæθs ɪn ðɛɹ dʒˈɑːbz fˈeɪs dᵻsˈɪʒənz ˈɛvɹi dˈeɪ"
+    },
+    {
+      "id": "en1.u5.p.034",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "until-18",
+      "kind": "phrase",
+      "text": "Mathematical literacy is more than just knowing formulas.",
+      "gloss": "La alfabetización matemática es más que solo saber fórmulas.",
+      "speaker": "narrator",
+      "ipa": "mˌæθɪmˈæɾɪkəl lˈɪɾɚɹəsi ɪz mˈoːɹ ðɐn dʒˈʌst nˈoʊɪŋ fˈɔːɹmjʊləz"
+    },
+    {
+      "id": "en1.u5.lx.033",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "until-18",
+      "kind": "lexeme",
+      "word": "statistics",
+      "pos": "noun",
+      "gloss": "estadística: el estudio de los datos",
+      "examplePhraseId": "en1.u5.p.030",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.034",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "until-18",
+      "kind": "lexeme",
+      "word": "transferable skills",
+      "pos": "noun",
+      "gloss": "habilidades transferibles (que sirven en muchos contextos)",
+      "examplePhraseId": "en1.u5.p.031",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.035",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "until-18",
+      "kind": "lexeme",
+      "word": "mathematical literacy",
+      "pos": "noun",
+      "gloss": "alfabetización matemática",
+      "examplePhraseId": "en1.u5.p.034",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.036",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "present-simple.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "until-18",
+      "kind": "lexeme",
+      "word": "skepticism",
+      "pos": "noun",
+      "gloss": "escepticismo: no aceptar ideas sin pruebas",
+      "examplePhraseId": "en1.u5.p.032",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en1.u5.lx.037",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "present-simple.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "until-18",
+      "kind": "lexeme",
+      "word": "proof",
+      "pos": "noun",
+      "gloss": "demostración / prueba",
+      "examplePhraseId": "en1.u5.p.032",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.038",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "until-18",
+      "kind": "lexeme",
+      "word": "problem-solving",
+      "pos": "noun",
+      "gloss": "resolución de problemas",
+      "examplePhraseId": "en1.u5.p.031",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.qa.027",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Text N°4."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "until-18",
+      "kind": "qa",
+      "prompt": "Why does maths open doors to many careers?",
+      "promptVariants": [
+        "How does maths help with careers?"
+      ],
+      "replies": [
+        "Because it is the language of science, engineering and technology."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says maths is the language of science, engineering and technology, and it prepares students for any STEM subject."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "Because so many jobs in science and technology are built on maths."
+        },
+        {
+          "mode": "connect",
+          "text": "It also includes statistics and Big Data, which are needed in medicine, finance and marketing."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.028",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Text N°4."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "until-18",
+      "kind": "qa",
+      "prompt": "How can maths help you in everyday life?",
+      "promptVariants": [
+        "Why is maths useful outside of work?"
+      ],
+      "replies": [
+        "It helps you make decisions and understand statistics."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says even people who don't use maths at work make decisions every day about what to buy, who to vote for and how to stay healthy."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "It helps you judge claims and numbers so you are not misled."
+        },
+        {
+          "mode": "personal",
+          "text": "For me the clearest example is understanding statistics in the news."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.029",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Text N°4."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "until-18",
+      "kind": "qa",
+      "prompt": "Why does the text compare learning maths to learning a language?",
+      "promptVariants": [
+        "What is the language comparison about?"
+      ],
+      "replies": [
+        "Because both need practice until they become part of your thinking."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says knowing vocabulary and grammar is not enough; you need to practice until the language becomes part of your thinking."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "Like a language, maths takes time and practice, not just memorizing formulas."
+        },
+        {
+          "mode": "connect",
+          "text": "That is why studying until 18 matters: it gives time to make maths part of your thinking."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.030",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Text N°4."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "until-18",
+      "kind": "qa",
+      "prompt": "What does the text mean by 'healthy skepticism'?",
+      "promptVariants": [
+        "Why is skepticism a maths skill?"
+      ],
+      "replies": [
+        "Not accepting ideas without proof."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says mathematicians don't accept ideas without proof, and this questioning attitude helps us evaluate claims."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "It means asking for evidence before believing a claim."
+        },
+        {
+          "mode": "personal",
+          "text": "I think this is useful against misleading ads or politicians."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.031",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Text N°4."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "until-18",
+      "kind": "qa",
+      "prompt": "Why does the author mention balancing maths with the arts?",
+      "promptVariants": [
+        "Why talk about other subjects?"
+      ],
+      "replies": [
+        "To show maths should not replace languages, humanities or arts."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says the plan should not reduce opportunities in other areas, and that maths and the arts can enrich each other."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "More maths shouldn't crowd out other important subjects."
+        },
+        {
+          "mode": "personal",
+          "text": "I like that the author is balanced and not only pro-maths."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.032",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta nuestra sobre el Text N°4."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 5,
+      "textId": "until-18",
+      "kind": "qa",
+      "prompt": "Do you agree that everyone should learn maths until 18? Why?",
+      "promptVariants": [
+        "What is your opinion?"
+      ],
+      "replies": [
+        "Open answer: your own opinion."
+      ],
+      "answers": [
+        {
+          "mode": "paraphrase",
+          "text": "I agree, because maths helps in almost any career and in daily life."
+        },
+        {
+          "mode": "personal",
+          "text": "In my opinion yes, but it should be interesting, not just more exams."
+        },
+        {
+          "mode": "connect",
+          "text": "The text also says it develops skills for life, like logical thinking, so I agree."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.ex.005",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Cloze nuestro sobre el Text N°4."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "until-18",
+      "kind": "exercise",
+      "prompt": "Completá el resumen del texto.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "Maths is the ___ of science, engineering and technology.",
+          "blanks": [
+            {
+              "accept": [
+                "language"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ are often used to support claims, and sometimes to mislead.",
+          "blanks": [
+            {
+              "accept": [
+                "Statistics",
+                "statistics"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Mathematicians do not accept ideas without ___.",
+          "blanks": [
+            {
+              "accept": [
+                "proof"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Learning maths is similar to learning a ___.",
+          "blanks": [
+            {
+              "accept": [
+                "language"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "adapted"
+    },
+    {
+      "id": "en1.u5.pr.012",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Producción nuestra sobre el Text N°4."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "until-18",
+      "kind": "production",
+      "prompt": "Give a short presentation about the text on learning maths until 18.",
+      "modelAnswer": "This text argues that everyone should study maths until age 18. First, maths opens doors to many careers, because it is the language of science, engineering and technology, and it includes statistics and Big Data. Second, maths helps in everyday life: we all make decisions about money, health and voting, and statistics are often used to persuade or even mislead us. Third, maths teaches transferable skills like problem-solving, logical thinking and healthy skepticism. The author compares learning maths to learning a language, which needs time and practice. She concludes that studying maths until 18 is a strong plan, if there are enough teachers.",
+      "scaffold": [
+        "State the argument of the text.",
+        "Give the careers reason.",
+        "Give the everyday-life reason.",
+        "Give the skills reason.",
+        "End with the language comparison and conclusion."
+      ],
+      "rubric": [
+        {
+          "text": "Hablás de las carreras",
+          "detect": "\\bcareers\\b"
+        },
+        {
+          "text": "Mencionás la estadística",
+          "detect": "\\bstatistics\\b"
+        },
+        {
+          "text": "Mencionás las habilidades o el escepticismo",
+          "detect": "\\b(skills|skepticism)\\b"
+        },
+        {
+          "text": "Comparás la matemática con un idioma"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "What does the text argue?",
+          "segment": "This text argues that everyone should study maths until age 18."
+        },
+        {
+          "prompt": "What is the careers reason?",
+          "segment": "First, maths opens doors to many careers, because it is the language of science, engineering and technology, and it includes statistics and Big Data."
+        },
+        {
+          "prompt": "What is the everyday-life reason?",
+          "segment": "Second, maths helps in everyday life: we all make decisions about money, health and voting, and statistics are often used to persuade or even mislead us."
+        },
+        {
+          "prompt": "What is the skills reason?",
+          "segment": "Third, maths teaches transferable skills like problem-solving, logical thinking and healthy skepticism."
+        },
+        {
+          "prompt": "How does the author end?",
+          "segment": "She compares learning maths to learning a language, and concludes that studying maths until 18 is a strong plan, if there are enough teachers."
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "The text argues everyone should study maths until 18. First, it opens doors to careers, because it is the language of science and technology and includes statistics. Second, it helps everyday decisions. Third, it teaches skills like problem-solving and skepticism. Learning maths is like learning a language, so it needs time and practice."
+      ]
+    },
+    {
+      "id": "en1.u5.pr.013",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Producción nuestra sobre el Text N°4."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "until-18",
+      "kind": "production",
+      "prompt": "Explain why maths is useful for everyday life, not only for careers.",
+      "modelAnswer": "The text says maths is useful even for people who do not work with it. Every day we make decisions about what to buy, who to vote for, and how to stay healthy. Statistics are often used to support claims, and sometimes to mislead. Understanding ideas like averages, correlation and causation helps us make informed decisions. Maths also teaches us not to accept ideas without proof, which is a useful attitude in real life.",
+      "scaffold": [
+        "Say maths helps everyone, not only workers.",
+        "Give everyday decisions.",
+        "Explain the role of statistics.",
+        "End with proof and skepticism."
+      ],
+      "rubric": [
+        {
+          "text": "Mencionás la estadística",
+          "detect": "\\bstatistics\\b"
+        },
+        {
+          "text": "Hablás de decisiones",
+          "detect": "\\bdecision"
+        },
+        {
+          "text": "Mencionás la demostración o prueba",
+          "detect": "\\bproof\\b"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "Who is maths useful for?",
+          "segment": "The text says maths is useful even for people who do not work with it."
+        },
+        {
+          "prompt": "What everyday decisions do we make?",
+          "segment": "Every day we make decisions about what to buy, who to vote for, and how to stay healthy."
+        },
+        {
+          "prompt": "What is the role of statistics?",
+          "segment": "Statistics are often used to support claims, and sometimes to mislead, so understanding them helps us make informed decisions."
+        },
+        {
+          "prompt": "What attitude does maths teach?",
+          "segment": "Maths also teaches us not to accept ideas without proof, which is a useful attitude in real life."
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "Maths is useful even if you don't work with it. Every day we decide what to buy, who to vote for and how to stay healthy, and statistics are used to support or mislead. Understanding averages, correlation and causation helps us decide well, and maths teaches us not to accept ideas without proof."
+      ]
+    },
+    {
+      "id": "en1.u5.pr.014",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Producción nuestra sobre el Text N°4."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.place",
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 5,
+      "textId": "until-18",
+      "kind": "production",
+      "prompt": "Do you agree that everyone should learn maths until 18? Give your opinion.",
+      "modelAnswer": "In my opinion, learning maths until 18 is a good idea. Many people think maths is only useful for scientists, but the text shows that it helps everyone make better decisions and understand the world. It also teaches skills like logical thinking and skepticism. I do not think maths should replace other subjects, because arts and languages are important too, but a strong maths foundation helps in almost any career.",
+      "scaffold": [
+        "State your opinion.",
+        "Say what many people think.",
+        "Say what the text shows.",
+        "Add a balanced point about other subjects."
+      ],
+      "rubric": [
+        {
+          "text": "Das tu opinión",
+          "detect": "\\b(opinion|think)\\b"
+        },
+        {
+          "text": "Hablás de decisiones",
+          "detect": "\\bdecision"
+        },
+        {
+          "text": "Mencionás habilidades o escepticismo o pensamiento lógico",
+          "detect": "\\b(skills|skepticism|logical)\\b"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "What is your opinion?",
+          "segment": "In my opinion, learning maths until 18 is a good idea."
+        },
+        {
+          "prompt": "What do many people think?",
+          "segment": "Many people think maths is only useful for scientists."
+        },
+        {
+          "prompt": "What does the text show?",
+          "segment": "But the text shows that maths helps everyone make better decisions and understand the world, and it teaches skills like logical thinking and skepticism."
+        },
+        {
+          "prompt": "What is your balanced point?",
+          "segment": "I do not think maths should replace other subjects, because arts and languages are important too, but a strong maths foundation helps in almost any career."
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "I think learning maths until 18 is a good idea. People think it is only for scientists, but it helps everyone decide and understand the world, and it teaches logical thinking and skepticism. It should not replace arts or languages, but a good maths foundation helps in almost any career."
+      ]
+    },
+    {
+      "id": "en1.u5.rd.004",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 12,
+        "section": "Text N°4",
+        "note": "Recurso de estudio: resumen fiel y atribuido del artículo, con citas breves. El artículo completo está en la fuente enlazada."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 1,
+      "textId": "until-18",
+      "kind": "reading",
+      "title": "Should people learn maths until age 18?",
+      "credit": {
+        "author": "Marianne Freiberger",
+        "publication": "plus.maths.org",
+        "url": "https://plus.maths.org/content/why-should-we-learn-maths-longer"
+      },
+      "speaker": "narrator",
+      "sections": [
+        {
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "This text argues that everyone should study maths until age 18. In 2023 the UK's prime minister announced a plan for all students in England to study maths until 18, which raises the question: why should everyone learn maths, even if not all jobs require it?"
+            }
+          ]
+        },
+        {
+          "heading": "Maths and careers",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "One reason is that maths opens doors to many careers. Maths is the language of science, engineering and technology, and a good foundation prepares students for any STEM subject. Maths also includes statistics and Big Data, which are essential in medicine, marketing, finance and online shopping."
+            }
+          ]
+        },
+        {
+          "heading": "Maths for life",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Career opportunities are only part of the argument. Even people who do not use maths at work make decisions every day about what to buy, who to vote for and how to stay healthy. Statistics are often used to support claims, and sometimes to mislead. Understanding averages, correlation and causation helps us make informed decisions."
+            }
+          ]
+        },
+        {
+          "heading": "Transferable skills",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Maths also teaches transferable skills. Problem-solving and logical thinking are obvious ones, but maths also develops healthy skepticism: mathematicians do not accept ideas without proof, and this questioning attitude helps us evaluate claims made by politicians or advertisers."
+            }
+          ]
+        },
+        {
+          "heading": "Maths as a language",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Mathematical literacy is more than knowing formulas. Learning maths is similar to learning a language: knowing vocabulary and grammar is not enough, and you need to practice until it becomes part of your thinking. Once maths is embedded in your brain, you can recall it years later."
+            }
+          ]
+        },
+        {
+          "heading": "Balancing subjects and conclusion",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "This plan should not reduce opportunities in other areas like languages, humanities or arts; in fact, maths and the arts can enrich each other. Keeping students engaged with maths until 18 widens career opportunities, helps people make informed decisions, and develops skills for life. The challenge now is to have enough teachers."
+            }
+          ]
+        }
+      ],
+      "afterReadingTask": "Find 5 examples of negative sentences in the Present Tense in the text."
+    },
+    {
+      "id": "en1.u5.ls.001",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Narrativa nuestra de comprension auditiva sobre el tema del texto."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "listening",
+      "narrative": "Think about the surface of a ball, like the Earth. On a flat sheet of paper, the shortest path between two points is a straight line. But on a ball, the shortest path is a curve. Because of this, a triangle drawn on a ball can be strange: its three angles can add up to more than one hundred and eighty degrees.",
+      "speaker": "narrator",
+      "questions": [
+        {
+          "q": "On a ball, is the shortest path a straight line or a curve?",
+          "accept": [
+            "a curve",
+            "curve",
+            "the shortest path is a curve"
+          ]
+        },
+        {
+          "q": "Can the three angles of a triangle on a ball add up to more than 180 degrees?",
+          "accept": [
+            "yes",
+            "yes they can"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en1.u5.ls.002",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Narrativa nuestra de comprension auditiva sobre el tema del texto."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "listening",
+      "narrative": "Melanie loves the number two. She says it is small and simple, but very powerful. Two is the first prime number, and it creates the idea of even and odd numbers. For her, mathematics is not only about rules; it is also about being creative.",
+      "speaker": "narrator",
+      "questions": [
+        {
+          "q": "What is Melanie's favorite number?",
+          "accept": [
+            "two",
+            "2",
+            "the number two"
+          ]
+        },
+        {
+          "q": "According to her, does mathematics need creativity?",
+          "accept": [
+            "yes",
+            "yes it does"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en1.u5.ct.001",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par minimo nuestro para entrenar el sonido."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "contrast",
+      "pair": [
+        "three",
+        "tree"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "A triangle has ___ sides.",
+          "correct": 0
+        },
+        {
+          "text": "There is a ___ in the garden.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en1.u5.ct.002",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par minimo nuestro para entrenar el sonido /th/."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "contrast",
+      "pair": [
+        "path",
+        "pass"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "A geodesic is the shortest ___.",
+          "correct": 0
+        },
+        {
+          "text": "Please let me ___.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en1.u5.p.035",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase nuestra para el dialogo de comentar el texto."
+      },
+      "grammar": [
+        "be.present.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "What is this text about?",
+      "gloss": "De que trata este texto?",
+      "speaker": "student",
+      "ipa": "wˌʌt ɪz ðɪs tˈɛkst ɐbˈaʊt"
+    },
+    {
+      "id": "en1.u5.p.036",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase nuestra para el dialogo de comentar el texto."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "It's about squares on curved surfaces.",
+      "gloss": "Trata sobre cuadrados en superficies curvas.",
+      "speaker": "student-m",
+      "ipa": "ɪts ɐbˌaʊt skwˈɛɹz ˌɔn kˈɜːvd sˈɜːfɪsᵻz"
+    },
+    {
+      "id": "en1.u5.p.037",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase nuestra para el dialogo de comentar el texto."
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "Can a triangle really have three right angles?",
+      "gloss": "Un triangulo puede tener de verdad tres angulos rectos?",
+      "speaker": "student",
+      "ipa": "kæn ɐ tɹˈaɪæŋɡəl ɹˈiəli hæv θɹˈiː ɹˈaɪt ˈæŋɡəlz"
+    },
+    {
+      "id": "en1.u5.p.038",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase nuestra para el dialogo de comentar el texto."
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "square",
+      "kind": "phrase",
+      "text": "Yes, on a sphere it can.",
+      "gloss": "Si, en una esfera puede.",
+      "speaker": "student-m",
+      "ipa": "jˈɛs ˌɔn ɐ sfˈɪɹ ɪt kˈæn"
+    },
+    {
+      "id": "en1.u5.d.001",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Dialogo nuestro: dos estudiantes comentan el texto."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "square",
+      "kind": "dialogue",
+      "title": "Comentando el texto",
+      "situation": "Dos estudiantes conversan sobre el texto del cuadrado.",
+      "turns": [
+        {
+          "speaker": "student",
+          "phraseId": "en1.u5.p.035"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en1.u5.p.036"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en1.u5.p.037"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en1.u5.p.038"
+        }
+      ]
+    }
+  ]
+}

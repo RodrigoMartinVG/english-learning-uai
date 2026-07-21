@@ -189,7 +189,11 @@
         "routine"
       ],
       "difficulty": 2,
-      "ipa": "kæn aɪ sˈɪt hˈɪɹ"
+      "ipa": "kæn aɪ sˈɪt hˈɪɹ",
+      "alternatives": [
+        "Is this seat free?",
+        "Do you mind if I sit here?"
+      ]
     },
     {
       "id": "en1.u2.p.002",
@@ -215,7 +219,11 @@
         "routine"
       ],
       "difficulty": 1,
-      "ipa": "jˈɛs plˈiːz"
+      "ipa": "jˈɛs plˈiːz",
+      "alternatives": [
+        "That sounds great.",
+        "Sure, I'd love to."
+      ]
     },
     {
       "id": "en1.u2.p.003",
@@ -273,7 +281,11 @@
         "workplace"
       ],
       "difficulty": 2,
-      "ipa": "jˈɛs aɪ dˈuː wˌʌt ɐbˈaʊt juː"
+      "ipa": "jˈɛs aɪ dˈuː wˌʌt ɐbˈaʊt juː",
+      "alternatives": [
+        "Yes, I do. And you?",
+        "So do I. What about you?"
+      ]
     },
     {
       "id": "en1.u2.p.005",
@@ -547,7 +559,11 @@
         "time"
       ],
       "difficulty": 3,
-      "ipa": "nˈoʊ ɪt dˈʌzənt ɪɾ ˈoʊpənz æɾ ˈeɪt əklˈɑːk"
+      "ipa": "nˈoʊ ɪt dˈʌzənt ɪɾ ˈoʊpənz æɾ ˈeɪt əklˈɑːk",
+      "alternatives": [
+        "No, it doesn't. It opens at eight.",
+        "Actually no, it opens at eight o'clock."
+      ]
     },
     {
       "id": "en1.u2.p.014",
@@ -683,11 +699,14 @@
       },
       "prompt": "Do you drink coffee?",
       "promptVariants": [
-        "Does he drink coffee?"
+        "Does he drink coffee?",
+        "Do you like coffee?"
       ],
       "replies": [
         "Yes, I do.",
-        "No, I don’t."
+        "No, I don’t.",
+        "Yes, every morning.",
+        "No, I prefer tea."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -715,11 +734,14 @@
       },
       "prompt": "Do you like Chinese food?",
       "promptVariants": [
-        "Does she like Chinese food?"
+        "Does she like Chinese food?",
+        "Do you enjoy Chinese food?"
       ],
       "replies": [
         "No, I don’t.",
-        "Yes, I do."
+        "Yes, I do.",
+        "Yes, I love it.",
+        "Not really."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -747,11 +769,14 @@
       },
       "prompt": "Do you play football?",
       "promptVariants": [
-        "Do you study medicine?"
+        "Do you study medicine?",
+        "Do you do any sport?"
       ],
       "replies": [
         "Yes, I do.",
-        "No, I don’t."
+        "No, I don’t.",
+        "Yes, on weekends.",
+        "No, I don’t like sports."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -779,11 +804,14 @@
       },
       "prompt": "When do you go to discos?",
       "promptVariants": [
-        "When do you go out?"
+        "When do you go out?",
+        "When do you usually go out?"
       ],
       "replies": [
         "On Saturdays.",
-        "On the weekend."
+        "On the weekend.",
+        "At the weekend.",
+        "On Friday nights."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -813,11 +841,14 @@
       },
       "prompt": "Who do you go with?",
       "promptVariants": [
-        "Who goes with you?"
+        "Who goes with you?",
+        "Who do you usually go with?"
       ],
       "replies": [
         "My friends.",
-        "With my family."
+        "With my family.",
+        "With my friends.",
+        "On my own."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -845,10 +876,13 @@
       },
       "prompt": "What's your name?",
       "promptVariants": [
-        "What is your name?"
+        "What is your name?",
+        "Could you tell me your name?"
       ],
       "replies": [
-        "William."
+        "William.",
+        "My name is William.",
+        "I'm William."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -876,10 +910,13 @@
       },
       "prompt": "Do you study?",
       "promptVariants": [
-        "Do you work?"
+        "Do you work?",
+        "Are you a student?"
       ],
       "replies": [
-        "Yes, full time. I work part time."
+        "Yes, full time. I work part time.",
+        "Yes, I study full time.",
+        "No, I work."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -907,9 +944,15 @@
         "section": "Ejercitación 4"
       },
       "prompt": "Do you like your job?",
-      "promptVariants": [],
+      "promptVariants": [
+        "Are you happy with your job?",
+        "Do you enjoy your work?"
+      ],
       "replies": [
-        "Yes, I do."
+        "Yes, I do.",
+        "Yes, I love it.",
+        "It's OK.",
+        "No, not really."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -937,10 +980,13 @@
       },
       "prompt": "What do you do?",
       "promptVariants": [
-        "What is your job?"
+        "What is your job?",
+        "What do you do for a living?"
       ],
       "replies": [
-        "I'm a network support person."
+        "I'm a network support person.",
+        "I work in IT.",
+        "I'm in network support."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -968,10 +1014,13 @@
       },
       "prompt": "When do you work?",
       "promptVariants": [
-        "What are your hours?"
+        "What are your hours?",
+        "What time do you start and finish?"
       ],
       "replies": [
-        "Five days a week, five hours a day."
+        "Five days a week, five hours a day.",
+        "From nine to five.",
+        "In the mornings."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -1000,9 +1049,14 @@
         "section": "Ejercitación 4"
       },
       "prompt": "Where do you live?",
-      "promptVariants": [],
+      "promptVariants": [
+        "What's your address?",
+        "Whereabouts do you live?"
+      ],
       "replies": [
-        "In Elmhurst. It's in New York."
+        "In Elmhurst. It's in New York.",
+        "I live in Elmhurst.",
+        "In New York."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -1029,9 +1083,14 @@
         "section": "Ejercitación 4"
       },
       "prompt": "Are you married?",
-      "promptVariants": [],
+      "promptVariants": [
+        "What's your marital status?",
+        "Have you got a partner?"
+      ],
       "replies": [
-        "Yes, I am."
+        "Yes, I am.",
+        "No, I'm single.",
+        "Yes, I'm married."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -1058,9 +1117,14 @@
         "section": "Ejercitación 4"
       },
       "prompt": "Do you have children?",
-      "promptVariants": [],
+      "promptVariants": [
+        "Have you got any kids?",
+        "Do you have any children?"
+      ],
       "replies": [
-        "Yes, I have a daughter."
+        "Yes, I have a daughter.",
+        "No, I don't.",
+        "Yes, two children."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -1131,7 +1195,11 @@
         "routine"
       ],
       "difficulty": 3,
-      "ipa": "wˌɛɹ dˈʌz ɪt lˈiːv fɹʌm"
+      "ipa": "wˌɛɹ dˈʌz ɪt lˈiːv fɹʌm",
+      "alternatives": [
+        "Where do we leave from?",
+        "What's the departure point?"
+      ]
     },
     {
       "id": "en1.u2.p.017",
@@ -1744,7 +1812,11 @@
         "shopping"
       ],
       "difficulty": 3,
-      "ipa": "wʊd juː lˈaɪk ðə mˈaʊntɪn tˈʊɹ"
+      "ipa": "wʊd juː lˈaɪk ðə mˈaʊntɪn tˈʊɹ",
+      "alternatives": [
+        "How about the mountain tour?",
+        "Do you fancy the mountain tour?"
+      ]
     },
     {
       "id": "en1.u2.p.036",
@@ -1901,7 +1973,29 @@
         "routine",
         "time"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "steps": [
+        {
+          "prompt": "What time does Venus wake up, and what does she do first?",
+          "segment": "Venus wakes up at seven in the morning. She gets up and has a shower."
+        },
+        {
+          "prompt": "What does she do next in the morning?",
+          "segment": "She brushes her teeth and has breakfast, and she always goes walking in the park."
+        },
+        {
+          "prompt": "What does she do at eleven and at one?",
+          "segment": "At eleven she plays tennis with her sister. She goes back home at one and has lunch."
+        },
+        {
+          "prompt": "What does she do in the afternoon and evening?",
+          "segment": "In the afternoon she plays tennis again, and she has dinner with her family and usually eats fish."
+        },
+        {
+          "prompt": "When does she go to bed?",
+          "segment": "She never goes to bed after eleven."
+        }
+      ]
     },
     {
       "id": "en1.u2.ex.001",
@@ -2487,7 +2581,29 @@
         "routine",
         "time"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "steps": [
+        {
+          "prompt": "What time do you get up, and what do you do first?",
+          "segment": "I get up at seven o’clock. I go to the bathroom and I have a shower."
+        },
+        {
+          "prompt": "What do you do before leaving home?",
+          "segment": "Then I have breakfast and I leave home."
+        },
+        {
+          "prompt": "How do you get to work, and at what time?",
+          "segment": "I take the bus to work and I get to work at nine."
+        },
+        {
+          "prompt": "When do you have lunch, and when do you leave work?",
+          "segment": "I usually have lunch at one. I leave work at five and I go home."
+        },
+        {
+          "prompt": "What do you do in the evening?",
+          "segment": "I have dinner with my family and I sometimes watch TV. I go to bed at eleven."
+        }
+      ]
     },
     {
       "id": "en1.u2.lx.005",
@@ -2654,7 +2770,25 @@
         "routine",
         "workplace"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "steps": [
+        {
+          "prompt": "What time does Peter leave home and get to school?",
+          "segment": "Peter always leaves home at 7 a.m. He usually gets to school at 7:30."
+        },
+        {
+          "prompt": "What meetings does he have?",
+          "segment": "He sometimes has a morning meeting with the teachers, and he has an afternoon meeting twice a week."
+        },
+        {
+          "prompt": "Where does he have lunch and work?",
+          "segment": "He usually has lunch in the canteen and always works in his office."
+        },
+        {
+          "prompt": "When does he leave work, and what does he never do?",
+          "segment": "He leaves work at 4 p.m. once a week, and he never goes out with the students after work."
+        }
+      ]
     },
     {
       "id": "en1.u2.ct.002",
@@ -2747,6 +2881,630 @@
         "routine"
       ],
       "difficulty": 2
+    },
+    {
+      "id": "en1.u2.p.040",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de práctica nuestra para reforzar el aspecto."
+      },
+      "grammar": [
+        "present-simple.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I don't drink coffee in the morning.",
+      "gloss": "No tomo café a la mañana.",
+      "speaker": "narrator",
+      "ipa": "aɪ dˈoʊnt dɹˈɪŋk kˈɔfi ɪnðə mˈɔːɹnɪŋ"
+    },
+    {
+      "id": "en1.u2.p.041",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de práctica nuestra para reforzar el aspecto."
+      },
+      "grammar": [
+        "present-simple.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "He doesn't work on Sundays.",
+      "gloss": "No trabaja los domingos.",
+      "speaker": "narrator",
+      "ipa": "hiː dˈʌzənt wˈɜːk ˌɔn sˈʌndeɪz"
+    },
+    {
+      "id": "en1.u2.p.042",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de práctica nuestra para reforzar el aspecto."
+      },
+      "grammar": [
+        "present-simple.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "They don't live near the school.",
+      "gloss": "No viven cerca de la escuela.",
+      "speaker": "narrator",
+      "ipa": "ðeɪ dˈoʊnt lˈɪv nˌɪɹ ðə skˈuːl"
+    },
+    {
+      "id": "en1.u2.qa.014",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de práctica nuestra."
+      },
+      "grammar": [
+        "present-simple.negative",
+        "present-simple.short-answer"
+      ],
+      "fn": [
+        "ask.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "Do you work on the weekend?",
+      "promptVariants": [
+        "Do you go to work on Saturdays?",
+        "Do you work at weekends?"
+      ],
+      "replies": [
+        "No, I don't.",
+        "No, I don't work on weekends."
+      ],
+      "speaker": "mary",
+      "replySpeaker": "eric"
+    },
+    {
+      "id": "en1.u2.p.043",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de práctica nuestra para reforzar el aspecto."
+      },
+      "grammar": [
+        "have-has"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "She has a new phone.",
+      "gloss": "Tiene un teléfono nuevo.",
+      "speaker": "narrator",
+      "ipa": "ʃiː hɐz ɐ nˈuː fˈoʊn"
+    },
+    {
+      "id": "en1.u2.p.044",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de práctica nuestra para reforzar el aspecto."
+      },
+      "grammar": [
+        "have-has"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "They have a small car.",
+      "gloss": "Tienen un auto chico.",
+      "speaker": "narrator",
+      "ipa": "ðeɪ hæv ɐ smˈɔːl kˈɑːɹ"
+    },
+    {
+      "id": "en1.u2.qa.015",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de práctica nuestra."
+      },
+      "grammar": [
+        "have-has"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "Do you have any brothers or sisters?",
+      "promptVariants": [
+        "Have you got any siblings?",
+        "Do you have a big family?"
+      ],
+      "replies": [
+        "Yes, I have one brother.",
+        "No, I don't."
+      ],
+      "speaker": "mary",
+      "replySpeaker": "eric"
+    },
+    {
+      "id": "en1.u2.pr.004",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Produccion nuestra (cierra nivel 5)."
+      },
+      "grammar": [
+        "present-simple.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 5,
+      "kind": "production",
+      "prompt": "Say three things you don't do during the week.",
+      "modelAnswer": "I don't drink coffee in the morning. I don't watch television during the week. And I don't work on Sundays.",
+      "rubric": [
+        {
+          "text": "Usás la forma negativa (don't / doesn't)",
+          "detect": "don'?t|doesn'?t|\\bnot\\b"
+        },
+        {
+          "text": "Das tres cosas distintas"
+        },
+        {
+          "text": "Decís cuándo (in the morning, during the week, on Sundays)",
+          "detect": "morning|afternoon|evening|night|week|sunday|monday|weekend"
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "I don't get up early on Sundays. I don't eat meat during the week. And I don't drink tea in the afternoon."
+      ],
+      "scaffold": [
+        "What is the first thing you don't do?",
+        "What is the second thing you don't do?",
+        "And the third thing you don't do?"
+      ],
+      "steps": [
+        {
+          "prompt": "What is the first thing you don't do?",
+          "segment": "I don't drink coffee in the morning."
+        },
+        {
+          "prompt": "What is the second thing you don't do?",
+          "segment": "I don't watch television during the week."
+        },
+        {
+          "prompt": "And the third thing you don't do?",
+          "segment": "And I don't work on Sundays."
+        }
+      ]
+    },
+    {
+      "id": "en1.u2.p.045",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "present-simple.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "We don't have classes on Saturday.",
+      "gloss": "No tenemos clases los sabados.",
+      "speaker": "narrator",
+      "ipa": "wiː dˈoʊnt hæv klˈæsᵻz ˌɔn sˈæɾɚdˌeɪ"
+    },
+    {
+      "id": "en1.u2.pr.005",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Produccion nuestra (cierra nivel 5)."
+      },
+      "grammar": [
+        "have-has"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 5,
+      "kind": "production",
+      "prompt": "Describe what you and your family have.",
+      "modelAnswer": "I have a new computer and a small car. My sister has two cats. We have a nice house near the park.",
+      "rubric": [
+        {
+          "text": "Usás have y has",
+          "detect": "\\bhave\\b|\\bhas\\b"
+        },
+        {
+          "text": "Mencionás a tu familia",
+          "detect": "family|sister|brother|mother|father|parents|\\bwe\\b"
+        },
+        {
+          "text": "Describís lo que tienen (adjetivos o cantidades)",
+          "detect": "\\b(a|an|two|three|new|small|big|old|nice)\\b"
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "I have a big desk and an old bike. My brother has a dog. We have a small flat in the centre."
+      ],
+      "scaffold": [
+        "What do you have?",
+        "What does someone in your family have?",
+        "What do you have together?"
+      ],
+      "steps": [
+        {
+          "prompt": "What do you have?",
+          "segment": "I have a new computer and a small car."
+        },
+        {
+          "prompt": "What does someone in your family have?",
+          "segment": "My sister has two cats."
+        },
+        {
+          "prompt": "What do you have together?",
+          "segment": "We have a nice house near the park."
+        }
+      ]
+    },
+    {
+      "id": "en1.u2.p.046",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "have-has"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "He has a good job in the city.",
+      "gloss": "Tiene un buen trabajo en la ciudad.",
+      "speaker": "narrator",
+      "ipa": "hiː hɐz ɐ ɡˈʊd dʒˈɑːb ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en1.u2.pr.006",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Produccion nuestra (cierra nivel 5)."
+      },
+      "grammar": [
+        "wh-questions",
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.routine"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 5,
+      "kind": "production",
+      "prompt": "Ask five wh-questions about someone's daily routine.",
+      "modelAnswer": "What do you do? Where do you work? When do you start? How do you go to work? Who do you have lunch with?",
+      "rubric": [
+        {
+          "text": "Usás varias palabras wh- (what/where/when/how/who)",
+          "detect": "what|where|when|how|who|why"
+        },
+        {
+          "text": "Hacés cinco preguntas"
+        },
+        {
+          "text": "Formás bien la pregunta (do/does + verbo)",
+          "detect": "\\bdo you\\b|\\bdoes\\b|\\bdo they\\b"
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "What time do you get up? Where do you have breakfast? When do you finish work? How do you relax? Who do you live with?"
+      ],
+      "scaffold": [
+        "Ask about their job (what).",
+        "Ask about the place (where).",
+        "Ask about the time (when).",
+        "Ask about the way (how).",
+        "Ask about the person (who)."
+      ],
+      "steps": [
+        {
+          "prompt": "Ask about their job (what).",
+          "segment": "What do you do?"
+        },
+        {
+          "prompt": "Ask about the place (where).",
+          "segment": "Where do you work?"
+        },
+        {
+          "prompt": "Ask about the time (when).",
+          "segment": "When do you start?"
+        },
+        {
+          "prompt": "Ask about the way (how).",
+          "segment": "How do you go to work?"
+        },
+        {
+          "prompt": "Ask about the person (who).",
+          "segment": "Who do you have lunch with?"
+        }
+      ]
+    },
+    {
+      "id": "en1.u2.lx.007",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "frequency-adverbs"
+      ],
+      "fn": [
+        "ask.frequency"
+      ],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "usually",
+      "pos": "adverb",
+      "gloss": "usualmente, generalmente",
+      "examplePhraseId": "en1.u2.p.014",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u2.lx.008",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "time.at"
+      ],
+      "fn": [
+        "ask.time"
+      ],
+      "topic": [
+        "time"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "o'clock",
+      "pos": "phrase",
+      "gloss": "en punto (para la hora)",
+      "examplePhraseId": "en1.u2.p.009",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u2.lx.009",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "workplace"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "sit",
+      "pos": "verb",
+      "gloss": "sentarse",
+      "examplePhraseId": "en1.u2.p.001",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u2.ct.004",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par minimo nuestro para entrenar el sonido."
+      },
+      "grammar": [
+        "present-simple.negative"
+      ],
+      "fn": [],
+      "topic": [
+        "routine"
+      ],
+      "difficulty": 2,
+      "kind": "contrast",
+      "pair": [
+        "work",
+        "walk"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "I don't ___ on Sundays.",
+          "correct": 0
+        },
+        {
+          "text": "I ___ to the office every day.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en1.u2.ct.005",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par minimo nuestro para entrenar el sonido."
+      },
+      "grammar": [
+        "present-simple.interrogative"
+      ],
+      "fn": [],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 3,
+      "kind": "contrast",
+      "pair": [
+        "live",
+        "leave"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "Where do you ___?",
+          "correct": 0
+        },
+        {
+          "text": "What time do you ___ home?",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en1.u2.ct.006",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par minimo nuestro para entrenar el sonido."
+      },
+      "grammar": [
+        "wh-questions"
+      ],
+      "fn": [],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 3,
+      "kind": "contrast",
+      "pair": [
+        "cost",
+        "coast"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "How much does it ___?",
+          "correct": 0
+        },
+        {
+          "text": "We live on the ___.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en1.u2.ct.007",
+      "course": "en1",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par minimo nuestro para entrenar el sonido."
+      },
+      "grammar": [
+        "have-has"
+      ],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 2,
+      "kind": "contrast",
+      "pair": [
+        "has",
+        "as"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "She ___ two brothers.",
+          "correct": 0
+        }
+      ]
     }
   ]
 }

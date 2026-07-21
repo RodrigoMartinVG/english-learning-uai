@@ -52,7 +52,7 @@ export interface AudioVoiceHints {
 }
 
 export interface AudioManifest {
-  entries: Record<string, { src: string; durationMs: number }>;
+  entries: Record<string, { src: string; durationMs: number; hash?: string }>;
 }
 
 export type AudioState = 'idle' | 'loading' | 'speaking' | 'error';
@@ -82,6 +82,13 @@ export interface LastPlayed {
 
 export interface AudioService {
   speak(req: SpeakRequest): Promise<AudioSource>;
+  /**
+   * Reproduce un audio suelto por URL (típicamente una grabación del alumno, un
+   * blob:). Va por el MISMO canal único que speak(): corta lo que estuviera
+   * sonando y se corta con cancel() o al navegar. Sin esto, las grabaciones
+   * sonaban con `new Audio()` por su cuenta y se solapaban con la referencia.
+   */
+  playClip(url: string): Promise<AudioSource>;
   cancel(): void;
   preload(keys: string[]): void;
   hasFile(key: string): boolean;
@@ -190,8 +197,15 @@ export function createAudioService(
     if (typeof speechSynthesis !== 'undefined') speechSynthesis.cancel();
   };
 
-  async function playFile(src: string, rate: number, myToken: number): Promise<boolean> {
-    const el = preloaded.get(src) ?? new Audio(AUDIO_BASE + src);
+  // Cache-busting: el archivo tiene nombre fijo por id (…/en1.u6.p.001.mp3). Si
+  // regeneramos el audio con texto nuevo, el navegador seguiría sirviendo el mp3
+  // viejo cacheado (misma URL). Colgarle el hash del contenido hace que la URL
+  // cambie SOLO cuando el audio cambió, y así se recarga la versión nueva.
+  const urlOf = (entry: { src: string; hash?: string }) =>
+    AUDIO_BASE + entry.src + (entry.hash ? `?v=${entry.hash}` : '');
+
+  async function playFile(url: string, rate: number, myToken: number): Promise<boolean> {
+    const el = preloaded.get(url) ?? new Audio(url);
     el.playbackRate = rate;
     // Sin esto, bajar la velocidad baja el tono y la voz suena a cinta gastada.
     el.preservesPitch = true;
@@ -279,10 +293,12 @@ export function createAudioService(
     preload(keys) {
       for (const k of keys) {
         const entry = manifest.entries[k];
-        if (!entry || preloaded.has(entry.src)) continue;
-        const el = new Audio(AUDIO_BASE + entry.src);
+        if (!entry) continue;
+        const url = urlOf(entry);
+        if (preloaded.has(url)) continue;
+        const el = new Audio(url);
         el.preload = 'auto';
-        preloaded.set(entry.src, el);
+        preloaded.set(url, el);
       }
     },
 
@@ -311,7 +327,7 @@ export function createAudioService(
       const entry = manifest.entries[req.key];
       if (entry) {
         setState('speaking');
-        const ok = await playFile(entry.src, req.rateFactor ?? 1, myToken);
+        const ok = await playFile(urlOf(entry), req.rateFactor ?? 1, myToken);
         // Nos pisó otro speak(): ni tocamos el estado ni mentimos diciendo que sonó.
         if (myToken !== token) return 'interrupted';
         if (ok) {
@@ -327,6 +343,19 @@ export function createAudioService(
       setState(ok ? 'idle' : 'error');
       if (ok) remember('synth');
       return ok ? 'synth' : 'none';
+    },
+
+    async playClip(url) {
+      // Mismo protocolo que speak(): token nuevo + cortar todo, para que sea el
+      // único audio y quede sujeto a cancel()/navegación.
+      token++;
+      const myToken = token;
+      stopEverything();
+      setState('speaking');
+      const ok = await playFile(url, 1, myToken);
+      if (myToken !== token) return 'interrupted';
+      setState(ok ? 'idle' : 'error');
+      return ok ? 'file' : 'none';
     },
   };
 }

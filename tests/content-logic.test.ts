@@ -47,6 +47,17 @@ test('atomInAspect: matchea por CUALQUIER dimensión', () => {
   assert.equal(atomInAspect(atom, noMatch), false);
 });
 
+test('atomInAspect: agrupa por textId (Unidad 5)', () => {
+  const square = { grammar: [], fn: [], topic: [], textId: 'square' } as unknown as Atom;
+  const other = { grammar: [], fn: [], topic: [], textId: 'why2' } as unknown as Atom;
+  const byText = { match: { textId: ['square'] } } as Aspect;
+  assert.equal(atomInAspect(square, byText), true);
+  assert.equal(atomInAspect(other, byText), false);
+  // Un átomo sin textId (U1-4) nunca cae en un aspecto de texto.
+  const grammarAtom = { grammar: ['be.present.affirmative'], fn: [], topic: [] } as unknown as Atom;
+  assert.equal(atomInAspect(grammarAtom, byText), false);
+});
+
 test('checkRubric: detecta lo presente, marca lo ausente, deja null lo no verificable', () => {
   const prod = {
     rubric: [

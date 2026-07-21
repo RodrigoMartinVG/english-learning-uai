@@ -120,6 +120,8 @@ export const TOPIC_TAGS = [
   'home',
   'city',
   'shopping',
+  // Unidad 5 — textos de matemática
+  'mathematics',
 ] as const;
 
 /** Habilidades: una tarjeta de SRS es (atomId, skill). Ver ARQUITECTURA.md §7. */
@@ -138,14 +140,29 @@ export const KIND_CODE = {
   exercise: 'ex',
   production: 'pr',
   listening: 'ls',
+  reading: 'rd',
 } as const;
 
 /** Formato: en1.u1.p.007 — curso.unidad.tipo.secuencia */
-export const ATOM_ID_RE = /^(en[1-4])\.u([1-9]\d?)\.(p|d|qa|lx|ct|ex|pr|ls)\.(\d{3})$/;
+export const ATOM_ID_RE = /^(en[1-4])\.u([1-9]\d?)\.(p|d|qa|lx|ct|ex|pr|ls|rd)\.(\d{3})$/;
 
 export const atomIdSchema = z
   .string()
   .regex(ATOM_ID_RE, 'id inválido: se espera curso.unidad.tipo.NNN (ej. en1.u1.p.007)');
+
+/** Clave de audio de un bloque del `reading` (Unidad 5). build-audio y el Reader la
+ *  comparten para no discrepar sobre qué mp3 corresponde a qué párrafo. */
+export const readingBlockKey = (atomId: string, sectionIdx: number, blockIdx: number): string =>
+  `${atomId}.sec.${sectionIdx}.b.${blockIdx}`;
+
+/** Clave de audio de una respuesta con modo (§3.5): el modelo leído en voz alta. */
+export const answerKey = (atomId: string, answerIdx: number): string => `${atomId}.ans.${answerIdx}`;
+
+/** Claves de audio de un paso de "Reconstruir el guion": la pregunta y el fragmento. */
+export const stepQuestionKey = (atomId: string, stepIdx: number): string =>
+  `${atomId}.step.${stepIdx}.q`;
+export const stepSegmentKey = (atomId: string, stepIdx: number): string =>
+  `${atomId}.step.${stepIdx}`;
 
 /* ──────────────────────────────── núcleo común ──────────────────────────────────── */
 
@@ -173,6 +190,15 @@ const atomBase = {
   /** Ruta de dificultad de ARQUITECTURA.md §2.3 / §6.2, de más guiado a más libre. */
   difficulty: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]),
   tags: z.array(z.string()).optional(),
+  /**
+   * A qué "texto de estudio" pertenece el átomo (Unidad 5). Es una 4ª dimensión de
+   * selección, además de grammar/fn/topic: en una unidad de textos, "de qué texto es"
+   * no es ninguna de esas. Opcional — las U1-4 no lo usan. Ver aspect.match.textId.
+   */
+  textId: z
+    .string()
+    .regex(/^[a-z][a-z0-9-]*$/, 'textId: kebab-case (ej. square)')
+    .optional(),
 };
 
 /* ──────────────────────────────────── audio ─────────────────────────────────────── */
@@ -225,12 +251,33 @@ export const dialogueAtomSchema = z.object({
   image: imageRefSchema.optional(),
 });
 
+/**
+ * El modo de una respuesta modelo: CÓMO se relaciona con el texto. Es lo que
+ * convierte "responder" en "apropiarse" (Unidad 5, ver PLAN-unidad-5 §3.5).
+ * El mismo contenido respondido desde varios ángulos enriquece la comprensión.
+ */
+export const ANSWER_MODES = ['quote', 'paraphrase', 'connect', 'personal'] as const;
+
+/** Una respuesta modelo con su modo. quote = se apoya en el texto citándolo;
+ *  paraphrase = con palabras propias; connect = relaciona con otra idea;
+ *  personal = tu mirada. */
+export const modedAnswerSchema = z.object({
+  text: z.string().min(1),
+  mode: z.enum(ANSWER_MODES),
+});
+
 export const qaAtomSchema = z.object({
   ...atomBase,
   kind: z.literal('qa'),
   prompt: z.string().min(1),
   promptVariants: z.array(z.string()),
   replies: z.array(z.string()).min(1),
+  /**
+   * Respuestas modelo etiquetadas por modo (Unidad 5). Enriquecen la comprensión:
+   * el alumno ve la misma pregunta respondida apoyándose en el texto, parafraseando,
+   * conectando y desde su mirada. Opcional — las U1-4 solo usan `replies`.
+   */
+  answers: z.array(modedAnswerSchema).optional(),
   /** Quién pregunta. Las promptVariants son la MISMA persona reformulando. */
   speaker: z.string().min(1),
   /**
@@ -381,6 +428,28 @@ export const productionAtomSchema = z.object({
   /** "My Life: Chapter N" — hilo acumulativo. Al final de las 4, es el final oral. */
   chapter: z.number().int().positive().optional(),
   /**
+   * Andamiaje para la exposición (Unidad 5, capa 6): esquema / arranques de frase
+   * que el alumno puede seguir y después retirar. Opcional — el examinador lo
+   * muestra como guía, no como respuesta. Ver PLAN-unidad-5 §2.
+   */
+  scaffold: z.array(z.string().min(1)).optional(),
+  /**
+   * Reconstrucción guiada del guion: una secuencia de preguntas que, al responderlas
+   * en orden, arma el script modelo pedazo a pedazo. `segment` es el fragmento que
+   * esa pregunta produce; la concatenación de los segmentos reconstruye la exposición.
+   * Lo consume la mecánica "Reconstruir el guion". Opcional.
+   */
+  steps: z
+    .array(
+      z.object({
+        prompt: z.string().min(1),
+        segment: z.string().min(1),
+        hint: z.string().optional(),
+      })
+    )
+    .min(2)
+    .optional(),
+  /**
    * Qué tiene que aparecer sí o sí. Lo usa el Oral Exam Simulator.
    *
    * `detect` es un regex contra la transcripción normalizada. Es opcional a
@@ -425,6 +494,50 @@ export const listeningAtomSchema = z.object({
   audio: audioRefSchema.optional(),
 });
 
+/* ─────────────────────────────── reading (Unidad 5) ─────────────────────────────── */
+
+/**
+ * Un bloque del texto de estudio. `para` es un párrafo (unidad de read-aloud y
+ * shadowing); `list` son viñetas; `figure` es una figura del original con su alt.
+ */
+export const readingBlockSchema = z.discriminatedUnion('kind', [
+  z.object({ kind: z.literal('para'), text: z.string().min(1) }),
+  z.object({ kind: z.literal('list'), items: z.array(z.string().min(1)).min(1) }),
+  z.object({ kind: z.literal('figure'), image: imageRefSchema, caption: z.string().optional() }),
+]);
+
+export const readingSectionSchema = z.object({
+  heading: z.string().optional(),
+  blocks: z.array(readingBlockSchema).min(1),
+});
+
+/**
+ * El texto de estudio como recurso (Unidad 5). No es una tarjeta de SRS ni pasa por
+ * una mecánica: se lee y se escucha, párrafo a párrafo. Reproduce el texto original
+ * con sus figuras y su atribución. Cada bloque `para` publica audio bajo clave
+ * derivada (`<id>.sec.<i>.b.<j>`), como contrast/exercise. Ver PLAN-unidad-5 §3.2.
+ */
+export const readingAtomSchema = z.object({
+  ...atomBase,
+  kind: z.literal('reading'),
+  /** Requerido en reading: es el ancla del texto de estudio (aspect.match.textId). */
+  textId: z.string().regex(/^[a-z][a-z0-9-]*$/, 'textId: kebab-case (ej. square)'),
+  title: z.string().min(1),
+  /** Atribución visible en la vista. La fuente original, no la provenance interna. */
+  credit: z.object({
+    author: z.string().optional(),
+    publication: z.string().min(1),
+    url: z.string().url(),
+  }),
+  /** Voz del read-aloud. */
+  speaker: z.string().min(1),
+  sections: z.array(readingSectionSchema).min(1),
+  /** La consigna post-lectura del material (ej. "Find 5 sentences with the verb To Be"). */
+  afterReadingTask: z.string().optional(),
+});
+
+/* ──────────────────────────────────── unión ─────────────────────────────────────── */
+
 export const atomSchema = z.discriminatedUnion('kind', [
   phraseAtomSchema,
   dialogueAtomSchema,
@@ -434,6 +547,7 @@ export const atomSchema = z.discriminatedUnion('kind', [
   exerciseAtomSchema,
   productionAtomSchema,
   listeningAtomSchema,
+  readingAtomSchema,
 ]);
 
 /* ─────────────────────────────────── speakers ───────────────────────────────────── */
@@ -497,10 +611,18 @@ export const aspectSchema = z.object({
       grammar: z.array(z.enum(GRAMMAR_TAGS)).optional(),
       fn: z.array(z.enum(FUNCTION_TAGS)).optional(),
       topic: z.array(z.enum(TOPIC_TAGS)).optional(),
+      /** Unidad 5: un aspecto = un texto de estudio. Agrupa por el textId del átomo. */
+      textId: z.array(z.string()).optional(),
     })
-    .refine((m) => (m.grammar?.length ?? 0) + (m.fn?.length ?? 0) + (m.topic?.length ?? 0) > 0, {
-      message: 'un aspecto sin match no selecciona nada',
-    }),
+    .refine(
+      (m) =>
+        (m.grammar?.length ?? 0) +
+          (m.fn?.length ?? 0) +
+          (m.topic?.length ?? 0) +
+          (m.textId?.length ?? 0) >
+        0,
+      { message: 'un aspecto sin match no selecciona nada' }
+    ),
   source: z.object({ page: z.number().int().positive().optional(), section: z.string().optional() }).optional(),
 });
 
@@ -521,11 +643,12 @@ export type Aspect = z.infer<typeof aspectSchema>;
 /** ¿Este átomo cae dentro del aspecto? Es el selector, y vive acá para que la app
  *  y el validador no puedan discrepar sobre qué contiene un aspecto. */
 export function atomInAspect(atom: Atom, aspect: Aspect): boolean {
-  const { grammar, fn, topic } = aspect.match;
+  const { grammar, fn, topic, textId } = aspect.match;
   return (
     (grammar?.some((t) => (atom.grammar as string[]).includes(t)) ?? false) ||
     (fn?.some((t) => (atom.fn as string[]).includes(t)) ?? false) ||
-    (topic?.some((t) => (atom.topic as string[]).includes(t)) ?? false)
+    (topic?.some((t) => (atom.topic as string[]).includes(t)) ?? false) ||
+    (textId?.some((t) => atom.textId === t) ?? false)
   );
 }
 
@@ -548,6 +671,11 @@ export type ContrastAtom = z.infer<typeof contrastAtomSchema>;
 export type ExerciseAtom = z.infer<typeof exerciseAtomSchema>;
 export type ProductionAtom = z.infer<typeof productionAtomSchema>;
 export type ListeningAtom = z.infer<typeof listeningAtomSchema>;
+export type ReadingAtom = z.infer<typeof readingAtomSchema>;
+export type ReadingBlock = z.infer<typeof readingBlockSchema>;
+export type ReadingSection = z.infer<typeof readingSectionSchema>;
+export type ModedAnswer = z.infer<typeof modedAnswerSchema>;
+export type AnswerMode = (typeof ANSWER_MODES)[number];
 export type Atom = z.infer<typeof atomSchema>;
 export type Speaker = z.infer<typeof speakerSchema>;
 export type SpeakersFile = z.infer<typeof speakersFileSchema>;

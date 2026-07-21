@@ -17,7 +17,7 @@
  *   npm run build:audio -- --provider=azure   usa Azure (necesita .env)
  */
 
-import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { createHash } from 'node:crypto';
 import { z } from 'zod';
@@ -25,13 +25,17 @@ import {
   speakersFileSchema,
   unitFileSchema,
   BLANK,
+  readingBlockKey,
+  answerKey,
+  stepQuestionKey,
+  stepSegmentKey,
   type Atom,
   type Speaker,
 } from '../content/schema.ts';
 import { createAzureProvider } from './tts/azure.ts';
 import { createKokoroProvider } from './tts/kokoro.ts';
 import { splitSentences } from './tts/sentences.ts';
-import { ALT_VOICES } from '../content/kokoro-voices.ts';
+import { ALT_VOICES, MODEL_VOICES } from '../content/kokoro-voices.ts';
 import type { ProviderId, TtsProvider, Utterance } from './tts/provider.ts';
 
 const ROOT = join(import.meta.dirname, '..');
@@ -202,14 +206,18 @@ for (const atom of atoms) {
       if (atom.slowVariant) push(`${atom.id}.slow`, atom.text, atom.speaker, SLOW_RATE_FACTOR);
       // Las alternativas son la misma persona reformulando → misma voz.
       atom.alternatives?.forEach((t, i) => push(`${atom.id}.alt.${i}`, t, atom.speaker));
-      // atom.replies no se sintetiza acá: o son turnos reales de un diálogo, o
-      // están duplicadas en un átomo qa, que sí sabe con qué voz se responden.
+      // Las replies de una frase (respuestas naturales: "Fine.", "OK. And you?")
+      // SÍ se sintetizan, con voz neutra: la guía de expresiones las reproduce y sin
+      // esto caían al fallback del navegador y sonaban robóticas.
+      atom.replies?.forEach((t, i) => push(`${atom.id}.reply.${i}`, t, NEUTRAL_SPEAKER));
       break;
     }
     case 'qa': {
       push(atom.id, atom.prompt, atom.speaker);
       atom.promptVariants.forEach((t, i) => push(`${atom.id}.alt.${i}`, t, atom.speaker));
       atom.replies.forEach((t, i) => push(`${atom.id}.reply.${i}`, t, atom.replySpeaker));
+      // Unidad 5: la misma respuesta leída en cada modo (apoyo/paráfrasis/conexión/mirada).
+      atom.answers?.forEach((a, i) => push(answerKey(atom.id, i), a.text, atom.replySpeaker));
       break;
     }
     case 'lexeme': {
@@ -254,6 +262,27 @@ for (const atom of atoms) {
       push(atom.id, atom.prompt, atom.speaker);
       push(`${atom.id}.model`, atom.modelAnswer, atom.speaker);
       push(`${atom.id}.model.slow`, atom.modelAnswer, atom.speaker, SLOW_RATE_FACTOR);
+      // Versiones alternativas del modelo (Versión B, C…): audio propio, para que
+      // también se escuchen bien y ofrezcan varias voces, igual que la Versión A.
+      atom.modelVariants?.forEach((t, i) => push(`${atom.id}.modelvar.${i}`, t, atom.speaker));
+      // Reconstruir el guion: la pregunta guía (voz neutra) y el fragmento modelo.
+      atom.steps?.forEach((s, i) => {
+        push(stepQuestionKey(atom.id, i), s.prompt, NEUTRAL_SPEAKER);
+        push(stepSegmentKey(atom.id, i), s.segment, atom.speaker);
+      });
+      break;
+    }
+    case 'reading': {
+      // El texto de estudio: una pista por bloque legible (párrafo, lista, caption),
+      // para leerlo/escucharlo por partes y shadowear. La figura sin caption no suena.
+      atom.sections.forEach((sec, si) => {
+        sec.blocks.forEach((b, bi) => {
+          const key = readingBlockKey(atom.id, si, bi);
+          if (b.kind === 'para') push(key, b.text, atom.speaker);
+          else if (b.kind === 'list') push(key, b.items.join('. '), atom.speaker);
+          else if (b.kind === 'figure' && b.caption) push(key, b.caption, atom.speaker);
+        });
+      });
       break;
     }
     case 'dialogue':
@@ -265,8 +294,14 @@ for (const atom of atoms) {
 // Segunda pasada: por cada emisión que califica, sus voces alternativas.
 // Se hace acá, sobre la lista ya armada, en vez de esparcir flags por cada push.
 for (const u of [...utterances]) {
-  if (!wantsAlts(u)) continue;
-  for (const alt of ALT_VOICES) {
+  // Los "Scripts modelo" (.model) llevan un set más amplio de voces, y sin el tope
+  // de largo: es donde el alumno elige con qué voz estudiar el texto entero. El
+  // resto del habla que califica lleva las tres alternativas de siempre.
+  const isModel =
+    PROVIDER_ID === 'kokoro' && (u.key.endsWith('.model') || /\.modelvar\.\d+$/.test(u.key));
+  const voices = isModel ? MODEL_VOICES : wantsAlts(u) ? ALT_VOICES : null;
+  if (!voices) continue;
+  for (const alt of voices) {
     if (alt.id === u.voice) continue;
     utterances.push({
       key: `${u.key}.v.${alt.id}`,
@@ -327,6 +362,13 @@ const stale = selected.filter((u) => {
   return !existsSync(join(ROOT, 'public', prev.src));
 });
 
+// Huérfanos: entradas del manifest que ya no corresponden a ningún átomo actual
+// (p. ej. un modelo que pasó de 7 a 5 pasos deja step.5/6 colgados, apuntando a
+// audio viejo). Se podan SOLO en build completo: con --only, `utterances` está
+// bien pero no queremos borrar lo que el filtro deja afuera de `selected`.
+const expectedKeys = new Set(utterances.map((u) => u.key));
+const orphans = ONLY ? [] : Object.keys(manifest.entries).filter((k) => !expectedKeys.has(k));
+
 /* ──────────────────────────────────── reporte ───────────────────────────────────── */
 
 const chars = (list: Utterance[]) => list.reduce((n, u) => n + u.text.length, 0);
@@ -340,6 +382,7 @@ if (PROVIDER_ID === 'azure') {
 }
 console.log(`a sintetizar ahora: ${stale.length}  (${chars(stale).toLocaleString('es')} chars)`);
 console.log(`ya en cache: ${selected.length - stale.length}`);
+console.log(`huérfanos a podar: ${orphans.length}${ONLY ? ' (omitido con --only)' : ''}`);
 
 if (missingVoice.length) {
   console.log(`\nSIN VOZ (${missingVoice.length}):`);
@@ -347,13 +390,43 @@ if (missingVoice.length) {
 }
 
 if (DRY_RUN) {
-  console.log('\n--dry-run: no se sintetizó nada.\n');
+  console.log('\n--dry-run: no se sintetizó ni podó nada.\n');
   process.exit(0);
 }
+
+// Podar antes de sintetizar: borra el mp3 y la entrada de cada huérfano.
+function prune() {
+  for (const k of orphans) {
+    const src = manifest.entries[k]?.src;
+    if (src) {
+      const fp = join(ROOT, 'public', src);
+      if (existsSync(fp)) rmSync(fp);
+    }
+    delete manifest.entries[k];
+  }
+}
+
+function writeManifest(providerName: string) {
+  manifest.generatedAt = new Date().toISOString();
+  manifest.provider = providerName;
+  mkdirSync(AUDIO_DIR, { recursive: true });
+  writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2) + '\n');
+}
+
 if (!stale.length) {
-  console.log('\n✓ todo el audio está al día.\n');
+  // Nada que sintetizar. Si hay huérfanos, igual podamos y reescribimos el manifest.
+  if (orphans.length) {
+    prune();
+    writeManifest(manifest.provider);
+    console.log(`\n✓ ${orphans.length} audio(s) huérfano(s) podado(s). Sin audio nuevo. Manifest: ${Object.keys(manifest.entries).length} entradas.\n`);
+  } else {
+    console.log('\n✓ todo el audio está al día.\n');
+  }
   process.exit(0);
 }
+
+prune();
+if (orphans.length) console.log(`podados ${orphans.length} audio(s) huérfano(s).`);
 
 /* ──────────────────────────────────── síntesis ──────────────────────────────────── */
 
@@ -397,9 +470,6 @@ for (const u of stale) {
   }
 }
 
-manifest.generatedAt = new Date().toISOString();
-manifest.provider = provider.name;
-mkdirSync(AUDIO_DIR, { recursive: true });
-writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2) + '\n');
+writeManifest(provider.name);
 
-console.log(`\n✓ ${done} audio(s) generados. Manifest: ${manifest.entries ? Object.keys(manifest.entries).length : 0} entradas.\n`);
+console.log(`\n✓ ${done} audio(s) generados${orphans.length ? `, ${orphans.length} podado(s)` : ''}. Manifest: ${Object.keys(manifest.entries).length} entradas.\n`);

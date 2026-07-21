@@ -3,6 +3,7 @@ import { useAudio, useAudioState } from '../../audio/AudioProvider.tsx';
 import { Waveform } from '../../ui/Waveform.tsx';
 import { AltVoices } from '../../ui/AltVoices.tsx';
 import { SpeakPanel } from '../../ui/SpeakPanel.tsx';
+import { ModedAnswers } from '../../ui/ModedAnswers.tsx';
 import { speakerById } from '../../data/content.ts';
 import type { MechanicViewProps } from '../types.ts';
 import type { PingPongRound } from './mechanic.ts';
@@ -63,7 +64,13 @@ export function PingPongView({ round, onDone }: MechanicViewProps<PingPongRound>
       ) : (
         <div className="expansion">
           <p className="expansion__gloss">“{target.prompt}”</p>
-          <p className="speak__note">Respuestas válidas: {round.accepted.join(' · ')}</p>
+          {/* Unidad 5: si la pregunta trae respuestas por modo, mostrá el abanico
+              en vez de una lista plana — enseña a apropiarse, no a memorizar. */}
+          {target.answers?.length ? (
+            <ModedAnswers atomId={target.id} answers={target.answers} speakerId={target.replySpeaker} />
+          ) : (
+            <p className="speak__note">Respuestas válidas: {round.accepted.join(' · ')}</p>
+          )}
         </div>
       )}
     </div>

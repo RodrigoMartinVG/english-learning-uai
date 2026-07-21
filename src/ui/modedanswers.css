@@ -1,0 +1,82 @@
+/* ModedAnswers — respuestas por modo (Unidad 5). */
+
+.modes {
+  margin-top: 0.75rem;
+}
+
+.modes__intro {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.modes__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.modes__item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.8rem;
+}
+/* Un color por ángulo, sutil: apoyo/paráfrasis/conexión/mirada. */
+.modes__item--quote {
+  border-left-color: var(--accent);
+}
+.modes__item--paraphrase {
+  border-left-color: var(--success);
+}
+.modes__item--connect {
+  border-left-color: #c99a3a;
+}
+.modes__item--personal {
+  border-left-color: #a06cd5;
+}
+
+.modes__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.modes__badge {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+.modes__play {
+  flex: none;
+  background: var(--surface-hi);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+  padding: 0.25rem 0.45rem;
+}
+.modes__play:hover {
+  background: var(--accent-dim);
+}
+
+.modes__text {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.modes__hint {
+  margin: 0.3rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}

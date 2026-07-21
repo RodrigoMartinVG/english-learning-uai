@@ -13,12 +13,15 @@ import { wordFocus } from './word-focus/mechanic.ts';
 import { cloze } from './cloze/mechanic.ts';
 import { listening } from './listening/mechanic.ts';
 import { dictation } from './dictation/mechanic.ts';
+import { echoType } from './echo-type/mechanic.ts';
+import { echoSay } from './echo-say/mechanic.ts';
 import { questionFormer } from './question-former/mechanic.ts';
 import { syntaxBuilder } from './syntax-builder/mechanic.ts';
 import { minimalPairs } from './minimal-pairs/mechanic.ts';
 import { shadowing } from './shadowing/mechanic.ts';
 import { pingPong } from './ping-pong/mechanic.ts';
 import { rolePlay } from './role-play/mechanic.ts';
+import { scriptBuilder } from './script-builder/mechanic.ts';
 import { oralExam } from './oral-exam/mechanic.ts';
 import type { Mechanic } from './types.ts';
 
@@ -31,10 +34,13 @@ export const mechanics: Mechanic<any>[] = [
   syntaxBuilder,
   cloze,
   dictation,
+  echoType,
   pingPong,
   shadowing,
+  echoSay,
   rolePlay,
   questionFormer,
+  scriptBuilder,
   oralExam,
 ];
 

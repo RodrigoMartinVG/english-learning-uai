@@ -24,6 +24,7 @@ import {
 } from '../content/schema.ts';
 
 const CONTENT_DIR = join(import.meta.dirname, '..', 'content');
+const PUBLIC_DIR = join(import.meta.dirname, '..', 'public');
 
 type Problem = { file: string; where: string; msg: string };
 const errors: Problem[] = [];
@@ -270,6 +271,18 @@ for (const { file, course, unit, aspects, atoms } of unitFiles) {
       }
     }
 
+    // Unidad 5: las figuras del texto de estudio deben existir en disco. Un /img/
+    // roto deja al alumno frente a un hueco justo donde el original tiene la figura.
+    if (atom.kind === 'reading') {
+      atom.sections.forEach((sec, si) => {
+        sec.blocks.forEach((b, bi) => {
+          if (b.kind === 'figure' && !existsSync(join(PUBLIC_DIR, b.image.src))) {
+            err(file, at(`sections.${si}.blocks.${bi}.image`), `no existe el archivo ${b.image.src}`);
+          }
+        });
+      });
+    }
+
     // Regla §5.6: las narrativas de listening no existen en el material. Son nuestras.
     if (atom.kind === 'listening' && atom.source.origin !== 'synthetic') {
       err(
@@ -286,8 +299,12 @@ for (const { file, course, unit, aspects, atoms } of unitFiles) {
     }
 
     // Avisos: no rompen el build, pero delatan contenido a medio curar.
-    if (atom.grammar.length === 0) warn(file, at('grammar'), 'sin tags de gramática → ninguna mecánica lo va a seleccionar');
-    if (atom.topic.length === 0) warn(file, at('topic'), 'sin topic → no se puede usar para distractores ni interleaving');
+    // El `reading` es un recurso, no lo selecciona ninguna mecánica por tag: se agrupa
+    // por textId. Pedirle grammar/topic sería ruido, así que se lo exime.
+    if (atom.kind !== 'reading') {
+      if (atom.grammar.length === 0) warn(file, at('grammar'), 'sin tags de gramática → ninguna mecánica lo va a seleccionar');
+      if (atom.topic.length === 0) warn(file, at('topic'), 'sin topic → no se puede usar para distractores ni interleaving');
+    }
     if (atom.source.origin === 'extracted' && !atom.source.page)
       warn(file, at('source.page'), 'extracted sin page: se pierde la trazabilidad al PDF');
   }

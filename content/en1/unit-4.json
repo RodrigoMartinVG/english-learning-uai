@@ -935,7 +935,11 @@
         "leisure"
       ],
       "difficulty": 2,
-      "ipa": "aɪ kˈænt swˈɪm"
+      "ipa": "aɪ kˈænt swˈɪm",
+      "alternatives": [
+        "I'm not able to swim.",
+        "Swimming isn't my thing."
+      ]
     },
     {
       "id": "en1.u4.p.024",
@@ -1220,11 +1224,14 @@
       },
       "prompt": "Excuse me, how do I get to the museum?",
       "promptVariants": [
-        "Where is the museum?"
+        "Where is the museum?",
+        "Could you tell me the way to the museum?"
       ],
       "replies": [
         "Go straight on and turn left.",
-        "It's next to the library."
+        "It's next to the library.",
+        "Turn right at the corner.",
+        "It's opposite the park."
       ],
       "speaker": "student",
       "replySpeaker": "narrator",
@@ -1359,7 +1366,7 @@
       "pos": "noun",
       "gloss": "jardín",
       "examplePhraseId": "en1.u4.p.036",
-      "focus": "translation",
+      "focus": "variant",
       "grammar": [
         "there-is.affirmative"
       ],
@@ -1369,7 +1376,11 @@
       "topic": [
         "home"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "variantOf": {
+        "uk": "garden",
+        "us": "yard"
+      }
     },
     {
       "id": "en1.u4.p.036",
@@ -1616,7 +1627,7 @@
       "pos": "noun",
       "gloss": "farmacia",
       "examplePhraseId": "en1.u4.p.041",
-      "focus": "translation",
+      "focus": "variant",
       "grammar": [
         "there-is.affirmative"
       ],
@@ -1626,7 +1637,11 @@
       "topic": [
         "home"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "variantOf": {
+        "uk": "chemist's",
+        "us": "pharmacy"
+      }
     },
     {
       "id": "en1.u4.p.041",
@@ -1786,7 +1801,11 @@
         "family"
       ],
       "difficulty": 2,
-      "ipa": "hæv juː ɡɑːt ˌɛni bɹˈʌðɚz"
+      "ipa": "hæv juː ɡɑːt ˌɛni bɹˈʌðɚz",
+      "alternatives": [
+        "Do you have any brothers?",
+        "Have you got any siblings?"
+      ]
     },
     {
       "id": "en1.u4.p.047",
@@ -2068,7 +2087,25 @@
       "topic": [
         "city"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "steps": [
+        {
+          "prompt": "What is the CCK, and where is it?",
+          "segment": "The CCK is the biggest Cultural Centre in Latin America, and it is in Buenos Aires."
+        },
+        {
+          "prompt": "What is inside it?",
+          "segment": "There are five auditoriums, forty rooms and two terraces, and also coffee shops and restaurants."
+        },
+        {
+          "prompt": "What is its design, and what is outside?",
+          "segment": "Its design is French, and there is a beautiful statue opposite the building."
+        },
+        {
+          "prompt": "What can you do there?",
+          "segment": "You can listen to music, have a cup of coffee, see paintings, or just relax there. All events are free."
+        }
+      ]
     },
     {
       "id": "en1.u4.qa.002",
@@ -2082,11 +2119,14 @@
       },
       "prompt": "How many rooms are there in your flat?",
       "promptVariants": [
-        "How many chairs are there?"
+        "How many chairs are there?",
+        "How many bedrooms has it got?"
       ],
       "replies": [
         "There are three.",
-        "Four rooms."
+        "Four rooms.",
+        "Just two.",
+        "There are five."
       ],
       "speaker": "student",
       "replySpeaker": "student-m",
@@ -2114,11 +2154,14 @@
       },
       "prompt": "How much is that jacket?",
       "promptVariants": [
-        "How much is it?"
+        "How much is it?",
+        "What's the price?"
       ],
       "replies": [
         "It's thirty dollars.",
-        "Thirty-five dollars."
+        "Thirty-five dollars.",
+        "It's forty dollars.",
+        "About twenty euros."
       ],
       "speaker": "student",
       "replySpeaker": "shopkeeper",
@@ -2669,7 +2712,33 @@
         "home",
         "city"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "steps": [
+        {
+          "prompt": "What kind of home do you live in?",
+          "segment": "I live in a small apartment in the city."
+        },
+        {
+          "prompt": "What rooms are there?",
+          "segment": "There is a living room, a kitchen and two bedrooms."
+        },
+        {
+          "prompt": "Describe the living room.",
+          "segment": "There is a big window in the living room and there is a balcony."
+        },
+        {
+          "prompt": "What is your town like?",
+          "segment": "My town is nice. There is a square near my house and there is a pharmacy next to it."
+        },
+        {
+          "prompt": "What can you find or do there?",
+          "segment": "There are many shops and restaurants. You can walk everywhere."
+        },
+        {
+          "prompt": "How do you feel about the place where you live?",
+          "segment": "I love the place where I live."
+        }
+      ]
     },
     {
       "id": "en1.u4.lx.009",
@@ -3008,6 +3077,673 @@
         "home"
       ],
       "difficulty": 1
+    },
+    {
+      "id": "en1.u4.p.056",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de práctica nuestra para reforzar el aspecto."
+      },
+      "grammar": [
+        "some-any"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "There are some apples on the table.",
+      "gloss": "Hay algunas manzanas en la mesa.",
+      "speaker": "narrator",
+      "ipa": "ðɛɹˌɑːɹ sˌʌm ˈæpəlz ɔnðə tˈeɪbəl"
+    },
+    {
+      "id": "en1.u4.p.057",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de práctica nuestra para reforzar el aspecto."
+      },
+      "grammar": [
+        "some-any"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "There isn't any water in the bottle.",
+      "gloss": "No hay agua en la botella.",
+      "speaker": "narrator",
+      "ipa": "ðɛɹ ˌɪzənt ˌɛni wˈɔːɾɚɹ ɪnðə bˈɑːɾəl"
+    },
+    {
+      "id": "en1.u4.p.058",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Frase de práctica nuestra para reforzar el aspecto."
+      },
+      "grammar": [
+        "some-any",
+        "have-got.interrogative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Have you got any coins?",
+      "gloss": "¿Tenés monedas?",
+      "speaker": "narrator",
+      "ipa": "hæv juː ɡɑːt ˌɛni kˈɔɪnz"
+    },
+    {
+      "id": "en1.u4.qa.004",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de práctica nuestra."
+      },
+      "grammar": [
+        "can.request"
+      ],
+      "fn": [
+        "make-request"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "Can you help me, please?",
+      "promptVariants": [
+        "Could you give me a hand?",
+        "Can you do me a favour?"
+      ],
+      "replies": [
+        "Yes, of course.",
+        "Sure, no problem."
+      ],
+      "speaker": "mary",
+      "replySpeaker": "eric"
+    },
+    {
+      "id": "en1.u4.qa.005",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de práctica nuestra."
+      },
+      "grammar": [
+        "there-is.interrogative",
+        "prepositions.place"
+      ],
+      "fn": [
+        "ask.location",
+        "ask.existence"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "Is there a bank near here?",
+      "promptVariants": [
+        "Excuse me, is there a bank nearby?",
+        "Do you know if there's a bank around here?"
+      ],
+      "replies": [
+        "Yes, there's one on the corner.",
+        "Yes, it's next to the supermarket."
+      ],
+      "speaker": "mary",
+      "replySpeaker": "eric"
+    },
+    {
+      "id": "en1.u4.qa.006",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de práctica nuestra."
+      },
+      "grammar": [
+        "can.ability"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 4,
+      "kind": "qa",
+      "prompt": "What can you do in the city centre?",
+      "promptVariants": [
+        "What is there to do downtown?",
+        "What are the things to do in the centre?"
+      ],
+      "replies": [
+        "You can visit the museum and have a coffee.",
+        "You can go shopping and see the park."
+      ],
+      "speaker": "mary",
+      "replySpeaker": "eric"
+    },
+    {
+      "id": "en1.u4.qa.007",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de práctica nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "ask.location"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "Where is the pharmacy?",
+      "promptVariants": [
+        "Excuse me, where's the chemist's?",
+        "Is there a pharmacy near here?"
+      ],
+      "replies": [
+        "It's next to the supermarket.",
+        "It's opposite the bank.",
+        "It's on the corner.",
+        "There's one across the street."
+      ],
+      "speaker": "mary",
+      "replySpeaker": "eric"
+    },
+    {
+      "id": "en1.u4.qa.008",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de práctica nuestra."
+      },
+      "grammar": [
+        "some-any",
+        "there-is.interrogative"
+      ],
+      "fn": [
+        "ask.existence"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "Is there any milk in the fridge?",
+      "promptVariants": [
+        "Have we got any milk?",
+        "Is there some milk left?"
+      ],
+      "replies": [
+        "Yes, there is some.",
+        "No, there isn't any."
+      ],
+      "speaker": "mary",
+      "replySpeaker": "eric"
+    },
+    {
+      "id": "en1.u4.p.059",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "can.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "She can't drive a car.",
+      "gloss": "Ella no sabe manejar.",
+      "speaker": "narrator",
+      "ipa": "ʃiː kˈænt dɹˈaɪv ɐ kˈɑːɹ"
+    },
+    {
+      "id": "en1.u4.p.060",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "can.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "We can't find the museum on the map.",
+      "gloss": "No encontramos el museo en el mapa.",
+      "speaker": "narrator",
+      "ipa": "wiː kˈænt fˈaɪnd ðə mjuːzˈiəm ɔnðə mˈæp"
+    },
+    {
+      "id": "en1.u4.qa.009",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro."
+      },
+      "grammar": [
+        "can.ability",
+        "can.negative"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "kind": "qa",
+      "prompt": "Can you swim?",
+      "promptVariants": [
+        "Can he cook?",
+        "Can they drive?"
+      ],
+      "replies": [
+        "No, I can't.",
+        "Yes, I can.",
+        "No, I can't swim."
+      ],
+      "speaker": "mary",
+      "replySpeaker": "eric"
+    },
+    {
+      "id": "en1.u4.pr.003",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Produccion nuestra (cierra nivel 5)."
+      },
+      "grammar": [
+        "some-any",
+        "there-is.interrogative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 5,
+      "kind": "production",
+      "prompt": "Ask what there is in a kitchen, using some and any.",
+      "modelAnswer": "Is there any milk in the fridge? Are there any eggs? There is some bread and there are some apples on the table.",
+      "rubric": [
+        {
+          "text": "Usás some y any",
+          "detect": "\\bsome\\b|\\bany\\b"
+        },
+        {
+          "text": "Preguntás y describís",
+          "detect": "is there|are there|there is|there are"
+        },
+        {
+          "text": "Nombrás cosas de la cocina",
+          "detect": "milk|eggs?|bread|apples?|water|cheese|fridge|table|kitchen"
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "Is there any water in the bottle? Are there any oranges? There is some cheese and there are some biscuits in the cupboard."
+      ],
+      "scaffold": [
+        "Ask if there is an uncountable thing (any).",
+        "Ask if there are countable things (any).",
+        "Say what there is (some)."
+      ],
+      "steps": [
+        {
+          "prompt": "Ask if there is an uncountable thing (any).",
+          "segment": "Is there any milk in the fridge?"
+        },
+        {
+          "prompt": "Ask if there are countable things (any).",
+          "segment": "Are there any eggs?"
+        },
+        {
+          "prompt": "Say what there is (some).",
+          "segment": "There is some bread and there are some apples on the table."
+        }
+      ]
+    },
+    {
+      "id": "en1.u4.pr.004",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Produccion nuestra (cierra nivel 5)."
+      },
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 5,
+      "kind": "production",
+      "prompt": "Give directions from the station to the museum.",
+      "modelAnswer": "Go straight on until you get to the roundabout. Turn left at the traffic light. The museum is on the corner of Upper Street.",
+      "rubric": [
+        {
+          "text": "Das indicaciones (go straight / turn)",
+          "detect": "go straight|turn (left|right)|\\bturn\\b"
+        },
+        {
+          "text": "Llegás al destino",
+          "detect": "museum|on the corner|next to|opposite|it's on"
+        },
+        {
+          "text": "Usás referencias del camino (roundabout, traffic light…)",
+          "detect": "roundabout|traffic light|corner|street|bank|park"
+        }
+      ],
+      "speaker": "student",
+      "modelVariants": [
+        "Go straight on and take the second street on the right. Turn right at the roundabout. The museum is next to the bank, opposite the park."
+      ],
+      "scaffold": [
+        "Give the first direction (go straight).",
+        "Give the next direction (turn).",
+        "Say where the destination is."
+      ],
+      "steps": [
+        {
+          "prompt": "Give the first direction (go straight).",
+          "segment": "Go straight on until you get to the roundabout."
+        },
+        {
+          "prompt": "Give the next direction (turn).",
+          "segment": "Turn left at the traffic light."
+        },
+        {
+          "prompt": "Say where the destination is.",
+          "segment": "The museum is on the corner of Upper Street."
+        }
+      ]
+    },
+    {
+      "id": "en1.u4.lx.022",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "roundabout",
+      "pos": "noun",
+      "gloss": "rotonda",
+      "examplePhraseId": "en1.u4.p.030",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u4.lx.023",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "traffic light",
+      "pos": "noun",
+      "gloss": "semaforo",
+      "examplePhraseId": "en1.u4.p.031",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u4.p.061",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "how-much-many",
+        "there-is.interrogative"
+      ],
+      "fn": [
+        "ask.price"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "How many apples are there in the bag?",
+      "gloss": "Cuantas manzanas hay en la bolsa?",
+      "speaker": "narrator",
+      "ipa": "hˌaʊ mˈɛni ˈæpəlz ɑːɹ ðɛɹ ɪnðə bˈæɡ"
+    },
+    {
+      "id": "en1.u4.lx.024",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "have-got.interrogative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "sweater",
+      "pos": "noun",
+      "gloss": "sueter / pulover",
+      "examplePhraseId": "en1.u4.p.010",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u4.lx.025",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "have-got.interrogative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "size",
+      "pos": "noun",
+      "gloss": "talle / talla",
+      "examplePhraseId": "en1.u4.p.010",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u4.lx.026",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "opposite",
+      "pos": "preposition",
+      "gloss": "enfrente de",
+      "examplePhraseId": "en1.u4.p.002",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u4.lx.027",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "some-any"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "home"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "some",
+      "pos": "adjective",
+      "gloss": "algo de, algunos/as",
+      "examplePhraseId": "en1.u4.p.044",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u4.lx.028",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "can.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "swim",
+      "pos": "verb",
+      "gloss": "nadar",
+      "examplePhraseId": "en1.u4.p.023",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u4.ct.004",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par minimo nuestro para entrenar el sonido."
+      },
+      "grammar": [
+        "how-much-many"
+      ],
+      "fn": [],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 2,
+      "kind": "contrast",
+      "pair": [
+        "much",
+        "match"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "How ___ is it?",
+          "correct": 0
+        },
+        {
+          "text": "We watch the ___.",
+          "correct": 1
+        }
+      ]
     }
   ]
 }

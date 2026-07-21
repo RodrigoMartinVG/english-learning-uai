@@ -2767,10 +2767,13 @@
       "prompt": "What is your address?",
       "promptVariants": [
         "Where do you live?",
-        "What's your house address?"
+        "What's your house address?",
+        "Could you tell me your address?"
       ],
       "replies": [
-        "My address is 93 Lamont Ave."
+        "My address is 93 Lamont Ave.",
+        "I live at 93 Lamont Avenue.",
+        "93 Lamont Ave."
       ],
       "speaker": "receptionist",
       "grammar": [
@@ -4756,7 +4759,7 @@
       "pos": "noun",
       "gloss": "ropero",
       "examplePhraseId": "en1.u1.p.041",
-      "focus": "phonetic",
+      "focus": "variant",
       "grammar": [
         "be.present.affirmative",
         "demonstratives"
@@ -4771,7 +4774,11 @@
       "difficulty": 1,
       "tags": [
         "ɔː"
-      ]
+      ],
+      "variantOf": {
+        "uk": "wardrobe",
+        "us": "closet"
+      }
     },
     {
       "id": "en1.u1.lx.018",
@@ -4883,6 +4890,32 @@
       "modelVariants": [
         "This is my office. There is a modern computer on the desk and there are two nice pictures on the wall. There are interesting books on the shelves. However, there isn't a printer, and there aren't plants in this room.",
         "This is my bedroom. There is a small table and there is a big wardrobe. There are yellow curtains and there is a dark clock. There isn't a TV, and there aren't chairs in this room."
+      ],
+      "steps": [
+        {
+          "prompt": "What room is this?",
+          "segment": "This is my study room."
+        },
+        {
+          "prompt": "What big furniture is there?",
+          "segment": "There is a big desk and there is a comfortable chair."
+        },
+        {
+          "prompt": "What is on the desk?",
+          "segment": "On the desk, there is a modern computer and a small keyboard, and next to it there is a cheap calculator."
+        },
+        {
+          "prompt": "What is on the wall?",
+          "segment": "On the wall, there are two nice pictures and there is a big clock."
+        },
+        {
+          "prompt": "What is on the shelves and in the drawers?",
+          "segment": "There are interesting books on the shelves, and there are many notebooks in the drawers."
+        },
+        {
+          "prompt": "What is NOT in the room?",
+          "segment": "However, there isn't a new printer, and there aren't cats in this room."
+        }
       ]
     },
     {
@@ -4941,6 +4974,28 @@
       "modelVariants": [
         "Hi! I'm Bruce. I am thirty-five years old. I am from Argentina, so I am Argentinean. My favorite objects are my new phone, my blue toothbrush, and my optical mouse.",
         "Hello. My name is Anna. I am twenty-four years old. I am from Germany, so I am German. These are my favorite things: my pink pencil, my charger, and my black sunglasses."
+      ],
+      "steps": [
+        {
+          "prompt": "What is your name?",
+          "segment": "Hello! My name is Karen."
+        },
+        {
+          "prompt": "How old are you?",
+          "segment": "I am twenty-seven years old."
+        },
+        {
+          "prompt": "Where are you from, and what is your nationality?",
+          "segment": "I am from Germany, so I am German."
+        },
+        {
+          "prompt": "Where do you live?",
+          "segment": "I live in a big apartment."
+        },
+        {
+          "prompt": "What are your favorite objects?",
+          "segment": "In my apartment, my favorite objects are my modern computer, my comfortable chair, and my yellow notebook. I also like my black sunglasses."
+        }
       ]
     },
     {
@@ -4997,6 +5052,307 @@
         "city"
       ],
       "difficulty": 4
+    },
+    {
+      "id": "en1.u1.p.068",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "be.present.negative",
+        "be.contractions"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I'm not a student, I'm a teacher.",
+      "gloss": "No soy estudiante, soy profesor.",
+      "speaker": "narrator",
+      "ipa": "aɪm nˌɑːɾə stˈuːdənt aɪm ɐ tˈiːtʃɚ"
+    },
+    {
+      "id": "en1.u1.p.069",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "be.present.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "origin_nationality"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "She isn't from Italy.",
+      "gloss": "Ella no es de Italia.",
+      "speaker": "narrator",
+      "ipa": "ʃiː ˌɪzənt fɹʌm ˈɪɾəli"
+    },
+    {
+      "id": "en1.u1.p.070",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "be.present.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "workplace"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "They aren't in the office today.",
+      "gloss": "Hoy no estan en la oficina.",
+      "speaker": "narrator",
+      "ipa": "ðeɪ ˌɑːɹnt ɪnðɪ ˈɑːfɪs tədˈeɪ"
+    },
+    {
+      "id": "en1.u1.p.071",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "be.present.negative",
+        "demonstratives",
+        "possessives.adjectives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "This isn't my pen, it's yours.",
+      "gloss": "Este no es mi lapicero, es el tuyo.",
+      "speaker": "narrator",
+      "ipa": "ðɪs ˌɪzənt maɪ pˈɛn ɪts jˈoːɹz"
+    },
+    {
+      "id": "en1.u1.qa.013",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro."
+      },
+      "grammar": [
+        "be.present.interrogative",
+        "be.present.short-answer",
+        "be.present.negative"
+      ],
+      "fn": [
+        "ask.occupation"
+      ],
+      "topic": [
+        "occupation"
+      ],
+      "difficulty": 2,
+      "kind": "qa",
+      "prompt": "Is she a teacher?",
+      "promptVariants": [
+        "Is he a manager?",
+        "Are they students?"
+      ],
+      "replies": [
+        "No, she isn't.",
+        "No, she isn't a teacher.",
+        "No, she's a doctor."
+      ],
+      "speaker": "mary",
+      "replySpeaker": "eric"
+    },
+    {
+      "id": "en1.u1.lx.019",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "nationalities"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "origin_nationality"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "Dutch",
+      "pos": "adjective",
+      "gloss": "holandes/a (nacionalidad de Holanda)",
+      "examplePhraseId": "en1.u1.p.020",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u1.p.072",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Refuerzo nuestro (analisis de balance)."
+      },
+      "grammar": [
+        "spelling.alphabet",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.spelling"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "How do you spell 'Wednesday'?",
+      "gloss": "Como se deletrea 'Wednesday'?",
+      "speaker": "narrator",
+      "ipa": "hˌaʊ dˈuː juː spˈɛl wˈɛnzdeɪ"
+    },
+    {
+      "id": "en1.u1.lx.020",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario nuestro (puerta de percepcion)."
+      },
+      "grammar": [
+        "spelling.alphabet"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "spell",
+      "pos": "verb",
+      "gloss": "deletrear",
+      "examplePhraseId": "en1.u1.p.030",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u1.ct.006",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par minimo nuestro para entrenar el sonido."
+      },
+      "grammar": [
+        "articles.definite"
+      ],
+      "fn": [],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "contrast",
+      "pair": [
+        "chair",
+        "share"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "The ___ is comfortable.",
+          "correct": 0
+        },
+        {
+          "text": "They ___ an office.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en1.u1.ct.007",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par minimo nuestro para entrenar el sonido."
+      },
+      "grammar": [
+        "possessives.adjectives"
+      ],
+      "fn": [],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 2,
+      "kind": "contrast",
+      "pair": [
+        "name",
+        "game"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "What's your ___?",
+          "correct": 0
+        },
+        {
+          "text": "Chess is a ___.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en1.u1.lx.021",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Vocabulario funcional (saludo)."
+      },
+      "grammar": [
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "greet"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "afternoon",
+      "pos": "noun",
+      "gloss": "tarde (Good afternoon = buenas tardes)",
+      "examplePhraseId": "en1.u1.p.013",
+      "focus": "translation"
     }
   ]
 }
