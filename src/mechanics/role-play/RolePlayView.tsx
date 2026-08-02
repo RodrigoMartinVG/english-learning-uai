@@ -16,6 +16,7 @@ export function RolePlayView({ round, onDone }: MechanicViewProps<RolePlayRound>
   const [improv, setImprov] = useState(false);
   const [didImprov, setDidImprov] = useState(false);
   const log = useRef<HTMLDivElement>(null);
+  const mineRef = useRef<HTMLDivElement>(null);
   // Vocabulario del diálogo, para el verde cuando improvisás.
   const expected = useMemo(() => contentWords(round.neighbourhood.join(' ')), [round]);
 
@@ -50,9 +51,12 @@ export function RolePlayView({ round, onDone }: MechanicViewProps<RolePlayRound>
     };
   }, [turn, say, i]);
 
+  // Traer a la vista lo que importa de cada turno: el micrófono cuando te toca,
+  // o el final del log cuando habla el otro. La página scrollea, no un panel interno.
   useEffect(() => {
-    log.current?.scrollTo({ top: log.current.scrollHeight, behavior: 'smooth' });
-  }, [i]);
+    const el = turn?.mine ? mineRef.current : log.current;
+    el?.scrollIntoView({ behavior: 'smooth', block: turn?.mine ? 'center' : 'end' });
+  }, [i, turn?.mine]);
 
   useEffect(() => () => audio.cancel(), [audio]);
 
@@ -95,7 +99,7 @@ export function RolePlayView({ round, onDone }: MechanicViewProps<RolePlayRound>
       </div>
 
       {turn && turn.mine && (
-        <div className="rp__mine">
+        <div className="rp__mine" ref={mineRef}>
           {improv ? (
             <>
               {/* Improvisás: respondés con tus palabras. La línea del guion queda como

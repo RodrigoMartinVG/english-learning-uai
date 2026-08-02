@@ -12,6 +12,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useAudio } from '../../audio/AudioProvider.tsx';
 import { SpeakPanel } from '../../ui/SpeakPanel.tsx';
+import type { Recording } from '../../audio/Recorder.ts';
 import { LiveDictation, Highlighted, type DictationResult } from '../../ui/LiveDictation.tsx';
 import { stepSegmentKey, stepQuestionKey, modelVarSentenceKey } from '../../../content/schema.ts';
 import { splitSentences } from '../../../content/sentences.ts';
@@ -48,7 +49,27 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
   const [mine, setMine] = useState<DictationResult[]>([]); // crear: tus respuestas
 
   const recs = useRef<DictationResult[]>([]);
-  useEffect(() => () => recs.current.forEach((r) => r.recording?.revoke()), []);
+  // Copiar/Reconstruir(examen): las grabaciones tuyas de cada frase, para poder
+  // escuchar TU versión (no la del modelo) en el resumen.
+  const clipRecs = useRef<Recording[]>([]);
+  const [clipCount, setClipCount] = useState(0);
+  const addClip = (rec?: Recording | null) => {
+    if (!rec) return;
+    clipRecs.current.push(rec);
+    setClipCount((c) => c + 1);
+  };
+  const clearClips = () => {
+    clipRecs.current.forEach((r) => r.revoke());
+    clipRecs.current = [];
+    setClipCount(0);
+  };
+  useEffect(
+    () => () => {
+      recs.current.forEach((r) => r.recording?.revoke());
+      clipRecs.current.forEach((r) => r.revoke());
+    },
+    []
+  );
 
   const versionCount = 1 + variants.length;
   const versionLabel = (v: number) => (v === 0 ? 'Versión A' : `Versión ${String.fromCharCode(65 + v)}`);
@@ -105,6 +126,7 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
     setIdx(0);
     setBuilt([]);
     setMine([]);
+    clearClips();
     setRevealed(false);
     setPhase('brief');
   };
@@ -114,9 +136,10 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
     else setPhase('report');
   };
 
-  // copiar / reconstruir: guardar el fragmento del modelo y avanzar
-  const takeChunk = () => {
+  // copiar / reconstruir: guardar el fragmento del modelo (y tu grabación) y avanzar
+  const takeChunk = (rec?: Recording | null) => {
     if (!chunk) return;
+    addClip(rec);
     setBuilt([...built, chunk.text]);
     advance();
   };
@@ -142,6 +165,12 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
     const urls = mine.map((m) => m.recording?.url).filter((u): u is string => Boolean(u));
     for (const url of urls) {
       if ((await audio.playClip(url)) === 'interrupted') break;
+    }
+  };
+  // Copiar/Reconstruir(examen): tu versión hablada, frase por frase, en orden.
+  const playMyClips = async () => {
+    for (const r of clipRecs.current) {
+      if ((await audio.playClip(r.url)) === 'interrupted') break;
     }
   };
 
@@ -264,7 +293,7 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
               neighbourhood={chunks.map((c) => c.text)}
               lang="en-US"
               onPlayReference={playChunk}
-              onDone={takeChunk}
+              onDone={(_, rec) => takeChunk(rec)}
             />
           </>
         ) : (
@@ -290,7 +319,10 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
                   neighbourhood={chunks.map((c) => c.text)}
                   lang="en-US"
                   onPlayReference={playChunk}
-                  onDone={() => setRevealed(true)}
+                  onDone={(_, rec) => {
+                    addClip(rec);
+                    setRevealed(true);
+                  }}
                 />
               ) : (
                 <button className="btn btn--primary btn--wide" onClick={reveal}>
@@ -305,7 +337,7 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
                   </button>
                   <p>{chunk.text}</p>
                 </div>
-                <button className="btn btn--primary btn--wide" onClick={takeChunk} autoFocus>
+                <button className="btn btn--primary btn--wide" onClick={() => takeChunk()} autoFocus>
                   {idx + 1 < chunks.length ? 'Siguiente parte →' : 'Ver el guion completo →'}
                 </button>
               </div>
@@ -403,12 +435,19 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
       <section className="build__block">
         <div className="build__block-head">
           <h3>{flow === 'copy' ? 'Lo que copiaste' : 'Lo que reconstruiste'} ({versionLabel(version)})</h3>
-          <button
-            className="btn"
-            onClick={() => void audio.speak({ key: versionWholeKey(version), text: versionText(version), speakerId: target.speaker })}
-          >
-            🔊 Escuchar
-          </button>
+          {clipCount > 0 ? (
+            // Tu versión hablada (lo que grabaste), no el modelo.
+            <button className="btn" onClick={playMyClips}>
+              🔊 Escucharte
+            </button>
+          ) : (
+            <button
+              className="btn"
+              onClick={() => void audio.speak({ key: versionWholeKey(version), text: versionText(version), speakerId: target.speaker })}
+            >
+              🔊 Escuchar
+            </button>
+          )}
         </div>
         <p className="build__script">{yours}</p>
       </section>

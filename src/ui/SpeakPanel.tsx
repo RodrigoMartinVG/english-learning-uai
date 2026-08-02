@@ -29,7 +29,13 @@ export interface SpeakPanelProps {
   lang: string;
   /** Reproduce la referencia, para el A/B. */
   onPlayReference: () => void;
-  onDone: (correct: boolean) => void;
+  /**
+   * Se avanza con el resultado. El 2º argumento entrega la GRABACIÓN del alumno para
+   * que quien la use pueda reproducirla después (p. ej. "escucharte" en Armá el
+   * guion). Al entregarla, SpeakPanel deja de ser su dueño: no la revoca. Quien la
+   * recibe se hace cargo de revocarla.
+   */
+  onDone: (correct: boolean, recording?: Recording | null) => void;
 }
 
 export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDone }: SpeakPanelProps) {
@@ -45,13 +51,18 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
   // rara no quedó bien detectada pero el alumno la dijo bien, puede darla por
   // buena y que cuente como correcta. Es honesto con lo que la API sí puede hacer.
   const [accepted, setAccepted] = useState(false);
+  // El alumno canceló la toma: la promesa de listen() igual resuelve, pero no hay
+  // que calificar nada — se vuelve al micro para reintentar.
+  const canceled = useRef(false);
+  // La grabación se entregó al padre (onDone): no revocarla al desmontar.
+  const handedOff = useRef(false);
 
   useEffect(() => recognizer.subscribe(setState), [recognizer]);
   useEffect(
     () => () => {
       recognizer.abort();
       recorder.cancel();
-      mine?.revoke();
+      if (!handedOff.current) mine?.revoke();
     },
     [recognizer, recorder, mine]
   );
@@ -62,6 +73,7 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
     setVerdict(null);
     setInterim('');
     setAccepted(false);
+    canceled.current = false;
     mine?.revoke();
     setMine(null);
 
@@ -87,6 +99,12 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
         silenceMs: 3000,
         onInterim: setInterim,
       });
+      // Cancelado a mano: no calificar, volver al micro para reintentar.
+      if (canceled.current) {
+        recorder.cancel();
+        setInterim('');
+        return;
+      }
       const rec = await recorder.stop();
       setMine(rec);
       setInterim('');
@@ -102,6 +120,18 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
       setInterim('');
     }
   }, [lang, neighbourhood, targets, recognizer, recorder, mine]);
+
+  // Terminar a mano: cierra la toma y califica lo dicho hasta ahí (no espera el
+  // auto-corte por silencio, que a veces tarda).
+  const finishNow = () => recognizer.stop();
+  // Cancelar: descarta la toma y vuelve al micro, sin calificar.
+  const cancelNow = () => {
+    canceled.current = true;
+    recognizer.abort();
+    recorder.cancel();
+    setInterim('');
+    setVerdict(null);
+  };
 
   if (!supported) {
     return (
@@ -152,6 +182,18 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
           <p className="speak__interim" aria-live="polite">
             {interim || (state === 'listening' ? '…' : 'Tocá el micrófono y decilo en voz alta')}
           </p>
+          {busy && (
+            // Cortar a mano: terminar ya (y calificar) o cancelar (descartar y
+            // reintentar), sin esperar el auto-corte por silencio.
+            <div className="ab">
+              <button className="btn" onClick={finishNow}>
+                ⏹ Terminar
+              </button>
+              <button className="btn" onClick={cancelNow}>
+                ✕ Cancelar
+              </button>
+            </div>
+          )}
         </>
       )}
 
@@ -208,7 +250,10 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
             </button>
             <button
               className="btn btn--primary"
-              onClick={() => onDone(verdict.match || accepted)}
+              onClick={() => {
+                handedOff.current = true; // el padre se hace cargo de la grabación
+                onDone(verdict.match || accepted, mine);
+              }}
               autoFocus
             >
               Siguiente →

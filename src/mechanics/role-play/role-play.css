@@ -26,12 +26,12 @@
   color: var(--accent);
 }
 
+/* El log crece con la página: sin scroll interno propio, que antes se robaba la
+   rueda y dejaba el micrófono abajo del fold sin poder bajar. */
 .rp__log {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  max-height: 260px;
-  overflow-y: auto;
   padding: 4px;
 }
 .rp__turn {
