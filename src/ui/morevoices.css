@@ -1,0 +1,28 @@
+.morevoices {
+  margin-top: 12px;
+  width: 100%;
+}
+.morevoices > summary {
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--accent);
+  list-style: none;
+  padding: 6px 0;
+}
+.morevoices > summary::-webkit-details-marker {
+  display: none;
+}
+.morevoices > summary::before {
+  content: '＋  ';
+  font-family: var(--mono);
+}
+.morevoices[open] > summary::before {
+  content: '－  ';
+}
+.morevoices > summary span {
+  color: var(--text-faint);
+  font-size: 11px;
+}
+.morevoices__body {
+  padding-top: 4px;
+}

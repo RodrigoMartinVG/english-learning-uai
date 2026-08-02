@@ -292,10 +292,34 @@ function Home({
   const courseUnits = units.filter((u) => u.course === course);
   const courseAspects = courseUnits.flatMap((u) => u.aspects);
 
+  // Qué unidades entran en el repaso global (p. ej. excluir la de textos). Se
+  // guarda por curso; por defecto, todas.
+  const reviewKey = `oda.reviewUnits.${course}`;
+  const [included, setIncluded] = useState<Set<number>>(() => {
+    try {
+      const raw = localStorage.getItem(reviewKey);
+      if (raw) return new Set(JSON.parse(raw) as number[]);
+    } catch {
+      /* localStorage no disponible */
+    }
+    return new Set(courseUnits.map((u) => u.unit));
+  });
+  const toggleUnit = (unit: number) =>
+    setIncluded((prev) => {
+      const next = new Set(prev);
+      next.has(unit) ? next.delete(unit) : next.add(unit);
+      try {
+        localStorage.setItem(reviewKey, JSON.stringify([...next]));
+      } catch {
+        /* ignore */
+      }
+      return next;
+    });
+
   const today = () =>
     onStart(
       buildSession(
-        { scope: { kind: 'due', course }, mode: 'review', length: DEFAULT_LENGTH },
+        { scope: { kind: 'due', course, units: [...included] }, mode: 'review', length: DEFAULT_LENGTH },
         atoms,
         courseAspects,
         'Repaso de hoy',
@@ -351,6 +375,25 @@ function Home({
             <p className="today__stats">
               {stats.learned} sabidas · {stats.seen} vistas · {stats.due} vencidas
             </p>
+            {courseUnits.length > 1 && (
+              <details className="review-filter">
+                <summary>Qué unidades incluir · {included.size}/{courseUnits.length}</summary>
+                <div className="review-filter__body">
+                  {courseUnits.map((u) => (
+                    <label key={u.unit} className="review-filter__item">
+                      <input
+                        type="checkbox"
+                        checked={included.has(u.unit)}
+                        onChange={() => toggleUnit(u.unit)}
+                      />
+                      <span>
+                        {u.title.startsWith('Examen') ? 'Examen' : `Unidad ${u.unit}`} · {u.title}
+                      </span>
+                    </label>
+                  ))}
+                </div>
+              </details>
+            )}
           </>
         )}
       </section>

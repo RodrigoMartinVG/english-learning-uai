@@ -35,7 +35,7 @@ export function MinimalPairsView({ round, onDone }: MechanicViewProps<MinimalPai
   }, [round, play, audio]);
 
   return (
-    <div className="osmosis">
+    <div className="osmosis exlr">
       <div className="osmosis__stage">
         <Waveform active={state === 'speaking'} />
         <div className="osmosis__controls">
@@ -54,6 +54,7 @@ export function MinimalPairsView({ round, onDone }: MechanicViewProps<MinimalPai
         </p>
       </div>
 
+      <div className="exlr__panel">
       <p className="mp__stem">
         {round.example.text.split('___').map((part, i) => (
           <span key={i}>
@@ -104,6 +105,7 @@ export function MinimalPairsView({ round, onDone }: MechanicViewProps<MinimalPai
           </button>
         </div>
       )}
+      </div>
     </div>
   );
 }

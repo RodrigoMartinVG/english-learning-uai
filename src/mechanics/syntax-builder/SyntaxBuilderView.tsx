@@ -11,6 +11,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useAudio, useAudioState } from '../../audio/AudioProvider.tsx';
 import { Waveform } from '../../ui/Waveform.tsx';
+import { MoreVoices } from '../../ui/MoreVoices.tsx';
 import { normalize } from '../../engine/grading/speech.ts';
 import type { MechanicViewProps } from '../types.ts';
 import type { SyntaxRound } from './mechanic.ts';
@@ -83,7 +84,7 @@ export function SyntaxBuilderView({ round, onDone }: MechanicViewProps<SyntaxRou
   const correct = round.targets[0]!;
 
   return (
-    <div className="sb">
+    <div className="sb exlr">
       <div className="osmosis__stage">
         <Waveform active={state === 'speaking'} />
         <div className="osmosis__controls">
@@ -101,6 +102,7 @@ export function SyntaxBuilderView({ round, onDone }: MechanicViewProps<SyntaxRou
         </p>
       </div>
 
+      <div className="exlr__panel">
       {/* La respuesta. Se puede soltar acá o tocar fichas del banco. */}
       <div
         className={
@@ -172,7 +174,17 @@ export function SyntaxBuilderView({ round, onDone }: MechanicViewProps<SyntaxRou
           {round.targets.length > 1 && checked && (
             <p className="speak__note">También vale: {round.targets.slice(1).join(' · ')}</p>
           )}
+          <MoreVoices audioKey={round.audioKey} text={round.targets[0]!} speakerId={round.speakerId} />
           <div className="ab">
+            <button
+              className="btn"
+              onClick={() => {
+                setAnswer([]);
+                setChecked(null);
+              }}
+            >
+              ↻ Reintentar
+            </button>
             <button className="btn" onClick={() => play()}>
               🔊 Escuchar
             </button>
@@ -182,6 +194,7 @@ export function SyntaxBuilderView({ round, onDone }: MechanicViewProps<SyntaxRou
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 }

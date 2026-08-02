@@ -20,7 +20,11 @@
 }
 .shell__stop:hover { background: color-mix(in srgb, var(--error) 12%, transparent); }
 
-.shell__main { flex: 1; width: 100%; max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
+.shell__main { flex: 1; width: 100%; max-width: 720px; margin: 0 auto; padding: 20px 24px 32px; }
+/* En pantallas grandes, aprovechar algo más de ancho (sin romper la legibilidad). */
+@media (min-width: 1080px) {
+  .shell__main { max-width: 860px; }
+}
 
 .home { display: flex; flex-direction: column; gap: 40px; }
 .home__eyebrow {
@@ -115,6 +119,15 @@
 .unit__progress { margin-top: 16px; }
 .unit__progress-label { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); }
 .today__stats { font-size: 12px; color: var(--text-faint); font-family: var(--mono); margin-top: 8px; }
+
+/* Filtro de unidades del repaso global. */
+.review-filter { margin-top: 10px; }
+.review-filter > summary { cursor: pointer; font-size: 12px; color: var(--accent); list-style: none; padding: 4px 0; }
+.review-filter > summary::-webkit-details-marker { display: none; }
+.review-filter > summary::before { content: '＋  '; font-family: var(--mono); }
+.review-filter[open] > summary::before { content: '－  '; }
+.review-filter__body { display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
+.review-filter__item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-dim); }
 .home__reset { font-size: 12px; color: var(--text-faint); text-decoration: underline; align-self: flex-start; }
 .home__reset:hover { color: var(--error); }
 

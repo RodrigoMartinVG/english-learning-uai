@@ -25,7 +25,7 @@ export function ShadowingView({ round, onDone }: MechanicViewProps<ShadowingRoun
   }, [play, audio]);
 
   return (
-    <div className="osmosis">
+    <div className="osmosis exlr">
       <div className="osmosis__stage">
         <Waveform active={state === 'speaking'} />
         {/* Acá el texto SÍ se muestra: shadowing es imitar, no adivinar. */}
@@ -50,13 +50,15 @@ export function ShadowingView({ round, onDone }: MechanicViewProps<ShadowingRoun
         </p>
       </div>
 
-      <SpeakPanel
-        targets={[target.text]}
-        neighbourhood={round.neighbourhood}
-        lang={speaker?.accent ?? 'en-US'}
-        onPlayReference={() => play()}
-        onDone={onDone}
-      />
+      <div className="exlr__panel">
+        <SpeakPanel
+          targets={[target.text]}
+          neighbourhood={round.neighbourhood}
+          lang={speaker?.accent ?? 'en-US'}
+          onPlayReference={() => play()}
+          onDone={onDone}
+        />
+      </div>
     </div>
   );
 }

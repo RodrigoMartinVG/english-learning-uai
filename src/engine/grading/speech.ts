@@ -44,6 +44,12 @@ export function normalize(text: string): string {
     .replace(/\s+/g, ' ')
     .trim();
   if (!s) return '';
+  // Alias del ASR: el reconocedor abrevia o parte palabras frecuentes de este nivel.
+  // Se aplica a AMBOS lados, así "street"/"St" o "o'clock"/"o clock" matchean.
+  s = s
+    .replace(/\bo clock\b/g, 'oclock') // "o clock" (partido) = "o'clock" → "oclock"
+    .replace(/\bst\b/g, 'street') // el ASR devuelve "St" por "street"
+    .replace(/\bave\b/g, 'avenue');
   return canonicalNumbers(s.split(' ')).join(' ');
 }
 

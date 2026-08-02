@@ -2,6 +2,7 @@ import { useCallback, useEffect } from 'react';
 import { useAudio, useAudioState } from '../../audio/AudioProvider.tsx';
 import { Waveform } from '../../ui/Waveform.tsx';
 import { SpeakPanel } from '../../ui/SpeakPanel.tsx';
+import { MoreVoices } from '../../ui/MoreVoices.tsx';
 import { speakerById } from '../../data/content.ts';
 import type { MechanicViewProps } from '../types.ts';
 import type { EchoSayRound } from './mechanic.ts';
@@ -24,7 +25,7 @@ export function EchoSayView({ round, onDone }: MechanicViewProps<EchoSayRound>) 
   }, [play, audio]);
 
   return (
-    <div className="osmosis">
+    <div className="osmosis exlr">
       <div className="osmosis__stage">
         <Waveform active={state === 'speaking'} />
         {/* Sin texto a la vista: la gracia es recuperarlo de oído. Aparece al terminar. */}
@@ -39,15 +40,20 @@ export function EchoSayView({ round, onDone }: MechanicViewProps<EchoSayRound>) 
             🐢 Lento
           </button>
         </div>
+        {/* Las otras voces viven con el audio de la consigna, no sueltas en el
+            panel del micrófono. El spoiler mantiene oculto el refuerzo hasta pedirlo. */}
+        <MoreVoices audioKey={round.audioKey} text={round.text} speakerId={round.speakerId} />
       </div>
 
-      <SpeakPanel
-        targets={[round.text]}
-        neighbourhood={round.neighbourhood}
-        lang={speaker?.accent ?? 'en-US'}
-        onPlayReference={() => play()}
-        onDone={onDone}
-      />
+      <div className="exlr__panel">
+        <SpeakPanel
+          targets={[round.text]}
+          neighbourhood={round.neighbourhood}
+          lang={speaker?.accent ?? 'en-US'}
+          onPlayReference={() => play()}
+          onDone={onDone}
+        />
+      </div>
     </div>
   );
 }

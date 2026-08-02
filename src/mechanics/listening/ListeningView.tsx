@@ -76,7 +76,7 @@ export function ListeningView({ round, onDone }: MechanicViewProps<ListeningRoun
   }
 
   return (
-    <div className="osmosis">
+    <div className="osmosis exlr">
       <div className="osmosis__stage">
         <p className="mp__stem">{current.q}</p>
         <div className="osmosis__controls">
@@ -89,6 +89,7 @@ export function ListeningView({ round, onDone }: MechanicViewProps<ListeningRoun
         </p>
       </div>
 
+      <div className="exlr__panel">
       <ul className="osmosis__options">
         {current.options.map((opt, i) => (
           <li key={opt}>
@@ -124,6 +125,7 @@ export function ListeningView({ round, onDone }: MechanicViewProps<ListeningRoun
           {q + 1 < round.questions.length ? 'Siguiente pregunta →' : 'Ver resultado →'}
         </button>
       )}
+      </div>
     </div>
   );
 }

@@ -53,7 +53,7 @@ export function OsmosisView({ round, onDone }: MechanicViewProps<OsmosisRound>) 
   };
 
   return (
-    <div className="osmosis">
+    <div className="osmosis exlr">
       <div className="osmosis__stage">
         <Waveform active={state === 'speaking'} />
         <div className="osmosis__controls">
@@ -74,6 +74,7 @@ export function OsmosisView({ round, onDone }: MechanicViewProps<OsmosisRound>) 
         </p>
       </div>
 
+      <div className="exlr__panel">
       <ul className="osmosis__options">
         {round.options.map((opt, i) => (
           <li key={opt.id}>
@@ -99,6 +100,7 @@ export function OsmosisView({ round, onDone }: MechanicViewProps<OsmosisRound>) 
       </div>
 
       {answered && <Expansion phrase={round.target} onNext={() => onDone(correct)} correct={correct} />}
+      </div>
     </div>
   );
 }
@@ -143,10 +145,15 @@ function Expansion({
       {phrase.replies?.length ? (
         <section className="expansion__group">
           <h3>Respuestas naturales</h3>
-          {phrase.replies.map((r) => (
-            // Sin mp3 propio: estas replies viven en un átomo qa, que sabe con qué
-            // voz se responden. Acá cae al fallback, y está bien.
-            <button key={r} className="chip" onClick={() => say(r, `${phrase.id}.reply`, phrase.speaker)}>
+          {phrase.replies.map((r, i) => (
+            // Cada reply tiene su mp3 propio (`build-audio` las sintetiza bajo
+            // `.reply.N`). Antes usaba `.reply` sin índice → no matcheaba y caía al
+            // fallback del navegador aunque el audio existía.
+            <button
+              key={r}
+              className="chip"
+              onClick={() => say(r, `${phrase.id}.reply.${i}`, phrase.speaker)}
+            >
               <span aria-hidden="true">🔊</span> {r}
             </button>
           ))}

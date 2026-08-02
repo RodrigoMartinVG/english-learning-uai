@@ -181,3 +181,30 @@
   color: var(--text-dim);
   margin-bottom: 0.25rem;
 }
+
+/* Selector de versión (A/B/C) y bloque de versiones modelo en el reporte. */
+.build__versions {
+  margin: 0.25rem 0 1rem;
+}
+.build__versions-label {
+  display: block;
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-bottom: 0.4rem;
+}
+.build__version {
+  border-top: 1px solid var(--border);
+  padding-top: 0.6rem;
+  margin-top: 0.6rem;
+}
+.build__version:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0.4rem;
+}
+.build__version-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+}

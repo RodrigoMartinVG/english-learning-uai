@@ -1,17 +1,17 @@
 .osmosis {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 14px;
 }
 
 .osmosis__stage {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 .osmosis__controls {
@@ -60,13 +60,13 @@
 .osmosis__options {
   list-style: none;
   display: grid;
-  gap: 12px;
+  gap: 8px;
 }
 
 .option {
   width: 100%;
-  min-height: 56px;
-  padding: 14px 18px;
+  min-height: 48px;
+  padding: 11px 16px;
   text-align: left;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -99,10 +99,10 @@
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   animation: rise var(--dur) var(--ease);
 }
 @keyframes rise {
@@ -174,3 +174,26 @@
 .mp__options { grid-template-columns: 1fr 1fr; }
 .option--center { justify-content: center; }
 .mp__word { font-family: var(--mono); font-size: 18px; }
+
+/* Layout de dos columnas (estímulo | respuesta), OPT-IN por clase `.exlr` — así
+   cada modo se suma cuando su markup está preparado (dos hijos: stage + panel), sin
+   afectar a los demás. En ancho: lado a lado, con el estímulo fijo. En angosto: apilado. */
+.exlr__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+@media (min-width: 900px) {
+  /* `.exlr.exlr` (especificidad 0,2,0) para ganarle a `.cz`/`.sb`/`.osmosis`
+     (0,1,0) sin depender del orden de carga de los CSS. */
+  .exlr.exlr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+  .exlr > .osmosis__stage {
+    position: sticky;
+    top: 76px;
+  }
+}

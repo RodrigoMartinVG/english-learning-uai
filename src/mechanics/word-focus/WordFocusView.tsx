@@ -28,7 +28,7 @@ export function WordFocusView({ round, onDone }: MechanicViewProps<WordFocusRoun
   }, [play, audio]);
 
   return (
-    <div className="osmosis">
+    <div className="osmosis exlr">
       <div className="osmosis__stage">
         <Waveform active={state === 'speaking'} />
         <div className="osmosis__controls">
@@ -46,6 +46,7 @@ export function WordFocusView({ round, onDone }: MechanicViewProps<WordFocusRoun
         </p>
       </div>
 
+      <div className="exlr__panel">
       <ul className="osmosis__options">
         {round.options.map((opt, i) => (
           <li key={opt}>
@@ -108,6 +109,7 @@ export function WordFocusView({ round, onDone }: MechanicViewProps<WordFocusRoun
           </button>
         </div>
       )}
+      </div>
     </div>
   );
 }

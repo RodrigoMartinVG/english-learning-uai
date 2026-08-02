@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useAudio, useAudioState } from '../../audio/AudioProvider.tsx';
 import { Waveform } from '../../ui/Waveform.tsx';
 import { gradeSpeech, type SpeechVerdict } from '../../engine/grading/speech.ts';
+import { MoreVoices } from '../../ui/MoreVoices.tsx';
 import type { MechanicViewProps } from '../types.ts';
 import type { EchoTypeRound } from './mechanic.ts';
 import '../../ui/speak.css';
@@ -34,7 +35,7 @@ export function EchoTypeView({ round, onDone }: MechanicViewProps<EchoTypeRound>
   };
 
   return (
-    <div className="cz">
+    <div className="cz exlr">
       <div className="osmosis__stage">
         <Waveform active={state === 'speaking'} />
         <div className="osmosis__controls">
@@ -50,13 +51,25 @@ export function EchoTypeView({ round, onDone }: MechanicViewProps<EchoTypeRound>
         </p>
       </div>
 
+      <div className="exlr__panel">
       <input
         ref={input}
         className="dict__input"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        onKeyDown={(e) => e.key === 'Enter' && text.trim() && verdict === null && check()}
-        disabled={verdict !== null}
+        // Enter comprueba; con el veredicto ya visible, Enter avanza. `e.repeat`
+        // evita que un Enter sostenido haga ambas cosas de un saque. `readOnly` (no
+        // `disabled`) mantiene el foco acá para que Enter siga funcionando después.
+        onKeyDown={(e) => {
+          if (e.key !== 'Enter' || e.repeat) return;
+          e.preventDefault();
+          if (verdict === null) {
+            if (text.trim()) check();
+          } else {
+            onDone(verdict.match);
+          }
+        }}
+        readOnly={verdict !== null}
         placeholder="Escribí lo que oíste…"
         aria-label="Tu respuesta"
         autoComplete="off"
@@ -78,16 +91,28 @@ export function EchoTypeView({ round, onDone }: MechanicViewProps<EchoTypeRound>
               </span>
             ))}
           </p>
+          <MoreVoices audioKey={round.audioKey} text={round.text} speakerId={round.speakerId} />
           <div className="ab">
+            <button
+              className="btn"
+              onClick={() => {
+                setVerdict(null);
+                setText('');
+                input.current?.focus();
+              }}
+            >
+              ↻ Reintentar
+            </button>
             <button className="btn" onClick={() => play()}>
               🔊 Escuchar
             </button>
-            <button className="btn btn--primary" onClick={() => onDone(verdict.match)} autoFocus>
+            <button className="btn btn--primary" onClick={() => onDone(verdict.match)}>
               Siguiente →
             </button>
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 }

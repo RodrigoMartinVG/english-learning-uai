@@ -1,66 +1,104 @@
 /**
- * ScriptBuilderView — armar el guion, de dos maneras (mismas preguntas guía):
+ * ScriptBuilderView — armar el guion, de tres maneras (elegís la versión A/B/C):
  *
- *  · Reconstruir → recuperás el modelo (revelar, o decir por voz). Andamiaje.
- *  · Crear el tuyo → producís el tuyo con transcripción en vivo (vocabulario del
- *    tema en verde) y te podés escuchar. Producción libre guiada. Ver
- *    PLAN-crea-tu-guion.md.
+ *  · Copiar el modelo (sombra) → oís cada frase y la repetís. Copia guiada, frase
+ *    por frase. Funciona para cualquier versión (A por sus `steps`; B/C partiendo
+ *    la variante en oraciones, con audio propio por frase).
+ *  · Reconstruir de memoria → recordás cada parte y después revelás. Con las
+ *    preguntas guía en la Versión A; en B/C, parte por parte.
+ *  · Crear el tuyo → tu versión con transcripción en vivo (paso a paso o de corrido).
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useAudio } from '../../audio/AudioProvider.tsx';
 import { SpeakPanel } from '../../ui/SpeakPanel.tsx';
 import { LiveDictation, Highlighted, type DictationResult } from '../../ui/LiveDictation.tsx';
-import { stepQuestionKey, stepSegmentKey } from '../../../content/schema.ts';
+import { stepSegmentKey, stepQuestionKey, modelVarSentenceKey } from '../../../content/schema.ts';
+import { splitSentences } from '../../../content/sentences.ts';
 import { expectedWords } from './mechanic.ts';
 import type { MechanicViewProps } from '../types.ts';
 import type { ScriptBuilderRound } from './mechanic.ts';
 import './script-builder.css';
 
-type Flow = 'reconstruct' | 'create' | 'dictate';
+type Flow = 'copy' | 'reconstruct' | 'create';
 type Phase = 'brief' | 'run' | 'report';
+
+interface Chunk {
+  text: string;
+  audioKey: string;
+  /** La pregunta guía (solo la Versión A la tiene). */
+  prompt?: string;
+}
 
 export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBuilderRound>) {
   const { target } = round;
   const steps = target.steps ?? [];
+  const variants = useMemo(() => target.modelVariants ?? [], [target]);
   const audio = useAudio();
   const expected = useMemo(() => expectedWords(target), [target]);
 
   const [phase, setPhase] = useState<Phase>('brief');
-  const [flow, setFlow] = useState<Flow>('reconstruct');
+  const [flow, setFlow] = useState<Flow>('copy');
+  const [version, setVersion] = useState(0); // 0 = A (modelAnswer); k = modelVariants[k-1]
   const [exam, setExam] = useState(false); // sub-modo de reconstruir
+  const [whole, setWhole] = useState(false); // sub-modo de crear: todo de corrido
   const [idx, setIdx] = useState(0);
-  const [revealed, setRevealed] = useState(false); // reconstruir
-  const [built, setBuilt] = useState<string[]>([]); // reconstruir: fragmentos modelo
+  const [revealed, setRevealed] = useState(false);
+  const [built, setBuilt] = useState<string[]>([]); // copiar/reconstruir: fragmentos del modelo
   const [mine, setMine] = useState<DictationResult[]>([]); // crear: tus respuestas
 
-  // Grabaciones a revocar al desmontar (solo viven durante la sesión).
   const recs = useRef<DictationResult[]>([]);
   useEffect(() => () => recs.current.forEach((r) => r.recording?.revoke()), []);
 
-  const step = steps[idx];
+  const versionCount = 1 + variants.length;
+  const versionLabel = (v: number) => (v === 0 ? 'Versión A' : `Versión ${String.fromCharCode(65 + v)}`);
+  const versionText = (v: number) => (v === 0 ? target.modelAnswer : variants[v - 1]!);
+  const versionWholeKey = (v: number) => (v === 0 ? `${target.id}.model` : `${target.id}.modelvar.${v - 1}`);
+
+  // Los "chunks" (frases) de la versión elegida, para copiar/reconstruir.
+  const chunks = useMemo<Chunk[]>(() => {
+    if (version === 0) {
+      return steps.map((s, i) => ({
+        text: s.segment,
+        audioKey: stepSegmentKey(target.id, i),
+        prompt: s.prompt,
+      }));
+    }
+    return splitSentences(variants[version - 1]!).map((sent, m) => ({
+      text: sent,
+      audioKey: modelVarSentenceKey(target.id, version - 1, m),
+    }));
+  }, [version, steps, variants, target.id]);
+
+  const chunk = chunks[idx];
+  const step = steps[idx]; // crear se guía siempre por las preguntas de la A
+
+  const playChunk = useCallback(() => {
+    if (chunk) void audio.speak({ key: chunk.audioKey, text: chunk.text, speakerId: target.speaker });
+  }, [audio, chunk, target.speaker]);
 
   const askQuestion = useCallback(() => {
-    if (!step) return;
-    void audio.speak({ key: stepQuestionKey(target.id, idx), text: step.prompt, speakerId: 'narrator' });
-  }, [audio, target.id, idx, step]);
+    const s = steps[idx];
+    if (s) void audio.speak({ key: stepQuestionKey(target.id, idx), text: s.prompt, speakerId: 'narrator' });
+  }, [audio, steps, idx, target.id]);
 
+  // Al entrar a cada paso: en Copiar suena la frase; en Reconstruir/Crear, la pregunta.
   useEffect(() => {
     if (phase !== 'run') return;
     setRevealed(false);
-    askQuestion();
+    if (flow === 'copy') playChunk();
+    else if (flow === 'create' && !whole) askQuestion();
+    else if (flow === 'reconstruct' && chunk?.prompt) askQuestion();
     return () => audio.cancel();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, idx]);
-
-  const playSegment = () =>
-    step && void audio.speak({ key: stepSegmentKey(target.id, idx), text: step.segment, speakerId: target.speaker });
+  }, [phase, idx, flow]);
 
   const start = (f: Flow) => {
     setFlow(f);
     setIdx(0);
     setBuilt([]);
     setMine([]);
+    setRevealed(false);
     setPhase('run');
   };
   const reset = () => {
@@ -71,16 +109,20 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
     setPhase('brief');
   };
 
-  // reconstruir
+  const advance = () => {
+    if (idx + 1 < chunks.length) setIdx(idx + 1);
+    else setPhase('report');
+  };
+
+  // copiar / reconstruir: guardar el fragmento del modelo y avanzar
+  const takeChunk = () => {
+    if (!chunk) return;
+    setBuilt([...built, chunk.text]);
+    advance();
+  };
   const reveal = () => {
     setRevealed(true);
-    playSegment();
-  };
-  const nextReconstruct = () => {
-    if (!step) return;
-    setBuilt([...built, step.segment]);
-    if (idx + 1 < steps.length) setIdx(idx + 1);
-    else setPhase('report');
+    playChunk();
   };
 
   // crear
@@ -90,7 +132,6 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
     if (idx + 1 < steps.length) setIdx(idx + 1);
     else setPhase('report');
   };
-  // Dictado libre: una sola toma con todo.
   const onDictateWhole = (r: DictationResult) => {
     recs.current.push(r);
     setMine([r]);
@@ -99,8 +140,6 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
   const outline = target.scaffold ?? steps.map((s) => s.prompt);
   const playMine = async () => {
     const urls = mine.map((m) => m.recording?.url).filter((u): u is string => Boolean(u));
-    // Por el canal único del servicio: si lo cortan (Parar / navegar), playClip
-    // devuelve 'interrupted' y frenamos la secuencia.
     for (const url of urls) {
       if ((await audio.playClip(url)) === 'interrupted') break;
     }
@@ -113,52 +152,74 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
         <p className="build__eyebrow">Armá el guion</p>
         <h2>Tres maneras de armarlo</h2>
         <p className="build__note">
-          Las mismas preguntas guía, tres caminos: reconstruir el modelo, crear el tuyo, o dictarlo
-          entero.
+          Copiá el modelo frase por frase, reconstruilo de memoria, o creá el tuyo.
         </p>
 
+        {versionCount > 1 && (
+          <div className="build__versions">
+            <span className="build__versions-label">Qué versión practicar (Copiar / Reconstruir):</span>
+            <div className="aspect__chips">
+              {Array.from({ length: versionCount }, (_, v) => (
+                <button
+                  key={v}
+                  className={'chip' + (version === v ? ' chip--on' : '')}
+                  onClick={() => setVersion(v)}
+                >
+                  {versionLabel(v)}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="build__choice">
-          <button className="btn btn--primary btn--wide" onClick={() => start('reconstruct')}>
-            Reconstruir el modelo →
+          <button className="btn btn--primary btn--wide" onClick={() => start('copy')}>
+            🗣 Copiar el modelo (frase por frase) →
           </button>
-          <p className="build__choice-note">Recuperás el guion modelo pedazo a pedazo.</p>
+          <p className="build__choice-note">
+            Oís cada frase del modelo y la repetís. La copia guiada — ideal para empezar.
+          </p>
+        </div>
+
+        <div className="build__choice">
+          <button className="btn btn--wide" onClick={() => start('reconstruct')}>
+            🧠 Reconstruir de memoria →
+          </button>
+          <p className="build__choice-note">Recordás cada parte y después la revelás.</p>
           <label className="build__toggle">
             <input type="checkbox" checked={exam} onChange={(e) => setExam(e.target.checked)} />
             <span>
-              Modo examen: decir cada parte en voz alta. <em>Sin esto, solo revelás el modelo.</em>
+              Modo examen: decir cada parte en voz alta. <em>Sin esto, solo revelás.</em>
             </span>
           </label>
         </div>
 
         <div className="build__choice">
           <button className="btn btn--wide" onClick={() => start('create')}>
-            Crear tu propio guion →
+            ✍️ Crear el tuyo →
           </button>
           <p className="build__choice-note">
-            Paso a paso: respondés cada pregunta guía. Se transcribe <strong>en vivo</strong> (el
-            vocabulario del tema en verde) y podés escucharte.
+            Tu versión, guiada por las preguntas, con transcripción <strong>en vivo</strong> (el
+            vocabulario del tema en verde) y te podés escuchar.
           </p>
-        </div>
-
-        <div className="build__choice">
-          <button className="btn btn--wide" onClick={() => start('dictate')}>
-            Dictado libre →
-          </button>
-          <p className="build__choice-note">
-            Lo decís <strong>todo de corrido</strong>, con la guía a la vista. El mayor desafío: tu
-            exposición entera, transcripta en vivo.
-          </p>
+          <label className="build__toggle">
+            <input type="checkbox" checked={whole} onChange={(e) => setWhole(e.target.checked)} />
+            <span>
+              De corrido: decilo <strong>todo junto</strong>, con la guía a la vista.{' '}
+              <em>Sin esto, paso a paso.</em>
+            </span>
+          </label>
         </div>
       </div>
     );
   }
 
-  /* ─────────────────────────── run · dictado libre ─────────────────────── */
-  if (phase === 'run' && flow === 'dictate') {
+  /* ─────────────────────── run · crear · de corrido ────────────────────── */
+  if (phase === 'run' && flow === 'create' && whole) {
     return (
       <div className="build">
-        <p className="build__eyebrow">Dictado libre</p>
-        <h2>Decilo todo de corrido</h2>
+        <p className="build__eyebrow">Crear el tuyo · de corrido</p>
+        <h2>Decilo todo junto</h2>
         {outline.length > 0 && (
           <div className="build__outline">
             <p className="build__soFar-label">Guía para apoyarte</p>
@@ -174,8 +235,96 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
     );
   }
 
-  /* ─────────────────────────────── run ────────────────────────────────── */
-  if (phase === 'run' && step) {
+  /* ───────────────────── run · copiar / reconstruir ────────────────────── */
+  if (phase === 'run' && (flow === 'copy' || flow === 'reconstruct') && chunk) {
+    return (
+      <div className="build">
+        <div className="build__progress">
+          <span>
+            {versionCount > 1 ? `${versionLabel(version)} · ` : ''}Parte {idx + 1} de {chunks.length}
+          </span>
+          <div className="build__bar">
+            <span style={{ width: `${(idx / chunks.length) * 100}%` }} />
+          </div>
+        </div>
+
+        {flow === 'copy' ? (
+          // COPIAR: oís y ves la frase, y la repetís (sombra).
+          <>
+            <div className="build__seg">
+              <button className="build__play" onClick={playChunk} aria-label="Escuchar la frase">
+                🔊
+              </button>
+              <p>{chunk.text}</p>
+            </div>
+            <p className="build__hint">Escuchala y repetila igual — imitá el ritmo y la entonación.</p>
+            <SpeakPanel
+              key={idx}
+              targets={[chunk.text]}
+              neighbourhood={chunks.map((c) => c.text)}
+              lang="en-US"
+              onPlayReference={playChunk}
+              onDone={takeChunk}
+            />
+          </>
+        ) : (
+          // RECONSTRUIR: pregunta (A) o "parte N" (B/C), recordás y revelás.
+          <>
+            <div className="build__q">
+              {chunk.prompt ? (
+                <>
+                  <button className="build__play" onClick={askQuestion} aria-label="Repetir la pregunta">
+                    🔊
+                  </button>
+                  <p>{chunk.prompt}</p>
+                </>
+              ) : (
+                <p>Recordá y decí la parte {idx + 1} del guion.</p>
+              )}
+            </div>
+            {!revealed ? (
+              exam ? (
+                <SpeakPanel
+                  key={idx}
+                  targets={[chunk.text]}
+                  neighbourhood={chunks.map((c) => c.text)}
+                  lang="en-US"
+                  onPlayReference={playChunk}
+                  onDone={() => setRevealed(true)}
+                />
+              ) : (
+                <button className="btn btn--primary btn--wide" onClick={reveal}>
+                  Revelar esta parte →
+                </button>
+              )
+            ) : (
+              <div className="build__revealed">
+                <div className="build__seg">
+                  <button className="build__play" onClick={playChunk} aria-label="Escuchar la parte">
+                    🔊
+                  </button>
+                  <p>{chunk.text}</p>
+                </div>
+                <button className="btn btn--primary btn--wide" onClick={takeChunk} autoFocus>
+                  {idx + 1 < chunks.length ? 'Siguiente parte →' : 'Ver el guion completo →'}
+                </button>
+              </div>
+            )}
+          </>
+        )}
+
+        {built.length > 0 && (
+          <div className="build__soFar">
+            <p className="build__soFar-label">El guion hasta acá</p>
+            <p className="build__script">{built.join(' ')}</p>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  /* ─────────────────────────── run · crear · paso a paso ───────────────── */
+  if (phase === 'run' && flow === 'create' && step) {
     return (
       <div className="build">
         <div className="build__progress">
@@ -186,63 +335,27 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
         </div>
 
         <div className="build__q">
-          <button className="build__play" onClick={askQuestion} aria-label="Repetir la pregunta">🔊</button>
+          <button className="build__play" onClick={askQuestion} aria-label="Repetir la pregunta">
+            🔊
+          </button>
           <p>{step.prompt}</p>
         </div>
-        {step.hint && (flow === 'reconstruct' ? !revealed : true) && (
-          <p className="build__hint">Pista: {step.hint}</p>
-        )}
 
-        {flow === 'reconstruct' ? (
-          !revealed ? (
-            exam ? (
-              <SpeakPanel
-                targets={[step.segment]}
-                neighbourhood={steps.map((s) => s.segment)}
-                lang="en-US"
-                onPlayReference={playSegment}
-                onDone={() => setRevealed(true)}
-              />
-            ) : (
-              <button className="btn btn--primary btn--wide" onClick={reveal}>Revelar esta parte →</button>
-            )
-          ) : (
-            <div className="build__revealed">
-              <div className="build__seg">
-                <button className="build__play" onClick={playSegment} aria-label="Escuchar la parte">🔊</button>
-                <p>{step.segment}</p>
-              </div>
-              <button className="btn btn--primary btn--wide" onClick={nextReconstruct} autoFocus>
-                {idx + 1 < steps.length ? 'Siguiente pregunta →' : 'Ver el guion completo →'}
-              </button>
-            </div>
-          )
-        ) : (
-          <>
-            <LiveDictation key={idx} expected={expected} lang="en-US" onDone={onDictated} />
-            {mine.length > 0 && (
-              <div className="build__soFar">
-                <p className="build__soFar-label">Tu guion hasta acá</p>
-                <p className="build__script">
-                  <Highlighted text={mine.map((m) => m.transcript).join(' ')} expected={expected} />
-                </p>
-              </div>
-            )}
-          </>
-        )}
-
-        {flow === 'reconstruct' && built.length > 0 && (
+        <LiveDictation key={idx} expected={expected} lang="en-US" onDone={onDictated} />
+        {mine.length > 0 && (
           <div className="build__soFar">
-            <p className="build__soFar-label">El guion hasta acá</p>
-            <p className="build__script">{built.join(' ')}</p>
+            <p className="build__soFar-label">Tu guion hasta acá</p>
+            <p className="build__script">
+              <Highlighted text={mine.map((m) => m.transcript).join(' ')} expected={expected} />
+            </p>
           </div>
         )}
       </div>
     );
   }
 
-  /* ────────────────────────────── report ──────────────────────────────── */
-  if (flow !== 'reconstruct') {
+  /* ────────────────────────────── report · crear ──────────────────────── */
+  if (flow === 'create') {
     const yours = mine.map((m) => m.transcript).join(' ').trim();
     const anyRec = mine.some((m) => m.recording);
     return (
@@ -253,7 +366,11 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
         <section className="build__block">
           <div className="build__block-head">
             <h3>Tu producción</h3>
-            {anyRec && <button className="btn" onClick={playMine}>🔊 Escucharte entero</button>}
+            {anyRec && (
+              <button className="btn" onClick={playMine}>
+                🔊 Escucharte entero
+              </button>
+            )}
           </div>
           <p className="build__script">
             {yours ? <Highlighted text={yours} expected={expected} /> : '— no se transcribió nada —'}
@@ -261,51 +378,88 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
           <p className="build__hint">En verde, el vocabulario del tema que usaste.</p>
         </section>
 
-        <section className="build__block">
-          <div className="build__block-head">
-            <h3>Versión modelo (para comparar)</h3>
-            <button className="btn" onClick={() => void audio.speak({ key: `${target.id}.model`, text: target.modelAnswer, speakerId: target.speaker })}>
-              🔊 Escuchar
-            </button>
-          </div>
-          <p className="build__script build__script--model">{target.modelAnswer}</p>
-        </section>
+        <ModelVersions target={target} versionCount={versionCount} versionLabel={versionLabel}
+          versionText={versionText} versionWholeKey={versionWholeKey} />
 
         <div className="ab">
-          <button className="btn" onClick={reset}>Volver a empezar</button>
-          <button className="btn btn--primary" onClick={() => onDone(true)} autoFocus>Terminar →</button>
+          <button className="btn" onClick={reset}>
+            Volver a empezar
+          </button>
+          <button className="btn btn--primary" onClick={() => onDone(true)} autoFocus>
+            Terminar →
+          </button>
         </div>
       </div>
     );
   }
 
-  // report reconstruir
+  /* ─────────────────── report · copiar / reconstruir ───────────────────── */
   const yours = built.join(' ');
   return (
     <div className="build">
-      <p className="build__eyebrow">Guion reconstruido</p>
+      <p className="build__eyebrow">{flow === 'copy' ? 'Guion copiado' : 'Guion reconstruido'}</p>
       <h2>Lo armaste entero</h2>
 
       <section className="build__block">
         <div className="build__block-head">
-          <h3>Lo que reconstruiste</h3>
-          <button className="btn" onClick={() => void audio.speak({ key: 'sb-yours', text: yours, speakerId: target.speaker })}>🔊 Escuchar</button>
+          <h3>{flow === 'copy' ? 'Lo que copiaste' : 'Lo que reconstruiste'} ({versionLabel(version)})</h3>
+          <button
+            className="btn"
+            onClick={() => void audio.speak({ key: versionWholeKey(version), text: versionText(version), speakerId: target.speaker })}
+          >
+            🔊 Escuchar
+          </button>
         </div>
         <p className="build__script">{yours}</p>
       </section>
 
-      <section className="build__block">
-        <div className="build__block-head">
-          <h3>Versión modelo</h3>
-          <button className="btn" onClick={() => void audio.speak({ key: `${target.id}.model`, text: target.modelAnswer, speakerId: target.speaker })}>🔊 Escuchar</button>
-        </div>
-        <p className="build__script build__script--model">{target.modelAnswer}</p>
-      </section>
+      <ModelVersions target={target} versionCount={versionCount} versionLabel={versionLabel}
+        versionText={versionText} versionWholeKey={versionWholeKey} />
 
       <div className="ab">
-        <button className="btn" onClick={reset}>Reconstruir de nuevo</button>
-        <button className="btn btn--primary" onClick={() => onDone(true)} autoFocus>Terminar →</button>
+        <button className="btn" onClick={reset}>
+          Volver a empezar
+        </button>
+        <button className="btn btn--primary" onClick={() => onDone(true)} autoFocus>
+          Terminar →
+        </button>
       </div>
     </div>
+  );
+}
+
+/** Todas las versiones modelo, para oír y comparar (A, B, C…). */
+function ModelVersions({
+  target,
+  versionCount,
+  versionLabel,
+  versionText,
+  versionWholeKey,
+}: {
+  target: ScriptBuilderRound['target'];
+  versionCount: number;
+  versionLabel: (v: number) => string;
+  versionText: (v: number) => string;
+  versionWholeKey: (v: number) => string;
+}) {
+  const audio = useAudio();
+  return (
+    <section className="build__block">
+      <h3>{versionCount > 1 ? 'Las versiones modelo (para comparar)' : 'Versión modelo'}</h3>
+      {Array.from({ length: versionCount }, (_, v) => (
+        <div key={v} className="build__version">
+          <div className="build__block-head">
+            <span className="build__version-label">{versionLabel(v)}</span>
+            <button
+              className="btn"
+              onClick={() => void audio.speak({ key: versionWholeKey(v), text: versionText(v), speakerId: target.speaker })}
+            >
+              🔊 Escuchar
+            </button>
+          </div>
+          <p className="build__script build__script--model">{versionText(v)}</p>
+        </div>
+      ))}
+    </section>
   );
 }

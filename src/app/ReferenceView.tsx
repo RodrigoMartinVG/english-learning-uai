@@ -130,7 +130,7 @@ export function ReferenceView({
               <p className="ref__prompt">{s.prompt}</p>
               {s.buildable && onReconstruct && (
                 <button className="ref__reconstruct" onClick={() => onReconstruct(s.id)}>
-                  🎤 Reconstruir este guion — respondé las preguntas y armalo →
+                  🎤 Armá este guion — copialo, reconstruilo o creá el tuyo →
                 </button>
               )}
               {s.versions.map((v, i) => (

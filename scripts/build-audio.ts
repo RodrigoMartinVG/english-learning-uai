@@ -29,6 +29,7 @@ import {
   answerKey,
   stepQuestionKey,
   stepSegmentKey,
+  modelVarSentenceKey,
   type Atom,
   type Speaker,
 } from '../content/schema.ts';
@@ -145,6 +146,9 @@ function wantsAlts(u: Utterance): boolean {
     u.text.length <= ALT_MAX_CHARS &&
     !u.key.includes('.v.') &&
     !u.key.includes('.alt.') &&
+    // Las oraciones de variante (.modelvar.k.s.m) son solo para copiar/reconstruir:
+    // no necesitan voces alternativas. La variante ENTERA sí las recibe (isModel).
+    !u.key.includes('.modelvar.') &&
     !u.key.endsWith('.slow')
   );
 }
@@ -264,7 +268,12 @@ for (const atom of atoms) {
       push(`${atom.id}.model.slow`, atom.modelAnswer, atom.speaker, SLOW_RATE_FACTOR);
       // Versiones alternativas del modelo (Versión B, C…): audio propio, para que
       // también se escuchen bien y ofrezcan varias voces, igual que la Versión A.
-      atom.modelVariants?.forEach((t, i) => push(`${atom.id}.modelvar.${i}`, t, atom.speaker));
+      atom.modelVariants?.forEach((t, i) => {
+        push(`${atom.id}.modelvar.${i}`, t, atom.speaker);
+        // Y cada ORACIÓN por separado, para copiar/reconstruir la variante frase a
+        // frase (mismas oraciones que parte el runtime, con `splitSentences`).
+        splitSentences(t).forEach((s, m) => push(modelVarSentenceKey(atom.id, i, m), s, atom.speaker));
+      });
       // Reconstruir el guion: la pregunta guía (voz neutra) y el fragmento modelo.
       atom.steps?.forEach((s, i) => {
         push(stepQuestionKey(atom.id, i), s.prompt, NEUTRAL_SPEAKER);

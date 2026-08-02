@@ -15,7 +15,7 @@ export type SessionScope =
   | { kind: 'aspect'; course: Course; unit: number; aspectId: string }
   | { kind: 'unit'; course: Course; unit: number }
   | { kind: 'atoms'; atomIds: string[] }
-  | { kind: 'due'; course?: Course };
+  | { kind: 'due'; course?: Course; units?: number[] };
 
 export interface SessionSpec {
   scope: SessionScope;
@@ -83,9 +83,15 @@ export function atomsInScope(scope: SessionScope, all: Atom[], aspects: Aspect[]
       const ids = new Set(scope.atomIds);
       return all.filter((a) => ids.has(a.id));
     }
-    case 'due':
-      // Repaso global: todos los átomos del curso elegido (o todos, si no se acota).
-      return scope.course ? all.filter((a) => a.course === scope.course) : all;
+    case 'due': {
+      // Repaso global: átomos del curso elegido, acotado a las unidades seleccionadas
+      // (si se pasan). Sin `units`, entran todas.
+      const units = scope.units;
+      return all.filter(
+        (a) =>
+          (!scope.course || a.course === scope.course) && (!units || units.includes(a.unit))
+      );
+    }
   }
 }
 
@@ -223,11 +229,13 @@ export function buildSession(
  * átomo apareciera 22 veces mientras otro 1. Con el scheduler, lo que aparece es
  * lo que estás por olvidar, no lo que sobra en una mecánica escasa.
  *
- * Orden: vencidas (retrievability asc) → nuevas → el resto. Después interleaving,
- * que sigue importando para no encadenar la misma mecánica.
+ * Vencidas mandan (prioridad SRS), pero se RESERVA un cupo de material nuevo por
+ * tanda (~1/3). Sin eso, un tema casi terminado (p. ej. 74/80) con muchas vencidas
+ * llenaba las 12 con puro repaso y los últimos ítems nuevos no entraban nunca — el
+ * contador quedaba enganchado. Con el cupo, cada tanda suma algo nuevo igual.
  *
- * `includeFresh=false` deja el repaso PURO: sin átomos nuevos, solo vencidos y
- * repaso adelantado de lo ya estudiado. Lo usa el repaso global.
+ * Partición disjunta: nuevas (isNew) → fresh; vencidas-no-nuevas → due; resto → rest.
+ * `includeFresh=false` deja el repaso PURO (sin nuevas). Lo usa el repaso global.
  */
 function scheduleReview(
   candidates: { step: Step }[],
@@ -235,16 +243,25 @@ function scheduleReview(
   sch: Scheduler,
   includeFresh = true
 ): Step[] {
-  const due = candidates.filter((c) => sch.isDue(c.step)).sort(
-    (a, b) => sch.retrievability(a.step) - sch.retrievability(b.step)
-  );
-  const fresh = includeFresh ? candidates.filter((c) => sch.isNew(c.step)) : [];
+  const due = candidates
+    .filter((c) => sch.isDue(c.step) && !sch.isNew(c.step))
+    .sort((a, b) => sch.retrievability(a.step) - sch.retrievability(b.step));
+  const fresh = includeFresh ? shuffle(candidates.filter((c) => sch.isNew(c.step))) : [];
   const rest = candidates.filter((c) => !sch.isDue(c.step) && !sch.isNew(c.step));
 
-  // Vencidas mandan; se completa con material nuevo (si se permite) antes que con
-  // repaso adelantado.
-  const chosen = [...due, ...shuffle(fresh), ...shuffle(rest)].slice(0, n);
-  return spaceOut(chosen.map((c) => c.step));
+  // Cupo garantizado de nuevas (~1/3 de la tanda). Lo vencido llena el resto y
+  // tiene prioridad; si sobra lugar, entra repaso adelantado y más nuevas/vencidas.
+  const freshQuota = Math.min(fresh.length, Math.max(1, Math.round(n / 3)));
+  const chosen: { step: Step }[] = [
+    ...due.slice(0, Math.max(0, n - freshQuota)),
+    ...fresh.slice(0, freshQuota),
+  ];
+  const room = () => n - chosen.length;
+  if (room() > 0) chosen.push(...shuffle(rest).slice(0, room()));
+  if (room() > 0) chosen.push(...fresh.slice(freshQuota, freshQuota + room()));
+  if (room() > 0) chosen.push(...due.slice(Math.max(0, n - freshQuota)));
+
+  return spaceOut(chosen.slice(0, n).map((c) => c.step));
 }
 
 /** Evita dos pasos seguidos de la misma mecánica, sin reordenar por prioridad de más. */

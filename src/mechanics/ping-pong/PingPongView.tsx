@@ -19,6 +19,8 @@ export function PingPongView({ round, onDone }: MechanicViewProps<PingPongRound>
     () => void audio.speak({ key: target.id, text: target.prompt, speakerId: target.speaker }),
     [audio, target]
   );
+  const say = (text: string, key: string, speakerId: string) =>
+    void audio.speak({ key, text, speakerId });
 
   useEffect(() => {
     setPeek(false);
@@ -27,7 +29,7 @@ export function PingPongView({ round, onDone }: MechanicViewProps<PingPongRound>
   }, [ask, audio]);
 
   return (
-    <div className="osmosis">
+    <div className="osmosis exlr">
       <div className="osmosis__stage">
         <Waveform active={state === 'speaking'} />
         {/* La pregunta NO se muestra: en un final oral el examinador no te la escribe. */}
@@ -42,6 +44,7 @@ export function PingPongView({ round, onDone }: MechanicViewProps<PingPongRound>
         </p>
       </div>
 
+      <div className="exlr__panel">
       <SpeakPanel
         targets={round.accepted}
         neighbourhood={round.neighbourhood}
@@ -59,20 +62,51 @@ export function PingPongView({ round, onDone }: MechanicViewProps<PingPongRound>
       {/* Rendirse es legítimo, pero explícito: si se lo damos gratis, no produce. */}
       {!peek ? (
         <button className="btn" onClick={() => setPeek(true)}>
-          No me sale — mostrar la pregunta
+          No me sale — mostrar pregunta y respuestas
         </button>
       ) : (
         <div className="expansion">
-          <p className="expansion__gloss">“{target.prompt}”</p>
+          {/* La pregunta y sus otras formas, cada una con su audio. */}
+          <p className="ref__sublabel">La pregunta (y otras formas de preguntarla)</p>
+          <ul className="ref__lines">
+            <li>
+              <button className="ref__line" onClick={() => say(target.prompt, target.id, target.speaker)}>
+                <span aria-hidden="true">🔊</span> {target.prompt}
+              </button>
+            </li>
+            {target.promptVariants.map((v, i) => (
+              <li key={i}>
+                <button className="ref__line" onClick={() => say(v, `${target.id}.alt.${i}`, target.speaker)}>
+                  <span aria-hidden="true">🔊</span> {v}
+                </button>
+              </li>
+            ))}
+          </ul>
+
           {/* Unidad 5: si la pregunta trae respuestas por modo, mostrá el abanico
               en vez de una lista plana — enseña a apropiarse, no a memorizar. */}
           {target.answers?.length ? (
             <ModedAnswers atomId={target.id} answers={target.answers} speakerId={target.replySpeaker} />
           ) : (
-            <p className="speak__note">Respuestas válidas: {round.accepted.join(' · ')}</p>
+            <>
+              <p className="ref__sublabel">Respuestas naturales</p>
+              <ul className="ref__lines">
+                {round.accepted.map((r, i) => (
+                  <li key={i}>
+                    <button
+                      className="ref__line ref__line--reply"
+                      onClick={() => say(r, `${target.id}.reply.${i}`, target.replySpeaker)}
+                    >
+                      <span aria-hidden="true">🔊</span> {r}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </>
           )}
         </div>
       )}
+      </div>
     </div>
   );
 }

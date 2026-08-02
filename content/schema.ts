@@ -164,6 +164,11 @@ export const stepQuestionKey = (atomId: string, stepIdx: number): string =>
 export const stepSegmentKey = (atomId: string, stepIdx: number): string =>
   `${atomId}.step.${stepIdx}`;
 
+/** Clave de audio de una ORACIÓN de una versión alternativa (B/C), para copiar/reconstruir
+ *  frase por frase. `variantIdx` es el índice en modelVariants; `sentIdx` la oración. */
+export const modelVarSentenceKey = (atomId: string, variantIdx: number, sentIdx: number): string =>
+  `${atomId}.modelvar.${variantIdx}.s.${sentIdx}`;
+
 /* ──────────────────────────────── núcleo común ──────────────────────────────────── */
 
 export const sourceSchema = z.object({

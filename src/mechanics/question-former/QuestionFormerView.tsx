@@ -15,7 +15,7 @@ export function QuestionFormerView({ round, onDone }: MechanicViewProps<Question
   useEffect(() => () => audio.cancel(), [audio]);
 
   return (
-    <div className="osmosis">
+    <div className="osmosis exlr">
       <div className="osmosis__stage">
         {/* La afirmación se LEE. Lo que hay que producir es la pregunta, y esa
             no se muestra ni se escucha hasta el final: si no, sería repetir. */}
@@ -24,6 +24,7 @@ export function QuestionFormerView({ round, onDone }: MechanicViewProps<Question
         <p className="osmosis__hint">¿Qué pregunta lleva a esa respuesta? Decila en voz alta.</p>
       </div>
 
+      <div className="exlr__panel">
       <SpeakPanel
         targets={round.targets}
         neighbourhood={round.neighbourhood}
@@ -31,6 +32,7 @@ export function QuestionFormerView({ round, onDone }: MechanicViewProps<Question
         onPlayReference={playAnswer}
         onDone={onDone}
       />
+      </div>
     </div>
   );
 }

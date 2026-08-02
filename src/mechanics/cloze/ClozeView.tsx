@@ -55,7 +55,7 @@ export function ClozeView({ round, onDone }: MechanicViewProps<ClozeRound>) {
   const parts = round.stem.split(BLANK);
 
   return (
-    <div className="cz">
+    <div className="cz exlr">
       <div className="osmosis__stage">
         <Waveform active={state === 'speaking'} />
         <div className="osmosis__controls">
@@ -70,6 +70,7 @@ export function ClozeView({ round, onDone }: MechanicViewProps<ClozeRound>) {
         <p className="osmosis__hint">Suena completa. Reponé lo que falta.</p>
       </div>
 
+      <div className="exlr__panel">
       <p className="cz__stem">
         {parts.map((part, i) => (
           <span key={i}>
@@ -131,6 +132,16 @@ export function ClozeView({ round, onDone }: MechanicViewProps<ClozeRound>) {
             ) : null
           )}
           <div className="ab">
+            <button
+              className="btn"
+              onClick={() => {
+                setFilled(round.blanks.map(() => null));
+                setActive(0);
+                setChecked(null);
+              }}
+            >
+              ↻ Reintentar
+            </button>
             <button className="btn" onClick={() => play()}>
               🔊 Escuchar
             </button>
@@ -140,6 +151,7 @@ export function ClozeView({ round, onDone }: MechanicViewProps<ClozeRound>) {
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 }
