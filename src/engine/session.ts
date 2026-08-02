@@ -234,11 +234,19 @@ export function buildSession(
  * llenaba las 12 con puro repaso y los últimos ítems nuevos no entraban nunca — el
  * contador quedaba enganchado. Con el cupo, cada tanda suma algo nuevo igual.
  *
+ * Clave: el cupo fresh prioriza ÁTOMOS todavía sin empezar, no cualquier tarjeta
+ * nueva. Un átomo ya empezado tiene muchas mecánicas sin tocar (todas isNew), así
+ * que `fresh` está dominado por tarjetas de átomos que YA cuentan en el contador.
+ * Elegir al azar casi nunca tocaba uno de los pocos átomos nuevos → el contador
+ * (átomos con tarjeta) subía de a uno aunque la tanda trajera 4 nuevas. Por eso
+ * dentro del cupo entran primero átomos distintos sin empezar, uno cada uno y por
+ * el peldaño más bajo (percepción), como en la escalera de Descubrir.
+ *
  * Partición disjunta: nuevas (isNew) → fresh; vencidas-no-nuevas → due; resto → rest.
  * `includeFresh=false` deja el repaso PURO (sin nuevas). Lo usa el repaso global.
  */
 function scheduleReview(
-  candidates: { step: Step }[],
+  candidates: { step: Step; level: number }[],
   n: number,
   sch: Scheduler,
   includeFresh = true
@@ -246,19 +254,41 @@ function scheduleReview(
   const due = candidates
     .filter((c) => sch.isDue(c.step) && !sch.isNew(c.step))
     .sort((a, b) => sch.retrievability(a.step) - sch.retrievability(b.step));
-  const fresh = includeFresh ? shuffle(candidates.filter((c) => sch.isNew(c.step))) : [];
   const rest = candidates.filter((c) => !sch.isDue(c.step) && !sch.isNew(c.step));
 
-  // Cupo garantizado de nuevas (~1/3 de la tanda). Lo vencido llena el resto y
-  // tiene prioridad; si sobra lugar, entra repaso adelantado y más nuevas/vencidas.
-  const freshQuota = Math.min(fresh.length, Math.max(1, Math.round(n / 3)));
+  // Un átomo está EMPEZADO si alguno de sus pasos ya no es nuevo (tiene tarjeta).
+  const startedAtoms = new Set(
+    candidates.filter((c) => !sch.isNew(c.step)).map((c) => c.step.atomId)
+  );
+  const freshAll = includeFresh ? candidates.filter((c) => sch.isNew(c.step)) : [];
+  // Un paso por átomo SIN empezar, el de menor nivel: así cada uno arranca por
+  // percepción y la tanda estrena varios átomos distintos (mueve el contador).
+  const newAtomIds = shuffle([
+    ...new Set(freshAll.filter((c) => !startedAtoms.has(c.step.atomId)).map((c) => c.step.atomId)),
+  ]);
+  const startNewAtoms = newAtomIds.map(
+    (id) =>
+      freshAll
+        .filter((c) => c.step.atomId === id)
+        .sort((a, b) => a.level - b.level)[0]!
+  );
+  // El resto del material nuevo: tarjetas nuevas de átomos ya empezados + los pasos
+  // sobrantes de los átomos recién estrenados. Va después, si queda cupo.
+  const startNewSet = new Set(startNewAtoms);
+  const otherFresh = shuffle(freshAll.filter((c) => !startNewSet.has(c)));
+  const freshOrdered = [...startNewAtoms, ...otherFresh];
+
+  // Cupo garantizado de nuevas (~1/3 de la tanda), con los átomos nuevos al frente.
+  // Lo vencido llena el resto y tiene prioridad; si sobra lugar, entra repaso
+  // adelantado y más material nuevo.
+  const freshQuota = Math.min(freshOrdered.length, Math.max(1, Math.round(n / 3)));
   const chosen: { step: Step }[] = [
     ...due.slice(0, Math.max(0, n - freshQuota)),
-    ...fresh.slice(0, freshQuota),
+    ...freshOrdered.slice(0, freshQuota),
   ];
   const room = () => n - chosen.length;
   if (room() > 0) chosen.push(...shuffle(rest).slice(0, room()));
-  if (room() > 0) chosen.push(...fresh.slice(freshQuota, freshQuota + room()));
+  if (room() > 0) chosen.push(...freshOrdered.slice(freshQuota, freshQuota + room()));
   if (room() > 0) chosen.push(...due.slice(Math.max(0, n - freshQuota)));
 
   return spaceOut(chosen.slice(0, n).map((c) => c.step));

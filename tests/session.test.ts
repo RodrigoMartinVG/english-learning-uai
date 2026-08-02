@@ -76,6 +76,37 @@ test('scheduler: lo vencido va primero', () => {
   assert.equal(s.steps[0]!.atomId, dueId, 'el vencido debería ser el primer paso');
 });
 
+test('repaso: un tema casi terminado estrena varios átomos nuevos, no uno', () => {
+  // El bug del contador enganchado (76/80): casi todos los átomos ya empezados
+  // (una mecánica tocada, el resto sin tocar → miles de tarjetas isNew), y unos
+  // pocos átomos totalmente nuevos. Elegir "fresh" al azar casi nunca tocaba uno
+  // de los nuevos, así que el contador de átomos subía de a uno. El cupo fresh
+  // debe priorizar ÁTOMOS sin empezar y estrenar varios por tanda.
+  const reachable = atoms.filter((a) => mechanics.some((m) => m.accepts(a)));
+  const brandNew = new Set(reachable.slice(0, 3).map((a) => a.id));
+  // Ancla no-nueva por átomo empezado: una mecánica tocada; todo lo demás, nuevo.
+  const anchor = new Set<string>();
+  for (const a of reachable) {
+    if (brandNew.has(a.id)) continue;
+    const m = mechanics.find((mm) => mm.accepts(a))!;
+    anchor.add(`${a.id}|${m.id}`);
+  }
+  const sched: Scheduler = {
+    isDue: () => false,
+    isNew: (s) => (brandNew.has(s.atomId) ? true : !anchor.has(`${s.atomId}|${s.mechanicId}`)),
+    retrievability: () => 0.9,
+  };
+  const s = buildSession(
+    { scope: { kind: 'unit', course: 'en1', unit: 1 }, mode: 'review', length: 12 },
+    atoms,
+    aspects,
+    'u1',
+    sched
+  );
+  const estrenados = new Set(s.steps.filter((st) => brandNew.has(st.atomId)).map((st) => st.atomId));
+  assert.ok(estrenados.size >= 3, `debería estrenar los 3 átomos nuevos, estrenó ${estrenados.size}`);
+});
+
 test('cada paso apunta a un átomo y mecánica reales', () => {
   const s = buildSession({ scope: { kind: 'unit', course: 'en1', unit: 1 }, mode: 'discover', length: 12 }, atoms, aspects, 'u1');
   const ids = new Set(atoms.map((a) => a.id));
