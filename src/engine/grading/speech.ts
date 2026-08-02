@@ -9,6 +9,81 @@
 
 import { canonicalNumbers } from './numbers.ts';
 
+/**
+ * Ortografía británica ↔ americana: "centre" y "center" son la misma respuesta. El
+ * material de la UAI es británico, pero el alumno (y el ASR) tiran cualquiera de las
+ * dos. Se canoniza la forma UK a la US, y como normalize() se aplica a los DOS lados,
+ * cualquier variante matchea.
+ *
+ * Es una LISTA explícita a propósito: las reglas por sufijo se equivocan feo
+ * ("four"→"for", "wise"→"wize", "genre"→"gener"). Cada entrada es una palabra real.
+ * Se cubren las formas flexionadas comunes (plural, pasado, gerundio) porque el mapa
+ * es por token exacto.
+ */
+const SPELLING: Record<string, string> = {};
+const spell = (uk: string, us: string) => {
+  SPELLING[uk] = us;
+};
+// -our → -or (color, favor, neighbor…), con sus flexiones regulares.
+for (const [uk, us] of [
+  ['colour', 'color'], ['favour', 'favor'], ['neighbour', 'neighbor'], ['honour', 'honor'],
+  ['labour', 'labor'], ['flavour', 'flavor'], ['behaviour', 'behavior'], ['humour', 'humor'],
+  ['harbour', 'harbor'], ['odour', 'odor'], ['rumour', 'rumor'], ['vapour', 'vapor'],
+  ['saviour', 'savior'],
+] as const) {
+  spell(uk, us);
+  spell(uk + 's', us + 's');
+  spell(uk + 'ed', us + 'ed');
+  spell(uk + 'ing', us + 'ing');
+}
+spell('favourite', 'favorite'); spell('favourites', 'favorites');
+spell('neighbourhood', 'neighborhood'); spell('neighbourhoods', 'neighborhoods');
+spell('colourful', 'colorful');
+// -re → -er (center, meter, theater…).
+for (const [uk, us] of [
+  ['centre', 'center'], ['metre', 'meter'], ['litre', 'liter'], ['theatre', 'theater'],
+  ['fibre', 'fiber'], ['kilometre', 'kilometer'], ['centimetre', 'centimeter'],
+  ['millimetre', 'millimeter'],
+] as const) {
+  spell(uk, us);
+  spell(uk + 's', us + 's');
+}
+spell('centred', 'centered'); spell('centring', 'centering');
+// -ise → -ize (organize, realize, recognize…), con flexiones.
+for (const stem of [
+  'organi', 'reali', 'recogni', 'apologi', 'speciali', 'memori', 'summari', 'emphasi',
+  'critici', 'minimi', 'maximi', 'prioriti', 'categori', 'coloni',
+] as const) {
+  spell(stem + 'se', stem + 'ze');
+  spell(stem + 'ses', stem + 'zes');
+  spell(stem + 'sed', stem + 'zed');
+  spell(stem + 'sing', stem + 'zing');
+}
+spell('organisation', 'organization'); spell('organisations', 'organizations');
+spell('analyse', 'analyze'); spell('analysed', 'analyzed'); spell('analyses', 'analyzes'); spell('analysing', 'analyzing');
+// -ogue → -og y -ence → -ense.
+spell('catalogue', 'catalog'); spell('catalogues', 'catalogs');
+spell('dialogue', 'dialog'); spell('dialogues', 'dialogs');
+spell('licence', 'license'); spell('defence', 'defense'); spell('offence', 'offense'); spell('offences', 'offenses');
+// -ll- → -l- (traveling, canceled, modeling…).
+for (const [uk, us] of [
+  ['travelling', 'traveling'], ['travelled', 'traveled'], ['traveller', 'traveler'], ['travellers', 'travelers'],
+  ['cancelled', 'canceled'], ['cancelling', 'canceling'], ['modelling', 'modeling'], ['modelled', 'modeled'],
+  ['labelled', 'labeled'], ['labelling', 'labeling'], ['marvellous', 'marvelous'], ['jewellery', 'jewelry'],
+] as const) {
+  spell(uk, us);
+}
+// Irregulares comunes.
+for (const [uk, us] of [
+  ['grey', 'gray'], ['greys', 'grays'], ['programme', 'program'], ['programmes', 'programs'],
+  ['cheque', 'check'], ['cheques', 'checks'], ['tyre', 'tire'], ['tyres', 'tires'],
+  ['storey', 'story'], ['storeys', 'stories'], ['pyjamas', 'pajamas'], ['aluminium', 'aluminum'],
+  ['moustache', 'mustache'], ['practise', 'practice'], ['practised', 'practiced'], ['practising', 'practicing'],
+  ['practises', 'practices'], ['maths', 'math'], ['mum', 'mom'], ['mummy', 'mommy'], ['kerb', 'curb'],
+] as const) {
+  spell(uk, us);
+}
+
 /** Contracciones del material. El ASR transcribe "I'm" o "I am" según le parece;
  *  penalizar esa diferencia sería castigar al alumno por un capricho del motor. */
 const CONTRACTIONS: [RegExp, string][] = [
@@ -50,7 +125,9 @@ export function normalize(text: string): string {
     .replace(/\bo clock\b/g, 'oclock') // "o clock" (partido) = "o'clock" → "oclock"
     .replace(/\bst\b/g, 'street') // el ASR devuelve "St" por "street"
     .replace(/\bave\b/g, 'avenue');
-  return canonicalNumbers(s.split(' ')).join(' ');
+  // Ortografía UK↔US: cada token a su forma canónica (US) para que "centre"="center".
+  const toks = s.split(' ').map((t) => SPELLING[t] ?? t);
+  return canonicalNumbers(toks).join(' ');
 }
 
 export const words = (text: string): string[] => (normalize(text) ? normalize(text).split(' ') : []);

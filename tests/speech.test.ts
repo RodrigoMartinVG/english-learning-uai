@@ -25,6 +25,25 @@ test('normalize: el guion separa, no pega', () => {
   assert.equal(normalize('thirty-five'), normalize('thirty five'));
 });
 
+test('normalize: ortografía británica y americana son la misma respuesta', () => {
+  assert.equal(normalize('centre'), normalize('center'));
+  assert.equal(normalize('the cultural centre'), normalize('the cultural center'));
+  assert.equal(normalize('colour'), normalize('color'));
+  assert.equal(normalize('my favourite theatre'), normalize('my favorite theater'));
+  assert.equal(normalize('I realise that'), normalize('I realize that'));
+  assert.equal(normalize('the neighbourhood'), normalize('the neighborhood'));
+  assert.equal(normalize('grey'), normalize('gray'));
+  // No debe tocar palabras que solo PARECEN variantes (las reglas por sufijo fallaban acá:
+  // "hour"→"hor", "wise"→"wize", "genre"→"gener").
+  assert.equal(normalize('hour'), 'hour');
+  assert.equal(normalize('otherwise'), 'otherwise');
+  assert.equal(normalize('genre'), 'genre');
+});
+
+test('gradeSpeech: acepta la grafía americana de una frase británica', () => {
+  assert.equal(gradeSpeech('The cultural centre is grey', 'the cultural center is gray').match, true);
+});
+
 test('normalize: números a dígitos (el bug tenth/10th)', () => {
   assert.equal(normalize('on the tenth floor'), normalize('on the 10th floor'));
   assert.equal(normalize('I am thirty-five'), normalize('I am 35'));

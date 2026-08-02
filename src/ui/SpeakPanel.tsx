@@ -184,12 +184,13 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
           </p>
           {busy && (
             // Cortar a mano: terminar ya (y calificar) o cancelar (descartar y
-            // reintentar), sin esperar el auto-corte por silencio.
-            <div className="ab">
-              <button className="btn" onClick={finishNow}>
+            // reintentar), sin esperar el auto-corte por silencio. Sutiles: no compiten
+            // con el micrófono, solo están ahí si los necesitás.
+            <div className="speak__live">
+              <button className="speak__livebtn" onClick={finishNow}>
                 ⏹ Terminar
               </button>
-              <button className="btn" onClick={cancelNow}>
+              <button className="speak__livebtn" onClick={cancelNow}>
                 ✕ Cancelar
               </button>
             </div>
