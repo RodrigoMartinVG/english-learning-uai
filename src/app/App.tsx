@@ -37,6 +37,7 @@ import { ResetPanel } from './ResetPanel.tsx';
 import { DiagnosticsView } from './DiagnosticsView.tsx';
 import { ReferenceView } from './ReferenceView.tsx';
 import { ReaderView } from './ReaderView.tsx';
+import { VoiceScratch } from '../ui/VoiceScratch.tsx';
 import './app.css';
 
 /** Adapta el store de progreso al contrato que el motor espera. */
@@ -143,9 +144,12 @@ export default function App() {
       <StopAudioOnNav view={view} />
       <div className="shell">
         <header className="shell__header">
-          <button className="shell__brand" onClick={goHome} disabled={history.length === 1}>
-            Oda <span>· {activeCourse ? courseName(activeCourse) : 'Language Hub'}</span>
-          </button>
+          <div className="shell__left">
+            <button className="shell__brand" onClick={goHome} disabled={history.length === 1}>
+              Oda <span>· {activeCourse ? courseName(activeCourse) : 'Language Hub'}</span>
+            </button>
+            <VoiceScratch />
+          </div>
           <div className="shell__actions">
             <AudioTransport />
             {/* En sesión, a mano: se marca justo cuando se oyó el audio raro. */}

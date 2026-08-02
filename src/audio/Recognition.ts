@@ -55,6 +55,12 @@ export interface ListenOptions {
   continuous?: boolean;
   /** Transcripción parcial, para dar feedback mientras habla. */
   onInterim?: (text: string) => void;
+  /**
+   * Texto ACUMULADO en vivo: lo ya finalizado + lo parcial de ahora. A diferencia
+   * de `onInterim` (solo el segmento en curso), esto sirve para un cuadro que se va
+   * llenando de corrido en modo continuo, sin perder lo dicho antes.
+   */
+  onProgress?: (fullText: string) => void;
 }
 
 type SpeechRecognitionCtor = new () => any;
@@ -71,6 +77,9 @@ export function isRecognitionSupported(): boolean {
 export interface Recognizer {
   listen(opts?: ListenOptions): Promise<RecognitionResult>;
   abort(): void;
+  /** Cierre elegante: termina la toma en curso y resuelve con lo transcripto hasta
+   *  ahí (a diferencia de abort(), que descarta). Es el botón "detener" a mano. */
+  stop(): void;
   getState(): RecognitionState;
   subscribe(fn: (s: RecognitionState) => void): () => void;
 }
@@ -100,6 +109,18 @@ export function createRecognizer(): Recognizer {
         active = null;
       }
       if (state !== 'unsupported') setState('idle');
+    },
+
+    stop() {
+      // stop() (no abort()) deja que el motor emita el resultado final y dispare
+      // onend, que resuelve el listen() en curso con lo dicho hasta acá.
+      if (active) {
+        try {
+          active.stop();
+        } catch {
+          /* ya estaba parado */
+        }
+      }
     },
 
     listen(opts: ListenOptions = {}): Promise<RecognitionResult> {
@@ -185,6 +206,7 @@ export function createRecognizer(): Recognizer {
             }
           }
           if (interim) opts.onInterim?.(interim);
+          opts.onProgress?.((best + interim).trim());
         };
 
         rec.onerror = (e: any) => {

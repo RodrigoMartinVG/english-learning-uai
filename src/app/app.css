@@ -6,6 +6,7 @@
   position: sticky; top: 0; background: color-mix(in srgb, var(--bg) 85%, transparent);
   backdrop-filter: blur(8px); z-index: 10;
 }
+.shell__left { display: flex; align-items: center; gap: 10px; }
 .shell__brand { font-weight: 700; letter-spacing: -0.02em; }
 .shell__brand span { color: var(--text-faint); font-weight: 400; }
 .shell__brand:disabled { cursor: default; }

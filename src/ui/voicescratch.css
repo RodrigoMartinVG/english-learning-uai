@@ -1,0 +1,102 @@
+.vscratch {
+  position: relative;
+  display: inline-flex;
+}
+
+.vscratch__toggle {
+  min-height: 40px;
+  min-width: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 16px;
+  line-height: 1;
+}
+.vscratch__toggle:hover {
+  background: var(--surface-hi);
+  border-color: var(--accent);
+}
+/* Grabando: pulso rojo suave para que se note que el micro está abierto. */
+.vscratch__toggle--live {
+  border-color: var(--error);
+  animation: vscratch-pulse 1.2s ease-in-out infinite;
+}
+@keyframes vscratch-pulse {
+  50% {
+    background: color-mix(in srgb, var(--error) 18%, var(--surface));
+  }
+}
+
+.vscratch__panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 30;
+  width: min(360px, 92vw);
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: vscratch-rise var(--dur) var(--ease);
+}
+@keyframes vscratch-rise {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+.vscratch__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vscratch__x {
+  color: var(--text-dim);
+  min-height: 32px;
+  min-width: 32px;
+  border-radius: var(--radius-sm);
+}
+.vscratch__x:hover {
+  color: var(--text);
+  background: var(--surface-hi);
+}
+
+.vscratch__hint,
+.vscratch__note {
+  color: var(--text-dim);
+  font-size: 13px;
+}
+.vscratch__note {
+  color: var(--text-faint);
+}
+
+.vscratch__box {
+  min-height: 72px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-hi);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text);
+  word-break: break-word;
+}
+.vscratch__placeholder {
+  color: var(--text-faint);
+  font-size: 15px;
+}
+
+.vscratch__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.vscratch__actions .btn {
+  flex: 1;
+  min-width: 140px;
+}
