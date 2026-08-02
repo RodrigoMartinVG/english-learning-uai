@@ -1,12 +1,11 @@
 /**
- * VoiceScratch — el banco de pruebas de voz, siempre a mano en la toolbar.
+ * VoiceScratch — el banco de pruebas de voz, en la toolbar y sin popup.
  *
- * Nada que ver con la corrección de un ejercicio: es para probar en cualquier
- * momento si te sale una palabra o una frase. UN solo click en el micro ya empieza
- * a grabar (el botón se pone rojo); corta solo al detectar silencio, o con otro
- * click. Después ves el texto que entendió y podés escuchar tu voz por el MISMO
- * reproductor del header (playClip → transporte). Reutiliza el reconocedor y el
- * grabador de siempre.
+ * Para probar en cualquier momento si te sale una palabra o una frase. UN click en
+ * el micro empieza a grabar (el botón se pone rojo); el texto reconocido se va
+ * escribiendo EN LA MISMA toolbar, al lado del botón. Corta solo por silencio o con
+ * otro click. Después, ▶ reproduce tu voz por el MISMO reproductor del header
+ * (playClip → transporte). Reutiliza el reconocedor y el grabador de siempre.
  */
 
 import { useEffect, useRef, useState } from 'react';
@@ -19,10 +18,11 @@ export function VoiceScratch() {
   const audio = useAudio();
   const recognizer = useRef(createRecognizer()).current;
   const recorder = useRef(createRecorder()).current;
+  const textRef = useRef<HTMLSpanElement>(null);
 
-  const [open, setOpen] = useState(false);
   const [state, setState] = useState<RecognitionState>(recognizer.getState());
   const [arming, setArming] = useState(false);
+  const [attempted, setAttempted] = useState(false);
   const [text, setText] = useState('');
   const [mine, setMine] = useState<Recording | null>(null);
 
@@ -36,9 +36,12 @@ export function VoiceScratch() {
     [recognizer, recorder, mine]
   );
 
+  // Mantener a la vista lo último dictado mientras el texto crece.
+  useEffect(() => {
+    if (textRef.current) textRef.current.scrollLeft = textRef.current.scrollWidth;
+  }, [text]);
+
   const supported = isRecognitionSupported();
-  // 'starting' | 'listening' = grabando de verdad; 'arming' cubre el hueco hasta que
-  // el micro arranca, para que el botón se ilumine apenas se toca.
   const busy = state === 'starting' || state === 'listening';
   const live = busy || arming;
 
@@ -46,14 +49,14 @@ export function VoiceScratch() {
     setText('');
     mine?.revoke();
     setMine(null);
-    audio.cancel(); // que no pelee con una reproducción anterior
+    audio.cancel();
     setArming(true);
 
     if (isRecordingSupported()) {
       try {
         await recorder.start();
       } catch {
-        /* sin grabación se puede transcribir igual, solo no se reproduce */
+        /* sin grabación se transcribe igual, solo no se reproduce */
       }
     }
 
@@ -75,24 +78,31 @@ export function VoiceScratch() {
     }
   };
 
-  // El botón ES el disparador: si está grabando, corta; si no, arranca ya mismo.
+  // El botón ES el disparador: grabando → corta; si no → arranca ya.
   const onToggle = () => {
-    if (!supported) {
-      setOpen(true);
-      return;
-    }
+    setAttempted(true);
+    if (!supported) return;
     if (live) {
       recognizer.stop();
       return;
     }
-    setOpen(true);
     void record();
   };
 
-  const close = () => {
-    if (live) recognizer.stop();
-    setOpen(false);
+  const clear = () => {
+    mine?.revoke();
+    setMine(null);
+    setText('');
+    setAttempted(false);
   };
+
+  const note =
+    !supported
+      ? 'Este navegador no reconoce voz (probá Chrome o Edge)'
+      : state === 'denied'
+        ? 'Micrófono bloqueado: permitilo 🔒 y recargá'
+        : '';
+  const showStrip = live || !!text || !!mine || (attempted && !!note);
 
   return (
     <div className="vscratch">
@@ -106,57 +116,35 @@ export function VoiceScratch() {
         🎙
       </button>
 
-      {open && (
-        <div className="vscratch__panel" role="dialog" aria-label="Probá tu voz">
-          <div className="vscratch__head">
-            <strong>{live ? 'Grabando…' : 'Probá tu voz'}</strong>
-            <button className="vscratch__x" onClick={close} aria-label="Cerrar">
+      {showStrip && (
+        <div className="vscratch__strip">
+          {attempted && note ? (
+            <span className="vscratch__note">{note}</span>
+          ) : (
+            <span
+              ref={textRef}
+              className={'vscratch__text' + (text ? '' : ' vscratch__text--dim')}
+              title={text || undefined}
+              aria-live="polite"
+            >
+              {text || (live ? 'Hablá… corta solo al terminar' : '')}
+            </span>
+          )}
+
+          {mine && !live && (
+            <button
+              className="vscratch__mini"
+              onClick={() => void audio.playClip(mine.url)}
+              title="Escuchar mi voz"
+              aria-label="Escuchar mi voz"
+            >
+              ▶
+            </button>
+          )}
+          {!live && (text || mine || (attempted && note)) && (
+            <button className="vscratch__mini" onClick={clear} title="Borrar" aria-label="Borrar">
               ✕
             </button>
-          </div>
-
-          {!supported ? (
-            <p className="vscratch__note">
-              Este navegador no reconoce voz. Probá <strong>Chrome</strong> o <strong>Edge</strong>.
-            </p>
-          ) : state === 'denied' ? (
-            <p className="vscratch__note">
-              El micrófono está bloqueado. Permitilo desde el candado 🔒 de la barra y recargá.
-            </p>
-          ) : (
-            <>
-              <div className="vscratch__box" aria-live="polite">
-                {text || (
-                  <span className="vscratch__placeholder">
-                    {live ? 'Hablá… corta solo al terminar' : 'Tocá el micro y hablá'}
-                  </span>
-                )}
-              </div>
-
-              <div className="vscratch__actions">
-                {live ? (
-                  <button className="btn" onClick={() => recognizer.stop()}>
-                    ⏹ Detener
-                  </button>
-                ) : (
-                  <>
-                    {mine && (
-                      <button className="btn btn--primary" onClick={() => void audio.playClip(mine.url)}>
-                        ▶ Escuchar mi voz
-                      </button>
-                    )}
-                    <button className="btn" onClick={() => void record()}>
-                      🎙 {mine ? 'Otra vez' : 'Grabar'}
-                    </button>
-                  </>
-                )}
-              </div>
-              {mine && !live && (
-                <p className="vscratch__note">
-                  Con los controles de arriba (⏸ barra ⟲) pausás, te movés o repetís.
-                </p>
-              )}
-            </>
           )}
         </div>
       )}
