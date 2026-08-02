@@ -6,7 +6,12 @@
  */
 
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
-import { createAudioService, type AudioService, type AudioState } from './AudioService.ts';
+import {
+  createAudioService,
+  type AudioService,
+  type AudioState,
+  type TransportSnapshot,
+} from './AudioService.ts';
 import { manifest, voiceHints } from '../data/content.ts';
 
 const Ctx = createContext<AudioService | null>(null);
@@ -29,6 +34,14 @@ export function useAudioState(): AudioState {
   const [state, setState] = useState<AudioState>(service.getState());
   useEffect(() => service.subscribe(setState), [service]);
   return state;
+}
+
+/** Snapshot vivo del transporte (posición, duración, pausa) del último audio. */
+export function useAudioTransport(): TransportSnapshot {
+  const service = useAudio();
+  const [snap, setSnap] = useState<TransportSnapshot>(service.getTransport());
+  useEffect(() => service.subscribeTransport(() => setSnap(service.getTransport())), [service]);
+  return snap;
 }
 
 export { FlagAudioButton } from '../ui/FlagAudioButton.tsx';

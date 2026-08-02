@@ -8,7 +8,7 @@
  */
 
 import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
-import { AudioProvider, FlagAudioButton, useAudio, useAudioState } from '../audio/AudioProvider.tsx';
+import { AudioProvider, FlagAudioButton, useAudio, useAudioState, useAudioTransport } from '../audio/AudioProvider.tsx';
 import { atomInAspect, type Aspect, type Atom, type Course, type ReadingAtom, type Skill } from '../../content/schema.ts';
 import { atoms, courseName, courses, units } from '../data/content.ts';
 import { mechanics } from '../mechanics/registry.ts';
@@ -147,7 +147,7 @@ export default function App() {
             Oda <span>· {activeCourse ? courseName(activeCourse) : 'Language Hub'}</span>
           </button>
           <div className="shell__actions">
-            <StopAudioButton />
+            <AudioTransport />
             {/* En sesión, a mano: se marca justo cuando se oyó el audio raro. */}
             {view.name === 'session' && <FlagAudioButton />}
             {history.length > 1 && (
@@ -257,16 +257,79 @@ function StopAudioOnNav({ view }: { view: View }) {
   return null;
 }
 
-/** Botón global para cortar lo que esté sonando. Solo aparece mientras hay audio. */
-function StopAudioButton() {
+/** mm:ss a partir de segundos. '0:00' si no es finito. */
+function fmtTime(s: number): string {
+  if (!Number.isFinite(s) || s < 0) s = 0;
+  const m = Math.floor(s / 60);
+  const sec = Math.floor(s % 60);
+  return `${m}:${sec.toString().padStart(2, '0')}`;
+}
+
+/**
+ * Mini-reproductor del header, sobre el ÚLTIMO audio de archivo: pausa/continuar,
+ * barra para moverse, tiempo, volver a escuchar y cortar. Aparece cuando hay un mp3
+ * cargado (aunque haya terminado, para poder repetirlo) y se va al reemplazarse, al
+ * cortar o al navegar. Con síntesis (Web Speech) no hay transporte: solo "Parar".
+ */
+function AudioTransport() {
   const audio = useAudio();
   const state = useAudioState();
-  if (state !== 'speaking' && state !== 'loading') return null;
-  return (
-    <button className="shell__stop" onClick={() => audio.cancel()} title="Parar el audio">
-      ⏹ Parar audio
-    </button>
-  );
+  const t = useAudioTransport();
+
+  if (t.active) {
+    const max = t.duration || 0;
+    const value = Math.min(t.currentTime, max);
+    return (
+      <div className="transport" role="group" aria-label="Reproductor de audio">
+        <button
+          className="transport__btn"
+          onClick={() => (t.paused ? audio.resume() : audio.pause())}
+          title={t.paused ? 'Continuar' : 'Pausar'}
+          aria-label={t.paused ? 'Continuar' : 'Pausar'}
+        >
+          {t.paused ? '▶' : '⏸'}
+        </button>
+        <button
+          className="transport__btn"
+          onClick={() => audio.replay()}
+          title="Volver a escuchar"
+          aria-label="Volver a escuchar"
+        >
+          ⟲
+        </button>
+        <span className="transport__time">{fmtTime(t.currentTime)}</span>
+        <input
+          className="transport__bar"
+          type="range"
+          min={0}
+          max={max || 0.01}
+          step={0.01}
+          value={value}
+          onChange={(e) => audio.seek(Number(e.target.value))}
+          aria-label="Posición del audio"
+        />
+        <span className="transport__time transport__time--dim">{fmtTime(max)}</span>
+        <button
+          className="transport__btn transport__btn--stop"
+          onClick={() => audio.cancel()}
+          title="Parar el audio"
+          aria-label="Parar el audio"
+        >
+          ⏹
+        </button>
+      </div>
+    );
+  }
+
+  // Sin elemento de archivo (síntesis o cargando): solo se puede cortar.
+  if (state === 'speaking' || state === 'loading') {
+    return (
+      <button className="shell__stop" onClick={() => audio.cancel()} title="Parar el audio">
+        ⏹ Parar audio
+      </button>
+    );
+  }
+  return null;
 }
 
 /* ───────────────────────────────────── home ─────────────────────────────────────── */

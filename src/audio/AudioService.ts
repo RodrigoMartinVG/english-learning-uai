@@ -80,6 +80,24 @@ export interface LastPlayed {
   source: AudioSource;
 }
 
+/**
+ * Estado del mini-reproductor del header: el transporte del ÚLTIMO audio de archivo.
+ *
+ * Solo los mp3 tienen transporte: Web Speech no expone posición ni permite buscar,
+ * así que la síntesis no aparece acá (con ella solo se puede cortar). `active` es
+ * false cuando no hay elemento de audio; el reproductor entonces no se dibuja.
+ * Persiste tras terminar (queda en pausa al final) para poder volver a escucharlo,
+ * hasta que se reemplace por otro audio, se corte, o se navegue a otra pantalla.
+ */
+export interface TransportSnapshot {
+  active: boolean;
+  paused: boolean;
+  /** Segundos. */
+  currentTime: number;
+  /** Segundos. 0 si aún no se conoce la duración. */
+  duration: number;
+}
+
 export interface AudioService {
   speak(req: SpeakRequest): Promise<AudioSource>;
   /**
@@ -94,6 +112,17 @@ export interface AudioService {
   hasFile(key: string): boolean;
   getState(): AudioState;
   subscribe(fn: (s: AudioState) => void): () => void;
+  /** ── Transporte del último audio (mini-reproductor del header) ─────────────── */
+  /** Pausa sin resetear: se puede continuar con resume(). No resuelve el speak(). */
+  pause(): void;
+  /** Continúa desde donde se pausó. */
+  resume(): void;
+  /** Mueve la reproducción a `seconds` (se acota a [0, duración]). */
+  seek(seconds: number): void;
+  /** Vuelve al principio y reproduce de nuevo. */
+  replay(): void;
+  getTransport(): TransportSnapshot;
+  subscribeTransport(fn: () => void): () => void;
   /** Qué sonó último, para poder marcarlo si suena mal. Null si nada sonó aún. */
   getLastPlayed(): LastPlayed | null;
   /** Para el arranque: si esto es false, la app no puede cumplir su función. */
@@ -182,6 +211,25 @@ export function createAudioService(
   let lastPlayed: LastPlayed | null = null;
   const preloaded = new Map<string, HTMLAudioElement>();
 
+  /** Destraba la promesa de playFile en curso (la usa cancel/stopEverything). Solo la
+   *  resuelven `ended`/`error` o un corte explícito — NUNCA una pausa del usuario. */
+  let pendingDone: (() => void) | null = null;
+  /** Quita los listeners de transporte del elemento actual. */
+  let unbindTransport: (() => void) | null = null;
+  const transportListeners = new Set<() => void>();
+  const emitTransport = () => {
+    for (const fn of transportListeners) fn();
+  };
+
+  /** Reemite el snapshot de transporte ante cualquier cambio del elemento. */
+  const bindTransport = (el: HTMLAudioElement): (() => void) => {
+    const evs = ['timeupdate', 'durationchange', 'play', 'pause', 'ended'] as const;
+    for (const e of evs) el.addEventListener(e, emitTransport);
+    return () => {
+      for (const e of evs) el.removeEventListener(e, emitTransport);
+    };
+  };
+
   const setState = (s: AudioState) => {
     if (s === state) return;
     state = s;
@@ -191,10 +239,26 @@ export function createAudioService(
   const stopEverything = () => {
     if (current) {
       current.pause();
-      current.currentTime = 0;
-      current = null;
+      try {
+        current.currentTime = 0;
+      } catch {
+        /* si aún no cargó metadata, ignorar */
+      }
+    }
+    if (unbindTransport) {
+      unbindTransport();
+      unbindTransport = null;
+    }
+    current = null;
+    // Destrabar la reproducción en vuelo: sin esto, su promesa quedaría colgada,
+    // porque ya no escuchamos 'pause' para detectar el corte. Ver playFile.
+    if (pendingDone) {
+      const done = pendingDone;
+      pendingDone = null;
+      done();
     }
     if (typeof speechSynthesis !== 'undefined') speechSynthesis.cancel();
+    emitTransport();
   };
 
   // Cache-busting: el archivo tiene nombre fijo por id (…/en1.u6.p.001.mp3). Si
@@ -204,35 +268,53 @@ export function createAudioService(
   const urlOf = (entry: { src: string; hash?: string }) =>
     AUDIO_BASE + entry.src + (entry.hash ? `?v=${entry.hash}` : '');
 
-  async function playFile(url: string, rate: number, myToken: number): Promise<boolean> {
+  async function playFile(url: string, rate: number, _myToken: number): Promise<boolean> {
     const el = preloaded.get(url) ?? new Audio(url);
     el.playbackRate = rate;
     // Sin esto, bajar la velocidad baja el tono y la voz suena a cinta gastada.
     el.preservesPitch = true;
+    // Un elemento precargado puede venir con posición vieja (se reusa por URL).
+    try {
+      el.currentTime = 0;
+    } catch {
+      /* metadata no cargada aún: arranca en 0 igual */
+    }
     current = el;
+    unbindTransport?.();
+    unbindTransport = bindTransport(el);
+    emitTransport();
 
     try {
       await el.play();
     } catch {
-      return false; // 404, formato no soportado, autoplay bloqueado, o lo cancelaron.
+      // 404, formato no soportado, autoplay bloqueado, o lo cancelaron: soltar el
+      // elemento para que no quede colgado en el transporte, y caer al fallback.
+      if (current === el) {
+        unbindTransport?.();
+        unbindTransport = null;
+        current = null;
+        emitTransport();
+      }
+      return false;
     }
 
     await new Promise<void>((resolve) => {
       const done = () => {
         el.removeEventListener('ended', done);
         el.removeEventListener('error', done);
-        // 'pause' es indispensable: cancel() llama pause(), que NO dispara
-        // 'ended' ni 'error'. Sin escucharlo, esta promesa quedaba colgada para
-        // siempre y sus listeners nunca se soltaban.
-        el.removeEventListener('pause', done);
+        pendingDone = null;
         resolve();
       };
       el.addEventListener('ended', done);
       el.addEventListener('error', done);
-      el.addEventListener('pause', done);
+      // Un corte (cancel/nuevo speak) resuelve vía pendingDone; una pausa del
+      // usuario NO — por eso ya no escuchamos 'pause' acá.
+      pendingDone = done;
     });
 
-    if (myToken === token) current = null;
+    // Al terminar solo (no cortado) dejamos `current` apuntando al elemento en pausa
+    // al final: así el mini-reproductor sigue visible para volver a escucharlo. Se
+    // limpia recién con el próximo speak(), un corte, o al navegar.
     return true;
   }
 
@@ -282,6 +364,58 @@ export function createAudioService(
     subscribe(fn) {
       listeners.add(fn);
       return () => listeners.delete(fn);
+    },
+
+    subscribeTransport(fn) {
+      transportListeners.add(fn);
+      return () => transportListeners.delete(fn);
+    },
+
+    getTransport() {
+      const el = current;
+      if (!el) return { active: false, paused: true, currentTime: 0, duration: 0 };
+      return {
+        active: true,
+        paused: el.paused,
+        currentTime: el.currentTime || 0,
+        duration: Number.isFinite(el.duration) ? el.duration : 0,
+      };
+    },
+
+    pause() {
+      if (current && !current.paused) {
+        current.pause();
+        emitTransport();
+      }
+    },
+
+    resume() {
+      if (current && current.paused) {
+        void current.play().catch(() => {});
+        emitTransport();
+      }
+    },
+
+    seek(seconds) {
+      if (!current) return;
+      const dur = Number.isFinite(current.duration) ? current.duration : seconds;
+      try {
+        current.currentTime = Math.max(0, Math.min(seconds, dur));
+      } catch {
+        /* metadata no lista: ignorar */
+      }
+      emitTransport();
+    },
+
+    replay() {
+      if (!current) return;
+      try {
+        current.currentTime = 0;
+      } catch {
+        /* ignorar */
+      }
+      void current.play().catch(() => {});
+      emitTransport();
     },
 
     cancel() {
