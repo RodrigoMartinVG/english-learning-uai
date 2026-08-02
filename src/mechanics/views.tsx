@@ -12,6 +12,8 @@ import { ListeningView } from './listening/ListeningView.tsx';
 import { DictationView } from './dictation/DictationView.tsx';
 import { EchoTypeView } from './echo-type/EchoTypeView.tsx';
 import { EchoSayView } from './echo-say/EchoSayView.tsx';
+import { EsToEnWriteView } from './es-to-en/WriteView.tsx';
+import { EsToEnSayView } from './es-to-en/SayView.tsx';
 import { QuestionFormerView } from './question-former/QuestionFormerView.tsx';
 import { SyntaxBuilderView } from './syntax-builder/SyntaxBuilderView.tsx';
 import { MinimalPairsView } from './minimal-pairs/MinimalPairsView.tsx';
@@ -28,6 +30,8 @@ import { listening } from './listening/mechanic.ts';
 import { dictation } from './dictation/mechanic.ts';
 import { echoType } from './echo-type/mechanic.ts';
 import { echoSay } from './echo-say/mechanic.ts';
+import { esToEnWrite } from './es-to-en/write.ts';
+import { esToEnSay } from './es-to-en/say.ts';
 import { questionFormer } from './question-former/mechanic.ts';
 import { syntaxBuilder } from './syntax-builder/mechanic.ts';
 import { shadowing } from './shadowing/mechanic.ts';
@@ -46,6 +50,8 @@ export const views: Record<string, ComponentType<MechanicViewProps<any>>> = {
   [dictation.id]: DictationView,
   [echoType.id]: EchoTypeView,
   [echoSay.id]: EchoSayView,
+  [esToEnWrite.id]: EsToEnWriteView,
+  [esToEnSay.id]: EsToEnSayView,
   [questionFormer.id]: QuestionFormerView,
   [syntaxBuilder.id]: SyntaxBuilderView,
   [pingPong.id]: PingPongView,

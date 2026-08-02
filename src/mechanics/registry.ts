@@ -15,6 +15,8 @@ import { listening } from './listening/mechanic.ts';
 import { dictation } from './dictation/mechanic.ts';
 import { echoType } from './echo-type/mechanic.ts';
 import { echoSay } from './echo-say/mechanic.ts';
+import { esToEnWrite } from './es-to-en/write.ts';
+import { esToEnSay } from './es-to-en/say.ts';
 import { questionFormer } from './question-former/mechanic.ts';
 import { syntaxBuilder } from './syntax-builder/mechanic.ts';
 import { minimalPairs } from './minimal-pairs/mechanic.ts';
@@ -35,9 +37,11 @@ export const mechanics: Mechanic<any>[] = [
   cloze,
   dictation,
   echoType,
+  esToEnWrite,
   pingPong,
   shadowing,
   echoSay,
+  esToEnSay,
   rolePlay,
   questionFormer,
   scriptBuilder,
