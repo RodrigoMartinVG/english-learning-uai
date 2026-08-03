@@ -107,6 +107,22 @@ test('repaso: un tema casi terminado estrena varios átomos nuevos, no uno', () 
   assert.ok(estrenados.size >= 3, `debería estrenar los 3 átomos nuevos, estrenó ${estrenados.size}`);
 });
 
+test('repaso: no repite la misma tarjeta (átomo·habilidad·variante) en una tanda', () => {
+  // Varias mecánicas comparten tarjeta; sin deduplicar, una sesión de 12 caía sobre
+  // pocas tarjetas y el contador de vencidas casi no bajaba. Todo vencido → la tanda
+  // debe cubrir tarjetas distintas.
+  const sched: Scheduler = { isDue: () => true, isNew: () => false, retrievability: () => 0.5 };
+  const s = buildSession(
+    { scope: { kind: 'unit', course: 'en1', unit: 1 }, mode: 'review', length: 12 },
+    atoms,
+    aspects,
+    'u1',
+    sched
+  );
+  const keys = s.steps.map((st) => `${st.atomId}|${st.skill}|${st.variant ?? ''}`);
+  assert.equal(new Set(keys).size, keys.length, `hay tarjetas repetidas: ${keys.join(', ')}`);
+});
+
 test('cada paso apunta a un átomo y mecánica reales', () => {
   const s = buildSession({ scope: { kind: 'unit', course: 'en1', unit: 1 }, mode: 'discover', length: 12 }, atoms, aspects, 'u1');
   const ids = new Set(atoms.map((a) => a.id));

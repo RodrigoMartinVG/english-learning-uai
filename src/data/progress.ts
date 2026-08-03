@@ -109,6 +109,23 @@ export function statsFor(prefix?: string, now = new Date()): Stats {
 }
 
 /**
+ * Igual que statsFor, pero acotado a un conjunto de unidades del curso. Lo usa el
+ * repaso global cuando hay un filtro de unidades activo: así el número de "vencidas"
+ * refleja lo que la sesión realmente va a repasar (antes contaba TODO el curso, y el
+ * contador nunca bajaba al repasar solo algunas unidades → parecía "clavado").
+ */
+export function statsForUnits(course: string, unitNums: number[], now = new Date()): Stats {
+  const allowed = new Set(unitNums.map((u) => `${course}.u${u}`));
+  const entries = Object.entries(store.cards).filter(([k]) => allowed.has(unitOf(k)));
+  return {
+    seen: entries.length,
+    due: entries.filter(([, c]) => isDue(c, now)).length,
+    learned: entries.filter(([, c]) => c.stability >= LEARNED_DAYS).length,
+    lapses: entries.reduce((s, [, c]) => s + c.lapses, 0),
+  };
+}
+
+/**
  * Cobertura por átomo: cuántos ya PRACTICASTE (tienen tarjeta) y cuántos DOMINÁS
  * (estabilidad ≥ 21 días), sobre el total. Cuenta átomos distintos, no tarjetas —
  * así el progreso por tema se lee 1:1 con los átomos y avanza apenas practicás,

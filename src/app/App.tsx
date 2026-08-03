@@ -29,6 +29,7 @@ import {
   type AtomProgress,
   skillStateOf,
   statsFor,
+  statsForUnits,
   subscribeProgress,
 } from '../data/progress.ts';
 import { SessionPlayer } from './SessionPlayer.tsx';
@@ -374,9 +375,9 @@ function Home({
   onReset: () => void;
 }) {
   useProgress();
-  // Todo acotado al curso elegido: stats por prefijo `enN.`, unidades del curso,
-  // y el repaso global con scope de curso.
-  const stats = statsFor(course);
+  // Todo acotado al curso elegido: unidades del curso y el repaso global con scope
+  // de curso. Las `stats` se calculan MÁS ABAJO, ya acotadas a las unidades incluidas
+  // en el filtro, para que el número de vencidas coincida con lo que se va a repasar.
   const courseUnits = units.filter((u) => u.course === course);
   const courseAspects = courseUnits.flatMap((u) => u.aspects);
 
@@ -403,6 +404,10 @@ function Home({
       }
       return next;
     });
+
+  // Vencidas/seen/dominadas acotadas al filtro de unidades: el número refleja lo
+  // que el repaso global va a traer, y baja al repasar (antes contaba todo el curso).
+  const stats = statsForUnits(course, [...included]);
 
   const today = () =>
     onStart(

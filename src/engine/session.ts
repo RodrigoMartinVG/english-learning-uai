@@ -251,10 +251,27 @@ function scheduleReview(
   sch: Scheduler,
   includeFresh = true
 ): Step[] {
-  const due = candidates
-    .filter((c) => sch.isDue(c.step) && !sch.isNew(c.step))
-    .sort((a, b) => sch.retrievability(a.step) - sch.retrievability(b.step));
-  const rest = candidates.filter((c) => !sch.isDue(c.step) && !sch.isNew(c.step));
+  // Una tanda debe cubrir tarjetas DISTINTAS. La tarjeta de SRS es (átomo, habilidad,
+  // variante); varias mecánicas comparten tarjeta, así que sin deduplicar una sesión
+  // de 12 podía caer sobre 3-4 tarjetas (la misma repetida en varios modos) y el
+  // contador de vencidas casi no bajaba. Se deja una candidata por tarjeta.
+  const cardKey = (s: Step) => `${s.atomId}|${s.skill}|${s.variant ?? ''}`;
+  const oncePerCard = (list: { step: Step; level: number }[]) => {
+    const seen = new Set<string>();
+    return list.filter((c) => {
+      const k = cardKey(c.step);
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+  };
+
+  const due = oncePerCard(
+    candidates
+      .filter((c) => sch.isDue(c.step) && !sch.isNew(c.step))
+      .sort((a, b) => sch.retrievability(a.step) - sch.retrievability(b.step))
+  );
+  const rest = oncePerCard(candidates.filter((c) => !sch.isDue(c.step) && !sch.isNew(c.step)));
 
   // Un átomo está EMPEZADO si alguno de sus pasos ya no es nuevo (tiene tarjeta).
   const startedAtoms = new Set(
