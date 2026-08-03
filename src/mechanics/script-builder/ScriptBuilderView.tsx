@@ -32,15 +32,18 @@ interface Chunk {
 }
 
 export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBuilderRound>) {
-  const { target } = round;
+  const { target, version } = round; // la versión es fija: cada una es su propio ejercicio
   const steps = target.steps ?? [];
   const variants = useMemo(() => target.modelVariants ?? [], [target]);
   const audio = useAudio();
   const expected = useMemo(() => expectedWords(target), [target]);
+  // Crear el tuyo (tu producción libre, guiada por las preguntas de A) es
+  // version-agnóstico: se ofrece solo en el ejercicio de la Versión A, para no
+  // repetirlo idéntico en B/C.
+  const isBaseVersion = version === 0;
 
   const [phase, setPhase] = useState<Phase>('brief');
   const [flow, setFlow] = useState<Flow>('copy');
-  const [version, setVersion] = useState(0); // 0 = A (modelAnswer); k = modelVariants[k-1]
   const [exam, setExam] = useState(false); // sub-modo de reconstruir
   const [whole, setWhole] = useState(false); // sub-modo de crear: todo de corrido
   const [idx, setIdx] = useState(0);
@@ -178,28 +181,15 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
   if (phase === 'brief') {
     return (
       <div className="build">
-        <p className="build__eyebrow">Armá el guion</p>
-        <h2>Tres maneras de armarlo</h2>
-        <p className="build__note">
-          Copiá el modelo frase por frase, reconstruilo de memoria, o creá el tuyo.
+        <p className="build__eyebrow">
+          Armá el guion{versionCount > 1 ? ` · ${versionLabel(version)}` : ''}
         </p>
-
-        {versionCount > 1 && (
-          <div className="build__versions">
-            <span className="build__versions-label">Qué versión practicar (Copiar / Reconstruir):</span>
-            <div className="aspect__chips">
-              {Array.from({ length: versionCount }, (_, v) => (
-                <button
-                  key={v}
-                  className={'chip' + (version === v ? ' chip--on' : '')}
-                  onClick={() => setVersion(v)}
-                >
-                  {versionLabel(v)}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
+        <h2>{isBaseVersion ? 'Copiá, reconstruí o creá' : `Practicá la ${versionLabel(version)}`}</h2>
+        <p className="build__note">
+          {isBaseVersion
+            ? 'Copiá el modelo frase por frase, reconstruilo de memoria, o creá el tuyo.'
+            : 'Copiá esta versión frase por frase, o reconstruila de memoria.'}
+        </p>
 
         <div className="build__choice">
           <button className="btn btn--primary btn--wide" onClick={() => start('copy')}>
@@ -223,22 +213,25 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
           </label>
         </div>
 
-        <div className="build__choice">
-          <button className="btn btn--wide" onClick={() => start('create')}>
-            ✍️ Crear el tuyo →
-          </button>
-          <p className="build__choice-note">
-            Tu versión, guiada por las preguntas, con transcripción <strong>en vivo</strong> (el
-            vocabulario del tema en verde) y te podés escuchar.
-          </p>
-          <label className="build__toggle">
-            <input type="checkbox" checked={whole} onChange={(e) => setWhole(e.target.checked)} />
-            <span>
-              De corrido: decilo <strong>todo junto</strong>, con la guía a la vista.{' '}
-              <em>Sin esto, paso a paso.</em>
-            </span>
-          </label>
-        </div>
+        {/* Crear el tuyo es version-agnóstico: solo en el ejercicio de la Versión A. */}
+        {isBaseVersion && (
+          <div className="build__choice">
+            <button className="btn btn--wide" onClick={() => start('create')}>
+              ✍️ Crear el tuyo →
+            </button>
+            <p className="build__choice-note">
+              Tu versión, guiada por las preguntas, con transcripción <strong>en vivo</strong> (el
+              vocabulario del tema en verde) y te podés escuchar.
+            </p>
+            <label className="build__toggle">
+              <input type="checkbox" checked={whole} onChange={(e) => setWhole(e.target.checked)} />
+              <span>
+                De corrido: decilo <strong>todo junto</strong>, con la guía a la vista.{' '}
+                <em>Sin esto, paso a paso.</em>
+              </span>
+            </label>
+          </div>
+        )}
       </div>
     );
   }

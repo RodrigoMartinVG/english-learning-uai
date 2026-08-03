@@ -15,6 +15,9 @@ import type { Mechanic } from '../types.ts';
 
 export interface ScriptBuilderRound {
   target: ProductionAtom;
+  /** Qué versión se practica: 0 = A (modelAnswer), k = modelVariants[k-1]. Cada
+   *  versión es un ejercicio distinto (una `variant` propia), no una opción interna. */
+  version: number;
 }
 
 /**
@@ -37,8 +40,18 @@ export const scriptBuilder: Mechanic<ScriptBuilderRound> = {
     return atom.kind === 'production' && (atom.steps?.length ?? 0) >= 2;
   },
 
-  buildRound(target: Atom): ScriptBuilderRound | null {
+  // Una variante por versión del modelo (A + modelVariants). Así el motor arma un
+  // ejercicio —y una tarjeta SRS— separado por versión, en vez de un selector interno.
+  variants(atom: Atom): string[] {
+    if (atom.kind !== 'production') return [];
+    const n = 1 + (atom.modelVariants?.length ?? 0);
+    return Array.from({ length: n }, (_, v) => String(v));
+  },
+
+  buildRound(target: Atom, _pool: Atom[], variant?: string): ScriptBuilderRound | null {
     if (target.kind !== 'production' || !target.steps || target.steps.length < 2) return null;
-    return { target };
+    const version = variant ? Number(variant) : 0;
+    if (!Number.isFinite(version) || version < 0) return null;
+    return { target, version };
   },
 };
