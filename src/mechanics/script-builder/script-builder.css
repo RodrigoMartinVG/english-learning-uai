@@ -76,6 +76,18 @@
   margin-bottom: 1rem;
 }
 
+/* Ancla en español: de qué hablar en este bloque (recordar por sentido, no palabra). */
+.build__anchor {
+  margin: -0.4rem 0 0.9rem;
+  padding: 0.5rem 0.7rem;
+  border-left: 2px solid var(--accent-dim, var(--border));
+  background: var(--surface-hi);
+  border-radius: var(--radius-sm);
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
 .build__play {
   flex: none;
   background: var(--surface-hi);

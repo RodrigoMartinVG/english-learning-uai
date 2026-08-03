@@ -193,17 +193,20 @@ export default function App() {
               unit={units.find((u) => u.course === view.course && u.unit === view.unit)!}
               textId={view.textId}
               only={view.only}
-              onReconstruct={(atomId) =>
-                start(
-                  buildSession(
-                    { scope: { kind: 'atoms', atomIds: [atomId] }, mode: 'drill', length: DEFAULT_LENGTH, mechanicId: 'script-builder' },
-                    atoms,
-                    units.find((u) => u.course === view.course && u.unit === view.unit)!.aspects,
-                    'Armá el guion',
-                    scheduler
-                  )
-                )
-              }
+              onReconstruct={(atomId, version) => {
+                // Entrada manual desde la vista de modelos: se arma UNA versión elegida
+                // por el alumno. buildSession genera un paso por versión (variant); nos
+                // quedamos con el de la versión pedida.
+                const s = buildSession(
+                  { scope: { kind: 'atoms', atomIds: [atomId] }, mode: 'drill', length: DEFAULT_LENGTH, mechanicId: 'script-builder' },
+                  atoms,
+                  units.find((u) => u.course === view.course && u.unit === view.unit)!.aspects,
+                  'Armá el guion',
+                  scheduler
+                );
+                const only = s.steps.filter((st) => st.variant === String(version));
+                start({ ...s, steps: only.length ? only : s.steps });
+              }}
               onBack={back}
             />
           )}

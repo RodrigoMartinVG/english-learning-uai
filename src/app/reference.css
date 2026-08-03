@@ -37,6 +37,9 @@
   transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
 }
 .ref__reconstruct:hover { transform: translateY(-1px); }
+/* Botón por versión: se arma exactamente esa versión (elegida a mano). */
+.ref__reconstruct--version { margin: 10px 0 0; }
+.ref__hint { font-size: 12px; color: var(--text-faint); margin: 0 0 14px; line-height: 1.4; }
 .ref__version { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 12px; }
 .ref__version:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
 .ref__version-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }

@@ -28,8 +28,10 @@ export function ReferenceView({
   textId?: string;
   /** Mostrar una sola sección (sin solapas): la guía, o los guiones. */
   only?: 'guide' | 'scripts';
-  /** Arranca "Armá el guion" sobre este script, desde acá mismo. */
-  onReconstruct?: (atomId: string) => void;
+  /** Arranca "Armá el guion" sobre este script, en la VERSIÓN elegida (0 = A, 1 = B…).
+   *  Acá es entrada manual: el alumno elige qué versión trabajar (a diferencia del
+   *  repaso, donde el sistema propone versiones como ejercicios separados). */
+  onReconstruct?: (atomId: string, version: number) => void;
   onBack: () => void;
 }) {
   const audio = useAudio();
@@ -129,9 +131,10 @@ export function ReferenceView({
               <h2>{s.title}</h2>
               <p className="ref__prompt">{s.prompt}</p>
               {s.buildable && onReconstruct && (
-                <button className="ref__reconstruct" onClick={() => onReconstruct(s.id)}>
-                  🎤 Armá este guion — copialo, reconstruilo o creá el tuyo →
-                </button>
+                <p className="ref__hint">
+                  Elegí una versión y tocá <strong>Armá esta versión</strong> para copiarla,
+                  reconstruirla o crear la tuya.
+                </p>
               )}
               {s.versions.map((v, i) => (
                 <div key={i} className="ref__version">
@@ -149,6 +152,14 @@ export function ReferenceView({
                       speakerId={s.speakerId}
                       voices={MODEL_VOICES}
                     />
+                  )}
+                  {s.buildable && onReconstruct && (
+                    <button
+                      className="ref__reconstruct ref__reconstruct--version"
+                      onClick={() => onReconstruct(s.id, i)}
+                    >
+                      🎤 Armá esta versión →
+                    </button>
                   )}
                 </div>
               ))}

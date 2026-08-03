@@ -29,6 +29,8 @@ interface Chunk {
   audioKey: string;
   /** La pregunta guía (solo la Versión A la tiene). */
   prompt?: string;
+  /** Ancla en español: de qué hablar en este bloque, para recordar por sentido. */
+  hint?: string;
 }
 
 export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBuilderRound>) {
@@ -86,6 +88,7 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
         text: s.segment,
         audioKey: stepSegmentKey(target.id, i),
         prompt: s.prompt,
+        hint: s.hint,
       }));
     }
     return splitSentences(variants[version - 1]!).map((sent, m) => ({
@@ -304,6 +307,7 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
                 <p>Recordá y decí la parte {idx + 1} del guion.</p>
               )}
             </div>
+            {chunk.hint && <p className="build__anchor">🧭 {chunk.hint}</p>}
             {!revealed ? (
               exam ? (
                 <SpeakPanel
