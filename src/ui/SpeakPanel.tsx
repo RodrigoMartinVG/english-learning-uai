@@ -48,6 +48,11 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
   const [interim, setInterim] = useState('');
   const [verdict, setVerdict] = useState<SpeechVerdict | null>(null);
   const [mine, setMine] = useState<Recording | null>(null);
+  // Las hipótesis del reconocedor (ordenadas por su ranking) y cuál elegimos por
+  // ser la que mejor matchea el objetivo. Sirve de feedback: si tu forma correcta
+  // no quedó 1ª, con mejor pronunciación puede trepar.
+  const [alts, setAlts] = useState<string[]>([]);
+  const [chosenIdx, setChosenIdx] = useState(0);
   // "Dar por bueno": el ASR transcribe, no juzga pronunciación. Si una palabra
   // rara no quedó bien detectada pero el alumno la dijo bien, puede darla por
   // buena y que cuente como correcta. Es honesto con lo que la API sí puede hacer.
@@ -82,6 +87,8 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
     setVerdict(null);
     setInterim('');
     setAccepted(false);
+    setAlts([]);
+    setChosenIdx(0);
     canceled.current = false;
     mine?.revoke();
     setMine(null);
@@ -97,7 +104,7 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
     }
 
     try {
-      const { transcript } = await recognizer.listen({
+      const { transcript, alternatives } = await recognizer.listen({
         lang,
         hints: grammarHints(neighbourhood),
         // continuous + tiempos holgados: el navegador ya no corta en la primera
@@ -118,12 +125,27 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
       setMine(rec);
       setInterim('');
 
-      // Con varios objetivos válidos gana el mejor: en Ping-Pong no hay UNA
-      // respuesta correcta a "Where are you from?".
-      const best = targets
-        .map((t) => gradeSpeech(t, transcript))
-        .sort((a, b) => Number(b.match) - Number(a.match) || b.accuracy - a.accuracy)[0]!;
-      setVerdict(best);
+      // Elegimos, entre las hipótesis del reconocedor (rankeadas), la que mejor
+      // matchea algún objetivo. Así una pronunciación válida que el motor dejó 2ª no
+      // se pierde. `chosen` (su ranking) es la señal: si no quedó 1ª, hay que afinar.
+      // Con varios objetivos válidos gana el mejor (en Ping-Pong no hay UNA respuesta).
+      const hyps = alternatives.length ? alternatives : [transcript];
+      const gradeOf = (text: string) =>
+        targets
+          .map((t) => gradeSpeech(t, text))
+          .sort((a, b) => Number(b.match) - Number(a.match) || b.accuracy - a.accuracy)[0]!;
+      let chosen = 0;
+      let chosenV = gradeOf(hyps[0]!);
+      for (let i = 1; i < hyps.length; i++) {
+        const v = gradeOf(hyps[i]!);
+        if (Number(v.match) - Number(chosenV.match) > 0 || (v.match === chosenV.match && v.accuracy > chosenV.accuracy)) {
+          chosenV = v;
+          chosen = i;
+        }
+      }
+      setAlts(hyps);
+      setChosenIdx(chosen);
+      setVerdict(chosenV);
     } catch {
       recorder.cancel();
       setInterim('');
@@ -235,6 +257,28 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
             ))}
           </p>
           <p className="speak__heard">Se oyó: “{verdict.transcript || '—'}”</p>
+
+          {/* La señal honesta del ranking: si tu forma correcta no quedó 1ª, el micro
+              te entendió pero dudó — con mejor pronunciación puede trepar al 1º. */}
+          {alts.length > 1 && chosenIdx > 0 && (
+            <p className="speak__climb">
+              El micro puso 1º a “{alts[0]}”. Tu forma quedó {chosenIdx + 1}ª — afiná la
+              pronunciación para que suba al 1º.
+            </p>
+          )}
+          {alts.length > 1 && (
+            <details className="speak__alts">
+              <summary>Ver las {alts.length} opciones que escuchó</summary>
+              <ol>
+                {alts.map((a, i) => (
+                  <li key={i} className={i === chosenIdx ? 'speak__alts--chosen' : ''}>
+                    {a}
+                    {i === chosenIdx ? ' ✓' : ''}
+                  </li>
+                ))}
+              </ol>
+            </details>
+          )}
 
           {/* El cotejo A/B: la única evaluación real de prosodia que tenemos. */}
           {mine && (

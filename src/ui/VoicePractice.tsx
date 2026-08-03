@@ -102,7 +102,7 @@ export function VoicePractice() {
     }
 
     try {
-      const { transcript } = await recognizer.listen({
+      const { transcript, alternatives } = await recognizer.listen({
         lang: 'en-US',
         hints: hasTarget ? grammarHints([target]) : undefined,
         continuous: true,
@@ -113,7 +113,12 @@ export function VoicePractice() {
       const rec = await recorder.stop();
       setMine(rec);
       setInterim('');
-      const v = gradeSpeech(target.trim() || transcript, transcript);
+      // Elegimos, entre las hipótesis del reconocedor, la que mejor matchea el objetivo.
+      const goal = target.trim() || transcript;
+      const hyps = alternatives.length ? alternatives : [transcript];
+      const v = hyps
+        .map((h) => gradeSpeech(goal, h))
+        .sort((a, b) => Number(b.match) - Number(a.match) || b.accuracy - a.accuracy)[0]!;
       setVerdict(v);
       if (hasTarget) {
         setAttempts((n) => n + 1);

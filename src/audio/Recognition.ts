@@ -25,6 +25,13 @@ export interface RecognitionResult {
   transcript: string;
   /** Confianza del motor, 0..1. Orientativa: no es una nota. */
   confidence: number;
+  /**
+   * Hipótesis del motor, ordenadas por su ranking ([0] = su mejor apuesta = igual a
+   * `transcript`). El motor SIEMPRE calcula varias; con `maxAlternatives > 1` nos las
+   * entrega. Quien corrige elige la que mejor matchea el objetivo, y el ranking sirve
+   * de señal honesta de claridad (si tu forma correcta no quedó 1ª, hay que afinar).
+   */
+  alternatives: string[];
 }
 
 export interface ListenOptions {
@@ -53,6 +60,9 @@ export interface ListenOptions {
    * gobiernen el corte en vez del fin-de-habla agresivo del navegador.
    */
   continuous?: boolean;
+  /** Cuántas hipótesis pedirle al motor. >1 permite rescatar la forma correcta
+   *  cuando la apuesta nº1 salió mal. Por defecto 5. */
+  maxAlternatives?: number;
   /** Transcripción parcial, para dar feedback mientras habla. */
   onInterim?: (text: string) => void;
   /**
@@ -137,7 +147,7 @@ export function createRecognizer(): Recognizer {
         active = rec;
         rec.lang = opts.lang ?? 'en-US';
         rec.interimResults = true;
-        rec.maxAlternatives = 1;
+        rec.maxAlternatives = opts.maxAlternatives ?? 5;
         rec.continuous = opts.continuous ?? false;
 
         // Grammar hints: la propiedad infrautilizada del PRD. Puede no existir
@@ -157,6 +167,41 @@ export function createRecognizer(): Recognizer {
         let best = '';
         let confidence = 0;
         let settled = false;
+        // Alternativas por segmento final (cada uno con sus hipótesis rankeadas).
+        const finalAlts: string[][] = [];
+
+        // Arma las hipótesis de la frase COMPLETA. Caso común (un solo segmento): son
+        // las hipótesis de ese segmento. En continuo (varios segmentos) se varía uno
+        // por vez desde la apuesta principal — cubre el "una palabra mal oída" sin
+        // explotar en combinaciones. [0] siempre es la apuesta nº1 del motor.
+        const buildAlternatives = (): string[] => {
+          if (!finalAlts.length) return best.trim() ? [best.trim()] : [];
+          const primaryParts = finalAlts.map((a) => a[0] ?? '');
+          const out: string[] = [];
+          const seen = new Set<string>();
+          const add = (parts: string[]) => {
+            const s = parts.join('').trim();
+            if (s && !seen.has(s)) {
+              seen.add(s);
+              out.push(s);
+            }
+          };
+          add(primaryParts); // la nº1 va primera
+          finalAlts.forEach((alts, i) => {
+            for (const alt of alts) {
+              const parts = primaryParts.slice();
+              parts[i] = alt;
+              add(parts);
+            }
+          });
+          return out;
+        };
+
+        const buildResult = (): RecognitionResult => ({
+          transcript: best.trim(),
+          confidence,
+          alternatives: buildAlternatives(),
+        });
 
         const finish = (fn: () => void) => {
           if (settled) return;
@@ -201,6 +246,9 @@ export function createRecognizer(): Recognizer {
             if (r.isFinal) {
               best += r[0].transcript;
               confidence = r[0].confidence ?? 0;
+              const alts: string[] = [];
+              for (let j = 0; j < r.length; j++) if (r[j]?.transcript) alts.push(r[j].transcript);
+              finalAlts.push(alts);
             } else {
               interim += r[0].transcript;
             }
@@ -217,14 +265,14 @@ export function createRecognizer(): Recognizer {
           }
           // 'no-speech' y 'aborted' no son fallas: el alumno no dijo nada.
           if (e.error === 'no-speech' || e.error === 'aborted') {
-            finish(() => resolve({ transcript: best.trim(), confidence }));
+            finish(() => resolve(buildResult()));
             return;
           }
           setState('error');
           finish(() => reject(new Error(e.error ?? 'error de reconocimiento')));
         };
 
-        rec.onend = () => finish(() => resolve({ transcript: best.trim(), confidence }));
+        rec.onend = () => finish(() => resolve(buildResult()));
 
         setState('starting');
         try {
