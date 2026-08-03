@@ -19,6 +19,7 @@ import {
 import { createRecorder, isRecordingSupported, type Recording } from '../audio/Recorder.ts';
 import { useAudio } from '../audio/AudioProvider.tsx';
 import { gradeSpeech, grammarHints, type SpeechVerdict } from '../engine/grading/speech.ts';
+import { CORTES, getCorte, setCorte, nextCorte, type Corte } from '../audio/micSettings.ts';
 import './speak.css';
 
 export interface SpeakPanelProps {
@@ -56,6 +57,14 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
   const canceled = useRef(false);
   // La grabación se entregó al padre (onDone): no revocarla al desmontar.
   const handedOff = useRef(false);
+  // Cuánto espera el micro antes de cortar solo. Preferencia global (compartida
+  // con el Banco de práctica), configurable acá mismo antes de grabar.
+  const [corte, setCorteState] = useState<Corte>(getCorte);
+  const cycleCorte = () => {
+    const n = nextCorte(corte);
+    setCorteState(n);
+    setCorte(n);
+  };
 
   useEffect(() => recognizer.subscribe(setState), [recognizer]);
   useEffect(
@@ -95,8 +104,8 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
         // pausa. leadMs da tiempo a arrancar; silenceMs perdona una pausa para
         // pensar la palabra siguiente antes de cerrar la toma.
         continuous: true,
-        leadMs: 8000,
-        silenceMs: 3000,
+        leadMs: CORTES[corte].lead,
+        silenceMs: CORTES[corte].silence,
         onInterim: setInterim,
       });
       // Cancelado a mano: no calificar, volver al micro para reintentar.
@@ -119,7 +128,7 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
       recorder.cancel();
       setInterim('');
     }
-  }, [lang, neighbourhood, targets, recognizer, recorder, mine]);
+  }, [lang, neighbourhood, targets, recognizer, recorder, mine, corte]);
 
   // Terminar a mano: cierra la toma y califica lo dicho hasta ahí (no espera el
   // auto-corte por silencio, que a veces tarda).
@@ -182,6 +191,16 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
           <p className="speak__interim" aria-live="polite">
             {interim || (state === 'listening' ? '…' : 'Tocá el micrófono y decilo en voz alta')}
           </p>
+          {!busy && (
+            // Cuánto espera antes de cortar solo. Preferencia global; se toca antes de grabar.
+            <button
+              className="speak__corte"
+              onClick={cycleCorte}
+              title="Cuánto espera el micrófono antes de cortar solo"
+            >
+              corte: {CORTES[corte].label}
+            </button>
+          )}
           {busy && (
             // Cortar a mano: terminar ya (y calificar) o cancelar (descartar y
             // reintentar), sin esperar el auto-corte por silencio. Sutiles: no compiten

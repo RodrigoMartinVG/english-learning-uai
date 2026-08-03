@@ -87,6 +87,18 @@
   margin-top: 6px;
 }
 
+/* Ajuste de corte (auto-terminación): texto tenue, solo antes de grabar. */
+.speak__corte {
+  font-size: 12px;
+  color: var(--text-faint);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  transition: color var(--dur) var(--ease);
+}
+.speak__corte:hover {
+  color: var(--text-dim);
+}
+
 /* Terminar / Cancelar mientras graba: chiquitos y sutiles, no compiten con el micro. */
 .speak__live {
   display: flex;

@@ -17,18 +17,11 @@ import { useAudio } from '../audio/AudioProvider.tsx';
 import { createRecognizer, isRecognitionSupported, type RecognitionState } from '../audio/Recognition.ts';
 import { createRecorder, isRecordingSupported, type Recording } from '../audio/Recorder.ts';
 import { gradeSpeech, grammarHints, type SpeechVerdict } from '../engine/grading/speech.ts';
+import { CORTES, getCorte, setCorte, nextCorte, type Corte } from '../audio/micSettings.ts';
 import './speak.css'; // clases .w del diff, compartidas
 import './voicepractice.css';
 
-type Corte = 'rapido' | 'normal' | 'paciente';
-const CORTES: Record<Corte, { lead: number; silence: number; label: string }> = {
-  rapido: { lead: 5000, silence: 1500, label: 'rápido' },
-  normal: { lead: 8000, silence: 3000, label: 'normal' },
-  paciente: { lead: 12000, silence: 5000, label: 'paciente' },
-};
-const CORTE_ORDER: Corte[] = ['rapido', 'normal', 'paciente'];
 const TARGET_KEY = 'oda.practice.target';
-const CORTE_KEY = 'oda.practice.corte';
 
 export function VoicePractice() {
   const audio = useAudio();
@@ -45,14 +38,7 @@ export function VoicePractice() {
       return '';
     }
   });
-  const [corte, setCorte] = useState<Corte>(() => {
-    try {
-      const v = localStorage.getItem(CORTE_KEY) as Corte | null;
-      return v && v in CORTES ? v : 'normal';
-    } catch {
-      return 'normal';
-    }
-  });
+  const [corte, setCorteState] = useState<Corte>(getCorte);
   const [interim, setInterim] = useState('');
   const [verdict, setVerdict] = useState<SpeechVerdict | null>(null);
   const [mine, setMine] = useState<Recording | null>(null);
@@ -88,13 +74,9 @@ export function VoicePractice() {
   };
 
   const cycleCorte = () => {
-    const next = CORTE_ORDER[(CORTE_ORDER.indexOf(corte) + 1) % CORTE_ORDER.length]!;
-    setCorte(next);
-    try {
-      localStorage.setItem(CORTE_KEY, next);
-    } catch {
-      /* ignore */
-    }
+    const n = nextCorte(corte);
+    setCorteState(n);
+    setCorte(n);
   };
 
   // Oír el objetivo con la voz del navegador (no hay mp3 para texto arbitrario:
