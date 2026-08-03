@@ -5,7 +5,7 @@
 >
 > Convención de estado: ✅ hecho · 🔨 en curso · ⬜ pendiente · 💡 idea/deseable
 
-Última actualización: 2026-07-18.
+Última actualización: 2026-08-03.
 
 ---
 
@@ -154,6 +154,26 @@ correcto. Kokoro no tiene control de prosodia (a diferencia de Azure/SSML).
 
 Hoy las voces alternativas son US/GB (límite de Kokoro). Acentos no nativos (Pedro portugués,
 Valentina rusa) necesitarían Azure. Deseable, no urgente.
+
+### 4.4 💡 Reconocimiento con Whisper en el navegador (offline, sin key)
+
+**Motor alternativo de reconocimiento de voz, opt-in.** Hoy usamos la Web Speech API del
+navegador (Chrome→Google, Edge→Azure): sin key, buena, pero en la nube, dependiente del
+navegador y no offline. Whisper corriendo local en el navegador (WASM/WebGPU, vía
+`transformers.js` — p. ej. `Xenova/whisper-tiny.en` o `whisper-base`) daría reconocimiento
+**más consistente entre navegadores, offline y sin key**.
+
+- **Costo:** descarga del modelo una vez (~40–200 MB según tamaño) + más cómputo (ideal con
+  WebGPU; sin él es más lento). Por eso sería un **"modo alta precisión" opt-in**, no el default.
+- **Cómo:** `createRecognizer()` ya está detrás de una interfaz (`Recognizer`), así que se puede
+  agregar una implementación Whisper sin tocar los ejercicios. Ojo: Whisper transcribe sobre un
+  audio grabado (no streaming en vivo como Web Speech), así que el flujo cambia a grabar→transcribir;
+  ya tenemos el `Recorder`, encaja.
+- **Sigue sin puntuar pronunciación** (eso es 4.1, Azure). Whisper mejora la transcripción, no evalúa fonemas.
+- **Estado:** deseable, sin apuro. Web Speech sigue siendo el default pragmático (cero footprint).
+- **Mejora barata previa (sin migrar):** subir `maxAlternatives` en Web Speech y elegir, entre las
+  N hipótesis, la que mejor matchea el objetivo → reduce falsos negativos, sin descargas ni key.
+  Invisible para el usuario. Candidata a hacerse primero.
 
 ---
 
