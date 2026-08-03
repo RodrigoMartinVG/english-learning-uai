@@ -8,7 +8,7 @@
  */
 
 import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
-import { AudioProvider, FlagAudioButton, useAudio, useAudioState, useAudioTransport } from '../audio/AudioProvider.tsx';
+import { AudioProvider, FlagAudioButton, useAudio, useAudioState, useAudioTransport, useAudioDegraded } from '../audio/AudioProvider.tsx';
 import { atomInAspect, type Aspect, type Atom, type Course, type ReadingAtom, type Skill } from '../../content/schema.ts';
 import { atoms, courseName, courses, units } from '../data/content.ts';
 import { mechanics } from '../mechanics/registry.ts';
@@ -152,6 +152,7 @@ export default function App() {
             <VoiceScratch />
           </div>
           <div className="shell__actions">
+            <AudioDegradedBadge />
             <AudioTransport />
             {/* En sesión, a mano: se marca justo cuando se oyó el audio raro. */}
             {view.name === 'session' && <FlagAudioButton />}
@@ -258,6 +259,30 @@ function StopAudioOnNav({ view }: { view: View }) {
     audio.cancel();
   }, [view, audio]);
   return null;
+}
+
+/**
+ * Aviso sutil de audio degradado: aparece si algún mp3 pregenerado no se pudo
+ * reproducir y se usó la voz del navegador. Un ícono con tooltip, nada más.
+ * Causa típica en dev: mp3 nuevos que Vite no sirve hasta reiniciar; o red/CPU.
+ */
+function AudioDegradedBadge() {
+  const degraded = useAudioDegraded();
+  if (!degraded) return null;
+  return (
+    <span
+      className="shell__degraded"
+      role="img"
+      aria-label="Usando voz del navegador"
+      title={
+        'Algunos audios se están reproduciendo con la voz del navegador porque no se ' +
+        'pudo cargar el audio pregenerado (conexión/CPU, o en desarrollo hay que ' +
+        'reiniciar el servidor tras regenerar audio). Recargá para reintentar.'
+      }
+    >
+      🔉
+    </span>
+  );
 }
 
 /** mm:ss a partir de segundos. '0:00' si no es finito. */
@@ -567,6 +592,24 @@ function UnitView({
       )
     );
 
+  // Estudiar toda la unidad: repaso SRS sobre todos los temas (o descubrir en
+  // escalera si todavía no empezaste nada). Mismo motor que el "Estudiar" por tema,
+  // pero con el scope de la unidad entera.
+  const goUnit = () =>
+    onStart(
+      buildSession(
+        {
+          scope: { kind: 'unit', course: u.course, unit: u.unit },
+          mode: unitCov.started > 0 ? 'review' : 'discover',
+          length: DEFAULT_LENGTH,
+        },
+        atoms,
+        u.aspects,
+        `${u.title} · toda la unidad`,
+        scheduler
+      )
+    );
+
   // Arranca UNA práctica sobre UN guion concreto (elegido en el selector).
   const goScript = (atomId: string, mechanicId: string) =>
     onStart(
@@ -620,6 +663,12 @@ function UnitView({
           <span className="unit__progress-label">Progreso de la unidad</span>
           <ProgressBar started={unitCov.started} learned={unitCov.learned} total={unitCov.total} />
         </div>
+        {/* Estudiar TODA la unidad de una: repaso espaciado sobre todos los temas
+            juntos (trae lo vencido + reserva cupo para lo nuevo). Cómodo cuando a
+            varios temas les faltan pocos ítems. La primera vez, descubre en escalera. */}
+        <button className="btn btn--primary btn--wide unit__study" onClick={goUnit}>
+          ★ Estudiar toda la unidad
+        </button>
         {/* Dos accesos separados, sin solaparse: uno da SOLO la guía de expresiones;
             el otro SOLO los guiones modelo (todos, con su botón de reconstruir). En una
             unidad de textos cada texto trae lo suyo adentro de su sección. */}

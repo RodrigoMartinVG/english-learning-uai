@@ -123,6 +123,10 @@ export interface AudioService {
   replay(): void;
   getTransport(): TransportSnapshot;
   subscribeTransport(fn: () => void): () => void;
+  /** true si algún audio pregenerado no se pudo reproducir y se usó la voz del
+   *  navegador (dev: mp3 nuevos no servidos hasta reiniciar; o caída de red/CPU). */
+  getDegraded(): boolean;
+  subscribeDegraded(fn: () => void): () => void;
   /** Qué sonó último, para poder marcarlo si suena mal. Null si nada sonó aún. */
   getLastPlayed(): LastPlayed | null;
   /** Para el arranque: si esto es false, la app no puede cumplir su función. */
@@ -210,6 +214,18 @@ export function createAudioService(
   let token = 0;
   let lastPlayed: LastPlayed | null = null;
   const preloaded = new Map<string, HTMLAudioElement>();
+
+  // "Degradado": había un mp3 pregenerado para la clave, pero no se pudo reproducir
+  // (no se descargó / no decodificó) y hubo que caer a la voz del navegador. Se avisa
+  // sutilmente en la UI. Una vez que pasa, queda marcado hasta recargar: el alumno
+  // debe saber que parte del audio no es el de estudio. Ver AudioProvider/App.
+  let degraded = false;
+  const degradedListeners = new Set<() => void>();
+  const markDegraded = () => {
+    if (degraded) return;
+    degraded = true;
+    for (const fn of degradedListeners) fn();
+  };
 
   /** Destraba la promesa de playFile en curso (la usa cancel/stopEverything). Solo la
    *  resuelven `ended`/`error` o un corte explícito — NUNCA una pausa del usuario. */
@@ -371,6 +387,15 @@ export function createAudioService(
       return () => transportListeners.delete(fn);
     },
 
+    getDegraded() {
+      return degraded;
+    },
+
+    subscribeDegraded(fn) {
+      degradedListeners.add(fn);
+      return () => degradedListeners.delete(fn);
+    },
+
     getTransport() {
       const el = current;
       if (!el) return { active: false, paused: true, currentTime: 0, duration: 0 };
@@ -469,6 +494,9 @@ export function createAudioService(
           remember('file');
           return 'file';
         }
+        // Había mp3 pregenerado pero no se pudo reproducir (no bajó / no decodificó):
+        // caemos a la voz del navegador y lo señalamos.
+        markDegraded();
       }
 
       setState('speaking');

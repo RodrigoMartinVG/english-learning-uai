@@ -44,4 +44,12 @@ export function useAudioTransport(): TransportSnapshot {
   return snap;
 }
 
+/** true si algún audio pregenerado no se pudo reproducir y se cayó a la voz del navegador. */
+export function useAudioDegraded(): boolean {
+  const service = useAudio();
+  const [d, setD] = useState(service.getDegraded());
+  useEffect(() => service.subscribeDegraded(() => setD(service.getDegraded())), [service]);
+  return d;
+}
+
 export { FlagAudioButton } from '../ui/FlagAudioButton.tsx';

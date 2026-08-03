@@ -50,6 +50,15 @@
   .transport__bar { width: 84px; }
 }
 
+/* Aviso de audio degradado: ícono tenue con tooltip, no molesta. */
+.shell__degraded {
+  font-size: 16px;
+  opacity: 0.6;
+  cursor: help;
+  filter: grayscale(0.3);
+}
+.shell__degraded:hover { opacity: 1; }
+
 .shell__main { flex: 1; width: 100%; max-width: 720px; margin: 0 auto; padding: 20px 24px 32px; }
 /* En pantallas grandes, aprovechar algo más de ancho (sin romper la legibilidad). */
 @media (min-width: 1080px) {
@@ -147,6 +156,7 @@
 
 /* Progreso global dentro de la unidad (no desaparece al entrar). */
 .unit__progress { margin-top: 16px; }
+.unit__study { margin-top: 16px; }
 .unit__progress-label { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); }
 .today__stats { font-size: 12px; color: var(--text-faint); font-family: var(--mono); margin-top: 8px; }
 
