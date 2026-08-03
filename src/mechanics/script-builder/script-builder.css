@@ -76,6 +76,45 @@
   margin-bottom: 1rem;
 }
 
+/* Modo sombra: sin texto, solo audio. */
+.build__shadow {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 1rem;
+}
+
+/* Selector de voz del modelo para el copiar frase por frase. */
+.build__voices {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+.build__voices-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+}
+.build__voice {
+  min-height: 30px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-dim);
+  font-size: 13px;
+}
+.build__voice:hover {
+  border-color: var(--accent);
+}
+.build__voice--on {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 16%, var(--surface));
+  color: var(--text);
+}
+
 /* Ancla en español: de qué hablar en este bloque (recordar por sentido, no palabra). */
 .build__anchor {
   margin: -0.4rem 0 0.9rem;

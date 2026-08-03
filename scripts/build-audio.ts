@@ -146,9 +146,10 @@ function wantsAlts(u: Utterance): boolean {
     u.text.length <= ALT_MAX_CHARS &&
     !u.key.includes('.v.') &&
     !u.key.includes('.alt.') &&
-    // Las oraciones de variante (.modelvar.k.s.m) son solo para copiar/reconstruir:
-    // no necesitan voces alternativas. La variante ENTERA sí las recibe (isModel).
-    !u.key.includes('.modelvar.') &&
+    // Las ORACIONES de variante (.modelvar.k.s.m) SÍ reciben voces alternativas: el
+    // "copiar frase por frase" deja elegir la voz. La variante ENTERA (.modelvar.k)
+    // no pasa por acá — la cubre isModel con MODEL_VOICES.
+    !(u.key.includes('.modelvar.') && !u.key.includes('.s.')) &&
     !u.key.endsWith('.slow')
   );
 }

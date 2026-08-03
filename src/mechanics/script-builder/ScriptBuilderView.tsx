@@ -16,6 +16,7 @@ import type { Recording } from '../../audio/Recorder.ts';
 import { LiveDictation, Highlighted, type DictationResult } from '../../ui/LiveDictation.tsx';
 import { stepSegmentKey, stepQuestionKey, modelVarSentenceKey } from '../../../content/schema.ts';
 import { splitSentences } from '../../../content/sentences.ts';
+import { ALT_VOICES } from '../../../content/kokoro-voices.ts';
 import { expectedWords } from './mechanic.ts';
 import type { MechanicViewProps } from '../types.ts';
 import type { ScriptBuilderRound } from './mechanic.ts';
@@ -48,6 +49,8 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
   const [flow, setFlow] = useState<Flow>('copy');
   const [exam, setExam] = useState(false); // sub-modo de reconstruir
   const [whole, setWhole] = useState(false); // sub-modo de crear: todo de corrido
+  const [shadow, setShadow] = useState(false); // copiar SOLO por audio (sin ver el texto)
+  const [voice, setVoice] = useState<string | null>(null); // voz elegida para el modelo (null = la del texto)
   const [idx, setIdx] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [built, setBuilt] = useState<string[]>([]); // copiar/reconstruir: fragmentos del modelo
@@ -101,8 +104,12 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
   const step = steps[idx]; // crear se guía siempre por las preguntas de la A
 
   const playChunk = useCallback(() => {
-    if (chunk) void audio.speak({ key: chunk.audioKey, text: chunk.text, speakerId: target.speaker });
-  }, [audio, chunk, target.speaker]);
+    if (!chunk) return;
+    // Con voz elegida, suena esa variante pregenerada (.v.<voz>); si no existe, el
+    // servicio cae a la voz por defecto/navegador.
+    const key = voice ? `${chunk.audioKey}.v.${voice}` : chunk.audioKey;
+    void audio.speak({ key, text: chunk.text, speakerId: target.speaker });
+  }, [audio, chunk, target.speaker, voice]);
 
   const askQuestion = useCallback(() => {
     const s = steps[idx];
@@ -201,6 +208,12 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
           <p className="build__choice-note">
             Oís cada frase del modelo y la repetís. La copia guiada — ideal para empezar.
           </p>
+          <label className="build__toggle">
+            <input type="checkbox" checked={shadow} onChange={(e) => setShadow(e.target.checked)} />
+            <span>
+              Solo audio (sombra): <strong>sin ver el texto</strong>. <em>Escuchás y repetís de oído.</em>
+            </span>
+          </label>
         </div>
 
         <div className="build__choice">
@@ -274,13 +287,35 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
         </div>
 
         {flow === 'copy' ? (
-          // COPIAR: oís y ves la frase, y la repetís (sombra).
+          // COPIAR: oís (y ves, salvo en sombra) la frase, y la repetís.
           <>
             <div className="build__seg">
               <button className="build__play" onClick={playChunk} aria-label="Escuchar la frase">
                 🔊
               </button>
-              <p>{chunk.text}</p>
+              {shadow ? (
+                <p className="build__shadow">🎧 Solo audio — escuchá y repetí de oído. El texto aparece al terminar.</p>
+              ) : (
+                <p>{chunk.text}</p>
+              )}
+            </div>
+            <div className="build__voices">
+              <span className="build__voices-label">Voz</span>
+              <button
+                className={'build__voice' + (voice === null ? ' build__voice--on' : '')}
+                onClick={() => setVoice(null)}
+              >
+                Original
+              </button>
+              {ALT_VOICES.map((v) => (
+                <button
+                  key={v.id}
+                  className={'build__voice' + (voice === v.id ? ' build__voice--on' : '')}
+                  onClick={() => setVoice(v.id)}
+                >
+                  {v.label}
+                </button>
+              ))}
             </div>
             <p className="build__hint">Escuchala y repetila igual — imitá el ritmo y la entonación.</p>
             <SpeakPanel
