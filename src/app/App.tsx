@@ -146,8 +146,10 @@ export default function App() {
             <button className="shell__brand" onClick={goHome} disabled={history.length === 1}>
               Oda <span>· {activeCourse ? courseName(activeCourse) : 'Language Hub'}</span>
             </button>
-            <VoiceScratch />
+            {/* Práctica primero (fijo); grabar rápido al final, así su tira inline
+                crece hacia la derecha sin empujar el botón de práctica. */}
             <VoicePractice />
+            <VoiceScratch />
           </div>
           <div className="shell__actions">
             <AudioTransport />
