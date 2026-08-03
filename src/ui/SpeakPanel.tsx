@@ -53,6 +53,10 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
   // no quedó 1ª, con mejor pronunciación puede trepar.
   const [alts, setAlts] = useState<string[]>([]);
   const [chosenIdx, setChosenIdx] = useState(0);
+  // El reconocimiento falló (no fue cancelación ni permiso): se muestra en vez de
+  // cancelar en silencio, que parecía "no grabó nada". El caso típico: sin internet
+  // (en Chrome/Edge el reconocimiento es en la nube).
+  const [micError, setMicError] = useState('');
   // "Dar por bueno": el ASR transcribe, no juzga pronunciación. Si una palabra
   // rara no quedó bien detectada pero el alumno la dijo bien, puede darla por
   // buena y que cuente como correcta. Es honesto con lo que la API sí puede hacer.
@@ -89,6 +93,7 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
     setAccepted(false);
     setAlts([]);
     setChosenIdx(0);
+    setMicError('');
     canceled.current = false;
     mine?.revoke();
     setMine(null);
@@ -147,6 +152,11 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
       setChosenIdx(chosen);
       setVerdict(chosenV);
     } catch {
+      // No fue cancelación del usuario: hubo un error real (típico: sin internet).
+      if (!canceled.current)
+        setMicError(
+          'No se pudo reconocer la voz. En Chrome/Edge el reconocimiento usa internet: revisá la conexión y probá de nuevo.'
+        );
       recorder.cancel();
       setInterim('');
     }
@@ -213,6 +223,7 @@ export function SpeakPanel({ targets, neighbourhood, lang, onPlayReference, onDo
           <p className="speak__interim" aria-live="polite">
             {interim || (state === 'listening' ? '…' : 'Tocá el micrófono y decilo en voz alta')}
           </p>
+          {micError && <p className="speak__error">{micError}</p>}
           {!busy && (
             // Cuánto espera antes de cortar solo. Preferencia global; se toca antes de grabar.
             <button

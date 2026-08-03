@@ -44,6 +44,7 @@ export function VoicePractice() {
   const [mine, setMine] = useState<Recording | null>(null);
   const [attempts, setAttempts] = useState(0);
   const [best, setBest] = useState(0);
+  const [micError, setMicError] = useState('');
 
   useEffect(() => recognizer.subscribe(setState), [recognizer]);
   useEffect(
@@ -87,6 +88,7 @@ export function VoicePractice() {
 
   const record = async () => {
     setInterim('');
+    setMicError('');
     mine?.revoke();
     setMine(null);
     setVerdict(null);
@@ -125,6 +127,7 @@ export function VoicePractice() {
         setBest((b) => Math.max(b, v.accuracy));
       }
     } catch {
+      setMicError('No se pudo reconocer la voz. En Chrome/Edge el reconocimiento usa internet: revisá la conexión y probá de nuevo.');
       recorder.cancel();
       setInterim('');
     } finally {
@@ -209,6 +212,7 @@ export function VoicePractice() {
                   {interim || 'Hablá… corta solo al terminar'}
                 </p>
               )}
+              {micError && !live && <p className="speak__error">{micError}</p>}
 
               {verdict && !live && (
                 <div className="vpractice__result">

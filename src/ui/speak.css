@@ -126,6 +126,15 @@
   font-weight: 600;
 }
 
+/* Error de reconocimiento (típico: sin internet): visible, no silencioso. */
+.speak__error {
+  font-size: 13px;
+  color: var(--error);
+  line-height: 1.4;
+  max-width: 34ch;
+  text-align: center;
+}
+
 /* Ajuste de corte (auto-terminación): texto tenue, solo antes de grabar. */
 .speak__corte {
   font-size: 12px;
