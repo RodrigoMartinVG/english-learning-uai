@@ -30,11 +30,9 @@ import {
   skillStateOf,
   statsFor,
   subscribeProgress,
-  weakSpots,
 } from '../data/progress.ts';
 import { SessionPlayer } from './SessionPlayer.tsx';
 import { ResetPanel } from './ResetPanel.tsx';
-import { DiagnosticsView } from './DiagnosticsView.tsx';
 import { ReferenceView } from './ReferenceView.tsx';
 import { ReaderView } from './ReaderView.tsx';
 import { VoiceScratch } from '../ui/VoiceScratch.tsx';
@@ -112,7 +110,6 @@ type View =
   | { name: 'reference'; course: Course; unit: number; textId?: string; only?: 'guide' | 'scripts' }
   | { name: 'reader'; course: Course; unit: number; atomId: string }
   | { name: 'session'; session: Session }
-  | { name: 'diagnostics' }
   | { name: 'reset' };
 
 /** Raíz de navegación: con un solo curso se entra directo; con varios, al selector. */
@@ -172,7 +169,6 @@ export default function App() {
               onUnit={(unit) => push({ name: 'unit', course: view.course, unit })}
               onStart={start}
               onReset={() => push({ name: 'reset' })}
-              onDiagnostics={() => push({ name: 'diagnostics' })}
             />
           )}
           {view.name === 'unit' && (
@@ -209,7 +205,6 @@ export default function App() {
             <ReaderView atom={atoms.find((a) => a.id === view.atomId) as ReadingAtom} onBack={back} />
           )}
           {view.name === 'session' && <SessionPlayer session={view.session} onExit={back} />}
-          {view.name === 'diagnostics' && <DiagnosticsView onBack={back} onStart={start} />}
           {view.name === 'reset' && <ResetPanel onBack={back} />}
         </main>
       </div>
@@ -343,19 +338,16 @@ function Home({
   onUnit,
   onStart,
   onReset,
-  onDiagnostics,
 }: {
   course: Course;
   onUnit: (u: number) => void;
   onStart: (s: Session) => void;
   onReset: () => void;
-  onDiagnostics: () => void;
 }) {
   useProgress();
   // Todo acotado al curso elegido: stats por prefijo `enN.`, unidades del curso,
   // y el repaso global con scope de curso.
   const stats = statsFor(course);
-  const weak = weakSpots();
   const courseUnits = units.filter((u) => u.course === course);
   const courseAspects = courseUnits.flatMap((u) => u.aspects);
 
@@ -464,20 +456,6 @@ function Home({
           </>
         )}
       </section>
-
-      {/* Aparece solo cuando hay datos: un diagnóstico con dos errores mentiría. */}
-      {weak.length > 0 && (
-        <button className="weakcard" onClick={onDiagnostics}>
-          <div>
-            <p className="weakcard__eyebrow">Tus puntos débiles</p>
-            <p className="weakcard__top">
-              {weak.length} {weak.length === 1 ? 'foco' : 'focos'} para reforzar · lo peor:{' '}
-              {weak[0]!.kind === 'phoneme' ? `sonido /${weak[0]!.tag}/` : weak[0]!.tag.split('.')[0]}
-            </p>
-          </div>
-          <span aria-hidden="true">→</span>
-        </button>
-      )}
 
       <section>
         <h2 className="home__section">Unidades</h2>
