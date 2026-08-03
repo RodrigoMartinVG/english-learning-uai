@@ -38,6 +38,7 @@ import { ReferenceView } from './ReferenceView.tsx';
 import { ReaderView } from './ReaderView.tsx';
 import { VoiceScratch } from '../ui/VoiceScratch.tsx';
 import { VoicePractice } from '../ui/VoicePractice.tsx';
+import { VoiceImprov } from '../ui/VoiceImprov.tsx';
 import './app.css';
 
 /** Adapta el store de progreso al contrato que el motor espera. */
@@ -147,9 +148,10 @@ export default function App() {
             <button className="shell__brand" onClick={goHome} disabled={history.length === 1}>
               Oda <span>· {activeCourse ? courseName(activeCourse) : 'Language Hub'}</span>
             </button>
-            {/* Práctica primero (fijo); grabar rápido al final, así su tira inline
-                crece hacia la derecha sin empujar el botón de práctica. */}
+            {/* Práctica y improvisación primero (fijos); grabar rápido al final, así su
+                tira inline crece a la derecha sin empujar los otros botones. */}
             <VoicePractice />
+            <VoiceImprov />
             <VoiceScratch />
           </div>
           <div className="shell__actions">
