@@ -5414,6 +5414,861 @@
           "phraseId": "en1.u5.p.038"
         }
       ]
+    },
+    {
+      "id": "en1.u5.p.039",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "phrase",
+      "text": "Number theory is the study of the whole numbers.",
+      "gloss": "La teoría de números es el estudio de los números enteros.",
+      "speaker": "narrator",
+      "ipa": "nˈʌmbɚ θˈiəɹi ɪz ðə stˈʌdi ʌvðə hˈoʊl nˈʌmbɚz"
+    },
+    {
+      "id": "en1.u5.p.040",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 4,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "phrase",
+      "text": "Two is responsible for even and odd numbers.",
+      "gloss": "El dos es responsable de los números pares e impares.",
+      "speaker": "narrator",
+      "ipa": "tˈuː ɪz ɹᵻspˈɑːnsᵻbəl fɔːɹ ˈiːvən ænd ˈɑːd nˈʌmbɚz"
+    },
+    {
+      "id": "en1.u5.p.041",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 4,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "phrase",
+      "text": "An odd number is not divisible by two.",
+      "gloss": "Un número impar no es divisible por dos.",
+      "speaker": "narrator",
+      "ipa": "ɐn ˈɑːd nˈʌmbɚɹ ɪz nˌɑːt dᵻvˈɪzᵻbəl baɪ tˈuː"
+    },
+    {
+      "id": "en1.u5.lx.039",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "lexeme",
+      "word": "number theory",
+      "pos": "noun",
+      "gloss": "teoría de números: el estudio de los números enteros",
+      "examplePhraseId": "en1.u5.p.039",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.040",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 4,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "lexeme",
+      "word": "even",
+      "pos": "adjective",
+      "gloss": "par (número divisible por 2)",
+      "examplePhraseId": "en1.u5.p.040",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.041",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 4,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "why2",
+      "kind": "lexeme",
+      "word": "odd",
+      "pos": "adjective",
+      "gloss": "impar (número no divisible por 2)",
+      "examplePhraseId": "en1.u5.p.041",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.qa.033",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 3,
+        "section": "Text N°1",
+        "note": "Pregunta nuestra sobre el texto."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "qa",
+      "prompt": "What does Melanie Wood study?",
+      "promptVariants": [
+        "What is Wood's field of research?"
+      ],
+      "replies": [
+        "Number theory, the study of the whole numbers."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says she works in number theory, the study of the whole numbers: 1, 2, 3, and so on."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "She studies whole numbers and, in particular, prime numbers."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.034",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 4,
+        "section": "Text N°1",
+        "note": "Pregunta nuestra sobre el texto."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "qa",
+      "prompt": "Why is 2 her favorite number?",
+      "promptVariants": [
+        "What does she say about the number 2?"
+      ],
+      "replies": [
+        "It seems simple but it is very powerful: it is responsible for even and odd numbers."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "She says 2 seems simple but is very powerful, because it is responsible for the concept of even and odd numbers."
+        },
+        {
+          "mode": "personal",
+          "text": "I think it is a nice choice because everything divides into even and odd."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.035",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 5,
+        "section": "Text N°1",
+        "note": "Pregunta nuestra sobre el texto."
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "why2",
+      "kind": "qa",
+      "prompt": "According to Wood, why does mathematics need creativity?",
+      "promptVariants": [
+        "Why does she connect maths with imagination?"
+      ],
+      "replies": [
+        "Because solving questions no one knows how to answer requires imagination."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "She points out that solving math questions no one knows how to answer also requires imagination."
+        },
+        {
+          "mode": "connect",
+          "text": "That is why she compares her work to writing a book, not just reading one."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.p.042",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 9,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "four-years",
+      "kind": "phrase",
+      "text": "Students take A-Levels in the subjects they want to study.",
+      "gloss": "Los estudiantes rinden A-Levels en las materias que quieren estudiar.",
+      "speaker": "narrator",
+      "ipa": "stˈuːdənts tˈeɪk ˈeɪlˈɛvəlz ɪnðə sˈʌbdʒɛkts ðeɪ wˈɔnt tə stˈʌdi"
+    },
+    {
+      "id": "en1.u5.p.043",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 9,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "four-years",
+      "kind": "phrase",
+      "text": "Many states require three maths courses to graduate.",
+      "gloss": "Muchos estados exigen tres cursos de matemática para recibirse.",
+      "speaker": "narrator",
+      "ipa": "mˈɛni stˈeɪts ɹᵻkwˈaɪɚ θɹˈiː mˈæθs kˈoːɹsᵻz tə ɡɹˈædjuːˌeɪt"
+    },
+    {
+      "id": "en1.u5.p.044",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 9,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "phrase",
+      "text": "For some experts this is an equity issue.",
+      "gloss": "Para algunos expertos esto es una cuestión de equidad.",
+      "speaker": "narrator",
+      "ipa": "fɔːɹ sˌʌm ˈɛkspɜːts ðɪs ɪz ɐn ˈɛkwᵻɾi ˈɪʃuː"
+    },
+    {
+      "id": "en1.u5.lx.042",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "four-years",
+      "kind": "lexeme",
+      "word": "A-Levels",
+      "pos": "noun",
+      "gloss": "A-Levels: exámenes especializados para la universidad en el Reino Unido",
+      "examplePhraseId": "en1.u5.p.042",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.043",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "four-years",
+      "kind": "lexeme",
+      "word": "graduate",
+      "pos": "verb",
+      "gloss": "graduarse / recibirse",
+      "examplePhraseId": "en1.u5.p.043",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.044",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 9,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "four-years",
+      "kind": "lexeme",
+      "word": "equity",
+      "pos": "noun",
+      "gloss": "equidad",
+      "examplePhraseId": "en1.u5.p.044",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.qa.036",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 9,
+        "section": "Text N°3",
+        "note": "Pregunta nuestra sobre el texto."
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "qa",
+      "prompt": "When do many students in England stop taking maths?",
+      "promptVariants": [
+        "Until what age is maths compulsory for many students in England?"
+      ],
+      "replies": [
+        "Many stop after age 16."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says that in England many students stop taking maths after age 16."
+        },
+        {
+          "mode": "connect",
+          "text": "In contrast, most students in the United States take maths throughout high school."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.037",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 9,
+        "section": "Text N°3",
+        "note": "Pregunta nuestra sobre el texto."
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "qa",
+      "prompt": "How many maths courses do many US states require to graduate?",
+      "promptVariants": [
+        "What do US states ask for to graduate?"
+      ],
+      "replies": [
+        "Many require three, and some require four."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Many states require three maths courses to graduate, and some require four."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "Between three and four maths courses, depending on the state."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.038",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 9,
+        "section": "Text N°3",
+        "note": "Pregunta nuestra sobre el texto."
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "four-years",
+      "kind": "qa",
+      "prompt": "Why do some experts call it an equity issue?",
+      "promptVariants": [
+        "Why is it a matter of equity for some experts?"
+      ],
+      "replies": [
+        "Because students from disadvantaged backgrounds benefit from stronger maths preparation."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "For some experts it is an equity issue, because students from disadvantaged backgrounds benefit from stronger maths preparation."
+        },
+        {
+          "mode": "personal",
+          "text": "I agree, because a good maths base can open the same doors for everyone."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.p.045",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 12,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "until-18",
+      "kind": "phrase",
+      "text": "A good maths foundation prepares students for any STEM subject.",
+      "gloss": "Una buena base matemática prepara a los estudiantes para cualquier materia STEM.",
+      "speaker": "narrator",
+      "ipa": "ɐ ɡˈʊd mˈæθs faʊndˈeɪʃən pɹɪpˈɛɹz stˈuːdənts fɔːɹ ˌɛni stˈɛm sˈʌbdʒɛkt"
+    },
+    {
+      "id": "en1.u5.p.046",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 12,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "until-18",
+      "kind": "phrase",
+      "text": "Statistics are essential in medicine, marketing and finance.",
+      "gloss": "La estadística es esencial en medicina, marketing y finanzas.",
+      "speaker": "narrator",
+      "ipa": "stɐtˈɪstɪks ɑːɹ ᵻsˈɛnʃəl ɪn mˈɛdəsən mˈɑːɹkɪɾɪŋ ænd fˈaɪnæns"
+    },
+    {
+      "id": "en1.u5.p.047",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 12,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "until-18",
+      "kind": "phrase",
+      "text": "Maths teaches transferable skills like problem-solving.",
+      "gloss": "La matemática enseña habilidades transferibles como la resolución de problemas.",
+      "speaker": "narrator",
+      "ipa": "mˈæθs tˈiːtʃᵻz tɹænsfˈɜːɹəbəl skˈɪlz lˈaɪk pɹˈɑːbləmsˈɑːlvɪŋ"
+    },
+    {
+      "id": "en1.u5.lx.045",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "until-18",
+      "kind": "lexeme",
+      "word": "STEM",
+      "pos": "noun",
+      "gloss": "STEM: ciencia, tecnología, ingeniería y matemática",
+      "examplePhraseId": "en1.u5.p.045",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.046",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "until-18",
+      "kind": "lexeme",
+      "word": "statistics",
+      "pos": "noun",
+      "gloss": "estadística",
+      "examplePhraseId": "en1.u5.p.046",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.lx.047",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "until-18",
+      "kind": "lexeme",
+      "word": "transferable skills",
+      "pos": "noun",
+      "gloss": "habilidades transferibles (que sirven en muchos contextos)",
+      "examplePhraseId": "en1.u5.p.047",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u5.qa.039",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 12,
+        "section": "Text N°4",
+        "note": "Pregunta nuestra sobre el texto."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "until-18",
+      "kind": "qa",
+      "prompt": "Why does maths open doors to many careers?",
+      "promptVariants": [
+        "Why is maths useful for so many jobs?"
+      ],
+      "replies": [
+        "Because it is the language of science, engineering and technology."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Maths is the language of science, engineering and technology, and a good foundation prepares students for any STEM subject."
+        },
+        {
+          "mode": "connect",
+          "text": "It also includes statistics and Big Data, used in medicine, marketing and finance."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.040",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 12,
+        "section": "Text N°4",
+        "note": "Pregunta nuestra sobre el texto."
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "until-18",
+      "kind": "qa",
+      "prompt": "What transferable skills does maths teach?",
+      "promptVariants": [
+        "Which skills for life does maths develop?"
+      ],
+      "replies": [
+        "Problem-solving, logical thinking and healthy skepticism."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Problem-solving and logical thinking are obvious ones, but maths also develops healthy skepticism."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "It trains you to solve problems, think logically and question claims."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en1.u5.qa.041",
+      "course": "en1",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "page": 13,
+        "section": "Text N°4",
+        "note": "Pregunta nuestra sobre el texto."
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "until-18",
+      "kind": "qa",
+      "prompt": "How is learning maths similar to learning a language?",
+      "promptVariants": [
+        "Why does the text compare maths to a language?"
+      ],
+      "replies": [
+        "You need to practice until it becomes part of your thinking."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Knowing vocabulary and grammar is not enough; you need to practice until it becomes part of your thinking."
+        },
+        {
+          "mode": "personal",
+          "text": "For me that is true: once it is embedded, you can recall it years later."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
     }
   ]
 }

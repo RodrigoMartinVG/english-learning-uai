@@ -2595,6 +2595,290 @@
           "correct": 1
         }
       ]
+    },
+    {
+      "id": "en1.u3.ex.004",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Ejercitación 3"
+      },
+      "grammar": [
+        "arrangements",
+        "would-like"
+      ],
+      "fn": [
+        "propose-plan",
+        "accept-plan"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "kind": "exercise",
+      "prompt": "Put the conversation in the right order",
+      "format": "reorder",
+      "audioViable": "adapted",
+      "items": [
+        {
+          "stem": "free you are tonight?",
+          "answer": {
+            "accept": [
+              "Are you free tonight?"
+            ]
+          }
+        },
+        {
+          "stem": "like to would you what do?",
+          "answer": {
+            "accept": [
+              "What would you like to do?"
+            ]
+          }
+        },
+        {
+          "stem": "the going about to how cinema?",
+          "answer": {
+            "accept": [
+              "How about going to the cinema?"
+            ]
+          }
+        },
+        {
+          "stem": "showing it where is?",
+          "answer": {
+            "accept": [
+              "Where is it showing?"
+            ]
+          }
+        },
+        {
+          "stem": "does it start what times?",
+          "answer": {
+            "accept": [
+              "What times does it start?"
+            ]
+          }
+        },
+        {
+          "stem": "you for time what good is?",
+          "answer": {
+            "accept": [
+              "What time is good for you?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "en1.u3.p.042",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "page": 10,
+        "section": "Family relationships"
+      },
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1,
+      "kind": "phrase",
+      "text": "I have got an aunt in Córdoba.",
+      "gloss": "Tengo una tía en Córdoba.",
+      "speaker": "narrator",
+      "ipa": "aɪ hæv ɡɑːt ɐn ˈænt ɪn kɔːɹdˈoʊbə"
+    },
+    {
+      "id": "en1.u3.p.043",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "page": 10,
+        "section": "Family relationships"
+      },
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1,
+      "kind": "phrase",
+      "text": "My uncle has got two children.",
+      "gloss": "Mi tío tiene dos hijos.",
+      "speaker": "narrator",
+      "ipa": "maɪ ˈʌŋkəl hɐz ɡɑːt tˈuː tʃˈɪldɹən"
+    },
+    {
+      "id": "en1.u3.p.044",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "page": 10,
+        "section": "Family relationships"
+      },
+      "grammar": [
+        "have-got.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1,
+      "kind": "phrase",
+      "text": "My grandfather has got a big garden.",
+      "gloss": "Mi abuelo tiene un jardín grande.",
+      "speaker": "narrator",
+      "ipa": "maɪ ɡɹˈændfɑːðɚ hɐz ɡɑːt ɐ bˈɪɡ ɡˈɑːɹdən"
+    },
+    {
+      "id": "en1.u3.p.045",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "page": 10,
+        "section": "Family relationships"
+      },
+      "grammar": [
+        "present-simple.affirmative",
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1,
+      "kind": "phrase",
+      "text": "My grandparents live near us.",
+      "gloss": "Mis abuelos viven cerca nuestro.",
+      "speaker": "narrator",
+      "ipa": "maɪ ɡɹˈændpɛɹənts lˈaɪv nˈɪɹ ˌʌs"
+    },
+    {
+      "id": "en1.u3.lx.012",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Family relationships"
+      },
+      "grammar": [
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1,
+      "kind": "lexeme",
+      "word": "aunt",
+      "pos": "noun",
+      "gloss": "tía",
+      "examplePhraseId": "en1.u3.p.042",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u3.lx.013",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Family relationships"
+      },
+      "grammar": [
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1,
+      "kind": "lexeme",
+      "word": "uncle",
+      "pos": "noun",
+      "gloss": "tío",
+      "examplePhraseId": "en1.u3.p.043",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u3.lx.014",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Family relationships"
+      },
+      "grammar": [
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1,
+      "kind": "lexeme",
+      "word": "grandfather",
+      "pos": "noun",
+      "gloss": "abuelo",
+      "examplePhraseId": "en1.u3.p.044",
+      "focus": "translation"
+    },
+    {
+      "id": "en1.u3.lx.015",
+      "course": "en1",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Family relationships"
+      },
+      "grammar": [
+        "family"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "family"
+      ],
+      "difficulty": 1,
+      "kind": "lexeme",
+      "word": "grandparents",
+      "pos": "noun",
+      "gloss": "abuelos",
+      "examplePhraseId": "en1.u3.p.045",
+      "focus": "translation"
     }
   ]
 }

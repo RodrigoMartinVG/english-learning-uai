@@ -3744,6 +3744,84 @@
           "correct": 1
         }
       ]
+    },
+    {
+      "id": "en1.u4.ex.005",
+      "course": "en1",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación 4"
+      },
+      "grammar": [
+        "can.request",
+        "shopping",
+        "how-much-many"
+      ],
+      "fn": [
+        "offer-help",
+        "make-request",
+        "ask.price"
+      ],
+      "topic": [
+        "shopping"
+      ],
+      "difficulty": 3,
+      "kind": "exercise",
+      "prompt": "Put the conversation in the right order",
+      "format": "reorder",
+      "audioViable": "adapted",
+      "items": [
+        {
+          "stem": "you help I can?",
+          "answer": {
+            "accept": [
+              "Can I help you?"
+            ]
+          }
+        },
+        {
+          "stem": "this you got have sweater small in?",
+          "answer": {
+            "accept": [
+              "Have you got this sweater in small?"
+            ]
+          }
+        },
+        {
+          "stem": "moment a just.",
+          "answer": {
+            "accept": [
+              "Just a moment."
+            ]
+          }
+        },
+        {
+          "stem": "small too it's.",
+          "answer": {
+            "accept": [
+              "It's too small."
+            ]
+          }
+        },
+        {
+          "stem": "in it medium we've got.",
+          "answer": {
+            "accept": [
+              "We've got it in medium."
+            ]
+          }
+        },
+        {
+          "stem": "much how it is?",
+          "answer": {
+            "accept": [
+              "How much is it?"
+            ]
+          }
+        }
+      ]
     }
   ]
 }

@@ -233,6 +233,20 @@
         "page": 5,
         "section": "Situación comunicacional"
       }
+    },
+    {
+      "id": "possessive-case",
+      "order": 13,
+      "title": "Caso posesivo 's",
+      "summary": "Expresar posesión con 's: el escritorio de Sam es Sam's desk.",
+      "match": {
+        "grammar": [
+          "possessives.case"
+        ]
+      },
+      "source": {
+        "section": "Grammar / Ejercitación 9"
+      }
     }
   ],
   "atoms": [
@@ -5353,6 +5367,225 @@
       "gloss": "tarde (Good afternoon = buenas tardes)",
       "examplePhraseId": "en1.u1.p.013",
       "focus": "translation"
+    },
+    {
+      "id": "en1.u1.p.073",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Ejercitación 9"
+      },
+      "grammar": [
+        "possessives.case",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "The dictionary is on Sam's desk.",
+      "gloss": "El diccionario está sobre el escritorio de Sam.",
+      "speaker": "narrator",
+      "ipa": "ðə dˈɪkʃənˌɛɹi ɪz ˌɔn sˈæmz dˈɛsk"
+    },
+    {
+      "id": "en1.u1.p.074",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Ejercitación 9"
+      },
+      "grammar": [
+        "possessives.case",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact",
+        "describe.person"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "The teacher's name is George.",
+      "gloss": "El nombre del profesor es George.",
+      "speaker": "narrator",
+      "ipa": "ðə tˈiːtʃɚz nˈeɪm ɪz dʒˈɔːɹdʒ"
+    },
+    {
+      "id": "en1.u1.p.075",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "section": "Grammar"
+      },
+      "grammar": [
+        "possessives.case",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Mary's computer is new.",
+      "gloss": "La computadora de Mary es nueva.",
+      "speaker": "narrator",
+      "ipa": "mˈɛɹiz kəmpjˈuːɾɚɹ ɪz nˈuː"
+    },
+    {
+      "id": "en1.u1.p.076",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "section": "Grammar"
+      },
+      "grammar": [
+        "possessives.case",
+        "demonstratives"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "This is my brother's book.",
+      "gloss": "Este es el libro de mi hermano.",
+      "speaker": "narrator",
+      "ipa": "ðɪs ɪz maɪ bɹˈʌðɚz bˈʊk"
+    },
+    {
+      "id": "en1.u1.p.077",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "page": 13,
+        "section": "Ejercitación 1"
+      },
+      "grammar": [
+        "possessives.case",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "personal_info"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Karel's last name is Schulz.",
+      "gloss": "El apellido de Karel es Schulz.",
+      "speaker": "narrator",
+      "ipa": "kˈɛɹlz lˈæst nˈeɪm ɪz ʃˈʌlz"
+    },
+    {
+      "id": "en1.u1.p.078",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "section": "Grammar"
+      },
+      "grammar": [
+        "possessives.case",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "The student's notebook is on the desk.",
+      "gloss": "El cuaderno del estudiante está sobre el escritorio.",
+      "speaker": "narrator",
+      "ipa": "ðə stˈuːdənts nˈoʊtbʊk ɪz ɔnðə dˈɛsk"
+    },
+    {
+      "id": "en1.u1.ex.010",
+      "course": "en1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Práctica del caso posesivo 's (derivada de la Ejercitación 9)."
+      },
+      "grammar": [
+        "possessives.case"
+      ],
+      "fn": [
+        "ask.possession"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "exercise",
+      "prompt": "Rewrite using the possessive 's",
+      "format": "transform",
+      "audioViable": "adapted",
+      "items": [
+        {
+          "stem": "the desk of Sam",
+          "answer": {
+            "accept": [
+              "Sam's desk"
+            ]
+          }
+        },
+        {
+          "stem": "the name of the teacher",
+          "answer": {
+            "accept": [
+              "the teacher's name"
+            ]
+          }
+        },
+        {
+          "stem": "the book of Mary",
+          "answer": {
+            "accept": [
+              "Mary's book"
+            ]
+          }
+        },
+        {
+          "stem": "the car of my brother",
+          "answer": {
+            "accept": [
+              "my brother's car"
+            ]
+          }
+        },
+        {
+          "stem": "the office of the Dean",
+          "answer": {
+            "accept": [
+              "the Dean's office"
+            ]
+          }
+        }
+      ]
     }
   ]
 }

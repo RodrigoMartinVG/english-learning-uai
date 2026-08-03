@@ -27,6 +27,7 @@ export const GRAMMAR_TAGS = [
   'be.contractions',
   'pronouns.subject',
   'possessives.adjectives',
+  'possessives.case',
   'demonstratives',
   'articles.indefinite',
   'articles.definite',
