@@ -40,13 +40,14 @@ los 4 textos de Inglés I adentro; cada texto es un aspecto (se agrupan por `tex
 
 ## Dónde estamos (resumen)
 
-**Inglés I está completo: las 4 unidades** (Bienvenida, Estilo de vida, Gente, Lugares), jugables
-de punta a punta. ~316 átomos, **13 mecánicas** cubriendo los 5 niveles de la escalera
-(percepción → producción), audio neuronal local (Kokoro, sin key) con voces alternativas e IPA,
-micrófono, repetición espaciada (FSRS) con persistencia, diagnóstico de errores, y guía de
-expresiones por unidad. 38 tests, `validate` y `audit` en verde.
+**Inglés I está completo: las 6 unidades** (Bienvenida, Estilo de vida, Gente, Lugares, Textos de
+matemática, y Examen oral), jugables de punta a punta. ~585 átomos, **15 mecánicas** cubriendo los
+5 niveles de la escalera (percepción → producción), audio neuronal local (Kokoro, sin key) con
+voces alternativas e IPA, micrófono, repetición espaciada (FSRS) con persistencia, y guía de
+expresiones por unidad. **50 tests**, `validate` y `audit` en verde. **El audio pregenerado
+(~206 MB) se versiona en git** para que el deploy sea un checkout (ver §5.2).
 
-**El diseño se probó cuatro veces:** cada unidad entró sin tocar `src/` (el schema ya preveía los
+**El diseño se probó seis veces:** cada unidad entró sin tocar `src/` (el schema ya preveía los
 tags, y el contenido se auto-descubre). Agregar Inglés II/III/IV es el mismo pipeline.
 
 **Multi-nivel: base lista (2026-07-21).** La app ya soporta varios niveles: `content/courses.json`
@@ -57,6 +58,55 @@ contenido** — el paso a paso está en [`MANIFIESTO-NIVELES.md`](MANIFIESTO-NIV
 
 Lo que sigue, en una línea: **poder usarlo de verdad — el deploy (§5.1) es lo que falta para
 estudiar desde el celular.**
+
+---
+
+## 0. Hecho recientemente (2026-08) — tanda grande de uso real
+
+Todo salió de usar la app en serio. Ya está en `main`, con tests y `validate` en verde.
+
+**UX de ejercicios**
+- ✅ **Layout dos-paneles** en todas las mecánicas (estímulo a la izquierda, interacción a la
+  derecha, sin scroll) vía clase opt-in `.exlr`. Las "otras voces" quedaron dentro del layout.
+- ✅ **Enter comprueba** en los modos de escribir; **↻ Reintentar** en completar/dictado/escribir/armar.
+- ✅ **Armá el guion** reescrito: versiones A/B/C, sombra frase por frase, "escucharte" reproduce
+  TU grabación (no el modelo), y **cada versión es un ejercicio distinto** (variant, no selector interno).
+- ✅ **Role-play**: el log ya no roba el scroll; el micrófono no queda cortado.
+
+**Módulo nuevo**
+- ✅ **"Al inglés" (español→inglés)** en dos mecánicas (escribir / decir), sobre el `gloss` de frases
+  y palabras. Acepta variantes; sin audio antes de responder.
+
+**Audio / reproductor**
+- ✅ **Mini-reproductor en el header**: pausa/continuar, barra de seek, tiempo, replay, stop; sobre el
+  último audio, se va al navegar.
+- ✅ **Grabar rápido** (🎙 toolbar, transcripción inline) y **Banco de práctica** (🎯 popup: objetivo
+  fijo + oírlo + varios intentos con diff y %). Un solo click, auto-corte, botón en rojo.
+- ✅ **Aviso de audio degradado** (🔉 + tooltip) cuando se usa la voz del navegador por no poder cargar
+  el mp3. **Gotcha de dev**: Vite no sirve mp3 nuevos hasta reiniciar tras `build:audio` (ver [[dev-audio-restart]]).
+
+**Reconocimiento / micrófono**
+- ✅ **Tiempo de auto-corte configurable** (rápido/normal/paciente), compartido en toda la app.
+- ✅ **Terminar / Cancelar** la grabación a mano (antes no se podía frenar).
+- ✅ **Elegir la mejor hipótesis** (`maxAlternatives`) + feedback del ranking ("tu forma quedó 2ª,
+  afiná para que suba"). Limitación honesta: Chrome/Edge a veces devuelven una sola.
+- ✅ **Error de reconocimiento visible** (antes cancelaba en silencio → parecía "no grabó").
+- ✅ **Grafía UK/US** (centre/center, colour/color, realise/realize…) aceptada en el corrector.
+
+**Motor / repaso**
+- ✅ **"Estudiar" no se cuelga** cerca del final: el cupo de nuevas estrena ÁTOMOS sin empezar.
+- ✅ **"★ Estudiar toda la unidad"**: sesión SRS sobre todos los temas juntos.
+- ✅ **Repaso global**: el conteo respeta el filtro de unidades; el filtro no desaparece al desmarcar
+  todo; una tanda cubre tarjetas distintas (dedupe por tarjeta).
+- ✅ **ASR**: alias o'clock / street / avenue.
+
+**Contenido (relevamiento unidad por unidad vs. el material)**
+- ✅ **Caso posesivo 's** (U1, lo pedía el temario) + **reorder** de U3/U4 (los "Put in order" del TP)
+  + **vocab de familia** (aunt/uncle/grandfather/grandparents) + **nivelación de los textos 1/3/4 de U5**.
+  Números y "lugares turísticos" de U1 **no** se agregaron: el PDF no los trae (no fabricar más allá del material).
+
+**Retirado**
+- ❌ **"Tus puntos débiles"** (diagnóstico): señal floja/engañosa. Ver §3.1.
 
 ---
 
@@ -91,7 +141,7 @@ estudiar desde el celular.**
 
 | | Estado | Qué | Impacto |
 |---|---|---|---|
-| 3.1 | ✅ | **Diagnóstico de errores** ("tus puntos débiles" por gramática y fonema) | El de mayor impacto. Hecho |
+| 3.1 | ❌ | ~~**Diagnóstico de errores** ("tus puntos débiles")~~ **RETIRADO (2026-08)** | La señal era floja/engañosa: la gramática repartía la culpa entre todos los tags del átomo y mezclaba ruido del ASR; los fonemas casi no tenían datos (11/274 frases) y se apoyaban en el match del ASR, que no juzga pronunciación. Se quitó (UI + recolección de errors/tags). El SRS ya prioriza lo que estás por olvidar. Un diagnóstico honesto se construiría sobre lapses/estabilidad del SRS, no sobre tags |
 | 3.2 | 💡 | **Drills por fonema**: una mecánica que agrupe "todas tus palabras con /θ/" | Ataca la debilidad fonética específica (clave para acento rioplatense) |
 | 3.3 | 💡 | **Hilo "My Life" como artefacto acumulativo**: los 4 capítulos como *tu* monólogo de final, que crece por unidad | Da sentido de progreso hacia el examen real |
 | 3.4 | 💡 | **Modo historia con Mary** (personaje recurrente en U1/U3/U4): una espina narrativa entre unidades | Engancha más que ejercicios sueltos |
@@ -181,9 +231,9 @@ navegador y no offline. Whisper corriendo local en el navegador (WASM/WebGPU, v�
 
 | | Estado | Qué |
 |---|---|---|
-| 5.1 | ⬜ | **Deploy** (GitHub Pages o Netlify): hoy corre solo local |
-| 5.2 | ⬜ | **Hosting de los mp3**: ~15 MB. Git LFS vs generar en CI y publicar como artefacto |
-| 5.3 | ⬜ | **Cargar el contenido por `fetch`** en vez de empaquetarlo en el JS: con 4 unidades el bundle crece |
+| 5.1 | ⬜ | **Deploy** (GitHub Pages o Netlify): hoy corre solo local. **El audio ya está listo (5.2)**, así que el deploy es un build + publish |
+| 5.2 | ✅ | **Hosting de los mp3 — DECIDIDO (2026-08)**: se **versionan en git** (~206 MB, 7061 clips; `public/audio/*` dejó de estar gitignoreado, solo el manifest se versionaba antes). Deploy = checkout, sin Kokoro. Nota: **el 70% del peso son las voces alternativas** — recortarlas baja a ~62 MB si algún día molesta. Plan B si crece: Git LFS. Ver decisión en memoria [[audio-en-git]] |
+| 5.3 | ⬜ | **Cargar el contenido por `fetch`** en vez de empaquetarlo en el JS: con 6 unidades el bundle crece |
 | 5.4 | 💡 | **PWA instalable** + Service Worker: estudiar offline en el celular (el audio ya es local) |
 | 5.5 | 💡 | **Sync multi-dispositivo** (backend): hoy el progreso vive en localStorage de un navegador |
 
