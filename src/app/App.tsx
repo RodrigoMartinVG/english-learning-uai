@@ -405,8 +405,13 @@ function Home({
       return next;
     });
 
-  // Vencidas/seen/dominadas acotadas al filtro de unidades: el número refleja lo
-  // que el repaso global va a traer, y baja al repasar (antes contaba todo el curso).
+  // Dos vistas del progreso:
+  //  · courseStats — TODO el curso, sin filtro. Decide si hay algo que repasar (mostrar
+  //    la sección y el filtro). Independiente del filtro para que, al desmarcar todas
+  //    las unidades, la sección NO desaparezca y puedas volver a activarlas.
+  //  · stats — acotado al filtro de unidades. Da los números que coinciden con lo que
+  //    la sesión trae, y baja al repasar.
+  const courseStats = statsFor(course);
   const stats = statsForUnits(course, [...included]);
 
   const today = () =>
@@ -446,7 +451,7 @@ function Home({
 
       <section className="today">
         <p className="today__eyebrow">Hoy · repaso global</p>
-        {stats.seen === 0 ? (
+        {courseStats.seen === 0 ? (
           <>
             <h1>Repaso espaciado</h1>
             <p className="today__note">
@@ -458,11 +463,17 @@ function Home({
           <>
             <h1>{stats.due > 0 ? `${stats.due} para repasar` : 'Repaso espaciado'}</h1>
             <p className="today__note">
-              {stats.due > 0
-                ? 'Lo que estás por olvidar, primero. Solo lo que ya estudiaste — sin material nuevo.'
-                : 'Nada vencido. Adelantás repaso de lo que ya viste (no suma material nuevo).'}
+              {stats.seen === 0
+                ? 'No hay unidades seleccionadas para repasar. Marcá alguna abajo.'
+                : stats.due > 0
+                  ? 'Lo que estás por olvidar, primero. Solo lo que ya estudiaste — sin material nuevo.'
+                  : 'Nada vencido. Adelantás repaso de lo que ya viste (no suma material nuevo).'}
             </p>
-            <button className="btn btn--primary btn--wide" onClick={today}>
+            <button
+              className="btn btn--primary btn--wide"
+              onClick={today}
+              disabled={stats.seen === 0}
+            >
               Empezar →
             </button>
             <p className="today__stats">
@@ -519,7 +530,7 @@ function Home({
 
       <footer className="home__status">
         <span>
-          {atoms.length} átomos · {mechanics.length} mecánicas · {stats.seen} tarjetas en progreso
+          {atoms.length} átomos · {mechanics.length} mecánicas · {courseStats.seen} tarjetas en progreso
         </span>
         <button className="home__reset" onClick={onReset}>
           Borrar progreso…
