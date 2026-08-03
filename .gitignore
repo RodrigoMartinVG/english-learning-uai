@@ -7,14 +7,10 @@ dist/
 # Ver material/README.md para saber qué archivos poner ahí.
 material/*.pdf
 
-# Audio generado por scripts/build-audio.ts — derivado de content/, no fuente de verdad.
-# Se regenera con `npm run build:audio`. El manifest SÍ se versiona (es el cache de hashes).
-#
-# OJO: tiene que ser "public/audio/*" y NO "public/audio/". Con la barra final git
-# excluye el directorio entero y ni siquiera desciende, así que el "!" de abajo nunca
-# llega a aplicarse y el manifest quedaría ignorado en silencio.
-public/audio/*
-!public/audio/audio-manifest.json
+# Audio generado por scripts/build-audio.ts — derivado de content/. SÍ se versiona
+# (junto con el manifest) para que el deploy no tenga que regenerarlo con Kokoro:
+# ~206 MB, incremental (solo cambian los clips cuyo hash cambió). Se sigue pudiendo
+# regenerar con `npm run build:audio`.
 
 # Credenciales del proveedor TTS. NUNCA commitear.
 .env
