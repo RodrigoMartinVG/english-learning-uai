@@ -1,0 +1,146 @@
+.vpractice {
+  position: relative;
+  display: inline-flex;
+}
+
+.vpractice__toggle {
+  min-height: 40px;
+  min-width: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 15px;
+  line-height: 1;
+}
+.vpractice__toggle:hover {
+  background: var(--surface-hi);
+  border-color: var(--accent);
+}
+
+.vpractice__panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 30;
+  width: min(400px, 92vw);
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: vpractice-rise var(--dur) var(--ease);
+}
+@keyframes vpractice-rise {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+.vpractice__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vpractice__x {
+  color: var(--text-dim);
+  min-height: 32px;
+  min-width: 32px;
+  border-radius: var(--radius-sm);
+}
+.vpractice__x:hover {
+  color: var(--text);
+  background: var(--surface-hi);
+}
+
+.vpractice__note {
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.vpractice__targetrow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.vpractice__target {
+  flex: 1;
+  min-width: 0;
+  min-height: 38px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-hi);
+  color: var(--text);
+  font-size: 16px;
+}
+.vpractice__target::placeholder {
+  color: var(--text-faint);
+}
+
+.vpractice__controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.vpractice__controls .btn {
+  flex: 1;
+}
+/* Grabando: el botón principal late en rojo. */
+.vpractice__rec--live,
+.vpractice__rec--live:hover {
+  background: var(--error);
+  border-color: var(--error);
+  color: #fff;
+}
+
+.vpractice__opt {
+  flex: none;
+  font-size: 12px;
+  color: var(--text-faint);
+  padding: 4px 8px;
+  white-space: nowrap;
+  border-radius: var(--radius-sm);
+}
+.vpractice__opt:hover {
+  color: var(--text-dim);
+  background: var(--surface-hi);
+}
+
+.vpractice__interim {
+  min-height: 22px;
+  color: var(--text-dim);
+  font-size: 14px;
+  text-align: center;
+}
+
+.vpractice__result {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-hi);
+  border: 1px solid var(--border);
+}
+.vpractice__heard {
+  font-size: 12px;
+  color: var(--text-faint);
+  font-family: var(--mono);
+}
+.vpractice__ab {
+  display: flex;
+  gap: 10px;
+}
+.vpractice__ab .btn {
+  flex: 1;
+}
+
+.vpractice__stats {
+  font-size: 12px;
+  color: var(--text-faint);
+  text-align: center;
+}

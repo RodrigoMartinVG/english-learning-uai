@@ -36,6 +36,7 @@ import { ResetPanel } from './ResetPanel.tsx';
 import { ReferenceView } from './ReferenceView.tsx';
 import { ReaderView } from './ReaderView.tsx';
 import { VoiceScratch } from '../ui/VoiceScratch.tsx';
+import { VoicePractice } from '../ui/VoicePractice.tsx';
 import './app.css';
 
 /** Adapta el store de progreso al contrato que el motor espera. */
@@ -146,6 +147,7 @@ export default function App() {
               Oda <span>· {activeCourse ? courseName(activeCourse) : 'Language Hub'}</span>
             </button>
             <VoiceScratch />
+            <VoicePractice />
           </div>
           <div className="shell__actions">
             <AudioTransport />

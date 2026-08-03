@@ -83,51 +83,9 @@
   color: var(--text);
   font-size: 12px;
   line-height: 1;
-  opacity: 0.75;
-  transition: opacity var(--dur) var(--ease), background var(--dur) var(--ease);
 }
 .vscratch__mini:hover {
   background: var(--surface-hi);
-  opacity: 1;
-}
-.vscratch__mini--on {
-  opacity: 1;
-  color: var(--accent);
-}
-
-/* Objetivo a comparar: input chico, aparece solo al pedirlo con 🎯. */
-.vscratch__target {
-  flex: none;
-  width: 120px;
-  min-height: 26px;
-  padding: 2px 8px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  background: var(--surface-hi);
-  color: var(--text);
-  font-size: 14px;
-}
-.vscratch__target::placeholder {
-  color: var(--text-faint);
-}
-
-/* Diff palabra por palabra dentro de la tira: hereda el color de estado de .w. */
-.vscratch__diff {
-  display: inline-flex;
-  gap: 4px;
-  overflow-x: auto;
-}
-
-/* Cyclador de "corte": texto tenue, no compite con nada. */
-.vscratch__opt {
-  flex: none;
-  font-size: 11px;
-  color: var(--text-faint);
-  padding: 2px 4px;
-  white-space: nowrap;
-}
-.vscratch__opt:hover {
-  color: var(--text-dim);
 }
 
 @media (max-width: 640px) {
