@@ -316,8 +316,16 @@ for (const u of [...utterances]) {
   // resto del habla que califica lleva las tres alternativas de siempre.
   const isModel =
     PROVIDER_ID === 'kokoro' && (u.key.endsWith('.model') || /\.modelvar\.\d+$/.test(u.key));
-  let voices = NO_ALTS ? null : isModel ? MODEL_VOICES : wantsAlts(u) ? ALT_VOICES : null;
-  if (voices && VOICES_FILTER) voices = voices.filter((v) => VOICES_FILTER.includes(v.id));
+  let voices: readonly { id: string; label: string }[] | null = NO_ALTS
+    ? null
+    : isModel
+      ? MODEL_VOICES
+      : wantsAlts(u)
+        ? ALT_VOICES
+        : null;
+  // --voices REEMPLAZA el set donde correspondan alternativas: permite agregar una
+  // voz aunque no esté en ALT_VOICES (p. ej. Nicole por frase), sin tocar el resto.
+  if (VOICES_FILTER) voices = voices ? VOICES_FILTER.map((id) => ({ id, label: id })) : null;
   if (!voices || !voices.length) continue;
   for (const alt of voices) {
     if (alt.id === u.voice) continue;

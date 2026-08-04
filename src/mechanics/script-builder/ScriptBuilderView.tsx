@@ -16,7 +16,7 @@ import type { Recording } from '../../audio/Recorder.ts';
 import { LiveDictation, Highlighted, type DictationResult } from '../../ui/LiveDictation.tsx';
 import { stepSegmentKey, stepQuestionKey, modelVarSentenceKey } from '../../../content/schema.ts';
 import { splitSentences } from '../../../content/sentences.ts';
-import { ALT_VOICES } from '../../../content/kokoro-voices.ts';
+import { MODEL_VOICES } from '../../../content/kokoro-voices.ts';
 import { expectedWords } from './mechanic.ts';
 import type { MechanicViewProps } from '../types.ts';
 import type { ScriptBuilderRound } from './mechanic.ts';
@@ -99,6 +99,16 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
       audioKey: modelVarSentenceKey(target.id, version - 1, m),
     }));
   }, [version, steps, variants, target.id]);
+
+  // Voces con clip por-frase para TODAS las oraciones: solo esas se ofrecen (si no,
+  // esa frase caería a la voz del navegador). Mismas etiquetas que la vista de modelos.
+  const voiceOptions = useMemo(
+    () =>
+      MODEL_VOICES.filter(
+        (v) => chunks.length > 0 && chunks.every((c) => audio.hasFile(`${c.audioKey}.v.${v.id}`))
+      ),
+    [chunks, audio]
+  );
 
   const chunk = chunks[idx];
   const step = steps[idx]; // crear se guía siempre por las preguntas de la A
@@ -307,7 +317,7 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
               >
                 Original
               </button>
-              {ALT_VOICES.map((v) => (
+              {voiceOptions.map((v) => (
                 <button
                   key={v.id}
                   className={'build__voice' + (voice === v.id ? ' build__voice--on' : '')}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T17:54:45.693Z",
+  "generatedAt": "2026-08-04T18:55:12.461Z",
   "provider": "kokoro(Kokoro-82M-v1.0-ONNX, q8)",
   "entries": {
     "en1.u1.p.001": {
@@ -42865,6 +42865,138 @@
       "durationMs": 114306,
       "hash": "52dc8e1325742cf6",
       "chars": 1235
+    },
+    "en1.u5.pr.002.modelvar.2.s.0.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.0.v.af_nicole.mp3",
+      "durationMs": 4927,
+      "hash": "c72c6068af9457b6",
+      "chars": 55
+    },
+    "en1.u5.pr.002.modelvar.2.s.1.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.1.v.af_nicole.mp3",
+      "durationMs": 3693,
+      "hash": "47d991f9c5bab9c7",
+      "chars": 43
+    },
+    "en1.u5.pr.002.modelvar.2.s.2.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.2.v.af_nicole.mp3",
+      "durationMs": 2514,
+      "hash": "9dd47d7909c97c48",
+      "chars": 32
+    },
+    "en1.u5.pr.002.modelvar.2.s.3.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.3.v.af_nicole.mp3",
+      "durationMs": 12469,
+      "hash": "093339d7dc14aaae",
+      "chars": 125
+    },
+    "en1.u5.pr.002.modelvar.2.s.4.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.4.v.af_nicole.mp3",
+      "durationMs": 4339,
+      "hash": "cfdb377ba4460cbd",
+      "chars": 55
+    },
+    "en1.u5.pr.002.modelvar.2.s.5.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.5.v.af_nicole.mp3",
+      "durationMs": 4481,
+      "hash": "a03babc34e7b8f85",
+      "chars": 57
+    },
+    "en1.u5.pr.002.modelvar.2.s.6.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.6.v.af_nicole.mp3",
+      "durationMs": 3109,
+      "hash": "663a553bdb6bf439",
+      "chars": 37
+    },
+    "en1.u5.pr.002.modelvar.2.s.7.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.7.v.af_nicole.mp3",
+      "durationMs": 2661,
+      "hash": "3b29183bd7e66412",
+      "chars": 34
+    },
+    "en1.u5.pr.002.modelvar.2.s.8.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.8.v.af_nicole.mp3",
+      "durationMs": 4032,
+      "hash": "27123d9825fbc765",
+      "chars": 42
+    },
+    "en1.u5.pr.002.modelvar.2.s.9.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.9.v.af_nicole.mp3",
+      "durationMs": 4375,
+      "hash": "5b8a65d1971ad979",
+      "chars": 48
+    },
+    "en1.u5.pr.002.modelvar.2.s.10.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.10.v.af_nicole.mp3",
+      "durationMs": 5368,
+      "hash": "7a2e6336519e920e",
+      "chars": 58
+    },
+    "en1.u5.pr.002.modelvar.2.s.11.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.11.v.af_nicole.mp3",
+      "durationMs": 2776,
+      "hash": "d29da1b473409680",
+      "chars": 29
+    },
+    "en1.u5.pr.002.modelvar.2.s.12.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.12.v.af_nicole.mp3",
+      "durationMs": 6472,
+      "hash": "70714a92c62d93c6",
+      "chars": 66
+    },
+    "en1.u5.pr.002.modelvar.2.s.13.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.13.v.af_nicole.mp3",
+      "durationMs": 4457,
+      "hash": "ebd12bdb3dd76e6b",
+      "chars": 55
+    },
+    "en1.u5.pr.002.modelvar.2.s.14.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.14.v.af_nicole.mp3",
+      "durationMs": 4408,
+      "hash": "07c4fd1d49aff7c3",
+      "chars": 55
+    },
+    "en1.u5.pr.002.modelvar.2.s.15.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.15.v.af_nicole.mp3",
+      "durationMs": 5503,
+      "hash": "d05fc416331cd71a",
+      "chars": 67
+    },
+    "en1.u5.pr.002.modelvar.2.s.16.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.16.v.af_nicole.mp3",
+      "durationMs": 4704,
+      "hash": "709c9ea87d21de41",
+      "chars": 51
+    },
+    "en1.u5.pr.002.modelvar.2.s.17.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.17.v.af_nicole.mp3",
+      "durationMs": 3231,
+      "hash": "d78628857b8ca1ee",
+      "chars": 35
+    },
+    "en1.u5.pr.002.modelvar.2.s.18.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.18.v.af_nicole.mp3",
+      "durationMs": 10725,
+      "hash": "4e8bf544659b1734",
+      "chars": 114
+    },
+    "en1.u5.pr.002.modelvar.2.s.19.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.19.v.af_nicole.mp3",
+      "durationMs": 3528,
+      "hash": "8a9167130a2023dc",
+      "chars": 42
+    },
+    "en1.u5.pr.002.modelvar.2.s.20.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.20.v.af_nicole.mp3",
+      "durationMs": 6673,
+      "hash": "4f1dc3f7e7ce7835",
+      "chars": 69
+    },
+    "en1.u5.pr.002.modelvar.2.s.21.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.21.v.af_nicole.mp3",
+      "durationMs": 3560,
+      "hash": "4b4c044a9afa73e9",
+      "chars": 45
     }
   }
 }

@@ -12,6 +12,7 @@ import { useAudio } from '../audio/AudioProvider.tsx';
 import { atoms as allAtoms } from '../data/content.ts';
 import { expressionGuide, modelScripts } from '../data/reference.ts';
 import { AltVoices } from '../ui/AltVoices.tsx';
+import { ContinuousPlayer } from '../ui/ContinuousPlayer.tsx';
 import { MODEL_VOICES } from '../../content/kokoro-voices.ts';
 import type { UnitFile } from '../../content/schema.ts';
 import './reference.css';
@@ -153,6 +154,7 @@ export function ReferenceView({
                       voices={MODEL_VOICES}
                     />
                   )}
+                  <ContinuousPlayer chunks={v.chunks} speakerId={s.speakerId} />
                   {s.buildable && onReconstruct && (
                     <button
                       className="ref__reconstruct ref__reconstruct--version"

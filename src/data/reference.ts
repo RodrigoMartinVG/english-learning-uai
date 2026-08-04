@@ -11,6 +11,8 @@
  */
 
 import type { Atom } from '../../content/schema.ts';
+import { stepSegmentKey, modelVarSentenceKey } from '../../content/schema.ts';
+import { splitSentences } from '../../content/sentences.ts';
 import { fnLabel } from '../shared/labels.ts';
 
 export interface Expression {
@@ -104,15 +106,39 @@ export function expressionGuide(atoms: Atom[]): ObjectiveGroup[] {
     .filter((g) => g.says.length >= 2 || g.replies.length >= 2);
 }
 
+/** Una frase del texto con su clave de audio: para reproducir/estudiar frase por frase. */
+export interface ScriptChunk {
+  text: string;
+  audioKey: string;
+}
+
 export interface ModelScript {
   id: string;
   title: string;
   prompt: string;
-  /** modelAnswer + modelVariants: las versiones alternativas del mismo texto. */
-  versions: { text: string; audioKey?: string }[];
+  /** modelAnswer + modelVariants: las versiones alternativas del mismo texto.
+   *  `chunks` son sus oraciones con audio propio (para el audio continuo). */
+  versions: { text: string; audioKey?: string; chunks: ScriptChunk[] }[];
   speakerId: string;
   /** ¿Se puede reconstruir con "Armá el guion"? (Necesita pasos guía.) */
   buildable: boolean;
+}
+
+/** Las oraciones (con audio) de una versión, igual que las parte el copiar frase por
+ *  frase: la Versión A por sus `steps`; las variantes B/C/D partiendo el texto. */
+function versionChunks(
+  p: Extract<Atom, { kind: 'production' }>,
+  versionIdx: number
+): ScriptChunk[] {
+  if (versionIdx === 0) {
+    return (p.steps ?? []).map((s, i) => ({ text: s.segment, audioKey: stepSegmentKey(p.id, i) }));
+  }
+  const text = (p.modelVariants ?? [])[versionIdx - 1];
+  if (!text) return [];
+  return splitSentences(text).map((sent, m) => ({
+    text: sent,
+    audioKey: modelVarSentenceKey(p.id, versionIdx - 1, m),
+  }));
 }
 
 /** Los scripts largos: producción con su modelo y sus versiones alternativas. */
@@ -122,8 +148,12 @@ export function modelScripts(atoms: Atom[]): ModelScript[] {
     .map((a) => {
       const p = a as Extract<Atom, { kind: 'production' }>;
       const versions = [
-        { text: p.modelAnswer, audioKey: `${p.id}.model` },
-        ...(p.modelVariants ?? []).map((t, i) => ({ text: t, audioKey: `${p.id}.modelvar.${i}` })),
+        { text: p.modelAnswer, audioKey: `${p.id}.model`, chunks: versionChunks(p, 0) },
+        ...(p.modelVariants ?? []).map((t, i) => ({
+          text: t,
+          audioKey: `${p.id}.modelvar.${i}`,
+          chunks: versionChunks(p, i + 1),
+        })),
       ];
       return {
         id: p.id,
