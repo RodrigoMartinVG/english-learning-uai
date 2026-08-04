@@ -58,6 +58,9 @@ const FORCE = args.includes('--force');
 // Con --no-alts no se generan voces alternativas (MODEL_VOICES/ALT_VOICES): solo la
 // voz base de cada emisión. Útil para regenerar rápido una sola versión en una voz.
 const NO_ALTS = args.includes('--no-alts');
+// Con --voices=id1,id2 las voces alternativas se limitan a esos ids (además de la
+// base). Sirve para agregar UNA voz extra a algo ya generado sin rehacer el resto.
+const VOICES_FILTER = args.find((a) => a.startsWith('--voices='))?.slice('--voices='.length).split(',');
 const ONLY = args.find((a) => a.startsWith('--only='))?.slice('--only='.length);
 const PROVIDER_ID = (args.find((a) => a.startsWith('--provider='))?.slice('--provider='.length) ??
   'kokoro') as ProviderId;
@@ -312,8 +315,9 @@ for (const u of [...utterances]) {
   // resto del habla que califica lleva las tres alternativas de siempre.
   const isModel =
     PROVIDER_ID === 'kokoro' && (u.key.endsWith('.model') || /\.modelvar\.\d+$/.test(u.key));
-  const voices = NO_ALTS ? null : isModel ? MODEL_VOICES : wantsAlts(u) ? ALT_VOICES : null;
-  if (!voices) continue;
+  let voices = NO_ALTS ? null : isModel ? MODEL_VOICES : wantsAlts(u) ? ALT_VOICES : null;
+  if (voices && VOICES_FILTER) voices = voices.filter((v) => VOICES_FILTER.includes(v.id));
+  if (!voices || !voices.length) continue;
   for (const alt of voices) {
     if (alt.id === u.voice) continue;
     utterances.push({
