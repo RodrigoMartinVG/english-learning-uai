@@ -55,6 +55,9 @@ const NEUTRAL_SPEAKER = 'narrator';
 const args = process.argv.slice(2);
 const DRY_RUN = args.includes('--dry-run');
 const FORCE = args.includes('--force');
+// Con --no-alts no se generan voces alternativas (MODEL_VOICES/ALT_VOICES): solo la
+// voz base de cada emisión. Útil para regenerar rápido una sola versión en una voz.
+const NO_ALTS = args.includes('--no-alts');
 const ONLY = args.find((a) => a.startsWith('--only='))?.slice('--only='.length);
 const PROVIDER_ID = (args.find((a) => a.startsWith('--provider='))?.slice('--provider='.length) ??
   'kokoro') as ProviderId;
@@ -309,7 +312,7 @@ for (const u of [...utterances]) {
   // resto del habla que califica lleva las tres alternativas de siempre.
   const isModel =
     PROVIDER_ID === 'kokoro' && (u.key.endsWith('.model') || /\.modelvar\.\d+$/.test(u.key));
-  const voices = isModel ? MODEL_VOICES : wantsAlts(u) ? ALT_VOICES : null;
+  const voices = NO_ALTS ? null : isModel ? MODEL_VOICES : wantsAlts(u) ? ALT_VOICES : null;
   if (!voices) continue;
   for (const alt of voices) {
     if (alt.id === u.voice) continue;
