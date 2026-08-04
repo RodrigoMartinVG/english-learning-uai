@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T15:39:38.368Z",
+  "generatedAt": "2026-08-04T17:54:45.693Z",
   "provider": "kokoro(Kokoro-82M-v1.0-ONNX, q8)",
   "entries": {
     "en1.u1.p.001": {
@@ -42859,6 +42859,12 @@
       "durationMs": 7200,
       "hash": "bfcd55ae3ffce143",
       "chars": 114
+    },
+    "en1.u5.pr.002.modelvar.2.v.af_nicole": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.v.af_nicole.mp3",
+      "durationMs": 114306,
+      "hash": "52dc8e1325742cf6",
+      "chars": 1235
     }
   }
 }
