@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T13:47:36.209Z",
+  "generatedAt": "2026-08-04T15:39:38.368Z",
   "provider": "kokoro(Kokoro-82M-v1.0-ONNX, q8)",
   "entries": {
     "en1.u1.p.001": {
@@ -42847,6 +42847,18 @@
       "durationMs": 2558,
       "hash": "0310b3b71613f453",
       "chars": 45
+    },
+    "en1.u5.pr.002.modelvar.2.s.3.v.am_michael": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.3.v.am_michael.mp3",
+      "durationMs": 8362,
+      "hash": "80214f5319bb5f0e",
+      "chars": 125
+    },
+    "en1.u5.pr.002.modelvar.2.s.18.v.am_michael": {
+      "src": "/audio/en1/u5/en1.u5.pr.002.modelvar.2.s.18.v.am_michael.mp3",
+      "durationMs": 7200,
+      "hash": "bfcd55ae3ffce143",
+      "chars": 114
     }
   }
 }

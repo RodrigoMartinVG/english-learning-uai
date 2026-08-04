@@ -131,8 +131,9 @@ function push(key: string, text: string, speakerId: string, rateFactor = 1): voi
   });
 }
 
-/** Longitud máxima para tener voces alternativas: por encima son narraciones. */
-const ALT_MAX_CHARS = 110;
+/** Longitud máxima para tener voces alternativas: por encima son narraciones.
+ * Se puede subir con --alt-max=N (p. ej. para cubrir una oración larga puntual). */
+const ALT_MAX_CHARS = Number(args.find((a) => a.startsWith('--alt-max='))?.slice('--alt-max='.length)) || 110;
 
 /**
  * ¿Esta emisión merece voces alternativas?
