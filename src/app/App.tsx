@@ -10,7 +10,7 @@
 import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import { AudioProvider, FlagAudioButton, useAudio, useAudioState, useAudioTransport, useAudioDegraded } from '../audio/AudioProvider.tsx';
 import { atomInAspect, type Aspect, type Atom, type Course, type ReadingAtom, type Skill } from '../../content/schema.ts';
-import { atoms, courseName, courses, units } from '../data/content.ts';
+import { allCourses, atoms, courseName, units } from '../data/content.ts';
 import { mechanics } from '../mechanics/registry.ts';
 import {
   buildSession,
@@ -115,9 +115,10 @@ type View =
   | { name: 'session'; session: Session }
   | { name: 'reset' };
 
-/** Raíz de navegación: con un solo curso se entra directo; con varios, al selector. */
-const HOME_ROOT: View =
-  courses.length === 1 ? { name: 'home', course: courses[0]!.id } : { name: 'courses' };
+/** Raíz de navegación: la landing de cursos. Siempre se entra ahí — es la vista de
+ *  inicio con las cards de cada materia (Inglés 1-4, Gramática, Pronunciación…) y su
+ *  estado de repaso. Los cursos sin contenido aparecen como "Próximamente". */
+const HOME_ROOT: View = { name: 'courses' };
 
 export default function App() {
   // Pila de navegación: "atrás" vuelve a DONDE ESTABAS, no siempre al inicio.
@@ -228,20 +229,35 @@ function CoursePicker({ onPick }: { onPick: (course: Course) => void }) {
   return (
     <div className="home">
       <section>
-        <p className="home__eyebrow">Elegí tu nivel</p>
-        <h1>¿Qué inglés querés estudiar?</h1>
+        <p className="home__eyebrow">Language Hub</p>
+        <h1>¿Qué querés estudiar?</h1>
         <div className="home__mechanics">
-          {courses.map((c) => {
+          {allCourses.map((c) => {
+            if (!c.hasContent) {
+              // Curso registrado pero todavía sin contenido: card "Próximamente".
+              return (
+                <button key={c.id} className="card" disabled>
+                  <div className="card__top">
+                    <span className="card__level">{c.name}</span>
+                    <span className="card__skill">Próximamente</span>
+                  </div>
+                  {c.subtitle && <p>{c.subtitle}</p>}
+                </button>
+              );
+            }
             const ids = atoms.filter((a) => a.course === c.id && a.kind !== 'reading').map((a) => a.id);
             const cov = coverageOf(ids);
-            const nUnits = units.filter((u) => u.course === c.id).length;
+            // "Por repasar": tarjetas vencidas del curso (prefijo con punto para no
+            // cruzar en1/en12 el día que existan). 0 → no mostramos badge.
+            const due = statsFor(`${c.id}.`).due;
             return (
               <button key={c.id} className="card" onClick={() => onPick(c.id)}>
                 <div className="card__top">
                   <span className="card__level">{c.name}</span>
                   {c.subtitle && <span className="card__skill">{c.subtitle}</span>}
+                  {due > 0 && <span className="card__review">🔁 {due} por repasar</span>}
                 </div>
-                <h3>{nUnits} {nUnits === 1 ? 'unidad' : 'unidades'}</h3>
+                <h3>{c.nUnits} {c.nUnits === 1 ? 'unidad' : 'unidades'}</h3>
                 <ProgressBar started={cov.started} learned={cov.learned} total={cov.total} />
               </button>
             );

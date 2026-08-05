@@ -43,6 +43,20 @@ const courseMeta = (coursesFile as { courses: CourseMeta[] }).courses;
 export const courses: CourseMeta[] = courseMeta
   .filter((c) => units.some((u) => u.course === c.id))
   .sort((a, b) => a.order - b.order);
+
+/** Un curso en la landing: metadatos + si ya tiene contenido y cuántas unidades.
+ *  Los que no tienen contenido se muestran como "Próximamente" (deshabilitados). */
+export interface CourseCard extends CourseMeta {
+  hasContent: boolean;
+  nUnits: number;
+}
+/** TODOS los cursos registrados (con y sin contenido), en orden, para la landing. */
+export const allCourses: CourseCard[] = courseMeta
+  .map((c) => {
+    const cUnits = units.filter((u) => u.course === c.id);
+    return { ...c, hasContent: cUnits.length > 0, nUnits: cUnits.length };
+  })
+  .sort((a, b) => a.order - b.order);
 /** Nombre visible de un curso (fallback al id si no hay metadatos). */
 export const courseName = (id: string): string =>
   courseMeta.find((c) => c.id === id)?.name ?? id;

@@ -15,7 +15,12 @@ import { z } from 'zod';
 
 /* ────────────────────────────── vocabularios cerrados ───────────────────────────── */
 
-export const COURSES = ['en1', 'en2', 'en3', 'en4'] as const;
+// Cada curso es una "materia" con estatus propio (mismo nivel jerárquico): los
+// niveles de inglés (en1..en4) y otras materias (gramática, pronunciación…). El id
+// es corto y estable porque prefija TODOS los ids de átomos y claves de audio
+// (`en1.u1.p.007`); el nombre visible vive en content/courses.json. Agregar una
+// materia = sumar su id acá, su entrada en courses.json y su carpeta content/<id>/.
+export const COURSES = ['en1', 'en2', 'en3', 'en4', 'gram1', 'pron1'] as const;
 
 /** Estructuras gramaticales. Jerárquico: 'be.present.interrogative'. */
 export const GRAMMAR_TAGS = [

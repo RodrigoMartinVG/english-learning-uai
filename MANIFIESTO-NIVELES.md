@@ -26,18 +26,19 @@ homogeneidad**:
 - **Voces:** `content/speakers.json` y `content/kokoro-voices.ts` son compartidos. Reusar los
   mismos speakers da **continuidad de voz** entre niveles (recomendado).
 
-## 2. Lo que FALTA (refactor de UI, una sola vez)
+## 2. El selector de cursos (YA hecho)
 
-Único gap para soportar varios niveles en la app: **elegir el nivel**. Hoy el Home muestra
-todos los cursos juntos y el brand dice "· Inglés I" fijo. El refactor (ver §6):
+El refactor de UI para elegir curso **ya está** (`CoursePicker` + vista `'courses'` en
+`src/app/App.tsx`, registro en `content/courses.json`):
 
-1. **Registro de cursos** con metadatos (nombre visible, orden).
-2. **Curso actual** en el estado de la app; el Home, el repaso global y las stats se
-   **acotan al curso elegido**.
-3. **Selector de nivel** que se **auto-saltea cuando hay un solo curso** (sin cambio de UX
-   hoy; "just works" cuando entre Inglés 2).
+1. **Registro de cursos** con metadatos (nombre visible, subtítulo, orden).
+2. **Curso actual** en el estado de la app; Home, repaso global y stats se **acotan al
+   curso elegido**.
+3. **Landing de cursos** como vista de inicio: una card por curso, con progreso y badge
+   **"por repasar"** (tarjetas SRS vencidas). Los cursos registrados **sin contenido**
+   aparecen como **"Próximamente"** (deshabilitados) — ver §8.
 
-Es un refactor acotado a `src/app/App.tsx` + un `content/courses.json`. No toca el motor.
+No toca el motor. Agregar un nivel/materia sigue siendo **solo contenido**.
 
 ---
 
@@ -216,4 +217,30 @@ el campo `course`, no ramificar.
 - [ ] speakers reusados (o agregado el nuevo).
 - [ ] `npm run check` en verde.
 - [ ] `npm run build:audio` (serial) → 0 pendientes.
+
+---
+
+## 8. Materias que no son niveles de inglés (Gramática, Pronunciación…)
+
+Todo curso es un **`course` al mismo nivel jerárquico** — no hay "materia madre" que
+agrupe niveles. Los niveles de inglés (`en1`..`en4`), la gramática (`gram1`) y la
+pronunciación (`pron1`) son cursos peer: la landing los muestra a todos como cards.
+
+**El id es la única regla técnica.** Es corto y estable porque **prefija todos los ids
+de átomos y claves de audio** (`gram1.u1.p.007`). El nombre visible ("Gramática
+inglesa") va en `content/courses.json`; nunca se deriva del id.
+
+**Dar de alta una materia nueva (ej. `voc1` = Vocabulario):**
+1. Agregá `'voc1'` a `COURSES` en `content/schema.ts`.
+2. Agregá su entrada en `content/courses.json` (`id`, `name`, `subtitle`, `order`).
+3. Creá la carpeta `content/voc1/` (poné un `README.md` mientras no haya contenido).
+4. Hasta que dejes el primer `unit-*.json`, la landing la muestra como **"Próximamente"**
+   (card deshabilitada, sin progreso ni badge). Con contenido, se activa sola.
+
+Ya están scaffoldeadas (registro + carpeta + README, sin contenido): `en2`, `en3`,
+`en4`, `gram1`, `pron1`. Aparecen como "Próximamente" hasta cargarles material.
+
+**Qué NO cambia:** el motor, las mecánicas, el progreso, el SRS y el audio son
+*course-agnostic*. Una materia de pronunciación usa las mismas mecánicas (pares mínimos,
+shadowing) que inglés — solo cambia el contenido.
 - [ ] Abrir la app: aparece el selector con Inglés 1 e Inglés 2; en2 muestra solo su material.
