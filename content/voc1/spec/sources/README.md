@@ -24,10 +24,11 @@ Las listas de arriba son de **palabras sueltas**. Los phrasal verbs, idioms y co
 son **unidades multipalabra**: NO las captura una lista de frecuencia de palabras, así que
 son **denominadores aparte** (cada `.txt` nuevo aparece solo en el rastreador):
 
-- **`phave.txt`** — PHaVE List (Garnier & Schmitt 2015): 150 phrasal verbs más frecuentes.
-  Está en el paper/PDF (fetch dio 403); bajarlo a mano. Cubre ~83% de los phrasal verbs.
-- **`phrase.txt`** — PHRASE List (Martinez & Schmitt 2012): ~505 expresiones formulaicas
-  frecuentes (idioms/chunks).
+- **`phave.txt`** — ✅ PHaVE List (Garnier & Schmitt 2015): 150 phrasal verbs más
+  frecuentes (norbertschmitt.co.uk, Appendix 1). Cubre ~83% de los phrasal verbs. Multi-
+  palabra → denominador propio. Sin banda CEFR (tiene su rank 1-150 como proxy).
+- **`phrase.txt`** — *(pendiente)* PHRASE List (Martinez & Schmitt 2012): ~505 expresiones
+  formulaicas frecuentes (idioms/chunks).
 - **`acl.txt`** — Academic Collocation List (Ackermann & Chen 2013): ~2.500 colocaciones
   académicas. Para la Dim. 1.5 / patrones.
 - *Verbos irregulares:* NO son un denominador aparte — son palabras que **ya están en la

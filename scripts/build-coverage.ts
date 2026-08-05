@@ -27,14 +27,15 @@ const CEFR_ORDER = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
 const clean = (line: string) => line.trim();
 const isComment = (line: string) => line.startsWith('#') || line === '';
 
-/** Palabras de un .txt: separa por comas/saltos, saltea comentarios, normaliza. */
+/** Entradas de un .txt: separa por comas/saltos (NO por espacios internos, así las
+ *  expresiones multipalabra como "back up" quedan enteras), saltea comentarios. */
 function readWordsTxt(file: string): string[] {
   const raw = readFileSync(file, 'utf8');
   const words = raw
     .split(/\r?\n/)
     .filter((l) => !clean(l).startsWith('#'))
     .join(',')
-    .split(/[,\s]+/)
+    .split(',')
     .map((w) => w.trim().toLowerCase())
     .filter(Boolean);
   return [...new Set(words)];
