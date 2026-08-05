@@ -12,6 +12,11 @@ Listas de frecuencia **reales** que definen QUÉ queremos cubrir. El script
 - **`nawl.txt`** — New Academic Word List (~960 palabras académicas). Fuente:
   eapfoundation.com/vocab/academic/nawl. Complementa a la NGSL (no la solapa): +~10% de
   cobertura académica. **La capa para leer papers.**
+- **`oxford5000.csv`** — Oxford 5000 (~4953 palabras) con **banda CEFR** (A1-C1), formato
+  `word,cefr`. Fuente: OUP (vía github winterdl). **Doble función:** suma escala (llega a
+  ~5.000) y es la **fuente de banda CEFR** para toda la espiral. Solo guardamos
+  palabra+nivel (dato factual); las definiciones/ejemplos de Oxford (con copyright) NO se
+  copian. Unión NGSL∪NAWL∪Oxford ≈ **5.452 palabras objetivo**.
 
 ### Fuentes que faltan agregar (expresiones multipalabra — ver por qué en PLANTILLA/índice)
 
@@ -28,17 +33,15 @@ son **denominadores aparte** (cada `.txt` nuevo aparece solo en el rastreador):
 - *Verbos irregulares:* NO son un denominador aparte — son palabras que **ya están en la
   NGSL** (be, go, get…) con una **etiqueta** de irregularidad. Ver el índice.
 
-## Pendiente: banda CEFR (para la espiral)
+## Banda CEFR (para la espiral) — resuelta con Oxford 5000
 
-Estos archivos son la lista *plana*. Para la **espiral por nivel** hace falta la banda
-CEFR de cada palabra. Opciones (a resolver al construir cada rebanada):
-- **Rank de frecuencia** del NGSL como proxy (rank 1-~750 ≈ A1-A2, ~750-1500 ≈ B1,
-  1500-2809 ≈ B2). Requiere bajar el NGSL "por rank" (este .txt es alfabético).
-- **CEFR-J Wordlist** (libre, A1-B2) o **English Vocabulary Profile** (Cambridge, CEFR por
-  *sentido*) / **Oxford 3000/5000** para banda por palabra.
+La banda CEFR ya sale de `oxford5000.csv`: el rastreador reporta cobertura **por nivel**
+(A1-C1). Distribución objetivo actual: A1 ~820 · A2 ~790 · B1 ~726 · B2 ~1323 · C1 ~1294.
 
-Cuando tengamos la banda, se agrega una columna `cefr` al rastreador y el build puede
-reportar cobertura **por nivel** (cuántas A1 faltan, etc.).
+Quedan **~499 palabras "sin banda"** (están en NGSL/NAWL pero no en Oxford 5000). Para
+bandearlas: cruzar con **CEFR-J Wordlist** (libre) o el **English Vocabulary Profile**
+(CEFR por *sentido*), o usar el rank de frecuencia del NGSL como proxy. Mientras tanto el
+build las agrupa como "sin banda".
 
 ## Nota sobre palabras funcionales
 
