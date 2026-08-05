@@ -53,23 +53,22 @@ Cada entrada es un bloque `###` con estos campos. Los marcados *(opc.)* pueden f
 
 ---
 
-## Extensión de schema que esto necesita (propuesta, aún no implementada)
+## Extensión de schema (✅ implementada)
 
-Hoy `lexemeAtomSchema` tiene `word, pos, gloss, examplePhraseId, focus, variantOf`.
-La ficha rica pide agregar (todo **opcional**, no rompe el contenido existente):
+`content/schema.ts` ya soporta la ficha rica (todo **opcional**, retrocompatible):
 
 ```ts
-// en lexemeAtomSchema
-cefr: z.enum(['A1','A2','B1','B2','C1']).optional(),
+// atomBase (cualquier átomo puede llevar su banda CEFR — eje de la espiral)
+cefr: z.enum(CEFR_LEVELS).optional(),   // 'A1'..'C2'
+
+// lexemeAtomSchema (además de word, pos, gloss, examplePhraseId, focus, variantOf)
 register: z.enum(['neutral','formal','informal']).optional(),
 collocations: z.array(z.string()).optional(),
 family: z.array(z.string()).optional(),
 nuance: z.array(z.string()).optional(),   // "establish (más formal)"
 ```
 
-- **CEFR** también puede alimentar el orden del "ladder" (qué se descubre antes).
+- **CEFR** vive en `atomBase` (no solo lexeme): también puede ordenar el "ladder".
 - **Colocaciones/familia** como `string[]` para la v1 (sin audio); las que merezcan
-  audio se modelan como `phrase` aparte.
+  audio propio se modelan como `phrase` aparte.
 - **Receptivo/productivo** NO es campo: ya lo define la mecánica (word-focus vs es-to-en).
-
-Se implementa **después** de cerrar el formato con la unidad piloto (U0.1).

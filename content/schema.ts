@@ -22,6 +22,11 @@ import { z } from 'zod';
 // materia = sumar su id acá, su entrada en courses.json y su carpeta content/<id>/.
 export const COURSES = ['en1', 'en2', 'en3', 'en4', 'gram1', 'pron1', 'voc1'] as const;
 
+/** Niveles CEFR — el eje de la "espiral" del curso de Vocabulario (qué entra antes).
+ *  Distinto de `difficulty` (ruta de práctica guiado→libre): esto es competencia. */
+export const CEFR_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const;
+export type Cefr = (typeof CEFR_LEVELS)[number];
+
 /** Estructuras gramaticales. Jerárquico: 'be.present.interrogative'. */
 export const GRAMMAR_TAGS = [
   // Unidad 1 — Bienvenida
@@ -200,6 +205,9 @@ const atomBase = {
   topic: z.array(z.enum(TOPIC_TAGS)),
   /** Ruta de dificultad de ARQUITECTURA.md §2.3 / §6.2, de más guiado a más libre. */
   difficulty: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]),
+  /** Banda CEFR (A1-C2): eje de la espiral del curso de Vocabulario. Opcional; las
+   *  unidades de inglés no la usan. Ordena qué se descubre antes. Ver content/voc1/spec. */
+  cefr: z.enum(CEFR_LEVELS).optional(),
   tags: z.array(z.string()).optional(),
   /**
    * A qué "texto de estudio" pertenece el átomo (Unidad 5). Es una 4ª dimensión de
@@ -311,6 +319,15 @@ export const lexemeAtomSchema = z.object({
   focus: z.enum(['phonetic', 'spelling', 'translation', 'variant']),
   /** Diferencias UK/US: lift/elevator, return ticket/round-trip. */
   variantOf: z.object({ uk: z.string(), us: z.string() }).optional(),
+  /* ── Ficha rica del curso de Vocabulario (receta Rica; todo opcional) ───────────── */
+  /** Registro: por defecto neutral; se marca solo si se desvía. */
+  register: z.enum(['neutral', 'formal', 'informal']).optional(),
+  /** Colocaciones frecuentes (texto de referencia): "make a decision", "set a date". */
+  collocations: z.array(z.string()).optional(),
+  /** Miembros de la familia de palabras: "happiness", "unhappy", "happily". */
+  family: z.array(z.string()).optional(),
+  /** Matices/sinónimos con su nota: "establish (más formal)". */
+  nuance: z.array(z.string()).optional(),
 });
 
 export const contrastAtomSchema = z.object({
