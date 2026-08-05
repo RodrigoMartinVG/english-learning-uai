@@ -20,7 +20,7 @@ import { z } from 'zod';
 // es corto y estable porque prefija TODOS los ids de átomos y claves de audio
 // (`en1.u1.p.007`); el nombre visible vive en content/courses.json. Agregar una
 // materia = sumar su id acá, su entrada en courses.json y su carpeta content/<id>/.
-export const COURSES = ['en1', 'en2', 'en3', 'en4', 'gram1', 'pron1'] as const;
+export const COURSES = ['en1', 'en2', 'en3', 'en4', 'gram1', 'pron1', 'voc1'] as const;
 
 /** Estructuras gramaticales. Jerárquico: 'be.present.interrogative'. */
 export const GRAMMAR_TAGS = [

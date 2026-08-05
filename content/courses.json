@@ -5,6 +5,7 @@
     { "id": "en3", "name": "Inglés 3", "subtitle": "Intermediate", "order": 3 },
     { "id": "en4", "name": "Inglés 4", "subtitle": "Upper-Intermediate", "order": 4 },
     { "id": "gram1", "name": "Gramática inglesa", "subtitle": "Estructuras", "order": 5 },
-    { "id": "pron1", "name": "Pronunciación", "subtitle": "Sonidos y ritmo", "order": 6 }
+    { "id": "pron1", "name": "Pronunciación", "subtitle": "Sonidos y ritmo", "order": 6 },
+    { "id": "voc1", "name": "Vocabulario", "subtitle": "Palabras en contexto", "order": 7 }
   ]
 }
