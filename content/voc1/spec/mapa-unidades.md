@@ -9,10 +9,23 @@ Este mapa convierte el [índice](./indice.md) (dimensiones) + la cobertura
   5.602 palabras a mano.
 - **Espiral por nivel:** se construye A1 completo (todas las dimensiones), luego A2, etc.
   A1 va **fino** acá; A2→C1, **grueso** (se refina al llegar).
+- **Orden por UTILIDAD dentro del nivel:** el núcleo de mayor frecuencia/ROI —**verbos
+  esenciales, adjetivos/adverbios esenciales, phrasal verbs comunes**— va **al FRENTE**,
+  nunca al final; se **interleava** con los campos temáticos. (Un curso de vocabulario que
+  deja los verbos para la unidad 15 está mal ordenado.)
+- **La frecuencia filtra el contenido:** solo entran palabras de las listas fuente
+  (NGSL/NAWL/Oxford/PHaVE). Eso ya deja afuera lo raro/inútil: no hay "jirafa" ni
+  "erizo" — solo los animales frecuentes (dog, cat, bird…), y pocos.
+- **Evitar silos aburridos:** un tema merece unidad solo si tiene **suficientes miembros
+  frecuentes y útiles**. Los flojos (animales, colores sueltos, clima) **no son unidad
+  propia**: se **pliegan** en una unidad más amplia (naturaleza/entorno, descripción) o se
+  omiten. Y la **ficha rica** (ejemplo + colocaciones + familia) hace que ninguna palabra
+  sea "dog = perro" pelado: siempre en contexto.
 - **Un tema = un `topic`** para que el sistema de aspectos lo agrupe. Los temas nuevos que
   no existan en `TOPIC_TAGS` (content/schema.ts) se agregan al crear la unidad (enum).
-- **Tamaño meta:** ~25-40 palabras/unidad (receta Rica). Total estimado del curso:
-  ~90-110 unidades a lo largo de A1-C1.
+- **Tamaño meta:** ~25-40 palabras/unidad (receta Rica). Con el enfoque magro
+  (núcleo al frente + temas de alto valor, sin silos), el total estimado del curso baja a
+  **~60-80 unidades** A1-C1 (no ~110).
 - **MWE y sistema** (phrasal verbs, colocaciones, confusables, patrones) son unidades
   **transversales**: entran en su nivel, reusando palabras del núcleo.
 
@@ -20,34 +33,30 @@ Estado: `✅ hecha` · `▶ próxima` · `· planificada`
 
 ---
 
-## A1 — fundacional, concreto, alta frecuencia (~833 palabras + MWE)
+## A1 — fundacional (~12 unidades)
 
-### Campos semánticos (Dim 2A)
-| # | Unidad | topic | ~palabras | Estado |
-|---|---|---|---|---|
-| 1 | La familia | `family` | 14 | ✅ hecha |
-| 2 | La casa y los muebles | `home` | ~30 | ▶ próxima |
-| 3 | Comida y bebida | `food`* | ~35 | · |
-| 4 | El cuerpo y la salud (básico) | `body`* | ~30 | · |
-| 5 | La ropa | `clothes`* | ~20 | · |
-| 6 | Colores, formas y tamaños | `describe`* | ~20 | · |
-| 7 | Números, hora, fechas y dinero | `time` / `numbers`* | ~30 | · |
-| 8 | La ciudad y los lugares | `city` | ~25 | · |
-| 9 | Transporte y viajes (básico) | `transport`* | ~20 | · |
-| 10 | Animales y naturaleza (básico) | `nature`* | ~25 | · |
-| 11 | Escuela y trabajo (básico) | `workplace` / `campus` | ~25 | · |
-| 12 | Rutina diaria y tiempo libre | `routine` / `leisure` | ~30 | · |
-| 13 | El clima | `weather`* | ~15 | · |
-| 14 | Sentimientos y personalidad (básico) | `feelings`* | ~25 | · |
+Orden de construcción = orden de utilidad. **Núcleo al frente (1-4)**, después los campos
+de alto valor. Silos flojos **plegados** (no son unidad propia): los pocos animales
+frecuentes (dog, cat, bird…) van en "entorno"; colores/tamaños en "descripción"; el clima
+en "lugares/entorno"; la ropa cabe en "vida diaria".
 
-### Núcleo y sistema A1 (transversal, Dim 0/1)
-| # | Unidad | Fuente | ~ítems | Estado |
-|---|---|---|---|---|
-| 15 | Verbos esenciales A1 | núcleo (be, have, go, get…) | ~40 | · |
-| 16 | Adjetivos y adverbios esenciales A1 | núcleo | ~40 | · |
-| 17 | Phrasal verbs de alta frecuencia | PHaVE (get up, sit down…) | ~20 | · |
+| # | Unidad | topic | ~ítems | Dim | Estado |
+|---|---|---|---|---|---|
+| 1 | Verbos esenciales I (be, have, do, go, get, make, take, come, give, say) | `essentials`* | ~25 | 0 | ▶ **próxima** |
+| 2 | Verbos esenciales II (want, like, know, see, need, use, find, think, tell, ask…) | `essentials`* | ~30 | 0 | · |
+| 3 | Adjetivos y adverbios esenciales (good, bad, big, new, old, very, more, now, here…) | `essentials`* | ~35 | 0 | · |
+| 4 | Phrasal verbs de alta frecuencia (get up, sit down, come back…) | `phrasal`* (PHaVE) | ~20 | 1 | · |
+| 5 | La familia | `family` | 14 | 2 | ✅ hecha |
+| 6 | La casa y la vida diaria (muebles, ropa, objetos) | `home` | ~35 | 2 | · |
+| 7 | Comida y bebida | `food`* | ~35 | 2 | · |
+| 8 | El cuerpo y la salud | `body`* | ~30 | 2 | · |
+| 9 | Gente, trabajo y estudio | `workplace` / `campus` | ~30 | 2 | · |
+| 10 | Tiempo, números y dinero | `time` / `numbers`* | ~30 | 0/2 | · |
+| 11 | Lugares, ciudad y transporte (+ clima, entorno, animales frecuentes) | `city` / `transport`* | ~35 | 2 | · |
+| 12 | Descripción y sentimientos (personalidad, colores, tamaños) | `describe`* / `feelings`* | ~35 | 2/3 | · |
 
-*`*` = topic a agregar a `TOPIC_TAGS` al crear la unidad.*
+*`*` = topic a agregar a `TOPIC_TAGS` al crear la unidad. `essentials` agrupa el núcleo
+transversal (verbos/adjetivos que no son de un tema); `phrasal` agrupa los phrasal verbs.*
 
 ---
 
