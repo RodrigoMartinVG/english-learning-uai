@@ -10,6 +10,12 @@ derechos). El flujo es:
 **Regla de oro:** ninguna palabra sin su **oración de ejemplo**. La palabra suelta no se
 aprende; la oración es la que se sintetiza en audio y la que fija el sentido.
 
+**Receta base elegida: Rica (~6 átomos/palabra)** — lexema (reconocer) + oración de
+ejemplo (en varias skills) + colocaciones + miembros de la familia como lexemas propios +
+participación en unidades de patrones/precisión. Escala estimada: ver
+[`INVESTIGACION-cantidades.md`](./INVESTIGACION-cantidades.md). *(La receta puede
+aligerarse en la cola larga B2+/especialización si el footprint lo pide.)*
+
 ---
 
 ## La ficha de una palabra
