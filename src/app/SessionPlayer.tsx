@@ -35,7 +35,11 @@ export function SessionPlayer({ session, onExit }: { session: Session; onExit: (
 
   const round = useMemo(() => {
     if (!mechanic || !target) return null;
-    return mechanic.buildRound(target, atoms, step?.variant);
+    // Aislamiento entre cursos: el pool (distractores, vecinos, ejemplos) se limita al
+    // curso del átomo objetivo. Sin esto un ejercicio de Vocabulario podía traer
+    // distractores de Inglés (ángulo, puerta). Todas las mecánicas usan este `pool`.
+    const pool = atoms.filter((a) => a.course === target.course);
+    return mechanic.buildRound(target, pool, step?.variant);
   }, [mechanic, target, step?.variant]);
 
   if (!step || !mechanic || !View || !target) {
