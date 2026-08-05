@@ -5,10 +5,11 @@
  * construidos en content/voc1/unit-*.json, y responde la pregunta del curso: "¿cuánto
  * cubrimos y qué falta?" — por lista Y por nivel CEFR (la espiral).
  *
- * Fuentes:
- *   - *.txt  → lista de palabras (un denominador). Ej: ngsl.txt, nawl.txt.
- *   - *.csv  → `word,cefr` (denominador + banda CEFR). Ej: oxford5000.csv.
- * La banda CEFR de cualquier palabra sale de los .csv (Oxford 5000 hoy).
+ * Fuentes (content/voc1/spec/sources/):
+ *   - *.txt         → lista de palabras, DENOMINADOR. Ej: ngsl.txt, nawl.txt.
+ *   - *.csv         → `word,cefr`, DENOMINADOR + banda CEFR. Ej: oxford5000.csv.
+ *   - banding/*.csv → `word,cefr`, SOLO para bandear (no suma al objetivo). Ej: cefrj.csv.
+ * Precedencia de banda: primero los .csv denominadores (Oxford), después banding/ rellena.
  *
  * Genera content/voc1/spec/cobertura.csv (list,word,cefr,status,unit). `npm run coverage`.
  */
@@ -18,6 +19,7 @@ import { join } from 'node:path';
 
 const ROOT = process.cwd();
 const SOURCES_DIR = join(ROOT, 'content', 'voc1', 'spec', 'sources');
+const BANDING_DIR = join(SOURCES_DIR, 'banding');
 const UNITS_DIR = join(ROOT, 'content', 'voc1');
 const OUT_CSV = join(ROOT, 'content', 'voc1', 'spec', 'cobertura.csv');
 const CEFR_ORDER = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
@@ -72,14 +74,14 @@ function main(): void {
     console.error(`✗ no existe ${SOURCES_DIR}`);
     process.exit(1);
   }
-  const files = readdirSync(SOURCES_DIR)
+  const denomFiles = readdirSync(SOURCES_DIR)
     .filter((f) => /\.(txt|csv)$/i.test(f))
     .sort();
 
-  // Mapa palabra → banda CEFR (de los .csv). Primera aparición gana.
+  // Mapa palabra → banda CEFR. Primera aparición gana (los denominadores primero).
   const cefrByWord = new Map<string, string>();
   const lists: Array<{ name: string; words: string[] }> = [];
-  for (const f of files) {
+  for (const f of denomFiles) {
     let words: string[];
     if (f.toLowerCase().endsWith('.csv')) {
       const rows = readCsv(join(SOURCES_DIR, f));
@@ -89,6 +91,16 @@ function main(): void {
       words = readWordsTxt(join(SOURCES_DIR, f));
     }
     lists.push({ name: listName(f), words });
+  }
+
+  // Banding-only (banding/*.csv): rellena la banda donde los denominadores no la traen.
+  // No suma al objetivo — solo mejora la clasificación por nivel.
+  if (existsSync(BANDING_DIR)) {
+    for (const f of readdirSync(BANDING_DIR).filter((f) => /\.csv$/i.test(f))) {
+      for (const r of readCsv(join(BANDING_DIR, f))) {
+        if (r.cefr && !cefrByWord.has(r.word)) cefrByWord.set(r.word, r.cefr);
+      }
+    }
   }
 
   const covered = builtLexemes();

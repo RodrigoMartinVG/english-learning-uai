@@ -33,15 +33,16 @@ son **denominadores aparte** (cada `.txt` nuevo aparece solo en el rastreador):
 - *Verbos irregulares:* NO son un denominador aparte — son palabras que **ya están en la
   NGSL** (be, go, get…) con una **etiqueta** de irregularidad. Ver el índice.
 
-## Banda CEFR (para la espiral) — resuelta con Oxford 5000
+## Banda CEFR (para la espiral)
 
-La banda CEFR ya sale de `oxford5000.csv`: el rastreador reporta cobertura **por nivel**
-(A1-C1). Distribución objetivo actual: A1 ~820 · A2 ~790 · B1 ~726 · B2 ~1323 · C1 ~1294.
+- **Fuente principal:** `oxford5000.csv` (denominador, curado por OUP, A1-C1).
+- **Relleno:** `banding/cefrj.csv` (dataset Maximax67, CEFR-J/English Profile, A1-B2). Va en
+  `banding/` porque es **solo para bandear**: NO suma al objetivo (evita inflarlo con
+  entradas algorítmicas), solo clasifica por nivel las palabras que Oxford no trae.
 
-Quedan **~499 palabras "sin banda"** (están en NGSL/NAWL pero no en Oxford 5000). Para
-bandearlas: cruzar con **CEFR-J Wordlist** (libre) o el **English Vocabulary Profile**
-(CEFR por *sentido*), o usar el rank de frecuencia del NGSL como proxy. Mientras tanto el
-build las agrupa como "sin banda".
+Distribución objetivo (unión 5.452): A1 ~833 · A2 ~817 · B1 ~794 · B2 ~1405 · C1 ~1294 ·
+**sin banda ~309**. Las "sin banda" (ni en Oxford ni en CEFR-J) se pueden bandear luego por
+rank de frecuencia del NGSL o a mano al construir cada rebanada.
 
 ## Nota sobre palabras funcionales
 
