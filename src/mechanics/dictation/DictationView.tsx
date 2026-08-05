@@ -20,6 +20,9 @@ export function DictationView({ round, onDone }: MechanicViewProps<DictationRoun
   const state = useAudioState();
   const [text, setText] = useState('');
   const [checked, setChecked] = useState<null | boolean>(null);
+  // Si fallaste aunque sea una vez en esta aparición, ver la respuesta y reintentar
+  // no cuenta como acierto: se graba como repaso. Evita el falso positivo del SRS.
+  const [failed, setFailed] = useState(false);
   const input = useRef<HTMLInputElement>(null);
 
   const play = useCallback(
@@ -31,6 +34,7 @@ export function DictationView({ round, onDone }: MechanicViewProps<DictationRoun
   useEffect(() => {
     setText('');
     setChecked(null);
+    setFailed(false);
     play();
     input.current?.focus();
     return () => audio.cancel();
@@ -38,7 +42,9 @@ export function DictationView({ round, onDone }: MechanicViewProps<DictationRoun
 
   const check = () => {
     audio.cancel();
-    setChecked(round.targets.some((t) => tidy(t) === tidy(text)));
+    const ok = round.targets.some((t) => tidy(t) === tidy(text));
+    setChecked(ok);
+    if (!ok) setFailed(true);
   };
 
   return (
@@ -75,7 +81,7 @@ export function DictationView({ round, onDone }: MechanicViewProps<DictationRoun
           if (checked === null) {
             if (text.trim()) check();
           } else {
-            onDone(checked);
+            onDone(checked && !failed);
           }
         }}
         readOnly={checked !== null}
@@ -95,6 +101,9 @@ export function DictationView({ round, onDone }: MechanicViewProps<DictationRoun
           <p className={'verdict ' + (checked ? 'verdict--ok' : 'verdict--bad')}>
             {checked ? 'Exacto' : 'No es exacto'}
           </p>
+          {checked && failed && (
+            <p className="retry-note">Lo corregiste después de fallar — se repasará pronto.</p>
+          )}
           {!checked && (
             <>
               <p className="dict__diff">

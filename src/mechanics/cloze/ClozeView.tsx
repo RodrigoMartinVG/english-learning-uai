@@ -14,6 +14,10 @@ export function ClozeView({ round, onDone }: MechanicViewProps<ClozeRound>) {
   const [filled, setFilled] = useState<(string | null)[]>(() => round.blanks.map(() => null));
   const [active, setActive] = useState(0);
   const [checked, setChecked] = useState<null | boolean[]>(null);
+  // Si en esta aparición hubo algún intento incorrecto (que revela la solución), el
+  // ítem NO cuenta como acierto aunque después lo corrijas copiando: viste la
+  // respuesta, no fue recall. Evita el falso positivo del SRS. Ver ARQUITECTURA §7.
+  const [failed, setFailed] = useState(false);
 
   const play = useCallback(
     (rateFactor?: number) =>
@@ -25,6 +29,7 @@ export function ClozeView({ round, onDone }: MechanicViewProps<ClozeRound>) {
     setFilled(round.blanks.map(() => null));
     setActive(0);
     setChecked(null);
+    setFailed(false);
     play();
     return () => audio.cancel();
   }, [round, play, audio]);
@@ -43,11 +48,11 @@ export function ClozeView({ round, onDone }: MechanicViewProps<ClozeRound>) {
 
   const check = () => {
     audio.cancel();
-    setChecked(
-      round.blanks.map((b, i) =>
-        b.accept.some((a) => normalize(a) === normalize(filled[i] ?? ''))
-      )
+    const results = round.blanks.map((b, i) =>
+      b.accept.some((a) => normalize(a) === normalize(filled[i] ?? ''))
     );
+    setChecked(results);
+    if (!results.every(Boolean)) setFailed(true);
   };
 
   const allFilled = filled.every((f) => f !== null);
@@ -115,6 +120,9 @@ export function ClozeView({ round, onDone }: MechanicViewProps<ClozeRound>) {
           <p className={'verdict ' + (allOk ? 'verdict--ok' : 'verdict--bad')}>
             {allOk ? 'Correcto' : 'Revisá los huecos en rojo'}
           </p>
+          {allOk && failed && (
+            <p className="retry-note">Lo corregiste después de fallar — se repasará pronto.</p>
+          )}
           {!allOk && (
             <p className="cz__solution">
               {round.blanks
@@ -145,7 +153,7 @@ export function ClozeView({ round, onDone }: MechanicViewProps<ClozeRound>) {
             <button className="btn" onClick={() => play()}>
               🔊 Escuchar
             </button>
-            <button className="btn btn--primary" onClick={() => onDone(allOk)} autoFocus>
+            <button className="btn btn--primary" onClick={() => onDone(allOk && !failed)} autoFocus>
               Siguiente →
             </button>
           </div>

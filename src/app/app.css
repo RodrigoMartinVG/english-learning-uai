@@ -79,6 +79,10 @@
   font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;
   color: var(--text-faint); margin-bottom: 12px; font-weight: 600;
 }
+/* Aviso cuando corregiste un ítem después de fallar (viendo la respuesta): cuenta
+   como repaso, no como acierto limpio. Compartido por las mecánicas de escribir/armar. */
+.retry-note { font-size: 13px; color: var(--text-faint); margin-top: 4px; }
+
 .home__mechanics { display: grid; gap: 12px; }
 
 .card {

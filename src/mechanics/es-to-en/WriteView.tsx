@@ -17,6 +17,9 @@ export function EsToEnWriteView({ round, onDone }: MechanicViewProps<EsToEnWrite
   const audio = useAudio();
   const [text, setText] = useState('');
   const [verdict, setVerdict] = useState<SpeechVerdict | null>(null);
+  // Fallar aunque sea una vez (y ver el diff/modelo) no cuenta como acierto: se graba
+  // como repaso aunque después lo corrijas. Evita el falso positivo del SRS.
+  const [failed, setFailed] = useState(false);
   const input = useRef<HTMLInputElement>(null);
 
   // El modelo inglés SOLO como feedback: sonarlo antes regalaría la respuesta.
@@ -28,11 +31,16 @@ export function EsToEnWriteView({ round, onDone }: MechanicViewProps<EsToEnWrite
   useEffect(() => {
     setText('');
     setVerdict(null);
+    setFailed(false);
     input.current?.focus();
     return () => audio.cancel();
   }, [round, audio]);
 
-  const check = () => setVerdict(bestVerdict(round.accept, text));
+  const check = () => {
+    const v = bestVerdict(round.accept, text);
+    setVerdict(v);
+    if (!v.match) setFailed(true);
+  };
 
   return (
     <div className="cz exlr">
@@ -58,7 +66,7 @@ export function EsToEnWriteView({ round, onDone }: MechanicViewProps<EsToEnWrite
             if (verdict === null) {
               if (text.trim()) check();
             } else {
-              onDone(verdict.match);
+              onDone(verdict.match && !failed);
             }
           }}
           readOnly={verdict !== null}
@@ -76,6 +84,9 @@ export function EsToEnWriteView({ round, onDone }: MechanicViewProps<EsToEnWrite
             <p className={'verdict ' + (verdict.match ? 'verdict--ok' : 'verdict--bad')}>
               {verdict.match ? 'Bien dicho' : 'No es así'}
             </p>
+            {verdict.match && failed && (
+              <p className="retry-note">Lo corregiste después de fallar — se repasará pronto.</p>
+            )}
             <p className="speak__diff">
               {verdict.words.map((w, i) => (
                 <span key={i} className={'w w--' + w.status} title={w.heard ? `escribiste: ${w.heard}` : undefined}>

@@ -12,6 +12,9 @@ export function EchoTypeView({ round, onDone }: MechanicViewProps<EchoTypeRound>
   const state = useAudioState();
   const [text, setText] = useState('');
   const [verdict, setVerdict] = useState<SpeechVerdict | null>(null);
+  // Fallar aunque sea una vez (y ver el diff) no cuenta como acierto: se graba como
+  // repaso aunque después lo corrijas. Evita el falso positivo del SRS.
+  const [failed, setFailed] = useState(false);
   const input = useRef<HTMLInputElement>(null);
 
   const play = useCallback(
@@ -23,6 +26,7 @@ export function EchoTypeView({ round, onDone }: MechanicViewProps<EchoTypeRound>
   useEffect(() => {
     setText('');
     setVerdict(null);
+    setFailed(false);
     play();
     input.current?.focus();
     return () => audio.cancel();
@@ -31,7 +35,9 @@ export function EchoTypeView({ round, onDone }: MechanicViewProps<EchoTypeRound>
   // Se corrige como la voz: normaliza contracciones/números y compara por palabra.
   const check = () => {
     audio.cancel();
-    setVerdict(gradeSpeech(round.text, text));
+    const v = gradeSpeech(round.text, text);
+    setVerdict(v);
+    if (!v.match) setFailed(true);
   };
 
   return (
@@ -66,7 +72,7 @@ export function EchoTypeView({ round, onDone }: MechanicViewProps<EchoTypeRound>
           if (verdict === null) {
             if (text.trim()) check();
           } else {
-            onDone(verdict.match);
+            onDone(verdict.match && !failed);
           }
         }}
         readOnly={verdict !== null}
@@ -84,6 +90,9 @@ export function EchoTypeView({ round, onDone }: MechanicViewProps<EchoTypeRound>
           <p className={'verdict ' + (verdict.match ? 'verdict--ok' : 'verdict--bad')}>
             {verdict.match ? 'Lo escribiste bien' : 'No es lo que se oía'}
           </p>
+          {verdict.match && failed && (
+            <p className="retry-note">Lo corregiste después de fallar — se repasará pronto.</p>
+          )}
           <p className="speak__diff">
             {verdict.words.map((w, i) => (
               <span key={i} className={'w w--' + w.status} title={w.heard ? `escribiste: ${w.heard}` : undefined}>

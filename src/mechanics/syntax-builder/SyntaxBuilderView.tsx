@@ -32,6 +32,9 @@ export function SyntaxBuilderView({ round, onDone }: MechanicViewProps<SyntaxRou
 
   const [answer, setAnswer] = useState<Chip[]>([]);
   const [checked, setChecked] = useState<null | boolean>(null);
+  // Fallar aunque sea una vez (y ver el orden correcto) no cuenta como acierto: se
+  // graba como repaso aunque después lo corrijas. Evita el falso positivo del SRS.
+  const [failed, setFailed] = useState(false);
   const [dragId, setDragId] = useState<number | null>(null);
 
   const bank = all.filter((c) => !answer.some((a) => a.id === c.id));
@@ -51,6 +54,7 @@ export function SyntaxBuilderView({ round, onDone }: MechanicViewProps<SyntaxRou
   useEffect(() => {
     setAnswer([]);
     setChecked(null);
+    setFailed(false);
     play();
     return () => audio.cancel();
   }, [round, play, audio]);
@@ -71,7 +75,9 @@ export function SyntaxBuilderView({ round, onDone }: MechanicViewProps<SyntaxRou
 
   const check = () => {
     const said = normalize(answer.map((c) => c.word).join(' '));
-    setChecked(round.targets.some((t) => normalize(t) === said));
+    const ok = round.targets.some((t) => normalize(t) === said);
+    setChecked(ok);
+    if (!ok) setFailed(true);
     audio.cancel();
   };
 
@@ -171,6 +177,9 @@ export function SyntaxBuilderView({ round, onDone }: MechanicViewProps<SyntaxRou
             {checked ? 'Correcto' : 'Ese no es el orden'}
           </p>
           {!checked && <p className="sb__solution">{correct}</p>}
+          {checked && failed && (
+            <p className="retry-note">Lo corregiste después de fallar — se repasará pronto.</p>
+          )}
           {round.targets.length > 1 && checked && (
             <p className="speak__note">También vale: {round.targets.slice(1).join(' · ')}</p>
           )}
@@ -188,7 +197,7 @@ export function SyntaxBuilderView({ round, onDone }: MechanicViewProps<SyntaxRou
             <button className="btn" onClick={() => play()}>
               🔊 Escuchar
             </button>
-            <button className="btn btn--primary" onClick={() => onDone(checked)} autoFocus>
+            <button className="btn btn--primary" onClick={() => onDone(checked && !failed)} autoFocus>
               Siguiente →
             </button>
           </div>
