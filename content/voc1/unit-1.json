@@ -1,0 +1,62 @@
+{
+  "course": "voc1",
+  "unit": 1,
+  "title": "La familia",
+  "goals": [
+    "Los miembros de la familia (léxico A1, en contexto).",
+    "Cada palabra con su oración, colocaciones y familia de palabras."
+  ],
+  "aspects": [
+    {
+      "id": "family",
+      "order": 1,
+      "title": "La familia",
+      "summary": "Reconocer y decir los miembros de la familia.",
+      "match": { "topic": ["family"] },
+      "source": { "section": "Vocabulario · campo semántico: familia" }
+    }
+  ],
+  "atoms": [
+    { "id": "voc1.u1.p.001", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "My mother is a doctor.", "speaker": "narrator", "gloss": "Mi mamá es médica." },
+    { "id": "voc1.u1.lx.001", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "mother", "pos": "noun", "gloss": "mamá; madre", "examplePhraseId": "voc1.u1.p.001", "focus": "translation", "register": "neutral", "collocations": ["mother tongue", "single mother"], "family": ["motherhood", "mother-in-law"], "nuance": ["mom / mum (informal)"] },
+
+    { "id": "voc1.u1.p.002", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "His father works a lot.", "speaker": "narrator", "gloss": "Su papá trabaja mucho." },
+    { "id": "voc1.u1.lx.002", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "father", "pos": "noun", "gloss": "papá; padre", "examplePhraseId": "voc1.u1.p.002", "focus": "translation", "register": "neutral", "collocations": ["father figure"], "family": ["fatherhood", "father-in-law"], "nuance": ["dad (informal)"] },
+
+    { "id": "voc1.u1.p.003", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "I have one brother.", "speaker": "narrator", "gloss": "Tengo un hermano." },
+    { "id": "voc1.u1.lx.003", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "brother", "pos": "noun", "gloss": "hermano", "examplePhraseId": "voc1.u1.p.003", "focus": "translation", "register": "neutral", "collocations": ["older brother", "younger brother"], "family": ["brotherhood", "brother-in-law"] },
+
+    { "id": "voc1.u1.p.004", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "Her sister is ten.", "speaker": "narrator", "gloss": "Su hermana tiene diez." },
+    { "id": "voc1.u1.lx.004", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "sister", "pos": "noun", "gloss": "hermana", "examplePhraseId": "voc1.u1.p.004", "focus": "translation", "register": "neutral", "collocations": ["older sister", "little sister"], "family": ["sister-in-law"] },
+
+    { "id": "voc1.u1.p.005", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "They have two sons.", "speaker": "narrator", "gloss": "Tienen dos hijos." },
+    { "id": "voc1.u1.lx.005", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "son", "pos": "noun", "gloss": "hijo (varón)", "examplePhraseId": "voc1.u1.p.005", "focus": "translation", "register": "neutral", "collocations": ["eldest son"], "family": ["son-in-law"] },
+
+    { "id": "voc1.u1.p.006", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "My daughter likes music.", "speaker": "narrator", "gloss": "A mi hija le gusta la música." },
+    { "id": "voc1.u1.lx.006", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "daughter", "pos": "noun", "gloss": "hija", "examplePhraseId": "voc1.u1.p.006", "focus": "translation", "register": "neutral", "collocations": ["eldest daughter"], "family": ["daughter-in-law"] },
+
+    { "id": "voc1.u1.p.007", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "My parents live here.", "speaker": "narrator", "gloss": "Mis padres viven acá." },
+    { "id": "voc1.u1.lx.007", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "parent", "pos": "noun", "gloss": "padre o madre (progenitor)", "examplePhraseId": "voc1.u1.p.007", "focus": "translation", "register": "neutral", "collocations": ["single parent", "parents' evening"], "family": ["parenthood", "parental"], "nuance": ["casi siempre en plural: parents = los padres"] },
+
+    { "id": "voc1.u1.p.008", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "The child is happy.", "speaker": "narrator", "gloss": "El niño está contento." },
+    { "id": "voc1.u1.lx.008", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "child", "pos": "noun", "gloss": "niño/a; hijo/a", "examplePhraseId": "voc1.u1.p.008", "focus": "translation", "register": "neutral", "collocations": ["only child", "young child"], "family": ["children (plural)", "childhood", "childish"], "nuance": ["kid (informal)", "plural irregular: children"] },
+
+    { "id": "voc1.u1.p.009", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "I love my family.", "speaker": "narrator", "gloss": "Amo a mi familia." },
+    { "id": "voc1.u1.lx.009", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "family", "pos": "noun", "gloss": "familia", "examplePhraseId": "voc1.u1.p.009", "focus": "translation", "register": "neutral", "collocations": ["close family", "family member", "start a family"], "family": ["familiar (adj)"] },
+
+    { "id": "voc1.u1.p.010", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "The baby is sleeping.", "speaker": "narrator", "gloss": "El bebé está durmiendo." },
+    { "id": "voc1.u1.lx.010", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "baby", "pos": "noun", "gloss": "bebé", "examplePhraseId": "voc1.u1.p.010", "focus": "translation", "register": "neutral", "collocations": ["have a baby", "newborn baby"], "family": ["babysitter"] },
+
+    { "id": "voc1.u1.p.011", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "Her husband is tall.", "speaker": "narrator", "gloss": "Su marido es alto." },
+    { "id": "voc1.u1.lx.011", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "husband", "pos": "noun", "gloss": "marido; esposo", "examplePhraseId": "voc1.u1.p.011", "focus": "translation", "register": "neutral", "collocations": ["ex-husband"] },
+
+    { "id": "voc1.u1.p.012", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "His wife is a teacher.", "speaker": "narrator", "gloss": "Su esposa es maestra." },
+    { "id": "voc1.u1.lx.012", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "wife", "pos": "noun", "gloss": "esposa; mujer", "examplePhraseId": "voc1.u1.p.012", "focus": "translation", "register": "neutral", "collocations": ["ex-wife"], "family": ["wives (plural)"], "nuance": ["plural irregular: wives"] },
+
+    { "id": "voc1.u1.p.013", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "My grandmother is eighty.", "speaker": "narrator", "gloss": "Mi abuela tiene ochenta." },
+    { "id": "voc1.u1.lx.013", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "grandmother", "pos": "noun", "gloss": "abuela", "examplePhraseId": "voc1.u1.p.013", "focus": "translation", "register": "neutral", "family": ["grandparent"], "nuance": ["grandma / granny (informal)"] },
+
+    { "id": "voc1.u1.p.014", "kind": "phrase", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 2, "cefr": "A1", "text": "She is my best friend.", "speaker": "narrator", "gloss": "Es mi mejor amiga." },
+    { "id": "voc1.u1.lx.014", "kind": "lexeme", "course": "voc1", "unit": 1, "source": { "origin": "synthetic" }, "grammar": [], "fn": [], "topic": ["family"], "difficulty": 1, "cefr": "A1", "word": "friend", "pos": "noun", "gloss": "amigo/a", "examplePhraseId": "voc1.u1.p.014", "focus": "translation", "register": "neutral", "collocations": ["best friend", "close friend", "make friends"], "family": ["friendly", "friendship"], "nuance": ["mate (UK) / buddy (US) (informal)"] }
+  ]
+}

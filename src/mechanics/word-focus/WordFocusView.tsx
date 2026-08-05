@@ -95,6 +95,22 @@ export function WordFocusView({ round, onDone }: MechanicViewProps<WordFocusRoun
             </section>
           )}
 
+          {/* Ficha rica (curso de Vocabulario): colocaciones, familia y matices. */}
+          {(target.collocations?.length || target.family?.length || target.nuance?.length) && (
+            <section className="expansion__group">
+              <h3>Ficha</h3>
+              {target.collocations?.length ? (
+                <p className="expansion__gloss"><strong>Colocaciones:</strong> {target.collocations.join(' · ')}</p>
+              ) : null}
+              {target.family?.length ? (
+                <p className="expansion__gloss"><strong>Familia:</strong> {target.family.join(' · ')}</p>
+              ) : null}
+              {target.nuance?.length ? (
+                <p className="expansion__gloss"><strong>Matices:</strong> {target.nuance.join(' · ')}</p>
+              ) : null}
+            </section>
+          )}
+
           {target.variantOf && (
             <p className="speak__note">
               🇬🇧 {target.variantOf.uk} · 🇺🇸 {target.variantOf.us}

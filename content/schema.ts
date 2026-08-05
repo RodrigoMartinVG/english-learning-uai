@@ -155,7 +155,11 @@ export const KIND_CODE = {
 } as const;
 
 /** Formato: en1.u1.p.007 — curso.unidad.tipo.secuencia */
-export const ATOM_ID_RE = /^(en[1-4])\.u([1-9]\d?)\.(p|d|qa|lx|ct|ex|pr|ls|rd)\.(\d{3})$/;
+// El prefijo de curso sale de COURSES (no hardcodeado): así cualquier curso nuevo
+// (gram1, pron1, voc1…) acepta ids sin tocar la regex. Ej: voc1.u1.lx.001.
+export const ATOM_ID_RE = new RegExp(
+  `^(${COURSES.join('|')})\\.u([1-9]\\d?)\\.(p|d|qa|lx|ct|ex|pr|ls|rd)\\.(\\d{3})$`
+);
 
 export const atomIdSchema = z
   .string()
