@@ -49,6 +49,12 @@ export interface Step {
    * por papel, porque hacer siempre de Karel jamás te hace formular una pregunta.
    */
   variant?: string;
+  /**
+   * Copia de reaprendizaje: un paso que fallaste y vuelve al final de la MISMA
+   * sesión, como ronda nueva (segundo intento de recall real). El player lo agrega
+   * al vuelo; nunca lo produce buildSession. Con la marca no se re-encola dos veces.
+   */
+  relearn?: boolean;
 }
 
 export interface Session {

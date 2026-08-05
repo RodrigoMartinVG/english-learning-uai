@@ -10,19 +10,25 @@ import { atomById, atoms } from '../data/content.ts';
 import { mechanicById } from '../mechanics/registry.ts';
 import { views } from '../mechanics/views.tsx';
 import { recordAttempt } from '../data/progress.ts';
-import type { Session } from '../engine/session.ts';
+import type { Session, Step } from '../engine/session.ts';
 import './session.css';
 
 interface Result {
-  step: number;
+  /** Identidad de la tarjeta (átomo·habilidad·variante): dedupe del resumen. */
+  card: string;
   correct: boolean;
 }
+
+const cardKey = (s: Step) => `${s.atomId}|${s.skill}|${s.variant ?? ''}`;
 
 export function SessionPlayer({ session, onExit }: { session: Session; onExit: () => void }) {
   const [i, setI] = useState(0);
   const [results, setResults] = useState<Result[]>([]);
+  // La cola de pasos es dinámica: al fallar, se re-encola una copia al final para
+  // reaprender en la misma sesión (segundo intento de recall). Ver session.ts (relearn).
+  const [steps, setSteps] = useState<Step[]>(session.steps);
 
-  const step = session.steps[i];
+  const step = steps[i];
   const mechanic = step ? mechanicById.get(step.mechanicId) : undefined;
   const View = step ? views[step.mechanicId] : undefined;
   const target = step ? atomById.get(step.atomId) : undefined;
@@ -50,7 +56,11 @@ export function SessionPlayer({ session, onExit }: { session: Session; onExit: (
       correct,
       step.mechanicId
     );
-    setResults((r) => [...r, { step: i, correct }]);
+    setResults((r) => [...r, { card: cardKey(step), correct }]);
+    // Fallaste y no es ya una copia de reaprendizaje → vuelve al final, una vez.
+    if (!correct && !step.relearn) {
+      setSteps((prev) => [...prev, { ...step, relearn: true }]);
+    }
     setI((n) => n + 1);
   };
 
@@ -59,14 +69,17 @@ export function SessionPlayer({ session, onExit }: { session: Session; onExit: (
       <header className="session__bar">
         <div className="session__meta">
           <span className="session__title">{session.title}</span>
-          <span className="session__mech">{mechanic.name}</span>
+          <span className="session__mech">
+            {mechanic.name}
+            {step.relearn && ' · reaprendizaje'}
+          </span>
         </div>
         <span className="session__count">
-          {i + 1} / {session.steps.length}
+          {i + 1} / {steps.length}
         </span>
       </header>
-      <div className="session__progress" role="progressbar" aria-valuenow={i} aria-valuemax={session.steps.length}>
-        <div style={{ width: `${(i / session.steps.length) * 100}%` }} />
+      <div className="session__progress" role="progressbar" aria-valuenow={i} aria-valuemax={steps.length}>
+        <div style={{ width: `${(i / steps.length) * 100}%` }} />
       </div>
 
       {/* key: fuerza el remount por paso, así ninguna mecánica arrastra estado.
@@ -85,8 +98,12 @@ function Summary({
   results: Result[];
   onExit: () => void;
 }) {
-  const ok = results.filter((r) => r.correct).length;
-  const total = results.length;
+  // Por ítem, no por intento: si algo falló y después lo lograste (reaprendizaje),
+  // cuenta el resultado FINAL. El último intento de cada tarjeta pisa a los previos.
+  const byCard = new Map<string, boolean>();
+  for (const r of results) byCard.set(r.card, r.correct);
+  const total = byCard.size;
+  const ok = [...byCard.values()].filter(Boolean).length;
   const pct = total ? Math.round((ok / total) * 100) : 0;
 
   return (
