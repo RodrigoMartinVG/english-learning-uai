@@ -28,8 +28,28 @@ Este mapa convierte el [índice](./indice.md) (dimensiones) + la cobertura
   **~60-80 unidades** A1-C1 (no ~110).
 - **MWE y sistema** (phrasal verbs, colocaciones, confusables, patrones) son unidades
   **transversales**: entran en su nivel, reusando palabras del núcleo.
+- **Deducir > memorizar:** las herramientas de deducción (afijos → raíces) entran apenas
+  hay base para aplicarlas (A2) y **temprano dentro del nivel** — desbloquean miles de
+  palabras, así que no se difieren.
+- **Receptivo ↑ en niveles altos:** A1-B1 es receptivo + productivo; en B2-C1 lo
+  académico/especializado es sobre todo **receptivo** (leer papers), y la producción se
+  concentra en el núcleo general.
 
 Estado: `✅ hecha` · `▶ próxima` · `· planificada`
+
+## Plantilla por nivel (misma para A1-C1)
+
+Cada nivel se recorre en este **orden de utilidad** (no por dimensión):
+
+1. **Núcleo del nivel** — verbos/adjetivos/adverbios de su banda de frecuencia. **Al frente.**
+2. **Deducción** — afijos → raíces → compuestos (apenas hay base; temprano).
+3. **Campos de alto valor** — gated por frecuencia, sin silos, ficha rica.
+4. **Combinar** — colocaciones y phrasal verbs del nivel.
+5. **Precisión** — confusables → polisemia → matices.
+6. **Uso** — registro → conectores → idioms/hedging → discurso.
+
+*Nada esencial se difiere; los silos se pliegan. Cada nivel toca TODAS las dimensiones
+(espiral), consistente con la matriz del [índice](./indice.md).*
 
 ---
 
@@ -60,34 +80,61 @@ transversal (verbos/adjetivos que no son de un tema); `phrasal` agrupa los phras
 
 ---
 
-## A2 — ampliación + primeros abstractos (~817)
+## A2 — ampliación (~817 · ~11 unidades)
 
-Campos: **Trabajo y profesiones**, **Salud y cuerpo (ampliado)**, **Viajes y turismo**,
-**Tecnología cotidiana**, **Compras y dinero (ampliado)**, **Emociones y relaciones**,
-**Deportes**, **Medio ambiente**. Sistema/precisión: **Prefijos negativos**,
-**Colocaciones básicas** (make/do), **Falsos amigos frecuentes**. (~10-12 unidades)
+1. **Núcleo A2** — verbos y adjetivos/adverbios de la banda A2 (~2 u). **Front.**
+2. **Deducción (empieza acá):** **Prefijos** (un-, in-, dis-, re-, over-, pre-) + **sufijos
+   comunes** (-er, -tion, -ful, -less, -ly) — el kit para deducir miles de palabras.
+3. **Combinar:** **Colocaciones básicas** (make/do, adj+sust); más phrasal verbs.
+4. **Campos de alto valor:** Trabajo y profesiones · Salud/cuerpo (ampliado) · Viajes ·
+   Tecnología cotidiana · Compras y dinero (ampliado) · Relaciones y emociones.
+   *(Deportes/medio-ambiente NO son unidad: sus pocas palabras frecuentes se pliegan.)*
+5. **Precisión:** Falsos amigos frecuentes · confusables básicos (make/do, say/tell).
+6. **Uso:** Registro básico (casual ↔ neutro).
 
-## B1 — cierre del general (~794)
+## B1 — cierre del general (~794 · ~13 unidades)
 
-Campos: **Educación**, **Medios y sociedad**, **Cultura**. Sistema: **Familias de
-palabras**, **Sufijos**, **Sistema de partículas** (phrasal verbs), **Compuestos**.
-Precisión: **Confusables** (say/tell, lend/borrow). Uso: **Conectores del discurso**.
-Patrones: **verbo+gerundio/infinitivo**, **preposiciones dependientes** (Dim 5).
-(~12-14 unidades)
+1. **Núcleo B1** (~2 u). **Front.**
+2. **Deducción:** **Familias de palabras** (transitar categorías) · más **sufijos** ·
+   **raíces grecolatinas (intro)** · **compuestos**.
+3. **Combinar:** **Sistema de partículas** (phrasal verbs por partícula) · más colocaciones.
+4. **Campos:** Educación · Medios y sociedad · Cultura/ocio (gated).
+5. **Precisión:** Confusables avanzados (say/tell/speak, lend/borrow, rob/steal) ·
+   contables engañosos.
+6. **Uso + patrones:** Conectores del discurso · fillers/suavizadores · **verbo+gerundio/
+   infinitivo** · **preposiciones dependientes** (Dim 5).
 
-## B2 — académico y abstracto (~1405)
+## B2 — académico (~1405 · ~16 unidades; receptivo domina)
 
-Campos: **Ciencia y método**, **Economía/sociedad/derecho**, **Tecnología y datos**.
-Sistema: **Raíces grecolatinas**. Precisión: **Polisemia**, **Matices/sinónimos**.
-Uso: **Idioms**, **Hedging académico**. **Colocaciones académicas** (ACL). (~15-18 unidades)
+1. **Núcleo B2** (banda grande, ~3-4 u). **Front.**
+2. **Deducción:** **Raíces grecolatinas (a fondo)** — el gran atajo para el léxico técnico.
+3. **Combinar:** **Colocaciones académicas** (ACL).
+4. **Campos (alto valor para papers):** Ciencia y método · Economía/sociedad/derecho ·
+   Tecnología y datos.
+5. **Precisión:** **Polisemia** (run/set/get) · **matices/sinónimos**.
+6. **Uso:** **Idioms** · **hedging académico** (may, tend to, arguably).
 
-## C1 — precisión + especialización (~1294)
+## C1 — precisión + especialización (~1294 · ~17 u, varias opcionales)
 
-Académico avanzado + **track ⭐ opcional** (Dim 2C): matemática/lógica, software,
-filosofía, ajedrez, arte/música/tipografía. Matices finos, discurso avanzado.
-(~15-20 unidades, varias opcionales)
+1. **Núcleo C1** (~2-3 u). **Front.**
+2. **Precisión fina:** matices/sinónimos avanzados · connotación.
+3. **Uso:** discurso avanzado · idioms avanzados.
+4. **Track de especialización ⭐** (opcional, Dim 2C): matemática/lógica · software ·
+   filosofía · ajedrez · arte/música/tipografía. Sobre todo **receptivo**.
 
 ---
+
+## Reconciliación con la cobertura (importante)
+
+Los conteos por unidad son **aproximados** y NO suman la banda entera (p. ej. A1 ~833,
+pero las 12 unidades ≈ 360 lexemas). Por qué, y cómo cierra:
+- **~190 A1 son funcionales** (the, of, some, modales…) → van a **Gramática**, no son lexema.
+- Muchas palabras entran como **colocaciones/familia** en la ficha (metadata), no como
+  lexema propio → cuentan para el aprendizaje sin ser una fila del tracker.
+- El **rastreador** (`npm run coverage`) dice qué queda **pendiente por banda**; una unidad
+  **"Núcleo restante"** por nivel absorbe las frecuentes que ningún tema capturó.
+- **El objetivo real lo fija el tracker, no la suma del mapa.** El mapa ordena; el tracker
+  mide.
 
 ## Cómo se avanza (loop de construcción)
 
