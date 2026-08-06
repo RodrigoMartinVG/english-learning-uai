@@ -24,8 +24,8 @@
     {
       "id": "essentials",
       "order": 2,
-      "title": "Verbos esenciales I",
-      "summary": "Reconocer y decir los verbos de mayor frecuencia.",
+      "title": "Verbos esenciales",
+      "summary": "Reconocer y decir los verbos de mayor frecuencia (dos tandas).",
       "match": {
         "topic": [
           "essentials"
@@ -1907,6 +1907,1261 @@
       ],
       "nuance": [
         "irregular: become/became/become"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.039",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Call me later.",
+      "speaker": "narrator",
+      "gloss": "Llamame después."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.039",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "call",
+      "pos": "verb",
+      "gloss": "llamar",
+      "examplePhraseId": "voc1.u1.p.039",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "call someone",
+        "phone call"
+      ],
+      "nuance": [
+        "phrasal: call back (devolver la llamada)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.040",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Keep the change.",
+      "speaker": "narrator",
+      "gloss": "Quedate con el vuelto."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.040",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "keep",
+      "pos": "verb",
+      "gloss": "mantener; guardar",
+      "examplePhraseId": "voc1.u1.p.040",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "keep calm",
+        "keep going"
+      ],
+      "nuance": [
+        "irregular: keep/kept/kept"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.041",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "The class begins at nine.",
+      "speaker": "narrator",
+      "gloss": "La clase empieza a las nueve."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.041",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "begin",
+      "pos": "verb",
+      "gloss": "empezar",
+      "examplePhraseId": "voc1.u1.p.041",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "begin to"
+      ],
+      "family": [
+        "beginning"
+      ],
+      "nuance": [
+        "irregular: begin/began/begun"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.042",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Show me your work.",
+      "speaker": "narrator",
+      "gloss": "Mostrame tu trabajo."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.042",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "show",
+      "pos": "verb",
+      "gloss": "mostrar",
+      "examplePhraseId": "voc1.u1.p.042",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "show interest"
+      ],
+      "nuance": [
+        "irregular: show/showed/shown",
+        "phrasal: show up (aparecer)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.043",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "I can hear music.",
+      "speaker": "narrator",
+      "gloss": "Puedo oír música."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.043",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "hear",
+      "pos": "verb",
+      "gloss": "oír",
+      "examplePhraseId": "voc1.u1.p.043",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "hear about"
+      ],
+      "nuance": [
+        "irregular: hear/heard/heard",
+        "oír (hear) vs escuchar (listen)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.044",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Children play in the park.",
+      "speaker": "narrator",
+      "gloss": "Los niños juegan en el parque."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.044",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "play",
+      "pos": "verb",
+      "gloss": "jugar; tocar (un instrumento)",
+      "examplePhraseId": "voc1.u1.p.044",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "play football",
+        "play the piano"
+      ],
+      "family": [
+        "player"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.045",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "I run every morning.",
+      "speaker": "narrator",
+      "gloss": "Corro cada mañana."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.045",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "run",
+      "pos": "verb",
+      "gloss": "correr; dirigir",
+      "examplePhraseId": "voc1.u1.p.045",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "run a business"
+      ],
+      "family": [
+        "runner"
+      ],
+      "nuance": [
+        "irregular: run/ran/run"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.046",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Please don't move.",
+      "speaker": "narrator",
+      "gloss": "Por favor no te muevas."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.046",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "move",
+      "pos": "verb",
+      "gloss": "mover(se); mudarse",
+      "examplePhraseId": "voc1.u1.p.046",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "move house"
+      ],
+      "family": [
+        "movement"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.047",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "They live in Rome.",
+      "speaker": "narrator",
+      "gloss": "Viven en Roma."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.047",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "live",
+      "pos": "verb",
+      "gloss": "vivir",
+      "examplePhraseId": "voc1.u1.p.047",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "live abroad"
+      ],
+      "family": [
+        "life",
+        "alive"
+      ],
+      "nuance": [
+        "pron. verbo /lɪv/ vs adj. live /laɪv/"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.048",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "I believe you.",
+      "speaker": "narrator",
+      "gloss": "Te creo."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.048",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "believe",
+      "pos": "verb",
+      "gloss": "creer",
+      "examplePhraseId": "voc1.u1.p.048",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "believe in"
+      ],
+      "family": [
+        "belief"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.049",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Bring your books.",
+      "speaker": "narrator",
+      "gloss": "Traé tus libros."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.049",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "bring",
+      "pos": "verb",
+      "gloss": "traer",
+      "examplePhraseId": "voc1.u1.p.049",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "bring back"
+      ],
+      "nuance": [
+        "irregular: bring/brought/brought"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.050",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Write your name here.",
+      "speaker": "narrator",
+      "gloss": "Escribí tu nombre acá."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.050",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "write",
+      "pos": "verb",
+      "gloss": "escribir",
+      "examplePhraseId": "voc1.u1.p.050",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "write down"
+      ],
+      "family": [
+        "writer",
+        "writing"
+      ],
+      "nuance": [
+        "irregular: write/wrote/written"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.051",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Sit down, please.",
+      "speaker": "narrator",
+      "gloss": "Sentate, por favor."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.051",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "sit",
+      "pos": "verb",
+      "gloss": "sentarse",
+      "examplePhraseId": "voc1.u1.p.051",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "sit down"
+      ],
+      "nuance": [
+        "irregular: sit/sat/sat"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.052",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Please stand up.",
+      "speaker": "narrator",
+      "gloss": "Por favor, parate."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.052",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "stand",
+      "pos": "verb",
+      "gloss": "estar de pie; soportar",
+      "examplePhraseId": "voc1.u1.p.052",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "stand up"
+      ],
+      "nuance": [
+        "irregular: stand/stood/stood",
+        "también 'soportar': I can't stand it"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.053",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "I pay by card.",
+      "speaker": "narrator",
+      "gloss": "Pago con tarjeta."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.053",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "pay",
+      "pos": "verb",
+      "gloss": "pagar",
+      "examplePhraseId": "voc1.u1.p.053",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "pay attention",
+        "pay for"
+      ],
+      "family": [
+        "payment"
+      ],
+      "nuance": [
+        "irregular: pay/paid/paid"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.054",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Nice to meet you.",
+      "speaker": "narrator",
+      "gloss": "Encantado de conocerte."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.054",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "meet",
+      "pos": "verb",
+      "gloss": "encontrarse; conocer",
+      "examplePhraseId": "voc1.u1.p.054",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "meet someone"
+      ],
+      "family": [
+        "meeting"
+      ],
+      "nuance": [
+        "irregular: meet/met/met"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.055",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "I want to learn English.",
+      "speaker": "narrator",
+      "gloss": "Quiero aprender inglés."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.055",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "learn",
+      "pos": "verb",
+      "gloss": "aprender",
+      "examplePhraseId": "voc1.u1.p.055",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "learn about"
+      ],
+      "family": [
+        "learner"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.056",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Things change fast.",
+      "speaker": "narrator",
+      "gloss": "Las cosas cambian rápido."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.056",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "change",
+      "pos": "verb",
+      "gloss": "cambiar",
+      "examplePhraseId": "voc1.u1.p.056",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "change your mind"
+      ],
+      "nuance": [
+        "también sustantivo: change = cambio; vuelto"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.057",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "I don't understand.",
+      "speaker": "narrator",
+      "gloss": "No entiendo."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.057",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "understand",
+      "pos": "verb",
+      "gloss": "entender",
+      "examplePhraseId": "voc1.u1.p.057",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "irregular: understand/understood/understood"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.058",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "I watch TV at night.",
+      "speaker": "narrator",
+      "gloss": "Miro tele de noche."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.058",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "watch",
+      "pos": "verb",
+      "gloss": "mirar (observar)",
+      "examplePhraseId": "voc1.u1.p.058",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "watch a film"
+      ],
+      "nuance": [
+        "watch vs see vs look (ver precisión)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.059",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Follow me.",
+      "speaker": "narrator",
+      "gloss": "Seguime."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.059",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "follow",
+      "pos": "verb",
+      "gloss": "seguir",
+      "examplePhraseId": "voc1.u1.p.059",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "follow the rules"
+      ],
+      "nuance": [
+        "phrasal: follow up"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.060",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Stop here, please.",
+      "speaker": "narrator",
+      "gloss": "Pará acá, por favor."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.060",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "stop",
+      "pos": "verb",
+      "gloss": "parar; dejar de",
+      "examplePhraseId": "voc1.u1.p.060",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "stop doing"
+      ],
+      "nuance": [
+        "stop doing (dejar de) ≠ stop to do (parar para)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.061",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Do you speak English?",
+      "speaker": "narrator",
+      "gloss": "¿Hablás inglés?"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.061",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "speak",
+      "pos": "verb",
+      "gloss": "hablar",
+      "examplePhraseId": "voc1.u1.p.061",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "speak to"
+      ],
+      "family": [
+        "speaker"
+      ],
+      "nuance": [
+        "say/tell/speak (ver precisión)",
+        "irregular: speak/spoke/spoken"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.062",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "I read every day.",
+      "speaker": "narrator",
+      "gloss": "Leo todos los días."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.062",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "read",
+      "pos": "verb",
+      "gloss": "leer",
+      "examplePhraseId": "voc1.u1.p.062",
+      "focus": "translation",
+      "register": "neutral",
+      "family": [
+        "reader",
+        "reading"
+      ],
+      "nuance": [
+        "irregular: read/read/read (cambia la pronunciación /riːd/→/rɛd/)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.063",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "I leave at eight.",
+      "speaker": "narrator",
+      "gloss": "Salgo a las ocho."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.063",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "leave",
+      "pos": "verb",
+      "gloss": "dejar; irse",
+      "examplePhraseId": "voc1.u1.p.063",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "leave home"
+      ],
+      "nuance": [
+        "irregular: leave/left/left"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.p.064",
+      "kind": "phrase",
+      "difficulty": 2,
+      "text": "Can you help me?",
+      "speaker": "narrator",
+      "gloss": "¿Me podés ayudar?"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "essentials"
+      ],
+      "cefr": "A1",
+      "id": "voc1.u1.lx.064",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "word": "help",
+      "pos": "verb",
+      "gloss": "ayudar",
+      "examplePhraseId": "voc1.u1.p.064",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "help someone"
+      ],
+      "family": [
+        "helpful",
+        "helper"
+      ],
+      "nuance": [
+        "help + (to) infinitivo"
       ]
     }
   ]

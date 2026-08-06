@@ -55,9 +55,8 @@ son frecuentes). Cada fila es un **tema (aspect)** dentro de `unit-1.json`. *(CE
 
 | # | Tema | topic | ~ítems | Estado |
 |---|---|---|---|---|
-| 1 | Verbos esenciales I (be, have, do, go, get, make, take, come, give, say…) | `essentials` | 24 | ✅ hecha |
-| 2 | Verbos esenciales II (begin, keep, let, show, run, move, live, bring, write…) | `essentials` | ~30 | ▶ **próxima** |
-| 3 | Adjetivos y adverbios esenciales (good, big, new, very, more, now, here…) | `essentials`* | ~35 | · |
+| 1 | Verbos esenciales (be, have, go, get, make, say, know… + keep, begin, show, run, write, speak, leave…) | `essentials` | 50 | ✅ hecha |
+| 2 | Adjetivos y adverbios esenciales (good, big, new, very, more, now, here…) | `adjectives`* | ~35 | ▶ **próxima** |
 | 4 | Phrasal verbs de alta frecuencia (get up, sit down, come back…) | `phrasal`* | ~20 | · |
 | 5 | La familia | `family` | 14 | ✅ hecha |
 | 6 | La casa y la vida diaria (muebles, ropa, objetos) | `home` | ~35 | · |
