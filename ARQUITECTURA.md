@@ -202,7 +202,7 @@ type AtomKind =
 interface AtomBase {
   id: string;                 // estable y global: "en1.u1.p.007" — NUNCA se reusa ni reordena
   kind: AtomKind;
-  course: 'en1' | 'en2' | 'en3' | 'en4';
+  course: Course;             // en1-en4, gram1, pron1, voc1… (COURSES; el id lo prefija)
   unit: number;
 
   // Trazabilidad al material oficial — innegociable
@@ -218,10 +218,15 @@ interface AtomBase {
   fn: string[];               // ['greet', 'ask.name', 'ask.existence']  (función comunicativa)
   topic: string[];            // ['personal_info', 'workplace']
   difficulty: 1 | 2 | 3 | 4 | 5;   // ruta de dificultad de §2.3
+  cefr?: 'A1'|'A2'|'B1'|'B2'|'C1'|'C2';   // referencia (curso de Vocabulario); no es la estructura
 
   tags?: string[];
 }
 ```
+
+*El curso de **Vocabulario** (`voc1`) usa un `lexeme` enriquecido (colocaciones, familia,
+registro, matices) y se organiza por **tramos de frecuencia/utilidad** — todo su diseño,
+fuentes y rastreador de cobertura viven en [`content/voc1/spec/`](content/voc1/spec/).*
 
 ### 4.3 `phrase` — el átomo más importante
 
@@ -631,11 +636,26 @@ interface Card {
 5. Interleaving por topic — está probado que supera al blocking para retención
 ```
 
-### Registro de errores
+### Granularidad, cont.: la tarjeta incluye la variante
 
-Cada fallo guarda `{ atomId, skill, mechanic, userInput, timestamp }`. De ahí sale el
-diagnóstico real: *"fallás `/θ/` en el 70% de los intentos"*, *"confundís they're/their por
-contexto sintáctico, no por sonido"*. Eso es analytics útil, no una racha de días.
+En la práctica la tarjeta es `(atomId, skill, variant)` — el mismo diálogo con otro papel,
+o cada versión de un guion, son memorias distintas. El progreso se guarda por esa clave.
+
+### Honestidad de la señal (2026-08)
+
+Dos reglas para que el SRS mida recall real, no "lo copié":
+- **Falsos positivos:** en las mecánicas de escribir/armar, si corregís **después de fallar**
+  (y ver la respuesta), se graba `again`, no `good` — aunque termines bien.
+- **Reaprendizaje en sesión:** un ítem fallado vuelve al **final de la misma sesión** como
+  ronda nueva (segundo intento de recall real), una vez. El resumen cuenta por ítem.
+
+### Aislamiento por curso
+
+Sesiones, repaso, stats y el **pool de las mecánicas** (distractores/vecinos) se acotan al
+**curso activo** (`SessionPlayer` filtra el pool por `target.course`). Ver [[aislamiento-cursos]].
+
+*(El "Registro de errores"/diagnóstico "Tus puntos débiles" se **retiró**: señal floja.
+Ver BACKLOG §3.1.)*
 
 ---
 

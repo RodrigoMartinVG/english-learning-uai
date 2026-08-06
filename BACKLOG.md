@@ -50,11 +50,17 @@ expresiones por unidad. **50 tests**, `validate` y `audit` en verde. **El audio 
 **El diseño se probó seis veces:** cada unidad entró sin tocar `src/` (el schema ya preveía los
 tags, y el contenido se auto-descubre). Agregar Inglés II/III/IV es el mismo pipeline.
 
-**Multi-nivel: base lista (2026-07-21).** La app ya soporta varios niveles: `content/courses.json`
-(en1–en4), **selector de nivel** que se auto-saltea con un solo curso (hoy entrás directo a
-Inglés 1, sin cambio de UX), y Home / repaso global / stats **acotados por curso**. El motor,
-mecánicas, progreso y audio son *course-agnostic* y se reusan tal cual. **Agregar Inglés 2 es solo
-contenido** — el paso a paso está en [`MANIFIESTO-NIVELES.md`](MANIFIESTO-NIVELES.md) §7.
+**Multi-materia: landing lista (2026-08).** La entrada es una **landing de cursos** (cards con
+progreso + badge "por repasar"; los cursos sin contenido salen "Próximamente"). Registrados:
+`en1` (completo), `en2-en4`/`gram1`/`pron1` (scaffold), y **`voc1` (Vocabulario, en construcción)**.
+El motor/mecánicas/progreso/audio son *course-agnostic* y **aislados por curso** (sesiones, repaso,
+stats y el pool de distractores se acotan al curso activo). Agregar un curso es **solo contenido** —
+runbook en [`MANIFIESTO-NIVELES.md`](MANIFIESTO-NIVELES.md) §8.
+
+**Curso de Vocabulario (voc1): fundación completa.** Fuentes reales (NGSL/NAWL/Oxford 5000/PHaVE/
+CEFR-J ≈ 5.602 ítems), rastreador de cobertura (`npm run coverage`), schema extendido (ficha Rica +
+`cefr`), y **plan por tramos de frecuencia/utilidad**. Dos unidades vivas (La familia, Verbos
+esenciales I). Todo el diseño está en [`content/voc1/spec/`](content/voc1/spec/).
 
 Lo que sigue, en una línea: **poder usarlo de verdad — el deploy (§5.1) es lo que falta para
 estudiar desde el celular.**
@@ -107,6 +113,41 @@ Todo salió de usar la app en serio. Ya está en `main`, con tests y `validate` 
 
 **Retirado**
 - ❌ **"Tus puntos débiles"** (diagnóstico): señal floja/engañosa. Ver §3.1.
+
+### Segunda tanda (2026-08) — landing, SRS, aislamiento y curso de Vocabulario
+
+**Audio / práctica**
+- ✅ **Audio continuo** (nueva mecánica en la vista de modelos): reproduce el texto frase por
+  frase, cada una N veces (configurable) antes de seguir; pausa/detener, selector de voz,
+  "repetir todo". Para asimilar por escucha.
+- ✅ **Versión D** de "What is a square": texto nuevo + audio en 3 voces (Jessica/Michael/Nicole).
+
+**Landing multi-materia**
+- ✅ **Vista de inicio = landing de cursos**: card por curso con progreso y badge **"por repasar"**;
+  los cursos sin contenido salen **"Próximamente"** (deshabilitados). Cursos nuevos registrados:
+  gram1, pron1, voc1.
+- ✅ Fix **`ATOM_ID_RE`**: hardcodeaba `en[1-4]` → ahora deriva de `COURSES` (acepta ids de
+  cualquier curso nuevo).
+
+**SRS (calidad de aprendizaje)**
+- ✅ **Falsos positivos**: si corregís tras fallar (viendo la respuesta), cuenta como repaso, no
+  como acierto (Completar/Al oído/echo-type/Al inglés/Armar la frase).
+- ✅ **Reaprendizaje en sesión**: lo que fallás vuelve al final de la misma sesión (ronda nueva),
+  una vez; el resumen cuenta por ítem (resultado final).
+
+**Aislamiento entre cursos**
+- ✅ El pool de las mecánicas (distractores/vecinos) se limita al **curso activo** (antes un
+  ejercicio de Vocabulario traía distractores de Inglés). Ver [[aislamiento-cursos]].
+
+**Curso de Vocabulario (voc1)** — ver [`content/voc1/spec/`](content/voc1/spec/)
+- ✅ **Fundación**: índice v2 (5 dimensiones + espiral), investigación de cantidades (con fuentes),
+  marco de tipos de unidad, plantilla de ficha Rica.
+- ✅ **Fuentes reales + rastreador**: NGSL (por frecuencia), NAWL, Oxford 5000 (con CEFR), PHaVE,
+  CEFR-J; `scripts/build-coverage.ts` (`npm run coverage`) mide cobertura por lista y por tramo.
+- ✅ **Schema extendido** (retrocompatible): `cefr` en atomBase; `register/collocations/family/
+  nuance` en lexema. `WordFocusView` muestra la ficha rica.
+- ✅ **Plan por tramos de frecuencia/utilidad** (no niveles CEFR: el CEFR es referencia).
+- ✅ **Unidades vivas**: La familia (14), Verbos esenciales I (24).
 
 ---
 

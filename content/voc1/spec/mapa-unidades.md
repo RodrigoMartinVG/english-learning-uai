@@ -50,8 +50,8 @@ son frecuentes). *(CEFR ref: ~A1-A2.)*
 
 | # | Unidad | topic | ~ítems | Estado |
 |---|---|---|---|---|
-| 1 | Verbos esenciales I (be, have, do, go, get, make, take, come, give, say) | `essentials`* | ~25 | ▶ **próxima** |
-| 2 | Verbos esenciales II (want, like, know, see, need, use, find, think, tell, ask…) | `essentials`* | ~30 | · |
+| 1 | Verbos esenciales I (be, have, do, go, get, make, take, come, give, say…) | `essentials` | 24 | ✅ hecha |
+| 2 | Verbos esenciales II (begin, keep, let, show, run, move, live, bring, write…) | `essentials` | ~30 | ▶ **próxima** |
 | 3 | Adjetivos y adverbios esenciales (good, big, new, very, more, now, here…) | `essentials`* | ~35 | · |
 | 4 | Phrasal verbs de alta frecuencia (get up, sit down, come back…) | `phrasal`* | ~20 | · |
 | 5 | La familia | `family` | 14 | ✅ hecha |
