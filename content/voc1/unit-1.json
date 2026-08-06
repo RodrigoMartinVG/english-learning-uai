@@ -9,7 +9,7 @@
   "aspects": [
     {
       "id": "family",
-      "order": 1,
+      "order": 4,
       "title": "La familia",
       "summary": "Reconocer y decir los miembros de la familia.",
       "match": {
@@ -23,7 +23,7 @@
     },
     {
       "id": "essentials",
-      "order": 2,
+      "order": 1,
       "title": "Verbos esenciales",
       "summary": "Reconocer y decir los verbos de mayor frecuencia (dos tandas).",
       "match": {
