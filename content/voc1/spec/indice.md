@@ -19,12 +19,17 @@
 
 ---
 
-## Recorrido: **espiral por nivel**, no bloque por bloque
+## Recorrido: **espiral por frecuencia/utilidad**, no bloque por bloque
+
+> **El eje del curso son TRAMOS de frecuencia/utilidad** (ver [mapa-unidades](./mapa-unidades.md)),
+> no los niveles CEFR. El CEFR **mide competencia, no vocabulario**: acá es una **referencia
+> aproximada** por palabra, no la estructura. La matriz de abajo usa bandas CEFR como *proxy*
+> de frecuencia para ilustrar la espiral — el orden real lo dan los tramos.
 
 *Las dimensiones de abajo son el **catálogo** (qué existe y cómo se agrupa), NO el orden
 en que se estudia. Estudiar una dimensión entera antes de tocar la siguiente dejaría
 para muy tarde cosas de alta frecuencia — phrasal verbs (`get up, turn on`), irregulares
-(`be, have, go, get`) o colocaciones básicas — que son de nivel A1-A2.*
+(`be, have, go, get`) o colocaciones básicas — que son de las más frecuentes.*
 
 **Regla:** cada palabra lleva su etiqueta CEFR, y el curso avanza **por nivel**,
 tomando en cada uno la rebanada correspondiente de TODAS las dimensiones. La app ya
