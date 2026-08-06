@@ -37,7 +37,8 @@ Cada entrada es un bloque `###` con estos campos. Los marcados *(opc.)* pueden f
 
 ### Valores permitidos
 - **pos:** `noun` · `verb` · `adjective` · `adverb` · `preposition` · `phrase`.
-- **CEFR:** `A1` `A2` `B1` `B2` `C1`. Es el eje de la espiral: ordena qué entra antes.
+- **CEFR:** `A1`–`C1`, **referencia aproximada** por palabra (NO el eje). El eje del curso es
+  el **tramo de frecuencia/utilidad** — ver [mapa-unidades](./mapa-unidades.md).
 - **Práctica:** `🔁` reconocer (mecánica *Vocabulario*/`word-focus`) · `🗣` producir
   (*Al inglés*/`es-to-en`). La mayoría del núcleo es 🔁🗣.
 - **Registro:** por defecto `neutral`; marcá solo si se desvía.
@@ -58,7 +59,7 @@ Cada entrada es un bloque `###` con estos campos. Los marcados *(opc.)* pueden f
 `content/schema.ts` ya soporta la ficha rica (todo **opcional**, retrocompatible):
 
 ```ts
-// atomBase (cualquier átomo puede llevar su banda CEFR — eje de la espiral)
+// atomBase (cualquier átomo puede llevar su banda CEFR — referencia, no el eje)
 cefr: z.enum(CEFR_LEVELS).optional(),   // 'A1'..'C2'
 
 // lexemeAtomSchema (además de word, pos, gloss, examplePhraseId, focus, variantOf)
@@ -68,7 +69,8 @@ family: z.array(z.string()).optional(),
 nuance: z.array(z.string()).optional(),   // "establish (más formal)"
 ```
 
-- **CEFR** vive en `atomBase` (no solo lexeme): también puede ordenar el "ladder".
+- **CEFR** vive en `atomBase` (no solo lexeme): referencia aproximada; el orden real lo dan
+  los tramos de frecuencia.
 - **Colocaciones/familia** como `string[]` para la v1 (sin audio); las que merezcan
   audio propio se modelan como `phrase` aparte.
 - **Receptivo/productivo** NO es campo: ya lo define la mecánica (word-focus vs es-to-en).

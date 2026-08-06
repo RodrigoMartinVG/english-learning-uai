@@ -81,7 +81,7 @@ familias de números, y difieren bastante — dar rangos, no un dato:
 | C2 | ~9.000+ |
 
 *(La diferencia viene de familias vs lemmas, receptivo vs productivo y la metodología.
-Para diseño de curso conviene el punto medio y pensar en **incrementos por nivel**, no en
+Para diseño de curso conviene el punto medio y pensar en **incrementos por tramo**, no en
 el acumulado exacto.)*
 
 ## 4. Referencia: hablante nativo
@@ -115,8 +115,10 @@ ambición. Cuento **ítems léxicos** (palabras/expresiones con su ficha), no fa
 | **Recomendada (B2-C1 académico)** | **~4.000-5.000** | NGSL + AWL + patrones/confusables de alto valor | ~95-96% general · ~96-98% académico |
 | **Exhaustiva (C1+ casi nativo)** | **~8.000+ familias** | + cola larga + campos | 98% lectura autónoma (ROI decreciente) |
 
-**Recomendación: apuntar a la meta media (~4.000-5.000 ítems), construida por rebanadas
-de nivel.** Es donde está casi toda la cobertura útil sin caer en la cola larga.
+**Recomendación: apuntar a la meta media (~4.000-5.000 ítems), construida por tramos de
+frecuencia/utilidad** (ver [mapa-unidades](./mapa-unidades.md)). Es donde está casi toda la
+cobertura útil sin caer en la cola larga. *(Las tablas de abajo usan bandas A1-C1 como
+proxy de tamaño; el orden real son los tramos.)*
 
 ### Desglose sugerido de la meta recomendada (~4.500 ítems)
 

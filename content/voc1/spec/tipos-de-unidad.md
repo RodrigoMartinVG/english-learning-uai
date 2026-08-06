@@ -46,8 +46,8 @@ rastrea distinto.
 
 ## Cómo se relacionan con los NIVELES (la espiral)
 
-**Todo ítem —palabra suelta o MWE— lleva su banda CEFR y entra en la espiral por nivel.**
-No se ordena por tipo, se ordena por nivel:
+**Todo ítem —palabra suelta o MWE— entra en la espiral por su TRAMO de frecuencia** (el CEFR
+es referencia). No se ordena por tipo, se ordena por frecuencia/tramo:
 
 - `get up` (phrasal, PHaVE, frecuente) → A1-A2, junto al núcleo A1.
 - un idiom raro → C1.
@@ -69,4 +69,4 @@ ACL    x / ~2500  (colocaciones acad.)   ← agregar
 
 - **Irregulares** NO suma una fila: es una etiqueta sobre palabras NGSL.
 - **Tiempos** NO se rastrean acá: son del curso Gramática.
-- Con la banda CEFR por ítem, el build podrá reportar cobertura **por nivel** en cada capa.
+- Con la frecuencia/banda por ítem, el build reporta cobertura **por tramo** en cada capa.

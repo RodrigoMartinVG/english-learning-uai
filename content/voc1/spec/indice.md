@@ -3,15 +3,17 @@
 > **Filosofía del curso**
 > 1. **Deducir > memorizar.** Primero las reglas de formación (raíces, afijos), para
 >    entender palabras que nunca viste, en vez de aprender de a una.
-> 2. **Frecuencia primero.** Se ancla en listas objetivas (NGSL / AWL) y en el CEFR:
->    la base cubre el ~90% del texto real antes de ir a lo especializado.
+> 2. **Frecuencia primero.** El eje son **tramos de frecuencia/utilidad** (ver
+>    [mapa-unidades](./mapa-unidades.md)): la base cubre el ~90% del texto real antes de lo
+>    especializado. El **CEFR es referencia**, no la estructura (mide competencia, no léxico).
 > 3. **Ninguna palabra suelta.** Cada palabra vive en una oración de ejemplo, con su
 >    familia y sus colocaciones. Es lo que la app ya exige.
 > 4. **Reconocer ≠ producir.** Cada palabra puede entrenarse para *entenderla* o para
 >    *decirla*; en la app son tarjetas de repaso distintas.
 
 ### Leyenda
-- **Nivel CEFR:** `A1`–`C1` por unidad (para priorizar y para que el SRS traiga lo básico primero).
+- **Tramo:** el eje del curso son tramos de frecuencia/utilidad — ver [mapa-unidades](./mapa-unidades.md).
+- **CEFR** (`A1`–`C1`): **referencia aproximada** por palabra (no la estructura).
 - **🔁 receptivo** (reconocer) · **🗣 productivo** (producir).
 - **⭐ track opcional** de especialización (avanzado y personalizado; no es parte del núcleo).
 - **Mecánica:** con qué ejercicio de la app se trabaja (Vocabulario = `word-focus`,
@@ -31,13 +33,16 @@ en que se estudia. Estudiar una dimensión entera antes de tocar la siguiente de
 para muy tarde cosas de alta frecuencia — phrasal verbs (`get up, turn on`), irregulares
 (`be, have, go, get`) o colocaciones básicas — que son de las más frecuentes.*
 
-**Regla:** cada palabra lleva su etiqueta CEFR, y el curso avanza **por nivel**,
-tomando en cada uno la rebanada correspondiente de TODAS las dimensiones. La app ya
-hace esto sola: el motor descubre átomos por dificultad y el SRS los intercala. Por eso
-la **prioridad de autoría es por nivel** (construir el A1 completo de todas las
-dimensiones, luego A2, etc.), no por dimensión.
+**Regla:** el curso avanza **por tramo de frecuencia/utilidad** (ver
+[mapa-unidades](./mapa-unidades.md)), tomando en cada tramo la rebanada de TODAS las
+dimensiones. La app lo hace sola: el motor descubre átomos por dificultad/frecuencia y el
+SRS los intercala. La **prioridad de autoría es por tramo** (armar el Tramo 1 completo de
+todas las dimensiones, luego el 2…), no por dimensión. El CEFR va solo como referencia.
 
-| Nivel | Núcleo (D0) | Sistema (D1) | Campos (D2) | Precisión (D3) | Uso (D4) |
+*La matriz de abajo usa bandas CEFR como **proxy** de frecuencia, a modo ilustrativo — el
+orden real y los nombres de los tramos están en el [mapa](./mapa-unidades.md).*
+
+| Ref. CEFR | Núcleo (D0) | Sistema (D1) | Campos (D2) | Precisión (D3) | Uso (D4) |
 |---|---|---|---|---|---|
 | **A1** | ~500 frecuentes; números | irregulares y phrasal verbs **más comunes** (como vocabulario suelto) | persona, casa, comida | — | — |
 | **A2** | franja A2; cuantificadores | prefijos negativos; colocaciones básicas | entorno, trabajo, social | make/do, falsos amigos frecuentes | registro básico |
@@ -82,7 +87,7 @@ duda con lo cotidiano. Ordenado por frecuencia (NGSL) y CEFR.*
 
 ---
 
-## Dimensión 2 — Campos semánticos *(del concreto al abstracto, con niveles)*
+## Dimensión 2 — Campos semánticos *(del concreto al abstracto)*
 
 *Léxico situacional por mapas semánticos. Cada campo con su tier de dificultad, no
 todo-o-nada.*
@@ -134,7 +139,7 @@ todo-o-nada.*
 *No son reglas generales (eso es el curso **Gramática**), sino patrones que **dependen
 de la palabra concreta** y se memorizan con ella: qué preposición rige, si va con
 gerundio o infinitivo, con qué intensificador coloca. Es "uso + colocación + distinción".
-También espiralado por nivel.*
+También espiralado por tramo.*
 
 - **U5.1 · Complementación: verbo + gerundio / infinitivo** `B1`–`B2` 🗣 — *enjoy doing* vs *want to do*; y los que **cambian de sentido**: *stop doing* ≠ *stop to do*, *remember doing* ≠ *remember to do*, *try doing* ≠ *try to do*. *(Completar, Al inglés)*
 - **U5.2 · Preposiciones dependientes** `A2`–`B2` 🗣 — verbo/adjetivo/sustantivo + preposición fija: *depend on, interested in, good at, afraid of, reason for, consist of, result in*. *(Completar)*
@@ -170,20 +175,11 @@ También espiralado por nivel.*
     y allá su *uso* para armar tiempos; los cuantificadores/contables, el ángulo léxico
     acá (U5.9), la regla allá.
 
-## Priorización de autoría: **por nivel (espiral)**, no por dimensión
+## Priorización de autoría → ver el [mapa de unidades](./mapa-unidades.md)
 
-Se construye la rebanada de un nivel **atravesando todas las dimensiones**, y recién
-después se sube de nivel. Así nada de alta frecuencia queda postergado (ver la matriz
-de arriba):
-
-1. **Rebanada A1** — núcleo A1 + números + irregulares y phrasal verbs más comunes + campos persona/casa/comida.
-2. **Rebanada A2** — franja A2 + prefijos negativos + colocaciones básicas + make/do y falsos amigos frecuentes + entorno/trabajo + registro básico.
-3. **Rebanada B1** — cierre del núcleo + familias/sufijos + sistema de partículas + say/tell, lend/borrow + campos generales + conectores/conversación.
-4. **Rebanada B2** — raíces + más colocaciones + polisemia/contables + ciencia/sociedad/tech + idioms/hedging.
-5. **Rebanada C1** — compuestos + matices/sinónimos + académico + discurso avanzado, y por último el **track de especialización ⭐**.
-
-*Dentro de cada rebanada, el orden de mayor ROI es: primero el léxico de frecuencia y
-las colocaciones, después la precisión (confusables/falsos amigos), al final el color.*
+El orden concreto de construcción —por **tramos de frecuencia/utilidad**, con el núcleo al
+frente y sin silos— vive en [`mapa-unidades.md`](./mapa-unidades.md), el plan autoritativo.
+Este índice es el **catálogo** de dimensiones; el mapa es la **secuencia**.
 
 ---
 ---
