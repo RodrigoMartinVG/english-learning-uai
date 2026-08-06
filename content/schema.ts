@@ -117,6 +117,18 @@ export const FUNCTION_TAGS = [
 
 /** Dominio temático. Se usa para generar distractores e interleaving. */
 export const TOPIC_TAGS = [
+  // Vocabulario (voc1): núcleo transversal + campos que no existían en inglés.
+  'essentials',
+  'phrasal',
+  'food',
+  'body',
+  'clothes',
+  'numbers',
+  'transport',
+  'nature',
+  'weather',
+  'describe',
+  'feelings',
   'personal_info',
   'origin_nationality',
   'occupation',
