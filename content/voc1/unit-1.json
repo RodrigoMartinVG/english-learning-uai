@@ -3163,6 +3163,525 @@
       "nuance": [
         "help + (to) infinitivo"
       ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.p.065",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "My grandfather tells stories.",
+      "speaker": "narrator",
+      "gloss": "Mi abuelo cuenta historias."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.lx.065",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "grandfather",
+      "pos": "noun",
+      "gloss": "abuelo",
+      "examplePhraseId": "voc1.u1.p.065",
+      "focus": "translation",
+      "register": "neutral",
+      "family": [
+        "grandparent"
+      ],
+      "nuance": [
+        "grandpa / grandad (informal)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.p.066",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A2",
+      "text": "I visit my grandparents.",
+      "speaker": "narrator",
+      "gloss": "Visito a mis abuelos."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.lx.066",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A2",
+      "word": "grandparent",
+      "pos": "noun",
+      "gloss": "abuelo/a (los abuelos)",
+      "examplePhraseId": "voc1.u1.p.066",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "casi siempre en plural: grandparents"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.p.067",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "My aunt lives nearby.",
+      "speaker": "narrator",
+      "gloss": "Mi tía vive cerca."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.lx.067",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "aunt",
+      "pos": "noun",
+      "gloss": "tía",
+      "examplePhraseId": "voc1.u1.p.067",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "pron. /ɑːnt/ (UK) · /ænt/ (US)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.p.068",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "My uncle is a pilot.",
+      "speaker": "narrator",
+      "gloss": "Mi tío es piloto."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.lx.068",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "uncle",
+      "pos": "noun",
+      "gloss": "tío",
+      "examplePhraseId": "voc1.u1.p.068",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.p.069",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "She is my cousin.",
+      "speaker": "narrator",
+      "gloss": "Es mi prima."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.lx.069",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "cousin",
+      "pos": "noun",
+      "gloss": "primo/a",
+      "examplePhraseId": "voc1.u1.p.069",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "pron. /ˈkʌzn/"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.p.070",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A2",
+      "text": "His niece is five.",
+      "speaker": "narrator",
+      "gloss": "Su sobrina tiene cinco."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.lx.070",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A2",
+      "word": "niece",
+      "pos": "noun",
+      "gloss": "sobrina",
+      "examplePhraseId": "voc1.u1.p.070",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.p.071",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A2",
+      "text": "My nephew plays football.",
+      "speaker": "narrator",
+      "gloss": "Mi sobrino juega al fútbol."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.lx.071",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A2",
+      "word": "nephew",
+      "pos": "noun",
+      "gloss": "sobrino",
+      "examplePhraseId": "voc1.u1.p.071",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.p.072",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A2",
+      "text": "Their grandson is tall.",
+      "speaker": "narrator",
+      "gloss": "Su nieto es alto."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.lx.072",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A2",
+      "word": "grandson",
+      "pos": "noun",
+      "gloss": "nieto",
+      "examplePhraseId": "voc1.u1.p.072",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.p.073",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A2",
+      "text": "My granddaughter sings.",
+      "speaker": "narrator",
+      "gloss": "Mi nieta canta."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.lx.073",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A2",
+      "word": "granddaughter",
+      "pos": "noun",
+      "gloss": "nieta",
+      "examplePhraseId": "voc1.u1.p.073",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.p.074",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A2",
+      "text": "We have relatives in Spain.",
+      "speaker": "narrator",
+      "gloss": "Tenemos parientes en España."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.lx.074",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A2",
+      "word": "relative",
+      "pos": "noun",
+      "gloss": "pariente",
+      "examplePhraseId": "voc1.u1.p.074",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "pariente (sust.) ≠ relativo (adj.)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.p.075",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A2",
+      "text": "This is my partner, Ana.",
+      "speaker": "narrator",
+      "gloss": "Esta es mi pareja, Ana."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.lx.075",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A2",
+      "word": "partner",
+      "pos": "noun",
+      "gloss": "pareja; socio",
+      "examplePhraseId": "voc1.u1.p.075",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "business partner"
+      ],
+      "nuance": [
+        "pareja sentimental o socio de trabajo"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.p.076",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A2",
+      "text": "They are twins.",
+      "speaker": "narrator",
+      "gloss": "Son gemelos."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "family"
+      ],
+      "id": "voc1.u1.lx.076",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A2",
+      "word": "twin",
+      "pos": "noun",
+      "gloss": "gemelo/a; mellizo/a",
+      "examplePhraseId": "voc1.u1.p.076",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "twin brother"
+      ]
     }
   ]
 }
