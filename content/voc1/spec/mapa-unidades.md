@@ -1,7 +1,7 @@
 # Mapa de unidades — Vocabulario (plan de largo plazo, vivo)
 
 Convierte el [índice](./indice.md) (dimensiones) + la cobertura ([sources](./sources/),
-5.602 ítems) en **unidades concretas y ordenadas**.
+5.602 ítems) en **temas concretos y ordenados**, agrupados en unidades por tramo.
 
 **El eje es la FRECUENCIA / UTILIDAD, no el CEFR.** El CEFR mide competencia comunicativa
 de una persona, no vocabulario; usarlo como estructura fuerza un marco que no es. Acá el
@@ -9,7 +9,7 @@ esqueleto son **tramos de frecuencia/utilidad** (lo más útil primero); el CEFR
 **etiqueta de referencia aproximada** por palabra (para orientarse y cruzar con Oxford).
 
 **Principios**
-- **Granularidad justa:** el mapa fija *temas/unidades* y su orden; qué palabra va en cuál
+- **Granularidad justa:** el mapa fija los *temas* y su orden; qué palabra va en cuál
   lo asigna el rastreador (`npm run coverage`). No pre-asignamos las 5.602 a mano.
 - **Espiral por tramo:** se construye un tramo completo (todas las dimensiones), luego el
   siguiente. Tramo 1 va **fino** acá; 3-5, **grueso** (se refina al llegar).
@@ -27,7 +27,12 @@ esqueleto son **tramos de frecuencia/utilidad** (lo más útil primero); el CEFR
   unidad.
 - **Receptivo ↑ en tramos altos:** Tramos 1-3 receptivo + productivo; Tramo 4-5 (académico/
   especializado) sobre todo **receptivo** (leer papers); la producción se concentra en el núcleo.
-- **Tamaño meta:** ~25-40 palabras/unidad (receta Rica). Total estimado: **~60-80 unidades**.
+- **Estructura: unidad = TRAMO, temas (aspects) = campos.** Cada tramo es **UN**
+  `unit-N.json` con varios *aspects* (temas). Agregar un campo = sumar un **aspecto + sus
+  átomos** a ese archivo, **no** una unidad nueva. Así el curso tiene **~5-7 unidades**
+  (tramos), no cientos.
+- **Tamaño:** ~25-40 palabras por **tema** (receta Rica); ~10-15 temas por tramo →
+  **~60-80 temas** en total.
 
 Estado: `✅ hecha` · `▶ próxima` · `· planificada`
 
@@ -43,12 +48,12 @@ Orden de utilidad, no por dimensión:
 
 ---
 
-## Tramo 1 · Núcleo esencial — vida cotidiana (~12 unidades)
+## Tramo 1 · Núcleo esencial — vida cotidiana (`unit-1.json` · ~12 temas)
 
 Lo más frecuente y básico (NGSL top ~800 + los campos cotidianos cuyos miembros centrales
-son frecuentes). *(CEFR ref: ~A1-A2.)*
+son frecuentes). Cada fila es un **tema (aspect)** dentro de `unit-1.json`. *(CEFR ref: ~A1-A2.)*
 
-| # | Unidad | topic | ~ítems | Estado |
+| # | Tema | topic | ~ítems | Estado |
 |---|---|---|---|---|
 | 1 | Verbos esenciales I (be, have, do, go, get, make, take, come, give, say…) | `essentials` | 24 | ✅ hecha |
 | 2 | Verbos esenciales II (begin, keep, let, show, run, move, live, bring, write…) | `essentials` | ~30 | ▶ **próxima** |
@@ -65,7 +70,7 @@ son frecuentes). *(CEFR ref: ~A1-A2.)*
 
 *`*` = topic a agregar a `TOPIC_TAGS`. `essentials` agrupa el núcleo transversal; `phrasal`, los phrasal verbs.*
 
-## Tramo 2 · Núcleo general (~13 unidades) — *CEFR ref: ~A2-B1*
+## Tramo 2 · Núcleo general (~13 temas) — *CEFR ref: ~A2-B1*
 
 Completa la alta frecuencia general (resto del NGSL, ~801-2809).
 1. **Núcleo general** — más verbos/adjetivos/adverbios frecuentes (~2-3 u). Al frente.
@@ -76,7 +81,7 @@ Completa la alta frecuencia general (resto del NGSL, ~801-2809).
 5. **Precisión:** falsos amigos frecuentes · confusables básicos (make/do, say/tell).
 6. **Uso:** registro básico (casual ↔ neutro) · conversación.
 
-## Tramo 3 · Ampliación general (~13 unidades) — *CEFR ref: ~B1-B2*
+## Tramo 3 · Ampliación general (~13 temas) — *CEFR ref: ~B1-B2*
 
 General menos frecuente (Oxford más allá del NGSL).
 1. **Núcleo de ampliación** (~2 u).
@@ -87,7 +92,7 @@ General menos frecuente (Oxford más allá del NGSL).
 6. **Uso + patrones:** conectores del discurso · fillers · verbo+gerundio/infinitivo ·
    preposiciones dependientes (Dim 5).
 
-## Tramo 4 · Académico (~16 unidades; receptivo domina) — *CEFR ref: ~B2-C1*
+## Tramo 4 · Académico (~16 temas; receptivo domina) — *CEFR ref: ~B2-C1*
 
 Para leer papers (NAWL / AWL).
 1. **Núcleo académico** (banda grande, ~3-4 u).
@@ -97,7 +102,7 @@ Para leer papers (NAWL / AWL).
 5. **Precisión:** polisemia (run/set/get) · matices/sinónimos.
 6. **Uso:** idioms · hedging académico (may, tend to, arguably).
 
-## Tramo 5 · Especialización ⭐ (~15 u, opcional; receptivo) — *CEFR ref: ~C1+*
+## Tramo 5 · Especialización ⭐ (~15 temas, opcional; receptivo) — *CEFR ref: ~C1+*
 
 Track por campo, curado (no hay lista estándar): matemática/lógica · software · filosofía ·
 ajedrez · arte/música/tipografía. + matices finos y discurso avanzado.
@@ -110,14 +115,14 @@ Los conteos por unidad son **aproximados** y no suman la banda entera. Cómo cie
 - **Funcionales** (the, of, some, modales…) → **Gramática**, no son lexema. (En el NGSL por
   frecuencia son justo los primeros ~50-100: van al otro curso.)
 - Muchas palabras entran como **colocaciones/familia** (metadata), no como lexema propio.
-- El **rastreador** dice qué queda pendiente; una unidad **"Núcleo restante"** por tramo
+- El **rastreador** dice qué queda pendiente; un tema **"Núcleo restante"** por tramo
   absorbe las frecuentes que ningún tema capturó.
 - **El objetivo real lo fija el tracker, no la suma del mapa.** El mapa ordena; el tracker mide.
 
 ## Cómo se avanza (loop de construcción)
 
-1. Elegir la próxima unidad del mapa (empezando por el Tramo 1).
-2. Redactar su rebanada (fichas Rica) → `unit-N.json`.
+1. Elegir el próximo **tema** del mapa (empezando por el Tramo 1).
+2. Agregar el tema al `unit-N.json` del tramo: un **aspect** + sus átomos (fichas Rica).
 3. `npm run validate` → `npm run build:audio -- --only=voc1` → reiniciar dev.
 4. `npm run coverage` para ver cuánto subió y qué falta.
 5. Marcar ✅ acá.
