@@ -78,6 +78,24 @@ export const GRAMMAR_TAGS = [
   'would-like',
   // Vocabulario: marca los verbos irregulares (para el tema "por patrón").
   'verb.irregular',
+  // Inglés 2 — las estructuras que el nivel agrega. Las piden explícitamente las
+  // consignas post-lectura del cuadernillo (past simple, present continuous,
+  // cuantificadores) y las usa el texto de termodinámica (pasivas, will, 1er
+  // condicional, relativas). Sin estas, los átomos de en2 no se podrían etiquetar.
+  'past-simple.affirmative',
+  'past-simple.negative',
+  'past-simple.interrogative',
+  'present-continuous.affirmative',
+  'present-continuous.interrogative',
+  'passive.present',
+  'passive.past',
+  'will.future',
+  'conditionals.first',
+  'conditionals.second',
+  'quantifiers',
+  'comparatives',
+  'superlatives',
+  'relative-clauses',
 ] as const;
 
 /** Funciones comunicativas: qué HACE el hablante, no qué estructura usa. */
@@ -148,6 +166,9 @@ export const TOPIC_TAGS = [
   'shopping',
   // Unidad 5 — textos de matemática
   'mathematics',
+  // Inglés 2: el Texto 1 es termodinámica, no matemática. Forzarlo a 'mathematics'
+  // ensuciaría los distractores (que se generan por topic).
+  'physics',
 ] as const;
 
 /** Habilidades: una tarjeta de SRS es (atomId, skill). Ver ARQUITECTURA.md §7. */

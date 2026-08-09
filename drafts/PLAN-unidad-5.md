@@ -3,7 +3,8 @@
 > Estado: **diseño para revisar** (antes de codear). Igual que hicimos con la
 > arquitectura general y con la U2, esto se aprueba primero.
 >
-> Material oficial: `CUADERNILLO ... INGLÉS I II III & IV_UAI_2026.pdf`, los 4
+> Material oficial: `material/comun/CUADERNILLO ... INGLÉS I II III & IV_UAI_2026.pdf`
+> (está en `comun/` porque el mismo cuadernillo sirve a Inglés I-IV), los 4
 > textos de Inglés I (págs. 3-13). Empezamos por el **Texto 2** ("What is a
 > square?", Hannah Darken / plus.maths.org), que es el que mejor conocés.
 

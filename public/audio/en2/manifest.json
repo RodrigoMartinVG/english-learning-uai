@@ -1,0 +1,2142 @@
+{
+  "generatedAt": "2026-08-09T21:22:55.827Z",
+  "provider": "kokoro(Kokoro-82M-v1.0-ONNX, q8)",
+  "entries": {
+    "en2.u5.rd.001.sec.0.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.001.sec.0.b.0.mp3",
+      "durationMs": 40739,
+      "hash": "c790cb2f69e80d86",
+      "chars": 664
+    },
+    "en2.u5.rd.001.sec.0.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.001.sec.0.b.1.mp3",
+      "durationMs": 35688,
+      "hash": "361e581ec7df8dab",
+      "chars": 610
+    },
+    "en2.u5.rd.001.sec.1.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.001.sec.1.b.0.mp3",
+      "durationMs": 2981,
+      "hash": "cba15a11870531c8",
+      "chars": 50
+    },
+    "en2.u5.rd.001.sec.1.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.001.sec.1.b.1.mp3",
+      "durationMs": 42501,
+      "hash": "9324aa19eb915e76",
+      "chars": 700
+    },
+    "en2.u5.rd.001.sec.1.b.2": {
+      "src": "/audio/en2/u5/en2.u5.rd.001.sec.1.b.2.mp3",
+      "durationMs": 22462,
+      "hash": "dc45083eda3ec4a6",
+      "chars": 364
+    },
+    "en2.u5.p.001": {
+      "src": "/audio/en2/u5/en2.u5.p.001.mp3",
+      "durationMs": 3987,
+      "hash": "f73d5e5d4b171d05",
+      "chars": 71
+    },
+    "en2.u5.p.002": {
+      "src": "/audio/en2/u5/en2.u5.p.002.mp3",
+      "durationMs": 3011,
+      "hash": "20a7974991556376",
+      "chars": 51
+    },
+    "en2.u5.p.003": {
+      "src": "/audio/en2/u5/en2.u5.p.003.mp3",
+      "durationMs": 3575,
+      "hash": "ab56d1d1f2aaa058",
+      "chars": 66
+    },
+    "en2.u5.p.004": {
+      "src": "/audio/en2/u5/en2.u5.p.004.mp3",
+      "durationMs": 4784,
+      "hash": "40d53837b8e1f170",
+      "chars": 87
+    },
+    "en2.u5.p.005": {
+      "src": "/audio/en2/u5/en2.u5.p.005.mp3",
+      "durationMs": 3269,
+      "hash": "438016475e11c385",
+      "chars": 55
+    },
+    "en2.u5.p.006": {
+      "src": "/audio/en2/u5/en2.u5.p.006.mp3",
+      "durationMs": 3268,
+      "hash": "8e7727dccd909ffd",
+      "chars": 58
+    },
+    "en2.u5.p.007": {
+      "src": "/audio/en2/u5/en2.u5.p.007.mp3",
+      "durationMs": 3673,
+      "hash": "33e9825b0d1e8311",
+      "chars": 56
+    },
+    "en2.u5.p.008": {
+      "src": "/audio/en2/u5/en2.u5.p.008.mp3",
+      "durationMs": 3393,
+      "hash": "df2dfd28d6f79b8c",
+      "chars": 56
+    },
+    "en2.u5.p.009": {
+      "src": "/audio/en2/u5/en2.u5.p.009.mp3",
+      "durationMs": 4458,
+      "hash": "03b723aed17ad027",
+      "chars": 80
+    },
+    "en2.u5.p.010": {
+      "src": "/audio/en2/u5/en2.u5.p.010.mp3",
+      "durationMs": 5000,
+      "hash": "5e3139e4c8ff7770",
+      "chars": 97
+    },
+    "en2.u5.p.011": {
+      "src": "/audio/en2/u5/en2.u5.p.011.mp3",
+      "durationMs": 3749,
+      "hash": "8ac6e81b092b7611",
+      "chars": 73
+    },
+    "en2.u5.p.012": {
+      "src": "/audio/en2/u5/en2.u5.p.012.mp3",
+      "durationMs": 4893,
+      "hash": "c1b2df74c1d1a2e0",
+      "chars": 79
+    },
+    "en2.u5.p.013": {
+      "src": "/audio/en2/u5/en2.u5.p.013.mp3",
+      "durationMs": 3004,
+      "hash": "0f0c896d7f602858",
+      "chars": 50
+    },
+    "en2.u5.p.014": {
+      "src": "/audio/en2/u5/en2.u5.p.014.mp3",
+      "durationMs": 6001,
+      "hash": "605aef01ce189576",
+      "chars": 111
+    },
+    "en2.u5.p.015": {
+      "src": "/audio/en2/u5/en2.u5.p.015.mp3",
+      "durationMs": 2543,
+      "hash": "4c1b5761568bca14",
+      "chars": 38
+    },
+    "en2.u5.p.016": {
+      "src": "/audio/en2/u5/en2.u5.p.016.mp3",
+      "durationMs": 3932,
+      "hash": "e0bd356f1c1adc8a",
+      "chars": 69
+    },
+    "en2.u5.p.017": {
+      "src": "/audio/en2/u5/en2.u5.p.017.mp3",
+      "durationMs": 5374,
+      "hash": "2e285cd6dc197116",
+      "chars": 85
+    },
+    "en2.u5.p.018": {
+      "src": "/audio/en2/u5/en2.u5.p.018.mp3",
+      "durationMs": 5703,
+      "hash": "c51e6bc97e8d0599",
+      "chars": 95
+    },
+    "en2.u5.p.019": {
+      "src": "/audio/en2/u5/en2.u5.p.019.mp3",
+      "durationMs": 5361,
+      "hash": "fc984d6c74a0d80f",
+      "chars": 91
+    },
+    "en2.u5.p.020": {
+      "src": "/audio/en2/u5/en2.u5.p.020.mp3",
+      "durationMs": 3678,
+      "hash": "3011517173dad3c9",
+      "chars": 63
+    },
+    "en2.u5.lx.001": {
+      "src": "/audio/en2/u5/en2.u5.lx.001.mp3",
+      "durationMs": 1207,
+      "hash": "f2eedc2a7385ecdc",
+      "chars": 14
+    },
+    "en2.u5.lx.002": {
+      "src": "/audio/en2/u5/en2.u5.lx.002.mp3",
+      "durationMs": 693,
+      "hash": "2b7e8afdf619429d",
+      "chars": 7
+    },
+    "en2.u5.lx.003": {
+      "src": "/audio/en2/u5/en2.u5.lx.003.mp3",
+      "durationMs": 810,
+      "hash": "9db57b2faf59bb01",
+      "chars": 9
+    },
+    "en2.u5.lx.004": {
+      "src": "/audio/en2/u5/en2.u5.lx.004.mp3",
+      "durationMs": 1102,
+      "hash": "c98c2ecaff792bf7",
+      "chars": 12
+    },
+    "en2.u5.lx.005": {
+      "src": "/audio/en2/u5/en2.u5.lx.005.mp3",
+      "durationMs": 1002,
+      "hash": "6d17acfca2ec42be",
+      "chars": 13
+    },
+    "en2.u5.lx.006": {
+      "src": "/audio/en2/u5/en2.u5.lx.006.mp3",
+      "durationMs": 761,
+      "hash": "193097db3375a96a",
+      "chars": 8
+    },
+    "en2.u5.lx.007": {
+      "src": "/audio/en2/u5/en2.u5.lx.007.mp3",
+      "durationMs": 807,
+      "hash": "bab421ba25431483",
+      "chars": 9
+    },
+    "en2.u5.lx.008": {
+      "src": "/audio/en2/u5/en2.u5.lx.008.mp3",
+      "durationMs": 655,
+      "hash": "09b7bca4711be52e",
+      "chars": 6
+    },
+    "en2.u5.lx.009": {
+      "src": "/audio/en2/u5/en2.u5.lx.009.mp3",
+      "durationMs": 913,
+      "hash": "d7e3fc0370790cf8",
+      "chars": 10
+    },
+    "en2.u5.lx.010": {
+      "src": "/audio/en2/u5/en2.u5.lx.010.mp3",
+      "durationMs": 1185,
+      "hash": "101f959bd7dfc02f",
+      "chars": 15
+    },
+    "en2.u5.lx.011": {
+      "src": "/audio/en2/u5/en2.u5.lx.011.mp3",
+      "durationMs": 1372,
+      "hash": "450812918ea8b2a5",
+      "chars": 19
+    },
+    "en2.u5.lx.012": {
+      "src": "/audio/en2/u5/en2.u5.lx.012.mp3",
+      "durationMs": 1445,
+      "hash": "3f92658d5698a8b1",
+      "chars": 15
+    },
+    "en2.u5.lx.013": {
+      "src": "/audio/en2/u5/en2.u5.lx.013.mp3",
+      "durationMs": 1249,
+      "hash": "fb9245dc13033744",
+      "chars": 13
+    },
+    "en2.u5.lx.014": {
+      "src": "/audio/en2/u5/en2.u5.lx.014.mp3",
+      "durationMs": 899,
+      "hash": "38d10d5594fc9b7c",
+      "chars": 11
+    },
+    "en2.u5.lx.015": {
+      "src": "/audio/en2/u5/en2.u5.lx.015.mp3",
+      "durationMs": 985,
+      "hash": "d76367bea7144201",
+      "chars": 11
+    },
+    "en2.u5.lx.016": {
+      "src": "/audio/en2/u5/en2.u5.lx.016.mp3",
+      "durationMs": 1345,
+      "hash": "adfe2875f3ed1f72",
+      "chars": 19
+    },
+    "en2.u5.lx.017": {
+      "src": "/audio/en2/u5/en2.u5.lx.017.mp3",
+      "durationMs": 920,
+      "hash": "67463e31b77eb541",
+      "chars": 12
+    },
+    "en2.u5.lx.018": {
+      "src": "/audio/en2/u5/en2.u5.lx.018.mp3",
+      "durationMs": 751,
+      "hash": "05e1dc955c56617e",
+      "chars": 8
+    },
+    "en2.u5.qa.001": {
+      "src": "/audio/en2/u5/en2.u5.qa.001.mp3",
+      "durationMs": 1922,
+      "hash": "bb8b5d2e752db6dc",
+      "chars": 23
+    },
+    "en2.u5.qa.001.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.001.alt.0.mp3",
+      "durationMs": 3266,
+      "hash": "ac5ccb217ee304bd",
+      "chars": 40
+    },
+    "en2.u5.qa.001.alt.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.001.alt.1.mp3",
+      "durationMs": 2960,
+      "hash": "fafa86a2b31dcda0",
+      "chars": 39
+    },
+    "en2.u5.qa.001.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.001.reply.0.mp3",
+      "durationMs": 2110,
+      "hash": "549e6c05a95530df",
+      "chars": 38
+    },
+    "en2.u5.qa.001.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.001.ans.0.mp3",
+      "durationMs": 3492,
+      "hash": "464e20e014da542f",
+      "chars": 65
+    },
+    "en2.u5.qa.001.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.001.ans.1.mp3",
+      "durationMs": 3024,
+      "hash": "7ef08cb6b44005fd",
+      "chars": 62
+    },
+    "en2.u5.qa.001.ans.2": {
+      "src": "/audio/en2/u5/en2.u5.qa.001.ans.2.mp3",
+      "durationMs": 6300,
+      "hash": "d5e42923189b3104",
+      "chars": 121
+    },
+    "en2.u5.qa.002": {
+      "src": "/audio/en2/u5/en2.u5.qa.002.mp3",
+      "durationMs": 2309,
+      "hash": "501cd4f219f2aa9a",
+      "chars": 36
+    },
+    "en2.u5.qa.002.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.002.alt.0.mp3",
+      "durationMs": 3596,
+      "hash": "b8310fd2f33ae2a1",
+      "chars": 54
+    },
+    "en2.u5.qa.002.alt.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.002.alt.1.mp3",
+      "durationMs": 1769,
+      "hash": "7144bbcae90bfc7a",
+      "chars": 29
+    },
+    "en2.u5.qa.002.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.002.reply.0.mp3",
+      "durationMs": 2835,
+      "hash": "0ee111974fef66e3",
+      "chars": 55
+    },
+    "en2.u5.qa.002.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.002.ans.0.mp3",
+      "durationMs": 4950,
+      "hash": "75dbede7edc39713",
+      "chars": 96
+    },
+    "en2.u5.qa.002.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.002.ans.1.mp3",
+      "durationMs": 4489,
+      "hash": "c1ed5da2fb8742cc",
+      "chars": 92
+    },
+    "en2.u5.qa.002.ans.2": {
+      "src": "/audio/en2/u5/en2.u5.qa.002.ans.2.mp3",
+      "durationMs": 5523,
+      "hash": "218d3c2a6605d365",
+      "chars": 100
+    },
+    "en2.u5.qa.003": {
+      "src": "/audio/en2/u5/en2.u5.qa.003.mp3",
+      "durationMs": 2911,
+      "hash": "2b150b8a1e3f52d2",
+      "chars": 42
+    },
+    "en2.u5.qa.003.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.003.alt.0.mp3",
+      "durationMs": 2583,
+      "hash": "3168b1b37b3c87ac",
+      "chars": 34
+    },
+    "en2.u5.qa.003.alt.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.003.alt.1.mp3",
+      "durationMs": 2734,
+      "hash": "28dfc861fb4391de",
+      "chars": 44
+    },
+    "en2.u5.qa.003.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.003.reply.0.mp3",
+      "durationMs": 4198,
+      "hash": "bb179bd5315312a7",
+      "chars": 88
+    },
+    "en2.u5.qa.003.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.003.ans.0.mp3",
+      "durationMs": 8360,
+      "hash": "83d4909d51ff8e72",
+      "chars": 173
+    },
+    "en2.u5.qa.003.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.003.ans.1.mp3",
+      "durationMs": 4863,
+      "hash": "10a2a690ff574934",
+      "chars": 101
+    },
+    "en2.u5.qa.003.ans.2": {
+      "src": "/audio/en2/u5/en2.u5.qa.003.ans.2.mp3",
+      "durationMs": 6690,
+      "hash": "1b356b3866937341",
+      "chars": 118
+    },
+    "en2.u5.qa.004": {
+      "src": "/audio/en2/u5/en2.u5.qa.004.mp3",
+      "durationMs": 3135,
+      "hash": "fbc342d3258fcd17",
+      "chars": 47
+    },
+    "en2.u5.qa.004.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.004.alt.0.mp3",
+      "durationMs": 2567,
+      "hash": "ecc87f70c9ae3278",
+      "chars": 43
+    },
+    "en2.u5.qa.004.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.004.reply.0.mp3",
+      "durationMs": 4213,
+      "hash": "bf3d80818337f33b",
+      "chars": 77
+    },
+    "en2.u5.qa.004.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.004.ans.0.mp3",
+      "durationMs": 6810,
+      "hash": "5d0512179eb3a1fe",
+      "chars": 116
+    },
+    "en2.u5.qa.004.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.004.ans.1.mp3",
+      "durationMs": 6356,
+      "hash": "d69f72eed0dfb126",
+      "chars": 108
+    },
+    "en2.u5.qa.004.ans.2": {
+      "src": "/audio/en2/u5/en2.u5.qa.004.ans.2.mp3",
+      "durationMs": 4674,
+      "hash": "6cafb14580b0f26f",
+      "chars": 89
+    },
+    "en2.u5.qa.005": {
+      "src": "/audio/en2/u5/en2.u5.qa.005.mp3",
+      "durationMs": 2751,
+      "hash": "3721ca044f54b899",
+      "chars": 42
+    },
+    "en2.u5.qa.005.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.005.alt.0.mp3",
+      "durationMs": 3168,
+      "hash": "e30f1cb4e1d6bb68",
+      "chars": 45
+    },
+    "en2.u5.qa.005.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.005.reply.0.mp3",
+      "durationMs": 2889,
+      "hash": "131d9bf6b4562b18",
+      "chars": 57
+    },
+    "en2.u5.qa.005.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.005.ans.0.mp3",
+      "durationMs": 2938,
+      "hash": "ede4f92c89e69692",
+      "chars": 50
+    },
+    "en2.u5.qa.005.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.005.ans.1.mp3",
+      "durationMs": 2495,
+      "hash": "25384e14172351ce",
+      "chars": 47
+    },
+    "en2.u5.qa.006": {
+      "src": "/audio/en2/u5/en2.u5.qa.006.mp3",
+      "durationMs": 1748,
+      "hash": "7a4aa699266866ae",
+      "chars": 28
+    },
+    "en2.u5.qa.006.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.006.alt.0.mp3",
+      "durationMs": 3393,
+      "hash": "1c5bf70f757ef18d",
+      "chars": 48
+    },
+    "en2.u5.qa.006.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.006.reply.0.mp3",
+      "durationMs": 3695,
+      "hash": "02991f7e2025bcae",
+      "chars": 67
+    },
+    "en2.u5.qa.006.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.006.ans.0.mp3",
+      "durationMs": 6247,
+      "hash": "6c6f04e8c912df22",
+      "chars": 108
+    },
+    "en2.u5.qa.006.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.006.ans.1.mp3",
+      "durationMs": 4164,
+      "hash": "954dc3927f2c511a",
+      "chars": 76
+    },
+    "en2.u5.qa.006.ans.2": {
+      "src": "/audio/en2/u5/en2.u5.qa.006.ans.2.mp3",
+      "durationMs": 4783,
+      "hash": "9da3506ee70271cc",
+      "chars": 97
+    },
+    "en2.u5.qa.007": {
+      "src": "/audio/en2/u5/en2.u5.qa.007.mp3",
+      "durationMs": 2756,
+      "hash": "f462b2e73ddc466a",
+      "chars": 43
+    },
+    "en2.u5.qa.007.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.007.alt.0.mp3",
+      "durationMs": 4290,
+      "hash": "ad25cd45ca98dfe2",
+      "chars": 60
+    },
+    "en2.u5.qa.007.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.007.reply.0.mp3",
+      "durationMs": 4237,
+      "hash": "49b013de668d05a6",
+      "chars": 78
+    },
+    "en2.u5.qa.007.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.007.ans.0.mp3",
+      "durationMs": 7672,
+      "hash": "2d420abe6a884ee2",
+      "chars": 129
+    },
+    "en2.u5.qa.007.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.007.ans.1.mp3",
+      "durationMs": 3853,
+      "hash": "2900f62220627a53",
+      "chars": 73
+    },
+    "en2.u5.qa.007.ans.2": {
+      "src": "/audio/en2/u5/en2.u5.qa.007.ans.2.mp3",
+      "durationMs": 5825,
+      "hash": "da0005f8ca5aaf55",
+      "chars": 106
+    },
+    "en2.u5.qa.008": {
+      "src": "/audio/en2/u5/en2.u5.qa.008.mp3",
+      "durationMs": 1821,
+      "hash": "7e3a3cdf45805b95",
+      "chars": 22
+    },
+    "en2.u5.qa.008.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.008.alt.0.mp3",
+      "durationMs": 3240,
+      "hash": "77ce879c83a99301",
+      "chars": 48
+    },
+    "en2.u5.qa.008.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.008.reply.0.mp3",
+      "durationMs": 2937,
+      "hash": "95d764d2ec792763",
+      "chars": 59
+    },
+    "en2.u5.qa.008.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.008.ans.0.mp3",
+      "durationMs": 6873,
+      "hash": "1801b755f0ed7362",
+      "chars": 128
+    },
+    "en2.u5.qa.008.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.008.ans.1.mp3",
+      "durationMs": 4990,
+      "hash": "143f95f54ea132c3",
+      "chars": 99
+    },
+    "en2.u5.qa.009": {
+      "src": "/audio/en2/u5/en2.u5.qa.009.mp3",
+      "durationMs": 3417,
+      "hash": "1f528acb94d5a8ee",
+      "chars": 44
+    },
+    "en2.u5.qa.009.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.009.alt.0.mp3",
+      "durationMs": 3229,
+      "hash": "aec9f2e132bbc5ea",
+      "chars": 47
+    },
+    "en2.u5.qa.009.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.009.reply.0.mp3",
+      "durationMs": 2669,
+      "hash": "b0b6c79937bd69e8",
+      "chars": 58
+    },
+    "en2.u5.qa.009.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.009.ans.0.mp3",
+      "durationMs": 8053,
+      "hash": "1cc0cb0504c7a3c5",
+      "chars": 157
+    },
+    "en2.u5.qa.009.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.009.ans.1.mp3",
+      "durationMs": 3382,
+      "hash": "a650f8ede3f34f11",
+      "chars": 71
+    },
+    "en2.u5.qa.010": {
+      "src": "/audio/en2/u5/en2.u5.qa.010.mp3",
+      "durationMs": 2672,
+      "hash": "4ea36114d08acbd7",
+      "chars": 43
+    },
+    "en2.u5.qa.010.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.010.alt.0.mp3",
+      "durationMs": 3197,
+      "hash": "87fcbf3b878f8cfb",
+      "chars": 51
+    },
+    "en2.u5.qa.010.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.010.reply.0.mp3",
+      "durationMs": 3601,
+      "hash": "31f5d13afdacb97a",
+      "chars": 70
+    },
+    "en2.u5.qa.010.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.010.ans.0.mp3",
+      "durationMs": 4682,
+      "hash": "64484f4e99b510ed",
+      "chars": 96
+    },
+    "en2.u5.qa.010.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.010.ans.1.mp3",
+      "durationMs": 5302,
+      "hash": "2e1f0b1f52a2287d",
+      "chars": 97
+    },
+    "en2.u5.qa.011": {
+      "src": "/audio/en2/u5/en2.u5.qa.011.mp3",
+      "durationMs": 4801,
+      "hash": "0193f6435c992168",
+      "chars": 62
+    },
+    "en2.u5.qa.011.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.011.alt.0.mp3",
+      "durationMs": 4870,
+      "hash": "323af3103474a273",
+      "chars": 65
+    },
+    "en2.u5.qa.011.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.011.reply.0.mp3",
+      "durationMs": 3548,
+      "hash": "15711d6f1ab5f662",
+      "chars": 68
+    },
+    "en2.u5.qa.011.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.011.ans.0.mp3",
+      "durationMs": 5792,
+      "hash": "d70e869a53cf4de8",
+      "chars": 100
+    },
+    "en2.u5.qa.011.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.011.ans.1.mp3",
+      "durationMs": 5405,
+      "hash": "e469d17b171c022b",
+      "chars": 106
+    },
+    "en2.u5.qa.012": {
+      "src": "/audio/en2/u5/en2.u5.qa.012.mp3",
+      "durationMs": 4125,
+      "hash": "cde99019bcbc9128",
+      "chars": 64
+    },
+    "en2.u5.qa.012.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.012.alt.0.mp3",
+      "durationMs": 3908,
+      "hash": "c5e121431983d803",
+      "chars": 63
+    },
+    "en2.u5.qa.012.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.012.reply.0.mp3",
+      "durationMs": 5710,
+      "hash": "efaf1dccefbb2fcc",
+      "chars": 112
+    },
+    "en2.u5.qa.012.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.012.ans.0.mp3",
+      "durationMs": 8573,
+      "hash": "3fc68be09366c8ba",
+      "chars": 159
+    },
+    "en2.u5.qa.012.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.012.ans.1.mp3",
+      "durationMs": 5533,
+      "hash": "a87df723338069c3",
+      "chars": 107
+    },
+    "en2.u5.ex.001.item.0": {
+      "src": "/audio/en2/u5/en2.u5.ex.001.item.0.mp3",
+      "durationMs": 3011,
+      "hash": "20a7974991556376",
+      "chars": 51
+    },
+    "en2.u5.ex.001.item.1": {
+      "src": "/audio/en2/u5/en2.u5.ex.001.item.1.mp3",
+      "durationMs": 3787,
+      "hash": "671a2a399570296d",
+      "chars": 64
+    },
+    "en2.u5.ex.001.item.2": {
+      "src": "/audio/en2/u5/en2.u5.ex.001.item.2.mp3",
+      "durationMs": 4790,
+      "hash": "0bb6c81e3d9e2f96",
+      "chars": 87
+    },
+    "en2.u5.ex.001.item.3": {
+      "src": "/audio/en2/u5/en2.u5.ex.001.item.3.mp3",
+      "durationMs": 2543,
+      "hash": "4c1b5761568bca14",
+      "chars": 38
+    },
+    "en2.u5.ex.001.item.4": {
+      "src": "/audio/en2/u5/en2.u5.ex.001.item.4.mp3",
+      "durationMs": 4319,
+      "hash": "f97ba2ccd55ced29",
+      "chars": 72
+    },
+    "en2.u5.ex.002.item.0": {
+      "src": "/audio/en2/u5/en2.u5.ex.002.item.0.mp3",
+      "durationMs": 3163,
+      "hash": "197e33a45e360c89",
+      "chars": 53
+    },
+    "en2.u5.ex.002.item.1": {
+      "src": "/audio/en2/u5/en2.u5.ex.002.item.1.mp3",
+      "durationMs": 2902,
+      "hash": "c3dcd0916ae88cb2",
+      "chars": 54
+    },
+    "en2.u5.ex.002.item.2": {
+      "src": "/audio/en2/u5/en2.u5.ex.002.item.2.mp3",
+      "durationMs": 2543,
+      "hash": "4c1b5761568bca14",
+      "chars": 38
+    },
+    "en2.u5.ex.002.item.3": {
+      "src": "/audio/en2/u5/en2.u5.ex.002.item.3.mp3",
+      "durationMs": 2992,
+      "hash": "efd7418bfb945824",
+      "chars": 50
+    },
+    "en2.u5.ls.001": {
+      "src": "/audio/en2/u5/en2.u5.ls.001.mp3",
+      "durationMs": 28313,
+      "hash": "56735f9c69965665",
+      "chars": 487
+    },
+    "en2.u5.ls.001.q.0": {
+      "src": "/audio/en2/u5/en2.u5.ls.001.q.0.mp3",
+      "durationMs": 2082,
+      "hash": "86fe65c9022801bb",
+      "chars": 37
+    },
+    "en2.u5.ls.001.q.1": {
+      "src": "/audio/en2/u5/en2.u5.ls.001.q.1.mp3",
+      "durationMs": 2807,
+      "hash": "d0c5e772ee97f64e",
+      "chars": 51
+    },
+    "en2.u5.ls.001.q.2": {
+      "src": "/audio/en2/u5/en2.u5.ls.001.q.2.mp3",
+      "durationMs": 1983,
+      "hash": "6566bae23039f092",
+      "chars": 35
+    },
+    "en2.u5.ct.001.pair.0": {
+      "src": "/audio/en2/u5/en2.u5.ct.001.pair.0.mp3",
+      "durationMs": 554,
+      "hash": "d3b38883328f6994",
+      "chars": 7
+    },
+    "en2.u5.ct.001.pair.1": {
+      "src": "/audio/en2/u5/en2.u5.ct.001.pair.1.mp3",
+      "durationMs": 542,
+      "hash": "bdc24dbe1e4bacd2",
+      "chars": 6
+    },
+    "en2.u5.ct.001.ex.0": {
+      "src": "/audio/en2/u5/en2.u5.ct.001.ex.0.mp3",
+      "durationMs": 2673,
+      "hash": "bd1a337888fc25d2",
+      "chars": 43
+    },
+    "en2.u5.ct.001.ex.1": {
+      "src": "/audio/en2/u5/en2.u5.ct.001.ex.1.mp3",
+      "durationMs": 2781,
+      "hash": "4006268ed30c4668",
+      "chars": 48
+    },
+    "en2.u5.ct.002.pair.0": {
+      "src": "/audio/en2/u5/en2.u5.ct.002.pair.0.mp3",
+      "durationMs": 558,
+      "hash": "08b69763b36b4089",
+      "chars": 4
+    },
+    "en2.u5.ct.002.pair.1": {
+      "src": "/audio/en2/u5/en2.u5.ct.002.pair.1.mp3",
+      "durationMs": 508,
+      "hash": "853496523c51c457",
+      "chars": 3
+    },
+    "en2.u5.ct.002.ex.0": {
+      "src": "/audio/en2/u5/en2.u5.ct.002.ex.0.mp3",
+      "durationMs": 2910,
+      "hash": "fc9d05fc5acea53c",
+      "chars": 50
+    },
+    "en2.u5.ct.002.ex.1": {
+      "src": "/audio/en2/u5/en2.u5.ct.002.ex.1.mp3",
+      "durationMs": 1770,
+      "hash": "0bc4331d4932cf3e",
+      "chars": 33
+    },
+    "en2.u5.p.027": {
+      "src": "/audio/en2/u5/en2.u5.p.027.mp3",
+      "durationMs": 2310,
+      "hash": "9d3589b4193e1434",
+      "chars": 42
+    },
+    "en2.u5.p.028": {
+      "src": "/audio/en2/u5/en2.u5.p.028.mp3",
+      "durationMs": 3733,
+      "hash": "4a983b0958320642",
+      "chars": 61
+    },
+    "en2.u5.p.029": {
+      "src": "/audio/en2/u5/en2.u5.p.029.mp3",
+      "durationMs": 2222,
+      "hash": "2f06cdcf57816892",
+      "chars": 37
+    },
+    "en2.u5.p.030": {
+      "src": "/audio/en2/u5/en2.u5.p.030.mp3",
+      "durationMs": 2975,
+      "hash": "603aa9e988a5e4d4",
+      "chars": 61
+    },
+    "en2.u5.p.031": {
+      "src": "/audio/en2/u5/en2.u5.p.031.mp3",
+      "durationMs": 2765,
+      "hash": "6f04aa26aa320c10",
+      "chars": 50
+    },
+    "en2.u5.pr.001": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.mp3",
+      "durationMs": 3077,
+      "hash": "6a32eba4c58545fc",
+      "chars": 56
+    },
+    "en2.u5.pr.001.model": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.model.mp3",
+      "durationMs": 33724,
+      "hash": "08aae42e03bb883e",
+      "chars": 611
+    },
+    "en2.u5.pr.001.model.slow": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.model.slow.mp3",
+      "durationMs": 47128,
+      "hash": "c8bd6e34c13a4ac3",
+      "chars": 611
+    },
+    "en2.u5.pr.001.modelvar.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.modelvar.0.mp3",
+      "durationMs": 25180,
+      "hash": "89e1f8cd716c187c",
+      "chars": 449
+    },
+    "en2.u5.pr.001.modelvar.0.s.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.modelvar.0.s.0.mp3",
+      "durationMs": 4322,
+      "hash": "9470318525b2421b",
+      "chars": 88
+    },
+    "en2.u5.pr.001.modelvar.0.s.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.modelvar.0.s.1.mp3",
+      "durationMs": 3338,
+      "hash": "a7849169b7e23f01",
+      "chars": 64
+    },
+    "en2.u5.pr.001.modelvar.0.s.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.modelvar.0.s.2.mp3",
+      "durationMs": 3728,
+      "hash": "4cd0e4ba3f93f109",
+      "chars": 73
+    },
+    "en2.u5.pr.001.modelvar.0.s.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.modelvar.0.s.3.mp3",
+      "durationMs": 2871,
+      "hash": "1f797d6573fd518c",
+      "chars": 52
+    },
+    "en2.u5.pr.001.modelvar.0.s.4": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.modelvar.0.s.4.mp3",
+      "durationMs": 9722,
+      "hash": "8640348a6a397c84",
+      "chars": 168
+    },
+    "en2.u5.pr.001.modelvar.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.modelvar.1.mp3",
+      "durationMs": 22171,
+      "hash": "b0f7a6ea79247e46",
+      "chars": 382
+    },
+    "en2.u5.pr.001.modelvar.1.s.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.modelvar.1.s.0.mp3",
+      "durationMs": 1378,
+      "hash": "dfdb2a85f021c573",
+      "chars": 22
+    },
+    "en2.u5.pr.001.modelvar.1.s.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.modelvar.1.s.1.mp3",
+      "durationMs": 6138,
+      "hash": "ea666171080ee7df",
+      "chars": 105
+    },
+    "en2.u5.pr.001.modelvar.1.s.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.modelvar.1.s.2.mp3",
+      "durationMs": 3922,
+      "hash": "5fde8938c883bd2f",
+      "chars": 75
+    },
+    "en2.u5.pr.001.modelvar.1.s.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.modelvar.1.s.3.mp3",
+      "durationMs": 2379,
+      "hash": "81ee51509388ee5e",
+      "chars": 43
+    },
+    "en2.u5.pr.001.modelvar.1.s.4": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.modelvar.1.s.4.mp3",
+      "durationMs": 7153,
+      "hash": "b83fea157d7534d5",
+      "chars": 133
+    },
+    "en2.u5.pr.001.step.0.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.step.0.q.mp3",
+      "durationMs": 2194,
+      "hash": "45cd6969007591c6",
+      "chars": 33
+    },
+    "en2.u5.pr.001.step.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.step.0.mp3",
+      "durationMs": 2329,
+      "hash": "6d3da79c17541b68",
+      "chars": 42
+    },
+    "en2.u5.pr.001.step.1.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.step.1.q.mp3",
+      "durationMs": 1744,
+      "hash": "c9ebc588f45e18cb",
+      "chars": 29
+    },
+    "en2.u5.pr.001.step.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.step.1.mp3",
+      "durationMs": 5650,
+      "hash": "37b93fc7617b7d51",
+      "chars": 99
+    },
+    "en2.u5.pr.001.step.2.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.step.2.q.mp3",
+      "durationMs": 3134,
+      "hash": "a87bdb5542d5490d",
+      "chars": 61
+    },
+    "en2.u5.pr.001.step.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.step.2.mp3",
+      "durationMs": 3476,
+      "hash": "c5508f7b627bb18c",
+      "chars": 72
+    },
+    "en2.u5.pr.001.step.3.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.step.3.q.mp3",
+      "durationMs": 2751,
+      "hash": "88849f1b7e6cf83e",
+      "chars": 50
+    },
+    "en2.u5.pr.001.step.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.step.3.mp3",
+      "durationMs": 8076,
+      "hash": "963c40a11d918a23",
+      "chars": 165
+    },
+    "en2.u5.pr.001.step.4.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.step.4.q.mp3",
+      "durationMs": 1701,
+      "hash": "7bc8f834fb7d6995",
+      "chars": 28
+    },
+    "en2.u5.pr.001.step.4": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.step.4.mp3",
+      "durationMs": 7671,
+      "hash": "5b4f62d234a07f3c",
+      "chars": 137
+    },
+    "en2.u5.pr.001.step.5.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.step.5.q.mp3",
+      "durationMs": 1735,
+      "hash": "6e974ee48876d717",
+      "chars": 29
+    },
+    "en2.u5.pr.001.step.5": {
+      "src": "/audio/en2/u5/en2.u5.pr.001.step.5.mp3",
+      "durationMs": 5022,
+      "hash": "ea79a3d70be01fef",
+      "chars": 91
+    },
+    "en2.u5.pr.002": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.mp3",
+      "durationMs": 4289,
+      "hash": "63409b90d0ea4f01",
+      "chars": 90
+    },
+    "en2.u5.pr.002.model": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.model.mp3",
+      "durationMs": 46353,
+      "hash": "c0a634e45009fadc",
+      "chars": 832
+    },
+    "en2.u5.pr.002.model.slow": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.model.slow.mp3",
+      "durationMs": 64683,
+      "hash": "b6e30b40904f4a1c",
+      "chars": 832
+    },
+    "en2.u5.pr.002.modelvar.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.modelvar.0.mp3",
+      "durationMs": 27425,
+      "hash": "fbd86ef825e53bdb",
+      "chars": 498
+    },
+    "en2.u5.pr.002.modelvar.0.s.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.modelvar.0.s.0.mp3",
+      "durationMs": 3899,
+      "hash": "ec75e6b6bfa9cfe8",
+      "chars": 80
+    },
+    "en2.u5.pr.002.modelvar.0.s.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.modelvar.0.s.1.mp3",
+      "durationMs": 6055,
+      "hash": "8ea483c687f88df2",
+      "chars": 113
+    },
+    "en2.u5.pr.002.modelvar.0.s.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.modelvar.0.s.2.mp3",
+      "durationMs": 7429,
+      "hash": "df356396c6138f11",
+      "chars": 132
+    },
+    "en2.u5.pr.002.modelvar.0.s.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.modelvar.0.s.3.mp3",
+      "durationMs": 2773,
+      "hash": "193659cf6f19e70f",
+      "chars": 51
+    },
+    "en2.u5.pr.002.modelvar.0.s.4": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.modelvar.0.s.4.mp3",
+      "durationMs": 6069,
+      "hash": "5029f078f6cb0a48",
+      "chars": 118
+    },
+    "en2.u5.pr.002.step.0.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.step.0.q.mp3",
+      "durationMs": 3086,
+      "hash": "6fd11e96d968b696",
+      "chars": 58
+    },
+    "en2.u5.pr.002.step.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.step.0.mp3",
+      "durationMs": 5638,
+      "hash": "8133082490999ebc",
+      "chars": 111
+    },
+    "en2.u5.pr.002.step.1.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.step.1.q.mp3",
+      "durationMs": 1618,
+      "hash": "e724ac50563d1fb4",
+      "chars": 24
+    },
+    "en2.u5.pr.002.step.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.step.1.mp3",
+      "durationMs": 5303,
+      "hash": "80a53220dfbbc6af",
+      "chars": 88
+    },
+    "en2.u5.pr.002.step.2.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.step.2.q.mp3",
+      "durationMs": 2826,
+      "hash": "99493e0adf42474a",
+      "chars": 49
+    },
+    "en2.u5.pr.002.step.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.step.2.mp3",
+      "durationMs": 10804,
+      "hash": "b100c517b0e329d1",
+      "chars": 203
+    },
+    "en2.u5.pr.002.step.3.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.step.3.q.mp3",
+      "durationMs": 3664,
+      "hash": "37c95d6b124e3879",
+      "chars": 63
+    },
+    "en2.u5.pr.002.step.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.step.3.mp3",
+      "durationMs": 6363,
+      "hash": "99c1ab50cb9bc2c3",
+      "chars": 118
+    },
+    "en2.u5.pr.002.step.4.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.step.4.q.mp3",
+      "durationMs": 1249,
+      "hash": "ca643241b39bee2d",
+      "chars": 16
+    },
+    "en2.u5.pr.002.step.4": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.step.4.mp3",
+      "durationMs": 6948,
+      "hash": "d918cd7e107d8acf",
+      "chars": 132
+    },
+    "en2.u5.pr.002.step.5.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.step.5.q.mp3",
+      "durationMs": 1548,
+      "hash": "bfca65f942a454c9",
+      "chars": 22
+    },
+    "en2.u5.pr.002.step.5": {
+      "src": "/audio/en2/u5/en2.u5.pr.002.step.5.mp3",
+      "durationMs": 9796,
+      "hash": "6c86ebffa55784a9",
+      "chars": 175
+    },
+    "en2.u5.pr.003": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.mp3",
+      "durationMs": 3189,
+      "hash": "c0525632d31bde18",
+      "chars": 58
+    },
+    "en2.u5.pr.003.model": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.model.mp3",
+      "durationMs": 30191,
+      "hash": "f2a9debcf4636ef7",
+      "chars": 531
+    },
+    "en2.u5.pr.003.model.slow": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.model.slow.mp3",
+      "durationMs": 42674,
+      "hash": "89972a7dc449e0d1",
+      "chars": 531
+    },
+    "en2.u5.pr.003.modelvar.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.modelvar.0.mp3",
+      "durationMs": 21524,
+      "hash": "543b24a3177ef682",
+      "chars": 379
+    },
+    "en2.u5.pr.003.modelvar.0.s.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.modelvar.0.s.0.mp3",
+      "durationMs": 960,
+      "hash": "cca01f19bac444b0",
+      "chars": 15
+    },
+    "en2.u5.pr.003.modelvar.0.s.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.modelvar.0.s.1.mp3",
+      "durationMs": 6495,
+      "hash": "fc24f5e2b2994a3e",
+      "chars": 127
+    },
+    "en2.u5.pr.003.modelvar.0.s.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.modelvar.0.s.2.mp3",
+      "durationMs": 3892,
+      "hash": "52bbc9fbbed30656",
+      "chars": 70
+    },
+    "en2.u5.pr.003.modelvar.0.s.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.modelvar.0.s.3.mp3",
+      "durationMs": 4721,
+      "hash": "3132c437d9b0ed83",
+      "chars": 83
+    },
+    "en2.u5.pr.003.modelvar.0.s.4": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.modelvar.0.s.4.mp3",
+      "durationMs": 4256,
+      "hash": "8901e2a89cf615e6",
+      "chars": 80
+    },
+    "en2.u5.pr.003.step.0.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.step.0.q.mp3",
+      "durationMs": 1856,
+      "hash": "a24ac92d545ddcd4",
+      "chars": 29
+    },
+    "en2.u5.pr.003.step.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.step.0.mp3",
+      "durationMs": 7333,
+      "hash": "8d19f75e7f61fad1",
+      "chars": 138
+    },
+    "en2.u5.pr.003.step.1.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.step.1.q.mp3",
+      "durationMs": 1695,
+      "hash": "826b8a4f531f112b",
+      "chars": 28
+    },
+    "en2.u5.pr.003.step.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.step.1.mp3",
+      "durationMs": 7470,
+      "hash": "72b59e411e5167fd",
+      "chars": 132
+    },
+    "en2.u5.pr.003.step.2.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.step.2.q.mp3",
+      "durationMs": 1751,
+      "hash": "f184f9cf32e293db",
+      "chars": 29
+    },
+    "en2.u5.pr.003.step.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.step.2.mp3",
+      "durationMs": 8029,
+      "hash": "1ba6e161e89d80d3",
+      "chars": 139
+    },
+    "en2.u5.pr.003.step.3.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.step.3.q.mp3",
+      "durationMs": 1714,
+      "hash": "db23d9c289b9a911",
+      "chars": 28
+    },
+    "en2.u5.pr.003.step.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.003.step.3.mp3",
+      "durationMs": 6458,
+      "hash": "adb724135d2455b0",
+      "chars": 119
+    },
+    "en2.u5.pr.004": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.mp3",
+      "durationMs": 4602,
+      "hash": "017d805869168a86",
+      "chars": 88
+    },
+    "en2.u5.pr.004.model": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.model.mp3",
+      "durationMs": 29207,
+      "hash": "46b8f80801c840fc",
+      "chars": 528
+    },
+    "en2.u5.pr.004.model.slow": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.model.slow.mp3",
+      "durationMs": 40949,
+      "hash": "7f3fafeca34397b5",
+      "chars": 528
+    },
+    "en2.u5.pr.004.modelvar.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.modelvar.0.mp3",
+      "durationMs": 20106,
+      "hash": "03b0c4e6300348f9",
+      "chars": 370
+    },
+    "en2.u5.pr.004.modelvar.0.s.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.modelvar.0.s.0.mp3",
+      "durationMs": 5163,
+      "hash": "8088e9eb38db3f33",
+      "chars": 88
+    },
+    "en2.u5.pr.004.modelvar.0.s.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.modelvar.0.s.1.mp3",
+      "durationMs": 6412,
+      "hash": "a05c13c02c5da941",
+      "chars": 128
+    },
+    "en2.u5.pr.004.modelvar.0.s.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.modelvar.0.s.2.mp3",
+      "durationMs": 1891,
+      "hash": "9bda67f7e8744367",
+      "chars": 31
+    },
+    "en2.u5.pr.004.modelvar.0.s.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.modelvar.0.s.3.mp3",
+      "durationMs": 5741,
+      "hash": "39a84604267ae604",
+      "chars": 120
+    },
+    "en2.u5.pr.004.step.0.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.step.0.q.mp3",
+      "durationMs": 1718,
+      "hash": "8cbeb5bc28431628",
+      "chars": 28
+    },
+    "en2.u5.pr.004.step.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.step.0.mp3",
+      "durationMs": 4427,
+      "hash": "cc96578670fa3de1",
+      "chars": 83
+    },
+    "en2.u5.pr.004.step.1.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.step.1.q.mp3",
+      "durationMs": 2102,
+      "hash": "34e1c593903faf25",
+      "chars": 36
+    },
+    "en2.u5.pr.004.step.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.step.1.mp3",
+      "durationMs": 4590,
+      "hash": "f54efb25d6010475",
+      "chars": 90
+    },
+    "en2.u5.pr.004.step.2.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.step.2.q.mp3",
+      "durationMs": 1691,
+      "hash": "4d8b0ccf9577386c",
+      "chars": 29
+    },
+    "en2.u5.pr.004.step.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.step.2.mp3",
+      "durationMs": 6433,
+      "hash": "571273d0800e6fb4",
+      "chars": 126
+    },
+    "en2.u5.pr.004.step.3.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.step.3.q.mp3",
+      "durationMs": 1523,
+      "hash": "7ce12f977f3525b4",
+      "chars": 20
+    },
+    "en2.u5.pr.004.step.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.step.3.mp3",
+      "durationMs": 2661,
+      "hash": "5c39cf7a24374f8d",
+      "chars": 46
+    },
+    "en2.u5.pr.004.step.4.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.step.4.q.mp3",
+      "durationMs": 1225,
+      "hash": "28bf9ddfaaa47744",
+      "chars": 18
+    },
+    "en2.u5.pr.004.step.4": {
+      "src": "/audio/en2/u5/en2.u5.pr.004.step.4.mp3",
+      "durationMs": 5595,
+      "hash": "cb098901673f8f9a",
+      "chars": 104
+    },
+    "en2.u5.pr.005": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.mp3",
+      "durationMs": 4531,
+      "hash": "cdb94b85f1fea441",
+      "chars": 91
+    },
+    "en2.u5.pr.005.model": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.model.mp3",
+      "durationMs": 32979,
+      "hash": "1d932c90b1cce7b8",
+      "chars": 589
+    },
+    "en2.u5.pr.005.model.slow": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.model.slow.mp3",
+      "durationMs": 46637,
+      "hash": "7556701b7cb868c9",
+      "chars": 589
+    },
+    "en2.u5.pr.005.modelvar.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.modelvar.0.mp3",
+      "durationMs": 15783,
+      "hash": "8754f21b38b84752",
+      "chars": 293
+    },
+    "en2.u5.pr.005.modelvar.0.s.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.modelvar.0.s.0.mp3",
+      "durationMs": 4105,
+      "hash": "2d2438bdf6372708",
+      "chars": 80
+    },
+    "en2.u5.pr.005.modelvar.0.s.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.modelvar.0.s.1.mp3",
+      "durationMs": 4682,
+      "hash": "f915dafba941a19c",
+      "chars": 89
+    },
+    "en2.u5.pr.005.modelvar.0.s.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.modelvar.0.s.2.mp3",
+      "durationMs": 6396,
+      "hash": "082e4f94a69a6e4f",
+      "chars": 122
+    },
+    "en2.u5.pr.005.step.0.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.step.0.q.mp3",
+      "durationMs": 1395,
+      "hash": "b29bfcaaaa91da65",
+      "chars": 21
+    },
+    "en2.u5.pr.005.step.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.step.0.mp3",
+      "durationMs": 2933,
+      "hash": "752b80e94944df48",
+      "chars": 56
+    },
+    "en2.u5.pr.005.step.1.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.step.1.q.mp3",
+      "durationMs": 1196,
+      "hash": "f6c99d362ddbb9be",
+      "chars": 17
+    },
+    "en2.u5.pr.005.step.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.step.1.mp3",
+      "durationMs": 6209,
+      "hash": "41252c4dc1c8258a",
+      "chars": 119
+    },
+    "en2.u5.pr.005.step.2.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.step.2.q.mp3",
+      "durationMs": 2095,
+      "hash": "244f37d982baf89b",
+      "chars": 38
+    },
+    "en2.u5.pr.005.step.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.step.2.mp3",
+      "durationMs": 5655,
+      "hash": "20bf6f1eb39eb9fd",
+      "chars": 107
+    },
+    "en2.u5.pr.005.step.3.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.step.3.q.mp3",
+      "durationMs": 1251,
+      "hash": "83d9a92744bc7c45",
+      "chars": 16
+    },
+    "en2.u5.pr.005.step.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.step.3.mp3",
+      "durationMs": 4222,
+      "hash": "44d0cae3e3095622",
+      "chars": 81
+    },
+    "en2.u5.pr.005.step.4.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.step.4.q.mp3",
+      "durationMs": 2084,
+      "hash": "02e77b995800cadc",
+      "chars": 35
+    },
+    "en2.u5.pr.005.step.4": {
+      "src": "/audio/en2/u5/en2.u5.pr.005.step.4.mp3",
+      "durationMs": 9931,
+      "hash": "c1b9ac621d82d9d6",
+      "chars": 177
+    },
+    "en2.u5.rd.002.sec.0.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.0.b.0.mp3",
+      "durationMs": 20894,
+      "hash": "95fcd2a277f6bbf6",
+      "chars": 348
+    },
+    "en2.u5.rd.002.sec.0.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.0.b.1.mp3",
+      "durationMs": 5322,
+      "hash": "ffce20990ef08e39",
+      "chars": 85
+    },
+    "en2.u5.rd.002.sec.1.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.1.b.0.mp3",
+      "durationMs": 11037,
+      "hash": "da1d7f9509eeb1da",
+      "chars": 171
+    },
+    "en2.u5.rd.002.sec.1.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.1.b.1.mp3",
+      "durationMs": 19738,
+      "hash": "58597d69e9618917",
+      "chars": 232
+    },
+    "en2.u5.rd.002.sec.2.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.2.b.0.mp3",
+      "durationMs": 20879,
+      "hash": "c2441d2fbb908090",
+      "chars": 277
+    },
+    "en2.u5.rd.002.sec.2.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.2.b.1.mp3",
+      "durationMs": 20009,
+      "hash": "7e257417d0064ed2",
+      "chars": 277
+    },
+    "en2.u5.rd.002.sec.2.b.2": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.2.b.2.mp3",
+      "durationMs": 4881,
+      "hash": "e79c11ec93be7fee",
+      "chars": 87
+    },
+    "en2.u5.rd.002.sec.3.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.3.b.0.mp3",
+      "durationMs": 6218,
+      "hash": "ca4f973a432bb5f7",
+      "chars": 106
+    },
+    "en2.u5.rd.002.sec.3.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.3.b.1.mp3",
+      "durationMs": 18617,
+      "hash": "9dddcf4947423093",
+      "chars": 144
+    },
+    "en2.u5.rd.002.sec.3.b.2": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.3.b.2.mp3",
+      "durationMs": 10838,
+      "hash": "8c2107525661c495",
+      "chars": 115
+    },
+    "en2.u5.rd.002.sec.4.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.4.b.0.mp3",
+      "durationMs": 10724,
+      "hash": "8c4cfc2e0f5b5262",
+      "chars": 154
+    },
+    "en2.u5.rd.002.sec.4.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.4.b.1.mp3",
+      "durationMs": 15646,
+      "hash": "3d6d8555eda1ff57",
+      "chars": 241
+    },
+    "en2.u5.rd.002.sec.5.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.002.sec.5.b.0.mp3",
+      "durationMs": 13261,
+      "hash": "f8dc17902b2dceee",
+      "chars": 212
+    },
+    "en2.u5.p.021": {
+      "src": "/audio/en2/u5/en2.u5.p.021.mp3",
+      "durationMs": 5161,
+      "hash": "f3ebdc632e88a8d2",
+      "chars": 86
+    },
+    "en2.u5.p.022": {
+      "src": "/audio/en2/u5/en2.u5.p.022.mp3",
+      "durationMs": 4649,
+      "hash": "aad70a0ace737679",
+      "chars": 75
+    },
+    "en2.u5.lx.019": {
+      "src": "/audio/en2/u5/en2.u5.lx.019.mp3",
+      "durationMs": 633,
+      "hash": "d6922ad81d185e92",
+      "chars": 8
+    },
+    "en2.u5.lx.020": {
+      "src": "/audio/en2/u5/en2.u5.lx.020.mp3",
+      "durationMs": 920,
+      "hash": "44974179393dc412",
+      "chars": 10
+    },
+    "en2.u5.qa.013": {
+      "src": "/audio/en2/u5/en2.u5.qa.013.mp3",
+      "durationMs": 3207,
+      "hash": "a99273fb7d122c2e",
+      "chars": 55
+    },
+    "en2.u5.qa.013.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.013.alt.0.mp3",
+      "durationMs": 3293,
+      "hash": "3a34f2258aa9b162",
+      "chars": 50
+    },
+    "en2.u5.qa.013.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.013.reply.0.mp3",
+      "durationMs": 3625,
+      "hash": "92acf330d83c5103",
+      "chars": 72
+    },
+    "en2.u5.qa.013.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.013.ans.0.mp3",
+      "durationMs": 6473,
+      "hash": "5f0fbee7f93c7130",
+      "chars": 128
+    },
+    "en2.u5.qa.013.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.013.ans.1.mp3",
+      "durationMs": 4447,
+      "hash": "d8b1189a8d20b850",
+      "chars": 89
+    },
+    "en2.u5.qa.013.ans.2": {
+      "src": "/audio/en2/u5/en2.u5.qa.013.ans.2.mp3",
+      "durationMs": 6168,
+      "hash": "79f3f6314b0e4628",
+      "chars": 114
+    },
+    "en2.u5.qa.014": {
+      "src": "/audio/en2/u5/en2.u5.qa.014.mp3",
+      "durationMs": 1696,
+      "hash": "619c70cf01d09b9e",
+      "chars": 24
+    },
+    "en2.u5.qa.014.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.014.alt.0.mp3",
+      "durationMs": 2965,
+      "hash": "d8668c306602691b",
+      "chars": 45
+    },
+    "en2.u5.qa.014.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.014.reply.0.mp3",
+      "durationMs": 4632,
+      "hash": "390b67e59bc1a8e0",
+      "chars": 71
+    },
+    "en2.u5.qa.014.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.014.ans.0.mp3",
+      "durationMs": 6306,
+      "hash": "ea16910adec001b2",
+      "chars": 100
+    },
+    "en2.u5.qa.014.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.014.ans.1.mp3",
+      "durationMs": 4486,
+      "hash": "a4ab03f4dc76e984",
+      "chars": 91
+    },
+    "en2.u5.pr.006": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.mp3",
+      "durationMs": 4302,
+      "hash": "3bcbffce59adaf70",
+      "chars": 74
+    },
+    "en2.u5.pr.006.model": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.model.mp3",
+      "durationMs": 19226,
+      "hash": "87cb2aeb70e0311e",
+      "chars": 339
+    },
+    "en2.u5.pr.006.model.slow": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.model.slow.mp3",
+      "durationMs": 26984,
+      "hash": "2b196becd9c39533",
+      "chars": 339
+    },
+    "en2.u5.pr.006.step.0.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.step.0.q.mp3",
+      "durationMs": 1408,
+      "hash": "75e2c5651a916546",
+      "chars": 17
+    },
+    "en2.u5.pr.006.step.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.step.0.mp3",
+      "durationMs": 4136,
+      "hash": "351870edc778763d",
+      "chars": 77
+    },
+    "en2.u5.pr.006.step.1.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.step.1.q.mp3",
+      "durationMs": 1474,
+      "hash": "3994da94f699c98c",
+      "chars": 18
+    },
+    "en2.u5.pr.006.step.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.step.1.mp3",
+      "durationMs": 2506,
+      "hash": "cdf88d9d7feeefc7",
+      "chars": 45
+    },
+    "en2.u5.pr.006.step.2.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.step.2.q.mp3",
+      "durationMs": 1379,
+      "hash": "0ee8b25eca9f0154",
+      "chars": 17
+    },
+    "en2.u5.pr.006.step.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.step.2.mp3",
+      "durationMs": 3070,
+      "hash": "4f1b4f2ded953117",
+      "chars": 58
+    },
+    "en2.u5.pr.006.step.3.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.step.3.q.mp3",
+      "durationMs": 1374,
+      "hash": "edf3d6b1ec4b0ae0",
+      "chars": 18
+    },
+    "en2.u5.pr.006.step.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.step.3.mp3",
+      "durationMs": 2480,
+      "hash": "5f21738388c94c78",
+      "chars": 50
+    },
+    "en2.u5.pr.006.step.4.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.step.4.q.mp3",
+      "durationMs": 1397,
+      "hash": "910b0cd254a3027d",
+      "chars": 17
+    },
+    "en2.u5.pr.006.step.4": {
+      "src": "/audio/en2/u5/en2.u5.pr.006.step.4.mp3",
+      "durationMs": 3286,
+      "hash": "2ef06639fdaa3801",
+      "chars": 64
+    },
+    "en2.u5.rd.003.sec.0.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.0.b.0.mp3",
+      "durationMs": 18273,
+      "hash": "666f807b730f3043",
+      "chars": 291
+    },
+    "en2.u5.rd.003.sec.1.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.1.b.0.mp3",
+      "durationMs": 11596,
+      "hash": "ce0fcc4d93131f64",
+      "chars": 198
+    },
+    "en2.u5.rd.003.sec.1.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.1.b.1.mp3",
+      "durationMs": 9491,
+      "hash": "dc5a516fe0a27e0d",
+      "chars": 138
+    },
+    "en2.u5.rd.003.sec.1.b.2": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.1.b.2.mp3",
+      "durationMs": 5809,
+      "hash": "d32c934f7291a44a",
+      "chars": 99
+    },
+    "en2.u5.rd.003.sec.1.b.3": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.1.b.3.mp3",
+      "durationMs": 12298,
+      "hash": "d8414b272ace8ef9",
+      "chars": 188
+    },
+    "en2.u5.rd.003.sec.2.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.2.b.0.mp3",
+      "durationMs": 18978,
+      "hash": "061f1c2a655c8354",
+      "chars": 302
+    },
+    "en2.u5.rd.003.sec.2.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.2.b.1.mp3",
+      "durationMs": 14190,
+      "hash": "ee0d48cdbb75eefa",
+      "chars": 238
+    },
+    "en2.u5.rd.003.sec.3.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.3.b.0.mp3",
+      "durationMs": 12497,
+      "hash": "ce9df384f6c3aab1",
+      "chars": 197
+    },
+    "en2.u5.rd.003.sec.3.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.3.b.1.mp3",
+      "durationMs": 12441,
+      "hash": "3e6a5d61aa2e29b9",
+      "chars": 197
+    },
+    "en2.u5.rd.003.sec.4.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.4.b.0.mp3",
+      "durationMs": 16484,
+      "hash": "157011f0ccecf319",
+      "chars": 258
+    },
+    "en2.u5.rd.003.sec.4.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.4.b.1.mp3",
+      "durationMs": 9684,
+      "hash": "c953684279faa01a",
+      "chars": 153
+    },
+    "en2.u5.rd.003.sec.5.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.5.b.0.mp3",
+      "durationMs": 15367,
+      "hash": "db8dd826f6beced3",
+      "chars": 254
+    },
+    "en2.u5.rd.003.sec.5.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.003.sec.5.b.1.mp3",
+      "durationMs": 8950,
+      "hash": "4eab40baeeaffa3d",
+      "chars": 148
+    },
+    "en2.u5.p.023": {
+      "src": "/audio/en2/u5/en2.u5.p.023.mp3",
+      "durationMs": 4051,
+      "hash": "83bcdd5356cdb635",
+      "chars": 73
+    },
+    "en2.u5.p.024": {
+      "src": "/audio/en2/u5/en2.u5.p.024.mp3",
+      "durationMs": 4655,
+      "hash": "3d89752e0830dc34",
+      "chars": 74
+    },
+    "en2.u5.lx.021": {
+      "src": "/audio/en2/u5/en2.u5.lx.021.mp3",
+      "durationMs": 651,
+      "hash": "f7c937a187eff402",
+      "chars": 6
+    },
+    "en2.u5.lx.022": {
+      "src": "/audio/en2/u5/en2.u5.lx.022.mp3",
+      "durationMs": 1046,
+      "hash": "4fe3a38785b316cf",
+      "chars": 11
+    },
+    "en2.u5.qa.015": {
+      "src": "/audio/en2/u5/en2.u5.qa.015.mp3",
+      "durationMs": 1941,
+      "hash": "21b158ece14efdcd",
+      "chars": 31
+    },
+    "en2.u5.qa.015.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.015.alt.0.mp3",
+      "durationMs": 2711,
+      "hash": "688cfc3452a6ca91",
+      "chars": 36
+    },
+    "en2.u5.qa.015.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.015.reply.0.mp3",
+      "durationMs": 1998,
+      "hash": "6073127c98abdf89",
+      "chars": 32
+    },
+    "en2.u5.qa.015.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.015.ans.0.mp3",
+      "durationMs": 4618,
+      "hash": "fe29379e66a02b41",
+      "chars": 87
+    },
+    "en2.u5.qa.015.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.015.ans.1.mp3",
+      "durationMs": 5724,
+      "hash": "d556e6d025710774",
+      "chars": 110
+    },
+    "en2.u5.qa.016": {
+      "src": "/audio/en2/u5/en2.u5.qa.016.mp3",
+      "durationMs": 4138,
+      "hash": "0bd485763bb88a3e",
+      "chars": 62
+    },
+    "en2.u5.qa.016.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.016.alt.0.mp3",
+      "durationMs": 2998,
+      "hash": "3c3c982e5ec5280a",
+      "chars": 43
+    },
+    "en2.u5.qa.016.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.016.reply.0.mp3",
+      "durationMs": 3051,
+      "hash": "1495cb3231c8a48c",
+      "chars": 61
+    },
+    "en2.u5.qa.016.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.016.ans.0.mp3",
+      "durationMs": 5496,
+      "hash": "fe00832f93d553e2",
+      "chars": 110
+    },
+    "en2.u5.qa.016.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.016.ans.1.mp3",
+      "durationMs": 4412,
+      "hash": "3b7faee6fc6320b7",
+      "chars": 88
+    },
+    "en2.u5.pr.007": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.mp3",
+      "durationMs": 4721,
+      "hash": "bd90792637612f21",
+      "chars": 84
+    },
+    "en2.u5.pr.007.model": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.model.mp3",
+      "durationMs": 20383,
+      "hash": "207ea7c33b338a8b",
+      "chars": 350
+    },
+    "en2.u5.pr.007.model.slow": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.model.slow.mp3",
+      "durationMs": 27992,
+      "hash": "aa033d8ef05b26ca",
+      "chars": 350
+    },
+    "en2.u5.pr.007.step.0.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.step.0.q.mp3",
+      "durationMs": 1218,
+      "hash": "934763a679ff77de",
+      "chars": 14
+    },
+    "en2.u5.pr.007.step.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.step.0.mp3",
+      "durationMs": 3574,
+      "hash": "8d043d2d017c9980",
+      "chars": 65
+    },
+    "en2.u5.pr.007.step.1.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.step.1.q.mp3",
+      "durationMs": 1303,
+      "hash": "ebd0bfc23eb634d2",
+      "chars": 15
+    },
+    "en2.u5.pr.007.step.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.step.1.mp3",
+      "durationMs": 2550,
+      "hash": "230bfed7f9b8a374",
+      "chars": 44
+    },
+    "en2.u5.pr.007.step.2.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.step.2.q.mp3",
+      "durationMs": 1244,
+      "hash": "1217bab0281e586b",
+      "chars": 14
+    },
+    "en2.u5.pr.007.step.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.step.2.mp3",
+      "durationMs": 3028,
+      "hash": "5629957f073eb956",
+      "chars": 59
+    },
+    "en2.u5.pr.007.step.3.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.step.3.q.mp3",
+      "durationMs": 1227,
+      "hash": "b97ac15a03ba93de",
+      "chars": 15
+    },
+    "en2.u5.pr.007.step.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.step.3.mp3",
+      "durationMs": 4586,
+      "hash": "4b60b42cd4897d8e",
+      "chars": 82
+    },
+    "en2.u5.pr.007.step.4.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.step.4.q.mp3",
+      "durationMs": 1227,
+      "hash": "27ccf093ae0b0d4c",
+      "chars": 14
+    },
+    "en2.u5.pr.007.step.4": {
+      "src": "/audio/en2/u5/en2.u5.pr.007.step.4.mp3",
+      "durationMs": 2330,
+      "hash": "d6ba3d584653441c",
+      "chars": 39
+    },
+    "en2.u5.rd.004.sec.0.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.004.sec.0.b.0.mp3",
+      "durationMs": 14262,
+      "hash": "f7aeaf8d2e32af06",
+      "chars": 237
+    },
+    "en2.u5.rd.004.sec.0.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.004.sec.0.b.1.mp3",
+      "durationMs": 8414,
+      "hash": "a7dd8845b7dad595",
+      "chars": 145
+    },
+    "en2.u5.rd.004.sec.1.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.004.sec.1.b.0.mp3",
+      "durationMs": 14863,
+      "hash": "0e8d3d5f1cde8f63",
+      "chars": 247
+    },
+    "en2.u5.rd.004.sec.1.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.004.sec.1.b.1.mp3",
+      "durationMs": 17469,
+      "hash": "5794b25562c913cb",
+      "chars": 300
+    },
+    "en2.u5.rd.004.sec.2.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.004.sec.2.b.0.mp3",
+      "durationMs": 19885,
+      "hash": "ef0a05eaae25c37b",
+      "chars": 322
+    },
+    "en2.u5.rd.004.sec.3.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.004.sec.3.b.0.mp3",
+      "durationMs": 12727,
+      "hash": "d60c2ecdef41778c",
+      "chars": 217
+    },
+    "en2.u5.rd.004.sec.3.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.004.sec.3.b.1.mp3",
+      "durationMs": 8493,
+      "hash": "c7c6b62ad55b11b6",
+      "chars": 152
+    },
+    "en2.u5.rd.004.sec.4.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.004.sec.4.b.0.mp3",
+      "durationMs": 11402,
+      "hash": "2dd4cf86acca8ae9",
+      "chars": 203
+    },
+    "en2.u5.rd.004.sec.4.b.1": {
+      "src": "/audio/en2/u5/en2.u5.rd.004.sec.4.b.1.mp3",
+      "durationMs": 20718,
+      "hash": "7d74ef71ecc51a47",
+      "chars": 354
+    },
+    "en2.u5.rd.004.sec.5.b.0": {
+      "src": "/audio/en2/u5/en2.u5.rd.004.sec.5.b.0.mp3",
+      "durationMs": 17685,
+      "hash": "df79aef93cd70a1a",
+      "chars": 293
+    },
+    "en2.u5.p.025": {
+      "src": "/audio/en2/u5/en2.u5.p.025.mp3",
+      "durationMs": 3280,
+      "hash": "ea0f8e0a8cb09867",
+      "chars": 63
+    },
+    "en2.u5.p.026": {
+      "src": "/audio/en2/u5/en2.u5.p.026.mp3",
+      "durationMs": 5266,
+      "hash": "3993c116506dd506",
+      "chars": 90
+    },
+    "en2.u5.lx.023": {
+      "src": "/audio/en2/u5/en2.u5.lx.023.mp3",
+      "durationMs": 800,
+      "hash": "28d9619af2880a00",
+      "chars": 9
+    },
+    "en2.u5.lx.024": {
+      "src": "/audio/en2/u5/en2.u5.lx.024.mp3",
+      "durationMs": 1071,
+      "hash": "169d84884197ea68",
+      "chars": 12
+    },
+    "en2.u5.qa.017": {
+      "src": "/audio/en2/u5/en2.u5.qa.017.mp3",
+      "durationMs": 2039,
+      "hash": "a3c7518d656a7a73",
+      "chars": 26
+    },
+    "en2.u5.qa.017.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.017.alt.0.mp3",
+      "durationMs": 3389,
+      "hash": "41a920eb83115ae1",
+      "chars": 47
+    },
+    "en2.u5.qa.017.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.017.reply.0.mp3",
+      "durationMs": 4117,
+      "hash": "4d8f430b823cd6e7",
+      "chars": 83
+    },
+    "en2.u5.qa.017.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.017.ans.0.mp3",
+      "durationMs": 6504,
+      "hash": "84fc428f99e95f2e",
+      "chars": 125
+    },
+    "en2.u5.qa.017.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.017.ans.1.mp3",
+      "durationMs": 3710,
+      "hash": "c53ea2125dafb0a6",
+      "chars": 81
+    },
+    "en2.u5.qa.018": {
+      "src": "/audio/en2/u5/en2.u5.qa.018.mp3",
+      "durationMs": 3128,
+      "hash": "e040253720cbdaf4",
+      "chars": 44
+    },
+    "en2.u5.qa.018.alt.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.018.alt.0.mp3",
+      "durationMs": 2223,
+      "hash": "80d20040f7d12008",
+      "chars": 33
+    },
+    "en2.u5.qa.018.reply.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.018.reply.0.mp3",
+      "durationMs": 4924,
+      "hash": "96f231a0c716897e",
+      "chars": 98
+    },
+    "en2.u5.qa.018.ans.0": {
+      "src": "/audio/en2/u5/en2.u5.qa.018.ans.0.mp3",
+      "durationMs": 3812,
+      "hash": "dce41ae150db7e6a",
+      "chars": 74
+    },
+    "en2.u5.qa.018.ans.1": {
+      "src": "/audio/en2/u5/en2.u5.qa.018.ans.1.mp3",
+      "durationMs": 5369,
+      "hash": "ebc46d9132c3d8f8",
+      "chars": 106
+    },
+    "en2.u5.pr.008": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.mp3",
+      "durationMs": 4942,
+      "hash": "10457261511ace4d",
+      "chars": 85
+    },
+    "en2.u5.pr.008.model": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.model.mp3",
+      "durationMs": 22137,
+      "hash": "7410c01ef5e28bdc",
+      "chars": 402
+    },
+    "en2.u5.pr.008.model.slow": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.model.slow.mp3",
+      "durationMs": 30259,
+      "hash": "2478d681f04a9555",
+      "chars": 402
+    },
+    "en2.u5.pr.008.step.0.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.step.0.q.mp3",
+      "durationMs": 1218,
+      "hash": "934763a679ff77de",
+      "chars": 14
+    },
+    "en2.u5.pr.008.step.0": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.step.0.mp3",
+      "durationMs": 3569,
+      "hash": "0723609f29aac99e",
+      "chars": 70
+    },
+    "en2.u5.pr.008.step.1.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.step.1.q.mp3",
+      "durationMs": 1303,
+      "hash": "ebd0bfc23eb634d2",
+      "chars": 15
+    },
+    "en2.u5.pr.008.step.1": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.step.1.mp3",
+      "durationMs": 3341,
+      "hash": "4c7c157b44e94067",
+      "chars": 63
+    },
+    "en2.u5.pr.008.step.2.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.step.2.q.mp3",
+      "durationMs": 1244,
+      "hash": "1217bab0281e586b",
+      "chars": 14
+    },
+    "en2.u5.pr.008.step.2": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.step.2.mp3",
+      "durationMs": 3959,
+      "hash": "ba64881bba165b8a",
+      "chars": 74
+    },
+    "en2.u5.pr.008.step.3.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.step.3.q.mp3",
+      "durationMs": 1227,
+      "hash": "b97ac15a03ba93de",
+      "chars": 15
+    },
+    "en2.u5.pr.008.step.3": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.step.3.mp3",
+      "durationMs": 3390,
+      "hash": "faa458d260bfd0f4",
+      "chars": 66
+    },
+    "en2.u5.pr.008.step.4.q": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.step.4.q.mp3",
+      "durationMs": 1227,
+      "hash": "27ccf093ae0b0d4c",
+      "chars": 14
+    },
+    "en2.u5.pr.008.step.4": {
+      "src": "/audio/en2/u5/en2.u5.pr.008.step.4.mp3",
+      "durationMs": 3124,
+      "hash": "fc9d5403943afc67",
+      "chars": 61
+    }
+  }
+}

@@ -1,0 +1,3632 @@
+{
+  "$schema": "../schema.json",
+  "course": "en2",
+  "unit": 5,
+  "title": "Textos — apropiate de uno y exponelo",
+  "goals": [
+    "Elegí un texto, estudialo a fondo y aprendé a hablar de él: explicarlo, exponerlo, responder preguntas e improvisar.",
+    "El Texto 1 (termodinámica y entropía) está desarrollado a fondo: es el que se prepara para exponer.",
+    "Los Textos 2, 3 y 4 están presentes para leerlos y escucharlos, con una capa mínima de práctica."
+  ],
+  "aspects": [
+    {
+      "id": "text-tea",
+      "title": "Texto 1 — Tea and nineteenth century physics",
+      "summary": "El texto de entropía. Apropiátelo hasta poder explicarlo y exponerlo sin leer.",
+      "order": 1,
+      "match": {
+        "textId": [
+          "tea"
+        ]
+      },
+      "source": {
+        "page": 14,
+        "section": "Text N°1"
+      }
+    },
+    {
+      "id": "text-adult-maths",
+      "title": "Texto 2 — Maths that will help you as an adult",
+      "summary": "Matemática de todos los días: recetas, promedios, dividir la cuenta, planear una caminata.",
+      "order": 2,
+      "match": {
+        "textId": [
+          "adult-maths"
+        ]
+      },
+      "source": {
+        "page": 16,
+        "section": "Text N°2"
+      }
+    },
+    {
+      "id": "text-yottabytes",
+      "title": "Texto 3 — How Many Yottabytes in a Quettabyte?",
+      "summary": "Los cuatro prefijos nuevos del SI: ronna, quetta, ronto y quecto.",
+      "order": 3,
+      "match": {
+        "textId": [
+          "yottabytes"
+        ]
+      },
+      "source": {
+        "page": 18,
+        "section": "Text N°3"
+      }
+    },
+    {
+      "id": "text-pro-dev",
+      "title": "Texto 4 — What Professional Development for Math Teachers Should Look Like",
+      "summary": "Los math ambassadors de Clayton County: formar docentes de matemática entre pares.",
+      "order": 4,
+      "match": {
+        "textId": [
+          "pro-dev"
+        ]
+      },
+      "source": {
+        "page": 21,
+        "section": "Text N°4"
+      }
+    }
+  ],
+  "atoms": [
+    {
+      "id": "en2.u5.rd.001",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1",
+        "note": "Texto reproducido del cuadernillo. La foto de la taza del original es ilustración y se descarta (política de imágenes, ARQUITECTURA §2.5)."
+      },
+      "grammar": [
+        "passive.past",
+        "conditionals.first"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 1,
+      "textId": "tea",
+      "kind": "reading",
+      "title": "Tea and nineteenth century physics",
+      "credit": {
+        "author": "Hannah Darken",
+        "publication": "plus.maths.org",
+        "url": "https://plus.maths.org/content/maths-minute-thermodynamics"
+      },
+      "speaker": "narrator",
+      "sections": [
+        {
+          "heading": "Thermodynamics",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "As I sadly drink my now-cold cup of tea, I can cheer myself up with the fascinating area of physics known as thermodynamics. Everyone knows that if you leave a hot cup of tea sitting on a table, or indeed leave any object in cooler surroundings, it will inevitably cool down. Thermodynamics, the theory of heat and heat flow, was developed mostly during the 19th century when it was discovered that temperature is a bulk property of molecules and atoms in motion. Atoms that move around fast, as they do in a hot cup of tea, produce a warm temperature. Colder temperatures come from atoms that move very little, as is the case in a rigidly frozen block of ice tea."
+            },
+            {
+              "kind": "para",
+              "text": "An important concept in this context is that of entropy. This can again be illustrated using tea, which is made up of many, many molecules in random motion. We don't see those molecules, in fact, the tea would look much the same to us if we re-arranged them slightly. Loosely speaking, the entropy of the cup of tea counts the number of ways in which you could arrange the molecules that would leave the cup of tea looking the same macroscopically. It's defined in the same way for any other system made up of microscopic parts, and there even is a relatively simple formula that tells you how to calculate it."
+            }
+          ]
+        },
+        {
+          "heading": "The four laws of thermodynamics",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "There are four fundamental laws of thermodynamics:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                "Zeroth law: If two systems are in thermal equilibrium with a third system, they are in thermal equilibrium with each other. Two systems are in thermal equilibrium if, when they are connected by something that can transfer heat, there isn't any net flow of heat energy between them.",
+                "First law: Energy cannot be created or destroyed. It can only change form or be transferred from one object to another.",
+                "Second law: The entropy of an isolated system not in equilibrium will tend to increase over time, approaching a maximum value at equilibrium.",
+                "Third law: As temperature approaches absolute zero, the lowest theoretically possible temperature, the entropy of a system approaches a constant minimum."
+              ]
+            },
+            {
+              "kind": "para",
+              "text": "Thermodynamics plays a part anywhere where temperature, heat, work and energy are involved, so it's not so surprising to see it plays a role in weather forecasting and the evolution of planets, moons and even black holes. But that is not all: Thermodynamics has also led to new ways to approach fundamental questions about understanding information, time and life."
+            }
+          ]
+        }
+      ],
+      "afterReadingTask": "Explain the concept of entropy as described in the text."
+    },
+    {
+      "id": "en2.u5.p.001",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "conditionals.first",
+        "will.future"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "If you leave a hot cup of tea on a table, it will inevitably cool down.",
+      "gloss": "Si dejás una taza de té caliente sobre una mesa, inevitablemente se va a enfriar.",
+      "speaker": "narrator",
+      "ipa": "ɪf juː lˈiːv ɐ hˈɑːt kˈʌp ʌv tˈiː ˌɔn ɐ tˈeɪbəl ɪt wɪl ɪnˈɛvᵻɾəbli kˈuːl dˈaʊn"
+    },
+    {
+      "id": "en2.u5.p.002",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "Thermodynamics is the theory of heat and heat flow.",
+      "gloss": "La termodinámica es la teoría del calor y del flujo de calor.",
+      "speaker": "narrator",
+      "ipa": "θˌɜːmoʊdaɪnˈæmɪks ɪz ðə θˈiəɹi ʌv hˈiːt ænd hˈiːt flˈoʊ"
+    },
+    {
+      "id": "en2.u5.p.003",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "passive.past"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "Thermodynamics was developed mostly during the nineteenth century.",
+      "gloss": "La termodinámica se desarrolló sobre todo durante el siglo diecinueve.",
+      "speaker": "narrator",
+      "ipa": "θˌɜːmoʊdaɪnˈæmɪks wʌz dɪvˈɛləpt mˈoʊstli dˈʊɹɹɪŋ ðə nˈaɪntiːnθ sˈɛntʃɚɹi"
+    },
+    {
+      "id": "en2.u5.p.004",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "passive.past"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "It was discovered that temperature is a bulk property of molecules and atoms in motion.",
+      "gloss": "Se descubrió que la temperatura es una propiedad global de moléculas y átomos en movimiento.",
+      "speaker": "narrator",
+      "ipa": "ɪt wʌz dɪskˈʌvɚd ðæt tˈɛmpɹɪtʃɚɹ ɪz ɐ bˈʌlk pɹˈɑːpɚɾi ʌv mˈɑːlɪkjˌuːlz ænd ˈæɾəmz ɪn mˈoʊʃən"
+    },
+    {
+      "id": "en2.u5.p.005",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "relative-clauses",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "Atoms that move around fast produce a warm temperature.",
+      "gloss": "Los átomos que se mueven rápido producen una temperatura cálida.",
+      "speaker": "narrator",
+      "ipa": "ˈæɾəmz ðæt mˈuːv ɚɹˈaʊnd fˈæst pɹədˈuːs ɐ wˈɔːɹm tˈɛmpɹɪtʃɚ"
+    },
+    {
+      "id": "en2.u5.p.006",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "comparatives",
+        "relative-clauses"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "Colder temperatures come from atoms that move very little.",
+      "gloss": "Las temperaturas más frías vienen de átomos que se mueven muy poco.",
+      "speaker": "narrator",
+      "ipa": "kˈoʊldɚ tˈɛmpɹɪtʃɚz kˈʌm fɹʌm ˈæɾəmz ðæt mˈuːv vˈɛɹi lˈɪɾəl"
+    },
+    {
+      "id": "en2.u5.p.007",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "An important concept in this context is that of entropy.",
+      "gloss": "Un concepto importante en este contexto es el de entropía.",
+      "speaker": "narrator",
+      "ipa": "ɐn ɪmpˈoːɹtənt kˈɑːnsɛpt ɪn ðɪs kˈɑːntɛkst ɪz ðæt ʌv ˈɛntɹəpi"
+    },
+    {
+      "id": "en2.u5.p.008",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "passive.present",
+        "relative-clauses"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "Tea is made up of many, many molecules in random motion.",
+      "gloss": "El té está compuesto por muchísimas moléculas en movimiento aleatorio.",
+      "speaker": "narrator",
+      "ipa": "tˈiː ɪz mˌeɪd ˌʌp ʌv mˈɛni mˈɛni mˈɑːlɪkjˌuːlz ɪn ɹˈændəm mˈoʊʃən"
+    },
+    {
+      "id": "en2.u5.p.009",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "conditionals.second"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "The tea would look much the same to us if we re-arranged the molecules slightly.",
+      "gloss": "El té nos parecería más o menos igual si reordenáramos un poco las moléculas.",
+      "speaker": "narrator",
+      "ipa": "ðə tˈiː wʊd lˈʊk mˈʌtʃ ðə sˈeɪm tʊ ˌʌs ɪf wiː ɹˌiːɚɹˈeɪndʒd ðə mˈɑːlɪkjˌuːlz slˈaɪtli"
+    },
+    {
+      "id": "en2.u5.p.010",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "relative-clauses"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 4,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "The entropy of the cup of tea counts the number of ways in which you could arrange the molecules.",
+      "gloss": "La entropía de la taza de té cuenta la cantidad de maneras en que podrías ordenar las moléculas.",
+      "speaker": "narrator",
+      "ipa": "ðɪ ˈɛntɹəpi ʌvðə kˈʌp ʌv tˈiː kˈaʊnts ðə nˈʌmbɚɹ ʌv wˈeɪz ɪnwˌɪtʃ juː kʊd ɚɹˈeɪndʒ ðə mˈɑːlɪkjˌuːlz"
+    },
+    {
+      "id": "en2.u5.p.011",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "relative-clauses",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 4,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "Those arrangements leave the cup of tea looking the same macroscopically.",
+      "gloss": "Esos ordenamientos dejan la taza de té con el mismo aspecto a nivel macroscópico.",
+      "speaker": "narrator",
+      "ipa": "ðoʊz ɚɹˈeɪndʒmənts lˈiːv ðə kˈʌp ʌv tˈiː lˈʊkɪŋ ðə sˈeɪm mˌækɹəskˈɑːpɪkli"
+    },
+    {
+      "id": "en2.u5.p.012",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "passive.present"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "Entropy is defined in the same way for any system made up of microscopic parts.",
+      "gloss": "La entropía se define de la misma manera para cualquier sistema compuesto de partes microscópicas.",
+      "speaker": "narrator",
+      "ipa": "ˈɛntɹəpi ɪz dᵻfˈaɪnd ɪnðə sˈeɪm wˈeɪ fɔːɹ ˌɛni sˈɪstəm mˌeɪd ˌʌp ʌv mˌaɪkɹəskˈɑːpɪk pˈɑːɹts"
+    },
+    {
+      "id": "en2.u5.p.013",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "There are four fundamental laws of thermodynamics.",
+      "gloss": "Hay cuatro leyes fundamentales de la termodinámica.",
+      "speaker": "narrator",
+      "ipa": "ðɛɹˌɑːɹ fˈoːɹ fˌʌndəmˈɛntəl lˈɔːz ʌv θˌɜːmoʊdaɪnˈæmɪks"
+    },
+    {
+      "id": "en2.u5.p.014",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative",
+        "conditionals.first"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "If two systems are in thermal equilibrium with a third system, they are in thermal equilibrium with each other.",
+      "gloss": "Si dos sistemas están en equilibrio térmico con un tercero, están en equilibrio térmico entre sí.",
+      "speaker": "narrator",
+      "ipa": "ɪf tˈuː sˈɪstəmz ɑːɹ ɪn θˈɜːməl ˌiːkwɪlˈɪbɹiəm wɪð ɐ θˈɜːd sˈɪstəm ðeɪ ɑːɹ ɪn θˈɜːməl ˌiːkwɪlˈɪbɹiəm wɪð ˈiːtʃ ˈʌðɚ"
+    },
+    {
+      "id": "en2.u5.p.015",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "passive.present",
+        "can.negative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "Energy cannot be created or destroyed.",
+      "gloss": "La energía no se puede crear ni destruir.",
+      "speaker": "narrator",
+      "ipa": "ˈɛnɚdʒi kænˈɑːt biː kɹiːˈeɪɾᵻd ɔːɹ dᵻstɹˈɔɪd"
+    },
+    {
+      "id": "en2.u5.p.016",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "passive.present",
+        "can.ability"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "It can only change form or be transferred from one object to another.",
+      "gloss": "Solo puede cambiar de forma o transferirse de un objeto a otro.",
+      "speaker": "narrator",
+      "ipa": "ɪt kæn ˈoʊnli tʃˈeɪndʒ fˈɔːɹm ɔːɹ biː tɹænsfˈɜːd fɹʌm wˈʌn ˈɑːbdʒɛkt tʊ ɐnˈʌðɚ"
+    },
+    {
+      "id": "en2.u5.p.017",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "will.future"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 4,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "The entropy of an isolated system not in equilibrium will tend to increase over time.",
+      "gloss": "La entropía de un sistema aislado fuera del equilibrio tiende a aumentar con el tiempo.",
+      "speaker": "narrator",
+      "ipa": "ðɪ ˈɛntɹəpi əvən ˈaɪsəlˌeɪɾᵻd sˈɪstəm nˌɑːt ɪn ˌiːkwɪlˈɪbɹiəm wɪl tˈɛnd tʊ ɪŋkɹˈiːs ˌoʊvɚ tˈaɪm"
+    },
+    {
+      "id": "en2.u5.p.018",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "As temperature approaches absolute zero, the entropy of a system approaches a constant minimum.",
+      "gloss": "A medida que la temperatura se acerca al cero absoluto, la entropía de un sistema se acerca a un mínimo constante.",
+      "speaker": "narrator",
+      "ipa": "æz tˈɛmpɹɪtʃɚɹ ɐpɹˈoʊtʃᵻz ˈæbsəlˌuːt zˈiəɹoʊ ðɪ ˈɛntɹəpi əvə sˈɪstəm ɐpɹˈoʊtʃᵻz ɐ kˈɑːnstənt mˈɪnɪməm"
+    },
+    {
+      "id": "en2.u5.p.019",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "passive.present",
+        "relative-clauses"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 4,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "Thermodynamics plays a part anywhere where temperature, heat, work and energy are involved.",
+      "gloss": "La termodinámica interviene en cualquier lugar donde haya temperatura, calor, trabajo y energía.",
+      "speaker": "narrator",
+      "ipa": "θˌɜːmoʊdaɪnˈæmɪks plˈeɪz ɐ pˈɑːɹt ˈɛnɪwˌɛɹ wˌɛɹ tˈɛmpɹɪtʃɚ hˈiːt wˈɜːk ænd ˈɛnɚdʒi ɑːɹ ɪnvˈɑːlvd"
+    },
+    {
+      "id": "en2.u5.p.020",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "It plays a role in weather forecasting and even in black holes.",
+      "gloss": "Interviene en la predicción del clima e incluso en los agujeros negros.",
+      "speaker": "narrator",
+      "ipa": "ɪt plˈeɪz ɐ ɹˈoʊl ɪn wˈɛðɚ fˈɔːɹkæstɪŋ ænd ˈiːvən ɪn blˈæk hˈoʊlz"
+    },
+    {
+      "id": "en2.u5.lx.001",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "thermodynamics",
+      "pos": "noun",
+      "gloss": "termodinámica: la teoría del calor y su flujo",
+      "examplePhraseId": "en2.u5.p.002",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.002",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "entropy",
+      "pos": "noun",
+      "gloss": "entropía: cuántos ordenamientos microscópicos dan el mismo aspecto macroscópico",
+      "examplePhraseId": "en2.u5.p.007",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.003",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "heat flow",
+      "pos": "noun",
+      "gloss": "flujo de calor: cómo pasa el calor de un cuerpo a otro",
+      "examplePhraseId": "en2.u5.p.002",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.004",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "conditionals.first"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "to cool down",
+      "pos": "verb",
+      "gloss": "enfriarse",
+      "examplePhraseId": "en2.u5.p.001",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.005",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "passive.past"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "bulk property",
+      "pos": "noun",
+      "gloss": "propiedad global: la del conjunto, no la de cada partícula",
+      "examplePhraseId": "en2.u5.p.004",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.006",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "passive.past"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "molecule",
+      "pos": "noun",
+      "gloss": "molécula",
+      "examplePhraseId": "en2.u5.p.008",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en2.u5.lx.007",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "passive.past"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "in motion",
+      "pos": "phrase",
+      "gloss": "en movimiento",
+      "examplePhraseId": "en2.u5.p.004",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.008",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "passive.present"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "random",
+      "pos": "adjective",
+      "gloss": "aleatorio, al azar",
+      "examplePhraseId": "en2.u5.p.008",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.009",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "relative-clauses"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "to arrange",
+      "pos": "verb",
+      "gloss": "ordenar, disponer (de una manera u otra)",
+      "examplePhraseId": "en2.u5.p.010",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.010",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "relative-clauses"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 4,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "macroscopically",
+      "pos": "adverb",
+      "gloss": "macroscópicamente: visto en conjunto, sin mirar las partes",
+      "examplePhraseId": "en2.u5.p.011",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en2.u5.lx.011",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "thermal equilibrium",
+      "pos": "noun",
+      "gloss": "equilibrio térmico: no hay flujo neto de calor entre los cuerpos",
+      "examplePhraseId": "en2.u5.p.014",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en2.u5.lx.012",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "will.future"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "isolated system",
+      "pos": "noun",
+      "gloss": "sistema aislado: no intercambia nada con el exterior",
+      "examplePhraseId": "en2.u5.p.017",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.013",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "absolute zero",
+      "pos": "noun",
+      "gloss": "cero absoluto: la temperatura más baja teóricamente posible",
+      "examplePhraseId": "en2.u5.p.018",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.014",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "to approach",
+      "pos": "verb",
+      "gloss": "acercarse a, tender a (un valor)",
+      "examplePhraseId": "en2.u5.p.018",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.015",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "will.future"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "to increase",
+      "pos": "verb",
+      "gloss": "aumentar",
+      "examplePhraseId": "en2.u5.p.017",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en2.u5.lx.016",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "weather forecasting",
+      "pos": "noun",
+      "gloss": "predicción del tiempo",
+      "examplePhraseId": "en2.u5.p.020",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.017",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "conditionals.first"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "surroundings",
+      "pos": "noun",
+      "gloss": "el entorno, lo que rodea al objeto",
+      "examplePhraseId": "en2.u5.p.001",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.018",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1"
+      },
+      "grammar": [
+        "passive.present"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "lexeme",
+      "word": "net flow",
+      "pos": "noun",
+      "gloss": "flujo neto: el saldo, lo que queda tras restar ida y vuelta",
+      "examplePhraseId": "en2.u5.p.014",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.qa.001",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "be.present.affirmative",
+        "wh-questions"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "qa",
+      "prompt": "What is thermodynamics?",
+      "promptVariants": [
+        "How does the text define thermodynamics?",
+        "What area of physics is the text about?"
+      ],
+      "replies": [
+        "It's the theory of heat and heat flow."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says thermodynamics is the theory of heat and heat flow."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "It's the part of physics that studies heat and how heat moves."
+        },
+        {
+          "mode": "connect",
+          "text": "It was developed mostly in the nineteenth century, when temperature was understood as a bulk property of atoms in motion."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.002",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "wh-questions",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "qa",
+      "prompt": "Why does a hot cup of tea cool down?",
+      "promptVariants": [
+        "What happens if you leave a hot cup of tea on a table?",
+        "Why doesn't the tea stay hot?"
+      ],
+      "replies": [
+        "Because it is in cooler surroundings, so it loses heat."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says that if you leave any object in cooler surroundings, it will inevitably cool down."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "The room is colder than the tea, so heat flows out of the cup until they are in equilibrium."
+        },
+        {
+          "mode": "connect",
+          "text": "This is the second law at work: the system moves towards equilibrium, where entropy is at a maximum."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.003",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "wh-questions",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 4,
+      "textId": "tea",
+      "kind": "qa",
+      "prompt": "What is entropy, in the words of the text?",
+      "promptVariants": [
+        "How does the text explain entropy?",
+        "What does the entropy of a cup of tea count?"
+      ],
+      "replies": [
+        "It counts the number of ways you could arrange the molecules and still see the same tea."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Loosely speaking, the entropy of the cup of tea counts the number of ways in which you could arrange the molecules that would leave the cup looking the same macroscopically."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "It measures how many different microscopic arrangements give you exactly the same thing at our scale."
+        },
+        {
+          "mode": "connect",
+          "text": "The text uses tea because tea is made up of many, many molecules in random motion, and we never see them individually."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.004",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "qa",
+      "prompt": "Why does the author use tea to explain entropy?",
+      "promptVariants": [
+        "Why is tea a good example for this concept?"
+      ],
+      "replies": [
+        "Because tea is made up of many molecules in random motion that we cannot see."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The text says entropy can again be illustrated using tea, which is made up of many, many molecules in random motion."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "Tea is an everyday object with a huge number of invisible parts, so it shows the idea without any equations."
+        },
+        {
+          "mode": "personal",
+          "text": "I find it useful because I can picture the cup, and that makes an abstract idea concrete."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.005",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "wh-questions",
+        "there-is.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "qa",
+      "prompt": "How many laws of thermodynamics are there?",
+      "promptVariants": [
+        "How many fundamental laws does the text list?"
+      ],
+      "replies": [
+        "There are four: the zeroth, first, second and third laws."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "There are four fundamental laws of thermodynamics."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "Four, and they are numbered from zero to three."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.006",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "wh-questions",
+        "passive.present"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "qa",
+      "prompt": "What does the first law say?",
+      "promptVariants": [
+        "What does the first law of thermodynamics state?"
+      ],
+      "replies": [
+        "Energy cannot be created or destroyed, only changed or transferred."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Energy cannot be created or destroyed. It can only change form or be transferred from one object to another."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "The total energy stays the same; it just moves around or takes another form."
+        },
+        {
+          "mode": "connect",
+          "text": "That is why the tea does not lose its energy: the heat is transferred to the room, not destroyed."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.007",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "wh-questions",
+        "will.future"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 4,
+      "textId": "tea",
+      "kind": "qa",
+      "prompt": "What does the second law say about entropy?",
+      "promptVariants": [
+        "What happens to the entropy of an isolated system over time?"
+      ],
+      "replies": [
+        "It will tend to increase over time, until it reaches a maximum at equilibrium."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The entropy of an isolated system not in equilibrium will tend to increase over time, approaching a maximum value at equilibrium."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "Left alone, a system gets more and more disordered until it settles down."
+        },
+        {
+          "mode": "connect",
+          "text": "The cooling cup of tea is exactly this: it moves towards equilibrium with the room, and its entropy grows."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.008",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "wh-questions",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "qa",
+      "prompt": "What is absolute zero?",
+      "promptVariants": [
+        "What does the third law say about absolute zero?"
+      ],
+      "replies": [
+        "It's the lowest temperature that is theoretically possible."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Absolute zero is the lowest theoretically possible temperature, and there the entropy of a system approaches a constant minimum."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "It's the coldest anything could ever be, about minus two hundred and seventy-three degrees celsius."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.009",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "wh-questions",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "qa",
+      "prompt": "When are two systems in thermal equilibrium?",
+      "promptVariants": [
+        "What does thermal equilibrium mean in the text?"
+      ],
+      "replies": [
+        "When there isn't any net flow of heat energy between them."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Two systems are in thermal equilibrium if, when they are connected by something that can transfer heat, there isn't any net flow of heat energy between them."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "When you connect them and no heat actually moves from one to the other."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.010",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "wh-questions",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "qa",
+      "prompt": "Where else does thermodynamics play a role?",
+      "promptVariants": [
+        "What other fields does the text mention at the end?"
+      ],
+      "replies": [
+        "In weather forecasting, in planets and moons, and even in black holes."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "It plays a role in weather forecasting and the evolution of planets, moons and even black holes."
+        },
+        {
+          "mode": "connect",
+          "text": "The text also says it has led to new ways to approach questions about information, time and life."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.011",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de opinión nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "wh-questions",
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 5,
+      "textId": "tea",
+      "kind": "qa",
+      "prompt": "Do you find the tea example useful to understand entropy? Why?",
+      "promptVariants": [
+        "Is the cup of tea a good way to explain entropy, in your opinion?"
+      ],
+      "replies": [
+        "Yes, because it turns an abstract idea into something I can picture."
+      ],
+      "answers": [
+        {
+          "mode": "personal",
+          "text": "Yes, I do. I can picture the molecules moving, and that makes the idea concrete instead of abstract."
+        },
+        {
+          "mode": "connect",
+          "text": "It also connects with the first paragraph, where the cooling tea already shows heat flow in everyday life."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.012",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de examen nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "wh-questions",
+        "passive.past"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 4,
+      "textId": "tea",
+      "kind": "qa",
+      "prompt": "When was thermodynamics developed, and what was discovered then?",
+      "promptVariants": [
+        "What happened in the nineteenth century, according to the text?"
+      ],
+      "replies": [
+        "Mostly in the nineteenth century, when it was discovered that temperature is a bulk property of atoms in motion."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Thermodynamics was developed mostly during the nineteenth century, when it was discovered that temperature is a bulk property of molecules and atoms in motion."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "In the eighteen hundreds, when scientists realised that temperature comes from how fast the particles move."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.ex.001",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Resumen del Texto 1 escrito por nosotros para practicar los términos clave."
+      },
+      "grammar": [
+        "passive.present",
+        "will.future"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "exercise",
+      "prompt": "Completá el resumen del texto con los términos clave.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "___ is the theory of heat and heat flow.",
+          "blanks": [
+            {
+              "accept": [
+                "Thermodynamics"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Temperature is a bulk property of molecules and atoms in ___.",
+          "blanks": [
+            {
+              "accept": [
+                "motion"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The ___ of a cup of tea counts the arrangements that look the same macroscopically.",
+          "blanks": [
+            {
+              "accept": [
+                "entropy"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Energy cannot be created or ___.",
+          "blanks": [
+            {
+              "accept": [
+                "destroyed"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "At absolute ___, the entropy of a system approaches a constant minimum.",
+          "blanks": [
+            {
+              "accept": [
+                "zero"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "native"
+    },
+    {
+      "id": "en2.u5.ex.002",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Práctica de la pasiva del texto (consigna nuestra): la voz que domina el Texto 1."
+      },
+      "grammar": [
+        "passive.past",
+        "passive.present"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 4,
+      "textId": "tea",
+      "kind": "exercise",
+      "prompt": "Pasá cada oración a la voz pasiva, como hace el texto.",
+      "format": "transform",
+      "items": [
+        {
+          "stem": "Scientists developed thermodynamics during the 19th century.",
+          "answer": {
+            "accept": [
+              "Thermodynamics was developed during the 19th century."
+            ]
+          }
+        },
+        {
+          "stem": "They discovered that temperature is a bulk property.",
+          "answer": {
+            "accept": [
+              "It was discovered that temperature is a bulk property."
+            ]
+          }
+        },
+        {
+          "stem": "You cannot create or destroy energy.",
+          "answer": {
+            "accept": [
+              "Energy cannot be created or destroyed."
+            ]
+          }
+        },
+        {
+          "stem": "We define entropy in the same way for any system.",
+          "answer": {
+            "accept": [
+              "Entropy is defined in the same way for any system."
+            ]
+          }
+        }
+      ],
+      "audioViable": "adapted"
+    },
+    {
+      "id": "en2.u5.ls.001",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Narrativa nuestra de comprensión auditiva sobre el tema del texto."
+      },
+      "grammar": [
+        "passive.present",
+        "will.future"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "listening",
+      "narrative": "Imagine you drop a little milk into a cup of black tea. At first you can see it clearly: a white cloud in a dark liquid. If you wait, the milk spreads out and the tea becomes one uniform colour. You never see the opposite happen. The milk does not gather itself back into a cloud, even though nothing in the first law forbids it. The reason is entropy: there are far more ways for the molecules to be mixed than for them to be separated, so the mixed state is overwhelmingly more likely.",
+      "speaker": "narrator",
+      "questions": [
+        {
+          "q": "What happens to the milk if you wait?",
+          "accept": [
+            "it spreads out",
+            "it mixes",
+            "the tea becomes one uniform colour",
+            "it spreads"
+          ]
+        },
+        {
+          "q": "Does the milk ever gather itself back into a cloud?",
+          "accept": [
+            "no",
+            "no it doesn't",
+            "never"
+          ]
+        },
+        {
+          "q": "Why is the mixed state more likely?",
+          "accept": [
+            "because there are more ways to be mixed",
+            "there are far more ways for the molecules to be mixed",
+            "entropy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en2.u5.ct.001",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par mínimo nuestro: /θ/ es el sonido que abre la palabra clave del texto."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "contrast",
+      "pair": [
+        "thermal",
+        "formal"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "The two systems are in ___ equilibrium.",
+          "correct": 0
+        },
+        {
+          "text": "He wrote a very ___ letter to the university.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en2.u5.ct.002",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par mínimo nuestro sobre el vocabulario del texto."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "contrast",
+      "pair": [
+        "heat",
+        "hit"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "Thermodynamics is the theory of ___ and its flow.",
+          "correct": 0
+        },
+        {
+          "text": "Don't ___ the table with the cup.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en2.u5.d.001",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo nuestro: dos estudiantes comentan el texto."
+      },
+      "grammar": [
+        "passive.present",
+        "wh-questions"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "dialogue",
+      "title": "Talking about the tea text",
+      "situation": "Dos estudiantes repasan el Texto 1 antes del oral.",
+      "turns": [
+        {
+          "speaker": "student",
+          "phraseId": "en2.u5.p.027"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en2.u5.p.028"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en2.u5.p.029"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en2.u5.p.030"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en2.u5.p.031"
+        }
+      ]
+    },
+    {
+      "id": "en2.u5.p.027",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Turno del diálogo: dos estudiantes comentan el Texto 1."
+      },
+      "grammar": [
+        "past-simple.interrogative"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "Did you understand the part about entropy?",
+      "gloss": "¿Entendiste la parte de la entropía?",
+      "speaker": "student",
+      "ipa": "dˈɪd juː ˌʌndɚstˈænd ðə pˈɑːɹt ɐbˌaʊt ˈɛntɹəpi"
+    },
+    {
+      "id": "en2.u5.p.028",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Turno del diálogo: dos estudiantes comentan el Texto 1."
+      },
+      "grammar": [
+        "relative-clauses",
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "I think so. It counts the ways you can arrange the molecules.",
+      "gloss": "Creo que sí. Cuenta las maneras en que podés ordenar las moléculas.",
+      "speaker": "student-m",
+      "ipa": "aɪ θˈɪŋk sˈoʊ ɪt kˈaʊnts ðə wˈeɪz juː kæn ɚɹˈeɪndʒ ðə mˈɑːlɪkjˌuːlz"
+    },
+    {
+      "id": "en2.u5.p.029",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Turno del diálogo: dos estudiantes comentan el Texto 1."
+      },
+      "grammar": [
+        "wh-questions",
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "And why does the tea always get cold?",
+      "gloss": "¿Y por qué el té siempre se enfría?",
+      "speaker": "student",
+      "ipa": "ænd wˌaɪ dˈʌz ðə tˈiː ˈɔːlweɪz ɡɛt kˈoʊld"
+    },
+    {
+      "id": "en2.u5.p.030",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Turno del diálogo: dos estudiantes comentan el Texto 1."
+      },
+      "grammar": [
+        "comparatives",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 2,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "Because the room is colder, so the heat flows out of the cup.",
+      "gloss": "Porque la habitación está más fría, así que el calor sale de la taza.",
+      "speaker": "student-m",
+      "ipa": "bɪkˈʌz ðə ɹˈuːm ɪz kˈoʊldɚ sˌoʊ ðə hˈiːt flˈoʊz ˌaʊɾəv ðə kˈʌp"
+    },
+    {
+      "id": "en2.u5.p.031",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Turno del diálogo: dos estudiantes comentan el Texto 1."
+      },
+      "grammar": [
+        "passive.present"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 3,
+      "textId": "tea",
+      "kind": "phrase",
+      "text": "So the energy is not lost, it is only transferred.",
+      "gloss": "Así que la energía no se pierde, solo se transfiere.",
+      "speaker": "student",
+      "ipa": "sˌoʊ ðɪ ˈɛnɚdʒi ɪz nˌɑːt lˈɔst ɪɾ ɪz ˈoʊnli tɹænsfˈɜːd"
+    },
+    {
+      "id": "en2.u5.pr.001",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 15,
+        "section": "Text N°1 — After-Reading Task",
+        "note": "Consigna textual del cuadernillo. El modelo y los pasos son nuestros."
+      },
+      "grammar": [
+        "passive.present",
+        "relative-clauses"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 5,
+      "textId": "tea",
+      "kind": "production",
+      "prompt": "Explain the concept of entropy as described in the text.",
+      "modelAnswer": "Entropy is a way of counting arrangements. A cup of tea is made up of many, many molecules in random motion, and we never see them one by one. If we re-arranged them slightly, the tea would look much the same to us. Loosely speaking, the entropy of the cup counts the number of ways in which you could arrange the molecules and still leave the cup looking the same macroscopically. It is defined in the same way for any system made up of microscopic parts, and there is even a relatively simple formula to calculate it. The second law adds that the entropy of an isolated system will tend to increase over time.",
+      "modelVariants": [
+        "Entropy measures how many microscopic arrangements give you the same thing at our scale. In a cup of tea there are many, many molecules moving at random. We cannot see them, so a small re-arrangement would look identical to us. Entropy counts those identical-looking arrangements. The same definition works for any system made of microscopic parts, and the second law says that in an isolated system entropy tends to grow until it reaches a maximum.",
+        "Think of a cup of tea. It contains an enormous number of molecules in random motion, and we only see the tea, not the molecules. Many different arrangements of those molecules look exactly the same to us. Entropy is the count of those arrangements. Because there are far more disordered arrangements than ordered ones, an isolated system left alone will tend towards higher entropy."
+      ],
+      "scaffold": [
+        "Decí qué cuenta la entropía (ordenamientos, no desorden vago).",
+        "Usá el ejemplo del té: muchísimas moléculas en movimiento aleatorio.",
+        "Explicá que un reordenamiento chico se vería igual.",
+        "Generalizá: vale para cualquier sistema de partes microscópicas.",
+        "Cerrá con la segunda ley: en un sistema aislado, tiende a aumentar."
+      ],
+      "rubric": [
+        {
+          "text": "Nombrás la entropía",
+          "detect": "\\bentropy\\b"
+        },
+        {
+          "text": "Usás el ejemplo del té y sus moléculas",
+          "detect": "\\b(tea|molecules)\\b"
+        },
+        {
+          "text": "Decís que cuenta ORDENAMIENTOS (ways / arrange)",
+          "detect": "\\b(arrange|arrangements|ways)\\b"
+        },
+        {
+          "text": "Mencionás que se ve igual macroscópicamente",
+          "detect": "\\b(same|macroscopically|look)\\b"
+        },
+        {
+          "text": "Cerrás con la segunda ley (tiende a aumentar)"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "What is entropy, in one sentence?",
+          "segment": "Entropy is a way of counting arrangements.",
+          "hint": "Arrancá por la definición corta, no por el té."
+        },
+        {
+          "prompt": "What is a cup of tea made of?",
+          "segment": "A cup of tea is made up of many, many molecules in random motion, and we never see them one by one.",
+          "hint": "El ejemplo: muchísimas moléculas, invisibles para nosotros."
+        },
+        {
+          "prompt": "What would happen if we re-arranged those molecules slightly?",
+          "segment": "If we re-arranged them slightly, the tea would look much the same to us.",
+          "hint": "El reordenamiento chico no cambia lo que vemos."
+        },
+        {
+          "prompt": "So what exactly does the entropy of the cup count?",
+          "segment": "Loosely speaking, the entropy of the cup counts the number of ways in which you could arrange the molecules and still leave the cup looking the same macroscopically.",
+          "hint": "Acá va la definición completa: contar maneras."
+        },
+        {
+          "prompt": "Does this only work for tea?",
+          "segment": "It is defined in the same way for any system made up of microscopic parts, and there is even a relatively simple formula to calculate it.",
+          "hint": "Generalizá más allá del ejemplo."
+        },
+        {
+          "prompt": "What does the second law add?",
+          "segment": "The second law adds that the entropy of an isolated system will tend to increase over time.",
+          "hint": "El cierre: la flecha del tiempo."
+        }
+      ]
+    },
+    {
+      "id": "en2.u5.pr.002",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna de exposición nuestra sobre el Texto 1 (formato del oral)."
+      },
+      "grammar": [
+        "passive.past",
+        "will.future"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 5,
+      "textId": "tea",
+      "kind": "production",
+      "prompt": "Give a one to two minute presentation about the text 'Tea and nineteenth century physics'.",
+      "modelAnswer": "The text is called 'Tea and nineteenth century physics' and it was written by Hannah Darken for plus.maths.org. It uses a very ordinary situation, a cup of tea going cold, to introduce thermodynamics. Thermodynamics is the theory of heat and heat flow, and it was developed mostly during the nineteenth century, when it was discovered that temperature is a bulk property of molecules and atoms in motion. Atoms that move around fast produce a warm temperature, and colder temperatures come from atoms that move very little. The text then introduces entropy, which counts the number of ways you could arrange the molecules and still see the same cup of tea. Finally it lists the four laws of thermodynamics, and it ends by saying that thermodynamics plays a part in weather forecasting, in planets and moons, and even in black holes.",
+      "modelVariants": [
+        "I am going to talk about 'Tea and nineteenth century physics', by Hannah Darken. The author starts with a cold cup of tea and uses it to explain thermodynamics, the theory of heat and heat flow. She explains that temperature is a bulk property of atoms in motion: fast atoms mean a warm temperature, slow atoms mean a cold one. Then she explains entropy with the same cup of tea. At the end she gives the four laws and shows that thermodynamics reaches weather forecasting, planets and black holes."
+      ],
+      "scaffold": [
+        "Título, autora y fuente.",
+        "La idea del arranque: una taza de té que se enfría.",
+        "Qué es la termodinámica y cuándo se desarrolló.",
+        "Temperatura como propiedad global de átomos en movimiento.",
+        "Entropía, con el mismo ejemplo.",
+        "Las cuatro leyes y dónde más aparece la termodinámica."
+      ],
+      "rubric": [
+        {
+          "text": "Presentás título y autora",
+          "detect": "\\b(darken|tea and nineteenth)\\b"
+        },
+        {
+          "text": "Definís termodinámica",
+          "detect": "\\bthermodynamics\\b"
+        },
+        {
+          "text": "Explicás la temperatura como propiedad de átomos en movimiento",
+          "detect": "\\b(atoms|molecules|motion)\\b"
+        },
+        {
+          "text": "Introducís la entropía",
+          "detect": "\\bentropy\\b"
+        },
+        {
+          "text": "Mencionás las cuatro leyes",
+          "detect": "\\b(four|laws)\\b"
+        },
+        {
+          "text": "Cerrás con las aplicaciones (clima, planetas, agujeros negros)"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "What is the text, who wrote it and where was it published?",
+          "segment": "The text is called 'Tea and nineteenth century physics' and it was written by Hannah Darken for plus.maths.org.",
+          "hint": "Título, autora, publicación."
+        },
+        {
+          "prompt": "How does the text begin?",
+          "segment": "It uses a very ordinary situation, a cup of tea going cold, to introduce thermodynamics.",
+          "hint": "El gancho cotidiano."
+        },
+        {
+          "prompt": "What is thermodynamics and when was it developed?",
+          "segment": "Thermodynamics is the theory of heat and heat flow, and it was developed mostly during the nineteenth century, when it was discovered that temperature is a bulk property of molecules and atoms in motion.",
+          "hint": "Definición + siglo + el descubrimiento."
+        },
+        {
+          "prompt": "What is the difference between hot and cold, in terms of atoms?",
+          "segment": "Atoms that move around fast produce a warm temperature, and colder temperatures come from atoms that move very little.",
+          "hint": "Rápido = caliente, lento = frío."
+        },
+        {
+          "prompt": "What is entropy?",
+          "segment": "The text then introduces entropy, which counts the number of ways you could arrange the molecules and still see the same cup of tea.",
+          "hint": "Contar ordenamientos."
+        },
+        {
+          "prompt": "How does the text end?",
+          "segment": "Finally it lists the four laws of thermodynamics, and it ends by saying that thermodynamics plays a part in weather forecasting, in planets and moons, and even in black holes.",
+          "hint": "Las cuatro leyes y el alcance."
+        }
+      ]
+    },
+    {
+      "id": "en2.u5.pr.003",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna de reformulación nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "passive.present",
+        "will.future"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 5,
+      "textId": "tea",
+      "kind": "production",
+      "prompt": "Explain the four laws of thermodynamics in your own words.",
+      "modelAnswer": "The zeroth law says that if two systems are in thermal equilibrium with a third one, they are also in thermal equilibrium with each other. The first law says that energy cannot be created or destroyed: it can only change form or be transferred from one object to another. The second law says that the entropy of an isolated system not in equilibrium will tend to increase over time, approaching a maximum value. The third law says that as temperature approaches absolute zero, the entropy of a system approaches a constant minimum.",
+      "modelVariants": [
+        "There are four. The zeroth one connects three systems: if two of them are in equilibrium with a third, they are in equilibrium with each other. The first one says energy is conserved; it only changes form or moves. The second one says entropy grows in an isolated system until it reaches a maximum. The third one says that at absolute zero the entropy reaches a constant minimum."
+      ],
+      "scaffold": [
+        "Ley cero: equilibrio térmico transitivo.",
+        "Primera ley: la energía se conserva.",
+        "Segunda ley: la entropía tiende a aumentar.",
+        "Tercera ley: en el cero absoluto, mínimo constante."
+      ],
+      "rubric": [
+        {
+          "text": "Ley cero: equilibrio con un tercer sistema",
+          "detect": "\\b(zeroth|equilibrium)\\b"
+        },
+        {
+          "text": "Primera ley: la energía no se crea ni se destruye",
+          "detect": "\\b(created|destroyed|energy)\\b"
+        },
+        {
+          "text": "Segunda ley: la entropía tiende a aumentar",
+          "detect": "\\b(entropy|increase)\\b"
+        },
+        {
+          "text": "Tercera ley: cero absoluto",
+          "detect": "\\b(absolute zero|minimum)\\b"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "What does the zeroth law say?",
+          "segment": "The zeroth law says that if two systems are in thermal equilibrium with a third one, they are also in thermal equilibrium with each other.",
+          "hint": "La transitividad del equilibrio."
+        },
+        {
+          "prompt": "What does the first law say?",
+          "segment": "The first law says that energy cannot be created or destroyed: it can only change form or be transferred from one object to another.",
+          "hint": "Conservación de la energía."
+        },
+        {
+          "prompt": "What does the second law say?",
+          "segment": "The second law says that the entropy of an isolated system not in equilibrium will tend to increase over time, approaching a maximum value.",
+          "hint": "La entropía crece."
+        },
+        {
+          "prompt": "What does the third law say?",
+          "segment": "The third law says that as temperature approaches absolute zero, the entropy of a system approaches a constant minimum.",
+          "hint": "El cero absoluto."
+        }
+      ]
+    },
+    {
+      "id": "en2.u5.pr.004",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna de reformulación nuestra sobre el Texto 1 (registro coloquial)."
+      },
+      "grammar": [
+        "conditionals.first",
+        "will.future"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 4,
+      "textId": "tea",
+      "kind": "production",
+      "prompt": "Explain to a friend who has never studied physics why a hot cup of tea always gets cold.",
+      "modelAnswer": "Think about what temperature really is. It is not a thing inside the tea; it is how fast the molecules are moving. In hot tea they move fast, and in the cold air of the room they move more slowly. When the cup touches the air and the table, the fast molecules push the slow ones, and energy passes from the tea to the room. That energy is never destroyed, it only moves. It keeps moving until both are at the same temperature, and then we say they are in thermal equilibrium. That is why the tea always gets cold, and never hot.",
+      "modelVariants": [
+        "Temperature is really about movement: fast molecules feel hot, slow molecules feel cold. Your tea is full of fast molecules and the room is full of slow ones, so energy leaks from the cup to the room until they match. Nothing is lost, it just moves. And it only goes one way, because there are many more ways for the energy to be spread out than concentrated in the cup."
+      ],
+      "scaffold": [
+        "Qué es en realidad la temperatura (velocidad de las moléculas).",
+        "Comparar el té caliente con el aire de la habitación.",
+        "Cómo pasa la energía del té a la habitación.",
+        "La energía no se destruye, solo se transfiere.",
+        "Se llega al equilibrio térmico."
+      ],
+      "rubric": [
+        {
+          "text": "Explicás la temperatura como movimiento",
+          "detect": "\\b(moving|move|motion|fast|slow)\\b"
+        },
+        {
+          "text": "Decís que la energía se transfiere, no se destruye",
+          "detect": "\\b(energy|transferred|destroyed)\\b"
+        },
+        {
+          "text": "Llegás al equilibrio térmico",
+          "detect": "\\bequilibrium\\b"
+        },
+        {
+          "text": "Lo explicás sin fórmulas, para alguien que no estudió física"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "What is temperature, really?",
+          "segment": "Temperature is not a thing inside the tea; it is how fast the molecules are moving.",
+          "hint": "Sacale el misterio: es velocidad."
+        },
+        {
+          "prompt": "How do the tea and the room compare?",
+          "segment": "In hot tea the molecules move fast, and in the cold air of the room they move more slowly.",
+          "hint": "Comparalos."
+        },
+        {
+          "prompt": "What happens when they touch?",
+          "segment": "When the cup touches the air and the table, the fast molecules push the slow ones, and energy passes from the tea to the room.",
+          "hint": "El contacto y la transferencia."
+        },
+        {
+          "prompt": "Is that energy lost?",
+          "segment": "That energy is never destroyed, it only moves.",
+          "hint": "Primera ley, en criollo."
+        },
+        {
+          "prompt": "When does it stop?",
+          "segment": "It keeps moving until both are at the same temperature, and then we say they are in thermal equilibrium.",
+          "hint": "El final: equilibrio."
+        }
+      ]
+    },
+    {
+      "id": "en2.u5.pr.005",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna de opinión nuestra sobre el Texto 1."
+      },
+      "grammar": [
+        "present-simple.affirmative",
+        "relative-clauses"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "physics"
+      ],
+      "difficulty": 5,
+      "textId": "tea",
+      "kind": "production",
+      "prompt": "Give your opinion: does it help to explain physics with everyday objects like a cup of tea?",
+      "modelAnswer": "In my opinion it helps a lot, at least at the beginning. A cup of tea is something everybody has seen, so the reader starts from a real image instead of an abstract definition. In this text the same cup explains three different things: heat flow, temperature as movement, and entropy. That economy is what makes the example good. I also think there is a risk, because an everyday image can hide the mathematics. The text is honest about that: it says there is a relatively simple formula to calculate entropy, so the reader knows that the real definition is a formula and not a cup of tea.",
+      "modelVariants": [
+        "I think everyday examples are useful because they give you something to picture. Here the cup of tea carries the whole text: it explains cooling, temperature and entropy. But an example is not a definition, and the author knows it, because she mentions that there is a formula behind the idea."
+      ],
+      "scaffold": [
+        "Tu posición, en una oración.",
+        "Por qué: el lector parte de algo que conoce.",
+        "Un ejemplo concreto del texto (la misma taza explica tres cosas).",
+        "El riesgo o la objeción.",
+        "Cómo el texto lo maneja (la fórmula)."
+      ],
+      "rubric": [
+        {
+          "text": "Tomás una posición clara",
+          "detect": "\\b(i think|in my opinion|i believe)\\b"
+        },
+        {
+          "text": "Justificás con algo del texto",
+          "detect": "\\b(tea|entropy|formula)\\b"
+        },
+        {
+          "text": "Mencionás un riesgo o una objeción"
+        },
+        {
+          "text": "Cerrás con una conclusión propia"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "What is your opinion?",
+          "segment": "In my opinion it helps a lot, at least at the beginning.",
+          "hint": "Posición corta y clara."
+        },
+        {
+          "prompt": "Why does it help?",
+          "segment": "A cup of tea is something everybody has seen, so the reader starts from a real image instead of an abstract definition.",
+          "hint": "El motivo."
+        },
+        {
+          "prompt": "Can you give an example from the text?",
+          "segment": "In this text the same cup explains three different things: heat flow, temperature as movement, and entropy.",
+          "hint": "Evidencia concreta."
+        },
+        {
+          "prompt": "Is there a risk?",
+          "segment": "I also think there is a risk, because an everyday image can hide the mathematics.",
+          "hint": "La objeción."
+        },
+        {
+          "prompt": "How does the text handle that risk?",
+          "segment": "The text is honest about that: it says there is a relatively simple formula to calculate entropy, so the reader knows that the real definition is a formula and not a cup of tea.",
+          "hint": "El cierre."
+        }
+      ]
+    },
+    {
+      "id": "en2.u5.rd.002",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 16,
+        "section": "Text N°2",
+        "note": "Texto reproducido del cuadernillo. Los bloques con cuentas (÷, −, £) se leen mal en TTS: son para leer, no para escuchar."
+      },
+      "grammar": [
+        "quantifiers",
+        "conditionals.first"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 1,
+      "textId": "adult-maths",
+      "kind": "reading",
+      "title": "Maths that will help you as an adult: from baking a cake to asking for a pay rise",
+      "credit": {
+        "author": "Davide Penazzi",
+        "publication": "The Conversation",
+        "url": "https://theconversation.com/maths-that-will-help-you-as-an-adult-from-baking-a-cake-to-asking-for-a-pay-rise-198041"
+      },
+      "speaker": "narrator",
+      "sections": [
+        {
+          "heading": "Maths for everyday life",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "The UK's Prime Minister Rishi Sunak has proposed that school pupils should continue learning maths until 18. He argues that students need numeracy skills for careers and adult life. But what about adults who already feel anxious when they see numbers? Millions of people in the UK struggle with basic arithmetic, and many suffer from maths anxiety."
+            },
+            {
+              "kind": "para",
+              "text": "Still, maths can help us make better decisions in daily life. Here are some examples."
+            }
+          ]
+        },
+        {
+          "heading": "1. Use ratios to adapt a recipe",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Imagine you find a recipe for four people, but you are cooking for three. Ratios can help. A ratio compares parts. If the recipe calls for four parts, you only need three."
+            },
+            {
+              "kind": "para",
+              "text": "For example, if the recipe needs 120g of flour, divide by four to find one part: 30g. Multiply by three people: 90g of flour. If the recipe says six teaspoons of oil, divide by four (1.5 teaspoons). Multiply by three: 4.5 teaspoons."
+            }
+          ]
+        },
+        {
+          "heading": "2. Understand averages to check your salary",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "In 2021, the average yearly earnings for full-time workers in the UK was £38,131. This number is the mean: all salaries added together, divided by the number of workers. But the mean can be misleading. A few very high salaries can raise the mean, even if most people earn less."
+            },
+            {
+              "kind": "para",
+              "text": "Another type of average is the median. Imagine lining up all workers from the lowest salary to the highest. The person in the middle represents the median. In 2021, the median salary was £31,285. This number is often more useful, because it shows what a \"typical\" worker earns."
+            },
+            {
+              "kind": "para",
+              "text": "If your salary is much lower than the median in your field, it may be worth asking why."
+            }
+          ]
+        },
+        {
+          "heading": "3. Mental division at a restaurant",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Phones make splitting the bill easy, but sometimes your battery is dead. Quick division skills are useful."
+            },
+            {
+              "kind": "para",
+              "text": "Suppose the bill is £92 for four people. Round up to £100: 100 ÷ 4 = 25. But the real bill is £8 less. £8 ÷ 4 = £2. So each pays £25 − £2 = £23."
+            },
+            {
+              "kind": "para",
+              "text": "Another method: round down to £80. That makes £20 each. Then divide the remaining £12 by four: £3 each. Total: £23."
+            }
+          ]
+        },
+        {
+          "heading": "4. Plan a hike with Naismith's rule",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Maths can even help outdoors. A Scottish mountaineer created Naismith's rule: allow one hour for each 5km walked, plus ten minutes for every 100m climbed."
+            },
+            {
+              "kind": "para",
+              "text": "If your route is 15km with 600m of climbing, that is three hours for distance plus one hour for climbing: four hours total. Add time for breaks, lunch, or a slower pace, and you might plan six hours. Maths helps you set a safe starting time."
+            }
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Maths is not only for school or careers. It is a tool for everyday life: cooking, understanding salaries, paying bills, or planning trips. With the right mindset, everyone can learn to use maths more confidently."
+            }
+          ]
+        }
+      ],
+      "afterReadingTask": "Find 5 examples of quantifiers in the text."
+    },
+    {
+      "id": "en2.u5.p.021",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 16,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "quantifiers",
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "adult-maths",
+      "kind": "phrase",
+      "text": "Millions of people struggle with basic arithmetic, and many suffer from maths anxiety.",
+      "gloss": "Millones de personas tienen dificultades con la aritmética básica, y muchas sufren ansiedad matemática.",
+      "speaker": "narrator",
+      "ipa": "mˈɪliənz ʌv pˈiːpəl stɹˈʌɡəl wɪð bˈeɪsɪk ɚɹˈɪθmətˌɪk ænd mˈɛni sˈʌfɚ fɹʌm mˈæθs æŋzˈaɪəɾi"
+    },
+    {
+      "id": "en2.u5.p.022",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 16,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "quantifiers",
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "adult-maths",
+      "kind": "phrase",
+      "text": "A few very high salaries can raise the mean, even if most people earn less.",
+      "gloss": "Unos pocos sueldos muy altos pueden subir la media, aunque la mayoría gane menos.",
+      "speaker": "narrator",
+      "ipa": "ɐ fjˈuː vˈɛɹi hˈaɪ sˈælɚɹiz kæn ɹˈeɪz ðə mˈiːn ˈiːvən ɪf mˈoʊst pˈiːpəl ˈɜːn lˈɛs"
+    },
+    {
+      "id": "en2.u5.lx.019",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 16,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "adult-maths",
+      "kind": "lexeme",
+      "word": "the mean",
+      "pos": "noun",
+      "gloss": "la media: se suman todos los valores y se divide por la cantidad",
+      "examplePhraseId": "en2.u5.p.022",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.020",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 16,
+        "section": "Text N°2"
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "adult-maths",
+      "kind": "lexeme",
+      "word": "misleading",
+      "pos": "adjective",
+      "gloss": "engañoso: te lleva a una conclusión equivocada",
+      "examplePhraseId": "en2.u5.p.022",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.qa.013",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "wh-questions",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "adult-maths",
+      "kind": "qa",
+      "prompt": "What is the difference between the mean and the median?",
+      "promptVariants": [
+        "Why is the median often more useful than the mean?"
+      ],
+      "replies": [
+        "The mean adds all salaries and divides; the median is the middle person."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The mean is all salaries added together, divided by the number of workers, while the person in the middle represents the median."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "The mean is the average; the median is the value in the middle when you line everyone up."
+        },
+        {
+          "mode": "connect",
+          "text": "The median is often more useful because a few very high salaries can raise the mean even if most people earn less."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.014",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 2."
+      },
+      "grammar": [
+        "wh-questions",
+        "quantifiers"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "adult-maths",
+      "kind": "qa",
+      "prompt": "What is Naismith's rule?",
+      "promptVariants": [
+        "How do you plan a hike according to the text?"
+      ],
+      "replies": [
+        "One hour for every 5km walked, plus ten minutes for every 100m climbed."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Naismith's rule says to allow one hour for each 5km walked, plus ten minutes for every 100m climbed."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "You count an hour per five kilometres and add ten minutes for each hundred metres of climb."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.pr.006",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 17,
+        "section": "Text N°2 — After-Reading Task",
+        "note": "Consigna textual del cuadernillo. Los ejemplos elegidos son nuestros."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "adult-maths",
+      "kind": "production",
+      "prompt": "Find 5 examples of quantifiers in the text and say them in full sentences.",
+      "modelAnswer": "Here are five quantifiers from the text. First, millions: millions of people in the UK struggle with basic arithmetic. Second, many: many suffer from maths anxiety. Third, a few: a few very high salaries can raise the mean. Fourth, most: most people earn less than the mean. And fifth, some: the text gives some examples of everyday maths.",
+      "scaffold": [
+        "Anunciá que vas a dar cinco cuantificadores.",
+        "Uno por uno, cada cuantificador dentro de su oración del texto.",
+        "No los digas sueltos: el cuantificador vive en su frase."
+      ],
+      "rubric": [
+        {
+          "text": "Das cinco cuantificadores distintos",
+          "detect": "\\b(millions|many|a few|most|some)\\b"
+        },
+        {
+          "text": "Cada uno dentro de una oración, no suelto"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "First quantifier?",
+          "segment": "First, millions: millions of people in the UK struggle with basic arithmetic."
+        },
+        {
+          "prompt": "Second quantifier?",
+          "segment": "Second, many: many suffer from maths anxiety."
+        },
+        {
+          "prompt": "Third quantifier?",
+          "segment": "Third, a few: a few very high salaries can raise the mean."
+        },
+        {
+          "prompt": "Fourth quantifier?",
+          "segment": "Fourth, most: most people earn less than the mean."
+        },
+        {
+          "prompt": "Fifth quantifier?",
+          "segment": "And fifth, some: the text gives some examples of everyday maths."
+        }
+      ]
+    },
+    {
+      "id": "en2.u5.rd.003",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Text N°3",
+        "note": "Texto reproducido del cuadernillo. La tabla 'Extreme figures' del original se rinde como lista (factor, nombre, símbolo, año)."
+      },
+      "grammar": [
+        "past-simple.affirmative",
+        "will.future"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 1,
+      "textId": "yottabytes",
+      "kind": "reading",
+      "title": "How Many Yottabytes in a Quettabyte? Extreme Numbers Get New Names",
+      "credit": {
+        "author": "Elizabeth Gibney",
+        "publication": "Scientific American",
+        "url": "https://www.scientificamerican.com/article/how-many-yottabytes-in-a-quettabyte-extreme-numbers-get-new-names/"
+      },
+      "speaker": "narrator",
+      "sections": [
+        {
+          "heading": "New prefixes for huge and tiny numbers",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "By the 2030s, the world will generate around a yottabyte of data per year. That's an enormous number, enough DVDs stacked all the way to Mars. To keep up with this growth, scientists have agreed on new prefixes in the metric system to describe extremely large and extremely small quantities."
+            }
+          ]
+        },
+        {
+          "heading": "The decision in Paris",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "On 18 November, representatives from governments worldwide met at the General Conference on Weights and Measures near Paris. They voted to add four new prefixes to the International System of Units."
+            },
+            {
+              "kind": "list",
+              "items": [
+                "ronna, ten to the twenty-seventh",
+                "quetta, ten to the thirtieth",
+                "ronto, ten to the minus twenty-seventh",
+                "quecto, ten to the minus thirtieth"
+              ]
+            },
+            {
+              "kind": "para",
+              "text": "For example, Earth weighs about one ronnagram, and the mass of an electron is about one quectogram."
+            },
+            {
+              "kind": "para",
+              "text": "This was the first update since 1991, when prefixes like zetta, yocto, yotta and zepto were introduced. At that time, chemists wanted terms to express numbers close to Avogadro's constant."
+            }
+          ]
+        },
+        {
+          "heading": "Why now? Data science",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Today, the main driver is data science. Richard Brown, a metrologist at the UK National Physical Laboratory, worked for five years on the proposal. With global data already measured in zettabytes, people had begun using unofficial names like hella or bronto. Even Google's converter showed \"hellabyte.\""
+            },
+            {
+              "kind": "para",
+              "text": "Brown explained that these terms were problematic because their symbols are already used in the metric system. For example, h stands for hecto and H is the unit of inductance, the henry. To avoid confusion, official new names were needed."
+            }
+          ]
+        },
+        {
+          "heading": "How the names were chosen",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Brown looked for letters not already used in SI symbols. The choices were r and q. Following tradition, large prefixes end in \"a\", like mega or tera, while small ones end in \"o\", like nano or atto."
+            },
+            {
+              "kind": "para",
+              "text": "The sounds also connect to Greek or Latin numbers: ronna resembles ennea, nine, and quetta resembles deka, ten. One suggestion, quecca, was rejected because it sounded like a Portuguese swear word."
+            }
+          ]
+        },
+        {
+          "heading": "Reactions from scientists",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Experts welcomed the change. Georgette Macdonald, director of Canada's Metrology Research Centre, said the new prefixes provide consistency and avoid confusion. Even though science mostly needs large prefixes now, adding small ones keeps the system balanced."
+            },
+            {
+              "kind": "para",
+              "text": "Olivier Pellegrino, a metrologist in Portugal, noted that names like giga and tera once sounded strange too. With use, ronna and quetta will feel normal."
+            }
+          ]
+        },
+        {
+          "heading": "What's next?",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Brown pointed out that no letters remain unused in the alphabet for future prefixes. If science ever needs terms beyond ten to the thirty-third, one option could be compound prefixes, like kiloquetta. But for now, scientists can always use powers of ten."
+            },
+            {
+              "kind": "para",
+              "text": "After years of effort to get approval, Brown said he hasn't yet imagined the new terms in everyday use. \"It will be absolutely fantastic,\" he added."
+            }
+          ]
+        }
+      ],
+      "afterReadingTask": "Find 5 examples of the Past Simple Tense in the text."
+    },
+    {
+      "id": "en2.u5.p.023",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "yottabytes",
+      "kind": "phrase",
+      "text": "They voted to add four new prefixes to the International System of Units.",
+      "gloss": "Votaron agregar cuatro prefijos nuevos al Sistema Internacional de Unidades.",
+      "speaker": "narrator",
+      "ipa": "ðeɪ vˈoʊɾᵻd tʊ ˈæd fˈoːɹ nˈuː pɹˈiːfɪksᵻz tə ðɪ ˌɪntɚnˈæʃənəl sˈɪstəm ʌv jˈuːnɪts"
+    },
+    {
+      "id": "en2.u5.p.024",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "will.future"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "yottabytes",
+      "kind": "phrase",
+      "text": "By the 2030s, the world will generate around a yottabyte of data per year.",
+      "gloss": "Para la década de 2030, el mundo va a generar cerca de un yottabyte de datos por año.",
+      "speaker": "narrator",
+      "ipa": "baɪ ðə tˈuː θˈaʊzənd θˈɜːɾi z ðə wˈɜːld wɪl dʒˈɛnɚɹˌeɪt ɚɹˈaʊnd ɐ jˈɑːɾəbˌaɪt ʌv dˈeɪɾə pɜː jˈɪɹ"
+    },
+    {
+      "id": "en2.u5.lx.021",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "yottabytes",
+      "kind": "lexeme",
+      "word": "prefix",
+      "pos": "noun",
+      "gloss": "prefijo: lo que va antes de la unidad (kilo-, mega-, ronna-)",
+      "examplePhraseId": "en2.u5.p.023",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.022",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 19,
+        "section": "Text N°3"
+      },
+      "grammar": [
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "yottabytes",
+      "kind": "lexeme",
+      "word": "metrologist",
+      "pos": "noun",
+      "gloss": "metrólogo: especialista en medición y unidades",
+      "examplePhraseId": "en2.u5.p.023",
+      "focus": "phonetic"
+    },
+    {
+      "id": "en2.u5.qa.015",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 3."
+      },
+      "grammar": [
+        "wh-questions",
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "yottabytes",
+      "kind": "qa",
+      "prompt": "What are the four new prefixes?",
+      "promptVariants": [
+        "Which prefixes were added to the SI?"
+      ],
+      "replies": [
+        "Ronna, quetta, ronto and quecto."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "They voted to add ronna, quetta, ronto and quecto to the International System of Units."
+        },
+        {
+          "mode": "connect",
+          "text": "The large ones end in 'a' and the small ones end in 'o', following the tradition of mega, tera, nano and atto."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.016",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 3."
+      },
+      "grammar": [
+        "wh-questions",
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "yottabytes",
+      "kind": "qa",
+      "prompt": "Why were the unofficial names like hella and bronto a problem?",
+      "promptVariants": [
+        "Why did scientists need official new names?"
+      ],
+      "replies": [
+        "Because their symbols were already used in the metric system."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Brown explained that these terms were problematic because their symbols are already used in the metric system."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "The letters h and b were taken, so they would create confusion with hecto and the henry."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.pr.007",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Text N°3 — After-Reading Task",
+        "note": "Consigna textual del cuadernillo. Los ejemplos elegidos son nuestros."
+      },
+      "grammar": [
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "yottabytes",
+      "kind": "production",
+      "prompt": "Find 5 examples of the Past Simple Tense in the text and say them in full sentences.",
+      "modelAnswer": "Here are five examples of the past simple from the text. First: representatives from governments worldwide met near Paris. Second: they voted to add four new prefixes. Third: Richard Brown worked for five years on the proposal. Fourth: one suggestion, quecca, was rejected because it sounded like a swear word. And fifth: experts welcomed the change.",
+      "scaffold": [
+        "Anunciá que vas a dar cinco ejemplos del pasado simple.",
+        "Uno por uno, con el verbo bien marcado.",
+        "Elegí verbos regulares e irregulares para mostrar los dos casos."
+      ],
+      "rubric": [
+        {
+          "text": "Das cinco verbos en pasado simple",
+          "detect": "\\b(met|voted|worked|rejected|welcomed|sounded)\\b"
+        },
+        {
+          "text": "Cada uno dentro de una oración del texto"
+        },
+        {
+          "text": "Mezclás verbos regulares e irregulares"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "First example?",
+          "segment": "First: representatives from governments worldwide met near Paris."
+        },
+        {
+          "prompt": "Second example?",
+          "segment": "Second: they voted to add four new prefixes."
+        },
+        {
+          "prompt": "Third example?",
+          "segment": "Third: Richard Brown worked for five years on the proposal."
+        },
+        {
+          "prompt": "Fourth example?",
+          "segment": "Fourth: one suggestion, quecca, was rejected because it sounded like a swear word."
+        },
+        {
+          "prompt": "Fifth example?",
+          "segment": "And fifth: experts welcomed the change."
+        }
+      ]
+    },
+    {
+      "id": "en2.u5.rd.004",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 21,
+        "section": "Text N°4",
+        "note": "Texto reproducido del cuadernillo. Es una entrevista: los subtítulos en negrita del original son las preguntas."
+      },
+      "grammar": [
+        "present-continuous.affirmative",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 1,
+      "textId": "pro-dev",
+      "kind": "reading",
+      "title": "What Professional Development for Math Teachers Should Look Like",
+      "credit": {
+        "author": "Sarah Schwartz",
+        "publication": "Education Week",
+        "url": "https://www.edweek.org/leaders/teaching-learning/what-professional-development-for-math-teachers-should-look-like/2023/02"
+      },
+      "speaker": "narrator",
+      "sections": [
+        {
+          "heading": "Changing math instruction in Georgia",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Tonya Clarke's vision for math instruction in Clayton County public schools sounds simple: she wants students to think, reason, and analyze in order to solve real-world problems. But putting that vision into practice is more complicated."
+            },
+            {
+              "kind": "para",
+              "text": "It requires teachers to plan differently, giving students opportunities to problem-solve, discuss strategies, and work on project-based learning."
+            }
+          ]
+        },
+        {
+          "heading": "Math ambassadors",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "One key part of this change has been the creation of math ambassadors: teachers who receive special training from the district and then mentor other teachers in their schools. Clarke, the district's K-12 math coordinator, explained how this works."
+            },
+            {
+              "kind": "para",
+              "text": "How do you help teachers learn to support problem-solving? The ambassadors provide job-embedded support. They brainstorm strategies, practice them, and then bring ideas back to their schools. This way, they can lead collaborative planning sessions and help colleagues design more meaningful projects."
+            }
+          ]
+        },
+        {
+          "heading": "Tailoring support",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Does what teachers need vary by school? Yes. Each school has a personalized improvement plan. At the start of the year, Clarke's team meets with administrators and teachers to set goals. Some schools receive weekly visits, others every two weeks, and some only occasional support through virtual meetings or lead teachers."
+            }
+          ]
+        },
+        {
+          "heading": "Challenges",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "What challenges remain? Clarke admits that student scores are not yet showing the desired results. The district is working to connect instruction with leadership, ensuring that strategies are implemented consistently."
+            },
+            {
+              "kind": "para",
+              "text": "Ambassadors can prepare teachers for collaborative planning, but if schools lack structures to protect planning time, the work cannot be fully realized."
+            }
+          ]
+        },
+        {
+          "heading": "Advice for other leaders",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "What advice would you give to other districts? Clarke suggests breaking training into smaller groups instead of trying to train everyone at once. She also encourages collaboration with other departments."
+            },
+            {
+              "kind": "para",
+              "text": "For example, she worked with the English Language Arts department to improve how math teachers teach vocabulary. Many secondary math teachers are not trained in language development, so they needed support to help struggling readers. Clarke's team learned techniques from reading instruction to help students decode passages and understand math problems."
+            }
+          ]
+        },
+        {
+          "heading": "Conclusion",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Clarke's approach shows that changing math instruction is not only about new methods in the classroom. It requires mentoring, collaboration, personalized plans, and cross-department teamwork. The goal is clear: to help students become confident problem-solvers who can apply math in real life."
+            }
+          ]
+        }
+      ],
+      "afterReadingTask": "Find 5 examples of the Present Continuous in the text."
+    },
+    {
+      "id": "en2.u5.p.025",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 22,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "present-continuous.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 2,
+      "textId": "pro-dev",
+      "kind": "phrase",
+      "text": "The district is working to connect instruction with leadership.",
+      "gloss": "El distrito está trabajando para conectar la enseñanza con la conducción.",
+      "speaker": "narrator",
+      "ipa": "ðə dˈɪstɹɪkt ɪz wˈɜːkɪŋ tə kənˈɛkt ɪnstɹˈʌkʃən wɪð lˈiːdɚʃˌɪp"
+    },
+    {
+      "id": "en2.u5.p.026",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 21,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "relative-clauses",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "pro-dev",
+      "kind": "phrase",
+      "text": "Math ambassadors are teachers who receive special training and then mentor other teachers.",
+      "gloss": "Los embajadores de matemática son docentes que reciben formación especial y después acompañan a otros docentes.",
+      "speaker": "narrator",
+      "ipa": "mˈæθ ɐmbˈæsədɚz ɑːɹ tˈiːtʃɚz hˌuː ɹᵻsˈiːv spˈɛʃəl tɹˈeɪnɪŋ ænd ðˈɛn mˈɛntoːɹ ˈʌðɚ tˈiːtʃɚz"
+    },
+    {
+      "id": "en2.u5.lx.023",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 21,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "relative-clauses"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "pro-dev",
+      "kind": "lexeme",
+      "word": "to mentor",
+      "pos": "verb",
+      "gloss": "acompañar, tutorear a un colega con menos experiencia",
+      "examplePhraseId": "en2.u5.p.026",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.lx.024",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 21,
+        "section": "Text N°4"
+      },
+      "grammar": [
+        "present-continuous.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "pro-dev",
+      "kind": "lexeme",
+      "word": "job-embedded",
+      "pos": "adjective",
+      "gloss": "integrado al trabajo: la formación ocurre dentro de la tarea diaria",
+      "examplePhraseId": "en2.u5.p.026",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u5.qa.017",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 4."
+      },
+      "grammar": [
+        "wh-questions",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 3,
+      "textId": "pro-dev",
+      "kind": "qa",
+      "prompt": "What are math ambassadors?",
+      "promptVariants": [
+        "Who are the math ambassadors in Clayton County?"
+      ],
+      "replies": [
+        "Teachers who get special training from the district and then mentor other teachers."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Math ambassadors are teachers who receive special training from the district and then mentor other teachers in their schools."
+        },
+        {
+          "mode": "paraphrase",
+          "text": "They are teacher-trainers who stay in the classroom and support their colleagues."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.qa.018",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "synthetic",
+        "note": "Pregunta de comprensión nuestra sobre el Texto 4."
+      },
+      "grammar": [
+        "wh-questions",
+        "present-continuous.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "pro-dev",
+      "kind": "qa",
+      "prompt": "What challenges remain, according to Clarke?",
+      "promptVariants": [
+        "Is the programme already working?"
+      ],
+      "replies": [
+        "Student scores are not yet showing the desired results, and schools need to protect planning time."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Clarke admits that student scores are not yet showing the desired results."
+        },
+        {
+          "mode": "connect",
+          "text": "She also says that if schools lack structures to protect planning time, the work cannot be fully realized."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u5.pr.008",
+      "course": "en2",
+      "unit": 5,
+      "source": {
+        "origin": "extracted",
+        "page": 22,
+        "section": "Text N°4 — After-Reading Task",
+        "note": "Consigna textual del cuadernillo. Los ejemplos elegidos son nuestros."
+      },
+      "grammar": [
+        "present-continuous.affirmative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "mathematics"
+      ],
+      "difficulty": 4,
+      "textId": "pro-dev",
+      "kind": "production",
+      "prompt": "Find 5 examples of the Present Continuous in the text and say them in full sentences.",
+      "modelAnswer": "Here are five examples of the present continuous from the text. First: the district is working to connect instruction with leadership. Second: student scores are not yet showing the desired results. Third: the ambassadors are giving students opportunities to problem-solve. Fourth: Clarke's team is meeting with administrators to set goals. And fifth: teachers are bringing ideas back to their schools.",
+      "scaffold": [
+        "Anunciá que vas a dar cinco ejemplos del presente continuo.",
+        "Uno por uno, con el verbo to be y el gerundio bien marcados.",
+        "Incluí al menos una forma negativa."
+      ],
+      "rubric": [
+        {
+          "text": "Das cinco ejemplos en presente continuo",
+          "detect": "\\b(is|are)\\s+(not\\s+)?(yet\\s+)?\\w+ing\\b"
+        },
+        {
+          "text": "Incluís al menos una forma negativa (are not showing)",
+          "detect": "\\bnot\\b"
+        },
+        {
+          "text": "Cada uno dentro de una oración, no suelto"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "First example?",
+          "segment": "First: the district is working to connect instruction with leadership."
+        },
+        {
+          "prompt": "Second example?",
+          "segment": "Second: student scores are not yet showing the desired results."
+        },
+        {
+          "prompt": "Third example?",
+          "segment": "Third: the ambassadors are giving students opportunities to problem-solve."
+        },
+        {
+          "prompt": "Fourth example?",
+          "segment": "Fourth: Clarke's team is meeting with administrators to set goals."
+        },
+        {
+          "prompt": "Fifth example?",
+          "segment": "And fifth: teachers are bringing ideas back to their schools."
+        }
+      ]
+    }
+  ]
+}
