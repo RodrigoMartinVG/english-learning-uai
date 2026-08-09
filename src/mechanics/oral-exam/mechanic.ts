@@ -43,7 +43,7 @@ export const oralExam: Mechanic<OralExamRound> = {
   name: 'Examen oral',
   skill: 'production',
   level: 5,
-  blurb: 'El examinador pregunta. Sin texto, sin ayudas. Hablá.',
+  blurb: 'El examinador pregunta. Hablá de memoria — o copiá el modelo parte por parte.',
 
   accepts(atom: Atom): boolean {
     return atom.kind === 'production';

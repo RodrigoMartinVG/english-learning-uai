@@ -125,8 +125,12 @@ export interface ModelScript {
 }
 
 /** Las oraciones (con audio) de una versión, igual que las parte el copiar frase por
- *  frase: la Versión A por sus `steps`; las variantes B/C/D partiendo el texto. */
-function versionChunks(
+ *  frase: la Versión A por sus `steps`; las variantes B/C/D partiendo el texto.
+ *
+ *  Exportada porque es la MISMA partición que usan las mecánicas que copian el texto
+ *  fragmento a fragmento (Armá el guion, examen oral en modo sombra): si divergiera,
+ *  pedirían audio que el build no generó. */
+export function versionChunks(
   p: Extract<Atom, { kind: 'production' }>,
   versionIdx: number
 ): ScriptChunk[] {

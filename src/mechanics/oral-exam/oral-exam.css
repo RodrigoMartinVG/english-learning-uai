@@ -106,11 +106,31 @@
   color: var(--text-faint);
 }
 
+/* Pantalla de elección: rendirlo de memoria vs copiarlo parte por parte. */
+.exam__choice {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+.exam__choice-note {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin: 0.5rem 0 0;
+}
+.exam__choice .exam__toggle {
+  margin-top: 0.8rem;
+  background: var(--bg);
+}
+
 .exam__block {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 14px 16px;
+}
+.exam__block .ab {
+  margin-top: 10px;
 }
 .exam__transcript {
   font-family: var(--mono);

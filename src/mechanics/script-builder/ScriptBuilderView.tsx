@@ -12,11 +12,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useAudio } from '../../audio/AudioProvider.tsx';
 import { SpeakPanel } from '../../ui/SpeakPanel.tsx';
+import { ShadowRun } from '../../ui/ShadowRun.tsx';
 import type { Recording } from '../../audio/Recorder.ts';
 import { LiveDictation, Highlighted, type DictationResult } from '../../ui/LiveDictation.tsx';
-import { stepSegmentKey, stepQuestionKey, modelVarSentenceKey } from '../../../content/schema.ts';
-import { splitSentences } from '../../../content/sentences.ts';
-import { MODEL_VOICES } from '../../../content/kokoro-voices.ts';
+import { stepQuestionKey } from '../../../content/schema.ts';
+import { versionChunks } from '../../data/reference.ts';
 import { expectedWords } from './mechanic.ts';
 import type { MechanicViewProps } from '../types.ts';
 import type { ScriptBuilderRound } from './mechanic.ts';
@@ -50,7 +50,6 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
   const [exam, setExam] = useState(false); // sub-modo de reconstruir
   const [whole, setWhole] = useState(false); // sub-modo de crear: todo de corrido
   const [shadow, setShadow] = useState(false); // copiar SOLO por audio (sin ver el texto)
-  const [voice, setVoice] = useState<string | null>(null); // voz elegida para el modelo (null = la del texto)
   const [idx, setIdx] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [built, setBuilt] = useState<string[]>([]); // copiar/reconstruir: fragmentos del modelo
@@ -84,30 +83,17 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
   const versionText = (v: number) => (v === 0 ? target.modelAnswer : variants[v - 1]!);
   const versionWholeKey = (v: number) => (v === 0 ? `${target.id}.model` : `${target.id}.modelvar.${v - 1}`);
 
-  // Los "chunks" (frases) de la versión elegida, para copiar/reconstruir.
-  const chunks = useMemo<Chunk[]>(() => {
-    if (version === 0) {
-      return steps.map((s, i) => ({
-        text: s.segment,
-        audioKey: stepSegmentKey(target.id, i),
-        prompt: s.prompt,
-        hint: s.hint,
-      }));
-    }
-    return splitSentences(variants[version - 1]!).map((sent, m) => ({
-      text: sent,
-      audioKey: modelVarSentenceKey(target.id, version - 1, m),
-    }));
-  }, [version, steps, variants, target.id]);
-
-  // Voces con clip por-frase para TODAS las oraciones: solo esas se ofrecen (si no,
-  // esa frase caería a la voz del navegador). Mismas etiquetas que la vista de modelos.
-  const voiceOptions = useMemo(
+  // Los "chunks" (frases) de la versión elegida, para copiar/reconstruir. La partición
+  // es la misma que usa el build de audio (versionChunks); solo la Versión A suma la
+  // pregunta guía y el ancla de cada paso.
+  const chunks = useMemo<Chunk[]>(
     () =>
-      MODEL_VOICES.filter(
-        (v) => chunks.length > 0 && chunks.every((c) => audio.hasFile(`${c.audioKey}.v.${v.id}`))
-      ),
-    [chunks, audio]
+      versionChunks(target, version).map((c, i) => ({
+        ...c,
+        prompt: version === 0 ? steps[i]?.prompt : undefined,
+        hint: version === 0 ? steps[i]?.hint : undefined,
+      })),
+    [target, version, steps]
   );
 
   const chunk = chunks[idx];
@@ -115,23 +101,19 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
 
   const playChunk = useCallback(() => {
     if (!chunk) return;
-    // Con voz elegida, suena esa variante pregenerada (.v.<voz>); si no existe, el
-    // servicio cae a la voz por defecto/navegador.
-    const key = voice ? `${chunk.audioKey}.v.${voice}` : chunk.audioKey;
-    void audio.speak({ key, text: chunk.text, speakerId: target.speaker });
-  }, [audio, chunk, target.speaker, voice]);
+    void audio.speak({ key: chunk.audioKey, text: chunk.text, speakerId: target.speaker });
+  }, [audio, chunk, target.speaker]);
 
   const askQuestion = useCallback(() => {
     const s = steps[idx];
     if (s) void audio.speak({ key: stepQuestionKey(target.id, idx), text: s.prompt, speakerId: 'narrator' });
   }, [audio, steps, idx, target.id]);
 
-  // Al entrar a cada paso: en Copiar suena la frase; en Reconstruir/Crear, la pregunta.
+  // Al entrar a cada paso suena la pregunta (en Copiar, de la frase se encarga ShadowRun).
   useEffect(() => {
     if (phase !== 'run') return;
     setRevealed(false);
-    if (flow === 'copy') playChunk();
-    else if (flow === 'create' && !whole) askQuestion();
+    if (flow === 'create' && !whole) askQuestion();
     else if (flow === 'reconstruct' && chunk?.prompt) askQuestion();
     return () => audio.cancel();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -283,8 +265,27 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
     );
   }
 
-  /* ───────────────────── run · copiar / reconstruir ────────────────────── */
-  if (phase === 'run' && (flow === 'copy' || flow === 'reconstruct') && chunk) {
+  /* ──────────────────────────── run · copiar ───────────────────────────── */
+  if (phase === 'run' && flow === 'copy') {
+    return (
+      <div className="build">
+        <ShadowRun
+          chunks={chunks}
+          speakerId={target.speaker}
+          audioOnly={shadow}
+          label={versionCount > 1 ? versionLabel(version) : undefined}
+          onFinish={({ texts, clips }) => {
+            clips.forEach((c) => addClip(c));
+            setBuilt(texts);
+            setPhase('report');
+          }}
+        />
+      </div>
+    );
+  }
+
+  /* ─────────────────────────── run · reconstruir ───────────────────────── */
+  if (phase === 'run' && flow === 'reconstruct' && chunk) {
     return (
       <div className="build">
         <div className="build__progress">
@@ -296,95 +297,50 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
           </div>
         </div>
 
-        {flow === 'copy' ? (
-          // COPIAR: oís (y ves, salvo en sombra) la frase, y la repetís.
-          <>
-            <div className="build__seg">
-              <button className="build__play" onClick={playChunk} aria-label="Escuchar la frase">
+        {/* RECONSTRUIR: pregunta (A) o "parte N" (B/C), recordás y revelás. */}
+        <div className="build__q">
+          {chunk.prompt ? (
+            <>
+              <button className="build__play" onClick={askQuestion} aria-label="Repetir la pregunta">
                 🔊
               </button>
-              {shadow ? (
-                <p className="build__shadow">🎧 Solo audio — escuchá y repetí de oído. El texto aparece al terminar.</p>
-              ) : (
-                <p>{chunk.text}</p>
-              )}
-            </div>
-            <div className="build__voices">
-              <span className="build__voices-label">Voz</span>
-              <button
-                className={'build__voice' + (voice === null ? ' build__voice--on' : '')}
-                onClick={() => setVoice(null)}
-              >
-                Original
-              </button>
-              {voiceOptions.map((v) => (
-                <button
-                  key={v.id}
-                  className={'build__voice' + (voice === v.id ? ' build__voice--on' : '')}
-                  onClick={() => setVoice(v.id)}
-                >
-                  {v.label}
-                </button>
-              ))}
-            </div>
-            <p className="build__hint">Escuchala y repetila igual — imitá el ritmo y la entonación.</p>
+              <p>{chunk.prompt}</p>
+            </>
+          ) : (
+            <p>Recordá y decí la parte {idx + 1} del guion.</p>
+          )}
+        </div>
+        {chunk.hint && <p className="build__anchor">🧭 {chunk.hint}</p>}
+        {!revealed ? (
+          exam ? (
             <SpeakPanel
               key={idx}
               targets={[chunk.text]}
               neighbourhood={chunks.map((c) => c.text)}
               lang="en-US"
               onPlayReference={playChunk}
-              onDone={(_, rec) => takeChunk(rec)}
+              onDone={(_, rec) => {
+                addClip(rec);
+                setRevealed(true);
+              }}
             />
-          </>
+          ) : (
+            <button className="btn btn--primary btn--wide" onClick={reveal}>
+              Revelar esta parte →
+            </button>
+          )
         ) : (
-          // RECONSTRUIR: pregunta (A) o "parte N" (B/C), recordás y revelás.
-          <>
-            <div className="build__q">
-              {chunk.prompt ? (
-                <>
-                  <button className="build__play" onClick={askQuestion} aria-label="Repetir la pregunta">
-                    🔊
-                  </button>
-                  <p>{chunk.prompt}</p>
-                </>
-              ) : (
-                <p>Recordá y decí la parte {idx + 1} del guion.</p>
-              )}
+          <div className="build__revealed">
+            <div className="build__seg">
+              <button className="build__play" onClick={playChunk} aria-label="Escuchar la parte">
+                🔊
+              </button>
+              <p>{chunk.text}</p>
             </div>
-            {chunk.hint && <p className="build__anchor">🧭 {chunk.hint}</p>}
-            {!revealed ? (
-              exam ? (
-                <SpeakPanel
-                  key={idx}
-                  targets={[chunk.text]}
-                  neighbourhood={chunks.map((c) => c.text)}
-                  lang="en-US"
-                  onPlayReference={playChunk}
-                  onDone={(_, rec) => {
-                    addClip(rec);
-                    setRevealed(true);
-                  }}
-                />
-              ) : (
-                <button className="btn btn--primary btn--wide" onClick={reveal}>
-                  Revelar esta parte →
-                </button>
-              )
-            ) : (
-              <div className="build__revealed">
-                <div className="build__seg">
-                  <button className="build__play" onClick={playChunk} aria-label="Escuchar la parte">
-                    🔊
-                  </button>
-                  <p>{chunk.text}</p>
-                </div>
-                <button className="btn btn--primary btn--wide" onClick={() => takeChunk()} autoFocus>
-                  {idx + 1 < chunks.length ? 'Siguiente parte →' : 'Ver el guion completo →'}
-                </button>
-              </div>
-            )}
-          </>
+            <button className="btn btn--primary btn--wide" onClick={() => takeChunk()} autoFocus>
+              {idx + 1 < chunks.length ? 'Siguiente parte →' : 'Ver el guion completo →'}
+            </button>
+          </div>
         )}
 
         {built.length > 0 && (

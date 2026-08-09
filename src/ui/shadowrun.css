@@ -1,0 +1,118 @@
+/* ShadowRun — copiar frase por frase. Compartido por "Armá el guion" y el examen oral. */
+
+.shrun {
+  max-width: 40rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.shrun__progress {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+.shrun__bar {
+  flex: 1;
+  height: 4px;
+  background: var(--surface-hi);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.shrun__bar span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transition: width var(--dur) var(--ease);
+}
+
+.shrun__seg {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--success);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 1rem;
+}
+.shrun__seg p {
+  margin: 0;
+  line-height: 1.55;
+}
+.shrun__blind {
+  color: var(--text-dim);
+  font-size: 1rem;
+}
+
+.shrun__play {
+  flex: none;
+  background: var(--surface-hi);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1;
+  padding: 0.35rem 0.5rem;
+  margin-top: 0.15rem;
+}
+.shrun__play:hover {
+  background: var(--accent-dim);
+}
+
+.shrun__voices {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+.shrun__voices-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+}
+.shrun__voice {
+  min-height: 30px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-dim);
+  font-size: 13px;
+}
+.shrun__voice:hover {
+  border-color: var(--accent);
+}
+.shrun__voice--on {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 16%, var(--surface));
+  color: var(--text);
+}
+
+.shrun__hint {
+  color: var(--text-faint);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.shrun__soFar {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.shrun__soFar-label {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  margin-bottom: 0.4rem;
+}
+.shrun__script {
+  line-height: 1.65;
+  margin: 0;
+}
