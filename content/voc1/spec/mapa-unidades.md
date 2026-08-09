@@ -48,7 +48,7 @@ Orden de utilidad, no por dimensión:
 
 ---
 
-## Tramo 1 · Núcleo esencial — vida cotidiana (`unit-1.json` · 11 temas)
+## Tramo 1 · Núcleo esencial — vida cotidiana (`unit-1.json` · 12 temas)
 
 Lo más frecuente y básico (NGSL top ~800 + los campos cotidianos cuyos miembros centrales
 son frecuentes). Cada fila es un **tema (aspect)** dentro de `unit-1.json`. *(CEFR ref: ~A1-A2.)*
@@ -56,16 +56,17 @@ son frecuentes). Cada fila es un **tema (aspect)** dentro de `unit-1.json`. *(CE
 | # | Tema | topic | ~ítems | Estado |
 |---|---|---|---|---|
 | 1 | Verbos esenciales (be, have, go, get, make, say, know… + keep, begin, show, run, write, speak, leave…) | `essentials` | 50 | ✅ hecha |
-| 2 | Adjetivos y adverbios esenciales (good, big, new, very, more, now, here…) | `adjectives`* | ~35 | ▶ **próxima** |
-| 3 | Phrasal verbs de alta frecuencia (get up, sit down, come back…) | `phrasal`* | ~20 | · |
-| 4 | La familia | `family` | 26 | ✅ hecha |
-| 5 | La casa y la vida diaria (muebles, ropa, objetos) | `home` | ~35 | · |
-| 6 | Comida y bebida | `food`* | ~35 | · |
-| 7 | El cuerpo y la salud | `body`* | ~30 | · |
-| 8 | Gente, trabajo y estudio | `workplace`/`campus` | ~30 | · |
-| 9 | Tiempo, números y dinero | `time`/`numbers`* | ~30 | · |
-| 10 | Lugares, ciudad y transporte (+ clima, entorno, animales frecuentes) | `city`/`transport`* | ~35 | · |
-| 11 | Descripción y sentimientos (personalidad, colores, tamaños) | `describe`*/`feelings`* | ~35 | · |
+| 2 | Verbos irregulares (por patrón) — pasado y participio | grammar `verb.irregular` | 31 | ✅ hecha |
+| 3 | Adjetivos y adverbios esenciales (good, big, new, very, more, now, here…) | `adjectives`* | ~35 | ▶ **próxima** |
+| 4 | Phrasal verbs de alta frecuencia (get up, sit down, come back…) | `phrasal`* | ~20 | · |
+| 5 | La familia | `family` | 26 | ✅ hecha |
+| 6 | La casa y la vida diaria (muebles, ropa, objetos) | `home` | ~35 | · |
+| 7 | Comida y bebida | `food`* | ~35 | · |
+| 8 | El cuerpo y la salud | `body`* | ~30 | · |
+| 9 | Gente, trabajo y estudio | `workplace`/`campus` | ~30 | · |
+| 10 | Tiempo, números y dinero | `time`/`numbers`* | ~30 | · |
+| 11 | Lugares, ciudad y transporte (+ clima, entorno, animales frecuentes) | `city`/`transport`* | ~35 | · |
+| 12 | Descripción y sentimientos (personalidad, colores, tamaños) | `describe`*/`feelings`* | ~35 | · |
 
 *`*` = topic a agregar a `TOPIC_TAGS`. `essentials` agrupa el núcleo transversal; `phrasal`, los phrasal verbs.*
 

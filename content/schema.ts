@@ -76,6 +76,8 @@ export const GRAMMAR_TAGS = [
   'shopping',
   'directions',
   'would-like',
+  // Vocabulario: marca los verbos irregulares (para el tema "por patrón").
+  'verb.irregular',
 ] as const;
 
 /** Funciones comunicativas: qué HACE el hablante, no qué estructura usa. */
@@ -344,6 +346,17 @@ export const lexemeAtomSchema = z.object({
   family: z.array(z.string()).optional(),
   /** Matices/sinónimos con su nota: "establish (más formal)". */
   nuance: z.array(z.string()).optional(),
+  /** Verbos irregulares: sus formas (pasado/participio) y el patrón, para el drill
+   *  "Verbos irregulares (por patrón)". El `word` es la forma base. */
+  forms: z
+    .object({
+      past: z.string().min(1),
+      participle: z.string().min(1),
+      /** same=A-A-A (cut) · aba=A-B-A (come/came/come) · abb=A-B-B (buy/bought) ·
+       *  vowel=i-a-u (sing/sang/sung) · other. */
+      pattern: z.enum(['same', 'aba', 'abb', 'vowel', 'other']),
+    })
+    .optional(),
 });
 
 export const contrastAtomSchema = z.object({
