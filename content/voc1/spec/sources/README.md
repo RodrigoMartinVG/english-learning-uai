@@ -18,19 +18,25 @@ Listas de frecuencia **reales** que definen QUÉ queremos cubrir. El script
   palabra+nivel (dato factual); las definiciones/ejemplos de Oxford (con copyright) NO se
   copian. Unión NGSL∪NAWL∪Oxford ≈ **5.452 palabras objetivo**.
 
-### Fuentes que faltan agregar (expresiones multipalabra — ver por qué en PLANTILLA/índice)
+### Capas de expresiones multipalabra (MWE) — todas activas ✅
 
-Las listas de arriba son de **palabras sueltas**. Los phrasal verbs, idioms y colocaciones
-son **unidades multipalabra**: NO las captura una lista de frecuencia de palabras, así que
-son **denominadores aparte** (cada `.txt` nuevo aparece solo en el rastreador):
+Las tres listas de arriba son de **palabras sueltas**. Los phrasal verbs, idioms y
+colocaciones son **unidades multipalabra**: NO las captura una lista de frecuencia de
+palabras, así que son **denominadores aparte** (cada `.txt` aparece como su propia fila en el
+rastreador). Ya están las tres — el curso tiene **6 capas de contenido** en total:
 
 - **`phave.txt`** — ✅ PHaVE List (Garnier & Schmitt 2015): 150 phrasal verbs más
   frecuentes (norbertschmitt.co.uk, Appendix 1). Cubre ~83% de los phrasal verbs. Multi-
   palabra → denominador propio. Sin banda CEFR (tiene su rank 1-150 como proxy).
-- **`phrase.txt`** — *(pendiente)* PHRASE List (Martinez & Schmitt 2012): ~505 expresiones
-  formulaicas frecuentes (idioms/chunks).
-- **`acl.txt`** — Academic Collocation List (Ackermann & Chen 2013): ~2.500 colocaciones
-  académicas. Para la Dim. 1.5 / patrones.
+- **`phrase.txt`** — ✅ PHRASE List (Martinez & Schmitt 2012): **500** formas de superficie
+  de las ~505 expresiones formulaicas no transparentes más frecuentes (idioms/chunks). Fuente:
+  norbertschmitt.co.uk (Appendix oficial, `.doc`). Los sentidos/glosas entre paréntesis y
+  comillas se removieron para el match exacto (p. ej. `going to (future)` → `going to`), así que
+  el conteo baja de 505 a 500 formas únicas. Denominador propio.
+- **`acl.txt`** — ✅ Academic Collocation List (Ackermann & Chen 2013): **2.112** colocaciones
+  académicas (de las 2.469 publicadas) extraídas de eapfoundation.com (páginas alfabética + por
+  tipo). Colocaciones adj+sust, sust+sust, verbo+sust, adv+adj, verbo+adv. Para la Dim. 1.5 /
+  Tramo 4. Denominador propio.
 - *Verbos irregulares:* NO son un denominador aparte — son palabras que **ya están en la
   NGSL** (be, go, get…) con una **etiqueta** de irregularidad. Ver el índice.
 

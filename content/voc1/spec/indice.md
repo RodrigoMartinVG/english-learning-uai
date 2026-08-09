@@ -50,10 +50,12 @@ orden real y los nombres de los tramos están en el [mapa](./mapa-unidades.md).*
 | **B2** | — | raíces; más colocaciones | ciencia, sociedad, tech | polisemia; contables engañosos | idioms; hedging |
 | **C1** | — | compuestos; colocaciones finas | académico + track ⭐ | matices/sinónimos | idioms avanzados; discurso |
 
-> **Nota sobre tiempos compuestos y perfectos:** son **gramática**, no vocabulario —
-> van en el curso **Gramática** (present perfect ~B1, past perfect ~B2), en paralelo a
-> este. Lo que el vocabulario aporta temprano es su **insumo**: los *participios* de los
-> irregulares de alta frecuencia (`gone, done, seen, taken`), que ya aparecen en A1-A2.
+> **Nota sobre tiempos, condicionales y subordinadas:** entran a este curso **en modo
+> vocabulario** (ver **Dimensión 6**), por sus *exponentes léxicos* — marcadores (*already,
+> yet, since, ago*), frames condicionales (*if, unless, as long as*), subordinadores/relativos
+> (*who, which, because, although*) — como chunks de repaso, no como paradigmas. El insumo
+> léxico (los *participios* de los irregulares: `gone, done, seen, taken`) ya está en A1-A2.
+> El ángulo **sistémico** (reglas y transformaciones) es del curso Gramática, si se desarrolla.
 
 ---
 
@@ -154,6 +156,59 @@ También espiralado por tramo.*
 
 ---
 
+## Dimensión 6 — Estructuras en modo vocabulario *(la gramática, aprendida como léxico)*
+
+*Decisión del curso: las **estructuras gramaticales** (tiempos, condicionales, subordinadas,
+morfología irregular…) **sí** entran a Vocabulario, pero **en modo vocabulario**: por sus
+**exponentes léxicos** —palabras señal, frames fijos, formas irregulares— como fichas de
+repaso, no como tablas de paradigmas. Así uno **se acostumbra a la forma** mientras suma
+léxico. Se diferencia de la Dim 5 (lexicogramática) en que la Dim 5 es un patrón atado a **una
+palabra concreta** (depend **on**), y la Dim 6 es una **estructura general** enseñada por sus
+exponentes más frecuentes. Todo espiralado por tramo — ver la matriz en [mapa-unidades](./mapa-unidades.md).*
+
+- **U6.1 · Morfología irregular de sustantivos (plurales)** `A2`–`C1` 🔁🗣 — cotidianos
+  (*child→children, man→men, foot→feet, person→people, life→lives, knife→knives*) y
+  grecolatinos académicos (*criterion→criteria, phenomenon→phenomena, analysis→analyses,
+  hypothesis→hypotheses, index→indices, matrix→matrices, formula→formulae, datum→data*).
+  *(Vocabulario, con la mecánica de formas.)*
+- **U6.2 · Comparativos/superlativos irregulares + estructuras de comparación** `A1`–`B1`
+  🗣 — *good/better/best, bad/worse/worst, far/further, little/less, much-many/more/most*; y
+  los frames *as…as, not as…as, more…than, the same as, different from, twice as…as, by far,
+  the more…the more*. *(Completar, Al inglés.)*
+- **U6.3 · Marcadores de tiempo y aspecto** `A1`–`B2` 🔁🗣 — *la gramática de los tiempos, en
+  modo vocab*: frecuencia (*always, usually, often, sometimes, rarely, hardly ever*),
+  perfect/pasado (*already, yet, still, just, ever, never, since, for, ago, recently, so far,
+  by now, lately*), futuro (*going to, will, be about to, soon, shortly*), continuo (*now,
+  right now, at the moment, currently*). *(Completar.)*
+- **U6.4 · Condicionales e hipótesis** `A2`–`C1` 🔁🗣 — conectores y frames: *if, unless, as
+  long as, provided (that), in case, otherwise, whether, even if, suppose, what if*; chunks
+  *if so / if not / if necessary / if I were you / if possible*; y los modales de hipótesis
+  (*would, could, might (have)*). *(Completar, Al inglés.)*
+- **U6.5 · Subordinación y relativos** `A2`–`C1` 🔁🗣 — pronombres relativos (*who, which,
+  that, whose, where, when, whom*) y subordinadores (*because, since, as, although, though,
+  even though, while, whereas, so that, in order to, once, until, before, after, as soon as*).
+  *Solapa con conectores (Dim 4.3): 4.3 conecta oraciones, 6.5 arma la subordinada.* *(Completar.)*
+- **U6.6 · Cuantificación, negación y polaridad** `A1`–`B2` 🔁🗣 — *some/any/no/every/each/
+  either/neither*; cuantificadores *much/many, (a) few/(a) little, several, plenty of, enough*;
+  polaridad *any, ever, at all, no longer, hardly, barely, neither…nor, either…or*. *Liga con
+  Dim 5.9 (partitivos por sustantivo) y U0.4 (palabras señal).* *(Completar.)*
+- **U6.7 · Preguntas y preguntas incrustadas (frames)** `A1`–`B1` 🗣 — *what/where/when/who/
+  why/how; how much/many/long/often; what kind of*; e incrustadas *I wonder if, do you know
+  where, could you tell me, I'd like to know*. *(Al inglés.)*
+- **U6.8 · Existenciales, énfasis y frases cleft** `A2`–`C1` 🗣 — *there is/are; it is…that;
+  what I mean is; the thing is; the reason (why)*. *(Al inglés.)*
+- **U6.9 · Voz pasiva lexicalizada** `B1`–`C1` 🔁 — chunks: *be made of, be based on, be
+  known as, be born, be supposed to, get + participio*. Receptivo; solapa con Dim 5.2
+  (preposiciones dependientes) y con la Gramática (el sistema pasivo). *(Completar.)*
+
+> **Frontera con Gramática (actualizada):** antes estas estructuras se derivaban al curso
+> Gramática. Ahora Vocabulario **las cubre en modo léxico** (esta Dim 6). Si se desarrolla el
+> curso Gramática, aporta el ángulo **sistémico** (reglas, transformaciones, paradigmas); no
+> hay duplicación, son dos capas del mismo fenómeno. Los **funcionales puros** (*the, a, of*)
+> no llevan ficha; se dan por cubiertos por el uso en los ejemplos.
+
+---
+
 ## Notas de implementación (para convertir en contenido)
 
 - **Palabra = ficha rica**, nunca suelta: `lexeme` con *gloss, oración de ejemplo,
@@ -166,14 +221,15 @@ También espiralado por tramo.*
 - **Límites entre cursos** (para no duplicar):
   - **Pronunciación:** el desplazamiento de acento y el schwa se *referencian* acá, se
     *entrenan* allá.
-  - **Gramática:** el criterio de corte es **regla general vs patrón por palabra**. Si
-    se generaliza (formar tiempos, hacer preguntas, sistema de artículos) → Gramática.
-    Si **depende de la palabra concreta** y se memoriza con ella (qué preposición rige,
-    gerundio/infinitivo, intensificador, separabilidad del phrasal) → acá (Dim. 5).
-    Casos: los **tiempos compuestos/perfectos** *viven* en Gramática (present perfect
-    ~B1); de los **irregulares**, acá las **formas** (base/pasado/participio, U0.6/U1.7)
-    y allá su *uso* para armar tiempos; los cuantificadores/contables, el ángulo léxico
-    acá (U5.9), la regla allá.
+  - **Gramática:** el corte es por **capa**, no por tema. Vocabulario cubre la capa
+    **léxica** de toda estructura: su exponente concreto memorizable — el patrón por
+    palabra (Dim. 5: preposición que rige, gerundio/infinitivo, separabilidad) **y** los
+    exponentes de las estructuras generales (Dim. 6: marcadores de tiempo, frames
+    condicionales, subordinadores/relativos, formas irregulares). El curso Gramática (si se
+    desarrolla) cubre la capa **sistémica**: reglas, transformaciones y paradigmas. Son dos
+    ángulos del mismo fenómeno, sin duplicar: p. ej. de los **tiempos**, acá los *marcadores*
+    (already, since, ago) y los *participios*; allá *cómo se arma* el present perfect. De los
+    **irregulares**, acá las *formas*; allá su *uso*.
 
 ## Priorización de autoría → ver el [mapa de unidades](./mapa-unidades.md)
 

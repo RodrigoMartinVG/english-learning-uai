@@ -96,7 +96,8 @@
       "cefr": "A1",
       "text": "My mother is a doctor.",
       "speaker": "narrator",
-      "gloss": "Mi mamá es médica."
+      "gloss": "Mi mamá es médica.",
+      "ipa": "maɪ mˈʌðɚɹ ɪz ɐ dˈɑːktɚ"
     },
     {
       "id": "voc1.u1.lx.001",
@@ -148,7 +149,8 @@
       "cefr": "A1",
       "text": "His father works a lot.",
       "speaker": "narrator",
-      "gloss": "Su papá trabaja mucho."
+      "gloss": "Su papá trabaja mucho.",
+      "ipa": "hɪz fˈɑːðɚ wˈɜːks ɐ lˈɑːt"
     },
     {
       "id": "voc1.u1.lx.002",
@@ -199,7 +201,8 @@
       "cefr": "A1",
       "text": "I have one brother.",
       "speaker": "narrator",
-      "gloss": "Tengo un hermano."
+      "gloss": "Tengo un hermano.",
+      "ipa": "aɪ hæv wˈʌn bɹˈʌðɚ"
     },
     {
       "id": "voc1.u1.lx.003",
@@ -248,7 +251,8 @@
       "cefr": "A1",
       "text": "Her sister is ten.",
       "speaker": "narrator",
-      "gloss": "Su hermana tiene diez."
+      "gloss": "Su hermana tiene diez.",
+      "ipa": "hɜː sˈɪstɚɹ ɪz tˈɛn"
     },
     {
       "id": "voc1.u1.lx.004",
@@ -296,7 +300,8 @@
       "cefr": "A1",
       "text": "They have two sons.",
       "speaker": "narrator",
-      "gloss": "Tienen dos hijos."
+      "gloss": "Tienen dos hijos.",
+      "ipa": "ðeɪ hæv tˈuː sˈʌnz"
     },
     {
       "id": "voc1.u1.lx.005",
@@ -343,7 +348,8 @@
       "cefr": "A1",
       "text": "My daughter likes music.",
       "speaker": "narrator",
-      "gloss": "A mi hija le gusta la música."
+      "gloss": "A mi hija le gusta la música.",
+      "ipa": "maɪ dˈɔːɾɚ lˈaɪks mjˈuːzɪk"
     },
     {
       "id": "voc1.u1.lx.006",
@@ -390,7 +396,8 @@
       "cefr": "A1",
       "text": "My parents live here.",
       "speaker": "narrator",
-      "gloss": "Mis padres viven acá."
+      "gloss": "Mis padres viven acá.",
+      "ipa": "maɪ pˈɛɹənts lˈaɪv hˈɪɹ"
     },
     {
       "id": "voc1.u1.lx.007",
@@ -442,7 +449,8 @@
       "cefr": "A1",
       "text": "The child is happy.",
       "speaker": "narrator",
-      "gloss": "El niño está contento."
+      "gloss": "El niño está contento.",
+      "ipa": "ðə tʃˈaɪld ɪz hˈæpi"
     },
     {
       "id": "voc1.u1.lx.008",
@@ -495,7 +503,8 @@
       "cefr": "A1",
       "text": "I love my family.",
       "speaker": "narrator",
-      "gloss": "Amo a mi familia."
+      "gloss": "Amo a mi familia.",
+      "ipa": "aɪ lˈʌv maɪ fˈæmɪli"
     },
     {
       "id": "voc1.u1.lx.009",
@@ -541,7 +550,8 @@
       "cefr": "A1",
       "text": "The baby is sleeping.",
       "speaker": "narrator",
-      "gloss": "El bebé está durmiendo."
+      "gloss": "El bebé está durmiendo.",
+      "ipa": "ðə bˈeɪbi ɪz slˈiːpɪŋ"
     },
     {
       "id": "voc1.u1.lx.010",
@@ -589,7 +599,8 @@
       "cefr": "A1",
       "text": "Her husband is tall.",
       "speaker": "narrator",
-      "gloss": "Su marido es alto."
+      "gloss": "Su marido es alto.",
+      "ipa": "hɜː hˈʌsbənd ɪz tˈɔːl"
     },
     {
       "id": "voc1.u1.lx.011",
@@ -633,7 +644,8 @@
       "cefr": "A1",
       "text": "His wife is a teacher.",
       "speaker": "narrator",
-      "gloss": "Su esposa es maestra."
+      "gloss": "Su esposa es maestra.",
+      "ipa": "hɪz wˈaɪf ɪz ɐ tˈiːtʃɚ"
     },
     {
       "id": "voc1.u1.lx.012",
@@ -680,7 +692,8 @@
       "cefr": "A1",
       "text": "My grandmother is eighty.",
       "speaker": "narrator",
-      "gloss": "Mi abuela tiene ochenta."
+      "gloss": "Mi abuela tiene ochenta.",
+      "ipa": "maɪ ɡɹˈændmʌðɚɹ ɪz ˈeɪɾi"
     },
     {
       "id": "voc1.u1.lx.013",
@@ -727,7 +740,8 @@
       "cefr": "A1",
       "text": "She is my best friend.",
       "speaker": "narrator",
-      "gloss": "Es mi mejor amiga."
+      "gloss": "Es mi mejor amiga.",
+      "ipa": "ʃiː ɪz maɪ bˈɛst fɹˈɛnd"
     },
     {
       "id": "voc1.u1.lx.014",
@@ -780,7 +794,8 @@
       "cefr": "A1",
       "text": "I am happy today.",
       "speaker": "narrator",
-      "gloss": "Hoy estoy contento."
+      "gloss": "Hoy estoy contento.",
+      "ipa": "aɪɐm hˈæpi tədˈeɪ"
     },
     {
       "id": "voc1.u1.lx.015",
@@ -829,7 +844,8 @@
       "cefr": "A1",
       "text": "I have a car.",
       "speaker": "narrator",
-      "gloss": "Tengo un auto."
+      "gloss": "Tengo un auto.",
+      "ipa": "aɪ hæv ɐ kˈɑːɹ"
     },
     {
       "id": "voc1.u1.lx.016",
@@ -886,7 +902,8 @@
       "cefr": "A1",
       "text": "I do my homework.",
       "speaker": "narrator",
-      "gloss": "Hago la tarea."
+      "gloss": "Hago la tarea.",
+      "ipa": "aɪ dˈuː maɪ hˈoʊmwɜːk"
     },
     {
       "id": "voc1.u1.lx.017",
@@ -943,7 +960,8 @@
       "cefr": "A1",
       "text": "I go to work by bus.",
       "speaker": "narrator",
-      "gloss": "Voy al trabajo en colectivo."
+      "gloss": "Voy al trabajo en colectivo.",
+      "ipa": "aɪ ɡˌoʊ tə wˈɜːk baɪ bˈʌs"
     },
     {
       "id": "voc1.u1.lx.018",
@@ -1000,7 +1018,8 @@
       "cefr": "A1",
       "text": "I get home at six.",
       "speaker": "narrator",
-      "gloss": "Llego a casa a las seis."
+      "gloss": "Llego a casa a las seis.",
+      "ipa": "aɪ ɡɛt hˈoʊm æt sˈɪks"
     },
     {
       "id": "voc1.u1.lx.019",
@@ -1058,7 +1077,8 @@
       "cefr": "A1",
       "text": "She makes great coffee.",
       "speaker": "narrator",
-      "gloss": "Hace un café buenísimo."
+      "gloss": "Hace un café buenísimo.",
+      "ipa": "ʃiː mˌeɪks ɡɹˈeɪt kˈɔfi"
     },
     {
       "id": "voc1.u1.lx.020",
@@ -1115,7 +1135,8 @@
       "cefr": "A1",
       "text": "Take an umbrella.",
       "speaker": "narrator",
-      "gloss": "Llevá un paraguas."
+      "gloss": "Llevá un paraguas.",
+      "ipa": "tˈeɪk ɐn ʌmbɹˈɛlə"
     },
     {
       "id": "voc1.u1.lx.021",
@@ -1171,7 +1192,8 @@
       "cefr": "A1",
       "text": "Come here, please.",
       "speaker": "narrator",
-      "gloss": "Vení acá, por favor."
+      "gloss": "Vení acá, por favor.",
+      "ipa": "kˈʌm hˈɪɹ plˈiːz"
     },
     {
       "id": "voc1.u1.lx.022",
@@ -1227,7 +1249,8 @@
       "cefr": "A1",
       "text": "Give me the book.",
       "speaker": "narrator",
-      "gloss": "Dame el libro."
+      "gloss": "Dame el libro.",
+      "ipa": "ɡˈɪv mˌiː ðə bˈʊk"
     },
     {
       "id": "voc1.u1.lx.023",
@@ -1283,7 +1306,8 @@
       "cefr": "A1",
       "text": "Say your name.",
       "speaker": "narrator",
-      "gloss": "Decí tu nombre."
+      "gloss": "Decí tu nombre.",
+      "ipa": "sˈeɪ jʊɹ nˈeɪm"
     },
     {
       "id": "voc1.u1.lx.024",
@@ -1339,7 +1363,8 @@
       "cefr": "A1",
       "text": "I can see the sea.",
       "speaker": "narrator",
-      "gloss": "Puedo ver el mar."
+      "gloss": "Puedo ver el mar.",
+      "ipa": "aɪ kæn sˈiː ðə sˈiː"
     },
     {
       "id": "voc1.u1.lx.025",
@@ -1395,7 +1420,8 @@
       "cefr": "A1",
       "text": "I don't know his name.",
       "speaker": "narrator",
-      "gloss": "No sé su nombre."
+      "gloss": "No sé su nombre.",
+      "ipa": "aɪ dˈoʊnt nˈoʊ hɪz nˈeɪm"
     },
     {
       "id": "voc1.u1.lx.026",
@@ -1454,7 +1480,8 @@
       "cefr": "A1",
       "text": "I want a coffee.",
       "speaker": "narrator",
-      "gloss": "Quiero un café."
+      "gloss": "Quiero un café.",
+      "ipa": "aɪ wˈɔnt ɐ kˈɔfi"
     },
     {
       "id": "voc1.u1.lx.027",
@@ -1502,7 +1529,8 @@
       "cefr": "A1",
       "text": "I like music.",
       "speaker": "narrator",
-      "gloss": "Me gusta la música."
+      "gloss": "Me gusta la música.",
+      "ipa": "aɪ lˈaɪk mjˈuːzɪk"
     },
     {
       "id": "voc1.u1.lx.028",
@@ -1551,7 +1579,8 @@
       "cefr": "A1",
       "text": "I work in a bank.",
       "speaker": "narrator",
-      "gloss": "Trabajo en un banco."
+      "gloss": "Trabajo en un banco.",
+      "ipa": "aɪ wˈɜːk ɪn ɐ bˈæŋk"
     },
     {
       "id": "voc1.u1.lx.029",
@@ -1603,7 +1632,8 @@
       "cefr": "A1",
       "text": "Use a pen, please.",
       "speaker": "narrator",
-      "gloss": "Usá una lapicera, por favor."
+      "gloss": "Usá una lapicera, por favor.",
+      "ipa": "jˈuːs ɐ pˈɛn plˈiːz"
     },
     {
       "id": "voc1.u1.lx.030",
@@ -1652,7 +1682,8 @@
       "cefr": "A1",
       "text": "I can't find my keys.",
       "speaker": "narrator",
-      "gloss": "No encuentro mis llaves."
+      "gloss": "No encuentro mis llaves.",
+      "ipa": "aɪ kˈænt fˈaɪnd maɪ kˈiːz"
     },
     {
       "id": "voc1.u1.lx.031",
@@ -1708,7 +1739,8 @@
       "cefr": "A1",
       "text": "Tell me the truth.",
       "speaker": "narrator",
-      "gloss": "Decime la verdad."
+      "gloss": "Decime la verdad.",
+      "ipa": "tˈɛl mˌiː ðə tɹˈuːθ"
     },
     {
       "id": "voc1.u1.lx.032",
@@ -1765,7 +1797,8 @@
       "cefr": "A1",
       "text": "Ask a question.",
       "speaker": "narrator",
-      "gloss": "Hacé una pregunta."
+      "gloss": "Hacé una pregunta.",
+      "ipa": "ˈæsk ɐ kwˈɛstʃən"
     },
     {
       "id": "voc1.u1.lx.033",
@@ -1814,7 +1847,8 @@
       "cefr": "A1",
       "text": "I need your help.",
       "speaker": "narrator",
-      "gloss": "Necesito tu ayuda."
+      "gloss": "Necesito tu ayuda.",
+      "ipa": "aɪ nˈiːd jʊɹ hˈɛlp"
     },
     {
       "id": "voc1.u1.lx.034",
@@ -1862,7 +1896,8 @@
       "cefr": "A1",
       "text": "I think so.",
       "speaker": "narrator",
-      "gloss": "Creo que sí."
+      "gloss": "Creo que sí.",
+      "ipa": "aɪ θˈɪŋk sˈoʊ"
     },
     {
       "id": "voc1.u1.lx.035",
@@ -1918,7 +1953,8 @@
       "cefr": "A1",
       "text": "Look at me.",
       "speaker": "narrator",
-      "gloss": "Mirame."
+      "gloss": "Mirame.",
+      "ipa": "lˈʊk æt mˌiː"
     },
     {
       "id": "voc1.u1.lx.036",
@@ -1968,7 +2004,8 @@
       "cefr": "A1",
       "text": "I feel tired.",
       "speaker": "narrator",
-      "gloss": "Me siento cansado."
+      "gloss": "Me siento cansado.",
+      "ipa": "aɪ fˈiːl tˈaɪɚd"
     },
     {
       "id": "voc1.u1.lx.037",
@@ -2026,7 +2063,8 @@
       "cefr": "A1",
       "text": "It becomes cold at night.",
       "speaker": "narrator",
-      "gloss": "Se pone frío de noche."
+      "gloss": "Se pone frío de noche.",
+      "ipa": "ɪt bɪkˌʌmz kˈoʊld æt nˈaɪt"
     },
     {
       "id": "voc1.u1.lx.038",
@@ -2080,7 +2118,8 @@
       "difficulty": 2,
       "text": "Call me later.",
       "speaker": "narrator",
-      "gloss": "Llamame después."
+      "gloss": "Llamame después.",
+      "ipa": "kˈɔːl mˌiː lˈeɪɾɚ"
     },
     {
       "course": "voc1",
@@ -2128,7 +2167,8 @@
       "difficulty": 2,
       "text": "Keep the change.",
       "speaker": "narrator",
-      "gloss": "Quedate con el vuelto."
+      "gloss": "Quedate con el vuelto.",
+      "ipa": "kˈiːp ðə tʃˈeɪndʒ"
     },
     {
       "course": "voc1",
@@ -2183,7 +2223,8 @@
       "difficulty": 2,
       "text": "The class begins at nine.",
       "speaker": "narrator",
-      "gloss": "La clase empieza a las nueve."
+      "gloss": "La clase empieza a las nueve.",
+      "ipa": "ðə klˈæs bɪɡˈɪnz æt nˈaɪn"
     },
     {
       "course": "voc1",
@@ -2240,7 +2281,8 @@
       "difficulty": 2,
       "text": "Show me your work.",
       "speaker": "narrator",
-      "gloss": "Mostrame tu trabajo."
+      "gloss": "Mostrame tu trabajo.",
+      "ipa": "ʃˈoʊ mˌiː jʊɹ wˈɜːk"
     },
     {
       "course": "voc1",
@@ -2295,7 +2337,8 @@
       "difficulty": 2,
       "text": "I can hear music.",
       "speaker": "narrator",
-      "gloss": "Puedo oír música."
+      "gloss": "Puedo oír música.",
+      "ipa": "aɪ kæn hˈɪɹ mjˈuːzɪk"
     },
     {
       "course": "voc1",
@@ -2350,7 +2393,8 @@
       "difficulty": 2,
       "text": "Children play in the park.",
       "speaker": "narrator",
-      "gloss": "Los niños juegan en el parque."
+      "gloss": "Los niños juegan en el parque.",
+      "ipa": "tʃˈɪldɹən plˈeɪ ɪnðə pˈɑːɹk"
     },
     {
       "course": "voc1",
@@ -2398,7 +2442,8 @@
       "difficulty": 2,
       "text": "I run every morning.",
       "speaker": "narrator",
-      "gloss": "Corro cada mañana."
+      "gloss": "Corro cada mañana.",
+      "ipa": "aɪ ɹˈʌn ˈɛvɹi mˈɔːɹnɪŋ"
     },
     {
       "course": "voc1",
@@ -2455,7 +2500,8 @@
       "difficulty": 2,
       "text": "Please don't move.",
       "speaker": "narrator",
-      "gloss": "Por favor no te muevas."
+      "gloss": "Por favor no te muevas.",
+      "ipa": "plˈiːz dˈoʊnt mˈuːv"
     },
     {
       "course": "voc1",
@@ -2502,7 +2548,8 @@
       "difficulty": 2,
       "text": "They live in Rome.",
       "speaker": "narrator",
-      "gloss": "Viven en Roma."
+      "gloss": "Viven en Roma.",
+      "ipa": "ðeɪ lˈɪv ɪn ɹˈoʊm"
     },
     {
       "course": "voc1",
@@ -2553,7 +2600,8 @@
       "difficulty": 2,
       "text": "I believe you.",
       "speaker": "narrator",
-      "gloss": "Te creo."
+      "gloss": "Te creo.",
+      "ipa": "aɪ bᵻlˈiːv juː"
     },
     {
       "course": "voc1",
@@ -2600,7 +2648,8 @@
       "difficulty": 2,
       "text": "Bring your books.",
       "speaker": "narrator",
-      "gloss": "Traé tus libros."
+      "gloss": "Traé tus libros.",
+      "ipa": "bɹˈɪŋ jʊɹ bˈʊks"
     },
     {
       "course": "voc1",
@@ -2654,7 +2703,8 @@
       "difficulty": 2,
       "text": "Write your name here.",
       "speaker": "narrator",
-      "gloss": "Escribí tu nombre acá."
+      "gloss": "Escribí tu nombre acá.",
+      "ipa": "ɹˈaɪt jʊɹ nˈeɪm hˈɪɹ"
     },
     {
       "course": "voc1",
@@ -2712,7 +2762,8 @@
       "difficulty": 2,
       "text": "Sit down, please.",
       "speaker": "narrator",
-      "gloss": "Sentate, por favor."
+      "gloss": "Sentate, por favor.",
+      "ipa": "sˈɪt dˈaʊn plˈiːz"
     },
     {
       "course": "voc1",
@@ -2766,7 +2817,8 @@
       "difficulty": 2,
       "text": "Please stand up.",
       "speaker": "narrator",
-      "gloss": "Por favor, parate."
+      "gloss": "Por favor, parate.",
+      "ipa": "plˈiːz stˈænd ˈʌp"
     },
     {
       "course": "voc1",
@@ -2821,7 +2873,8 @@
       "difficulty": 2,
       "text": "I pay by card.",
       "speaker": "narrator",
-      "gloss": "Pago con tarjeta."
+      "gloss": "Pago con tarjeta.",
+      "ipa": "aɪ pˈeɪ baɪ kˈɑːɹd"
     },
     {
       "course": "voc1",
@@ -2879,7 +2932,8 @@
       "difficulty": 2,
       "text": "Nice to meet you.",
       "speaker": "narrator",
-      "gloss": "Encantado de conocerte."
+      "gloss": "Encantado de conocerte.",
+      "ipa": "nˈaɪs tə mˈiːt juː"
     },
     {
       "course": "voc1",
@@ -2936,7 +2990,8 @@
       "difficulty": 2,
       "text": "I want to learn English.",
       "speaker": "narrator",
-      "gloss": "Quiero aprender inglés."
+      "gloss": "Quiero aprender inglés.",
+      "ipa": "aɪ wˈɔnt tə lˈɜːn ˈɪŋɡlɪʃ"
     },
     {
       "course": "voc1",
@@ -2983,7 +3038,8 @@
       "difficulty": 2,
       "text": "Things change fast.",
       "speaker": "narrator",
-      "gloss": "Las cosas cambian rápido."
+      "gloss": "Las cosas cambian rápido.",
+      "ipa": "θˈɪŋz tʃˈeɪndʒ fˈæst"
     },
     {
       "course": "voc1",
@@ -3030,7 +3086,8 @@
       "difficulty": 2,
       "text": "I don't understand.",
       "speaker": "narrator",
-      "gloss": "No entiendo."
+      "gloss": "No entiendo.",
+      "ipa": "aɪ dˈoʊnt ˌʌndɚstˈænd"
     },
     {
       "course": "voc1",
@@ -3081,7 +3138,8 @@
       "difficulty": 2,
       "text": "I watch TV at night.",
       "speaker": "narrator",
-      "gloss": "Miro tele de noche."
+      "gloss": "Miro tele de noche.",
+      "ipa": "aɪ wˈɑːtʃ tˌiːvˈiː æt nˈaɪt"
     },
     {
       "course": "voc1",
@@ -3128,7 +3186,8 @@
       "difficulty": 2,
       "text": "Follow me.",
       "speaker": "narrator",
-      "gloss": "Seguime."
+      "gloss": "Seguime.",
+      "ipa": "fˈɑːloʊ mˌiː"
     },
     {
       "course": "voc1",
@@ -3175,7 +3234,8 @@
       "difficulty": 2,
       "text": "Stop here, please.",
       "speaker": "narrator",
-      "gloss": "Pará acá, por favor."
+      "gloss": "Pará acá, por favor.",
+      "ipa": "stˈɑːp hˈɪɹ plˈiːz"
     },
     {
       "course": "voc1",
@@ -3222,7 +3282,8 @@
       "difficulty": 2,
       "text": "Do you speak English?",
       "speaker": "narrator",
-      "gloss": "¿Hablás inglés?"
+      "gloss": "¿Hablás inglés?",
+      "ipa": "dˈuː juː spˈiːk ˈɪŋɡlɪʃ"
     },
     {
       "course": "voc1",
@@ -3280,7 +3341,8 @@
       "difficulty": 2,
       "text": "I read every day.",
       "speaker": "narrator",
-      "gloss": "Leo todos los días."
+      "gloss": "Leo todos los días.",
+      "ipa": "aɪ ɹˈiːd ˈɛvɹi dˈeɪ"
     },
     {
       "course": "voc1",
@@ -3335,7 +3397,8 @@
       "difficulty": 2,
       "text": "I leave at eight.",
       "speaker": "narrator",
-      "gloss": "Salgo a las ocho."
+      "gloss": "Salgo a las ocho.",
+      "ipa": "aɪ lˈiːv æɾ ˈeɪt"
     },
     {
       "course": "voc1",
@@ -3389,7 +3452,8 @@
       "difficulty": 2,
       "text": "Can you help me?",
       "speaker": "narrator",
-      "gloss": "¿Me podés ayudar?"
+      "gloss": "¿Me podés ayudar?",
+      "ipa": "kæn juː hˈɛlp mˌiː"
     },
     {
       "course": "voc1",
@@ -3440,7 +3504,8 @@
       "cefr": "A1",
       "text": "My grandfather tells stories.",
       "speaker": "narrator",
-      "gloss": "Mi abuelo cuenta historias."
+      "gloss": "Mi abuelo cuenta historias.",
+      "ipa": "maɪ ɡɹˈændfɑːðɚ tˈɛlz stˈoːɹiz"
     },
     {
       "course": "voc1",
@@ -3487,7 +3552,8 @@
       "cefr": "A2",
       "text": "I visit my grandparents.",
       "speaker": "narrator",
-      "gloss": "Visito a mis abuelos."
+      "gloss": "Visito a mis abuelos.",
+      "ipa": "aɪ vˈɪzɪt maɪ ɡɹˈændpɛɹənts"
     },
     {
       "course": "voc1",
@@ -3531,7 +3597,8 @@
       "cefr": "A1",
       "text": "My aunt lives nearby.",
       "speaker": "narrator",
-      "gloss": "Mi tía vive cerca."
+      "gloss": "Mi tía vive cerca.",
+      "ipa": "maɪ ˈænt lˈaɪvz nɪɹbˈaɪ"
     },
     {
       "course": "voc1",
@@ -3575,7 +3642,8 @@
       "cefr": "A1",
       "text": "My uncle is a pilot.",
       "speaker": "narrator",
-      "gloss": "Mi tío es piloto."
+      "gloss": "Mi tío es piloto.",
+      "ipa": "maɪ ˈʌŋkəl ɪz ɐ pˈaɪlət"
     },
     {
       "course": "voc1",
@@ -3616,7 +3684,8 @@
       "cefr": "A1",
       "text": "She is my cousin.",
       "speaker": "narrator",
-      "gloss": "Es mi prima."
+      "gloss": "Es mi prima.",
+      "ipa": "ʃiː ɪz maɪ kˈʌzən"
     },
     {
       "course": "voc1",
@@ -3660,7 +3729,8 @@
       "cefr": "A2",
       "text": "His niece is five.",
       "speaker": "narrator",
-      "gloss": "Su sobrina tiene cinco."
+      "gloss": "Su sobrina tiene cinco.",
+      "ipa": "hɪz nˈiːs ɪz fˈaɪv"
     },
     {
       "course": "voc1",
@@ -3701,7 +3771,8 @@
       "cefr": "A2",
       "text": "My nephew plays football.",
       "speaker": "narrator",
-      "gloss": "Mi sobrino juega al fútbol."
+      "gloss": "Mi sobrino juega al fútbol.",
+      "ipa": "maɪ nˈɛfjuː plˈeɪz fˈʊtbɔːl"
     },
     {
       "course": "voc1",
@@ -3742,7 +3813,8 @@
       "cefr": "A2",
       "text": "Their grandson is tall.",
       "speaker": "narrator",
-      "gloss": "Su nieto es alto."
+      "gloss": "Su nieto es alto.",
+      "ipa": "ðɛɹ ɡɹˈændsʌn ɪz tˈɔːl"
     },
     {
       "course": "voc1",
@@ -3783,7 +3855,8 @@
       "cefr": "A2",
       "text": "My granddaughter sings.",
       "speaker": "narrator",
-      "gloss": "Mi nieta canta."
+      "gloss": "Mi nieta canta.",
+      "ipa": "maɪ ɡɹˈændɔːɾɚ sˈɪŋz"
     },
     {
       "course": "voc1",
@@ -3824,7 +3897,8 @@
       "cefr": "A2",
       "text": "We have relatives in Spain.",
       "speaker": "narrator",
-      "gloss": "Tenemos parientes en España."
+      "gloss": "Tenemos parientes en España.",
+      "ipa": "wiː hæv ɹˈɛlətˌɪvz ɪn spˈeɪn"
     },
     {
       "course": "voc1",
@@ -3868,7 +3942,8 @@
       "cefr": "A2",
       "text": "This is my partner, Ana.",
       "speaker": "narrator",
-      "gloss": "Esta es mi pareja, Ana."
+      "gloss": "Esta es mi pareja, Ana.",
+      "ipa": "ðɪs ɪz maɪ pˈɑːɹtnɚ ˈɑːnə"
     },
     {
       "course": "voc1",
@@ -3915,7 +3990,8 @@
       "cefr": "A2",
       "text": "They are twins.",
       "speaker": "narrator",
-      "gloss": "Son gemelos."
+      "gloss": "Son gemelos.",
+      "ipa": "ðeɪ ɑːɹ twˈɪnz"
     },
     {
       "course": "voc1",
@@ -3959,7 +4035,8 @@
       "cefr": "A1",
       "text": "It's a good idea.",
       "speaker": "narrator",
-      "gloss": "Es una buena idea."
+      "gloss": "Es una buena idea.",
+      "ipa": "ɪts ɐ ɡˈʊd aɪdˈiə"
     },
     {
       "course": "voc1",
@@ -4008,7 +4085,8 @@
       "cefr": "A1",
       "text": "The weather is bad.",
       "speaker": "narrator",
-      "gloss": "El clima está feo."
+      "gloss": "El clima está feo.",
+      "ipa": "ðə wˈɛðɚɹ ɪz bˈæd"
     },
     {
       "course": "voc1",
@@ -4055,7 +4133,8 @@
       "cefr": "A1",
       "text": "It's a big house.",
       "speaker": "narrator",
-      "gloss": "Es una casa grande."
+      "gloss": "Es una casa grande.",
+      "ipa": "ɪts ɐ bˈɪɡ hˈaʊs"
     },
     {
       "course": "voc1",
@@ -4099,7 +4178,8 @@
       "cefr": "A1",
       "text": "a small problem",
       "speaker": "narrator",
-      "gloss": "un problema chico"
+      "gloss": "un problema chico",
+      "ipa": "ɐ smˈɔːl pɹˈɑːbləm"
     },
     {
       "course": "voc1",
@@ -4140,7 +4220,8 @@
       "cefr": "A1",
       "text": "I have a new phone.",
       "speaker": "narrator",
-      "gloss": "Tengo un teléfono nuevo."
+      "gloss": "Tengo un teléfono nuevo.",
+      "ipa": "aɪ hæv ɐ nˈuː fˈoʊn"
     },
     {
       "course": "voc1",
@@ -4184,7 +4265,8 @@
       "cefr": "A1",
       "text": "an old car",
       "speaker": "narrator",
-      "gloss": "un auto viejo"
+      "gloss": "un auto viejo",
+      "ipa": "ɐn ˈoʊld kˈɑːɹ"
     },
     {
       "course": "voc1",
@@ -4228,7 +4310,8 @@
       "cefr": "A1",
       "text": "a long day",
       "speaker": "narrator",
-      "gloss": "un día largo"
+      "gloss": "un día largo",
+      "ipa": "ɐ lˈɔŋ dˈeɪ"
     },
     {
       "course": "voc1",
@@ -4272,7 +4355,8 @@
       "cefr": "A1",
       "text": "a short walk",
       "speaker": "narrator",
-      "gloss": "una caminata corta"
+      "gloss": "una caminata corta",
+      "ipa": "ɐ ʃˈɔːɹt wˈɔːk"
     },
     {
       "course": "voc1",
@@ -4313,7 +4397,8 @@
       "cefr": "A2",
       "text": "a high price",
       "speaker": "narrator",
-      "gloss": "un precio alto"
+      "gloss": "un precio alto",
+      "ipa": "ɐ hˈaɪ pɹˈaɪs"
     },
     {
       "course": "voc1",
@@ -4363,7 +4448,8 @@
       "cefr": "A2",
       "text": "a low price",
       "speaker": "narrator",
-      "gloss": "un precio bajo"
+      "gloss": "un precio bajo",
+      "ipa": "ɐ lˈoʊ pɹˈaɪs"
     },
     {
       "course": "voc1",
@@ -4404,7 +4490,8 @@
       "cefr": "A1",
       "text": "hot coffee",
       "speaker": "narrator",
-      "gloss": "café caliente"
+      "gloss": "café caliente",
+      "ipa": "hˈɑːt kˈɔfi"
     },
     {
       "course": "voc1",
@@ -4445,7 +4532,8 @@
       "cefr": "A1",
       "text": "cold water",
       "speaker": "narrator",
-      "gloss": "agua fría"
+      "gloss": "agua fría",
+      "ipa": "kˈoʊld wˈɔːɾɚ"
     },
     {
       "course": "voc1",
@@ -4486,7 +4574,8 @@
       "cefr": "A1",
       "text": "an easy test",
       "speaker": "narrator",
-      "gloss": "una prueba fácil"
+      "gloss": "una prueba fácil",
+      "ipa": "ɐn ˈiːzi tˈɛst"
     },
     {
       "course": "voc1",
@@ -4530,7 +4619,8 @@
       "cefr": "A1",
       "text": "a difficult question",
       "speaker": "narrator",
-      "gloss": "una pregunta difícil"
+      "gloss": "una pregunta difícil",
+      "ipa": "ɐ dˈɪfɪkəlt kwˈɛstʃən"
     },
     {
       "course": "voc1",
@@ -4574,7 +4664,8 @@
       "cefr": "A1",
       "text": "a happy child",
       "speaker": "narrator",
-      "gloss": "un niño feliz"
+      "gloss": "un niño feliz",
+      "ipa": "ɐ hˈæpi tʃˈaɪld"
     },
     {
       "course": "voc1",
@@ -4623,7 +4714,8 @@
       "cefr": "A1",
       "text": "a sad film",
       "speaker": "narrator",
-      "gloss": "una película triste"
+      "gloss": "una película triste",
+      "ipa": "ɐ sˈæd fˈɪlm"
     },
     {
       "course": "voc1",
@@ -4668,7 +4760,8 @@
       "cefr": "A2",
       "text": "an important meeting",
       "speaker": "narrator",
-      "gloss": "una reunión importante"
+      "gloss": "una reunión importante",
+      "ipa": "ɐn ɪmpˈoːɹtənt mˈiːɾɪŋ"
     },
     {
       "course": "voc1",
@@ -4712,7 +4805,8 @@
       "cefr": "A1",
       "text": "a different way",
       "speaker": "narrator",
-      "gloss": "una forma distinta"
+      "gloss": "una forma distinta",
+      "ipa": "ɐ dˈɪfɹənt wˈeɪ"
     },
     {
       "course": "voc1",
@@ -4759,7 +4853,8 @@
       "cefr": "A1",
       "text": "a nice day",
       "speaker": "narrator",
-      "gloss": "un lindo día"
+      "gloss": "un lindo día",
+      "ipa": "ɐ nˈaɪs dˈeɪ"
     },
     {
       "course": "voc1",
@@ -4800,7 +4895,8 @@
       "cefr": "A1",
       "text": "a beautiful city",
       "speaker": "narrator",
-      "gloss": "una ciudad hermosa"
+      "gloss": "una ciudad hermosa",
+      "ipa": "ɐ bjˈuːɾifəl sˈɪɾi"
     },
     {
       "course": "voc1",
@@ -4844,7 +4940,8 @@
       "cefr": "A1",
       "text": "young people",
       "speaker": "narrator",
-      "gloss": "gente joven"
+      "gloss": "gente joven",
+      "ipa": "jˈʌŋ pˈiːpəl"
     },
     {
       "course": "voc1",
@@ -4885,7 +4982,8 @@
       "cefr": "A1",
       "text": "a great idea",
       "speaker": "narrator",
-      "gloss": "una idea genial"
+      "gloss": "una idea genial",
+      "ipa": "ɐ ɡɹˈeɪt aɪdˈiə"
     },
     {
       "course": "voc1",
@@ -4926,7 +5024,8 @@
       "cefr": "A1",
       "text": "the right answer",
       "speaker": "narrator",
-      "gloss": "la respuesta correcta"
+      "gloss": "la respuesta correcta",
+      "ipa": "ðə ɹˈaɪt ˈænsɚ"
     },
     {
       "course": "voc1",
@@ -4970,7 +5069,8 @@
       "cefr": "A1",
       "text": "the wrong number",
       "speaker": "narrator",
-      "gloss": "el número equivocado"
+      "gloss": "el número equivocado",
+      "ipa": "ðə ɹˈɔŋ nˈʌmbɚ"
     },
     {
       "course": "voc1",
@@ -5011,7 +5111,8 @@
       "cefr": "A1",
       "text": "It's very cold.",
       "speaker": "narrator",
-      "gloss": "Hace mucho frío."
+      "gloss": "Hace mucho frío.",
+      "ipa": "ɪts vˈɛɹi kˈoʊld"
     },
     {
       "course": "voc1",
@@ -5055,7 +5156,8 @@
       "cefr": "A1",
       "text": "Not now, please.",
       "speaker": "narrator",
-      "gloss": "Ahora no, por favor."
+      "gloss": "Ahora no, por favor.",
+      "ipa": "nˌɑːt nˈaʊ plˈiːz"
     },
     {
       "course": "voc1",
@@ -5099,7 +5201,8 @@
       "cefr": "A1",
       "text": "Come here.",
       "speaker": "narrator",
-      "gloss": "Vení acá."
+      "gloss": "Vení acá.",
+      "ipa": "kˈʌm hˈɪɹ"
     },
     {
       "course": "voc1",
@@ -5140,7 +5243,8 @@
       "cefr": "A1",
       "text": "It's over there.",
       "speaker": "narrator",
-      "gloss": "Está allá."
+      "gloss": "Está allá.",
+      "ipa": "ɪts ˌoʊvɚ ðˈɛɹ"
     },
     {
       "course": "voc1",
@@ -5184,7 +5288,8 @@
       "cefr": "A1",
       "text": "It's too much.",
       "speaker": "narrator",
-      "gloss": "Es demasiado."
+      "gloss": "Es demasiado.",
+      "ipa": "ɪts tˈuː mʌtʃ"
     },
     {
       "course": "voc1",
@@ -5228,7 +5333,8 @@
       "cefr": "A1",
       "text": "I'm very well.",
       "speaker": "narrator",
-      "gloss": "Estoy muy bien."
+      "gloss": "Estoy muy bien.",
+      "ipa": "aɪm vˈɛɹi wˈɛl"
     },
     {
       "course": "voc1",
@@ -5275,7 +5381,8 @@
       "cefr": "A2",
       "text": "I just arrived.",
       "speaker": "narrator",
-      "gloss": "Recién llegué."
+      "gloss": "Recién llegué.",
+      "ipa": "aɪ dʒˈʌst ɚɹˈaɪvd"
     },
     {
       "course": "voc1",
@@ -5319,7 +5426,8 @@
       "cefr": "A1",
       "text": "Only two, please.",
       "speaker": "narrator",
-      "gloss": "Solo dos, por favor."
+      "gloss": "Solo dos, por favor.",
+      "ipa": "ˈoʊnli tˈuː plˈiːz"
     },
     {
       "course": "voc1",
@@ -5360,7 +5468,8 @@
       "cefr": "A1",
       "text": "I also work here.",
       "speaker": "narrator",
-      "gloss": "También trabajo acá."
+      "gloss": "También trabajo acá.",
+      "ipa": "aɪ ˈɔːlsoʊ wˈɜːk hˈɪɹ"
     },
     {
       "course": "voc1",
@@ -5404,7 +5513,8 @@
       "cefr": "A1",
       "text": "See you soon.",
       "speaker": "narrator",
-      "gloss": "Nos vemos pronto."
+      "gloss": "Nos vemos pronto.",
+      "ipa": "sˈiː juː sˈuːn"
     },
     {
       "course": "voc1",
@@ -5445,7 +5555,8 @@
       "cefr": "A1",
       "text": "We work together.",
       "speaker": "narrator",
-      "gloss": "Trabajamos juntos."
+      "gloss": "Trabajamos juntos.",
+      "ipa": "wiː wˈɜːk təɡˈɛðɚ"
     },
     {
       "course": "voc1",
@@ -5486,7 +5597,8 @@
       "cefr": "A1",
       "text": "I get up at seven.",
       "speaker": "narrator",
-      "gloss": "Me levanto a las siete."
+      "gloss": "Me levanto a las siete.",
+      "ipa": "aɪ ɡɛt ˌʌp æt sˈɛvən"
     },
     {
       "course": "voc1",
@@ -5530,7 +5642,8 @@
       "cefr": "A1",
       "text": "Wake up! It's late.",
       "speaker": "narrator",
-      "gloss": "¡Despertate! Es tarde."
+      "gloss": "¡Despertate! Es tarde.",
+      "ipa": "wˈeɪk ˈʌp ɪts lˈeɪt"
     },
     {
       "course": "voc1",
@@ -5571,7 +5684,8 @@
       "cefr": "A1",
       "text": "Please sit down.",
       "speaker": "narrator",
-      "gloss": "Sentate, por favor."
+      "gloss": "Sentate, por favor.",
+      "ipa": "plˈiːz sˈɪt dˈaʊn"
     },
     {
       "course": "voc1",
@@ -5612,7 +5726,8 @@
       "cefr": "A1",
       "text": "Please stand up.",
       "speaker": "narrator",
-      "gloss": "Por favor, parate."
+      "gloss": "Por favor, parate.",
+      "ipa": "plˈiːz stˈænd ˈʌp"
     },
     {
       "course": "voc1",
@@ -5653,7 +5768,8 @@
       "cefr": "A1",
       "text": "Come back soon.",
       "speaker": "narrator",
-      "gloss": "Volvé pronto."
+      "gloss": "Volvé pronto.",
+      "ipa": "kˈʌm bˈæk sˈuːn"
     },
     {
       "course": "voc1",
@@ -5694,7 +5810,8 @@
       "cefr": "A1",
       "text": "We go out on Fridays.",
       "speaker": "narrator",
-      "gloss": "Salimos los viernes."
+      "gloss": "Salimos los viernes.",
+      "ipa": "wiː ɡˌoʊ ˈaʊt ˌɔn fɹˈaɪdeɪz"
     },
     {
       "course": "voc1",
@@ -5735,7 +5852,8 @@
       "cefr": "A1",
       "text": "Go on, I'm listening.",
       "speaker": "narrator",
-      "gloss": "Seguí, te escucho."
+      "gloss": "Seguí, te escucho.",
+      "ipa": "ɡˌoʊ ˈɔn aɪm lˈɪsənɪŋ"
     },
     {
       "course": "voc1",
@@ -5779,7 +5897,8 @@
       "cefr": "A1",
       "text": "Come in, please.",
       "speaker": "narrator",
-      "gloss": "Pasá, por favor."
+      "gloss": "Pasá, por favor.",
+      "ipa": "kˈʌm ˈɪn plˈiːz"
     },
     {
       "course": "voc1",
@@ -5820,7 +5939,8 @@
       "cefr": "A1",
       "text": "Come on, we're late!",
       "speaker": "narrator",
-      "gloss": "¡Dale, llegamos tarde!"
+      "gloss": "¡Dale, llegamos tarde!",
+      "ipa": "kˈʌm ˈɔn wɪɹ lˈeɪt"
     },
     {
       "course": "voc1",
@@ -5864,7 +5984,8 @@
       "cefr": "A2",
       "text": "I want to find out the truth.",
       "speaker": "narrator",
-      "gloss": "Quiero averiguar la verdad."
+      "gloss": "Quiero averiguar la verdad.",
+      "ipa": "aɪ wˈɔnt tə fˈaɪnd ˈaʊt ðə tɹˈuːθ"
     },
     {
       "course": "voc1",
@@ -5905,7 +6026,8 @@
       "cefr": "A1",
       "text": "I'm looking for my keys.",
       "speaker": "narrator",
-      "gloss": "Estoy buscando mis llaves."
+      "gloss": "Estoy buscando mis llaves.",
+      "ipa": "aɪm lˈʊkɪŋ fɔːɹ maɪ kˈiːz"
     },
     {
       "course": "voc1",
@@ -5949,7 +6071,8 @@
       "cefr": "A2",
       "text": "She looks after her sister.",
       "speaker": "narrator",
-      "gloss": "Cuida a su hermana."
+      "gloss": "Cuida a su hermana.",
+      "ipa": "ʃiː lˈʊks ˈæftɚ hɜː sˈɪstɚ"
     },
     {
       "course": "voc1",
@@ -5993,7 +6116,8 @@
       "cefr": "A2",
       "text": "Pick up the phone.",
       "speaker": "narrator",
-      "gloss": "Atendé el teléfono."
+      "gloss": "Atendé el teléfono.",
+      "ipa": "pˈɪk ˌʌp ðə fˈoʊn"
     },
     {
       "course": "voc1",
@@ -6038,7 +6162,8 @@
       "cefr": "A1",
       "text": "Put on your coat.",
       "speaker": "narrator",
-      "gloss": "Ponete el abrigo."
+      "gloss": "Ponete el abrigo.",
+      "ipa": "pˌʊt ˌɔn jʊɹ kˈoʊt"
     },
     {
       "course": "voc1",
@@ -6082,7 +6207,8 @@
       "cefr": "A1",
       "text": "Take off your shoes.",
       "speaker": "narrator",
-      "gloss": "Sacate los zapatos."
+      "gloss": "Sacate los zapatos.",
+      "ipa": "tˈeɪk ˈɔf jʊɹ ʃˈuːz"
     },
     {
       "course": "voc1",
@@ -6127,7 +6253,8 @@
       "cefr": "A1",
       "text": "Turn on the light.",
       "speaker": "narrator",
-      "gloss": "Prendé la luz."
+      "gloss": "Prendé la luz.",
+      "ipa": "tˈɜːn ɔnðə lˈaɪt"
     },
     {
       "course": "voc1",
@@ -6171,7 +6298,8 @@
       "cefr": "A1",
       "text": "Turn off the TV.",
       "speaker": "narrator",
-      "gloss": "Apagá la tele."
+      "gloss": "Apagá la tele.",
+      "ipa": "tˈɜːn ˈɔf ðə tˌiːvˈiː"
     },
     {
       "course": "voc1",
@@ -6215,7 +6343,8 @@
       "cefr": "A2",
       "text": "Don't give up.",
       "speaker": "narrator",
-      "gloss": "No te rindas."
+      "gloss": "No te rindas.",
+      "ipa": "dˈoʊnt ɡˈɪv ˈʌp"
     },
     {
       "course": "voc1",
@@ -6259,7 +6388,8 @@
       "cefr": "A2",
       "text": "I grew up in Rome.",
       "speaker": "narrator",
-      "gloss": "Crecí en Roma."
+      "gloss": "Crecí en Roma.",
+      "ipa": "aɪ ɡɹˈuː ˌʌp ɪn ɹˈoʊm"
     },
     {
       "course": "voc1",
@@ -6300,7 +6430,8 @@
       "cefr": "A2",
       "text": "Carry on with your work.",
       "speaker": "narrator",
-      "gloss": "Seguí con tu trabajo."
+      "gloss": "Seguí con tu trabajo.",
+      "ipa": "kˈæɹi ˌɔn wɪð jʊɹ wˈɜːk"
     },
     {
       "course": "voc1",
@@ -6341,7 +6472,8 @@
       "cefr": "B1",
       "text": "They carry out tests.",
       "speaker": "narrator",
-      "gloss": "Realizan pruebas."
+      "gloss": "Realizan pruebas.",
+      "ipa": "ðeɪ kˈæɹi ˈaʊt tˈɛsts"
     },
     {
       "course": "voc1",
@@ -6385,7 +6517,8 @@
       "cefr": "A2",
       "text": "I work out at the gym.",
       "speaker": "narrator",
-      "gloss": "Entreno en el gimnasio."
+      "gloss": "Entreno en el gimnasio.",
+      "ipa": "aɪ wˈɜːk ˈaʊt æt ðə dʒˈɪm"
     },
     {
       "course": "voc1",
@@ -6429,7 +6562,8 @@
       "cefr": "A2",
       "text": "Set up the meeting.",
       "speaker": "narrator",
-      "gloss": "Organizá la reunión."
+      "gloss": "Organizá la reunión.",
+      "ipa": "sˈɛt ˌʌp ðə mˈiːɾɪŋ"
     },
     {
       "course": "voc1",
@@ -6473,7 +6607,8 @@
       "cefr": "A2",
       "text": "Get on the bus.",
       "speaker": "narrator",
-      "gloss": "Subí al colectivo."
+      "gloss": "Subí al colectivo.",
+      "ipa": "ɡɛt ɔnðə bˈʌs"
     },
     {
       "course": "voc1",
