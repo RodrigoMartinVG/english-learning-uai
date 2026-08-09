@@ -36,6 +36,20 @@
       }
     },
     {
+      "id": "adjectives",
+      "order": 3,
+      "title": "Adjetivos y adverbios esenciales",
+      "summary": "Reconocer y decir los adjetivos y adverbios más frecuentes.",
+      "match": {
+        "topic": [
+          "adjectives"
+        ]
+      },
+      "source": {
+        "section": "Vocabulario · núcleo (adjetivos/adverbios)"
+      }
+    },
+    {
       "id": "family",
       "order": 5,
       "title": "La familia",
@@ -3913,6 +3927,1533 @@
       "collocations": [
         "twin brother"
       ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.077",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "It's a good idea.",
+      "speaker": "narrator",
+      "gloss": "Es una buena idea."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.077",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "good",
+      "pos": "adjective",
+      "gloss": "bueno",
+      "examplePhraseId": "voc1.u1.p.077",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "good at",
+        "a good idea"
+      ],
+      "nuance": [
+        "comp. irregular: good/better/best",
+        "great = más fuerte"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.078",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "The weather is bad.",
+      "speaker": "narrator",
+      "gloss": "El clima está feo."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.078",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "bad",
+      "pos": "adjective",
+      "gloss": "malo",
+      "examplePhraseId": "voc1.u1.p.078",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "bad news"
+      ],
+      "nuance": [
+        "comp. irregular: bad/worse/worst"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.079",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "It's a big house.",
+      "speaker": "narrator",
+      "gloss": "Es una casa grande."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.079",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "big",
+      "pos": "adjective",
+      "gloss": "grande",
+      "examplePhraseId": "voc1.u1.p.079",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "large = más neutral; huge = enorme"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.080",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "a small problem",
+      "speaker": "narrator",
+      "gloss": "un problema chico"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.080",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "small",
+      "pos": "adjective",
+      "gloss": "chico; pequeño",
+      "examplePhraseId": "voc1.u1.p.080",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.081",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "I have a new phone.",
+      "speaker": "narrator",
+      "gloss": "Tengo un teléfono nuevo."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.081",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "new",
+      "pos": "adjective",
+      "gloss": "nuevo",
+      "examplePhraseId": "voc1.u1.p.081",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "brand-new = flamante"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.082",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "an old car",
+      "speaker": "narrator",
+      "gloss": "un auto viejo"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.082",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "old",
+      "pos": "adjective",
+      "gloss": "viejo; antiguo; de edad",
+      "examplePhraseId": "voc1.u1.p.082",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "también edad: How old are you?"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.083",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "a long day",
+      "speaker": "narrator",
+      "gloss": "un día largo"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.083",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "long",
+      "pos": "adjective",
+      "gloss": "largo",
+      "examplePhraseId": "voc1.u1.p.083",
+      "focus": "translation",
+      "register": "neutral",
+      "family": [
+        "length"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.084",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "a short walk",
+      "speaker": "narrator",
+      "gloss": "una caminata corta"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.084",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "short",
+      "pos": "adjective",
+      "gloss": "corto; bajo (estatura)",
+      "examplePhraseId": "voc1.u1.p.084",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.085",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A2",
+      "text": "a high price",
+      "speaker": "narrator",
+      "gloss": "un precio alto"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.085",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A2",
+      "word": "high",
+      "pos": "adjective",
+      "gloss": "alto (altura/nivel)",
+      "examplePhraseId": "voc1.u1.p.085",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "high price"
+      ],
+      "family": [
+        "height"
+      ],
+      "nuance": [
+        "high (cosas) vs tall (personas)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.086",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A2",
+      "text": "a low price",
+      "speaker": "narrator",
+      "gloss": "un precio bajo"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.086",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A2",
+      "word": "low",
+      "pos": "adjective",
+      "gloss": "bajo (nivel)",
+      "examplePhraseId": "voc1.u1.p.086",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.087",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "hot coffee",
+      "speaker": "narrator",
+      "gloss": "café caliente"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.087",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "hot",
+      "pos": "adjective",
+      "gloss": "caliente; caluroso",
+      "examplePhraseId": "voc1.u1.p.087",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.088",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "cold water",
+      "speaker": "narrator",
+      "gloss": "agua fría"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.088",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "cold",
+      "pos": "adjective",
+      "gloss": "frío",
+      "examplePhraseId": "voc1.u1.p.088",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.089",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "an easy test",
+      "speaker": "narrator",
+      "gloss": "una prueba fácil"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.089",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "easy",
+      "pos": "adjective",
+      "gloss": "fácil",
+      "examplePhraseId": "voc1.u1.p.089",
+      "focus": "translation",
+      "register": "neutral",
+      "family": [
+        "easily"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.090",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "a difficult question",
+      "speaker": "narrator",
+      "gloss": "una pregunta difícil"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.090",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "difficult",
+      "pos": "adjective",
+      "gloss": "difícil",
+      "examplePhraseId": "voc1.u1.p.090",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "hard = sinónimo (más informal)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.091",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "a happy child",
+      "speaker": "narrator",
+      "gloss": "un niño feliz"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.091",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "happy",
+      "pos": "adjective",
+      "gloss": "feliz; contento",
+      "examplePhraseId": "voc1.u1.p.091",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "happy about"
+      ],
+      "family": [
+        "happiness",
+        "happily",
+        "unhappy"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.092",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "a sad film",
+      "speaker": "narrator",
+      "gloss": "una película triste"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.092",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "sad",
+      "pos": "adjective",
+      "gloss": "triste",
+      "examplePhraseId": "voc1.u1.p.092",
+      "focus": "translation",
+      "register": "neutral",
+      "family": [
+        "sadly",
+        "sadness"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.093",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A2",
+      "text": "an important meeting",
+      "speaker": "narrator",
+      "gloss": "una reunión importante"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.093",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A2",
+      "word": "important",
+      "pos": "adjective",
+      "gloss": "importante",
+      "examplePhraseId": "voc1.u1.p.093",
+      "focus": "translation",
+      "register": "neutral",
+      "family": [
+        "importance"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.094",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "a different way",
+      "speaker": "narrator",
+      "gloss": "una forma distinta"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.094",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "different",
+      "pos": "adjective",
+      "gloss": "diferente; distinto",
+      "examplePhraseId": "voc1.u1.p.094",
+      "focus": "translation",
+      "register": "neutral",
+      "family": [
+        "difference"
+      ],
+      "nuance": [
+        "different from/to"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.095",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "a nice day",
+      "speaker": "narrator",
+      "gloss": "un lindo día"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.095",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "nice",
+      "pos": "adjective",
+      "gloss": "lindo; amable",
+      "examplePhraseId": "voc1.u1.p.095",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.096",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "a beautiful city",
+      "speaker": "narrator",
+      "gloss": "una ciudad hermosa"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.096",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "beautiful",
+      "pos": "adjective",
+      "gloss": "hermoso; bello",
+      "examplePhraseId": "voc1.u1.p.096",
+      "focus": "translation",
+      "register": "neutral",
+      "family": [
+        "beauty"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.097",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "young people",
+      "speaker": "narrator",
+      "gloss": "gente joven"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.097",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "young",
+      "pos": "adjective",
+      "gloss": "joven",
+      "examplePhraseId": "voc1.u1.p.097",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.098",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "a great idea",
+      "speaker": "narrator",
+      "gloss": "una idea genial"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.098",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "great",
+      "pos": "adjective",
+      "gloss": "genial; grandioso",
+      "examplePhraseId": "voc1.u1.p.098",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.099",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "the right answer",
+      "speaker": "narrator",
+      "gloss": "la respuesta correcta"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.099",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "right",
+      "pos": "adjective",
+      "gloss": "correcto; derecho (lado)",
+      "examplePhraseId": "voc1.u1.p.099",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "correcto vs derecho (lado); you're right"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.100",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "the wrong number",
+      "speaker": "narrator",
+      "gloss": "el número equivocado"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.100",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "wrong",
+      "pos": "adjective",
+      "gloss": "incorrecto; equivocado",
+      "examplePhraseId": "voc1.u1.p.100",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.101",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "It's very cold.",
+      "speaker": "narrator",
+      "gloss": "Hace mucho frío."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.101",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "very",
+      "pos": "adverb",
+      "gloss": "muy",
+      "examplePhraseId": "voc1.u1.p.101",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "intensifica graduables, no extremos (✗ very freezing)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.102",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "Not now, please.",
+      "speaker": "narrator",
+      "gloss": "Ahora no, por favor."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.102",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "now",
+      "pos": "adverb",
+      "gloss": "ahora",
+      "examplePhraseId": "voc1.u1.p.102",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "right now"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.103",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "Come here.",
+      "speaker": "narrator",
+      "gloss": "Vení acá."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.103",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "here",
+      "pos": "adverb",
+      "gloss": "acá; aquí",
+      "examplePhraseId": "voc1.u1.p.103",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.104",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "It's over there.",
+      "speaker": "narrator",
+      "gloss": "Está allá."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.104",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "there",
+      "pos": "adverb",
+      "gloss": "allá; ahí",
+      "examplePhraseId": "voc1.u1.p.104",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "over there"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.105",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "It's too much.",
+      "speaker": "narrator",
+      "gloss": "Es demasiado."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.105",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "too",
+      "pos": "adverb",
+      "gloss": "demasiado; también",
+      "examplePhraseId": "voc1.u1.p.105",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "too (de más) vs also/as well (también)"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.106",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "I'm very well.",
+      "speaker": "narrator",
+      "gloss": "Estoy muy bien."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.106",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "well",
+      "pos": "adverb",
+      "gloss": "bien",
+      "examplePhraseId": "voc1.u1.p.106",
+      "focus": "translation",
+      "register": "neutral",
+      "collocations": [
+        "well done"
+      ],
+      "nuance": [
+        "adverbio de good"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.107",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A2",
+      "text": "I just arrived.",
+      "speaker": "narrator",
+      "gloss": "Recién llegué."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.107",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A2",
+      "word": "just",
+      "pos": "adverb",
+      "gloss": "recién; apenas; solo",
+      "examplePhraseId": "voc1.u1.p.107",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "varios sentidos: recién, apenas, solo"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.108",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "Only two, please.",
+      "speaker": "narrator",
+      "gloss": "Solo dos, por favor."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.108",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "only",
+      "pos": "adverb",
+      "gloss": "solo; únicamente",
+      "examplePhraseId": "voc1.u1.p.108",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.109",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "I also work here.",
+      "speaker": "narrator",
+      "gloss": "También trabajo acá."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.109",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "also",
+      "pos": "adverb",
+      "gloss": "también",
+      "examplePhraseId": "voc1.u1.p.109",
+      "focus": "translation",
+      "register": "neutral",
+      "nuance": [
+        "va antes del verbo principal"
+      ]
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.110",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "See you soon.",
+      "speaker": "narrator",
+      "gloss": "Nos vemos pronto."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.110",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "soon",
+      "pos": "adverb",
+      "gloss": "pronto",
+      "examplePhraseId": "voc1.u1.p.110",
+      "focus": "translation",
+      "register": "neutral"
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.p.111",
+      "kind": "phrase",
+      "difficulty": 2,
+      "cefr": "A1",
+      "text": "We work together.",
+      "speaker": "narrator",
+      "gloss": "Trabajamos juntos."
+    },
+    {
+      "course": "voc1",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic"
+      },
+      "grammar": [],
+      "fn": [],
+      "topic": [
+        "adjectives"
+      ],
+      "id": "voc1.u1.lx.111",
+      "kind": "lexeme",
+      "difficulty": 1,
+      "cefr": "A1",
+      "word": "together",
+      "pos": "adverb",
+      "gloss": "juntos",
+      "examplePhraseId": "voc1.u1.p.111",
+      "focus": "translation",
+      "register": "neutral"
     }
   ]
 }

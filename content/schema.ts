@@ -121,6 +121,7 @@ export const FUNCTION_TAGS = [
 export const TOPIC_TAGS = [
   // Vocabulario (voc1): núcleo transversal + campos que no existían en inglés.
   'essentials',
+  'adjectives',
   'phrasal',
   'food',
   'body',
