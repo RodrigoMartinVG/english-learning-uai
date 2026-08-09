@@ -20,7 +20,6 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { createHash } from 'node:crypto';
-import { z } from 'zod';
 import {
   speakersFileSchema,
   unitFileSchema,
@@ -38,11 +37,16 @@ import { createKokoroProvider } from './tts/kokoro.ts';
 import { splitSentences } from './tts/sentences.ts';
 import { ALT_VOICES, MODEL_VOICES } from '../content/kokoro-voices.ts';
 import type { ProviderId, TtsProvider, Utterance } from './tts/provider.ts';
+import {
+  readAllManifests,
+  writeManifestsByCourse,
+  courseOf,
+  type Manifest,
+} from './manifest-fs.ts';
 
 const ROOT = join(import.meta.dirname, '..');
 const CONTENT_DIR = join(ROOT, 'content');
 const AUDIO_DIR = join(ROOT, 'public', 'audio');
-const MANIFEST_PATH = join(AUDIO_DIR, 'audio-manifest.json');
 
 /** Cuánto más lenta es la variante lenta. No es time-stretch: el TTS re-articula. */
 const SLOW_RATE_FACTOR = 0.75;
@@ -343,22 +347,11 @@ const selected = ONLY ? utterances.filter((u) => u.key.startsWith(ONLY)) : utter
 
 /* ─────────────────────────────────── manifest ───────────────────────────────────── */
 
-const manifestEntrySchema = z.object({
-  src: z.string(),
-  durationMs: z.number(),
-  hash: z.string(),
-  chars: z.number(),
-});
-const manifestSchema = z.object({
-  generatedAt: z.string(),
-  provider: z.string(),
-  entries: z.record(z.string(), manifestEntrySchema),
-});
-type Manifest = z.infer<typeof manifestSchema>;
-
-const manifest: Manifest = existsSync(MANIFEST_PATH)
-  ? manifestSchema.parse(JSON.parse(readFileSync(MANIFEST_PATH, 'utf8')))
-  : { generatedAt: '', provider: '', entries: {} };
+// Un manifest por curso (public/audio/<curso>/manifest.json). Se fusionan en memoria
+// para los chequeos de cache/huérfanos; al escribir se reparten de nuevo por curso.
+const { entries: loadedEntries, provider: loadedProvider, courses: loadedCourses } =
+  readAllManifests(AUDIO_DIR);
+const manifest: Manifest = { generatedAt: '', provider: loadedProvider, entries: loadedEntries };
 
 /**
  * El hash cubre todo lo que cambia el audio. Si algo cambia, se re-sintetiza.
@@ -394,6 +387,13 @@ const stale = selected.filter((u) => {
 // bien pero no queremos borrar lo que el filtro deja afuera de `selected`.
 const expectedKeys = new Set(utterances.map((u) => u.key));
 const orphans = ONLY ? [] : Object.keys(manifest.entries).filter((k) => !expectedKeys.has(k));
+
+// Qué manifests reescribir. Con --only: SOLO los cursos tocados (no pisar los demás →
+// seguro entre builds concurrentes). Build completo: todos los cursos (para reflejar
+// también las podas), incluyendo los que ya existían aunque queden vacíos.
+const coursesToWrite = ONLY
+  ? new Set(selected.map((u) => courseOf(u.key)))
+  : new Set<string>([...loadedCourses, ...Object.keys(manifest.entries).map(courseOf)]);
 
 /* ──────────────────────────────────── reporte ───────────────────────────────────── */
 
@@ -433,10 +433,7 @@ function prune() {
 }
 
 function writeManifest(providerName: string) {
-  manifest.generatedAt = new Date().toISOString();
-  manifest.provider = providerName;
-  mkdirSync(AUDIO_DIR, { recursive: true });
-  writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2) + '\n');
+  writeManifestsByCourse(AUDIO_DIR, manifest.entries, providerName, coursesToWrite);
 }
 
 if (!stale.length) {

@@ -11,7 +11,6 @@
 
 import speakersFile from '../../content/speakers.json';
 import coursesFile from '../../content/courses.json';
-import manifestJson from '../../public/audio/audio-manifest.json';
 import type { Atom, Course, PhraseAtom, QaAtom, Speaker, UnitFile } from '../../content/schema.ts';
 import type { AudioManifest, AudioVoiceHints } from '../audio/AudioService.ts';
 
@@ -65,7 +64,19 @@ export const atoms: Atom[] = units.flatMap((u) => u.atoms);
 export const atomById = new Map(atoms.map((a) => [a.id, a]));
 export const speakerById = new Map(speakers.map((s) => [s.id, s]));
 
-export const manifest = manifestJson as AudioManifest;
+/**
+ * Manifest de audio: un archivo por curso (`public/audio/<curso>/manifest.json`),
+ * fusionados acá en un solo índice. Las claves ya vienen prefijadas por curso, así
+ * que no colisionan. Un archivo por curso mantiene el aislamiento: generar el audio
+ * de un curso no toca el manifest de otro. Ver scripts/manifest-fs.ts.
+ */
+const manifestModules = import.meta.glob<{ default: { entries: AudioManifest['entries'] } }>(
+  '../../public/audio/*/manifest.json',
+  { eager: true }
+);
+export const manifest: AudioManifest = {
+  entries: Object.assign({}, ...Object.values(manifestModules).map((m) => m.default.entries)),
+};
 
 /** Lo que el AudioService necesita de un speaker, sin arrastrarle todo el schema. */
 export const voiceHints: Record<string, AudioVoiceHints> = Object.fromEntries(

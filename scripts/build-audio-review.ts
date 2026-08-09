@@ -16,17 +16,14 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { speakersFileSchema, unitFileSchema, type Atom, type Speaker } from '../content/schema.ts';
 import { KOKORO_VOICES } from '../content/kokoro-voices.ts';
+import { readAllManifests } from './manifest-fs.ts';
 
 const ROOT = join(import.meta.dirname, '..');
-const manifestPath = join(ROOT, 'public', 'audio', 'audio-manifest.json');
-if (!existsSync(manifestPath)) {
+const manifest = { entries: readAllManifests(join(ROOT, 'public', 'audio')).entries };
+if (Object.keys(manifest.entries).length === 0) {
   console.error('\n✗ No hay audio generado. Corré primero: npm run build:audio\n');
   process.exit(1);
 }
-
-const manifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as {
-  entries: Record<string, { src: string }>;
-};
 const speakers = speakersFileSchema.parse(
   JSON.parse(readFileSync(join(ROOT, 'content', 'speakers.json'), 'utf8'))
 ).speakers;
