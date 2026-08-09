@@ -146,7 +146,7 @@ y a shadowing de nivel 5.
 
 ## Qué hacer con esto
 
-1. **Verificar** los puntos marcados ⚠ contra los PDFs (`material/N1_Unidad_*.pdf`, pág. 5).
+1. **Verificar** los puntos marcados ⚠ contra los PDFs (`material/en1/N1_Unidad_*.pdf`, pág. 5).
 2. Convertir cada línea en un `PhraseAtom` con `speaker`, `grammar`, `fn`, `difficulty`.
 3. Agrupar los turnos en un `DialogueAtom` por unidad (`turns: [{speaker, phraseId}]`).
 4. Recortar los 4 cómics a PNG → `public/img/` como `ImageRef` con `role: 'source-comic'`,

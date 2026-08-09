@@ -602,6 +602,12 @@ La mecánica que justifica el proyecto.
   de frecuencia? ¿*have got*?), inventario de gramática detectada vs esperada, y la grabación
   para escucharse.
 - Modo *warm-up*: mismas preguntas, con banco de palabras visible y sin timer.
+- Modo *shadowing* (2026-08): en vez de decir el modelo entero de memoria, se lo copia
+  **parte por parte** — suena un fragmento (los `steps[].segment`, que ya tienen mp3
+  propio) y el alumno lo repite. Decir 400 caracteres de memoria es un salto que, sin
+  el modelo aprendido, no entrena: frustra y se abandona el paso. La copia guiada
+  construye la misma producción por pedazos y desemboca en "ahora rendilo de memoria".
+  Comparte el componente `ui/ShadowRun` con "Armá el guion" (§6.2, mecánica 10).
 
 ---
 
@@ -668,8 +674,12 @@ Ver BACKLOG §3.1.)*
 │   ├── speakers.json
 │   └── en1/
 │       ├── unit-1.json … unit-4.json
-├── material/                      # ← intocable: PDFs oficiales
-│   ├── N1_Unidad_1.pdf … N1_Unidad_4.pdf
+├── material/                      # ← intocable: PDFs oficiales. Gitignored (copyright)
+│   ├── comun/                     #   fuentes transversales (cuadernillo I-IV)
+│   ├── en1/                       #   una carpeta por curso, con su id de courses.json
+│   │   ├── N1_Unidad_1.pdf … N1_Unidad_4.pdf
+│   │   └── Speaking Test … .pdf
+│   └── en2/                       #   preparada para Inglés 2
 ├── drafts/                        # ← artefactos humanos intermedios
 │   ├── PROMPT_EXTRACCION.md       #   (ex promt_analiis_material_unidad.md)
 │   ├── unidad-1.reconstruccion.md #   (ya existe, listo)

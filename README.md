@@ -19,7 +19,9 @@ una mecánica no toca contenido.
 
 ```
 ARQUITECTURA.md      ← fuente de verdad del diseño. Empezá acá.
-material/            ← PDFs oficiales de la cátedra. INTOCABLES. Solo lectura.
+material/            ← PDFs oficiales de la cátedra. INTOCABLES. Solo lectura. Gitignored.
+  comun/               · fuentes transversales a varios niveles (el cuadernillo UAI)
+  en1/ en2/ …          · una carpeta por curso, con el id de content/courses.json
 drafts/              ← artefactos humanos intermedios (curación de contenido)
   PROMPT_EXTRACCION.md            · el prompt que convierte un PDF en reconstrucción
   unidad-1.reconstruccion.md      · salida curada de ese prompt para la U1
@@ -40,8 +42,8 @@ hardcodea contenido. Alguien puede escribir la Unidad 5 sin abrir `src/`.
 ## El pipeline de contenido
 
 ```
-material/*.pdf
-   │  scripts/extract-pdf.ts  (+ lectura visual de los cómics)
+material/<curso>/*.pdf         ← o material/comun/ si sirve a varios niveles
+   │  drafts/PROMPT_EXTRACCION.md (+ lectura visual de los cómics) — a mano, no hay script
    ▼
 drafts/*.reconstruccion.md     ← humano-editable, se cura a mano
    │  curación manual

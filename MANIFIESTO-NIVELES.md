@@ -137,9 +137,10 @@ Cada aspecto **selecciona** átomos por etiquetas (no los contiene):
 - **No** crear mecánicas ni vistas específicas de un nivel. Si un nivel necesita una mecánica
   nueva, se agrega al registro (`mechanics/registry.ts` + `views.tsx`) y queda disponible para
   **todos** los niveles vía su `accepts(atom)`.
-- **Textos con copyright** (cuadernillos UAI, artículos): en `material/*.pdf`, **gitignored**.
-  Se usan como **base** para contenido propio (resúmenes/paráfrasis), **no** se reproducen
-  verbatim en el repo público.
+- **Textos con copyright** (cuadernillos UAI, artículos): en `material/<curso>/`, **gitignored**
+  entero. Se usan como **base** para contenido propio (resúmenes/paráfrasis), **no** se
+  reproducen verbatim en el repo público. Una fuente que sirve a varios niveles va en
+  `material/comun/` y no se duplica por curso — es el caso del cuadernillo I-IV.
 - **Exhaustividad de variantes**: frases con `alternatives`; preguntas con `promptVariants` +
   `replies` (apuntando a lo que la evaluación pesa: gramática + léxico).
 
@@ -164,10 +165,25 @@ Con esto, agregar Inglés 2/3/4 es **solo contenido** + una línea en `courses.j
 
 > El refactor de §6 **ya está hecho** (2026-07-21): `content/courses.json` existe con en1–en4,
 > el selector se auto-saltea con un solo curso, y todo (Home, repaso, stats) se acota por
-> curso. `en2` ya está en `courses.json`; **aparecerá solo en cuanto tenga unidades.**
+> curso. `en2` ya está en `courses.json`.
+>
+> **Estado (2026-08-09): en2 ya existe y aparece en el selector.** Se dio de alta con la
+> **Unidad 5** (los 4 textos de Inglés II del cuadernillo, `material/comun/`, págs. 14-22),
+> siguiendo este runbook sin tocar una línea de `src/`. Lo único que hubo que ampliar fue el
+> **vocabulario de tags** de `content/schema.ts`: en2 usa estructuras que en1 no tenía
+> (past simple, present continuous, pasivas, `will`, condicionales, cuantificadores,
+> comparativos, relativas) y un `topic` nuevo (`physics`). Esperá lo mismo al dar de alta
+> las unidades 1-4: **tags nuevos sí, código no.**
+>
+> El Texto 1 (*Tea and nineteenth century physics*, el de entropía) está desarrollado a
+> fondo —es el que se prepara para exponer— y los otros tres están en capa mínima: se
+> leen, se escuchan y tienen su consigna post-lectura, pero sin aparato de práctica.
 
-1. **Fuente.** Conseguir el material de Inglés 2 (cuadernillo/PDF). Va en `material/` (que está
-   **gitignored**: copyright). Se usa como **base**, no se copia verbatim.
+1. **Fuente.** Conseguir el material de Inglés 2 (cuadernillo/PDF). Va en **`material/en2/`**,
+   que ya existe vacía esperándolo (y está **gitignored**: copyright). Si son unidades sueltas,
+   seguí la convención de en1: `N2_Unidad_1.pdf`… Ojo: los textos de matemática de
+   `material/comun/` (cuadernillo I-IV) **también son fuente de en2** — no los copies a `en2/`.
+   Se usa como **base**, no se copia verbatim.
 
 2. **Crear las unidades.** Una carpeta y un JSON por unidad:
    ```
@@ -211,7 +227,7 @@ tocar `App.tsx`/motor. Si algo parece necesitarlo, es una señal de que hay que 
 el campo `course`, no ramificar.
 
 ### Checklist rápido
-- [ ] `material/` con la fuente (gitignored).
+- [ ] `material/en2/` con la fuente (gitignored).
 - [ ] `content/en2/unit-*.json` escritos (course en2, aspects, atoms con ids `en2.…`).
 - [ ] `npm run build:ipa`
 - [ ] speakers reusados (o agregado el nuevo).
