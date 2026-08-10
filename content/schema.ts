@@ -93,6 +93,9 @@ export const GRAMMAR_TAGS = [
   'conditionals.first',
   'conditionals.second',
   'quantifiers',
+  // en2 U1: el eje de la unidad de comida. Separado de `quantifiers` porque son dos
+  // cosas distintas: si un sustantivo se cuenta o no, y con qué palabra se cuantifica.
+  'countable-uncountable',
   'comparatives',
   'superlatives',
   'relative-clauses',
@@ -133,6 +136,11 @@ export const FUNCTION_TAGS = [
   'accept-plan',
   'give-directions',
   'classroom-language',
+  // en2 U1: la meta comunicativa declarada de la unidad es pedir comida en un
+  // restaurante. Sin estas, los átomos del diálogo ancla no se pueden etiquetar.
+  'order-food',
+  'ask.quantity',
+  'ask.explanation',
 ] as const;
 
 /** Dominio temático. Se usa para generar distractores e interleaving. */
@@ -169,6 +177,9 @@ export const TOPIC_TAGS = [
   // Inglés 2: el Texto 1 es termodinámica, no matemática. Forzarlo a 'mathematics'
   // ensuciaría los distractores (que se generan por topic).
   'physics',
+  // en2 U1: el restaurante como escena. Distinto de 'food' (el léxico) y de
+  // 'shopping' (comprar), aunque se solapen: acá lo que se entrena es pedir.
+  'restaurant',
 ] as const;
 
 /** Habilidades: una tarjeta de SRS es (atomId, skill). Ver ARQUITECTURA.md §7. */

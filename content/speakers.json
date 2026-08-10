@@ -334,6 +334,40 @@
         "kokoro": "af_alloy",
         "azure": "es-ES-ElviraNeural"
       }
+    },
+    {
+      "id": "waiter",
+      "displayName": "Camarero",
+      "bio": "Atiende en el restaurante (en2 U1). Registro formal de servicio: toma el pedido, explica los platos.",
+      "accent": "en-GB",
+      "gender": "male",
+      "fallbackHint": [
+        "George",
+        "Ryan",
+        "Daniel"
+      ],
+      "rate": 0.92,
+      "voice": {
+        "kokoro": "bm_george",
+        "azure": "en-GB-RyanNeural"
+      }
+    },
+    {
+      "id": "diner",
+      "displayName": "Comensal",
+      "bio": "Cliente del restaurante (en2 U1). Pide mesa, ordena y pregunta por los platos.",
+      "accent": "en-US",
+      "gender": "male",
+      "fallbackHint": [
+        "Michael",
+        "Guy",
+        "David"
+      ],
+      "rate": 0.94,
+      "voice": {
+        "kokoro": "am_michael",
+        "azure": "en-US-GuyNeural"
+      }
     }
   ]
 }
