@@ -49,9 +49,38 @@ soltarlo acá sin pensar. (Sí, el del Speaking Test tiene doble espacio y un `(
 
 ### `en2/` — Inglés 2
 
-Vacía a propósito, con un `.gitkeep` para que la carpeta exista antes que el material. Cuando
-llegue el cuadernillo de Inglés 2, va acá tal como venga; si trae unidades sueltas, seguí la
-convención de en1 (`N2_Unidad_1.pdf`…). Después, el runbook de **`MANIFIESTO-NIVELES.md` §7**.
+Completo desde el 2026-08-10. **Otro formato que en1**: son presentaciones de UAIOnline
+(slides), no un cuadernillo de texto corrido, y **las actividades están embebidas como
+imágenes**. La capa de texto del PDF pierde gran parte del contenido: hay que leer las páginas
+visualmente. Autora: Prof. Victoria Casas.
+
+Cada unidad tiene **un PDF principal y complementarios de teoría/ejercicios**. Hay que curar
+los dos: el principal da la secuencia didáctica, los complementarios la teoría sistemática.
+
+```
+N2_Unidda_Intro.pdf                        Unidad introductoria (encuadre; la errata del
+                                           nombre es de la cátedra, se conserva)
+N2_Unidad_1.pdf                            U1 — Comida        · pedir en un restaurante
+  U1 - COUNTABLE AND UNCOUNTABLE NOUNS.pdf   complementario
+  U1 - QUANTIFIERS - theory.pdf              complementario
+  U1 - Quantifiers - table and exercises.pdf complementario
+N2_Unidad_2.pdf                            U2 — Pasado        · was/were, past simple
+  U2 - List of Irregular Verbs.pdf           complementario
+  U2 - PRESENT SIMPLE vs PAST SIMPLE.pdf     complementario
+N2-Unidad-3.pdf                            U3 — Vacaciones    · comparativos y superlativos
+  U3 - Comparatives and Superlatives Theory.pdf  complementario
+N2-Unidad-4.pdf                            U4 — Ahora         · present continuous
+  U4 - present simple and continuous.pdf     complementario
+```
+
+Los nombres son los del campus y son inconsistentes a propósito (`N2_Unidad_1` con guiones
+bajos, `N2-Unidad-3` con guiones): se conservan para poder re-descargar y soltar sin pensar.
+
+**Plantilla de cada unidad**, que sirve de índice al curar: Presentación · Famous quote ·
+Learning new vocabulary · Learning new structures · Ejercitación independiente ·
+Contextualization time · Cierre de unidad · **Grilla de corrección** (las claves oficiales).
+
+Runbook para dar de alta las unidades: **`MANIFIESTO-NIVELES.md` §7**.
 
 ## Para qué se usan
 
