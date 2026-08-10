@@ -1,0 +1,5740 @@
+{
+  "$schema": "../schema.json",
+  "course": "en2",
+  "unit": 1,
+  "title": "Comida — pedí en un restaurante",
+  "goals": [
+    "Meta declarada por el material: saber pedir comida en un restaurante.",
+    "Aprendé el vocabulario de comida y envases, distinguí contables de incontables y cuantificá con precisión.",
+    "Cerrá escribiendo y contando cómo se come en Argentina."
+  ],
+  "aspects": [
+    {
+      "id": "food-drinks",
+      "title": "Comida y bebida",
+      "summary": "Las 25 palabras del banco oficial, incluidos los pares americano/británico (cookies/biscuits, fries/chips).",
+      "order": 1,
+      "match": {
+        "topic": [
+          "food"
+        ]
+      },
+      "source": {
+        "page": 5,
+        "section": "Activity 1"
+      }
+    },
+    {
+      "id": "containers",
+      "title": "Envases y porciones",
+      "summary": "Las 24 palabras que permiten contar lo incontable: a piece of, a bar of, a carton of.",
+      "order": 2,
+      "match": {
+        "topic": [
+          "objects"
+        ]
+      },
+      "source": {
+        "page": 8,
+        "section": "Activity 2"
+      }
+    },
+    {
+      "id": "countable",
+      "title": "Contables e incontables",
+      "summary": "Qué se cuenta y qué no — incluido el inglés que vas a necesitar: mathematics is, research is, much data.",
+      "order": 3,
+      "match": {
+        "grammar": [
+          "countable-uncountable"
+        ]
+      },
+      "source": {
+        "page": 10,
+        "section": "Learning new structures"
+      }
+    },
+    {
+      "id": "quantifiers",
+      "title": "Cuantificadores",
+      "summary": "some/any, much/many, a lot of, a few/a little, no/none.",
+      "order": 4,
+      "match": {
+        "grammar": [
+          "quantifiers"
+        ]
+      },
+      "source": {
+        "page": 11,
+        "section": "Learning new structures"
+      }
+    },
+    {
+      "id": "restaurant",
+      "title": "En el restaurante",
+      "summary": "La meta de la unidad: pedir mesa, ordenar, preguntar por un plato y contar cómo se come acá.",
+      "order": 5,
+      "match": {
+        "topic": [
+          "restaurant"
+        ]
+      },
+      "source": {
+        "page": 19,
+        "section": "Contextualization time"
+      }
+    }
+  ],
+  "atoms": [
+    {
+      "id": "en2.u1.ct.001",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par mínimo nuestro: /uː/ vs /oʊ/. Trampa clásica del hispanohablante con el vocabulario de comida."
+      },
+      "grammar": [
+        "countable-uncountable"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "contrast",
+      "pair": [
+        "soup",
+        "soap"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "Dan had a bowl of ___ for lunch.",
+          "correct": 0
+        },
+        {
+          "text": "Wash your hands with ___ and water.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en2.u1.ct.002",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par mínimo nuestro: /s/ final sorda vs /z/ sonora."
+      },
+      "grammar": [
+        "countable-uncountable"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "contrast",
+      "pair": [
+        "rice",
+        "rise"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "We have grilled fish with ___ and salad.",
+          "correct": 0
+        },
+        {
+          "text": "Prices ___ every year.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en2.u1.ct.003",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Contraste de sintaxis, no de sonido: es EL error de la unidad."
+      },
+      "grammar": [
+        "countable-uncountable",
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "contrast",
+      "pair": [
+        "much",
+        "many"
+      ],
+      "type": "homophone",
+      "discriminator": "syntax",
+      "examples": [
+        {
+          "text": "How ___ sugar do you need?",
+          "correct": 0
+        },
+        {
+          "text": "How ___ oranges did you buy?",
+          "correct": 1
+        },
+        {
+          "text": "How ___ time do you have left?",
+          "correct": 0
+        },
+        {
+          "text": "How ___ people went to the concert?",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en2.u1.d.001",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant"
+      ],
+      "difficulty": 3,
+      "kind": "dialogue",
+      "title": "Eating Out",
+      "situation": "Un cliente llega al restaurante, pide mesa y ordena la cena.",
+      "turns": [
+        {
+          "speaker": "waiter",
+          "phraseId": "en2.u1.p.080"
+        },
+        {
+          "speaker": "diner",
+          "phraseId": "en2.u1.p.081"
+        },
+        {
+          "speaker": "waiter",
+          "phraseId": "en2.u1.p.082"
+        },
+        {
+          "speaker": "diner",
+          "phraseId": "en2.u1.p.083"
+        },
+        {
+          "speaker": "waiter",
+          "phraseId": "en2.u1.p.084"
+        },
+        {
+          "speaker": "waiter",
+          "phraseId": "en2.u1.p.085"
+        },
+        {
+          "speaker": "diner",
+          "phraseId": "en2.u1.p.086"
+        },
+        {
+          "speaker": "waiter",
+          "phraseId": "en2.u1.p.087"
+        },
+        {
+          "speaker": "diner",
+          "phraseId": "en2.u1.p.088"
+        },
+        {
+          "speaker": "waiter",
+          "phraseId": "en2.u1.p.089"
+        },
+        {
+          "speaker": "diner",
+          "phraseId": "en2.u1.p.090"
+        },
+        {
+          "speaker": "waiter",
+          "phraseId": "en2.u1.p.091"
+        },
+        {
+          "speaker": "diner",
+          "phraseId": "en2.u1.p.092"
+        },
+        {
+          "speaker": "waiter",
+          "phraseId": "en2.u1.p.093"
+        },
+        {
+          "speaker": "diner",
+          "phraseId": "en2.u1.p.094"
+        },
+        {
+          "speaker": "waiter",
+          "phraseId": "en2.u1.p.095"
+        }
+      ]
+    },
+    {
+      "id": "en2.u1.ex.001",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación — Consigna 1"
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "exercise",
+      "prompt": "Completá con SOME o ANY.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "There isn't ___ butter in the fridge, is there?",
+          "blanks": [
+            {
+              "accept": [
+                "any"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I bought ___ peas and ___ beans at the supermarket.",
+          "blanks": [
+            {
+              "accept": [
+                "some"
+              ]
+            },
+            {
+              "accept": [
+                "some"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "We don't have ___ eggs to make an omelette.",
+          "blanks": [
+            {
+              "accept": [
+                "any"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "We must go to the bank. We need ___ money.",
+          "blanks": [
+            {
+              "accept": [
+                "some"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "There isn't ___ honey in the jar but you can have ___ jam.",
+          "blanks": [
+            {
+              "accept": [
+                "any"
+              ]
+            },
+            {
+              "accept": [
+                "some"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "There are ___ people waiting outside the cinema.",
+          "blanks": [
+            {
+              "accept": [
+                "some"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I don't have ___ salt. Could you lend me ___?",
+          "blanks": [
+            {
+              "accept": [
+                "any"
+              ]
+            },
+            {
+              "accept": [
+                "some"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ flowers were a present for her birthday.",
+          "blanks": [
+            {
+              "accept": [
+                "Some"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "We don't have ___ cherries but there are ___ strawberries.",
+          "blanks": [
+            {
+              "accept": [
+                "any"
+              ]
+            },
+            {
+              "accept": [
+                "some"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Are there ___ English books in the library?",
+          "blanks": [
+            {
+              "accept": [
+                "any"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "There were ___ mistakes in the dictation you made last Monday.",
+          "blanks": [
+            {
+              "accept": [
+                "some"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Would you like ___ cream in your coffee?",
+          "blanks": [
+            {
+              "accept": [
+                "some"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The never drink ___ beer. They don't like it.",
+          "blanks": [
+            {
+              "accept": [
+                "any"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Could you lend me ___ money to buy the newspaper?",
+          "blanks": [
+            {
+              "accept": [
+                "some"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Are there ___ children playing in the park?",
+          "blanks": [
+            {
+              "accept": [
+                "any"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "There isn't ___ rice left. We should go to the supermarket and buy ___.",
+          "blanks": [
+            {
+              "accept": [
+                "any"
+              ]
+            },
+            {
+              "accept": [
+                "some"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "native"
+    },
+    {
+      "id": "en2.u1.ex.002",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación — Consigna 2",
+        "note": "La consigna trae 18 ítems (a-r) pero la grilla solo publica 15 (a-o). Los tres últimos llevan nuestra respuesta, inequívoca. Además el ítem p del original dice \"How many days have a leap year have?\", con un have de más."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "exercise",
+      "prompt": "Completá con MUCH o MANY.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "How ___ oranges did you buy?",
+          "blanks": [
+            {
+              "accept": [
+                "many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ does it cost?",
+          "blanks": [
+            {
+              "accept": [
+                "much"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ presents did they buy?",
+          "blanks": [
+            {
+              "accept": [
+                "many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ cars has she bought?",
+          "blanks": [
+            {
+              "accept": [
+                "many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ times have you been there?",
+          "blanks": [
+            {
+              "accept": [
+                "many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ sugar do you need?",
+          "blanks": [
+            {
+              "accept": [
+                "much"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ children do they have?",
+          "blanks": [
+            {
+              "accept": [
+                "many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ hours do you usually sleep?",
+          "blanks": [
+            {
+              "accept": [
+                "many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ people went to the concert?",
+          "blanks": [
+            {
+              "accept": [
+                "many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ cups of coffee do you drink?",
+          "blanks": [
+            {
+              "accept": [
+                "many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ did you pay for the dress?",
+          "blanks": [
+            {
+              "accept": [
+                "much"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ cheese have you got?",
+          "blanks": [
+            {
+              "accept": [
+                "much"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ chairs are there in the room?",
+          "blanks": [
+            {
+              "accept": [
+                "many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ wine did you drink?",
+          "blanks": [
+            {
+              "accept": [
+                "much"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ potatoes should I peel?",
+          "blanks": [
+            {
+              "accept": [
+                "many"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "How ___ days does a leap year have?",
+          "blanks": [
+            {
+              "accept": [
+                "many"
+              ],
+              "note": "Sin clave oficial: la grilla corta en el ítem o. Además corregimos el \"have\" duplicado del original."
+            }
+          ]
+        },
+        {
+          "stem": "How ___ is a kilo of potatoes?",
+          "blanks": [
+            {
+              "accept": [
+                "much"
+              ],
+              "note": "Sin clave oficial: la grilla corta en el ítem o."
+            }
+          ]
+        },
+        {
+          "stem": "How ___ flour do we need for the pie?",
+          "blanks": [
+            {
+              "accept": [
+                "much"
+              ],
+              "note": "Sin clave oficial: la grilla corta en el ítem o."
+            }
+          ]
+        }
+      ],
+      "audioViable": "native"
+    },
+    {
+      "id": "en2.u1.ex.003",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 17,
+        "section": "Ejercitación — Consigna 4",
+        "note": "Los ítems 17 (a kilo of meat) y 21 (a piece of cake) no son envases: son unidad de medida y modismo. El material no los distingue; nosotros sí, en la note del ítem."
+      },
+      "grammar": [
+        "countable-uncountable",
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 4,
+      "kind": "exercise",
+      "prompt": "Elegí el envase o la porción correcta.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "There's a ___ of wine on the table.",
+          "blanks": [
+            {
+              "accept": [
+                "jug"
+              ],
+              "note": "La clave sigue el dibujo (una jarra), no la colocación más habitual."
+            }
+          ]
+        },
+        {
+          "stem": "Dan just had a ___ of soup for lunch.",
+          "blanks": [
+            {
+              "accept": [
+                "bowl"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The kids had a ___ of popcorn at the cinema.",
+          "blanks": [
+            {
+              "accept": [
+                "tub"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The pizza is in a paper ___.",
+          "blanks": [
+            {
+              "accept": [
+                "box"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "We need three ___ of yoghurt.",
+          "blanks": [
+            {
+              "accept": [
+                "tubs"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "He gave her a ___ of chocolates.",
+          "blanks": [
+            {
+              "accept": [
+                "box"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Granny sent me a ___ of tomato juice.",
+          "blanks": [
+            {
+              "accept": [
+                "jar"
+              ],
+              "note": "La clave sigue el dibujo (un frasco)."
+            }
+          ]
+        },
+        {
+          "stem": "Julia says she only had two ___ of martini.",
+          "blanks": [
+            {
+              "accept": [
+                "glasses"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Don't forget to buy a ___ of milk.",
+          "blanks": [
+            {
+              "accept": [
+                "carton"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I'll try to eat only one ___ of pizza.",
+          "blanks": [
+            {
+              "accept": [
+                "slice"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Tom had a ___ of jelly beans.",
+          "blanks": [
+            {
+              "accept": [
+                "bag"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I drank two ___ of soda after dinner.",
+          "blanks": [
+            {
+              "accept": [
+                "cans"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Joe bought a ___ of crisps.",
+          "blanks": [
+            {
+              "accept": [
+                "packet"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "That ___ of chocolate looks delicious.",
+          "blanks": [
+            {
+              "accept": [
+                "bar"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I always have a ___ of cheese for dinner.",
+          "blanks": [
+            {
+              "accept": [
+                "piece"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "A ___ of tea always relaxes me.",
+          "blanks": [
+            {
+              "accept": [
+                "cup"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Buy a ___ of meat from the butcher's.",
+          "blanks": [
+            {
+              "accept": [
+                "kilo"
+              ],
+              "note": "Unidad de medida, no envase."
+            }
+          ]
+        },
+        {
+          "stem": "I drink a ___ of juice when I am at school.",
+          "blanks": [
+            {
+              "accept": [
+                "carton"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Don't eat more than two ___ of bacon.",
+          "blanks": [
+            {
+              "accept": [
+                "slices"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The ___ of bread is next to the cheese.",
+          "blanks": [
+            {
+              "accept": [
+                "loaf"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "This quiz is a ___ of cake.",
+          "blanks": [
+            {
+              "accept": [
+                "piece"
+              ],
+              "note": "Modismo: \"a piece of cake\" es \"está chupado\". No es una porción."
+            }
+          ]
+        },
+        {
+          "stem": "There's a ___ of juice in the fridge.",
+          "blanks": [
+            {
+              "accept": [
+                "bottle"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The ___ of tuna is on the table.",
+          "blanks": [
+            {
+              "accept": [
+                "tin"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "A ___ of orange juice is full of vitamins.",
+          "blanks": [
+            {
+              "accept": [
+                "glass"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "native"
+    },
+    {
+      "id": "en2.u1.ex.004",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 2,
+        "section": "U1 - Quantifiers - table and exercises.pdf",
+        "note": "El complementario no trae grilla: las respuestas son nuestras, inequívocas. La página es la de ESE PDF."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 4,
+      "kind": "exercise",
+      "prompt": "Completá con A LITTLE o A FEW.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "Julia ate ___ rice, she wasn’t very hungry.",
+          "blanks": [
+            {
+              "accept": [
+                "a little"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Mike ate ___ chips, he wasn’t very hungry.",
+          "blanks": [
+            {
+              "accept": [
+                "a few"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I have ___ cousins that speak French.",
+          "blanks": [
+            {
+              "accept": [
+                "a few"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "She found ___ cookies under her bed.",
+          "blanks": [
+            {
+              "accept": [
+                "a few"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I need ___ water to feel better, that’s all.",
+          "blanks": [
+            {
+              "accept": [
+                "a little"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I want to save ___ money to buy a present for my mother.",
+          "blanks": [
+            {
+              "accept": [
+                "a little"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Ashley needs ___ sugar for the cake.",
+          "blanks": [
+            {
+              "accept": [
+                "a little"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Peter saw ___ girls running across the field.",
+          "blanks": [
+            {
+              "accept": [
+                "a few"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "native"
+    },
+    {
+      "id": "en2.u1.ex.005",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna nuestra: el material explica que los incontables necesitan otra palabra para contarse, pero no lo ejercita."
+      },
+      "grammar": [
+        "countable-uncountable"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 4,
+      "kind": "exercise",
+      "prompt": "El sustantivo es incontable. Reescribí la frase usando un envase o una porción.",
+      "format": "transform",
+      "items": [
+        {
+          "stem": "two breads",
+          "answer": {
+            "accept": [
+              "two loaves of bread",
+              "two pieces of bread"
+            ]
+          }
+        },
+        {
+          "stem": "three milks",
+          "answer": {
+            "accept": [
+              "three cartons of milk",
+              "three glasses of milk"
+            ]
+          }
+        },
+        {
+          "stem": "a chocolate",
+          "answer": {
+            "accept": [
+              "a bar of chocolate"
+            ]
+          }
+        },
+        {
+          "stem": "four waters",
+          "answer": {
+            "accept": [
+              "four bottles of water",
+              "four glasses of water"
+            ]
+          }
+        },
+        {
+          "stem": "two teas",
+          "answer": {
+            "accept": [
+              "two cups of tea"
+            ]
+          }
+        }
+      ],
+      "audioViable": "adapted"
+    },
+    {
+      "id": "en2.u1.ls.001",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "El audio original es un link externo (audio-lingua.eu) que no podemos versionar. Narrativa nuestra, consistente con las respuestas que SÍ publica la grilla."
+      },
+      "grammar": [
+        "countable-uncountable",
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "listening",
+      "narrative": "Hello, my name is Robert and I live in New York City. For breakfast I usually have pancakes, eggs and cereals. It is a big breakfast, but I need a lot of energy in the morning. For lunch I do not have much time, so I take cheese, chicken and vegetable sandwiches to the office. For dinner I like a salad with rice, carrots and peas, or some pasta. And for dessert, a little fruit and some chocolate.",
+      "speaker": "narrator",
+      "questions": [
+        {
+          "q": "What does Robert have for breakfast?",
+          "accept": [
+            "pancakes, eggs and cereals",
+            "pancakes eggs and cereals",
+            "pancakes"
+          ]
+        },
+        {
+          "q": "What does Robert take to the office for lunch?",
+          "accept": [
+            "sandwiches",
+            "cheese, chicken and vegetable sandwiches"
+          ]
+        },
+        {
+          "q": "What does Robert have for dessert?",
+          "accept": [
+            "fruit and chocolate",
+            "a little fruit and some chocolate",
+            "fruit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en2.u1.lx.001",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "oil",
+      "pos": "noun",
+      "gloss": "aceite",
+      "examplePhraseId": "en2.u1.p.001",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.002",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "coffee",
+      "pos": "noun",
+      "gloss": "café",
+      "examplePhraseId": "en2.u1.p.002",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.003",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "salad",
+      "pos": "noun",
+      "gloss": "ensalada",
+      "examplePhraseId": "en2.u1.p.003",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.004",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "soda",
+      "pos": "noun",
+      "gloss": "gaseosa",
+      "examplePhraseId": "en2.u1.p.004",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.005",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "rice",
+      "pos": "noun",
+      "gloss": "arroz",
+      "examplePhraseId": "en2.u1.p.005",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.006",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "tea",
+      "pos": "noun",
+      "gloss": "té",
+      "examplePhraseId": "en2.u1.p.006",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.007",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "pizza",
+      "pos": "noun",
+      "gloss": "pizza",
+      "examplePhraseId": "en2.u1.p.007",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.008",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "ketchup",
+      "pos": "noun",
+      "gloss": "kétchup",
+      "examplePhraseId": "en2.u1.p.008",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.009",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "honey",
+      "pos": "noun",
+      "gloss": "miel",
+      "examplePhraseId": "en2.u1.p.009",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.010",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "salt and pepper",
+      "pos": "phrase",
+      "gloss": "sal y pimienta",
+      "examplePhraseId": "en2.u1.p.010",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.011",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "yoghurt",
+      "pos": "noun",
+      "gloss": "yogur",
+      "examplePhraseId": "en2.u1.p.011",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.012",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "sugar lumps",
+      "pos": "noun",
+      "gloss": "terrones de azúcar",
+      "examplePhraseId": "en2.u1.p.012",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.013",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "fried egg",
+      "pos": "noun",
+      "gloss": "huevo frito",
+      "examplePhraseId": "en2.u1.p.013",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.014",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "soup",
+      "pos": "noun",
+      "gloss": "sopa",
+      "examplePhraseId": "en2.u1.p.014",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.015",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "meat",
+      "pos": "noun",
+      "gloss": "carne",
+      "examplePhraseId": "en2.u1.p.015",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.016",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "eggs",
+      "pos": "noun",
+      "gloss": "huevos",
+      "examplePhraseId": "en2.u1.p.016",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.017",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "breakfast",
+      "pos": "noun",
+      "gloss": "desayuno",
+      "examplePhraseId": "en2.u1.p.017",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.018",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "fish",
+      "pos": "noun",
+      "gloss": "pescado",
+      "examplePhraseId": "en2.u1.p.018",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.019",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "bacon",
+      "pos": "noun",
+      "gloss": "panceta",
+      "examplePhraseId": "en2.u1.p.019",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.020",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "cookies",
+      "pos": "noun",
+      "gloss": "galletitas (dulces)",
+      "examplePhraseId": "en2.u1.p.020",
+      "focus": "variant",
+      "variantOf": {
+        "us": "cookies",
+        "uk": "biscuits"
+      }
+    },
+    {
+      "id": "en2.u1.lx.021",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "fries",
+      "pos": "noun",
+      "gloss": "papas fritas",
+      "examplePhraseId": "en2.u1.p.021",
+      "focus": "variant",
+      "variantOf": {
+        "us": "fries",
+        "uk": "chips"
+      }
+    },
+    {
+      "id": "en2.u1.lx.022",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "hamburger",
+      "pos": "noun",
+      "gloss": "hamburguesa",
+      "examplePhraseId": "en2.u1.p.022",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.023",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "cheese",
+      "pos": "noun",
+      "gloss": "queso",
+      "examplePhraseId": "en2.u1.p.023",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.024",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "cake",
+      "pos": "noun",
+      "gloss": "torta",
+      "examplePhraseId": "en2.u1.p.024",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.025",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "roast chicken",
+      "pos": "noun",
+      "gloss": "pollo asado",
+      "examplePhraseId": "en2.u1.p.025",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.026",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a jar",
+      "pos": "noun",
+      "gloss": "frasco",
+      "examplePhraseId": "en2.u1.p.026",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.027",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a bottle",
+      "pos": "noun",
+      "gloss": "botella",
+      "examplePhraseId": "en2.u1.p.027",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.028",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a bucket",
+      "pos": "noun",
+      "gloss": "balde",
+      "examplePhraseId": "en2.u1.p.028",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.029",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a box",
+      "pos": "noun",
+      "gloss": "caja",
+      "examplePhraseId": "en2.u1.p.029",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.030",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a bunch",
+      "pos": "noun",
+      "gloss": "racimo",
+      "examplePhraseId": "en2.u1.p.030",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.031",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a bar",
+      "pos": "noun",
+      "gloss": "barra",
+      "examplePhraseId": "en2.u1.p.031",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.032",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a plate",
+      "pos": "noun",
+      "gloss": "plato",
+      "examplePhraseId": "en2.u1.p.032",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.033",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a cone",
+      "pos": "noun",
+      "gloss": "cucurucho",
+      "examplePhraseId": "en2.u1.p.033",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.034",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a slice",
+      "pos": "noun",
+      "gloss": "porción, feta",
+      "examplePhraseId": "en2.u1.p.034",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.035",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a barrel",
+      "pos": "noun",
+      "gloss": "barril",
+      "examplePhraseId": "en2.u1.p.035",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.036",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a piece",
+      "pos": "noun",
+      "gloss": "pedazo",
+      "examplePhraseId": "en2.u1.p.036",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.037",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a can",
+      "pos": "noun",
+      "gloss": "lata",
+      "examplePhraseId": "en2.u1.p.037",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.038",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a loaf",
+      "pos": "noun",
+      "gloss": "pan (hogaza)",
+      "examplePhraseId": "en2.u1.p.038",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.039",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a tin",
+      "pos": "noun",
+      "gloss": "lata (de conserva)",
+      "examplePhraseId": "en2.u1.p.039",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.040",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a carton",
+      "pos": "noun",
+      "gloss": "cartón, brik",
+      "examplePhraseId": "en2.u1.p.040",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.041",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a packet",
+      "pos": "noun",
+      "gloss": "paquete",
+      "examplePhraseId": "en2.u1.p.041",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.042",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a bag",
+      "pos": "noun",
+      "gloss": "bolsa",
+      "examplePhraseId": "en2.u1.p.042",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.043",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a bowl",
+      "pos": "noun",
+      "gloss": "bol",
+      "examplePhraseId": "en2.u1.p.043",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.044",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a glass",
+      "pos": "noun",
+      "gloss": "vaso",
+      "examplePhraseId": "en2.u1.p.044",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.045",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a cup",
+      "pos": "noun",
+      "gloss": "taza",
+      "examplePhraseId": "en2.u1.p.045",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.046",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a jug",
+      "pos": "noun",
+      "gloss": "jarra",
+      "examplePhraseId": "en2.u1.p.046",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.047",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a roll",
+      "pos": "noun",
+      "gloss": "rollo",
+      "examplePhraseId": "en2.u1.p.047",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.048",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a mug",
+      "pos": "noun",
+      "gloss": "taza grande, jarro",
+      "examplePhraseId": "en2.u1.p.048",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.lx.049",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "lexeme",
+      "word": "a basket",
+      "pos": "noun",
+      "gloss": "canasta",
+      "examplePhraseId": "en2.u1.p.049",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u1.p.001",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "There is some oil in the bottle.",
+      "gloss": "Hay aceite en la botella.",
+      "speaker": "narrator",
+      "ipa": "ðɛɹ ɪz sˌʌm ˈɔɪl ɪnðə bˈɑːɾəl"
+    },
+    {
+      "id": "en2.u1.p.002",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Could I have black coffee with sugar, please?",
+      "gloss": "¿Me trae un café negro con azúcar, por favor?",
+      "speaker": "narrator",
+      "ipa": "kʊd aɪ hæv blˈæk kˈɔfi wɪð ʃˈʊɡɚ plˈiːz"
+    },
+    {
+      "id": "en2.u1.p.003",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "My wife would like a tomato salad.",
+      "gloss": "Mi esposa quiere una ensalada de tomate.",
+      "speaker": "narrator",
+      "ipa": "maɪ wˈaɪf wʊd lˈaɪk ɐ təmˈeɪɾoʊ sˈæləd"
+    },
+    {
+      "id": "en2.u1.p.004",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I drank two cans of soda after dinner.",
+      "gloss": "Tomé dos latas de gaseosa después de cenar.",
+      "speaker": "narrator",
+      "ipa": "aɪ dɹˈæŋk tˈuː kˈænz ʌv sˈoʊdə ˈæftɚ dˈɪnɚ"
+    },
+    {
+      "id": "en2.u1.p.005",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Is there any rice left?",
+      "gloss": "¿Queda arroz?",
+      "speaker": "narrator",
+      "ipa": "ɪz ðɛɹ ˌɛni ɹˈaɪs lˈɛft"
+    },
+    {
+      "id": "en2.u1.p.006",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "A cup of tea always relaxes me.",
+      "gloss": "Una taza de té siempre me relaja.",
+      "speaker": "narrator",
+      "ipa": "ɐ kˈʌp ʌv tˈiː ˈɔːlweɪz ɹᵻlˈæksᵻz mˌiː"
+    },
+    {
+      "id": "en2.u1.p.007",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I'll try to eat only one slice of pizza.",
+      "gloss": "Voy a tratar de comer una sola porción de pizza.",
+      "speaker": "narrator",
+      "ipa": "aɪl tɹˈaɪ tʊ ˈiːt ˈoʊnli wˈʌn slˈaɪs ʌv pˈiːtsə"
+    },
+    {
+      "id": "en2.u1.p.008",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Would you like some ketchup with the chips?",
+      "gloss": "¿Querés kétchup con las papas fritas?",
+      "speaker": "narrator",
+      "ipa": "wʊd juː lˈaɪk sˌʌm kˈɛtʃʌp wɪððə tʃˈɪps"
+    },
+    {
+      "id": "en2.u1.p.009",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "There isn't any honey in the jar.",
+      "gloss": "No hay miel en el frasco.",
+      "speaker": "narrator",
+      "ipa": "ðɛɹ ˌɪzənt ˌɛni hˈʌni ɪnðə dʒˈɑːɹ"
+    },
+    {
+      "id": "en2.u1.p.010",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Could you pass me the salt and pepper?",
+      "gloss": "¿Me pasás la sal y la pimienta?",
+      "speaker": "narrator",
+      "ipa": "kʊd juː pˈæs mˌiː ðə sˈɔlt ænd pˈɛpɚ"
+    },
+    {
+      "id": "en2.u1.p.011",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "We need three tubs of yoghurt.",
+      "gloss": "Necesitamos tres potes de yogur.",
+      "speaker": "narrator",
+      "ipa": "wiː nˈiːd θɹˈiː tˈʌbz ʌv jˈoʊɡɚt"
+    },
+    {
+      "id": "en2.u1.p.012",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "How many sugar lumps do you want in your tea?",
+      "gloss": "¿Cuántos terrones de azúcar querés en el té?",
+      "speaker": "narrator",
+      "ipa": "hˌaʊ mˈɛni ʃˈʊɡɚ lˈʌmps dˈuː juː wˈɔnt ɪn jʊɹ tˈiː"
+    },
+    {
+      "id": "en2.u1.p.013",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I would like a fried egg for breakfast.",
+      "gloss": "Quiero un huevo frito para el desayuno.",
+      "speaker": "narrator",
+      "ipa": "aɪ wʊd lˈaɪk ɐ fɹˈaɪd ˈɛɡ fɔːɹ bɹˈɛkfəst"
+    },
+    {
+      "id": "en2.u1.p.014",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Dan just had a bowl of soup for lunch.",
+      "gloss": "Dan almorzó un bol de sopa.",
+      "speaker": "narrator",
+      "ipa": "dˈæn dʒˈʌst hæd ɐ bˈoʊl ʌv sˈuːp fɔːɹ lˈʌntʃ"
+    },
+    {
+      "id": "en2.u1.p.015",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Buy a kilo of meat from the butcher’s.",
+      "gloss": "Comprá un kilo de carne en la carnicería.",
+      "speaker": "narrator",
+      "ipa": "bˈaɪ ɐ kˈiːloʊ ʌv mˈiːt fɹʌmðə bˈʊtʃɚz"
+    },
+    {
+      "id": "en2.u1.p.016",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "How many eggs are there in the carton?",
+      "gloss": "¿Cuántos huevos hay en la caja?",
+      "speaker": "narrator",
+      "ipa": "hˌaʊ mˈɛni ˈɛɡz ɑːɹ ðɛɹ ɪnðə kˈɑːɹtən"
+    },
+    {
+      "id": "en2.u1.p.017",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "In Britain, breakfast is between seven and nine.",
+      "gloss": "En Gran Bretaña, el desayuno es entre las siete y las nueve.",
+      "speaker": "narrator",
+      "ipa": "ɪn bɹˈɪtən bɹˈɛkfəst ɪz bᵻtwˌiːn sˈɛvən ænd nˈaɪn"
+    },
+    {
+      "id": "en2.u1.p.018",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "We have grilled fish with rice and salad.",
+      "gloss": "Tenemos pescado a la parrilla con arroz y ensalada.",
+      "speaker": "narrator",
+      "ipa": "wiː hæv ɡɹˈɪld fˈɪʃ wɪð ɹˈaɪs ænd sˈæləd"
+    },
+    {
+      "id": "en2.u1.p.019",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Don't eat more than two slices of bacon.",
+      "gloss": "No comas más de dos fetas de panceta.",
+      "speaker": "narrator",
+      "ipa": "dˈoʊnt ˈiːt mˈoːɹ ðɐn tˈuː slˈaɪsᵻz ʌv bˈeɪkən"
+    },
+    {
+      "id": "en2.u1.p.020",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "She found a few cookies under her bed.",
+      "gloss": "Encontró unas galletitas debajo de la cama.",
+      "speaker": "narrator",
+      "ipa": "ʃiː fˈaʊnd ɐ fjˈuː kˈʊkiz ˌʌndɚ hɜː bˈɛd"
+    },
+    {
+      "id": "en2.u1.p.021",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I would like sirloin steak and fries.",
+      "gloss": "Quiero bife de lomo con papas fritas.",
+      "speaker": "narrator",
+      "ipa": "aɪ wʊd lˈaɪk sˈɜːlɔɪn stˈeɪk ænd fɹˈaɪz"
+    },
+    {
+      "id": "en2.u1.p.022",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Would you like a hamburger or a sandwich?",
+      "gloss": "¿Querés una hamburguesa o un sándwich?",
+      "speaker": "narrator",
+      "ipa": "wʊd juː lˈaɪk ɐ hˈæmbɜːɡɚ ɔːɹ ɐ sˈændwɪtʃ"
+    },
+    {
+      "id": "en2.u1.p.023",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I always have a piece of cheese for dinner.",
+      "gloss": "Siempre ceno un pedazo de queso.",
+      "speaker": "narrator",
+      "ipa": "aɪ ˈɔːlweɪz hæv ɐ pˈiːs ʌv tʃˈiːz fɔːɹ dˈɪnɚ"
+    },
+    {
+      "id": "en2.u1.p.024",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "May I have a slice of cake with my coffee?",
+      "gloss": "¿Me trae una porción de torta con el café?",
+      "speaker": "narrator",
+      "ipa": "mˈeɪ aɪ hæv ɐ slˈaɪs ʌv kˈeɪk wɪð maɪ kˈɔfi"
+    },
+    {
+      "id": "en2.u1.p.025",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 5,
+        "section": "Activity 1 — Food and drinks",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra: el material solo da la palabra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Roast chicken is my favourite dish.",
+      "gloss": "El pollo asado es mi plato favorito.",
+      "speaker": "narrator",
+      "ipa": "ɹˈoʊst tʃˈɪkɪn ɪz maɪ fˈeɪvɹɪt dˈɪʃ"
+    },
+    {
+      "id": "en2.u1.p.026",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Granny sent me a jar of tomato juice.",
+      "gloss": "La abuela me mandó un frasco de jugo de tomate.",
+      "speaker": "narrator",
+      "ipa": "ɡɹˈæni sˈɛnt mˌiː ɐ dʒˈɑːɹ ʌv təmˈeɪɾoʊ dʒˈuːs"
+    },
+    {
+      "id": "en2.u1.p.027",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "There's a bottle of juice in the fridge.",
+      "gloss": "Hay una botella de jugo en la heladera.",
+      "speaker": "narrator",
+      "ipa": "ðɛɹz ɐ bˈɑːɾəl ʌv dʒˈuːs ɪnðə fɹˈɪdʒ"
+    },
+    {
+      "id": "en2.u1.p.028",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "She filled a bucket with water.",
+      "gloss": "Llenó un balde con agua.",
+      "speaker": "narrator",
+      "ipa": "ʃiː fˈɪld ɐ bˈʌkɪt wɪð wˈɔːɾɚ"
+    },
+    {
+      "id": "en2.u1.p.029",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "The pizza is in a paper box.",
+      "gloss": "La pizza está en una caja de cartón.",
+      "speaker": "narrator",
+      "ipa": "ðə pˈiːtsə ɪz ɪn ɐ pˈeɪpɚ bˈɑːks"
+    },
+    {
+      "id": "en2.u1.p.030",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I bought a bunch of bananas.",
+      "gloss": "Compré un racimo de bananas.",
+      "speaker": "narrator",
+      "ipa": "aɪ bˈɔːt ɐ bˈʌntʃ ʌv bɐnˈænəz"
+    },
+    {
+      "id": "en2.u1.p.031",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "That bar of chocolate looks delicious.",
+      "gloss": "Esa barra de chocolate se ve deliciosa.",
+      "speaker": "narrator",
+      "ipa": "ðæt bˈɑːɹ ʌv tʃˈɑːklət lˈʊks dᵻlˈɪʃəs"
+    },
+    {
+      "id": "en2.u1.p.032",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "He put the fish on a plate.",
+      "gloss": "Puso el pescado en un plato.",
+      "speaker": "narrator",
+      "ipa": "hiː pˌʊt ðə fˈɪʃ ˌɔn ɐ plˈeɪt"
+    },
+    {
+      "id": "en2.u1.p.033",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I would like a cone of ice-cream.",
+      "gloss": "Quiero un cucurucho de helado.",
+      "speaker": "narrator",
+      "ipa": "aɪ wʊd lˈaɪk ɐ kˈoʊn ʌv ˈaɪskɹˈiːm"
+    },
+    {
+      "id": "en2.u1.p.034",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I'll try to eat only one slice of pizza.",
+      "gloss": "Voy a tratar de comer una sola porción de pizza.",
+      "speaker": "narrator",
+      "ipa": "aɪl tɹˈaɪ tʊ ˈiːt ˈoʊnli wˈʌn slˈaɪs ʌv pˈiːtsə"
+    },
+    {
+      "id": "en2.u1.p.035",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "The wine is in a wooden barrel.",
+      "gloss": "El vino está en un barril de madera.",
+      "speaker": "narrator",
+      "ipa": "ðə wˈaɪn ɪz ɪn ɐ wˈʊdən bˈæɹəl"
+    },
+    {
+      "id": "en2.u1.p.036",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Can I take a piece of bread, please?",
+      "gloss": "¿Puedo tomar un pedazo de pan, por favor?",
+      "speaker": "narrator",
+      "ipa": "kæn aɪ tˈeɪk ɐ pˈiːs ʌv bɹˈɛd plˈiːz"
+    },
+    {
+      "id": "en2.u1.p.037",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I drank two cans of soda after dinner.",
+      "gloss": "Tomé dos latas de gaseosa después de cenar.",
+      "speaker": "narrator",
+      "ipa": "aɪ dɹˈæŋk tˈuː kˈænz ʌv sˈoʊdə ˈæftɚ dˈɪnɚ"
+    },
+    {
+      "id": "en2.u1.p.038",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "The loaf of bread is next to the cheese.",
+      "gloss": "El pan está al lado del queso.",
+      "speaker": "narrator",
+      "ipa": "ðə lˈoʊf ʌv bɹˈɛd ɪz nˈɛkst tə ðə tʃˈiːz"
+    },
+    {
+      "id": "en2.u1.p.039",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "The tin of tuna is on the table.",
+      "gloss": "La lata de atún está sobre la mesa.",
+      "speaker": "narrator",
+      "ipa": "ðə tˈɪn ʌv tˈuːnə ɪz ɔnðə tˈeɪbəl"
+    },
+    {
+      "id": "en2.u1.p.040",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Don't forget to buy a carton of milk.",
+      "gloss": "No te olvides de comprar un cartón de leche.",
+      "speaker": "narrator",
+      "ipa": "dˈoʊnt fɚɡˈɛt tə bˈaɪ ɐ kˈɑːɹtən ʌv mˈɪlk"
+    },
+    {
+      "id": "en2.u1.p.041",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Joe bought a packet of crisps.",
+      "gloss": "Joe compró un paquete de papas fritas.",
+      "speaker": "narrator",
+      "ipa": "dʒˈoʊ bˈɔːt ɐ pˈækɪt ʌv kɹˈɪsps"
+    },
+    {
+      "id": "en2.u1.p.042",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Tom had a bag of jelly beans.",
+      "gloss": "Tom tenía una bolsa de gomitas.",
+      "speaker": "narrator",
+      "ipa": "tˈɑːm hæd ɐ bˈæɡ ʌv dʒˈɛli bˈiːnz"
+    },
+    {
+      "id": "en2.u1.p.043",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I would like a bowl of cereal.",
+      "gloss": "Quiero un bol de cereales.",
+      "speaker": "narrator",
+      "ipa": "aɪ wʊd lˈaɪk ɐ bˈoʊl ʌv sˈiəɹɪəl"
+    },
+    {
+      "id": "en2.u1.p.044",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "A glass of orange juice is full of vitamins.",
+      "gloss": "Un vaso de jugo de naranja está lleno de vitaminas.",
+      "speaker": "narrator",
+      "ipa": "ɐ ɡlˈæs ʌv ˈɔɹɪndʒ dʒˈuːs ɪz fˈʊl ʌv vˈaɪɾəmɪnz"
+    },
+    {
+      "id": "en2.u1.p.045",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "A cup of tea always relaxes me.",
+      "gloss": "Una taza de té siempre me relaja.",
+      "speaker": "narrator",
+      "ipa": "ɐ kˈʌp ʌv tˈiː ˈɔːlweɪz ɹᵻlˈæksᵻz mˌiː"
+    },
+    {
+      "id": "en2.u1.p.046",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "There's a jug of wine on the table.",
+      "gloss": "Hay una jarra de vino sobre la mesa.",
+      "speaker": "narrator",
+      "ipa": "ðɛɹz ɐ dʒˈʌɡ ʌv wˈaɪn ɔnðə tˈeɪbəl"
+    },
+    {
+      "id": "en2.u1.p.047",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "We need a roll of kitchen paper.",
+      "gloss": "Necesitamos un rollo de papel de cocina.",
+      "speaker": "narrator",
+      "ipa": "wiː nˈiːd ɐ ɹˈoʊl ʌv kˈɪtʃən pˈeɪpɚ"
+    },
+    {
+      "id": "en2.u1.p.048",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "He drinks his coffee in a big mug.",
+      "gloss": "Toma el café en un jarro grande.",
+      "speaker": "narrator",
+      "ipa": "hiː dɹˈɪŋks hɪz kˈɔfi ɪn ɐ bˈɪɡ mˈʌɡ"
+    },
+    {
+      "id": "en2.u1.p.049",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 8,
+        "section": "Activity 2 — Containers",
+        "note": "Palabra de la clave oficial. La oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "articles.indefinite"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "objects"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "There is fruit in the basket.",
+      "gloss": "Hay fruta en la canasta.",
+      "speaker": "narrator",
+      "ipa": "ðɛɹ ɪz fɹˈuːt ɪnðə bˈæskɪt"
+    },
+    {
+      "id": "en2.u1.p.050",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Learning new structures",
+        "note": "Regla del material; los ejemplos son nuestros."
+      },
+      "grammar": [
+        "countable-uncountable",
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Where is the apple? It is in the fridge.",
+      "gloss": "¿Dónde está la manzana? Está en la heladera.",
+      "speaker": "teacher",
+      "ipa": "wˌɛɹ ɪz ðɪ ˈæpəl ɪɾ ɪz ɪnðə fɹˈɪdʒ"
+    },
+    {
+      "id": "en2.u1.p.051",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Learning new structures",
+        "note": "Regla del material; los ejemplos son nuestros."
+      },
+      "grammar": [
+        "countable-uncountable",
+        "be.present.interrogative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Where are the apples? They are in the fridge.",
+      "gloss": "¿Dónde están las manzanas? Están en la heladera.",
+      "speaker": "teacher",
+      "ipa": "wˌɛɹ ɑːɹ ðɪ ˈæpəlz ðeɪ ɑːɹ ɪnðə fɹˈɪdʒ"
+    },
+    {
+      "id": "en2.u1.p.052",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Learning new structures",
+        "note": "Regla del material; los ejemplos son nuestros."
+      },
+      "grammar": [
+        "countable-uncountable",
+        "numbers.cardinal"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "We can count apples: one apple, two apples, four apples.",
+      "gloss": "Podemos contar manzanas: una manzana, dos manzanas, cuatro manzanas.",
+      "speaker": "teacher",
+      "ipa": "wiː kæn kˈaʊnt ˈæpəlz wˈʌn ˈæpəl tˈuː ˈæpəlz fˈoːɹ ˈæpəlz"
+    },
+    {
+      "id": "en2.u1.p.053",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Learning new structures",
+        "note": "Regla del material; los ejemplos son nuestros."
+      },
+      "grammar": [
+        "countable-uncountable"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Uncountable nouns have only one form and take a singular verb.",
+      "gloss": "Los sustantivos incontables tienen una sola forma y llevan verbo en singular.",
+      "speaker": "teacher",
+      "ipa": "ʌŋkˈaʊntəbəl nˈaʊnz hæv ˈoʊnli wˈʌn fˈɔːɹm ænd tˈeɪk ɐ sˈɪŋɡjʊlɚ vˈɜːb"
+    },
+    {
+      "id": "en2.u1.p.054",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Learning new structures",
+        "note": "Regla del material; los ejemplos son nuestros."
+      },
+      "grammar": [
+        "countable-uncountable",
+        "there-is.interrogative"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Is there any bread left?",
+      "gloss": "¿Queda pan?",
+      "speaker": "teacher",
+      "ipa": "ɪz ðɛɹ ˌɛni bɹˈɛd lˈɛft"
+    },
+    {
+      "id": "en2.u1.p.055",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Learning new structures",
+        "note": "Regla del material; los ejemplos son nuestros."
+      },
+      "grammar": [
+        "countable-uncountable"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "We cannot say one bread or two breads.",
+      "gloss": "No podemos decir \"un pan\" ni \"dos panes\".",
+      "speaker": "teacher",
+      "ipa": "wiː kænˈɑːt sˈeɪ wˈʌn bɹˈɛd ɔːɹ tˈuː bɹˈɛdz"
+    },
+    {
+      "id": "en2.u1.p.056",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 10,
+        "section": "Learning new structures",
+        "note": "Regla del material; los ejemplos son nuestros."
+      },
+      "grammar": [
+        "countable-uncountable"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "We need other words to count them: a piece of bread, a grain of sugar.",
+      "gloss": "Necesitamos otras palabras para contarlos: un pedazo de pan, un grano de azúcar.",
+      "speaker": "teacher",
+      "ipa": "wiː nˈiːd ˈʌðɚ wˈɜːdz tə kˈaʊnt ðˌɛm ɐ pˈiːs ʌv bɹˈɛd ɐ ɡɹˈeɪn ʌv ʃˈʊɡɚ"
+    },
+    {
+      "id": "en2.u1.p.057",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U1 - COUNTABLE AND UNCOUNTABLE NOUNS.pdf",
+        "note": "Del complementario de la unidad; la página es la de ESE PDF, no la del principal."
+      },
+      "grammar": [
+        "countable-uncountable"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "kind": "phrase",
+      "text": "Research is lacking in this area.",
+      "gloss": "Falta investigación en esta área.",
+      "speaker": "teacher",
+      "ipa": "ɹᵻsˈɜːtʃ ɪz lˈækɪŋ ɪn ðɪs ˈɛɹiə"
+    },
+    {
+      "id": "en2.u1.p.058",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U1 - COUNTABLE AND UNCOUNTABLE NOUNS.pdf",
+        "note": "Del complementario de la unidad; la página es la de ESE PDF, no la del principal."
+      },
+      "grammar": [
+        "countable-uncountable"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "kind": "phrase",
+      "text": "Mathematics is a discipline, so it is uncountable.",
+      "gloss": "La matemática es una disciplina, así que es incontable.",
+      "speaker": "teacher",
+      "ipa": "mˌæθɪmˈæɾɪks ɪz ɐ dˈɪsɪplˌɪn sˌoʊ ɪɾ ɪz ʌŋkˈaʊntəbəl"
+    },
+    {
+      "id": "en2.u1.p.059",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U1 - COUNTABLE AND UNCOUNTABLE NOUNS.pdf",
+        "note": "Del complementario de la unidad; la página es la de ESE PDF, no la del principal."
+      },
+      "grammar": [
+        "countable-uncountable"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "kind": "phrase",
+      "text": "Physics and trigonometry are uncountable too.",
+      "gloss": "La física y la trigonometría también son incontables.",
+      "speaker": "teacher",
+      "ipa": "fˈɪzɪks ænd tɹˌɪɡənˈɑːmətɹi ɑːɹ ʌŋkˈaʊntəbəl tˈuː"
+    },
+    {
+      "id": "en2.u1.p.060",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U1 - COUNTABLE AND UNCOUNTABLE NOUNS.pdf",
+        "note": "Del complementario de la unidad; la página es la de ESE PDF, no la del principal."
+      },
+      "grammar": [
+        "countable-uncountable"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 5,
+      "kind": "phrase",
+      "text": "Data was collected through interviews, and data were collected is also correct.",
+      "gloss": "Se recolectaron datos: en inglés \"data\" admite verbo singular y plural.",
+      "speaker": "teacher",
+      "ipa": "dˈeɪɾə wʌz kəlˈɛktᵻd θɹuː ˈɪntɚvjˌuːz ænd dˈeɪɾə wɜː kəlˈɛktᵻd ɪz ˈɔːlsoʊ kɚɹˈɛkt"
+    },
+    {
+      "id": "en2.u1.p.061",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 2,
+        "section": "U1 - COUNTABLE AND UNCOUNTABLE NOUNS.pdf",
+        "note": "Del complementario de la unidad; la página es la de ESE PDF, no la del principal."
+      },
+      "grammar": [
+        "countable-uncountable"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 5,
+      "kind": "phrase",
+      "text": "The media are present with vans, but the media is present is also correct.",
+      "gloss": "\"Media\" es colectivo: admite verbo en singular y en plural.",
+      "speaker": "teacher",
+      "ipa": "ðə mˈiːdiːə ɑːɹ pɹˈɛzənt wɪð vˈænz bˌʌt ðə mˈiːdiːə ɪz pɹˈɛzənt ɪz ˈɔːlsoʊ kɚɹˈɛkt"
+    },
+    {
+      "id": "en2.u1.p.062",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Learning new structures — Quantifiers",
+        "note": "Regla del material; los ejemplos son nuestros salvo donde se indica."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Some people in the office prefer to have lunch outside.",
+      "gloss": "Algunos en la oficina prefieren almorzar afuera.",
+      "speaker": "teacher",
+      "ipa": "sˌʌm pˈiːpəl ɪnðɪ ˈɑːfɪs pɹɪfˈɜː tə hæv lˈʌntʃ aʊtsˈaɪd"
+    },
+    {
+      "id": "en2.u1.p.063",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Learning new structures — Quantifiers",
+        "note": "Regla del material; los ejemplos son nuestros salvo donde se indica."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Would you like some coffee?",
+      "gloss": "¿Querés un café?",
+      "speaker": "teacher",
+      "ipa": "wʊd juː lˈaɪk sˌʌm kˈɔfi"
+    },
+    {
+      "id": "en2.u1.p.064",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Learning new structures — Quantifiers",
+        "note": "Regla del material; los ejemplos son nuestros salvo donde se indica."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "I haven't received any emails from my boss.",
+      "gloss": "No recibí ningún correo de mi jefe.",
+      "speaker": "teacher",
+      "ipa": "aɪ hˈævənt ɹᵻsˈiːvd ˌɛni ˈiːmeɪlz fɹʌm maɪ bˈɔs"
+    },
+    {
+      "id": "en2.u1.p.065",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Learning new structures — Quantifiers",
+        "note": "Regla del material; los ejemplos son nuestros salvo donde se indica."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Do you have any questions for me?",
+      "gloss": "¿Tenés alguna pregunta para mí?",
+      "speaker": "teacher",
+      "ipa": "dˈuː juː hæv ˌɛni kwˈɛstʃənz fɔːɹ mˌiː"
+    },
+    {
+      "id": "en2.u1.p.066",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Learning new structures — Quantifiers",
+        "note": "Regla del material; los ejemplos son nuestros salvo donde se indica."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "I haven't received many calls this morning.",
+      "gloss": "No recibí muchas llamadas esta mañana.",
+      "speaker": "teacher",
+      "ipa": "aɪ hˈævənt ɹᵻsˈiːvd mˈɛni kˈɔːlz ðɪs mˈɔːɹnɪŋ"
+    },
+    {
+      "id": "en2.u1.p.067",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Learning new structures — Quantifiers",
+        "note": "Regla del material; los ejemplos son nuestros salvo donde se indica."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "How much time do you have left?",
+      "gloss": "¿Cuánto tiempo te queda?",
+      "speaker": "teacher",
+      "ipa": "hˌaʊ mˈʌtʃ tˈaɪm dˈuː juː hæv lˈɛft"
+    },
+    {
+      "id": "en2.u1.p.068",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Learning new structures — Quantifiers",
+        "note": "Regla del material; los ejemplos son nuestros salvo donde se indica."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I don't have much time left.",
+      "gloss": "No me queda mucho tiempo.",
+      "speaker": "teacher",
+      "ipa": "aɪ dˈoʊnt hæv mˈʌtʃ tˈaɪm lˈɛft"
+    },
+    {
+      "id": "en2.u1.p.069",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Learning new structures — Quantifiers",
+        "note": "Regla del material; los ejemplos son nuestros salvo donde se indica."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I have a lot of work to do.",
+      "gloss": "Tengo mucho trabajo por hacer.",
+      "speaker": "teacher",
+      "ipa": "aɪ hæv ɐ lˈɑːt ʌv wˈɜːk tə dˈuː"
+    },
+    {
+      "id": "en2.u1.p.070",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Learning new structures — Quantifiers",
+        "note": "Regla del material; los ejemplos son nuestros salvo donde se indica."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Lots of people came to the house to see the new baby.",
+      "gloss": "Vino mucha gente a la casa a ver al bebé.",
+      "speaker": "teacher",
+      "ipa": "lˈɑːts ʌv pˈiːpəl kˈeɪm tə ðə hˈaʊs tə sˈiː ðə nˈuː bˈeɪbi"
+    },
+    {
+      "id": "en2.u1.p.071",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Learning new structures — Quantifiers",
+        "note": "Regla del material; los ejemplos son nuestros salvo donde se indica."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "I have no time.",
+      "gloss": "No tengo tiempo.",
+      "speaker": "teacher",
+      "ipa": "aɪ hæv nˈoʊ tˈaɪm"
+    },
+    {
+      "id": "en2.u1.p.072",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Learning new structures — Quantifiers",
+        "note": "Regla del material; los ejemplos son nuestros salvo donde se indica."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Is there any milk in the fridge? No, there is none.",
+      "gloss": "¿Hay leche en la heladera? No, no hay nada.",
+      "speaker": "teacher",
+      "ipa": "ɪz ðɛɹ ˌɛni mˈɪlk ɪnðə fɹˈɪdʒ nˈoʊ ðɛɹ ɪz nˈʌn"
+    },
+    {
+      "id": "en2.u1.p.073",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 11,
+        "section": "Learning new structures — Quantifiers",
+        "note": "Regla del material; los ejemplos son nuestros salvo donde se indica."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "kind": "phrase",
+      "text": "None of us wanted to go to the concert.",
+      "gloss": "Ninguno de nosotros quería ir al concierto.",
+      "speaker": "teacher",
+      "ipa": "nˈʌn ʌv ˌʌs wˈɔntᵻd tə ɡˌoʊ tə ðə kˈɑːnsɚt"
+    },
+    {
+      "id": "en2.u1.p.074",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U1 - QUANTIFIERS - theory.pdf",
+        "note": "Del complementario de teoría (aporta few/little, que el principal no trata); página de ESE PDF."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "kind": "phrase",
+      "text": "A few means some, a small number. Few means almost none.",
+      "gloss": "\"A few\" es algunos; \"few\" es casi ninguno.",
+      "speaker": "teacher",
+      "ipa": "ɐ fjˈuː mˈiːnz sˌʌm ɐ smˈɔːl nˈʌmbɚ fjˈuː mˈiːnz ˈɔːlmoʊst nˈʌn"
+    },
+    {
+      "id": "en2.u1.p.075",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 2,
+        "section": "U1 - QUANTIFIERS - theory.pdf",
+        "note": "Del complementario de teoría (aporta few/little, que el principal no trata); página de ESE PDF."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "kind": "phrase",
+      "text": "A little means some, a small amount. Little means almost nothing.",
+      "gloss": "\"A little\" es un poco; \"little\" es casi nada.",
+      "speaker": "teacher",
+      "ipa": "ɐ lˈɪɾəl mˈiːnz sˌʌm ɐ smˈɔːl ɐmˈaʊnt lˈɪɾəl mˈiːnz ˈɔːlmoʊst nˈʌθɪŋ"
+    },
+    {
+      "id": "en2.u1.p.076",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 2,
+        "section": "U1 - QUANTIFIERS - theory.pdf",
+        "note": "Del complementario de teoría (aporta few/little, que el principal no trata); página de ESE PDF."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Julia ate a little rice, she was not very hungry.",
+      "gloss": "Julia comió un poco de arroz, no tenía mucha hambre.",
+      "speaker": "teacher",
+      "ipa": "dʒˈuːliə ˈeɪt ɐ lˈɪɾəl ɹˈaɪs ʃiː wʌz nˌɑːt vˈɛɹi hˈʌŋɡɹi"
+    },
+    {
+      "id": "en2.u1.p.077",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U1 - QUANTIFIERS - theory.pdf",
+        "note": "Del complementario de teoría (aporta few/little, que el principal no trata); página de ESE PDF."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Mike ate a few chips, he was not very hungry.",
+      "gloss": "Mike comió unas pocas papas fritas, no tenía mucha hambre.",
+      "speaker": "teacher",
+      "ipa": "mˈaɪk ˈeɪt ɐ fjˈuː tʃˈɪps hiː wʌz nˌɑːt vˈɛɹi hˈʌŋɡɹi"
+    },
+    {
+      "id": "en2.u1.p.078",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U1 - QUANTIFIERS - theory.pdf",
+        "note": "Del complementario de teoría (aporta few/little, que el principal no trata); página de ESE PDF."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "There are not many students who want to work in our school.",
+      "gloss": "No hay muchos estudiantes que quieran trabajar en nuestra escuela.",
+      "speaker": "teacher",
+      "ipa": "ðɛɹˌɑːɹ nˌɑːt mˈɛni stˈuːdənts hˌuː wˈɔnt tə wˈɜːk ɪn ˌaʊɚ skˈuːl"
+    },
+    {
+      "id": "en2.u1.p.079",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 2,
+        "section": "U1 - QUANTIFIERS - theory.pdf",
+        "note": "Del complementario de teoría (aporta few/little, que el principal no trata); página de ESE PDF."
+      },
+      "grammar": [
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.quantity"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "kind": "phrase",
+      "text": "Due to the strike, I can see few cars in the streets.",
+      "gloss": "Por la huelga, veo pocos autos en la calle.",
+      "speaker": "teacher",
+      "ipa": "dˈuː tə ðə stɹˈaɪk aɪ kæn sˈiː fjˈuː kˈɑːɹz ɪnðə stɹˈiːts"
+    },
+    {
+      "id": "en2.u1.p.080",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "greet"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 1,
+      "kind": "phrase",
+      "text": "Good evening.",
+      "gloss": "Buenas noches.",
+      "speaker": "waiter",
+      "ipa": "ɡˈʊd ˈiːvnɪŋ"
+    },
+    {
+      "id": "en2.u1.p.081",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "order-food",
+        "make-request"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "A table for two with a view, please.",
+      "gloss": "Una mesa para dos con vista, por favor.",
+      "speaker": "diner",
+      "ipa": "ɐ tˈeɪbəl fɔːɹ tˈuː wɪð ɐ vjˈuː plˈiːz"
+    },
+    {
+      "id": "en2.u1.p.082",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "confirm"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Certainly. Just here, sir.",
+      "gloss": "Por supuesto. Aquí mismo, señor.",
+      "speaker": "waiter",
+      "ipa": "sˈɜːʔn̩li dʒˈʌst hˈɪɹ sˈɜː"
+    },
+    {
+      "id": "en2.u1.p.083",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "make-request"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Would it be possible to have that one by the window?",
+      "gloss": "¿Sería posible tener aquella junto a la ventana?",
+      "speaker": "diner",
+      "ipa": "wʊd ɪt biː pˈɑːsᵻbəl tə hæv ðˈætwˌʌn baɪ ðə wˈɪndoʊ"
+    },
+    {
+      "id": "en2.u1.p.084",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "deny",
+        "offer-help"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "I'm sorry sir, that one's reserved. What about here?",
+      "gloss": "Lo siento, señor, esa está reservada. ¿Qué le parece aquí?",
+      "speaker": "waiter",
+      "ipa": "aɪm sˈɑːɹi sˌɜː ðæt wˈʌnz ɹɪzˈɜːvd wˌʌt ɐbˌaʊt hˈɪɹ"
+    },
+    {
+      "id": "en2.u1.p.085",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Are you ready to order, sir?",
+      "gloss": "¿Está listo para pedir, señor?",
+      "speaker": "waiter",
+      "ipa": "ɑːɹ juː ɹˈɛdi tʊ ˈɔːɹdɚ sˈɜː"
+    },
+    {
+      "id": "en2.u1.p.086",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "I'll have the paté to start with and my wife would like a tomato salad.",
+      "gloss": "Voy a pedir el paté para empezar y mi esposa quiere una ensalada de tomate.",
+      "speaker": "diner",
+      "ipa": "aɪl hæv ðə pætˈeɪ tə stˈɑːɹt wɪð ænd maɪ wˈaɪf wʊd lˈaɪk ɐ təmˈeɪɾoʊ sˈæləd"
+    },
+    {
+      "id": "en2.u1.p.087",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "What would you like for main course?",
+      "gloss": "¿Qué desea de plato principal?",
+      "speaker": "waiter",
+      "ipa": "wˌʌt wʊd juː lˈaɪk fɔːɹ mˈeɪn kˈoːɹs"
+    },
+    {
+      "id": "en2.u1.p.088",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.explanation"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Could you tell me what the shepherd's pie is?",
+      "gloss": "¿Me podría decir qué es el shepherd’s pie?",
+      "speaker": "diner",
+      "ipa": "kʊd juː tˈɛl mˌiː wʌt ðə ʃˈɛpɚdz pˈaɪ ɪz"
+    },
+    {
+      "id": "en2.u1.p.089",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.explanation"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 4,
+      "kind": "phrase",
+      "text": "Certainly sir, it's minced meat and onions covered with mashed potatoes and baked in the oven.",
+      "gloss": "Por supuesto: es carne picada y cebolla cubierta con puré y horneada.",
+      "speaker": "waiter",
+      "ipa": "sˈɜːʔn̩li sˌɜː ɪts mˈɪnst mˈiːt ænd ˈʌniənz kˈʌvɚd wɪð mˈæʃt pətˈeɪɾoʊz ænd bˈeɪkt ɪnðɪ ˈʌvən"
+    },
+    {
+      "id": "en2.u1.p.090",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Ok, I'll try that and my wife would like the lamb chops.",
+      "gloss": "Bueno, voy a probar eso y mi esposa quiere las chuletas de cordero.",
+      "speaker": "diner",
+      "ipa": "ˌoʊkˈeɪ aɪl tɹˈaɪ ðæt ænd maɪ wˈaɪf wʊd lˈaɪk ðə lˈæm tʃˈɑːps"
+    },
+    {
+      "id": "en2.u1.p.091",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.explanation"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "How would you like them cooked?",
+      "gloss": "¿Cómo las quiere cocidas?",
+      "speaker": "waiter",
+      "ipa": "hˌaʊ wʊd juː lˈaɪk ðˌɛm kˈʊkt"
+    },
+    {
+      "id": "en2.u1.p.092",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 1,
+      "kind": "phrase",
+      "text": "Medium please.",
+      "gloss": "A punto, por favor.",
+      "speaker": "diner",
+      "ipa": "mˈiːdiəm plˈiːz"
+    },
+    {
+      "id": "en2.u1.p.093",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "What would you like to drink?",
+      "gloss": "¿Qué desea tomar?",
+      "speaker": "waiter",
+      "ipa": "wˌʌt wʊd juː lˈaɪk tə dɹˈɪŋk"
+    },
+    {
+      "id": "en2.u1.p.094",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Yes, a bottle of rosé wine please.",
+      "gloss": "Sí, una botella de vino rosado, por favor.",
+      "speaker": "diner",
+      "ipa": "jˈɛs ɐ bˈɑːɾəl ʌv ɹəsˈeɪ wˈaɪn plˈiːz"
+    },
+    {
+      "id": "en2.u1.p.095",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Contextualization time — Eating Out",
+        "note": "Diálogo reproducido del material (fuente original: islcollective.com)."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "thank"
+      ],
+      "topic": [
+        "restaurant",
+        "food"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Thank you very much. Have a nice meal.",
+      "gloss": "Muchas gracias. Buen provecho.",
+      "speaker": "waiter",
+      "ipa": "θˈæŋk juː vˈɛɹi mˈʌtʃ hæv ɐ nˈaɪs mˈiːl"
+    },
+    {
+      "id": "en2.u1.pr.001",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Actividad de cierre — Composition",
+        "note": "Consigna textual del material. El modelo y los pasos son nuestros."
+      },
+      "grammar": [
+        "countable-uncountable",
+        "quantifiers"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 5,
+      "kind": "production",
+      "prompt": "Write a blog (about 100 words) and share your ideas about \"Meals in Argentina\".",
+      "modelAnswer": "In Argentina we have four meals a day. Breakfast is small: usually coffee with milk and a few medialunas. Lunch is between twelve and two, and it is often meat with salad or a pasta dish. In the afternoon we have la merienda, with tea or mate and some biscuits. Dinner is late, after nine o’clock, and it is the main meal for many families. Our most traditional dishes are asado, empanadas and milanesa with mashed potatoes. Today many people eat less meat and more vegetables, but the asado on Sunday is still a family tradition.",
+      "modelVariants": [
+        "Meals in Argentina are different from meals in Britain. We do not have a big breakfast: just coffee and a medialuna. Lunch is at one, dinner is after nine, and between them we have la merienda with mate. The typical dishes are asado, empanadas and milanesas. Nowadays some people eat more vegetables and less meat, but on Sundays the family still gets together for an asado."
+      ],
+      "scaffold": [
+        "1. Cuántas comidas hay por día en Argentina.",
+        "2. El desayuno: qué es y por qué es chico.",
+        "3. El almuerzo: horario y platos.",
+        "4. La merienda, que no existe en Gran Bretaña.",
+        "5. La cena: el horario tardío como rasgo argentino.",
+        "6. Los platos tradicionales y qué cambió hoy."
+      ],
+      "rubric": [
+        {
+          "text": "Nombrás las comidas del día",
+          "detect": "\\b(breakfast|lunch|dinner)\\b"
+        },
+        {
+          "text": "Das horarios",
+          "detect": "\\b(o.?clock|between|after|at)\\b"
+        },
+        {
+          "text": "Mencionás platos típicos argentinos",
+          "detect": "\\b(asado|empanadas|milanesa|mate)\\b"
+        },
+        {
+          "text": "Usás cuantificadores (some, a few, much, many)",
+          "detect": "\\b(some|a few|much|many|less|more)\\b"
+        },
+        {
+          "text": "Contrastás lo tradicional con lo actual"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "How many meals a day do you have in Argentina?",
+          "segment": "In Argentina we have four meals a day.",
+          "hint": "Arrancá por el número: ordena todo lo que sigue."
+        },
+        {
+          "prompt": "What is breakfast like?",
+          "segment": "Breakfast is small: usually coffee with milk and a few medialunas.",
+          "hint": "Chico, y con un cuantificador: a few."
+        },
+        {
+          "prompt": "When is lunch and what do you eat?",
+          "segment": "Lunch is between twelve and two, and it is often meat with salad or a pasta dish.",
+          "hint": "Horario + plato."
+        },
+        {
+          "prompt": "What happens in the afternoon?",
+          "segment": "In the afternoon we have la merienda, with tea or mate and some biscuits.",
+          "hint": "La merienda no tiene equivalente británico: vale nombrarla en español."
+        },
+        {
+          "prompt": "When is dinner?",
+          "segment": "Dinner is late, after nine o’clock, and it is the main meal for many families.",
+          "hint": "El horario tardío es LO que sorprende a un extranjero."
+        },
+        {
+          "prompt": "What are the traditional dishes?",
+          "segment": "Our most traditional dishes are asado, empanadas and milanesa with mashed potatoes.",
+          "hint": "Tres, no más."
+        },
+        {
+          "prompt": "And what has changed?",
+          "segment": "Today many people eat less meat and more vegetables, but the asado on Sunday is still a family tradition.",
+          "hint": "El cierre: el contraste tradicional/actual, como en el texto de Gran Bretaña."
+        }
+      ]
+    },
+    {
+      "id": "en2.u1.pr.002",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "page": 20,
+        "section": "Contextualization time",
+        "note": "Consigna nuestra sobre el diálogo Eating Out del material (\"Now practise in pairs. You choose what you like from the menu\")."
+      },
+      "grammar": [
+        "would-like",
+        "quantifiers"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant"
+      ],
+      "difficulty": 5,
+      "kind": "production",
+      "prompt": "You are at the restaurant. Order a table, a starter, a main course and a drink.",
+      "modelAnswer": "Good evening. A table for two with a view, please. Thank you. Yes, we are ready to order. I will have the prawn cocktail to start with, and my friend would like the tomato salad. For main course, could you tell me what the shepherd’s pie is? It sounds good, I will try that, and my friend would like the salmon and leek pie. To drink, a bottle of Italian white wine and a glass of water, please. Thank you very much.",
+      "modelVariants": [
+        "Good evening, a table for two, please. We are ready to order. To start with, I would like the wild boar pâté. For main course I will have the sirloin steak and chips. How would you like it cooked? Medium, please. And to drink, just some water. Thank you."
+      ],
+      "scaffold": [
+        "1. Saludo y pedido de mesa.",
+        "2. Confirmar que estás listo para ordenar.",
+        "3. La entrada, para vos y para tu acompañante.",
+        "4. Preguntar por un plato que no conocés.",
+        "5. El plato principal.",
+        "6. La bebida, y agradecer."
+      ],
+      "rubric": [
+        {
+          "text": "Pedís la mesa",
+          "detect": "\\btable\\b"
+        },
+        {
+          "text": "Ordenás entrada y plato principal",
+          "detect": "\\b(start with|main course)\\b"
+        },
+        {
+          "text": "Preguntás por un plato",
+          "detect": "\\b(could you tell me|what.*is)\\b"
+        },
+        {
+          "text": "Pedís la bebida",
+          "detect": "\\b(drink|wine|water)\\b"
+        },
+        {
+          "text": "Usás would like / I will have, no \"I want\""
+        }
+      ],
+      "speaker": "diner",
+      "steps": [
+        {
+          "prompt": "How do you greet and ask for a table?",
+          "segment": "Good evening. A table for two with a view, please.",
+          "hint": "La fórmula fija del material."
+        },
+        {
+          "prompt": "The waiter asks if you are ready. What do you say?",
+          "segment": "Thank you. Yes, we are ready to order.",
+          "hint": "Corto."
+        },
+        {
+          "prompt": "What do you want to start with?",
+          "segment": "I will have the prawn cocktail to start with, and my friend would like the tomato salad.",
+          "hint": "Dos personas: \"I will have\" para vos, \"would like\" para el otro."
+        },
+        {
+          "prompt": "Ask about a dish you do not know.",
+          "segment": "For main course, could you tell me what the shepherd’s pie is?",
+          "hint": "La pregunta educada del diálogo ancla."
+        },
+        {
+          "prompt": "Now order the main course.",
+          "segment": "It sounds good, I will try that, and my friend would like the salmon and leek pie.",
+          "hint": "Reaccionás y pedís."
+        },
+        {
+          "prompt": "And to drink?",
+          "segment": "To drink, a bottle of Italian white wine and a glass of water, please. Thank you very much.",
+          "hint": "Cerrá con el envase: \"a bottle of\", \"a glass of\"."
+        }
+      ]
+    },
+    {
+      "id": "en2.u1.pr.003",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna nuestra: la contracara del cierre de unidad, en oral en vez de escrito."
+      },
+      "grammar": [
+        "countable-uncountable",
+        "quantifiers"
+      ],
+      "fn": [
+        "ask.explanation"
+      ],
+      "topic": [
+        "restaurant"
+      ],
+      "difficulty": 5,
+      "kind": "production",
+      "prompt": "A foreign visitor asks you what a typical Argentinian dish is. Explain one.",
+      "modelAnswer": "Let me tell you about the empanada. It is a small pie that you can hold in your hand. The pastry is made with flour, and inside there is a filling: usually minced meat with onion, egg and olives, but there are many kinds. Some people prefer chicken, cheese and onion, or corn. You can bake them in the oven or fry them in oil. We eat them with our hands, and a few empanadas are enough for a light dinner. Every province has its own recipe, and people argue a lot about which one is the best.",
+      "scaffold": [
+        "1. Anunciá qué plato vas a explicar.",
+        "2. Qué es, en una frase simple.",
+        "3. De qué está hecho: masa y relleno.",
+        "4. Las variantes.",
+        "5. Cómo se cocina y cómo se come.",
+        "6. Un dato cultural para cerrar."
+      ],
+      "rubric": [
+        {
+          "text": "Nombrás el plato",
+          "detect": "\\b(empanada|asado|milanesa)\\b"
+        },
+        {
+          "text": "Describís los ingredientes",
+          "detect": "\\b(meat|flour|cheese|onion|egg)\\b"
+        },
+        {
+          "text": "Usás incontables correctamente (flour, cheese, meat, oil)",
+          "detect": "\\b(flour|cheese|meat|oil)\\b"
+        },
+        {
+          "text": "Usás cuantificadores (some, a few, many, a lot of)",
+          "detect": "\\b(some|a few|many|a lot of)\\b"
+        },
+        {
+          "text": "Cerrás con algo cultural, no solo la receta"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "Which dish are you going to explain?",
+          "segment": "Let me tell you about the empanada.",
+          "hint": "Anunciá y listo."
+        },
+        {
+          "prompt": "What is it, in one simple sentence?",
+          "segment": "It is a small pie that you can hold in your hand.",
+          "hint": "Una comparación que un extranjero entienda."
+        },
+        {
+          "prompt": "What is it made of?",
+          "segment": "The pastry is made with flour, and inside there is a filling: usually minced meat with onion, egg and olives, but there are many kinds.",
+          "hint": "Acá van los incontables: flour, meat."
+        },
+        {
+          "prompt": "What other kinds are there?",
+          "segment": "Some people prefer chicken, cheese and onion, or corn.",
+          "hint": "Las variantes, con \"some\"."
+        },
+        {
+          "prompt": "How do you cook and eat them?",
+          "segment": "You can bake them in the oven or fry them in oil. We eat them with our hands, and a few empanadas are enough for a light dinner.",
+          "hint": "Cocción + cómo se comen. \"a few\" acá es contable."
+        },
+        {
+          "prompt": "Anything cultural to close with?",
+          "segment": "Every province has its own recipe, and people argue a lot about which one is the best.",
+          "hint": "El cierre que lo vuelve interesante."
+        }
+      ]
+    },
+    {
+      "id": "en2.u1.qa.001",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 19,
+        "section": "Contextualization time — key expressions",
+        "note": "Emparejamiento del material; las variantes y respuestas extra son nuestras."
+      },
+      "grammar": [
+        "would-like",
+        "wh-questions"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "How do you ask for a table at a restaurant?",
+      "promptVariants": [
+        "What do you say when you arrive at a restaurant?"
+      ],
+      "replies": [
+        "A table for two with a view, please."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "A table for two with a view, please."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "diner"
+    },
+    {
+      "id": "en2.u1.qa.002",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 19,
+        "section": "Contextualization time — key expressions",
+        "note": "Emparejamiento del material; las variantes y respuestas extra son nuestras."
+      },
+      "grammar": [
+        "would-like",
+        "wh-questions"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "How do you ask if the customer has decided?",
+      "promptVariants": [
+        "What does the waiter say to take the order?"
+      ],
+      "replies": [
+        "Are you ready to order?"
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Are you ready to order?"
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "diner"
+    },
+    {
+      "id": "en2.u1.qa.003",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 19,
+        "section": "Contextualization time — key expressions",
+        "note": "Emparejamiento del material; las variantes y respuestas extra son nuestras."
+      },
+      "grammar": [
+        "would-like",
+        "wh-questions"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "How do you say what you want to eat?",
+      "promptVariants": [
+        "How do you order your dish?"
+      ],
+      "replies": [
+        "I'll have the paté to start with."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "I'll have the paté to start with."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "diner"
+    },
+    {
+      "id": "en2.u1.qa.004",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 19,
+        "section": "Contextualization time — key expressions",
+        "note": "Emparejamiento del material; las variantes y respuestas extra son nuestras."
+      },
+      "grammar": [
+        "would-like",
+        "wh-questions"
+      ],
+      "fn": [
+        "order-food"
+      ],
+      "topic": [
+        "restaurant"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "How do you offer something to a customer?",
+      "promptVariants": [
+        "What does the waiter ask about the main course?"
+      ],
+      "replies": [
+        "What would you like for main course?",
+        "What would you like to drink?"
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "What would you like for main course?"
+        },
+        {
+          "mode": "quote",
+          "text": "What would you like to drink?"
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "diner"
+    },
+    {
+      "id": "en2.u1.qa.005",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 19,
+        "section": "Contextualization time — key expressions",
+        "note": "Emparejamiento del material; las variantes y respuestas extra son nuestras."
+      },
+      "grammar": [
+        "would-like",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.explanation"
+      ],
+      "topic": [
+        "restaurant"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "How do you ask for an explanation of a dish?",
+      "promptVariants": [
+        "How do you ask what a dish is?"
+      ],
+      "replies": [
+        "Could you tell me what the shepherd's pie is?"
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Could you tell me what the shepherd's pie is?"
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "diner"
+    },
+    {
+      "id": "en2.u1.qa.006",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 19,
+        "section": "Contextualization time — key expressions",
+        "note": "Emparejamiento del material; las variantes y respuestas extra son nuestras."
+      },
+      "grammar": [
+        "would-like",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.explanation"
+      ],
+      "topic": [
+        "restaurant"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "How do you ask politely how the food should be cooked?",
+      "promptVariants": [
+        "What does the waiter ask about the meat?"
+      ],
+      "replies": [
+        "How would you like them cooked?"
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "How would you like them cooked?"
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "diner"
+    },
+    {
+      "id": "en2.u1.qa.007",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 24,
+        "section": "Actividad de cierre — Meals in Britain"
+      },
+      "grammar": [
+        "countable-uncountable",
+        "wh-questions"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "How many main meals do people have in Britain?",
+      "promptVariants": [
+        "What are the three main meals in Britain?"
+      ],
+      "replies": [
+        "Three: breakfast, lunch and dinner."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Three: breakfast, lunch and dinner."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u1.qa.008",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 24,
+        "section": "Actividad de cierre — Meals in Britain"
+      },
+      "grammar": [
+        "countable-uncountable",
+        "wh-questions"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "What does the traditional English breakfast consist of?",
+      "promptVariants": [
+        "What is the 'full English'?"
+      ],
+      "replies": [
+        "Eggs, bacon, sausages, fried bread, baked beans and mushrooms."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Eggs, bacon, sausages, fried bread, baked beans and mushrooms."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u1.qa.009",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 24,
+        "section": "Actividad de cierre — Meals in Britain"
+      },
+      "grammar": [
+        "countable-uncountable",
+        "wh-questions"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "What is a packed lunch?",
+      "promptVariants": [
+        "What do children take to school for lunch?"
+      ],
+      "replies": [
+        "A sandwich, a packet of crisps, a piece of fruit and a drink."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "A sandwich, a packet of crisps, a piece of fruit and a drink."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u1.qa.010",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 24,
+        "section": "Actividad de cierre — Meals in Britain"
+      },
+      "grammar": [
+        "countable-uncountable",
+        "wh-questions"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "What do most people in Britain eat nowadays instead of the traditional dinner?",
+      "promptVariants": [
+        "What did a recent survey find?"
+      ],
+      "replies": [
+        "Curry. Rice and pasta dishes are now favoured."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Curry. Rice and pasta dishes are now favoured."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u1.qa.011",
+      "course": "en2",
+      "unit": 1,
+      "source": {
+        "origin": "extracted",
+        "page": 27,
+        "section": "Grilla — listening de Robert"
+      },
+      "grammar": [
+        "countable-uncountable",
+        "wh-questions"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "What did Robert have for breakfast?",
+      "promptVariants": [
+        "What does Robert eat in the morning?"
+      ],
+      "replies": [
+        "Pancakes, eggs and cereals."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Pancakes, eggs and cereals."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    }
+  ]
+}
