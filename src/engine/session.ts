@@ -156,6 +156,38 @@ function pickBalanced(candidates: { step: Step }[], n: number): Step[] {
  * Se reparte por nivel (round-robin, cada peldaño aporta lo que puede) y recién
  * después se ordena ascendente, para que la sesión efectivamente trepe.
  */
+/**
+ * Reordena una lista rotando mecánicas: una de cada, y vuelta a empezar.
+ *
+ * Preserva el orden relativo DENTRO de cada mecánica, así no pisa la prioridad con
+ * la que venía la lista (dificultad en la escalera, retrievability en el repaso):
+ * solo evita que una mecánica con muchos candidatos se coma la tanda. Sin esto, la
+ * cantidad de candidatos decidía la sesión, y esa cantidad es un accidente del
+ * contenido —cuántas frases tiene el tema— no una decisión pedagógica.
+ */
+function spreadByMechanic<T extends { step: Step }>(list: T[]): T[] {
+  const byMech = new Map<string, T[]>();
+  for (const c of list) {
+    const g = byMech.get(c.step.mechanicId) ?? [];
+    g.push(c);
+    byMech.set(c.step.mechanicId, g);
+  }
+  const queues = [...byMech.values()];
+  const out: T[] = [];
+  while (out.length < list.length) {
+    let movio = false;
+    for (const q of queues) {
+      const c = q.shift();
+      if (c) {
+        out.push(c);
+        movio = true;
+      }
+    }
+    if (!movio) break; // defensivo: nunca debería pasar (el total es el mismo)
+  }
+  return out;
+}
+
 function climbLadder(candidates: { step: Step; level: number; difficulty: number }[], n: number): Step[] {
   const byLevel = new Map<number, typeof candidates>();
   for (const c of candidates) {
@@ -163,8 +195,17 @@ function climbLadder(candidates: { step: Step; level: number; difficulty: number
     g.push(c);
     byLevel.set(c.level, g);
   }
-  // Dentro de un peldaño, primero lo más fácil.
-  for (const g of byLevel.values()) g.sort((a, b) => a.difficulty - b.difficulty);
+  // Dentro de un peldaño: primero lo más fácil, pero ROTANDO mecánicas.
+  //
+  // Ordenar solo por dificultad hacía que cada peldaño entregara siempre la misma
+  // mecánica —la del candidato más fácil— y la sesión entera cabía en tantas
+  // mecánicas como niveles. Medido sobre el tema de entropía (17 mecánicas
+  // disponibles): un alumno nuevo veía 5, y 3 de sus 12 pasos eran pares mínimos,
+  // sobre un tema con 4 átomos de contraste. Los repetía tres veces por sesión.
+  for (const [l, g] of byLevel) {
+    g.sort((a, b) => a.difficulty - b.difficulty);
+    byLevel.set(l, spreadByMechanic(g));
+  }
 
   const levels = [...byLevel.keys()].sort((a, b) => a - b);
   const picked: typeof candidates = [];
@@ -262,13 +303,33 @@ function scheduleReview(
   // de 12 podía caer sobre 3-4 tarjetas (la misma repetida en varios modos) y el
   // contador de vencidas casi no bajaba. Se deja una candidata por tarjeta.
   const cardKey = (s: Step) => `${s.atomId}|${s.skill}|${s.variant ?? ''}`;
+  /**
+   * Una candidata por tarjeta — y la mecánica se SORTEA entre las que la comparten.
+   *
+   * Quedarse con la primera parecía inocente y no lo era: el orden de `candidates`
+   * es registro adentro, así que la tarjeta de recuperación de toda frase larga caía
+   * siempre en la misma mecánica (medido: echo-type se llevaba 5 de los 12 pasos de
+   * cada repaso, y es-to-en-write no aparecía nunca). La tarjeta es la misma memoria;
+   * cuál ejercicio la entrena es indistinto para el SRS y variarlo entrena mejor.
+   *
+   * Se conserva la POSICIÓN de la primera aparición, así el orden por retrievability
+   * —lo más olvidado primero— queda intacto.
+   */
   const oncePerCard = (list: { step: Step; level: number }[]) => {
-    const seen = new Set<string>();
-    return list.filter((c) => {
+    const porTarjeta = new Map<string, { step: Step; level: number }[]>();
+    const orden: string[] = [];
+    for (const c of list) {
       const k = cardKey(c.step);
-      if (seen.has(k)) return false;
-      seen.add(k);
-      return true;
+      const g = porTarjeta.get(k);
+      if (g) g.push(c);
+      else {
+        porTarjeta.set(k, [c]);
+        orden.push(k);
+      }
+    }
+    return orden.map((k) => {
+      const g = porTarjeta.get(k)!;
+      return g[Math.floor(Math.random() * g.length)]!;
     });
   };
 
@@ -298,7 +359,9 @@ function scheduleReview(
   // El resto del material nuevo: tarjetas nuevas de átomos ya empezados + los pasos
   // sobrantes de los átomos recién estrenados. Va después, si queda cupo.
   const startNewSet = new Set(startNewAtoms);
-  const otherFresh = shuffle(freshAll.filter((c) => !startNewSet.has(c)));
+  // Rotando mecánicas: si no, la que más candidatos tiene (siempre las genéricas,
+  // que valen 4 ejercicios por frase) se lleva el cupo de material nuevo.
+  const otherFresh = spreadByMechanic(shuffle(freshAll.filter((c) => !startNewSet.has(c))));
   const freshOrdered = [...startNewAtoms, ...otherFresh];
 
   // Cupo garantizado de nuevas (~1/3 de la tanda), con los átomos nuevos al frente.
@@ -310,7 +373,7 @@ function scheduleReview(
     ...freshOrdered.slice(0, freshQuota),
   ];
   const room = () => n - chosen.length;
-  if (room() > 0) chosen.push(...shuffle(rest).slice(0, room()));
+  if (room() > 0) chosen.push(...spreadByMechanic(shuffle(rest)).slice(0, room()));
   if (room() > 0) chosen.push(...freshOrdered.slice(freshQuota, freshQuota + room()));
   if (room() > 0) chosen.push(...due.slice(Math.max(0, n - freshQuota)));
 
