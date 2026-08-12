@@ -78,6 +78,18 @@ export const GRAMMAR_TAGS = [
   'would-like',
   // Vocabulario: marca los verbos irregulares (para el tema "por patrón").
   'verb.irregular',
+  // en2 U2: los subtipos por patrón del PAST SIMPLE. Hacen falta porque
+  // `atomInAspect` matchea por OR sobre grammar/fn/topic: sin un tag propio por
+  // familia, los siete temas de patrones contendrían exactamente los mismos verbos.
+  // El tag paraguas 'verb.irregular' se conserva en todos (lo usa la mecánica).
+  'verb.irregular.unit',
+  'verb.irregular.same',
+  'verb.irregular.ought',
+  'verb.irregular.t',
+  'verb.irregular.i-a',
+  'verb.irregular.o',
+  'verb.irregular.ew',
+  'verb.irregular.other',
   // Inglés 2 — las estructuras que el nivel agrega. Las piden explícitamente las
   // consignas post-lectura del cuadernillo (past simple, present continuous,
   // cuantificadores) y las usa el texto de termodinámica (pasivas, will, 1er
@@ -96,6 +108,11 @@ export const GRAMMAR_TAGS = [
   // en2 U1: el eje de la unidad de comida. Separado de `quantifiers` porque son dos
   // cosas distintas: si un sustantivo se cuenta o no, y con qué palabra se cuantifica.
   'countable-uncountable',
+  // en2 U2: el pasado. 'past-be' se separa de past-simple.* porque was/were es la
+  // primera puerta del pasado y el material le dedica su propia ejercitacion.
+  'past-be',
+  'connectors',
+  'dates',
   'comparatives',
   'superlatives',
   'relative-clauses',
@@ -141,6 +158,8 @@ export const FUNCTION_TAGS = [
   'order-food',
   'ask.quantity',
   'ask.explanation',
+  // en2 U2: la meta es contar una vida, propia o ajena.
+  'narrate.past',
 ] as const;
 
 /** Dominio temático. Se usa para generar distractores e interleaving. */
@@ -180,6 +199,8 @@ export const TOPIC_TAGS = [
   // en2 U1: el restaurante como escena. Distinto de 'food' (el léxico) y de
   // 'shopping' (comprar), aunque se solapen: acá lo que se entrena es pedir.
   'restaurant',
+  // en2 U2: biografias. Distinto de 'personal_info' (datos sueltos): aca es una vida contada.
+  'biography',
 ] as const;
 
 /** Habilidades: una tarjeta de SRS es (atomId, skill). Ver ARQUITECTURA.md §7. */
@@ -363,7 +384,9 @@ export const lexemeAtomSchema = z.object({
   ...atomBase,
   kind: z.literal('lexeme'),
   word: z.string().min(1),
-  pos: z.enum(['noun', 'verb', 'adjective', 'adverb', 'phrase', 'preposition']),
+  // 'conjunction' entra con en2 U2: and/but/because/so son el vocabulario de esa
+  // unidad y forzarlos a 'phrase' sería etiquetarlos mal.
+  pos: z.enum(['noun', 'verb', 'adjective', 'adverb', 'phrase', 'preposition', 'conjunction']),
   gloss: z.string().min(1),
   /** Toda palabra vive en una oración. Nunca aislada. */
   examplePhraseId: atomIdSchema,
