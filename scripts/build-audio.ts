@@ -27,6 +27,8 @@ import {
   readingBlockKey,
   answerKey,
   stepQuestionKey,
+  verbPastKey,
+  verbParticipleKey,
   stepSegmentKey,
   modelVarSentenceKey,
   type Atom,
@@ -241,6 +243,13 @@ for (const atom of atoms) {
       const ex = byId.get(atom.examplePhraseId);
       const sp = ex?.kind === 'phrase' ? ex.speaker : NEUTRAL_SPEAKER;
       push(atom.id, atom.word, sp);
+      // Verbo irregular: también sus otras dos formas. Los modos que arrancan por el
+      // pasado y el drill oral las necesitan, y `read → read` no se distingue por
+      // escrito: solo el audio muestra que pasa de /riːd/ a /red/.
+      if (atom.forms) {
+        push(verbPastKey(atom.id), atom.forms.past, sp);
+        push(verbParticipleKey(atom.id), atom.forms.participle, sp);
+      }
       break;
     }
     case 'contrast': {

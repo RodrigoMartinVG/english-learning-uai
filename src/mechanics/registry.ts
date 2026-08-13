@@ -14,6 +14,9 @@ import { cloze } from './cloze/mechanic.ts';
 import { listening } from './listening/mechanic.ts';
 import { dictation } from './dictation/mechanic.ts';
 import { irregularVerbs } from './irregular-verbs/mechanic.ts';
+import { irregularGap } from './irregular-gap/mechanic.ts';
+import { irregularPattern } from './irregular-pattern/mechanic.ts';
+import { irregularSay } from './irregular-say/mechanic.ts';
 import { echoType } from './echo-type/mechanic.ts';
 import { echoSay } from './echo-say/mechanic.ts';
 import { esToEnWrite } from './es-to-en/write.ts';
@@ -37,7 +40,10 @@ export const mechanics: Mechanic<any>[] = [
   syntaxBuilder,
   cloze,
   dictation,
+  irregularPattern,
+  irregularGap,
   irregularVerbs,
+  irregularSay,
   echoType,
   esToEnWrite,
   pingPong,

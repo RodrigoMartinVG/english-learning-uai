@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { useAudio, useAudioState } from '../../audio/AudioProvider.tsx';
 import { Waveform } from '../../ui/Waveform.tsx';
 import type { MechanicViewProps } from '../types.ts';
-import type { IrregularRound } from './mechanic.ts';
+import type { IrregularRound, VerbForm } from './mechanic.ts';
+import './irregular.css';
 
 const tidy = (s: string) => s.trim().toLowerCase().replace(/\s+/g, ' ');
 
@@ -14,33 +15,50 @@ const PATTERN: Record<IrregularRound['pattern'], string> = {
   other: 'irregular · sin patrón simple',
 };
 
+const LABEL: Record<VerbForm, string> = {
+  base: 'infinitivo',
+  past: 'pasado (past simple)',
+  participle: 'participio (past participle)',
+};
+
 export function IrregularVerbsView({ round, onDone }: MechanicViewProps<IrregularRound>) {
   const audio = useAudio();
   const state = useAudioState();
-  const [past, setPast] = useState('');
-  const [part, setPart] = useState('');
-  const [checked, setChecked] = useState<null | { past: boolean; part: boolean }>(null);
+
+  // Las dos que hay que producir, en el orden natural de la enumeración.
+  const pedidas: VerbForm[] = (['base', 'past', 'participle'] as VerbForm[]).filter((f) => f !== round.given);
+  const esperado: Record<VerbForm, string> = {
+    base: round.base,
+    past: round.past,
+    participle: round.participle,
+  };
+  const mostrada = esperado[round.given];
+
+  const [vals, setVals] = useState<Record<string, string>>({});
+  const [checked, setChecked] = useState<null | Record<string, boolean>>(null);
   // Corregir tras fallar (viendo la respuesta) no cuenta como acierto: se graba repaso.
   const [failed, setFailed] = useState(false);
-  const pastRef = useRef<HTMLInputElement>(null);
+  const firstRef = useRef<HTMLInputElement>(null);
 
-  const play = () => void audio.speak({ key: round.audioKey, text: round.base, speakerId: round.speakerId });
+  const play = () => void audio.speak({ key: round.audioKey, text: mostrada, speakerId: round.speakerId });
 
   useEffect(() => {
-    setPast(''); setPart(''); setChecked(null); setFailed(false);
+    setVals({}); setChecked(null); setFailed(false);
     play();
-    pastRef.current?.focus();
+    firstRef.current?.focus();
     return () => audio.cancel();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [round]);
 
   const check = () => {
     audio.cancel();
-    const r = { past: tidy(past) === tidy(round.past), part: tidy(part) === tidy(round.participle) };
+    const r: Record<string, boolean> = {};
+    for (const f of pedidas) r[f] = tidy(vals[f] ?? '') === tidy(esperado[f]);
     setChecked(r);
-    if (!(r.past && r.part)) setFailed(true);
+    if (!pedidas.every((f) => r[f])) setFailed(true);
   };
-  const ok = checked ? checked.past && checked.part : false;
+  const ok = checked ? pedidas.every((f) => checked[f]) : false;
+  const completo = pedidas.every((f) => (vals[f] ?? '').trim());
 
   return (
     <div className="cz exlr">
@@ -51,42 +69,46 @@ export function IrregularVerbsView({ round, onDone }: MechanicViewProps<Irregula
             {state === 'speaking' ? '◼ Sonando' : '▶ Escuchar'}
           </button>
         </div>
-        <p className="wf__word" style={{ fontSize: '1.6rem' }}>{round.base}</p>
+        {/* Se nombra QUÉ forma es la que se muestra: sin eso, arrancar por el pasado
+            se lee como si fuera el infinitivo. */}
+        <p className="osmosis__hint">{LABEL[round.given]}</p>
+        <p className="wf__word" style={{ fontSize: '1.6rem' }}>{mostrada}</p>
         <p className="osmosis__hint">{round.gloss}</p>
-        <p className="osmosis__hint">Patrón: {PATTERN[round.pattern]}</p>
+        {/* El patrón se revela DESPUÉS de responder. Antes regala el ejercicio: con
+            A-A-A dice "las tres formas iguales" y con A-B-B "pasado = participio",
+            que son 75 de los 155 verbos. Como feedback enseña la familia; como pista
+            previa, la desactiva. */}
+        {checked !== null && <p className="osmosis__hint">Patrón: {PATTERN[round.pattern]}</p>}
       </div>
 
       <div className="exlr__panel">
         <p className="cz__stem">
-          Pasado y participio de <strong>{round.base}</strong>:
+          {round.given === 'base' ? 'Pasado y participio' : 'Infinitivo y participio'} de{' '}
+          <strong>{mostrada}</strong>:
         </p>
-        <input
-          ref={pastRef}
-          className={'dict__input' + (checked && !checked.past ? ' cz__slot--bad' : '')}
-          value={past}
-          onChange={(e) => setPast(e.target.value)}
-          onKeyDown={(e) => { if (e.key === 'Enter' && !e.repeat) { e.preventDefault(); document.getElementById('irr-part')?.focus(); } }}
-          readOnly={checked !== null}
-          placeholder="pasado (past simple)…"
-          aria-label="Pasado" autoComplete="off" autoCapitalize="off" spellCheck={false}
-        />
-        <input
-          id="irr-part"
-          className={'dict__input' + (checked && !checked.part ? ' cz__slot--bad' : '')}
-          value={part}
-          onChange={(e) => setPart(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key !== 'Enter' || e.repeat) return;
-            e.preventDefault();
-            if (checked === null) { if (past.trim() && part.trim()) check(); } else { onDone(ok && !failed); }
-          }}
-          readOnly={checked !== null}
-          placeholder="participio (past participle)…"
-          aria-label="Participio" autoComplete="off" autoCapitalize="off" spellCheck={false}
-        />
+        {pedidas.map((f, i) => (
+          <input
+            key={f}
+            ref={i === 0 ? firstRef : undefined}
+            id={`irr-${f}`}
+            className={'dict__input' + (checked && !checked[f] ? ' cz__slot--bad' : '')}
+            value={vals[f] ?? ''}
+            onChange={(e) => setVals({ ...vals, [f]: e.target.value })}
+            onKeyDown={(e) => {
+              if (e.key !== 'Enter' || e.repeat) return;
+              e.preventDefault();
+              if (i === 0) { document.getElementById(`irr-${pedidas[1]}`)?.focus(); return; }
+              if (checked === null) { if (completo) check(); } else { onDone(ok && !failed); }
+            }}
+            readOnly={checked !== null}
+            placeholder={`${LABEL[f]}…`}
+            aria-label={LABEL[f]}
+            autoComplete="off" autoCapitalize="off" spellCheck={false}
+          />
+        ))}
 
         {checked === null ? (
-          <button className="btn btn--primary btn--wide" onClick={check} disabled={!past.trim() || !part.trim()}>
+          <button className="btn btn--primary btn--wide" onClick={check} disabled={!completo}>
             Comprobar
           </button>
         ) : (
@@ -104,10 +126,7 @@ export function IrregularVerbsView({ round, onDone }: MechanicViewProps<Irregula
               <p className="retry-note">Lo corregiste después de fallar — se repasará pronto.</p>
             )}
             <div className="ab">
-              <button
-                className="btn"
-                onClick={() => { setPast(''); setPart(''); setChecked(null); pastRef.current?.focus(); }}
-              >
+              <button className="btn" onClick={() => { setVals({}); setChecked(null); firstRef.current?.focus(); }}>
                 ↻ Reintentar
               </button>
               <button className="btn" onClick={play}>🔊 Escuchar</button>

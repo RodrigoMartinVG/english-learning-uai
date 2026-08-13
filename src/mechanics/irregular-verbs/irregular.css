@@ -1,0 +1,76 @@
+/* Las tres formas en fila: base · pasado · participio. Compartido por los cuatro
+   modos de verbos irregulares, para que la misma información se vea siempre igual. */
+.irr__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  font-size: 1.35rem;
+}
+.irr__form {
+  font-weight: 600;
+  color: var(--text);
+}
+.irr__sep {
+  color: var(--text-faint);
+}
+.irr__slot {
+  width: 9rem;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Las cinco familias de patrón: una debajo de otra, cada una con su nombre y su
+   ejemplo en renglones separados. En fila (como los pares mínimos) se atropellan. */
+.irr__opts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 34rem;
+  margin: 1.25rem auto 0;
+  width: 100%;
+}
+.irr__opt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.irr__opt:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--surface-hi);
+}
+.irr__opt-title {
+  font-weight: 700;
+  font-family: var(--mono);
+  letter-spacing: 0.04em;
+}
+.irr__opt-hint {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.35;
+}
+/* Verde y rojo solo para el veredicto, nunca para el foco (ARQUITECTURA §9). */
+.irr__opt--ok {
+  border-color: var(--success);
+  background: color-mix(in srgb, var(--success) 12%, var(--surface));
+}
+.irr__opt--bad {
+  border-color: var(--error);
+  background: color-mix(in srgb, var(--error) 12%, var(--surface));
+}
+.irr__opt--off {
+  opacity: 0.45;
+}

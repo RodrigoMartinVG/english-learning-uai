@@ -11,6 +11,9 @@ import { ClozeView } from './cloze/ClozeView.tsx';
 import { ListeningView } from './listening/ListeningView.tsx';
 import { DictationView } from './dictation/DictationView.tsx';
 import { IrregularVerbsView } from './irregular-verbs/IrregularVerbsView.tsx';
+import { IrregularGapView } from './irregular-gap/IrregularGapView.tsx';
+import { IrregularPatternView } from './irregular-pattern/IrregularPatternView.tsx';
+import { IrregularSayView } from './irregular-say/IrregularSayView.tsx';
 import { EchoTypeView } from './echo-type/EchoTypeView.tsx';
 import { EchoSayView } from './echo-say/EchoSayView.tsx';
 import { EsToEnWriteView } from './es-to-en/WriteView.tsx';
@@ -30,6 +33,9 @@ import { cloze } from './cloze/mechanic.ts';
 import { listening } from './listening/mechanic.ts';
 import { dictation } from './dictation/mechanic.ts';
 import { irregularVerbs } from './irregular-verbs/mechanic.ts';
+import { irregularGap } from './irregular-gap/mechanic.ts';
+import { irregularPattern } from './irregular-pattern/mechanic.ts';
+import { irregularSay } from './irregular-say/mechanic.ts';
 import { echoType } from './echo-type/mechanic.ts';
 import { echoSay } from './echo-say/mechanic.ts';
 import { esToEnWrite } from './es-to-en/write.ts';
@@ -51,6 +57,9 @@ export const views: Record<string, ComponentType<MechanicViewProps<any>>> = {
   [listening.id]: ListeningView,
   [dictation.id]: DictationView,
   [irregularVerbs.id]: IrregularVerbsView,
+  [irregularGap.id]: IrregularGapView,
+  [irregularPattern.id]: IrregularPatternView,
+  [irregularSay.id]: IrregularSayView,
   [echoType.id]: EchoTypeView,
   [echoSay.id]: EchoSayView,
   [esToEnWrite.id]: EsToEnWriteView,

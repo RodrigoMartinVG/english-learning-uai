@@ -241,6 +241,17 @@ export const readingBlockKey = (atomId: string, sectionIdx: number, blockIdx: nu
 /** Clave de audio de una respuesta con modo (§3.5): el modelo leído en voz alta. */
 export const answerKey = (atomId: string, answerIdx: number): string => `${atomId}.ans.${answerIdx}`;
 
+/**
+ * Claves de audio del PASADO y el PARTICIPIO de un verbo irregular.
+ *
+ * La clave del átomo (`atom.id`) dice la forma base. Estas dicen las otras dos, y sin
+ * ellas los modos que arrancan por el pasado —o el drill oral— serían mudos. Hacen
+ * falta de verdad en un caso que ninguna otra parte del sistema cubre: `read → read`
+ * cambia de /riːd/ a /red/ sin cambiar una sola letra.
+ */
+export const verbPastKey = (atomId: string): string => `${atomId}.past`;
+export const verbParticipleKey = (atomId: string): string => `${atomId}.part`;
+
 /** Claves de audio de un paso de "Reconstruir el guion": la pregunta y el fragmento. */
 export const stepQuestionKey = (atomId: string, stepIdx: number): string =>
   `${atomId}.step.${stepIdx}.q`;
