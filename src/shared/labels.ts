@@ -93,3 +93,14 @@ export const PHONEME_LABEL: Record<string, string> = {
 export const fnLabel = (tag: string): string => FN_LABEL[tag] ?? tag;
 export const grammarLabel = (tag: string): string => GRAMMAR_LABEL[tag] ?? tag;
 export const phonemeLabel = (tag: string): string => PHONEME_LABEL[tag] ?? `/${tag}/`;
+
+/**
+ * Cómo se nombra una unidad en la navegación.
+ *
+ * Casi todas son "Unidad N", pero algunas no son un peldaño del curso y decir su
+ * número confunde: el examen oral de en1, y los complementos —unidades satélite que
+ * cuelgan de otra, como la lista completa de irregulares que acompaña a la Unidad 2
+ * de en2 y vive aparte para no inundarle el repaso.
+ */
+export const unitLabel = (unit: number, title: string): string =>
+  title.startsWith('Examen') ? 'Examen' : title.startsWith('Complemento') ? 'Complemento' : `Unidad ${unit}`;

@@ -12,6 +12,7 @@ import { AudioProvider, FlagAudioButton, useAudio, useAudioState, useAudioTransp
 import { atomInAspect, type Aspect, type Atom, type Course, type ReadingAtom, type Skill } from '../../content/schema.ts';
 import { allCourses, atoms, courseName, units } from '../data/content.ts';
 import { mechanics } from '../mechanics/registry.ts';
+import { unitLabel } from '../shared/labels.ts';
 import {
   buildSession,
   DEFAULT_LENGTH,
@@ -512,7 +513,7 @@ function Home({
                         onChange={() => toggleUnit(u.unit)}
                       />
                       <span>
-                        {u.title.startsWith('Examen') ? 'Examen' : `Unidad ${u.unit}`} · {u.title}
+                        {unitLabel(u.unit, u.title)} · {u.title}
                       </span>
                     </label>
                   ))}
@@ -536,7 +537,7 @@ function Home({
               <button key={`${u.course}-${u.unit}`} className="card" onClick={() => onUnit(u.unit)}>
                 <div className="card__top">
                   <span className="card__level">
-                    {u.title.startsWith('Examen') ? 'Examen' : `Unidad ${u.unit}`}
+                    {unitLabel(u.unit, u.title)}
                   </span>
                   <span className="card__skill">{u.aspects.length} temas</span>
                 </div>
@@ -689,7 +690,7 @@ function UnitView({
   return (
     <div className="home">
       <section className="home__unit">
-        <p className="home__eyebrow">{u.title.startsWith('Examen') ? 'Examen oral' : `Unidad ${u.unit}`}</p>
+        <p className="home__eyebrow">{u.title.startsWith('Examen') ? 'Examen oral' : unitLabel(u.unit, u.title)}</p>
         <h1>{u.title}</h1>
         <ul className="home__goals">
           {u.goals.map((g) => (
