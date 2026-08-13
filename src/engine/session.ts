@@ -174,15 +174,25 @@ function spreadByMechanic<T extends { step: Step }>(list: T[]): T[] {
   }
   const queues = [...byMech.values()];
   const out: T[] = [];
+  // Rotar mecánicas NO alcanza: si ocho mecánicas aceptan el mismo átomo, la primera
+  // vuelta entrega ocho ejercicios seguidos sobre esa misma palabra. Pasó de verdad —
+  // una tanda de 12 salió casi entera sobre "bet"— porque los verbos irregulares tienen
+  // cuatro modos propios más los genéricos. Así que se rota por mecánica Y se prefiere,
+  // dentro de cada una, un átomo que todavía no haya salido en esta vuelta.
+  const usados = new Set<string>();
   while (out.length < list.length) {
     let movio = false;
     for (const q of queues) {
-      const c = q.shift();
-      if (c) {
-        out.push(c);
-        movio = true;
-      }
+      if (!q.length) continue;
+      let i = q.findIndex((c) => !usados.has(c.step.atomId));
+      if (i === -1) i = 0; // ya salieron todos: se repite antes que acortar la tanda
+      const [c] = q.splice(i, 1);
+      out.push(c!);
+      usados.add(c!.step.atomId);
+      movio = true;
     }
+    // Una vuelta completa agotó los átomos frescos: se permite repetirlos en la próxima.
+    if (usados.size >= new Set(list.map((c) => c.step.atomId)).size) usados.clear();
     if (!movio) break; // defensivo: nunca debería pasar (el total es el mismo)
   }
   return out;
@@ -209,10 +219,46 @@ function climbLadder(candidates: { step: Step; level: number; difficulty: number
 
   const levels = [...byLevel.keys()].sort((a, b) => a - b);
   const picked: typeof candidates = [];
+  /**
+   * Elegir del peldaño mirando las DOS diversidades a la vez.
+   *
+   * Por separado se pelean: si solo se cuidan los átomos, cada nivel saltea las
+   * mecánicas cuyos átomos ya consumió otro nivel y termina eligiendo siempre la
+   * misma (medido: 12 átomos distintos pero solo 4 mecánicas, 3 seguidas de cada
+   * una). Si solo se cuidan las mecánicas, ocho de ellas aceptan el mismo verbo y
+   * la tanda entera cae sobre esa palabra — que es el bug que se reportó.
+   *
+   * Regla: entre los candidatos cuyo átomo no salió todavía, gana el de la mecánica
+   * menos usada. Ambos criterios son globales a la tanda, no por peldaño.
+   */
+  const usados = new Set<string>();
+  const usoMec = new Map<string, number>();
+  const sacar = (cola: typeof candidates) => {
+    if (!cola.length) return undefined;
+    let mejor = -1;
+    let mejorUso = Infinity;
+    for (let i = 0; i < cola.length; i++) {
+      const c = cola[i]!;
+      if (usados.has(c.step.atomId)) continue;
+      const uso = usoMec.get(c.step.mechanicId) ?? 0;
+      if (uso < mejorUso) {
+        mejor = i;
+        mejorUso = uso;
+        if (uso === 0) break; // no hay mejor que una mecánica sin estrenar
+      }
+    }
+    if (mejor === -1) mejor = 0; // agotados los frescos: repetir antes que acortar
+    const [c] = cola.splice(mejor, 1)!;
+    if (c) {
+      usados.add(c.step.atomId);
+      usoMec.set(c.step.mechanicId, (usoMec.get(c.step.mechanicId) ?? 0) + 1);
+    }
+    return c;
+  };
   while (picked.length < n && levels.some((l) => byLevel.get(l)!.length)) {
     for (const l of levels) {
       if (picked.length >= n) break;
-      const c = byLevel.get(l)!.shift();
+      const c = sacar(byLevel.get(l)!);
       if (c) picked.push(c);
     }
   }
