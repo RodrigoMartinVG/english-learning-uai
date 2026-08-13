@@ -1,0 +1,7326 @@
+{
+  "$schema": "../schema.json",
+  "course": "en2",
+  "unit": 3,
+  "title": "Vacaciones — describí y compará",
+  "goals": [
+    "Meta declarada por el material: describir tus vacaciones y una ciudad, comparándola con otras.",
+    "Aprendé los lugares de una ciudad, sabé pedir y dar direcciones, y dominá comparativos y superlativos.",
+    "Cerrá contando adónde fuiste, qué viste y cómo era ese lugar comparado con el tuyo."
+  ],
+  "aspects": [
+    {
+      "id": "city-places",
+      "title": "Lugares de la ciudad",
+      "summary": "Las 55 palabras del banco: comercios, edificios y vía pública, cada una en su oración.",
+      "order": 1,
+      "match": {
+        "topic": [
+          "city"
+        ]
+      },
+      "source": {
+        "page": 6,
+        "section": "City places"
+      }
+    },
+    {
+      "id": "directions",
+      "title": "Dar y pedir direcciones",
+      "summary": "Las fórmulas completas: turn left, take the second turning, opposite, as far as the roundabout.",
+      "order": 2,
+      "match": {
+        "grammar": [
+          "directions"
+        ]
+      },
+      "source": {
+        "page": 12,
+        "section": "Giving directions"
+      }
+    },
+    {
+      "id": "comparatives",
+      "title": "Comparativos",
+      "summary": "Cuándo -er y cuándo more, los irregulares, y as…as para decir que dos cosas son iguales.",
+      "order": 3,
+      "match": {
+        "grammar": [
+          "comparatives"
+        ]
+      },
+      "source": {
+        "page": 18,
+        "section": "Learning new structures"
+      }
+    },
+    {
+      "id": "superlatives",
+      "title": "Superlativos",
+      "summary": "El -est y el most, y por qué casi siempre llevan the.",
+      "order": 4,
+      "match": {
+        "grammar": [
+          "superlatives"
+        ]
+      },
+      "source": {
+        "page": 18,
+        "section": "Learning new structures"
+      }
+    },
+    {
+      "id": "holidays",
+      "title": "Contar unas vacaciones",
+      "summary": "La meta de la unidad: la postal de Grecia como modelo, y escribir y contar las tuyas.",
+      "order": 5,
+      "match": {
+        "topic": [
+          "leisure"
+        ]
+      },
+      "source": {
+        "page": 28,
+        "section": "Contextualization time"
+      }
+    }
+  ],
+  "atoms": [
+    {
+      "id": "en2.u3.ct.001",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "EL error de la unidad: elegir -er o more según las sílabas. Nunca los dos juntos."
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "contrast",
+      "pair": [
+        "-er",
+        "more"
+      ],
+      "type": "homophone",
+      "discriminator": "syntax",
+      "examples": [
+        {
+          "text": "Athens is old___ than Rome.",
+          "correct": 0
+        },
+        {
+          "text": "Windsurfing is ___ exciting than golf.",
+          "correct": 1
+        },
+        {
+          "text": "English is easi___ than German.",
+          "correct": 0
+        },
+        {
+          "text": "This car is ___ expensive than that one.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en2.u3.ct.002",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Comparativo pide than; superlativo pide the. Confundirlos es el segundo error más común."
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "contrast",
+      "pair": [
+        "than",
+        "the"
+      ],
+      "type": "homophone",
+      "discriminator": "syntax",
+      "examples": [
+        {
+          "text": "Egypt is hotter ___ Sweden.",
+          "correct": 0
+        },
+        {
+          "text": "Everest is ___ highest mountain in the world.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en2.u3.ct.003",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "Par mínimo nuestro: /θ/ vs /t/ en una palabra que la unidad usa todo el tiempo."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "contrast",
+      "pair": [
+        "than",
+        "tan"
+      ],
+      "type": "minimal-pair",
+      "discriminator": "phoneme",
+      "examples": [
+        {
+          "text": "Athens is older ___ Rome.",
+          "correct": 0
+        },
+        {
+          "text": "She got a ___ on the beach.",
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "en2.u3.ex.001",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 21,
+        "section": "Ejercitación 6 — Comparatives",
+        "note": "La grilla de esta unidad es, verbatim, la de la Unidad 2: no hay clave oficial para ningun ejercicio. La respuesta es nuestra."
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "exercise",
+      "prompt": "Elegí la forma correcta del comparativo o superlativo.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "It is hot today, but it was ___ yesterday.",
+          "blanks": [
+            {
+              "accept": [
+                "hotter"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I got a bad mark, but Jane's was ___.",
+          "blanks": [
+            {
+              "accept": [
+                "worse"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Athens is ___ than Rome.",
+          "blanks": [
+            {
+              "accept": [
+                "older"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Sydney is ___ city in Australia.",
+          "blanks": [
+            {
+              "accept": [
+                "the largest"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Angel Falls are fifteen times ___ than Niagara Falls.",
+          "blanks": [
+            {
+              "accept": [
+                "higher"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Concorde travels ___ than the speed of sound.",
+          "blanks": [
+            {
+              "accept": [
+                "faster"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ cat in the world is only seven centimetres tall.",
+          "blanks": [
+            {
+              "accept": [
+                "The shortest"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Dogs are ___ than lions.",
+          "blanks": [
+            {
+              "accept": [
+                "friendlier"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "This car is ___ in the salon.",
+          "blanks": [
+            {
+              "accept": [
+                "the most expensive"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "English is ___ than German.",
+          "blanks": [
+            {
+              "accept": [
+                "easier"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Jeremy is ___ runner in our class.",
+          "blanks": [
+            {
+              "accept": [
+                "the fastest"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I have got ___ room in our house.",
+          "blanks": [
+            {
+              "accept": [
+                "the biggest"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "This is ___ film I have ever seen.",
+          "blanks": [
+            {
+              "accept": [
+                "the best"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "A snail is ___ than a tortoise.",
+          "blanks": [
+            {
+              "accept": [
+                "slower"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The Dead Sea is ___ sea in the world.",
+          "blanks": [
+            {
+              "accept": [
+                "the saltiest"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Your bike is ___ than mine.",
+          "blanks": [
+            {
+              "accept": [
+                "cheaper"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "That is ___ joke I know.",
+          "blanks": [
+            {
+              "accept": [
+                "the funniest"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ animal in the world is a frog from Colombia.",
+          "blanks": [
+            {
+              "accept": [
+                "The most poisonous"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Windsurfing is ___ than golf.",
+          "blanks": [
+            {
+              "accept": [
+                "more exciting"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Greece is ___ the equator than Denmark.",
+          "blanks": [
+            {
+              "accept": [
+                "nearer"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "native"
+    },
+    {
+      "id": "en2.u3.ex.002",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 25,
+        "section": "Ejercitación 9 — Postal de Madeira",
+        "note": "La grilla de esta unidad es, verbatim, la de la Unidad 2: no hay clave oficial para ningun ejercicio. La respuesta es nuestra."
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 4,
+      "kind": "exercise",
+      "prompt": "Completá la postal con el comparativo o superlativo.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "My hotel room is ___ (small) than the one in the photograph.",
+          "blanks": [
+            {
+              "accept": [
+                "smaller"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "I think it is ___ (small) room in this hotel.",
+          "blanks": [
+            {
+              "accept": [
+                "the smallest"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "It is ___ (cold) than in England.",
+          "blanks": [
+            {
+              "accept": [
+                "colder"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The beach near the hotel is ___ (dirty).",
+          "blanks": [
+            {
+              "accept": [
+                "dirtier"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "It is ___ (dirty) of all the beaches on the island.",
+          "blanks": [
+            {
+              "accept": [
+                "the dirtiest"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The food is ___ (expensive) than I expected.",
+          "blanks": [
+            {
+              "accept": [
+                "more expensive"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "___ (bad) thing of all was when I lost my passport.",
+          "blanks": [
+            {
+              "accept": [
+                "The worst"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "It is ___ (horrible) holiday in my life.",
+          "blanks": [
+            {
+              "accept": [
+                "the most horrible"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "native"
+    },
+    {
+      "id": "en2.u3.ex.003",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 26,
+        "section": "Ejercitación 10 — Postal de India",
+        "note": "La grilla de esta unidad es, verbatim, la de la Unidad 2: no hay clave oficial para ningun ejercicio. La respuesta es nuestra."
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 4,
+      "kind": "exercise",
+      "prompt": "Completá la postal con el comparativo o superlativo.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "The city is very ___ (crowded).",
+          "blanks": [
+            {
+              "accept": [
+                "crowded"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "We use rickshaws because they are ___ (quick) than taxis.",
+          "blanks": [
+            {
+              "accept": [
+                "quicker"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "We visited the Jami Masjid, ___ (big) mosque in India.",
+          "blanks": [
+            {
+              "accept": [
+                "the biggest"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "There are also a lot of ___ (good) restaurants here.",
+          "blanks": [
+            {
+              "accept": [
+                "good"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "Our favourite one serves ___ (delicious) food.",
+          "blanks": [
+            {
+              "accept": [
+                "the most delicious"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "native"
+    },
+    {
+      "id": "en2.u3.ex.004",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 13,
+        "section": "Ejercitación — Preposiciones en el plano",
+        "note": "La grilla de esta unidad es, verbatim, la de la Unidad 2: no hay clave oficial para ningun ejercicio. La respuesta es nuestra."
+      },
+      "grammar": [
+        "prepositions.place",
+        "directions"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 4,
+      "kind": "exercise",
+      "prompt": "Completá con la preposición correcta según el plano.",
+      "format": "cloze",
+      "items": [
+        {
+          "stem": "The Snack Bar is ___ the Disco and the Chinese Restaurant.",
+          "blanks": [
+            {
+              "accept": [
+                "between"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The Newsagent's is ___ the Shoe Shop.",
+          "blanks": [
+            {
+              "accept": [
+                "next to"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The Car Park is ___ the Swan Hotel.",
+          "blanks": [
+            {
+              "accept": [
+                "behind"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The Baker's is ___ the Bank.",
+          "blanks": [
+            {
+              "accept": [
+                "opposite"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The Chinese Restaurant is ___ the Café.",
+          "blanks": [
+            {
+              "accept": [
+                "near"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The Cinema is ___ the Railway Station.",
+          "blanks": [
+            {
+              "accept": [
+                "in front of"
+              ]
+            }
+          ]
+        },
+        {
+          "stem": "The Tourism Information Centre is ___ High Street and Middle Lane.",
+          "blanks": [
+            {
+              "accept": [
+                "on the corner of"
+              ]
+            }
+          ]
+        }
+      ],
+      "audioViable": "native"
+    },
+    {
+      "id": "en2.u3.ex.005",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 19,
+        "section": "Learning new structures — reglas",
+        "note": "La grilla de esta unidad es, verbatim, la de la Unidad 2: no hay clave oficial para ningun ejercicio. La respuesta es nuestra."
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "kind": "exercise",
+      "prompt": "Escribí el comparativo y el superlativo del adjetivo.",
+      "format": "transform",
+      "items": [
+        {
+          "stem": "nice",
+          "answer": {
+            "accept": [
+              "nicer — the nicest"
+            ]
+          }
+        },
+        {
+          "stem": "big",
+          "answer": {
+            "accept": [
+              "bigger — the biggest"
+            ]
+          }
+        },
+        {
+          "stem": "cheap",
+          "answer": {
+            "accept": [
+              "cheaper — the cheapest"
+            ]
+          }
+        },
+        {
+          "stem": "happy",
+          "answer": {
+            "accept": [
+              "happier — the happiest"
+            ]
+          }
+        },
+        {
+          "stem": "dry",
+          "answer": {
+            "accept": [
+              "drier — the driest"
+            ]
+          }
+        },
+        {
+          "stem": "wide",
+          "answer": {
+            "accept": [
+              "wider — the widest"
+            ]
+          }
+        },
+        {
+          "stem": "exciting",
+          "answer": {
+            "accept": [
+              "more exciting — the most exciting"
+            ]
+          }
+        },
+        {
+          "stem": "careful",
+          "answer": {
+            "accept": [
+              "more careful — the most careful"
+            ]
+          }
+        },
+        {
+          "stem": "good",
+          "answer": {
+            "accept": [
+              "better — the best"
+            ]
+          }
+        },
+        {
+          "stem": "bad",
+          "answer": {
+            "accept": [
+              "worse — the worst"
+            ]
+          }
+        },
+        {
+          "stem": "far",
+          "answer": {
+            "accept": [
+              "farther — the farthest"
+            ]
+          }
+        },
+        {
+          "stem": "little",
+          "answer": {
+            "accept": [
+              "less — the least"
+            ]
+          }
+        }
+      ],
+      "audioViable": "adapted"
+    },
+    {
+      "id": "en2.u3.ls.001",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "synthetic",
+        "note": "El audio original de Katia es un link externo que no podemos versionar. Narrativa nuestra, con el mismo contenido: describir unas vacaciones de febrero."
+      },
+      "grammar": [
+        "past-simple.affirmative",
+        "comparatives"
+      ],
+      "fn": [
+        "narrate.past",
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "kind": "listening",
+      "narrative": "Hello, my name is Katia. Last February I went on holiday to the south of France with two friends. We stayed in a small hotel near the beach. It was cheaper than the big hotels in the centre, and much quieter. Every morning we walked along the sea and had coffee in a café on the corner. The weather was colder than we expected, so we visited a lot of museums. The best day was when we took a train to a little village in the mountains. It was the most beautiful place I have ever seen.",
+      "speaker": "narrator",
+      "questions": [
+        {
+          "q": "Where did Katia go on holiday?",
+          "accept": [
+            "the south of France",
+            "to the south of France",
+            "France"
+          ]
+        },
+        {
+          "q": "Why did they choose that hotel?",
+          "accept": [
+            "it was cheaper and quieter",
+            "because it was cheaper",
+            "cheaper than the big hotels"
+          ]
+        },
+        {
+          "q": "What was the best day?",
+          "accept": [
+            "the train to a village in the mountains",
+            "when they took a train to a little village",
+            "the village in the mountains"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en2.u3.lx.001",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a bank",
+      "pos": "noun",
+      "gloss": "banco",
+      "examplePhraseId": "en2.u3.p.001",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.002",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a supermarket",
+      "pos": "noun",
+      "gloss": "supermercado",
+      "examplePhraseId": "en2.u3.p.002",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.003",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a car dealer",
+      "pos": "noun",
+      "gloss": "concesionaria",
+      "examplePhraseId": "en2.u3.p.003",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.004",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a hospital",
+      "pos": "noun",
+      "gloss": "hospital",
+      "examplePhraseId": "en2.u3.p.004",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.005",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a restaurant",
+      "pos": "noun",
+      "gloss": "restaurante",
+      "examplePhraseId": "en2.u3.p.005",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.006",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a butcher's",
+      "pos": "noun",
+      "gloss": "carnicería",
+      "examplePhraseId": "en2.u3.p.006",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.007",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a library",
+      "pos": "noun",
+      "gloss": "biblioteca",
+      "examplePhraseId": "en2.u3.p.007",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.008",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a cemetery",
+      "pos": "noun",
+      "gloss": "cementerio",
+      "examplePhraseId": "en2.u3.p.008",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.009",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a baker's",
+      "pos": "noun",
+      "gloss": "panadería",
+      "examplePhraseId": "en2.u3.p.009",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.010",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a clothes shop",
+      "pos": "noun",
+      "gloss": "tienda de ropa",
+      "examplePhraseId": "en2.u3.p.010",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.011",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a chemist's",
+      "pos": "noun",
+      "gloss": "farmacia",
+      "examplePhraseId": "en2.u3.p.011",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.012",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a greengrocer's",
+      "pos": "noun",
+      "gloss": "verdulería",
+      "examplePhraseId": "en2.u3.p.012",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.013",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a market",
+      "pos": "noun",
+      "gloss": "mercado",
+      "examplePhraseId": "en2.u3.p.013",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.014",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a newsagent's",
+      "pos": "noun",
+      "gloss": "kiosco de diarios",
+      "examplePhraseId": "en2.u3.p.014",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.015",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a jeweller's",
+      "pos": "noun",
+      "gloss": "joyería",
+      "examplePhraseId": "en2.u3.p.015",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.016",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a fishmonger's",
+      "pos": "noun",
+      "gloss": "pescadería",
+      "examplePhraseId": "en2.u3.p.016",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.017",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a sweet shop",
+      "pos": "noun",
+      "gloss": "confitería, tienda de golosinas",
+      "examplePhraseId": "en2.u3.p.017",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.018",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a toy shop",
+      "pos": "noun",
+      "gloss": "juguetería",
+      "examplePhraseId": "en2.u3.p.018",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.019",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a bookshop",
+      "pos": "noun",
+      "gloss": "librería",
+      "examplePhraseId": "en2.u3.p.019",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.020",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a music shop",
+      "pos": "noun",
+      "gloss": "disquería",
+      "examplePhraseId": "en2.u3.p.020",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.021",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a sports shop",
+      "pos": "noun",
+      "gloss": "tienda de deportes",
+      "examplePhraseId": "en2.u3.p.021",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.022",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a boutique",
+      "pos": "noun",
+      "gloss": "boutique",
+      "examplePhraseId": "en2.u3.p.022",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.023",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "an estate agent",
+      "pos": "noun",
+      "gloss": "inmobiliaria",
+      "examplePhraseId": "en2.u3.p.023",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.024",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a travel agency",
+      "pos": "noun",
+      "gloss": "agencia de viajes",
+      "examplePhraseId": "en2.u3.p.024",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.025",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a launderette",
+      "pos": "noun",
+      "gloss": "lavadero automático",
+      "examplePhraseId": "en2.u3.p.025",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.026",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a hairdresser's",
+      "pos": "noun",
+      "gloss": "peluquería",
+      "examplePhraseId": "en2.u3.p.026",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.027",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a florist's",
+      "pos": "noun",
+      "gloss": "florería",
+      "examplePhraseId": "en2.u3.p.027",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.028",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a shoe shop",
+      "pos": "noun",
+      "gloss": "zapatería",
+      "examplePhraseId": "en2.u3.p.028",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.029",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a post office",
+      "pos": "noun",
+      "gloss": "correo",
+      "examplePhraseId": "en2.u3.p.029",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.030",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a department store",
+      "pos": "noun",
+      "gloss": "tienda por departamentos",
+      "examplePhraseId": "en2.u3.p.030",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.031",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a hotel",
+      "pos": "noun",
+      "gloss": "hotel",
+      "examplePhraseId": "en2.u3.p.031",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.032",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a pub",
+      "pos": "noun",
+      "gloss": "pub, bar",
+      "examplePhraseId": "en2.u3.p.032",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.033",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a café",
+      "pos": "noun",
+      "gloss": "café",
+      "examplePhraseId": "en2.u3.p.033",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.034",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a park",
+      "pos": "noun",
+      "gloss": "parque",
+      "examplePhraseId": "en2.u3.p.034",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.035",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a petrol station",
+      "pos": "noun",
+      "gloss": "estación de servicio",
+      "examplePhraseId": "en2.u3.p.035",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.036",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a railway station",
+      "pos": "noun",
+      "gloss": "estación de tren",
+      "examplePhraseId": "en2.u3.p.036",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.037",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a bus station",
+      "pos": "noun",
+      "gloss": "terminal de colectivos",
+      "examplePhraseId": "en2.u3.p.037",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.038",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a fire station",
+      "pos": "noun",
+      "gloss": "cuartel de bomberos",
+      "examplePhraseId": "en2.u3.p.038",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.039",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a church",
+      "pos": "noun",
+      "gloss": "iglesia",
+      "examplePhraseId": "en2.u3.p.039",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.040",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a mosque",
+      "pos": "noun",
+      "gloss": "mezquita",
+      "examplePhraseId": "en2.u3.p.040",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.041",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a cathedral",
+      "pos": "noun",
+      "gloss": "catedral",
+      "examplePhraseId": "en2.u3.p.041",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.042",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "an art gallery",
+      "pos": "noun",
+      "gloss": "galería de arte",
+      "examplePhraseId": "en2.u3.p.042",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.043",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a museum",
+      "pos": "noun",
+      "gloss": "museo",
+      "examplePhraseId": "en2.u3.p.043",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.044",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a garage",
+      "pos": "noun",
+      "gloss": "taller mecánico",
+      "examplePhraseId": "en2.u3.p.044",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.045",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a factory",
+      "pos": "noun",
+      "gloss": "fábrica",
+      "examplePhraseId": "en2.u3.p.045",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.046",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a castle",
+      "pos": "noun",
+      "gloss": "castillo",
+      "examplePhraseId": "en2.u3.p.046",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.047",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a theatre",
+      "pos": "noun",
+      "gloss": "teatro",
+      "examplePhraseId": "en2.u3.p.047",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.048",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a cinema",
+      "pos": "noun",
+      "gloss": "cine",
+      "examplePhraseId": "en2.u3.p.048",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.049",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a swimming pool",
+      "pos": "noun",
+      "gloss": "pileta, piscina",
+      "examplePhraseId": "en2.u3.p.049",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.050",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a police station",
+      "pos": "noun",
+      "gloss": "comisaría",
+      "examplePhraseId": "en2.u3.p.050",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.051",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "traffic lights",
+      "pos": "noun",
+      "gloss": "semáforo",
+      "examplePhraseId": "en2.u3.p.051",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.052",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a pedestrian crossing",
+      "pos": "noun",
+      "gloss": "senda peatonal",
+      "examplePhraseId": "en2.u3.p.052",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.053",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "an avenue",
+      "pos": "noun",
+      "gloss": "avenida",
+      "examplePhraseId": "en2.u3.p.053",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.054",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a lane",
+      "pos": "noun",
+      "gloss": "callejón, camino",
+      "examplePhraseId": "en2.u3.p.054",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.055",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "word": "a roundabout",
+      "pos": "noun",
+      "gloss": "rotonda",
+      "examplePhraseId": "en2.u3.p.055",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.056",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "prepositions.place",
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "word": "opposite",
+      "pos": "preposition",
+      "gloss": "enfrente de",
+      "examplePhraseId": "en2.u3.p.004",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.057",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "prepositions.place",
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "word": "next to",
+      "pos": "preposition",
+      "gloss": "al lado de",
+      "examplePhraseId": "en2.u3.p.002",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.058",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "prepositions.place",
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "word": "between",
+      "pos": "preposition",
+      "gloss": "entre",
+      "examplePhraseId": "en2.u3.p.033",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.059",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "prepositions.place",
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "word": "behind",
+      "pos": "preposition",
+      "gloss": "detrás de",
+      "examplePhraseId": "en2.u3.p.008",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.060",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "prepositions.place",
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "word": "in front of",
+      "pos": "preposition",
+      "gloss": "delante de, frente a",
+      "examplePhraseId": "en2.u3.p.039",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.061",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "prepositions.place",
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "word": "near",
+      "pos": "preposition",
+      "gloss": "cerca de",
+      "examplePhraseId": "en2.u3.p.003",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.062",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "prepositions.place",
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "word": "on the corner of",
+      "pos": "preposition",
+      "gloss": "en la esquina de",
+      "examplePhraseId": "en2.u3.p.029",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.063",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Learning new structures — Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "word": "good",
+      "pos": "adjective",
+      "gloss": "bueno — irregular: better · the best",
+      "examplePhraseId": "en2.u3.p.103",
+      "focus": "spelling"
+    },
+    {
+      "id": "en2.u3.lx.064",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Learning new structures — Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "word": "bad",
+      "pos": "adjective",
+      "gloss": "malo — irregular: worse · the worst",
+      "examplePhraseId": "en2.u3.p.104",
+      "focus": "spelling"
+    },
+    {
+      "id": "en2.u3.lx.065",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Learning new structures — Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "word": "far",
+      "pos": "adjective",
+      "gloss": "lejos — irregular: farther / further · the farthest / the furthest",
+      "examplePhraseId": "en2.u3.p.105",
+      "focus": "spelling"
+    },
+    {
+      "id": "en2.u3.lx.066",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Learning new structures — Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "word": "little",
+      "pos": "adjective",
+      "gloss": "poco — irregular: less · the least",
+      "examplePhraseId": "en2.u3.p.106",
+      "focus": "spelling"
+    },
+    {
+      "id": "en2.u3.lx.067",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Learning new structures — Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "word": "many",
+      "pos": "adjective",
+      "gloss": "muchos — irregular: more · the most",
+      "examplePhraseId": "en2.u3.p.107",
+      "focus": "spelling"
+    },
+    {
+      "id": "en2.u3.lx.068",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Learning new structures — Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "word": "much",
+      "pos": "adjective",
+      "gloss": "mucho — irregular: more · the most",
+      "examplePhraseId": "en2.u3.p.108",
+      "focus": "spelling"
+    },
+    {
+      "id": "en2.u3.lx.069",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "safe",
+      "pos": "adjective",
+      "gloss": "seguro",
+      "examplePhraseId": "en2.u3.p.109",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.070",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "peaceful",
+      "pos": "adjective",
+      "gloss": "tranquilo",
+      "examplePhraseId": "en2.u3.p.110",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.071",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "exciting",
+      "pos": "adjective",
+      "gloss": "emocionante",
+      "examplePhraseId": "en2.u3.p.111",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.072",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "relaxing",
+      "pos": "adjective",
+      "gloss": "relajante",
+      "examplePhraseId": "en2.u3.p.112",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.073",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "healthy",
+      "pos": "adjective",
+      "gloss": "saludable",
+      "examplePhraseId": "en2.u3.p.113",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.074",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "lonely",
+      "pos": "adjective",
+      "gloss": "solitario",
+      "examplePhraseId": "en2.u3.p.114",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.075",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "dangerous",
+      "pos": "adjective",
+      "gloss": "peligroso",
+      "examplePhraseId": "en2.u3.p.115",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.076",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "polluted",
+      "pos": "adjective",
+      "gloss": "contaminado",
+      "examplePhraseId": "en2.u3.p.116",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.077",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "crowded",
+      "pos": "adjective",
+      "gloss": "lleno de gente",
+      "examplePhraseId": "en2.u3.p.117",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.078",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "stressful",
+      "pos": "adjective",
+      "gloss": "estresante",
+      "examplePhraseId": "en2.u3.p.118",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.079",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "helpful",
+      "pos": "adjective",
+      "gloss": "servicial",
+      "examplePhraseId": "en2.u3.p.119",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.080",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "busy",
+      "pos": "adjective",
+      "gloss": "ajetreado",
+      "examplePhraseId": "en2.u3.p.120",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.081",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "noisy",
+      "pos": "adjective",
+      "gloss": "ruidoso",
+      "examplePhraseId": "en2.u3.p.121",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.082",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "expensive",
+      "pos": "adjective",
+      "gloss": "caro",
+      "examplePhraseId": "en2.u3.p.122",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.083",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "clean",
+      "pos": "adjective",
+      "gloss": "limpio",
+      "examplePhraseId": "en2.u3.p.123",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.lx.084",
+      "course": "en2",
+      "unit": 3,
+      "kind": "lexeme",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "word": "boring",
+      "pos": "adjective",
+      "gloss": "aburrido",
+      "examplePhraseId": "en2.u3.p.124",
+      "focus": "translation"
+    },
+    {
+      "id": "en2.u3.p.001",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I went to the bank to change some money.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ wɛnt tə ðə bˈæŋk tə tʃˈeɪndʒ sˌʌm mˈʌni"
+    },
+    {
+      "id": "en2.u3.p.002",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The supermarket is next to the school.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə sˈuːpɚmˌɑːɹkɪt ɪz nˈɛkst tə ðə skˈuːl"
+    },
+    {
+      "id": "en2.u3.p.003",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "He bought the car at a car dealer near the station.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "hiː bˈɔːt ðə kˈɑːɹ æɾə kˈɑːɹ dˈiːlɚ nˌɪɹ ðə stˈeɪʃən"
+    },
+    {
+      "id": "en2.u3.p.004",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The hospital is opposite the park.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə hˈɑːspɪɾəl ɪz ˈɑːpəzˌɪt ðə pˈɑːɹk"
+    },
+    {
+      "id": "en2.u3.p.005",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "We had dinner at a restaurant in the square.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "wiː hæd dˈɪnɚɹ æɾɚ ɹˈɛstɹɑːnt ɪnðə skwˈɛɹ"
+    },
+    {
+      "id": "en2.u3.p.006",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Buy a kilo of meat from the butcher's.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "bˈaɪ ɐ kˈiːloʊ ʌv mˈiːt fɹʌmðə bˈʊtʃɚz"
+    },
+    {
+      "id": "en2.u3.p.007",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I read the whole afternoon at the library.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ ɹˈiːd ðə hˈoʊl ˌæftɚnˈuːn æt ðə lˈaɪbɹɛɹi"
+    },
+    {
+      "id": "en2.u3.p.008",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The cemetery is behind the church.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə sˈɛmɪtˌɛɹi ɪz bᵻhˌaɪnd ðə tʃˈɜːtʃ"
+    },
+    {
+      "id": "en2.u3.p.009",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The baker's opens at seven in the morning.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə bˈeɪkɚz ˈoʊpənz æt sˈɛvən ɪnðə mˈɔːɹnɪŋ"
+    },
+    {
+      "id": "en2.u3.p.010",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "She works in a clothes shop on High Street.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ʃiː wˈɜːks ɪn ɐ klˈoʊðz ʃˈɑːp ˌɔn hˈaɪ stɹˈiːt"
+    },
+    {
+      "id": "en2.u3.p.011",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I bought the medicine at the chemist's.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ bˈɔːt ðə mˈɛdəsən æt ðə kˈɛmɪsts"
+    },
+    {
+      "id": "en2.u3.p.012",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The greengrocer's has very fresh vegetables.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə ɡɹˈiːŋɡɹoʊsɚz hɐz vˈɛɹi fɹˈɛʃ vˈɛdʒɪɾəbəlz"
+    },
+    {
+      "id": "en2.u3.p.013",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The market is open on Saturday mornings.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə mˈɑːɹkɪt ɪz ˈoʊpən ˌɔn sˈæɾɚdˌeɪ mˈɔːɹnɪŋz"
+    },
+    {
+      "id": "en2.u3.p.014",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I get my newspaper at the newsagent's.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ ɡɛt maɪ nˈuːzpeɪpɚɹ æt ðə nˈuːzeɪdʒənts"
+    },
+    {
+      "id": "en2.u3.p.015",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I want to buy earrings at the jeweller's.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ wˈɔnt tə bˈaɪ ˈɪɹɪŋz æt ðə dʒˈuːəlɚz"
+    },
+    {
+      "id": "en2.u3.p.016",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The fishmonger's sells very fresh salmon.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə fˈɪʃmˌɑːŋɡɚz sˈɛlz vˈɛɹi fɹˈɛʃ sˈæmən"
+    },
+    {
+      "id": "en2.u3.p.017",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The children ran into the sweet shop.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə tʃˈɪldɹən ɹˈæn ˌɪntʊ ðə swˈiːt ʃˈɑːp"
+    },
+    {
+      "id": "en2.u3.p.018",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The toy shop is next to the bookshop.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə tˈɔɪ ʃˈɑːp ɪz nˈɛkst tə ðə bˈʊkʃɑːp"
+    },
+    {
+      "id": "en2.u3.p.019",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I found the last Stephen King in the bookshop.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ fˈaʊnd ðə lˈæst stˈiːvən kˈɪŋ ɪnðə bˈʊkʃɑːp"
+    },
+    {
+      "id": "en2.u3.p.020",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "He works in a music shop near the theatre.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "hiː wˈɜːks ɪn ɐ mjˈuːzɪk ʃˈɑːp nˌɪɹ ðə θˈiəɾɚ"
+    },
+    {
+      "id": "en2.u3.p.021",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I bought my running shoes in a sports shop.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ bˈɔːt maɪ ɹˈʌnɪŋ ʃˈuːz ɪn ɐ spˈoːɹts ʃˈɑːp"
+    },
+    {
+      "id": "en2.u3.p.022",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The fashion boutique is on the corner.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə fˈæʃən buːtˈiːk ɪz ɔnðə kˈɔːɹnɚ"
+    },
+    {
+      "id": "en2.u3.p.023",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "We went to an estate agent to look for a flat.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "wiː wɛnt tʊ ɐn ᵻstˈeɪt ˈeɪdʒənt tə lˈʊk fɚɹə flˈæt"
+    },
+    {
+      "id": "en2.u3.p.024",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The travel agency booked our holiday resort.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə tɹˈævəl ˈeɪdʒənsi bˈʊkt ˌaʊɚ hˈɑːlɪdˌeɪ ɹᵻzˈɔːɹt"
+    },
+    {
+      "id": "en2.u3.p.025",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "My washing machine is out of order, I must go to the launderette.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "maɪ wˈɑːʃɪŋ məʃˈiːn ɪz ˌaʊɾəv ˈɔːɹdɚ aɪ mˈʌst ɡˌoʊ tə ðə lˌɔːndɚɹˈɛt"
+    },
+    {
+      "id": "en2.u3.p.026",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "She had her hair cut at the hairdresser's.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ʃiː hæd hɜː hˈɛɹ kˈʌt æt ðə hˈɛɹdɹɛsɚz"
+    },
+    {
+      "id": "en2.u3.p.027",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I bought a bunch of roses at the florist's.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "aɪ bˈɔːt ɐ bˈʌntʃ ʌv ɹˈoʊzᵻz æt ðə flˈɔːɹɪsts"
+    },
+    {
+      "id": "en2.u3.p.028",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The shoe shop is opposite the bank.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə ʃˈuː ʃˈɑːp ɪz ˈɑːpəzˌɪt ðə bˈæŋk"
+    },
+    {
+      "id": "en2.u3.p.029",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The post office is on the corner of High Street.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə pˈoʊst ˈɑːfɪs ɪz ɔnðə kˈɔːɹnɚɹ ʌv hˈaɪ stɹˈiːt"
+    },
+    {
+      "id": "en2.u3.p.030",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The department store has six floors.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə dᵻpˈɑːɹtmənt stˈoːɹ hɐz sˈɪks flˈoːɹz"
+    },
+    {
+      "id": "en2.u3.p.031",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "We stayed at a hotel right in the centre.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "wiː stˈeɪd æɾə hoʊtˈɛl ɹˈaɪt ɪnðə sˈɛntɚ"
+    },
+    {
+      "id": "en2.u3.p.032",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "They met at the pub after work.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðeɪ mˈɛt æt ðə pˈʌb ˈæftɚ wˈɜːk"
+    },
+    {
+      "id": "en2.u3.p.033",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The café is between the museum and the hotel.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə kæfˈeɪ ɪz bᵻtwˌiːn ðə mjuːzˈiəm ænd ðə hoʊtˈɛl"
+    },
+    {
+      "id": "en2.u3.p.034",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "We walked across the park in the morning.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "wiː wˈɔːkt əkɹˌɑːs ðə pˈɑːɹk ɪnðə mˈɔːɹnɪŋ"
+    },
+    {
+      "id": "en2.u3.p.035",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The petrol station is at the end of the street.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə pˈɛtɹəl stˈeɪʃən ɪz æt ðɪ ˈɛnd ʌvðə stɹˈiːt"
+    },
+    {
+      "id": "en2.u3.p.036",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The railway station is near the roundabout.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə ɹˈeɪlweɪ stˈeɪʃən ɪz nˌɪɹ ðə ɹˈaʊndɐbˌaʊt"
+    },
+    {
+      "id": "en2.u3.p.037",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The bus station is opposite the hospital.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə bˈʌs stˈeɪʃən ɪz ˈɑːpəzˌɪt ðə hˈɑːspɪɾəl"
+    },
+    {
+      "id": "en2.u3.p.038",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The fire station is on Church Road.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə fˈaɪɚ stˈeɪʃən ɪz ˌɔn tʃˈɜːtʃ ɹˈoʊd"
+    },
+    {
+      "id": "en2.u3.p.039",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The church is in front of the square.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə tʃˈɜːtʃ ɪz ɪn fɹˈʌnt ʌvðə skwˈɛɹ"
+    },
+    {
+      "id": "en2.u3.p.040",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "We visited the Jami Masjid, the biggest mosque in India.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "wiː vˈɪzɪɾᵻd ðə dʒˈɑːmi mˈæsdʒɪd ðə bˈɪɡɪst mˈɑːsk ɪn ˈɪndiə"
+    },
+    {
+      "id": "en2.u3.p.041",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The cathedral is the oldest building in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə kɐθˈiːdɹəl ɪz ðɪ ˈoʊldɪst bˈɪldɪŋ ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.042",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "There's a great exhibition of Monet's paintings at the art gallery.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðɛɹz ɐ ɡɹˈeɪt ɛksɪbˈɪʃən ʌv moʊnˈeɪs pˈeɪntɪŋz æt ðɪ ˈɑːɹt ɡˈælɚɹi"
+    },
+    {
+      "id": "en2.u3.p.043",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The museum is next to the café.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə mjuːzˈiəm ɪz nˈɛkst tə ðə kæfˈeɪ"
+    },
+    {
+      "id": "en2.u3.p.044",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "My car refused to start, so I took it to the garage.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "maɪ kˈɑːɹ ɹᵻfjˈuːzd tə stˈɑːɹt sˌoʊ aɪ tˈʊk ɪt tə ðə ɡɚɹˈɑːʒ"
+    },
+    {
+      "id": "en2.u3.p.045",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The factory is outside the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə fˈæktɚɹi ɪz aʊtsˈaɪd ðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.046",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The castle is the most famous building in town.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə kˈæsəl ɪz ðə mˈoʊst fˈeɪməs bˈɪldɪŋ ɪn tˈaʊn"
+    },
+    {
+      "id": "en2.u3.p.047",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The theatre is opposite the cinema.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə θˈiəɾɚɹ ɪz ˈɑːpəzˌɪt ðə sˈɪnəmə"
+    },
+    {
+      "id": "en2.u3.p.048",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The cinema is behind the museum.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə sˈɪnəmə ɪz bᵻhˌaɪnd ðə mjuːzˈiəm"
+    },
+    {
+      "id": "en2.u3.p.049",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The swimming pool opens at eight.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə swˈɪmɪŋ pˈuːl ˈoʊpənz æɾ ˈeɪt"
+    },
+    {
+      "id": "en2.u3.p.050",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Our house was broken into, so we went to the police station.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ˌaʊɚ hˈaʊs wʌz bɹˈoʊkən ˌɪntʊ sˌoʊ wiː wɛnt tə ðə pəlˈiːs stˈeɪʃən"
+    },
+    {
+      "id": "en2.u3.p.051",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Turn left at the traffic lights.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "tˈɜːn lˈɛft æt ðə tɹˈæfɪk lˈaɪts"
+    },
+    {
+      "id": "en2.u3.p.052",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Cross the street at the pedestrian crossing.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "kɹˈɔs ðə stɹˈiːt æt ðə pədˈɛstɹiən kɹˈɔsɪŋ"
+    },
+    {
+      "id": "en2.u3.p.053",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The bookstore is on First Avenue.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə bˈʊkstoːɹ ɪz ˌɔn fˈɜːst ˈævənˌuː"
+    },
+    {
+      "id": "en2.u3.p.054",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The coffee shop is on the corner of Third Avenue and Tortie Lane.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə kˈɔfi ʃˈɑːp ɪz ɔnðə kˈɔːɹnɚɹ ʌv θˈɜːd ˈævənˌuː ænd tˈɔːɹɾi lˈeɪn"
+    },
+    {
+      "id": "en2.u3.p.055",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Go as far as the roundabout and turn right.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 6,
+        "section": "Learning new vocabulary — City places",
+        "note": "Lugar leído de la imagen. Sin clave oficial (ver nota de unidad); la oración de ejemplo es nuestra."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "ipa": "ɡˌoʊ æz fˈɑːɹ æz ðə ɹˈaʊndɐbˌaʊt ænd tˈɜːn ɹˈaɪt"
+    },
+    {
+      "id": "en2.u3.p.056",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Go straight ahead.",
+      "gloss": "Seguí derecho.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ɡˌoʊ stɹˈeɪt ɐhˈɛd"
+    },
+    {
+      "id": "en2.u3.p.057",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Go along the street.",
+      "gloss": "Seguí por la calle.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ɡˌoʊ ɐlˈɔŋ ðə stɹˈiːt"
+    },
+    {
+      "id": "en2.u3.p.058",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Turn left.",
+      "gloss": "Doblá a la izquierda.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "ipa": "tˈɜːn lˈɛft"
+    },
+    {
+      "id": "en2.u3.p.059",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Turn right.",
+      "gloss": "Doblá a la derecha.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "ipa": "tˈɜːn ɹˈaɪt"
+    },
+    {
+      "id": "en2.u3.p.060",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Take the first turning on the left.",
+      "gloss": "Tomá la primera a la izquierda.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "ipa": "tˈeɪk ðə fˈɜːst tˈɜːnɪŋ ɔnðə lˈɛft"
+    },
+    {
+      "id": "en2.u3.p.061",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Take the second turning on the right.",
+      "gloss": "Tomá la segunda a la derecha.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "ipa": "tˈeɪk ðə sˈɛkənd tˈɜːnɪŋ ɔnðə ɹˈaɪt"
+    },
+    {
+      "id": "en2.u3.p.062",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Cross the street.",
+      "gloss": "Cruzá la calle.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "kɹˈɔs ðə stɹˈiːt"
+    },
+    {
+      "id": "en2.u3.p.063",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Go past the post office.",
+      "gloss": "Pasá el correo.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ɡˌoʊ pˈæst ðə pˈoʊst ˈɑːfɪs"
+    },
+    {
+      "id": "en2.u3.p.064",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Go through the park.",
+      "gloss": "Atravesá el parque.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ɡˌoʊ θɹuː ðə pˈɑːɹk"
+    },
+    {
+      "id": "en2.u3.p.065",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Go across the bridge.",
+      "gloss": "Cruzá el puente.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ɡˌoʊ əkɹˌɑːs ðə bɹˈɪdʒ"
+    },
+    {
+      "id": "en2.u3.p.066",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Go as far as the roundabout.",
+      "gloss": "Andá hasta la rotonda.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "ipa": "ɡˌoʊ æz fˈɑːɹ æz ðə ɹˈaʊndɐbˌaʊt"
+    },
+    {
+      "id": "en2.u3.p.067",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The school is on your right.",
+      "gloss": "La escuela está a tu derecha.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə skˈuːl ɪz ˌɔn jʊɹ ɹˈaɪt"
+    },
+    {
+      "id": "en2.u3.p.068",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "It is round the corner.",
+      "gloss": "Está a la vuelta de la esquina.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ɪɾ ɪz ɹˈaʊnd ðə kˈɔːɹnɚ"
+    },
+    {
+      "id": "en2.u3.p.069",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "It is on the corner of High Street and Middle Lane.",
+      "gloss": "Está en la esquina de High Street y Middle Lane.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "ipa": "ɪɾ ɪz ɔnðə kˈɔːɹnɚɹ ʌv hˈaɪ stɹˈiːt ænd mˈɪdəl lˈeɪn"
+    },
+    {
+      "id": "en2.u3.p.070",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The cinema is next to the bookshop.",
+      "gloss": "El cine está al lado de la librería.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə sˈɪnəmə ɪz nˈɛkst tə ðə bˈʊkʃɑːp"
+    },
+    {
+      "id": "en2.u3.p.071",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The bank is opposite the church.",
+      "gloss": "El banco está enfrente de la iglesia.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə bˈæŋk ɪz ˈɑːpəzˌɪt ðə tʃˈɜːtʃ"
+    },
+    {
+      "id": "en2.u3.p.072",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The car park is between the hotel and the bank.",
+      "gloss": "El estacionamiento está entre el hotel y el banco.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "ipa": "ðə kˈɑːɹ pˈɑːɹk ɪz bᵻtwˌiːn ðə hoʊtˈɛl ænd ðə bˈæŋk"
+    },
+    {
+      "id": "en2.u3.p.073",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The museum is in front of the square.",
+      "gloss": "El museo está frente a la plaza.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə mjuːzˈiəm ɪz ɪn fɹˈʌnt ʌvðə skwˈɛɹ"
+    },
+    {
+      "id": "en2.u3.p.074",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The snack bar is behind the disco.",
+      "gloss": "El bar está detrás de la disco.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ðə snˈæk bˈɑːɹ ɪz bᵻhˌaɪnd ðə dˈɪskoʊ"
+    },
+    {
+      "id": "en2.u3.p.075",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Excuse me! Can you tell me the way to the station?",
+      "gloss": "Disculpe, ¿me puede decir cómo llegar a la estación?",
+      "speaker": "diner",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "wh-questions"
+      ],
+      "fn": [
+        "give-directions",
+        "make-request"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 3,
+      "ipa": "ɛkskjˈuːs mˌiː kæn juː tˈɛl mˌiː ðə wˈeɪ tə ðə stˈeɪʃən"
+    },
+    {
+      "id": "en2.u3.p.076",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Excuse me! How do I get to the coffee shop?",
+      "gloss": "Disculpe, ¿cómo llego a la cafetería?",
+      "speaker": "diner",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "wh-questions"
+      ],
+      "fn": [
+        "give-directions",
+        "make-request"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ɛkskjˈuːs mˌiː hˌaʊ dˈuː aɪ ɡɛt tə ðə kˈɔfi ʃˈɑːp"
+    },
+    {
+      "id": "en2.u3.p.077",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Excuse me! Where's the museum?",
+      "gloss": "Disculpe, ¿dónde está el museo?",
+      "speaker": "diner",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "wh-questions"
+      ],
+      "fn": [
+        "give-directions",
+        "make-request"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ɛkskjˈuːs mˌiː wˌɛɹz ðə mjuːzˈiəm"
+    },
+    {
+      "id": "en2.u3.p.078",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Excuse me! Is there a bank near here?",
+      "gloss": "Disculpe, ¿hay un banco por acá?",
+      "speaker": "diner",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "wh-questions"
+      ],
+      "fn": [
+        "give-directions",
+        "make-request"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "ipa": "ɛkskjˈuːs mˌiː ɪz ðɛɹ ɐ bˈæŋk nˌɪɹ hˈɪɹ"
+    },
+    {
+      "id": "en2.u3.p.079",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Thanks a lot.",
+      "gloss": "Muchas gracias.",
+      "speaker": "diner",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "wh-questions"
+      ],
+      "fn": [
+        "give-directions",
+        "make-request"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "ipa": "θˈæŋks ɐ lˈɑːt"
+    },
+    {
+      "id": "en2.u3.p.080",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "You're welcome.",
+      "gloss": "De nada.",
+      "speaker": "diner",
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions"
+      },
+      "grammar": [
+        "directions",
+        "wh-questions"
+      ],
+      "fn": [
+        "give-directions",
+        "make-request"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 1,
+      "ipa": "jʊɹ wˈɛlkʌm"
+    },
+    {
+      "id": "en2.u3.p.081",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "We use comparatives to compare two things or two people.",
+      "gloss": "Los comparativos comparan dos cosas o dos personas.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Learning new structures"
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "ipa": "wiː jˈuːz kəmpˈæɹətˌɪvz tə kəmpˈɛɹ tˈuː θˈɪŋz ɔːɹ tˈuː pˈiːpəl"
+    },
+    {
+      "id": "en2.u3.p.082",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Superlatives show the difference between more than two things.",
+      "gloss": "Los superlativos marcan la diferencia entre más de dos cosas.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Learning new structures"
+      },
+      "grammar": [
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "ipa": "suːpˈɜːlətˌɪvz ʃˈoʊ ðə dˈɪfɹəns bᵻtwˌiːn mˈoːɹ ðɐn tˈuː θˈɪŋz"
+    },
+    {
+      "id": "en2.u3.p.083",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Superlative sentences usually use the.",
+      "gloss": "Las oraciones con superlativo suelen llevar the.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Learning new structures"
+      },
+      "grammar": [
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "ipa": "suːpˈɜːlətˌɪv sˈɛntənsᵻz jˈuːʒuːəli jˈuːs ðə"
+    },
+    {
+      "id": "en2.u3.p.084",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "To form comparatives you need to know the number of syllables in the adjective.",
+      "gloss": "Para formar comparativos hay que saber cuántas sílabas tiene el adjetivo.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Learning new structures"
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "tə fˈɔːɹm kəmpˈæɹətˌɪvz juː nˈiːd tə nˈoʊ ðə nˈʌmbɚɹ ʌv sˈɪləbəlz ɪnðɪ ˈædʒɪktˌɪv"
+    },
+    {
+      "id": "en2.u3.p.085",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "One syllable ending in a silent e: nice, nicer, the nicest.",
+      "gloss": "Una sílaba terminada en e muda: nice, nicer, the nicest.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "wˈʌn sˈɪləbəl ˈɛndɪŋ ɪn ɐ sˈaɪlənt ˈiː nˈaɪs nˈaɪsɚ ðə nˈaɪsɪst"
+    },
+    {
+      "id": "en2.u3.p.086",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "One vowel and one consonant: the consonant is doubled. Big, bigger, the biggest.",
+      "gloss": "Una vocal y una consonante: se dobla la consonante. Big, bigger, the biggest.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "wˈʌn vˈaʊəl ænd wˈʌn kˈɑːnsənənt ðə kˈɑːnsənənt ɪz dˈʌbəld bˈɪɡ bˈɪɡɚ ðə bˈɪɡɪst"
+    },
+    {
+      "id": "en2.u3.p.087",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Two syllables ending in y: happy, happier, the happiest.",
+      "gloss": "Dos sílabas terminadas en y: happy, happier, the happiest.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "tˈuː sˈɪləbəlz ˈɛndɪŋ ɪn wˈaɪ hˈæpi hˈæpɪɚ ðə hˈæpɪɪst"
+    },
+    {
+      "id": "en2.u3.p.088",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Two or more syllables without y: exciting, more exciting, the most exciting.",
+      "gloss": "Dos sílabas o más sin y: exciting, more exciting, the most exciting.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "tˈuː ɔːɹ mˈoːɹ sˈɪləbəlz wɪðˌaʊt wˈaɪ ɛksˈaɪɾɪŋ mˈoːɹ ɛksˈaɪɾɪŋ ðə mˈoʊst ɛksˈaɪɾɪŋ"
+    },
+    {
+      "id": "en2.u3.p.089",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Adjectives ending in ed, ing, ful or less always take more and most.",
+      "gloss": "Los adjetivos en ed, ing, ful o less siempre llevan more y most.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "ipa": "ˈædʒɪktˌɪvz ˈɛndɪŋ ɪn ˈɛd ˈɪŋ fˈʌl ɔːɹ lˈɛs ˈɔːlweɪz tˈeɪk mˈoːɹ ænd mˈoʊst"
+    },
+    {
+      "id": "en2.u3.p.090",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "A few adjectives take both forms: narrower or more narrow.",
+      "gloss": "Unos pocos adjetivos admiten las dos formas: narrower o more narrow.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "ipa": "ɐ fjˈuː ˈædʒɪktˌɪvz tˈeɪk bˈoʊθ fˈɔːɹmz nˈæɹoʊɚɹ ɔːɹ mˈoːɹ nˈæɹoʊ"
+    },
+    {
+      "id": "en2.u3.p.091",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The Nile River is longer and more famous than the Thames.",
+      "gloss": "El Nilo es más largo y más famoso que el Támesis.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Learning new structures"
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "ðə nˈaɪl ɹˈɪvɚɹ ɪz lˈɔŋɡɚ ænd mˈoːɹ fˈeɪməs ðɐn ðə tˈɛmz"
+    },
+    {
+      "id": "en2.u3.p.092",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Egypt is much hotter than Sweden.",
+      "gloss": "Egipto es mucho más caluroso que Suecia.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Learning new structures"
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "ipa": "ˈiːdʒɪpt ɪz mˈʌtʃ hˈɑːɾɚ ðɐn swˈiːdən"
+    },
+    {
+      "id": "en2.u3.p.093",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Everest is the highest mountain in the world.",
+      "gloss": "El Everest es la montaña más alta del mundo.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Learning new structures"
+      },
+      "grammar": [
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "ipa": "ˈɛvɚɹɪst ɪz ðə hˈaɪɪst mˈaʊntɪn ɪnðə wˈɜːld"
+    },
+    {
+      "id": "en2.u3.p.094",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Peter is older than Charley, and Charley is younger than Peter.",
+      "gloss": "Peter es mayor que Charley, y Charley es menor que Peter.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Learning new structures"
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "ipa": "pˈiːɾɚɹ ɪz ˈoʊldɚ ðɐn tʃˈɑːɹli ænd tʃˈɑːɹli ɪz jˈʌŋɡɚ ðɐn pˈiːɾɚ"
+    },
+    {
+      "id": "en2.u3.p.095",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Mike is as intelligent as Nancy.",
+      "gloss": "Mike es tan inteligente como Nancy.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Learning new structures"
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "mˈaɪk ɪz æz ɪntˈɛlɪdʒənt æz nˈænsi"
+    },
+    {
+      "id": "en2.u3.p.096",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Helen is the eldest of the four sisters, but that is the oldest castle in Europe.",
+      "gloss": "Elder y eldest son solo para personas de una misma familia.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 5,
+      "ipa": "hˈɛlən ɪz ðɪ ˈɛldɪst ʌvðə fˈoːɹ sˈɪstɚz bˌʌt ðæt ɪz ðɪ ˈoʊldɪst kˈæsəl ɪn jˈʊɹɹəp"
+    },
+    {
+      "id": "en2.u3.p.097",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "You should go by train, it is much cheaper.",
+      "gloss": "Deberías ir en tren, es mucho más barato.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "juː ʃˌʊd ɡˌoʊ baɪ tɹˈeɪn ɪɾ ɪz mˈʌtʃ tʃˈiːpɚ"
+    },
+    {
+      "id": "en2.u3.p.098",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Could you be a bit quieter? Her hair is slightly shorter than mine.",
+      "gloss": "Los comparativos se matizan con much, a lot, far, a bit, slightly.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "ipa": "kʊd juː biː ɐ bˈɪt kwˈaɪəɾɚ hɜː hˈɛɹ ɪz slˈaɪtli ʃˈɔːɹɾɚ ðɐn mˈaɪn"
+    },
+    {
+      "id": "en2.u3.p.099",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The more stressed you are, the worse it is for your health.",
+      "gloss": "Cuanto más estresado estás, peor es para tu salud.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 5,
+      "ipa": "ðə mˈoːɹ stɹˈɛst juː ɑːɹ ðə wˈɜːs ɪɾ ɪz fɔːɹ jʊɹ hˈɛlθ"
+    },
+    {
+      "id": "en2.u3.p.100",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The sooner, the better.",
+      "gloss": "Cuanto antes, mejor.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "ðə sˈuːnɚ ðə bˈɛɾɚ"
+    },
+    {
+      "id": "en2.u3.p.101",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Her illness is becoming worse and worse.",
+      "gloss": "Su enfermedad va de mal en peor.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 4,
+      "ipa": "hɜːɹ ˈɪlnəs ɪz bᵻkˈʌmɪŋ wˈɜːs ænd wˈɜːs"
+    },
+    {
+      "id": "en2.u3.p.102",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "She is feeling much better today, she was ill yesterday.",
+      "gloss": "Hoy se siente mucho mejor; ayer estaba enferma.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 3,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "ʃiː ɪz fˈiːlɪŋ mˈʌtʃ bˈɛɾɚ tədˈeɪ ʃiː wʌz ˈɪl jˈɛstɚdˌeɪ"
+    },
+    {
+      "id": "en2.u3.p.103",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "This is the best film I have ever seen.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Learning new structures — Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "ðɪs ɪz ðə bˈɛst fˈɪlm aɪ hæv ˈɛvɚ sˈiːn"
+    },
+    {
+      "id": "en2.u3.p.104",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The worst thing of all was when I lost my passport.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Learning new structures — Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "ðə wˈɜːst θˈɪŋ ʌv ˈɔːl wʌz wɛn aɪ lˈɔst maɪ pˈæspoːɹt"
+    },
+    {
+      "id": "en2.u3.p.105",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The station is farther than the museum.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Learning new structures — Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "ðə stˈeɪʃən ɪz fˈɑːɹðɚ ðɐn ðə mjuːzˈiəm"
+    },
+    {
+      "id": "en2.u3.p.106",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I have less money than you.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Learning new structures — Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "aɪ hæv lˈɛs mˈʌni ðɐn juː"
+    },
+    {
+      "id": "en2.u3.p.107",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "There are more people in the city than in the village.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Learning new structures — Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "ðɛɹˌɑːɹ mˈoːɹ pˈiːpəl ɪnðə sˈɪɾi ðɐn ɪnðə vˈɪlɪdʒ"
+    },
+    {
+      "id": "en2.u3.p.108",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The food is more expensive than I expected.",
+      "speaker": "teacher",
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Learning new structures — Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "state.fact"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "ipa": "ðə fˈuːd ɪz mˈoːɹ ɛkspˈɛnsɪv ðɐn aɪ ɛkspˈɛktᵻd"
+    },
+    {
+      "id": "en2.u3.p.109",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more peaceful than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ pˈiːsfəl ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.110",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more peaceful than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ pˈiːsfəl ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.111",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more exciting than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ ɛksˈaɪɾɪŋ ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.112",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more relaxing than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ ɹᵻlˈæksɪŋ ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.113",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more healthy than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ hˈɛlθi ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.114",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more lonely than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ lˈoʊnli ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.115",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more dangerous than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ dˈeɪndʒɚɹəs ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.116",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more polluted than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ pəlˈuːɾᵻd ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.117",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more crowded than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ kɹˈaʊdᵻd ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.118",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more stressful than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ stɹˈɛsfəl ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.119",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more helpful than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ hˈɛlpfəl ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.120",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more busy than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ bˈɪzi ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.121",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more noisy than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ nˈɔɪzi ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.122",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more expensive than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ ɛkspˈɛnsɪv ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.123",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more clean than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ klˈiːn ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.124",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Life in the country is more boring than life in the city.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 23,
+        "section": "Ejercitación 7 — City life / Country life",
+        "note": "Adjetivos del banco del material. No hay respuesta única: es material de opinión."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 3,
+      "ipa": "lˈaɪf ɪnðə kˈʌntɹi ɪz mˈoːɹ bˈoːɹɪŋ ðɐn lˈaɪf ɪnðə sˈɪɾi"
+    },
+    {
+      "id": "en2.u3.p.125",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I arrived by ship to the island.",
+      "gloss": "Llegué en barco a la isla.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 28,
+        "section": "Contextualization time — A Postcard from Greece"
+      },
+      "grammar": [
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "textId": "greece",
+      "ipa": "aɪ ɚɹˈaɪvd baɪ ʃˈɪp tə ðɪ ˈaɪlənd"
+    },
+    {
+      "id": "en2.u3.p.126",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The weather is hot and sunny every day.",
+      "gloss": "El clima es caluroso y soleado todos los días.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 28,
+        "section": "Contextualization time — A Postcard from Greece"
+      },
+      "grammar": [
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "textId": "greece",
+      "ipa": "ðə wˈɛðɚɹ ɪz hˈɑːt ænd sˈʌni ˈɛvɹi dˈeɪ"
+    },
+    {
+      "id": "en2.u3.p.127",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I took a long swim and then I sunbathed until noon.",
+      "gloss": "Me di un baño largo y después tomé sol hasta el mediodía.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 28,
+        "section": "Contextualization time — A Postcard from Greece"
+      },
+      "grammar": [
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "textId": "greece",
+      "ipa": "aɪ tˈʊk ɐ lˈɔŋ swˈɪm ænd ðˈɛn aɪ sˈʌnbeɪðd ʌntˈɪl nˈuːn"
+    },
+    {
+      "id": "en2.u3.p.128",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I met some boys from Romania and we played volleyball.",
+      "gloss": "Conocí a unos chicos de Rumania y jugamos al vóley.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 28,
+        "section": "Contextualization time — A Postcard from Greece"
+      },
+      "grammar": [
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "textId": "greece",
+      "ipa": "aɪ mˈɛt sˌʌm bˈɔɪz fɹʌm ɹoʊmˈeɪniə ænd wiː plˈeɪd vˈɑːlɪbˌɔːl"
+    },
+    {
+      "id": "en2.u3.p.129",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I loved the hotel because it is fantastic and it also has a pool.",
+      "gloss": "Me encantó el hotel porque es fantástico y además tiene pileta.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 28,
+        "section": "Contextualization time — A Postcard from Greece"
+      },
+      "grammar": [
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "textId": "greece",
+      "ipa": "aɪ lˈʌvd ðə hoʊtˈɛl bɪkˈʌz ɪɾ ɪz fæntˈæstɪk ænd ɪɾ ˈɔːlsoʊ hɐz ɐ pˈuːl"
+    },
+    {
+      "id": "en2.u3.p.130",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I went to Delos to visit the ancient ruins.",
+      "gloss": "Fui a Delos a visitar las ruinas antiguas.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 28,
+        "section": "Contextualization time — A Postcard from Greece"
+      },
+      "grammar": [
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "textId": "greece",
+      "ipa": "aɪ wɛnt tə dᵻlˈoʊz tə vˈɪzɪt ðɪ ˈeɪntʃənt ɹˈuːɪnz"
+    },
+    {
+      "id": "en2.u3.p.131",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Finally, I went shopping yesterday and I bought you a nice present.",
+      "gloss": "Por último, ayer fui de compras y te compré un lindo regalo.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 28,
+        "section": "Contextualization time — A Postcard from Greece"
+      },
+      "grammar": [
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "textId": "greece",
+      "ipa": "fˈaɪnəli aɪ wɛnt ʃˈɑːpɪŋ jˈɛstɚdˌeɪ ænd aɪ bˈɔːt juː ɐ nˈaɪs pɹˈɛzənt"
+    },
+    {
+      "id": "en2.u3.p.132",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "My hotel room is smaller than the one in the photograph.",
+      "gloss": "Mi habitación es más chica que la de la foto.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 25,
+        "section": "Ejercitación 9 y 10 — Postales"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "ipa": "maɪ hoʊtˈɛl ɹˈuːm ɪz smˈɔːlɚ ðɐn ðə wˈʌn ɪnðə fˈoʊɾəɡɹˌæf"
+    },
+    {
+      "id": "en2.u3.p.133",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "I think it is the smallest room in this hotel.",
+      "gloss": "Creo que es la habitación más chica del hotel.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 25,
+        "section": "Ejercitación 9 y 10 — Postales"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "ipa": "aɪ θˈɪŋk ɪɾ ɪz ðə smˈɔːlɪst ɹˈuːm ɪn ðɪs hoʊtˈɛl"
+    },
+    {
+      "id": "en2.u3.p.134",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "It is colder than in England and the beach is dirtier.",
+      "gloss": "Hace más frío que en Inglaterra y la playa está más sucia.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 25,
+        "section": "Ejercitación 9 y 10 — Postales"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "ipa": "ɪɾ ɪz kˈoʊldɚ ðɐn ɪn ˈɪŋɡlənd ænd ðə bˈiːtʃ ɪz dˈɜːɾiɚ"
+    },
+    {
+      "id": "en2.u3.p.135",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "It is the dirtiest of all the beaches on the island.",
+      "gloss": "Es la más sucia de todas las playas de la isla.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 25,
+        "section": "Ejercitación 9 y 10 — Postales"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "ipa": "ɪɾ ɪz ðə dˈɜːɾiɪst ʌv ˈɔːl ðə bˈiːtʃᵻz ɔnðɪ ˈaɪlənd"
+    },
+    {
+      "id": "en2.u3.p.136",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The food is more expensive than I expected.",
+      "gloss": "La comida es más cara de lo que esperaba.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 25,
+        "section": "Ejercitación 9 y 10 — Postales"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "ipa": "ðə fˈuːd ɪz mˈoːɹ ɛkspˈɛnsɪv ðɐn aɪ ɛkspˈɛktᵻd"
+    },
+    {
+      "id": "en2.u3.p.137",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "It is the most horrible holiday in my life.",
+      "gloss": "Son las vacaciones más horribles de mi vida.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 25,
+        "section": "Ejercitación 9 y 10 — Postales"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "ipa": "ɪɾ ɪz ðə mˈoʊst hˈɔːɹɪbəl hˈɑːlɪdˌeɪ ɪn maɪ lˈaɪf"
+    },
+    {
+      "id": "en2.u3.p.138",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "The city is very crowded so we use rickshaws because they are quicker than taxis.",
+      "gloss": "La ciudad está llena de gente así que usamos rickshaws porque son más rápidos que los taxis.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 25,
+        "section": "Ejercitación 9 y 10 — Postales"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 4,
+      "ipa": "ðə sˈɪɾi ɪz vˈɛɹi kɹˈaʊdᵻd sˌoʊ wiː jˈuːz ɹˈɪkʃɔːz bɪkˈʌz ðeɪ ɑːɹ kwˈɪkɚ ðɐn tˈæksiz"
+    },
+    {
+      "id": "en2.u3.p.139",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "We visited the Jami Masjid, the biggest mosque in India.",
+      "gloss": "Visitamos la Jami Masjid, la mezquita más grande de la India.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 25,
+        "section": "Ejercitación 9 y 10 — Postales"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "ipa": "wiː vˈɪzɪɾᵻd ðə dʒˈɑːmi mˈæsdʒɪd ðə bˈɪɡɪst mˈɑːsk ɪn ˈɪndiə"
+    },
+    {
+      "id": "en2.u3.p.140",
+      "course": "en2",
+      "unit": 3,
+      "kind": "phrase",
+      "text": "Our favourite restaurant serves the most delicious food.",
+      "gloss": "Nuestro restaurante favorito sirve la comida más rica.",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 25,
+        "section": "Ejercitación 9 y 10 — Postales"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "ipa": "ˌaʊɚ fˈeɪvɹɪt ɹˈɛstɹɑːnt sˈɜːvz ðə mˈoʊst dᵻlˈɪʃəs fˈuːd"
+    },
+    {
+      "id": "en2.u3.pr.001",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 30,
+        "section": "Actividad de cierre — Writing",
+        "note": "Consigna textual del material, incluidos los linking words que pide usar. El modelo y los pasos son nuestros."
+      },
+      "grammar": [
+        "past-simple.affirmative",
+        "comparatives",
+        "connectors"
+      ],
+      "fn": [
+        "narrate.past",
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 5,
+      "kind": "production",
+      "prompt": "Imagine you went on holidays. Write about what you did, the places you visited, what you liked or disliked, and describe the city. Use linking words.",
+      "modelAnswer": "Last summer I went to Córdoba for a week. First, I arrived by bus on a Sunday morning and I stayed in a small hotel in the centre. Second, I visited the old Jesuit block and the cathedral, which is the oldest building in the city. I also walked around the market and took a lot of photos. The city is smaller than Buenos Aires and much quieter, but it is more crowded in the centre than I expected. I liked the food because it was cheaper than at home, but I did not like the heat: it was hotter than in Buenos Aires. Finally, I went to the mountains and that was the best day of the holiday.",
+      "modelVariants": [
+        "Two years ago I went to Bariloche in winter. First, I travelled by plane and stayed in a hostel near the lake. The town is much smaller than my city and far more beautiful, because you can see the mountains from every street. I visited the chocolate shops on the main avenue and I went skiing for the first time. It was more difficult than I thought, but also the most exciting thing I did. The worst part was the cold, because it was colder than I expected. Finally, I bought presents for my family and I came back very happy."
+      ],
+      "scaffold": [
+        "1. Dónde y cuándo fuiste, y cómo llegaste (First…).",
+        "2. Qué visitaste (Second… / I also…).",
+        "3. Cómo es la ciudad, COMPARADA con la tuya (smaller than, quieter than).",
+        "4. Qué te gustó, con su porqué (because).",
+        "5. Qué NO te gustó, con el contraste (but).",
+        "6. El cierre: el mejor momento, en superlativo (Finally… the best day)."
+      ],
+      "rubric": [
+        {
+          "text": "Usás los linking words que pide el material",
+          "detect": "\\b(first|second|but|and|so|because|also|finally)\\b"
+        },
+        {
+          "text": "Contás en pasado",
+          "detect": "\\b(went|arrived|visited|stayed|liked|bought)\\b"
+        },
+        {
+          "text": "Comparás la ciudad con otra",
+          "detect": "\\b(than)\\b"
+        },
+        {
+          "text": "Usás al menos un superlativo",
+          "detect": "\\bthe (best|worst|most|oldest|biggest|smallest)\\b"
+        },
+        {
+          "text": "Decís qué te gustó y qué no"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "Where did you go, and how did you get there?",
+          "segment": "Last summer I went to Córdoba for a week. First, I arrived by bus on a Sunday morning and I stayed in a small hotel in the centre.",
+          "hint": "Arrancá con First: el material pide linking words desde el principio."
+        },
+        {
+          "prompt": "What did you visit?",
+          "segment": "Second, I visited the old Jesuit block and the cathedral, which is the oldest building in the city.",
+          "hint": "Second + un superlativo de paso."
+        },
+        {
+          "prompt": "What else did you do?",
+          "segment": "I also walked around the market and took a lot of photos.",
+          "hint": "Also encadena sin repetir Second."
+        },
+        {
+          "prompt": "How is the city compared to yours?",
+          "segment": "The city is smaller than Buenos Aires and much quieter, but it is more crowded in the centre than I expected.",
+          "hint": "Acá van los comparativos: dos o tres, con than."
+        },
+        {
+          "prompt": "What did you like, and why?",
+          "segment": "I liked the food because it was cheaper than at home, but I did not like the heat: it was hotter than in Buenos Aires.",
+          "hint": "Gusto + because, y el contraste con but."
+        },
+        {
+          "prompt": "How do you close?",
+          "segment": "Finally, I went to the mountains and that was the best day of the holiday.",
+          "hint": "Finally + superlativo. Cierra el relato en su punto más alto."
+        }
+      ]
+    },
+    {
+      "id": "en2.u3.pr.002",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Learning new vocabulary — Giving directions",
+        "note": "Consigna nuestra sobre las fórmulas que el material lista."
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 5,
+      "kind": "production",
+      "prompt": "A tourist stops you in the street. Give directions from the railway station to the museum.",
+      "modelAnswer": "Of course. Go straight ahead along this street and cross at the traffic lights. Then take the second turning on the right. Go past the post office and the bank. Go as far as the roundabout, and there turn left into Victoria Street. The museum is on your right, opposite the café and next to the art gallery. It is about ten minutes on foot.",
+      "scaffold": [
+        "1. Aceptá con una fórmula corta (Of course).",
+        "2. La primera instrucción: seguir derecho y cruzar.",
+        "3. El giro, numerado (the second turning on the right).",
+        "4. Un punto de referencia que se pasa (Go past…).",
+        "5. El último giro, con el nombre de la calle.",
+        "6. Ubicar el destino con dos preposiciones y decir cuánto falta."
+      ],
+      "rubric": [
+        {
+          "text": "Usás verbos de dirección",
+          "detect": "\\b(go|turn|cross|take)\\b"
+        },
+        {
+          "text": "Numerás el giro (first/second turning)",
+          "detect": "\\b(1st|2nd|first|second) turning\\b"
+        },
+        {
+          "text": "Usás un punto de referencia",
+          "detect": "\\b(past|as far as)\\b"
+        },
+        {
+          "text": "Ubicás el destino con preposiciones",
+          "detect": "\\b(opposite|next to|on your right|on your left|between)\\b"
+        },
+        {
+          "text": "Cerrás diciendo cuánto falta"
+        }
+      ],
+      "speaker": "student",
+      "steps": [
+        {
+          "prompt": "How do you accept?",
+          "segment": "Of course.",
+          "hint": "Corto: el turista tiene apuro."
+        },
+        {
+          "prompt": "First instruction?",
+          "segment": "Go straight ahead along this street and cross at the traffic lights.",
+          "hint": "Empezá por lo más simple: derecho y cruzar."
+        },
+        {
+          "prompt": "Which turning?",
+          "segment": "Then take the second turning on the right.",
+          "hint": "Numerá el giro: es lo que evita que se pierdan."
+        },
+        {
+          "prompt": "Any landmark?",
+          "segment": "Go past the post office and the bank.",
+          "hint": "Dos referencias para confirmar que va bien."
+        },
+        {
+          "prompt": "The last turn?",
+          "segment": "Go as far as the roundabout, and there turn left into Victoria Street.",
+          "hint": "As far as + el nombre de la calle."
+        },
+        {
+          "prompt": "Where exactly is it?",
+          "segment": "The museum is on your right, opposite the café and next to the art gallery. It is about ten minutes on foot.",
+          "hint": "Dos preposiciones y el tiempo: así sabe cuándo llegó."
+        }
+      ]
+    },
+    {
+      "id": "en2.u3.qa.001",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 29,
+        "section": "Contextualization — preguntas de la postal",
+        "note": "La grilla de esta unidad es, verbatim, la de la Unidad 2: no hay clave oficial para ningun ejercicio. La respuesta es nuestra."
+      },
+      "grammar": [
+        "wh-questions",
+        "past-simple.interrogative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "kind": "qa",
+      "prompt": "Where is Helen on vacation?",
+      "promptVariants": [
+        "Which country is Helen visiting?"
+      ],
+      "replies": [
+        "In Greece, on an island."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "In Greece, on an island."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u3.qa.002",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 29,
+        "section": "Contextualization — preguntas de la postal",
+        "note": "La grilla de esta unidad es, verbatim, la de la Unidad 2: no hay clave oficial para ningun ejercicio. La respuesta es nuestra."
+      },
+      "grammar": [
+        "past-simple.interrogative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "kind": "qa",
+      "prompt": "How did she arrive?",
+      "promptVariants": [
+        "How did Helen get to the island?"
+      ],
+      "replies": [
+        "She arrived by ship."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "She arrived by ship."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u3.qa.003",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 29,
+        "section": "Contextualization — preguntas de la postal",
+        "note": "La grilla de esta unidad es, verbatim, la de la Unidad 2: no hay clave oficial para ningun ejercicio. La respuesta es nuestra."
+      },
+      "grammar": [
+        "past-simple.interrogative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "kind": "qa",
+      "prompt": "Where did she go first?",
+      "promptVariants": [
+        "What did she do on Saturday morning?"
+      ],
+      "replies": [
+        "She went to Agios Sostis beach."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "She went to Agios Sostis beach."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u3.qa.004",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 29,
+        "section": "Contextualization — preguntas de la postal",
+        "note": "La grilla de esta unidad es, verbatim, la de la Unidad 2: no hay clave oficial para ningun ejercicio. La respuesta es nuestra."
+      },
+      "grammar": [
+        "past-simple.interrogative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "Who did she meet?",
+      "promptVariants": [
+        "Who did Helen play volleyball with?"
+      ],
+      "replies": [
+        "Some boys from Romania and some local people."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Some boys from Romania and some local people."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u3.qa.005",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 29,
+        "section": "Contextualization — preguntas de la postal",
+        "note": "La grilla de esta unidad es, verbatim, la de la Unidad 2: no hay clave oficial para ningun ejercicio. La respuesta es nuestra."
+      },
+      "grammar": [
+        "wh-questions"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "Why does Helen love the hotel?",
+      "promptVariants": [
+        "What does she say about the hotel?"
+      ],
+      "replies": [
+        "Because it is fantastic, very modern and it has a pool."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Because it is fantastic, very modern and it has a pool."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u3.qa.006",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 12,
+        "section": "Giving directions"
+      },
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "transport"
+      ],
+      "difficulty": 2,
+      "kind": "qa",
+      "prompt": "How do you ask for directions politely?",
+      "promptVariants": [
+        "What do you say to stop someone in the street?"
+      ],
+      "replies": [
+        "Excuse me! Can you tell me the way to the station?"
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Excuse me! Can you tell me the way to the station?"
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u3.qa.007",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Learning new structures"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "What is the difference between a comparative and a superlative?",
+      "promptVariants": [
+        "When do you use the superlative?"
+      ],
+      "replies": [
+        "The comparative compares two things; the superlative more than two, and it usually takes the."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The comparative compares two things; the superlative more than two, and it usually takes the."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u3.qa.008",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 1,
+        "section": "U3 - Comparatives and Superlatives Theory.pdf",
+        "note": "Del complementario de teoría; la página es la de ESE PDF."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "How do you form the comparative of a two-syllable adjective ending in y?",
+      "promptVariants": [
+        "What happens with happy?"
+      ],
+      "replies": [
+        "The y becomes i and you add er: happier."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "The y becomes i and you add er: happier."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u3.qa.009",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 20,
+        "section": "Irregular comparatives"
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "qa",
+      "prompt": "What are the comparative and superlative of good and bad?",
+      "promptVariants": [
+        "Which adjectives are irregular?"
+      ],
+      "replies": [
+        "Good, better, the best. Bad, worse, the worst."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "Good, better, the best. Bad, worse, the worst."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u3.qa.010",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 18,
+        "section": "Learning new structures"
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "qa",
+      "prompt": "How do you say that two things are equal?",
+      "promptVariants": [
+        "Which structure expresses similarity?"
+      ],
+      "replies": [
+        "As plus adjective plus as: Mike is as intelligent as Nancy."
+      ],
+      "answers": [
+        {
+          "mode": "quote",
+          "text": "As plus adjective plus as: Mike is as intelligent as Nancy."
+        }
+      ],
+      "speaker": "examiner",
+      "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u3.rd.001",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 28,
+        "section": "Contextualization time — A Postcard from Greece",
+        "note": "Postal reproducida del material. Es el texto modelo de la unidad."
+      },
+      "grammar": [
+        "past-simple.affirmative",
+        "comparatives"
+      ],
+      "fn": [
+        "narrate.past",
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "kind": "reading",
+      "textId": "greece",
+      "title": "A Postcard from Greece",
+      "credit": {
+        "publication": "islcollective.com",
+        "url": "https://en.islcollective.com"
+      },
+      "speaker": "narrator",
+      "sections": [
+        {
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Dear James, this vacation is wonderful. I arrived by ship to the island. The island is beautiful and the weather is hot and sunny every day."
+            },
+            {
+              "kind": "para",
+              "text": "I arrived on Saturday morning and I went to Agios Sostis beach. I took a long swim and then I sunbathed until noon. Next, I had lunch at a tavern on the beach. Also, I met some boys from Romania and we played volleyball with some of the local people. They are all very friendly."
+            },
+            {
+              "kind": "para",
+              "text": "In addition, I loved the hotel because it is fantastic, very modern, and it also has a pool. I liked the town, I walked around and took some photos. Then, I went to Delos to visit the ancient ruins. Finally, I went shopping yesterday and I bought you a nice present."
+            },
+            {
+              "kind": "para",
+              "text": "I hope you like it. See you when I get home. Love, Helen."
+            }
+          ]
+        }
+      ],
+      "afterReadingTask": "Read the text and answer the questions below."
+    }
+  ]
+}
