@@ -99,6 +99,12 @@ export const GRAMMAR_TAGS = [
   'past-simple.interrogative',
   'present-continuous.affirmative',
   'present-continuous.interrogative',
+  // en2 U4: la negativa tiene su propia ejercitacion (am not / aren't / isn't contra
+  // don't / doesn't), que es EL error del contraste con el presente simple.
+  'present-continuous.negative',
+  // en2 U4: los verbos que no admiten continuo, y los que al usarlo cambian de
+  // significado (I think / I'm thinking). Es el punto mas fino de la unidad.
+  'stative-verbs',
   'passive.present',
   'passive.past',
   'will.future',
