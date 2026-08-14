@@ -205,6 +205,65 @@
       ]
     },
     {
+      "id": "en2.u3.d.001",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación — Directions",
+        "note": "Diálogo nuestro, con las fórmulas exactas que el material lista en la pág. 12."
+      },
+      "grammar": [
+        "directions",
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "kind": "dialogue",
+      "title": "Excuse me, how do I get to the museum?",
+      "situation": "Un turista para a alguien en la calle y le piden indicaciones. Es la escena que el material dibuja en sus mapas.",
+      "turns": [
+        {
+          "speaker": "student",
+          "phraseId": "en2.u3.p.141"
+        },
+        {
+          "speaker": "shopkeeper",
+          "phraseId": "en2.u3.p.142"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en2.u3.p.143"
+        },
+        {
+          "speaker": "shopkeeper",
+          "phraseId": "en2.u3.p.144"
+        },
+        {
+          "speaker": "shopkeeper",
+          "phraseId": "en2.u3.p.145"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en2.u3.p.146"
+        },
+        {
+          "speaker": "shopkeeper",
+          "phraseId": "en2.u3.p.147"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en2.u3.p.148"
+        }
+      ]
+    },
+    {
       "id": "en2.u3.ex.001",
       "course": "en2",
       "unit": 3,
@@ -6721,6 +6780,215 @@
       "ipa": "ˌaʊɚ fˈeɪvɹɪt ɹˈɛstɹɑːnt sˈɜːvz ðə mˈoʊst dᵻlˈɪʃəs fˈuːd"
     },
     {
+      "id": "en2.u3.p.141",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación — Directions",
+        "note": "Diálogo nuestro, con las fórmulas exactas que el material lista en la pág. 12."
+      },
+      "grammar": [
+        "directions",
+        "wh-questions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Excuse me! Can you tell me the way to the museum?",
+      "gloss": "Disculpe, ¿me puede decir cómo llegar al museo?",
+      "speaker": "student",
+      "ipa": "ɛkskjˈuːs mˌiː kæn juː tˈɛl mˌiː ðə wˈeɪ tə ðə mjuːzˈiəm"
+    },
+    {
+      "id": "en2.u3.p.142",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación — Directions",
+        "note": "Diálogo nuestro, con las fórmulas exactas que el material lista en la pág. 12."
+      },
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Of course. Go straight ahead and take the second turning on the right.",
+      "gloss": "Por supuesto. Siga derecho y tome la segunda a la derecha.",
+      "speaker": "shopkeeper",
+      "ipa": "ʌv kˈoːɹs ɡˌoʊ stɹˈeɪt ɐhˈɛd ænd tˈeɪk ðə sˈɛkənd tˈɜːnɪŋ ɔnðə ɹˈaɪt"
+    },
+    {
+      "id": "en2.u3.p.143",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación — Directions",
+        "note": "Diálogo nuestro, con las fórmulas exactas que el material lista en la pág. 12."
+      },
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "The second on the right. And then?",
+      "gloss": "La segunda a la derecha. ¿Y después?",
+      "speaker": "student",
+      "ipa": "ðə sˈɛkənd ɔnðə ɹˈaɪt ænd ðˈɛn"
+    },
+    {
+      "id": "en2.u3.p.144",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación — Directions",
+        "note": "Diálogo nuestro, con las fórmulas exactas que el material lista en la pág. 12."
+      },
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Go past the post office and cross the street at the traffic lights.",
+      "gloss": "Pase el correo y cruce la calle en el semáforo.",
+      "speaker": "shopkeeper",
+      "ipa": "ɡˌoʊ pˈæst ðə pˈoʊst ˈɑːfɪs ænd kɹˈɔs ðə stɹˈiːt æt ðə tɹˈæfɪk lˈaɪts"
+    },
+    {
+      "id": "en2.u3.p.145",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación — Directions",
+        "note": "Diálogo nuestro, con las fórmulas exactas que el material lista en la pág. 12."
+      },
+      "grammar": [
+        "prepositions.place"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "The museum is on your left, opposite the café.",
+      "gloss": "El museo está a su izquierda, enfrente del café.",
+      "speaker": "shopkeeper",
+      "ipa": "ðə mjuːzˈiəm ɪz ˌɔn jʊɹ lˈɛft ˈɑːpəzˌɪt ðə kæfˈeɪ"
+    },
+    {
+      "id": "en2.u3.p.146",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación — Directions",
+        "note": "Diálogo nuestro, con las fórmulas exactas que el material lista en la pág. 12."
+      },
+      "grammar": [
+        "comparatives"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 1,
+      "kind": "phrase",
+      "text": "Is it far?",
+      "gloss": "¿Está lejos?",
+      "speaker": "student",
+      "ipa": "ɪz ɪt fˈɑːɹ"
+    },
+    {
+      "id": "en2.u3.p.147",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación — Directions",
+        "note": "Diálogo nuestro, con las fórmulas exactas que el material lista en la pág. 12."
+      },
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "No, it is about ten minutes on foot.",
+      "gloss": "No, son unos diez minutos a pie.",
+      "speaker": "shopkeeper",
+      "ipa": "nˈoʊ ɪɾ ɪz ɐbˌaʊt tˈɛn mˈɪnɪts ˌɔn fˈʊt"
+    },
+    {
+      "id": "en2.u3.p.148",
+      "course": "en2",
+      "unit": 3,
+      "source": {
+        "origin": "extracted",
+        "page": 14,
+        "section": "Ejercitación — Directions",
+        "note": "Diálogo nuestro, con las fórmulas exactas que el material lista en la pág. 12."
+      },
+      "grammar": [
+        "directions"
+      ],
+      "fn": [
+        "give-directions"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 1,
+      "kind": "phrase",
+      "text": "Thanks a lot!",
+      "gloss": "¡Muchas gracias!",
+      "speaker": "student",
+      "ipa": "θˈæŋks ɐ lˈɑːt"
+    },
+    {
       "id": "en2.u3.pr.001",
       "course": "en2",
       "unit": 3,
@@ -6896,6 +7164,86 @@
           "prompt": "Where exactly is it?",
           "segment": "The museum is on your right, opposite the café and next to the art gallery. It is about ten minutes on foot.",
           "hint": "Dos preposiciones y el tiempo: así sabe cuándo llegó."
+        }
+      ]
+    },
+    {
+      "id": "en2.u3.pr.003",
+      "course": "en2",
+      "unit": 3,
+      "kind": "production",
+      "speaker": "student",
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna nuestra: la meta pide comparar ciudades y solo estaba cubierta de refilón dentro del relato de vacaciones."
+      },
+      "grammar": [
+        "comparatives",
+        "superlatives"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "city"
+      ],
+      "difficulty": 5,
+      "prompt": "Compare two cities you know. Say which one you prefer and why.",
+      "modelAnswer": "I know Buenos Aires and Córdoba quite well. Buenos Aires is much bigger and far more crowded than Córdoba, and it is also more expensive. Córdoba is quieter and the people seem friendlier, maybe because it is smaller. The weather is better in Córdoba in winter, but the summer is hotter there. Buenos Aires has the best theatres and the most interesting museums in the country, and that is the thing I like most about it. In the end I prefer Buenos Aires, because it is more exciting, but I understand people who say that living in Córdoba is easier.",
+      "scaffold": [
+        "1. Nombrá las dos ciudades.",
+        "2. Dos o tres comparativos de tamaño y costo.",
+        "3. Un comparativo de la gente o el clima.",
+        "4. Un superlativo: lo mejor de una de las dos.",
+        "5. Tu preferencia, con el porqué.",
+        "6. Concedé algo a la otra ciudad."
+      ],
+      "rubric": [
+        {
+          "text": "Comparás con than",
+          "detect": "\\bthan\\b"
+        },
+        {
+          "text": "Usás al menos un superlativo",
+          "detect": "\\bthe (best|most|biggest|quietest|worst)\\b"
+        },
+        {
+          "text": "Matizás con much, far o a bit",
+          "detect": "\\b(much|far|a bit|a lot)\\b"
+        },
+        {
+          "text": "Decís cuál preferís y por qué",
+          "detect": "\\b(prefer|because)\\b"
+        },
+        {
+          "text": "Le concedés algo a la otra ciudad"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "Which two cities?",
+          "segment": "I know Buenos Aires and Córdoba quite well.",
+          "hint": "Una frase: no hace falta más para abrir."
+        },
+        {
+          "prompt": "Compare their size and cost.",
+          "segment": "Buenos Aires is much bigger and far more crowded than Córdoba, and it is also more expensive.",
+          "hint": "Tres comparativos y dos matizadores: much y far."
+        },
+        {
+          "prompt": "What about the people and the weather?",
+          "segment": "Córdoba is quieter and the people seem friendlier, maybe because it is smaller. The weather is better in Córdoba in winter, but the summer is hotter there.",
+          "hint": "Acá entra \"better\", que es irregular."
+        },
+        {
+          "prompt": "Say the best thing about one of them.",
+          "segment": "Buenos Aires has the best theatres and the most interesting museums in the country, and that is the thing I like most about it.",
+          "hint": "Dos superlativos seguidos, uno con the best y otro con the most."
+        },
+        {
+          "prompt": "Which do you prefer?",
+          "segment": "In the end I prefer Buenos Aires, because it is more exciting, but I understand people who say that living in Córdoba is easier.",
+          "hint": "Preferencia + concesión: el \"but\" evita que suene a folleto."
         }
       ]
     },

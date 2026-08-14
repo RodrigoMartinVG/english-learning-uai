@@ -5319,6 +5319,81 @@
       ]
     },
     {
+      "id": "en2.u1.pr.004",
+      "course": "en2",
+      "unit": 1,
+      "kind": "production",
+      "speaker": "student",
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna nuestra: la meta de la unidad incluye hablar de la comida propia, y solo estaba cubierta por escrito."
+      },
+      "grammar": [
+        "countable-uncountable",
+        "quantifiers"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 5,
+      "prompt": "Describe what you eat in a typical day, from breakfast to dinner.",
+      "modelAnswer": "On a typical day I do not eat much in the morning. I have a cup of coffee with milk and a couple of medialunas, because I never have much time. At about one o’clock I have lunch, usually some meat with a salad, or a plate of pasta if I am at home. In the afternoon I have a little fruit and a coffee, because dinner is very late here. Around nine or ten I have dinner: some vegetables, a piece of cheese and a glass of water. I do not eat a lot of bread, but I drink a lot of coffee, probably too much.",
+      "scaffold": [
+        "1. El desayuno y por qué es chico.",
+        "2. El almuerzo, con su horario.",
+        "3. La merienda de la tarde.",
+        "4. La cena y el horario tardío.",
+        "5. Un cierre con dos cuantificadores: algo que no comés mucho y algo que sí."
+      ],
+      "rubric": [
+        {
+          "text": "Nombrás las comidas del día",
+          "detect": "\\b(breakfast|lunch|dinner)\\b"
+        },
+        {
+          "text": "Usás envases y porciones (a cup of, a plate of, a piece of)",
+          "detect": "\\ba (cup|plate|piece|glass|slice) of\\b"
+        },
+        {
+          "text": "Usás cuantificadores (much, a lot of, a little, some)",
+          "detect": "\\b(much|a lot of|a little|some)\\b"
+        },
+        {
+          "text": "Das horarios"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "What do you have for breakfast?",
+          "segment": "On a typical day I do not eat much in the morning. I have a cup of coffee with milk and a couple of medialunas, because I never have much time.",
+          "hint": "Arrancá con \"not much\": el cuantificador entra desde la primera frase."
+        },
+        {
+          "prompt": "And lunch?",
+          "segment": "At about one o’clock I have lunch, usually some meat with a salad, or a plate of pasta if I am at home.",
+          "hint": "Horario + dos opciones, con \"some\" y \"a plate of\"."
+        },
+        {
+          "prompt": "Anything in the afternoon?",
+          "segment": "In the afternoon I have a little fruit and a coffee, because dinner is very late here.",
+          "hint": "\"a little\" para incontable, y el porqué con because."
+        },
+        {
+          "prompt": "What about dinner?",
+          "segment": "Around nine or ten I have dinner: some vegetables, a piece of cheese and a glass of water.",
+          "hint": "Tres porciones distintas en una sola frase."
+        },
+        {
+          "prompt": "How do you close?",
+          "segment": "I do not eat a lot of bread, but I drink a lot of coffee, probably too much.",
+          "hint": "El contraste final con but, y \"a lot of\" dos veces."
+        }
+      ]
+    },
+    {
       "id": "en2.u1.qa.001",
       "course": "en2",
       "unit": 1,
@@ -5735,6 +5810,75 @@
       ],
       "speaker": "examiner",
       "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u1.rd.001",
+      "course": "en2",
+      "unit": 1,
+      "kind": "reading",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 24,
+        "section": "Actividad de cierre — Meals in Britain",
+        "note": "Texto reconstruido del material (leído visualmente de la slide), no transcripción verbatim. El contenido y los horarios son los del original."
+      },
+      "grammar": [
+        "countable-uncountable",
+        "present-simple.third-person"
+      ],
+      "fn": [
+        "describe.routine"
+      ],
+      "topic": [
+        "food"
+      ],
+      "difficulty": 2,
+      "textId": "meals-britain",
+      "title": "Meals in Britain",
+      "credit": {
+        "publication": "islcollective.com",
+        "url": "https://en.islcollective.com"
+      },
+      "sections": [
+        {
+          "heading": "Three meals a day",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "People in Britain usually have three meals a day: breakfast between seven and nine in the morning, lunch between twelve and half past one, and dinner between half past six and eight in the evening."
+            }
+          ]
+        },
+        {
+          "heading": "Breakfast",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "The traditional English breakfast is a big meal: eggs, bacon, sausages, fried bread, baked beans and mushrooms. But today most people do not have time for it. They usually have cereal with milk, a slice of toast, orange juice and coffee. In winter some people prefer a bowl of hot porridge."
+            }
+          ]
+        },
+        {
+          "heading": "Lunch",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "Lunch is a light meal. Many children take a packed lunch to school: a sandwich, a packet of crisps, a piece of fruit and a drink. Adults often eat a sandwich near the office."
+            }
+          ]
+        },
+        {
+          "heading": "Dinner",
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "The traditional dinner is meat and two vegetables, and on Sunday a roast dinner with gravy. But things have changed. A recent survey found that curry is now the most popular dish in Britain, and rice and pasta dishes have replaced the old British dinner in many homes."
+            }
+          ]
+        }
+      ],
+      "afterReadingTask": "Complete the chart: traditional food and actual food, for breakfast and dinner."
     }
   ]
 }

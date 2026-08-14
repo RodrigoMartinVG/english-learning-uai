@@ -220,6 +220,65 @@
       ]
     },
     {
+      "id": "en2.u4.d.001",
+      "course": "en2",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 22,
+        "section": "Types of films — expressions",
+        "note": "Diálogo nuestro con las expresiones exactas que el material lista para recomendar."
+      },
+      "grammar": [
+        "present-simple.interrogative",
+        "present-continuous.affirmative"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "kind": "dialogue",
+      "title": "What shall we watch?",
+      "situation": "Dos amigos eligen una película. Es la mitad de la meta de la unidad que no se practicaba: recomendar.",
+      "turns": [
+        {
+          "speaker": "student",
+          "phraseId": "en2.u4.p.176"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en2.u4.p.177"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en2.u4.p.178"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en2.u4.p.179"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en2.u4.p.180"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en2.u4.p.181"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en2.u4.p.182"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en2.u4.p.183"
+        }
+      ]
+    },
+    {
       "id": "en2.u4.ex.001",
       "course": "en2",
       "unit": 4,
@@ -9387,6 +9446,215 @@
       "ipa": "ðɪs wˈaɪn tˈeɪsts sˈaʊɚ bˌʌt ʃiː ɪz tˈeɪstɪŋ ðə sˈuːp"
     },
     {
+      "id": "en2.u4.p.176",
+      "course": "en2",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 22,
+        "section": "Types of films — expressions",
+        "note": "Diálogo nuestro con las expresiones exactas que el material lista para recomendar."
+      },
+      "grammar": [
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Can you recommend a good film?",
+      "gloss": "¿Me recomendás una buena película?",
+      "speaker": "student",
+      "ipa": "kæn juː ɹˌɛkəmˈɛnd ɐ ɡˈʊd fˈɪlm"
+    },
+    {
+      "id": "en2.u4.p.177",
+      "course": "en2",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 22,
+        "section": "Types of films — expressions",
+        "note": "Diálogo nuestro con las expresiones exactas que el material lista para recomendar."
+      },
+      "grammar": [
+        "present-simple.interrogative",
+        "wh-questions"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "What kind of films do you like?",
+      "gloss": "¿Qué tipo de películas te gustan?",
+      "speaker": "student-m",
+      "ipa": "wˌʌt kˈaɪnd ʌv fˈɪlmz dˈuː juː lˈaɪk"
+    },
+    {
+      "id": "en2.u4.p.178",
+      "course": "en2",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 22,
+        "section": "Types of films — expressions",
+        "note": "Diálogo nuestro con las expresiones exactas que el material lista para recomendar."
+      },
+      "grammar": [
+        "present-continuous.negative"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "I love science fiction, but I am not watching anything scary tonight.",
+      "gloss": "Me encanta la ciencia ficción, pero esta noche no veo nada de terror.",
+      "speaker": "student",
+      "ipa": "aɪ lˈʌv sˈaɪəns fˈɪkʃən bˌʌt aɪɐm nˌɑːt wˈɑːtʃɪŋ ˈɛnɪθˌɪŋ skˈɛɹi tənˈaɪt"
+    },
+    {
+      "id": "en2.u4.p.179",
+      "course": "en2",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 22,
+        "section": "Types of films — expressions",
+        "note": "Diálogo nuestro con las expresiones exactas que el material lista para recomendar."
+      },
+      "grammar": [
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Then I think you would like Arrival. It is a thriller but it is not frightening at all.",
+      "gloss": "Entonces creo que te gustaría Arrival. Es un thriller pero no da nada de miedo.",
+      "speaker": "student-m",
+      "ipa": "ðˈɛn aɪ θˈɪŋk juː wʊd lˈaɪk ɚɹˈaɪvəl ɪɾ ɪz ɐ θɹˈɪlɚ bˌʌt ɪɾ ɪz nˌɑːt fɹˈaɪʔn̩ɪŋ æɾ ˈɔːl"
+    },
+    {
+      "id": "en2.u4.p.180",
+      "course": "en2",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 22,
+        "section": "Types of films — expressions",
+        "note": "Diálogo nuestro con las expresiones exactas que el material lista para recomendar."
+      },
+      "grammar": [
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 1,
+      "kind": "phrase",
+      "text": "What is it about?",
+      "gloss": "¿De qué se trata?",
+      "speaker": "student",
+      "ipa": "wˌʌt ɪz ɪɾ ɐbˈaʊt"
+    },
+    {
+      "id": "en2.u4.p.181",
+      "course": "en2",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 22,
+        "section": "Types of films — expressions",
+        "note": "Diálogo nuestro con las expresiones exactas que el material lista para recomendar."
+      },
+      "grammar": [
+        "present-continuous.affirmative"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 4,
+      "kind": "phrase",
+      "text": "A linguist is trying to talk to some aliens. It sounds strange, but it is really about language.",
+      "gloss": "Una lingüista intenta hablar con unos alienígenas. Suena raro, pero en realidad es sobre el lenguaje.",
+      "speaker": "student-m",
+      "ipa": "ɐ lˈɪŋɡwɪst ɪz tɹˈaɪɪŋ tə tˈɔːk tə sˌʌm ˈeɪliənz ɪt sˈaʊndz stɹˈeɪndʒ bˌʌt ɪɾ ɪz ɹˈiəli ɐbˌaʊt lˈæŋɡwɪdʒ"
+    },
+    {
+      "id": "en2.u4.p.182",
+      "course": "en2",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 22,
+        "section": "Types of films — expressions",
+        "note": "Diálogo nuestro con las expresiones exactas que el material lista para recomendar."
+      },
+      "grammar": [
+        "present-simple.interrogative"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 1,
+      "kind": "phrase",
+      "text": "Who is in it?",
+      "gloss": "¿Quién actúa?",
+      "speaker": "student",
+      "ipa": "hˈuː ɪz ɪn ɪt"
+    },
+    {
+      "id": "en2.u4.p.183",
+      "course": "en2",
+      "unit": 4,
+      "source": {
+        "origin": "extracted",
+        "page": 22,
+        "section": "Types of films — expressions",
+        "note": "Diálogo nuestro con las expresiones exactas que el material lista para recomendar."
+      },
+      "grammar": [
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "ask.identity"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Amy Adams. She is wonderful in it. Let us watch it now.",
+      "gloss": "Amy Adams. Está increíble. Veámosla ahora.",
+      "speaker": "student-m",
+      "ipa": "ˈeɪmi ˈædəmz ʃiː ɪz wˈʌndɚfəl ɪn ɪt lˈɛt ˌʌs wˈɑːtʃ ɪt nˈaʊ"
+    },
+    {
       "id": "en2.u4.pr.001",
       "course": "en2",
       "unit": 4,
@@ -9475,6 +9743,167 @@
           "prompt": "What films does he like?",
           "segment": "I think he likes science fiction films, because he loves stories about the future and other planets. His favourite one is Star Wars.",
           "hint": "Cerrá con el género y su porqué."
+        }
+      ]
+    },
+    {
+      "id": "en2.u4.pr.002",
+      "course": "en2",
+      "unit": 4,
+      "kind": "production",
+      "speaker": "student",
+      "source": {
+        "origin": "extracted",
+        "page": 22,
+        "section": "Types of films",
+        "note": "La meta declarada de la unidad incluye \"how to recommend them\" y no había ninguna producción que lo entrenara. Consigna y modelo nuestros."
+      },
+      "grammar": [
+        "present-simple.third-person",
+        "present-continuous.affirmative"
+      ],
+      "fn": [
+        "describe.place"
+      ],
+      "topic": [
+        "leisure"
+      ],
+      "difficulty": 5,
+      "prompt": "Recommend a film to a friend. Say what kind of film it is, what it is about, who is in it and why they would like it.",
+      "modelAnswer": "If you have not seen it, I would recommend Arrival. It is a science fiction film, but it is also a drama, so do not expect explosions. It is about a linguist who has to find a way of talking to some aliens that have arrived on Earth. Amy Adams is in it, and she is wonderful. The best thing is that the film is really about language and time, not about spaceships. I think you would like it because you enjoy stories that make you think. It is not an easy film, but it is the most beautiful science fiction film I have ever seen.",
+      "scaffold": [
+        "1. Recomendá, con la fórmula del material.",
+        "2. Qué género es — y qué NO es.",
+        "3. De qué se trata, en una frase.",
+        "4. Quién actúa.",
+        "5. Por qué le gustaría a esa persona.",
+        "6. Cerrá con un superlativo."
+      ],
+      "rubric": [
+        {
+          "text": "Recomendás explícitamente",
+          "detect": "\\b(recommend|you would like)\\b"
+        },
+        {
+          "text": "Decís el género",
+          "detect": "\\b(science fiction|drama|comedy|thriller|horror|western)\\b"
+        },
+        {
+          "text": "Contás de qué se trata",
+          "detect": "\\b(it is about|about a)\\b"
+        },
+        {
+          "text": "Decís quién actúa",
+          "detect": "\\b(is in it|stars)\\b"
+        },
+        {
+          "text": "Justificás por qué le gustaría a esa persona"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "How do you open?",
+          "segment": "If you have not seen it, I would recommend Arrival.",
+          "hint": "La fórmula del material: I would recommend…"
+        },
+        {
+          "prompt": "What kind of film is it?",
+          "segment": "It is a science fiction film, but it is also a drama, so do not expect explosions.",
+          "hint": "Decí el género Y lo que no es: eso evita el malentendido."
+        },
+        {
+          "prompt": "What is it about?",
+          "segment": "It is about a linguist who has to find a way of talking to some aliens that have arrived on Earth.",
+          "hint": "Una sola frase. Si te extendés, spoileás."
+        },
+        {
+          "prompt": "Who is in it?",
+          "segment": "Amy Adams is in it, and she is wonderful.",
+          "hint": "Corto: nombre y una valoración."
+        },
+        {
+          "prompt": "Why would your friend like it?",
+          "segment": "The best thing is that the film is really about language and time, not about spaceships. I think you would like it because you enjoy stories that make you think.",
+          "hint": "Acá va el argumento personal: por qué a ESA persona."
+        },
+        {
+          "prompt": "How do you close?",
+          "segment": "It is not an easy film, but it is the most beautiful science fiction film I have ever seen.",
+          "hint": "Una concesión y un superlativo. Cierra fuerte."
+        }
+      ]
+    },
+    {
+      "id": "en2.u4.pr.003",
+      "course": "en2",
+      "unit": 4,
+      "kind": "production",
+      "speaker": "student",
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna nuestra: entrena el contraste continuo/simple sobre uno mismo, que es lo que el examen oral va a pedir."
+      },
+      "grammar": [
+        "present-continuous.affirmative",
+        "present-simple.affirmative"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 5,
+      "prompt": "Describe what you are wearing today and what you usually wear. Then say what you are doing right now and what you normally do at this time.",
+      "modelAnswer": "Today I am wearing black jeans, a grey sweatshirt and old trainers, because I am at home and nobody is going to see me. I usually wear something a bit smarter when I go to the university: a shirt and a jacket. Right now I am sitting at my desk and I am studying English, which is not what I normally do at this time. At nine in the evening I usually watch a series or read something, but I have an exam soon, so these days I am studying much more than usual.",
+      "scaffold": [
+        "1. Qué llevás puesto HOY, con el porqué.",
+        "2. Qué solés llevar, en contraste.",
+        "3. Qué estás haciendo AHORA.",
+        "4. Qué hacés normalmente a esta hora.",
+        "5. El motivo del cambio, con \"these days\"."
+      ],
+      "rubric": [
+        {
+          "text": "Decís qué llevás puesto ahora",
+          "detect": "\\bam wearing\\b"
+        },
+        {
+          "text": "Contrastás con lo que usás siempre",
+          "detect": "\\b(usually|normally|generally)\\b"
+        },
+        {
+          "text": "Decís qué estás haciendo",
+          "detect": "\\bam (sitting|studying|doing|working)\\b"
+        },
+        {
+          "text": "Usás \"these days\" para el hábito temporal",
+          "detect": "\\bthese days\\b"
+        },
+        {
+          "text": "Cada continuo tiene su simple enfrente"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "What are you wearing today?",
+          "segment": "Today I am wearing black jeans, a grey sweatshirt and old trainers, because I am at home and nobody is going to see me.",
+          "hint": "\"Today\" ancla el continuo, y el because lo justifica."
+        },
+        {
+          "prompt": "And what do you usually wear?",
+          "segment": "I usually wear something a bit smarter when I go to the university: a shirt and a jacket.",
+          "hint": "El contraste: usually + presente simple."
+        },
+        {
+          "prompt": "What are you doing right now?",
+          "segment": "Right now I am sitting at my desk and I am studying English, which is not what I normally do at this time.",
+          "hint": "Dos continuos, y el contraste ya anunciado dentro de la misma frase."
+        },
+        {
+          "prompt": "What do you normally do at this time?",
+          "segment": "At nine in the evening I usually watch a series or read something, but I have an exam soon, so these days I am studying much more than usual.",
+          "hint": "Cierra con \"these days\": hábito temporal, que es continuo aunque no sea ahora mismo."
         }
       ]
     },
@@ -9845,6 +10274,51 @@
       ],
       "speaker": "examiner",
       "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u4.rd.001",
+      "course": "en2",
+      "unit": 4,
+      "kind": "reading",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 38,
+        "section": "Ejercitación 15 — Describing people",
+        "note": "Texto de la clave oficial, con los huecos ya resueltos. Es el modelo de descripción que la unidad pide imitar."
+      },
+      "grammar": [
+        "have-got.affirmative",
+        "be.present.affirmative"
+      ],
+      "fn": [
+        "describe.person"
+      ],
+      "topic": [
+        "describe"
+      ],
+      "difficulty": 2,
+      "textId": "grandparents",
+      "title": "My grandparents",
+      "credit": {
+        "publication": "islcollective.com",
+        "url": "https://en.islcollective.com"
+      },
+      "sections": [
+        {
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "These are my grandparents. They are very sweet but old. Grandma Jane is one metre seventy-two tall. She is pretty tall for a lady. She weighs about seventy kilos, so she is a bit fat. She has got curly hair. She has got a big nose but small ears. She has also got a big smile. Her face is square."
+            },
+            {
+              "kind": "para",
+              "text": "Grandpa John is very different. He is slim and about one metre fifty tall, so he is very short. His face is round and he is bald. He has also got a moustache. They both wear glasses."
+            }
+          ]
+        }
+      ],
+      "afterReadingTask": "Now describe two people you know, following the same order."
     }
   ]
 }

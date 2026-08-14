@@ -220,6 +220,51 @@
       ]
     },
     {
+      "id": "en2.u2.d.001",
+      "course": "en2",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo nuestro: la unidad entrena el pasado para biografías, pero no en conversación cotidiana, que es donde más se usa."
+      },
+      "grammar": [
+        "past-simple.interrogative",
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "dialogue",
+      "title": "What did you do last weekend?",
+      "situation": "Dos estudiantes se cuentan el fin de semana. Es el pasado simple en conversación, no en biografía.",
+      "turns": [
+        {
+          "speaker": "student",
+          "phraseId": "en2.u2.p.105"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en2.u2.p.106"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en2.u2.p.107"
+        },
+        {
+          "speaker": "student-m",
+          "phraseId": "en2.u2.p.108"
+        },
+        {
+          "speaker": "student",
+          "phraseId": "en2.u2.p.109"
+        }
+      ]
+    },
+    {
       "id": "en2.u2.ex.001",
       "course": "en2",
       "unit": 2,
@@ -5197,6 +5242,127 @@
       "ipa": "ðeɪ ɹᵻtˈɜːnd tə mˈɛksɪkˌoʊ ɪn nˈaɪntiːnhˈʌndɹɪd θˈɜːɾi fˈaɪv"
     },
     {
+      "id": "en2.u2.p.105",
+      "course": "en2",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo nuestro: la unidad entrena el pasado para biografías, pero no en conversación cotidiana, que es donde más se usa."
+      },
+      "grammar": [
+        "past-simple.interrogative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "Hi! What did you do last weekend?",
+      "gloss": "¡Hola! ¿Qué hiciste el fin de semana?",
+      "speaker": "student",
+      "ipa": "hˈaɪ wˌʌt dˈɪd juː dˈuː lˈæst wˈiːkɛnd"
+    },
+    {
+      "id": "en2.u2.p.106",
+      "course": "en2",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo nuestro: la unidad entrena el pasado para biografías, pero no en conversación cotidiana, que es donde más se usa."
+      },
+      "grammar": [
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "I went to my grandmother’s house on Saturday and we cooked all afternoon.",
+      "gloss": "El sábado fui a lo de mi abuela y cocinamos toda la tarde.",
+      "speaker": "student-m",
+      "ipa": "aɪ wɛnt tə maɪ ɡɹˈændmʌðɚz hˈaʊs ˌɔn sˈæɾɚdˌeɪ ænd wiː kˈʊkt ˈɔːl ˌæftɚnˈuːn"
+    },
+    {
+      "id": "en2.u2.p.107",
+      "course": "en2",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo nuestro: la unidad entrena el pasado para biografías, pero no en conversación cotidiana, que es donde más se usa."
+      },
+      "grammar": [
+        "past-simple.interrogative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 2,
+      "kind": "phrase",
+      "text": "That sounds nice. Did you stay for dinner?",
+      "gloss": "Qué lindo. ¿Te quedaste a cenar?",
+      "speaker": "student",
+      "ipa": "ðæt sˈaʊndz nˈaɪs dˈɪd juː stˈeɪ fɔːɹ dˈɪnɚ"
+    },
+    {
+      "id": "en2.u2.p.108",
+      "course": "en2",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo nuestro: la unidad entrena el pasado para biografías, pero no en conversación cotidiana, que es donde más se usa."
+      },
+      "grammar": [
+        "past-simple.affirmative",
+        "connectors"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "Yes, I did. And on Sunday I studied because I had an exam today.",
+      "gloss": "Sí. Y el domingo estudié porque hoy tenía examen.",
+      "speaker": "student-m",
+      "ipa": "jˈɛs aɪ dˈɪd ænd ˌɔn sˈʌndeɪ aɪ stˈʌdid bɪkˈʌz aɪ hæd ɐn ɛɡzˈæm tədˈeɪ"
+    },
+    {
+      "id": "en2.u2.p.109",
+      "course": "en2",
+      "unit": 2,
+      "source": {
+        "origin": "synthetic",
+        "note": "Diálogo nuestro: la unidad entrena el pasado para biografías, pero no en conversación cotidiana, que es donde más se usa."
+      },
+      "grammar": [
+        "past-simple.negative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 3,
+      "kind": "phrase",
+      "text": "I did not study at all! I watched three films and then I felt guilty.",
+      "gloss": "¡Yo no estudié nada! Vi tres películas y después me sentí culpable.",
+      "speaker": "student",
+      "ipa": "aɪ dɪdnˌɑːt stˈʌdi æɾ ˈɔːl aɪ wˈɑːtʃt θɹˈiː fˈɪlmz ænd ðˈɛn aɪ fˈɛlt ɡˈɪlti"
+    },
+    {
       "id": "en2.u2.pr.001",
       "course": "en2",
       "unit": 2,
@@ -5474,6 +5640,87 @@
           "prompt": "How does the story end?",
           "segment": "She won a national art prize in nineteen forty-six and became famous. She died in nineteen fifty-four, when she was only forty-seven.",
           "hint": "Reconocimiento y muerte, con el \"only\" que le da el tono."
+        }
+      ]
+    },
+    {
+      "id": "en2.u2.pr.004",
+      "course": "en2",
+      "unit": 2,
+      "kind": "production",
+      "speaker": "student",
+      "source": {
+        "origin": "synthetic",
+        "note": "Consigna nuestra: el pasado de la vida cotidiana, que la unidad entrena solo en registro de biografía."
+      },
+      "grammar": [
+        "past-simple.affirmative",
+        "past-simple.negative",
+        "connectors"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "classroom"
+      ],
+      "difficulty": 5,
+      "prompt": "Tell what you did last weekend, from Friday evening to Sunday night.",
+      "modelAnswer": "On Friday evening I finished work late, so I did not go out. I stayed at home and watched a film with my sister. On Saturday morning I got up early and went to the market, because we needed vegetables for the week. In the afternoon a friend came to visit and we talked for hours. On Sunday I studied for this exam. I read the whole unit twice, but I did not remember everything, so I made a summary. At night I cooked pasta and went to bed early. It was a quiet weekend, but I needed it.",
+      "scaffold": [
+        "1. El viernes a la noche, con el porqué (so / because).",
+        "2. El sábado a la mañana.",
+        "3. El sábado a la tarde.",
+        "4. El domingo: lo que estudiaste.",
+        "5. Algo que NO hiciste (negativa).",
+        "6. El cierre con una valoración."
+      ],
+      "rubric": [
+        {
+          "text": "Contás en pasado simple",
+          "detect": "\\b(went|stayed|watched|got|came|studied|cooked)\\b"
+        },
+        {
+          "text": "Usás al menos una negativa",
+          "detect": "\\b(did not|didn't)\\b"
+        },
+        {
+          "text": "Encadenás con conectores",
+          "detect": "\\b(so|but|because|and)\\b"
+        },
+        {
+          "text": "Ordenás por día",
+          "detect": "\\b(friday|saturday|sunday)\\b"
+        },
+        {
+          "text": "Cerrás con una valoración del fin de semana"
+        }
+      ],
+      "steps": [
+        {
+          "prompt": "Friday evening?",
+          "segment": "On Friday evening I finished work late, so I did not go out. I stayed at home and watched a film with my sister.",
+          "hint": "El \"so\" conecta la causa con la consecuencia, y ahí entra la negativa."
+        },
+        {
+          "prompt": "Saturday morning?",
+          "segment": "On Saturday morning I got up early and went to the market, because we needed vegetables for the week.",
+          "hint": "Dos irregulares seguidos: got y went."
+        },
+        {
+          "prompt": "Saturday afternoon?",
+          "segment": "In the afternoon a friend came to visit and we talked for hours.",
+          "hint": "Uno irregular y uno regular, para alternar."
+        },
+        {
+          "prompt": "And Sunday?",
+          "segment": "On Sunday I studied for this exam. I read the whole unit twice, but I did not remember everything, so I made a summary.",
+          "hint": "Ojo con \"read\": se escribe igual pero suena /red/."
+        },
+        {
+          "prompt": "How did the weekend end?",
+          "segment": "At night I cooked pasta and went to bed early. It was a quiet weekend, but I needed it.",
+          "hint": "Cerrá con was + una valoración: le da un final, no un corte."
         }
       ]
     },
@@ -5846,6 +6093,59 @@
       ],
       "speaker": "examiner",
       "replySpeaker": "student"
+    },
+    {
+      "id": "en2.u2.rd.001",
+      "course": "en2",
+      "unit": 2,
+      "kind": "reading",
+      "speaker": "narrator",
+      "source": {
+        "origin": "extracted",
+        "page": 17,
+        "section": "Contextualization time — William Shakespeare",
+        "note": "Texto reconstruido del material (leído visualmente), no transcripción verbatim. Los datos y las expresiones clave resaltadas son los del original."
+      },
+      "grammar": [
+        "past-be",
+        "past-simple.affirmative"
+      ],
+      "fn": [
+        "narrate.past"
+      ],
+      "topic": [
+        "biography"
+      ],
+      "difficulty": 2,
+      "textId": "shakespeare",
+      "title": "William Shakespeare",
+      "credit": {
+        "publication": "islcollective.com",
+        "url": "https://en.islcollective.com"
+      },
+      "sections": [
+        {
+          "blocks": [
+            {
+              "kind": "para",
+              "text": "William Shakespeare was the greatest writer in the English language. He was born in 1564 in Stratford-upon-Avon, a small town in the centre of England."
+            },
+            {
+              "kind": "para",
+              "text": "At the age of eighteen he married Anne Hathaway, who was eight years older than himself. They had three children. A few years later he moved to London, where he worked as an actor and a playwright."
+            },
+            {
+              "kind": "para",
+              "text": "He wrote thirty-seven plays and one hundred and fifty-four sonnets. His most famous plays are the four great tragedies: Hamlet, Macbeth, King Lear and Othello."
+            },
+            {
+              "kind": "para",
+              "text": "Shakespeare died in Stratford-upon-Avon on the twenty-third of April, 1616, but his plays are still performed all over the world today."
+            }
+          ]
+        }
+      ],
+      "afterReadingTask": "Find the expressions that can be used to write any biography."
     }
   ]
 }
