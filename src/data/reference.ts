@@ -186,5 +186,8 @@ function scriptTitle(prompt: string): string {
   if (/introduce yourself/i.test(prompt)) return 'Presentarte';
   if (/describe the room/i.test(prompt)) return 'Describir tu cuarto / oficina';
   if (/daily routine|my life/i.test(prompt)) return 'Tu rutina diaria';
+  // La exposición de la Unidad 5: el título del texto dice más que el enunciado cortado.
+  const text = prompt.match(/presentation about the text '([^']+)'/i);
+  if (text) return `Exposición: ${text[1]}`;
   return prompt.split(/[.:]/)[0]!.slice(0, 48);
 }

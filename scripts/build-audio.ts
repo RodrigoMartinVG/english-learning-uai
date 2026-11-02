@@ -142,6 +142,16 @@ function push(key: string, text: string, speakerId: string, rateFactor = 1): voi
  * Se puede subir con --alt-max=N (p. ej. para cubrir una oración larga puntual). */
 const ALT_MAX_CHARS = Number(args.find((a) => a.startsWith('--alt-max='))?.slice('--alt-max='.length)) || 110;
 
+/** Una oración de un guion: paso de la Versión A (.step.N) u oración de una variante
+ *  (.modelvar.k.s.m). El audio continuo y el copiar frase por frase solo ofrecen una
+ *  voz si la tienen TODAS las oraciones de la versión: una sola larga sin alternativa
+ *  dejaba la versión entera sin elegir voz. Por eso a estas no se les aplica el tope. */
+const SCRIPT_SENTENCE_RE = /\.(?:step\.\d+|modelvar\.\d+\.s\.\d+)$/;
+const isScriptSentence = (key: string) => SCRIPT_SENTENCE_RE.test(key);
+
+/** Voces extra que un guion pide para sus oraciones (`sentenceVoices`), por id de átomo. */
+const sentenceVoicesOf = new Map<string, string[]>();
+
 /**
  * ¿Esta emisión merece voces alternativas?
  *
@@ -151,13 +161,14 @@ const ALT_MAX_CHARS = Number(args.find((a) => a.startsWith('--alt-max='))?.slice
  *  · variantes .slow (misma voz más lenta: sería redundante)
  *  · variantes de frase .alt.N (contenido secundario del panel de expansión)
  *  · narraciones largas (>110 chars): 3× de audio para un ejercicio de un solo relator
+ *    (salvo las oraciones de un guion: ver isScriptSentence)
  *  · alt-de-alt (una clave que ya es alternativa)
  */
 function wantsAlts(u: Utterance): boolean {
   return (
     PROVIDER_ID === 'kokoro' &&
     !u.segments &&
-    u.text.length <= ALT_MAX_CHARS &&
+    (u.text.length <= ALT_MAX_CHARS || isScriptSentence(u.key)) &&
     !u.key.includes('.v.') &&
     !u.key.includes('.alt.') &&
     // Las ORACIONES de variante (.modelvar.k.s.m) SÍ reciben voces alternativas: el
@@ -285,6 +296,7 @@ for (const atom of atoms) {
       break;
     }
     case 'production': {
+      if (atom.sentenceVoices?.length) sentenceVoicesOf.set(atom.id, atom.sentenceVoices);
       push(atom.id, atom.prompt, atom.speaker);
       push(`${atom.id}.model`, atom.modelAnswer, atom.speaker);
       push(`${atom.id}.model.slow`, atom.modelAnswer, atom.speaker, SLOW_RATE_FACTOR);
@@ -348,6 +360,12 @@ for (const u of [...utterances]) {
       : wantsAlts(u)
         ? ALT_VOICES
         : null;
+  // Las oraciones de un guion suman las voces extra que pida su átomo.
+  if (voices && isScriptSentence(u.key)) {
+    const extra = sentenceVoicesOf.get(u.key.replace(SCRIPT_SENTENCE_RE, ''));
+    const base = voices;
+    if (extra) voices = [...base, ...MODEL_VOICES.filter((v) => extra.includes(v.id) && !base.some((b) => b.id === v.id))];
+  }
   // --voices REEMPLAZA el set donde correspondan alternativas: permite agregar una
   // voz aunque no esté en ALT_VOICES (p. ej. Nicole por frase), sin tocar el resto.
   if (VOICES_FILTER) voices = voices ? VOICES_FILTER.map((id) => ({ id, label: id })) : null;

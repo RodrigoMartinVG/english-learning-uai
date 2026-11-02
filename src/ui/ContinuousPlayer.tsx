@@ -84,10 +84,12 @@ export function ContinuousPlayer({ chunks, speakerId }: { chunks: ScriptChunk[];
       do {
         for (let ci = fromChunk; ci < chunks.length; ci++) {
           const c = chunks[ci]!;
-          const key = voiceRef.current ? `${c.audioKey}.v.${voiceRef.current}` : c.audioKey;
           for (let r = 0; r < repeatsRef.current; r++) {
             if (stopRef.current) return finish();
             setPos({ chunk: ci, rep: r });
+            // La voz se lee en cada repetición: cambiarla a mitad de una frase larga
+            // se oye en la próxima vuelta, no recién en la frase siguiente.
+            const key = voiceRef.current ? `${c.audioKey}.v.${voiceRef.current}` : c.audioKey;
             const res = await audio.speak({ key, text: c.text, speakerId });
             if (stopRef.current) return finish();
             // Otro audio (o un cancel externo) pisó el nuestro: cortamos con elegancia.

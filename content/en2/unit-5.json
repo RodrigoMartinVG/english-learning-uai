@@ -2441,7 +2441,7 @@
       "unit": 5,
       "source": {
         "origin": "synthetic",
-        "note": "Consigna de exposición nuestra sobre el Texto 1 (formato del oral)."
+        "note": "Consigna del Segundo Parcial (video de 2 a 3 minutos): resumen del texto (tema, propósito, ideas principales) + conexión con el rol profesional."
       },
       "grammar": [
         "passive.past",
@@ -2456,30 +2456,39 @@
       "difficulty": 5,
       "textId": "tea",
       "kind": "production",
-      "prompt": "Give a one to two minute presentation about the text 'Tea and nineteenth century physics'.",
+      "prompt": "Give a two to three minute presentation about the text 'Tea and nineteenth century physics': summarize it (topic, purpose and main ideas) and connect it with your future profession.",
       "modelAnswer": "I choose text 1, 'Tea and nineteenth century physics', by Hannah Darken. First, the everyday fact. If you leave a hot cup of tea on a table, it always cools down. It never becomes hotter. Everybody knows this, but behind it there is a whole area of physics: thermodynamics, the theory of heat and heat flow. It was developed mostly during the nineteenth century. Before we see the laws, we need to look at two ideas. The first idea is temperature. Temperature is not a thing inside the tea. It is a bulk property of molecules and atoms in motion. Atoms that move fast produce a warm temperature. Atoms that move very little produce a cold one. The second idea is entropy. Tea is made of many, many molecules in random motion, and we never see them. If we re-arranged them slightly, the tea would look the same to us. So entropy counts the number of ways we could arrange the molecules and still see the same cup of tea. Now, the text gives four laws. The zeroth law: if two systems are in thermal equilibrium with a third one, they are in equilibrium with each other. The first law: energy cannot be created or destroyed, only transferred. The second law: in an isolated system, entropy tends to increase over time. The third law: at absolute zero, entropy reaches a constant minimum. In the end, my cold cup of tea is the second law in action. And the same theory explains weather forecasting, planets and moons, and even black holes.",
       "modelVariants": [
         "The text is called 'Tea and nineteenth century physics' and it was written by Hannah Darken for plus.maths.org. It uses a very ordinary situation, a cup of tea going cold, to introduce thermodynamics. Thermodynamics is the theory of heat and heat flow, and it was developed mostly during the nineteenth century, when it was discovered that temperature is a bulk property of molecules and atoms in motion. Atoms that move around fast produce a warm temperature, and colder temperatures come from atoms that move very little. The text then introduces entropy, which counts the number of ways you could arrange the molecules and still see the same cup of tea. Finally it lists the four laws of thermodynamics, and it ends by saying that thermodynamics plays a part in weather forecasting, in planets and moons, and even in black holes.",
-        "Today I'm going to talk about text 1, 'Tea and nineteenth century physics', by Hannah Darken. Let's start with an everyday fact. If you leave a hot cup of tea in a cooler room, it always cools down. It never becomes hotter. Everybody knows this, but behind it there is a whole area of physics: thermodynamics, the theory of heat and heat flow. It was developed mostly during the nineteenth century. Before we get to the laws, we need to look at two key ideas. The first one is temperature. Temperature is not a thing inside the tea. It is a bulk property of molecules and atoms in motion. In other words, atoms that move fast produce a warm temperature, and atoms that move very little produce a cold one, like in a frozen block of ice tea. The second idea is entropy. Tea is made of many, many molecules in random motion, and we never see them. In fact, if we re-arranged them slightly, the tea would look the same to us. So entropy counts the number of ways we could arrange the microscopic molecules and still see the same cup of tea macroscopically. With these two ideas, let's look at the four laws. The zeroth law says that if two systems are in thermal equilibrium with a third one, they are in equilibrium with each other. This means there is no net flow of heat between them. The first law says that energy cannot be created or destroyed, only transferred. The second law is where entropy comes in: in an isolated system, entropy tends to increase over time, until it reaches a maximum at equilibrium. And finally, the third law says that as temperature approaches absolute zero, entropy approaches a constant minimum. So, back to our cup of tea: when it cools down, that is the second law in action. And the same theory explains weather forecasting, planets and moons, and even black holes, as well as big questions about information, time and life. Thank you."
+        "Today I'm going to talk about text 1, 'Tea and nineteenth century physics', by Hannah Darken. Let's start with an everyday fact. If you leave a hot cup of tea in a cooler room, it always cools down. It never becomes hotter. Everybody knows this, but behind it there is a whole area of physics: thermodynamics, the theory of heat and heat flow. It was developed mostly during the nineteenth century. Before we get to the laws, we need to look at two key ideas. The first one is temperature. Temperature is not a thing inside the tea. It is a bulk property of molecules and atoms in motion. In other words, atoms that move fast produce a warm temperature, and atoms that move very little produce a cold one, like in a frozen block of ice tea. The second idea is entropy. Tea is made of many, many molecules in random motion, and we never see them. In fact, if we re-arranged them slightly, the tea would look the same to us. So entropy counts the number of ways we could arrange the microscopic molecules and still see the same cup of tea macroscopically. With these two ideas, let's look at the four laws. The zeroth law says that if two systems are in thermal equilibrium with a third one, they are in equilibrium with each other. This means there is no net flow of heat between them. The first law says that energy cannot be created or destroyed, only transferred. The second law is where entropy comes in: in an isolated system, entropy tends to increase over time, until it reaches a maximum at equilibrium. And finally, the third law says that as temperature approaches absolute zero, entropy approaches a constant minimum. So, back to our cup of tea: when it cools down, that is the second law in action. And the same theory explains weather forecasting, planets and moons, and even black holes, as well as big questions about information, time and life. Thank you.",
+        "Today I'm going to talk about text 1, 'Tea and nineteenth century physics', by Hannah Darken. The author's purpose is to explain thermodynamics to non-specialists with an everyday example: a hot cup of tea on a table, in a cooler room. The tea always cools down, and it never becomes hotter. Thermodynamics, the theory of heat and heat flow, explains why. It was developed in the nineteenth century, and today it plays a part in weather forecasting and even black holes. To understand our cup, we need two key ideas. The first is temperature, a bulk property of molecules and atoms in motion. So, while our tea is cooling down, its molecules are slowing down. The second idea is entropy. If we re-arranged the molecules of our tea slightly, it would look the same. Entropy counts how many ways we could do that. Now, the four laws. The zeroth law says that if two systems are in thermal equilibrium with a third one, they are in equilibrium with each other. So when a thermometer shows the same temperature in the tea and in the room, no net heat flows, and the tea stops cooling. The first law says that energy cannot be created or destroyed, so the heat of our tea is not lost: it goes into the room. The second law says that in an isolated system, like the cup and the room together, entropy tends to increase until it reaches a maximum at equilibrium. That's why the tea never becomes hotter. And the third law says that as temperature approaches absolute zero, the lowest possible temperature, entropy approaches a constant minimum. Finally, how is this text connected with my future profession? I'm studying mathematics, and two things caught my attention. First, entropy is really a counting problem, so behind our cup of tea there is combinatorics and probability. Second, the author's method, the one I used today: a difficult idea explained with an everyday example. As a future mathematician, I will often need to explain abstract ideas to non-specialists, so this is a very useful tool. And that's all. Thank you for your attention."
       ],
       "modelVariantLabels": [
         "B",
-        "A-2"
+        "A-2",
+        "A-3"
+      ],
+      "sentenceVoices": [
+        "af_nicole"
       ],
       "scaffold": [
-        "1. Elijo el texto: título y autora.",
+        "1. Elijo el texto: título, autora y propósito.",
         "2. El hecho cotidiano: el té siempre se enfría, nunca al revés.",
         "3. El giro: detrás de eso hay un área entera de la física.",
         "4. ANUNCIO: «antes de las leyes, dos ideas».",
         "5. Primera idea — temperatura: no es una cosa, es movimiento (rápido/lento).",
         "6. Segunda idea — entropía: contar ordenamientos que se ven igual.",
         "7. ANUNCIO: «ahora, las cuatro leyes» (cero, primera, segunda, tercera).",
-        "8. Cierre: mi taza fría ES la segunda ley, y hasta dónde llega la teoría."
+        "8. Cierre: mi taza fría ES la segunda ley, y hasta dónde llega la teoría.",
+        "9. Conexión con tu futura profesión: qué te llamó la atención y qué herramienta te da."
       ],
       "rubric": [
         {
           "text": "Abrís con título y autora",
           "detect": "\\bdarken\\b"
+        },
+        {
+          "text": "Decís el propósito del texto"
         },
         {
           "text": "Arrancás por el hecho cotidiano (el té que se enfría)",
@@ -2503,6 +2512,9 @@
         },
         {
           "text": "Cerrás volviendo a tu taza de té (la segunda ley en acción)"
+        },
+        {
+          "text": "Conectás el texto con tu futura profesión"
         }
       ],
       "speaker": "student",

@@ -23,6 +23,7 @@ import {
   type Atom,
 } from '../content/schema.ts';
 import { splitSentences } from '../content/sentences.ts';
+import { MODEL_VOICES } from '../content/kokoro-voices.ts';
 
 const CONTENT_DIR = join(import.meta.dirname, '..', 'content');
 const PUBLIC_DIR = join(import.meta.dirname, '..', 'public');
@@ -264,6 +265,12 @@ for (const { file, course, unit, aspects, atoms } of unitFiles) {
           `${labels.length} nombre(s) para ${atom.modelVariants?.length ?? 0} variante(s): tienen que ser uno por variante`
         );
       }
+      // Una voz fuera de MODEL_VOICES se generaría, pero la vista nunca la ofrecería.
+      atom.sentenceVoices?.forEach((id, i) => {
+        if (!MODEL_VOICES.some((v) => v.id === id)) {
+          err(file, at(`sentenceVoices[${i}]`), `voz "${id}" desconocida: tiene que ser una de MODEL_VOICES`);
+        }
+      });
       const said = normalize(atom.modelAnswer);
       for (const r of atom.rubric) {
         if (!r.detect) continue;

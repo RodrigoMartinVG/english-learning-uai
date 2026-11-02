@@ -1,0 +1,45 @@
+=============================================================================
+                 TEA AND NINETEENTH CENTURY PHYSICS  ·  Hannah Darken
+     PURPOSE: explain thermodynamics to non-specialists (everyday example)
+=============================================================================
+
+  [ 1. THE EVERYDAY FACT ]
+  • Hot cup of tea on a table, in a cooler room --> always cools down
+  • Never hotter. WHY? --> THERMODYNAMICS: theory of heat and heat flow
+  • 19th century --> today: weather forecasting, black holes
+                                  |
+                                  v
+  [ 2. TWO KEY IDEAS ]
+  +------------------------------------+------------------------------------+
+  | IDEA 1: TEMPERATURE                | IDEA 2: ENTROPY                    |
+  | • Bulk property of molecules and   | • Re-arrange the molecules         |
+  |   atoms in motion                  |   --> the tea looks the same       |
+  | • Our tea cooling down =           | • Entropy = HOW MANY WAYS          |
+  |   molecules slowing down           |                                    |
+  +------------------------------------+------------------------------------+
+                                  |
+                                  v
+  [ 3. THE FOUR LAWS ]
+  +--------+-----------------------------------+----------------------------+
+  | LAW    | THE TEXT                          | OUR CUP                    |
+  +--------+-----------------------------------+----------------------------+
+  | ZEROTH | A ~ C and B ~ C  -->  A ~ B       | thermometer: tea = room    |
+  |        | (~ : no net heat flow)            | --> the tea stops cooling  |
+  +--------+-----------------------------------+----------------------------+
+  | FIRST  | energy is never created           | the heat is not lost:      |
+  |        | or destroyed                      | it goes into the room      |
+  +--------+-----------------------------------+----------------------------+
+  | SECOND | isolated system: entropy grows    | cup + room together        |
+  |        | --> MAXIMUM at equilibrium        | --> never hotter           |
+  +--------+-----------------------------------+----------------------------+
+  | THIRD  | T -> absolute zero (the lowest)   |                            |
+  |        | --> entropy: constant minimum     |                            |
+  +--------+-----------------------------------+----------------------------+
+                                  |
+                                  v
+  [ 4. MY PROFESSION: MATHEMATICS ]
+  • What caught my attention:
+    1) Entropy = a COUNTING problem --> combinatorics & probability
+    2) The author's method (and mine today): everyday example + hard idea
+       --> a useful TOOL to explain abstract ideas to non-specialists
+=============================================================================

@@ -575,6 +575,10 @@ export const productionAtomSchema = z.object({
    *  se nombran solas por posición (B, C, D). Sirve cuando una variante es una
    *  reelaboración de otra y la letra siguiente no lo diría. */
   modelVariantLabels: z.array(z.string().min(1)).optional(),
+  /** Voces extra (ids de MODEL_VOICES) para las ORACIONES sueltas de todas las versiones,
+   *  además de las tres alternativas de siempre: así el audio continuo y el copiar frase
+   *  por frase también las ofrecen. P. ej. `af_nicole`, la más pausada, para practicar. */
+  sentenceVoices: z.array(z.string().min(1)).optional(),
   /** "My Life: Chapter N" — hilo acumulativo. Al final de las 4, es el final oral. */
   chapter: z.number().int().positive().optional(),
   /**
