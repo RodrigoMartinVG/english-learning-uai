@@ -16,6 +16,7 @@ import { unitLabel } from '../shared/labels.ts';
 import {
   buildSession,
   DEFAULT_LENGTH,
+  SWEEP_LENGTH,
   type Scheduler,
   type Session,
   type SessionMode,
@@ -37,6 +38,7 @@ import { SessionPlayer } from './SessionPlayer.tsx';
 import { ResetPanel } from './ResetPanel.tsx';
 import { ReferenceView } from './ReferenceView.tsx';
 import { ReaderView } from './ReaderView.tsx';
+import { ListenView } from './ListenView.tsx';
 import { VoiceScratch } from '../ui/VoiceScratch.tsx';
 import { VoicePractice } from '../ui/VoicePractice.tsx';
 import { VoiceImprov } from '../ui/VoiceImprov.tsx';
@@ -113,6 +115,7 @@ type View =
   | { name: 'unit'; course: Course; unit: number }
   | { name: 'reference'; course: Course; unit: number; textId?: string; only?: 'guide' | 'scripts' }
   | { name: 'reader'; course: Course; unit: number; atomId: string }
+  | { name: 'listen'; course: Course; unit: number }
   | { name: 'session'; session: Session }
   | { name: 'reset' };
 
@@ -137,7 +140,11 @@ export default function App() {
   }, [history]);
 
   const activeCourse =
-    view.name === 'home' || view.name === 'unit' || view.name === 'reference' || view.name === 'reader'
+    view.name === 'home' ||
+    view.name === 'unit' ||
+    view.name === 'reference' ||
+    view.name === 'reader' ||
+    view.name === 'listen'
       ? view.course
       : undefined;
 
@@ -190,6 +197,7 @@ export default function App() {
                 push({ name: 'reference', course: view.course, unit: view.unit, textId, only })
               }
               onReader={(atomId) => push({ name: 'reader', course: view.course, unit: view.unit, atomId })}
+              onListen={() => push({ name: 'listen', course: view.course, unit: view.unit })}
             />
           )}
           {view.name === 'reference' && (
@@ -216,6 +224,16 @@ export default function App() {
           )}
           {view.name === 'reader' && (
             <ReaderView atom={atoms.find((a) => a.id === view.atomId) as ReadingAtom} onBack={back} />
+          )}
+          {view.name === 'listen' && (
+            <ListenView
+              atoms={atoms}
+              course={view.course}
+              unit={view.unit}
+              title={
+                units.find((u) => u.course === view.course && u.unit === view.unit)?.title ?? ''
+              }
+            />
           )}
           {view.name === 'session' && <SessionPlayer session={view.session} onExit={back} />}
           {view.name === 'reset' && <ResetPanel onBack={back} />}
@@ -463,7 +481,20 @@ function Home({
             lo que ya estudiaste, nunca material nuevo. Hacelo cada día para no olvidarte de nada.
           </p>
           <p>
-            <strong>3. Extras (opcionales):</strong> las prácticas sueltas (Ósmosis, Shadowing, Al
+            <strong>3. “🧹 Barrer lo que falta” es la pasada de reconocimiento.</strong> Está en cada
+            unidad, y solo mientras le queden ítems sin tocar. Va derecho a lo que{' '}
+            <em>nunca viste</em> —sin mirar vencimientos, uno por ítem y siempre empezando por
+            escuchar— así cubrís la unidad entera en pocas tandas. No reemplaza al repaso:{' '}
+            <strong>lo genera.</strong> Barré primero, fijá después.
+          </p>
+          <p>
+            <strong>4. “🎧 Listening continuo” es para el oído, y no te pide nada.</strong> Una tira
+            de oraciones de la unidad —las frases y también las de los textos— en orden al azar y en
+            voces distintas. Sigue sola; podés volver atrás, repetir, o elegir cuántas veces suena
+            cada una. No corrige ni cuenta para el repaso: <strong>es escuchar, nada más.</strong>
+          </p>
+          <p>
+            <strong>5. Extras (opcionales):</strong> las prácticas sueltas (Ósmosis, Shadowing, Al
             oído…) refuerzan una habilidad puntual; la <em>Guía de expresiones</em> y los{' '}
             <em>Guiones modelo</em> son material de consulta. No hace falta usarlos todos:{' '}
             <strong>repetí y la barra de cada tema se llena.</strong>
@@ -586,12 +617,14 @@ function UnitView({
   unit,
   onStart,
   onReference,
+  onListen,
   onReader,
 }: {
   course: Course;
   unit: number;
   onStart: (s: Session) => void;
   onReference: (textId?: string, only?: 'guide' | 'scripts') => void;
+  onListen: () => void;
   onReader: (atomId: string) => void;
 }) {
   useProgress();
@@ -644,6 +677,24 @@ function UnitView({
         atoms,
         u.aspects,
         `${u.title} · toda la unidad`,
+        scheduler
+      )
+    );
+
+  // Barrer la unidad: la pasada de reconocimiento. Va por los átomos que todavía no
+  // tocaste nunca, uno cada uno y por el peldaño más bajo, sin mirar vencimientos.
+  // Tanda doble (24) porque son casi todos pasos de percepción. Ver session.ts.
+  const goSweep = () =>
+    onStart(
+      buildSession(
+        {
+          scope: { kind: 'unit', course: u.course, unit: u.unit },
+          mode: 'sweep',
+          length: SWEEP_LENGTH,
+        },
+        atoms,
+        u.aspects,
+        `${u.title} · barrido`,
         scheduler
       )
     );
@@ -706,6 +757,23 @@ function UnitView({
             varios temas les faltan pocos ítems. La primera vez, descubre en escalera. */}
         <button className="btn btn--primary btn--wide unit__study" onClick={goUnit}>
           ★ Estudiar toda la unidad
+        </button>
+        {/* Barrido: solo mientras QUEDE material sin tocar. Es una pasada de
+            reconocimiento, no un modo permanente — cuando la unidad está cubierta
+            el botón se va solo y queda el estudio normal, que es el que fija. */}
+        {unitCov.total - unitCov.started > 0 && (
+          <button className="btn btn--wide unit__sweep" onClick={goSweep}>
+            🧹 Barrer lo que falta
+            <span className="unit__sweep-count">
+              {unitCov.total - unitCov.started} sin tocar
+            </span>
+          </button>
+        )}
+        {/* Listening continuo: la tira de oraciones que sigue sola. No evalúa ni
+            cuenta para el repaso — por eso va aparte de los dos botones de estudio. */}
+        <button className="btn btn--wide unit__listen" onClick={onListen}>
+          🎧 Listening continuo
+          <span className="unit__listen-note">oraciones al azar, voces mezcladas</span>
         </button>
         {/* Dos accesos separados, sin solaparse: uno da SOLO la guía de expresiones;
             el otro SOLO los guiones modelo (todos, con su botón de reconstruir). En una

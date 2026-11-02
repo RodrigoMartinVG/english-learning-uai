@@ -1,0 +1,30 @@
+=============================================================================
+             TEA AND 19TH CENTURY PHYSICS (THERMODYNAMICS)
+=============================================================================
+
+  [ 1. THE EVERYDAY FACT ]
+  • Hot cup of tea on a table  --->  Always cools down (never hotter)
+  • Thermodynamics: Theory of heat and heat flow (19th century)
+                                  |
+                                  v
+  [ 2. TWO KEY IDEAS ]
+  +-----------------------------------+-----------------------------------+
+  | A) TEMPERATURE                    | B) ENTROPY                        |
+  | • Bulk property of atoms in motion| • Many molecules in random motion |
+  | • Fast atoms = Warm temperature   | • Counts the number of ways to    |
+  | • Very little motion = Cold       |   arrange molecules looking       |
+  |                                   |   the same to us                  |
+  +-----------------------------------+-----------------------------------+
+                                  |
+                                  v
+  [ 3. THE FOUR LAWS ]
+  • ZEROTH LAW : Thermal equilibrium (A = C and B = C  -->  A = B)
+  • FIRST LAW  : Energy cannot be created/destroyed (only transferred)
+  • SECOND LAW : In an isolated system, entropy tends to increase
+  • THIRD LAW  : Near absolute zero (-273.15 °C), entropy -> constant minimum
+                                  |
+                                  v
+  [ 4. IN ACTION (CONCLUSION) ]
+  • Cold cup of tea = The Second Law in action!
+  • Also explains: Weather forecasting, planets & moons, black holes.
+=============================================================================

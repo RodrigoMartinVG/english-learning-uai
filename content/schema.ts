@@ -244,6 +244,22 @@ export const atomIdSchema = z
 export const readingBlockKey = (atomId: string, sectionIdx: number, blockIdx: number): string =>
   `${atomId}.sec.${sectionIdx}.b.${blockIdx}`;
 
+/**
+ * Clave de audio de UNA ORACIÓN de un párrafo del `reading`.
+ *
+ * El párrafo entero tiene su clave (`readingBlockKey`) y es la que usa el Lector:
+ * ahí se lee de corrido. Pero el Listening continuo mezcla oraciones sueltas de
+ * distintas fuentes, y un párrafo de cinco oraciones no es un ítem — es un texto.
+ * Las oraciones se parten con `splitSentences`, el mismo partidor que usa
+ * build-audio, para que runtime y build no discrepen sobre cuál es la oración `n`.
+ */
+export const readingSentenceKey = (
+  atomId: string,
+  sectionIdx: number,
+  blockIdx: number,
+  sentIdx: number
+): string => `${readingBlockKey(atomId, sectionIdx, blockIdx)}.s.${sentIdx}`;
+
 /** Clave de audio de una respuesta con modo (§3.5): el modelo leído en voz alta. */
 export const answerKey = (atomId: string, answerIdx: number): string => `${atomId}.ans.${answerIdx}`;
 
@@ -555,6 +571,10 @@ export const productionAtomSchema = z.object({
   modelAnswer: z.string().min(1),
   /** Versiones alternativas del modelo, para la guía de expresiones (§ referencia). */
   modelVariants: z.array(z.string().min(1)).optional(),
+  /** Nombres de las variantes, en paralelo a `modelVariants` ("B", "A-2"…). Sin esto,
+   *  se nombran solas por posición (B, C, D). Sirve cuando una variante es una
+   *  reelaboración de otra y la letra siguiente no lo diría. */
+  modelVariantLabels: z.array(z.string().min(1)).optional(),
   /** "My Life: Chapter N" — hilo acumulativo. Al final de las 4, es el final oral. */
   chapter: z.number().int().positive().optional(),
   /**
@@ -631,7 +651,23 @@ export const listeningAtomSchema = z.object({
  * shadowing); `list` son viñetas; `figure` es una figura del original con su alt.
  */
 export const readingBlockSchema = z.discriminatedUnion('kind', [
-  z.object({ kind: z.literal('para'), text: z.string().min(1) }),
+  z.object({
+    kind: z.literal('para'),
+    text: z.string().min(1),
+    /**
+     * Traducción al español, UNA POR ORACIÓN del párrafo.
+     *
+     * Es un array y no un string porque el consumidor no es el Lector —que muestra
+     * el párrafo entero en inglés, sin muletas— sino el Listening continuo, que
+     * sirve las oraciones sueltas y cada una necesita su traducción al lado.
+     *
+     * El largo tiene que coincidir con `splitSentences(text).length`; lo verifica
+     * validate-content. Sin esa verificación, editar el párrafo y olvidarse de la
+     * traducción desalinea las oraciones en silencio y el alumno lee la traducción
+     * de la oración siguiente — un error invisible y peor que no tener traducción.
+     */
+    gloss: z.array(z.string().min(1)).optional(),
+  }),
   z.object({ kind: z.literal('list'), items: z.array(z.string().min(1)).min(1) }),
   z.object({ kind: z.literal('figure'), image: imageRefSchema, caption: z.string().optional() }),
 ]);

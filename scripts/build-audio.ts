@@ -25,6 +25,7 @@ import {
   unitFileSchema,
   BLANK,
   readingBlockKey,
+  readingSentenceKey,
   answerKey,
   stepQuestionKey,
   verbPastKey,
@@ -308,8 +309,19 @@ for (const atom of atoms) {
       atom.sections.forEach((sec, si) => {
         sec.blocks.forEach((b, bi) => {
           const key = readingBlockKey(atom.id, si, bi);
-          if (b.kind === 'para') push(key, b.text, atom.speaker);
-          else if (b.kind === 'list') push(key, b.items.join('. '), atom.speaker);
+          if (b.kind === 'para') {
+            push(key, b.text, atom.speaker);
+            // Y cada ORACIÓN por separado, para el Listening continuo: ahí las
+            // oraciones del texto se barajan sueltas entre las frases, y un párrafo
+            // de cinco oraciones no es un ítem. Mismo partidor que el runtime.
+            //
+            // Solo si el párrafo tiene MÁS de una: con una sola, la clave del bloque
+            // ya es esa oración y generar un gemelo idéntico es duplicar el mp3.
+            const sents = splitSentences(b.text);
+            if (sents.length > 1) {
+              sents.forEach((t, m) => push(readingSentenceKey(atom.id, si, bi, m), t, atom.speaker));
+            }
+          } else if (b.kind === 'list') push(key, b.items.join('. '), atom.speaker);
           else if (b.kind === 'figure' && b.caption) push(key, b.caption, atom.speaker);
         });
       });

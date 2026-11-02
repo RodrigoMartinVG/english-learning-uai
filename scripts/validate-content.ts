@@ -22,6 +22,7 @@ import {
   type Aspect,
   type Atom,
 } from '../content/schema.ts';
+import { splitSentences } from '../content/sentences.ts';
 
 const CONTENT_DIR = join(import.meta.dirname, '..', 'content');
 const PUBLIC_DIR = join(import.meta.dirname, '..', 'public');
@@ -253,6 +254,16 @@ for (const { file, course, unit, aspects, atoms } of unitFiles) {
      * palabra. Un detector que no reconoce la respuesta ideal está roto.
      */
     if (atom.kind === 'production') {
+      // Los nombres van en paralelo a las variantes: si los largos no coinciden, cada
+      // versión queda con el nombre de otra.
+      const labels = atom.modelVariantLabels;
+      if (labels && labels.length !== (atom.modelVariants?.length ?? 0)) {
+        err(
+          file,
+          at('modelVariantLabels'),
+          `${labels.length} nombre(s) para ${atom.modelVariants?.length ?? 0} variante(s): tienen que ser uno por variante`
+        );
+      }
       const said = normalize(atom.modelAnswer);
       for (const r of atom.rubric) {
         if (!r.detect) continue;
@@ -278,6 +289,20 @@ for (const { file, course, unit, aspects, atoms } of unitFiles) {
         sec.blocks.forEach((b, bi) => {
           if (b.kind === 'figure' && !existsSync(join(PUBLIC_DIR, b.image.src))) {
             err(file, at(`sections.${si}.blocks.${bi}.image`), `no existe el archivo ${b.image.src}`);
+          }
+          // La traducción de un párrafo va ORACIÓN POR ORACIÓN, y el Listening
+          // continuo las sirve sueltas emparejadas por índice. Si los largos no
+          // coinciden, cada oración queda con la traducción de otra: un error que
+          // no rompe nada y que el alumno lee como si fuera correcto. Acá se corta.
+          if (b.kind === 'para' && b.gloss) {
+            const n = splitSentences(b.text).length;
+            if (b.gloss.length !== n) {
+              err(
+                file,
+                at(`sections.${si}.blocks.${bi}.gloss`),
+                `tiene ${b.gloss.length} traducciones para ${n} oraciones: una por oración`
+              );
+            }
           }
         });
       });

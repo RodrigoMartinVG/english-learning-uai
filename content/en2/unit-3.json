@@ -7651,19 +7651,42 @@
           "blocks": [
             {
               "kind": "para",
-              "text": "Dear James, this vacation is wonderful. I arrived by ship to the island. The island is beautiful and the weather is hot and sunny every day."
+              "text": "Dear James, this vacation is wonderful. I arrived by ship to the island. The island is beautiful and the weather is hot and sunny every day.",
+              "gloss": [
+                "Querido James, estas vacaciones son maravillosas.",
+                "Llegué a la isla en barco.",
+                "La isla es hermosa y el clima está caluroso y soleado todos los días."
+              ]
             },
             {
               "kind": "para",
-              "text": "I arrived on Saturday morning and I went to Agios Sostis beach. I took a long swim and then I sunbathed until noon. Next, I had lunch at a tavern on the beach. Also, I met some boys from Romania and we played volleyball with some of the local people. They are all very friendly."
+              "text": "I arrived on Saturday morning and I went to Agios Sostis beach. I took a long swim and then I sunbathed until noon. Next, I had lunch at a tavern on the beach. Also, I met some boys from Romania and we played volleyball with some of the local people. They are all very friendly.",
+              "gloss": [
+                "Llegué el sábado a la mañana y fui a la playa de Agios Sostis.",
+                "Nadé un buen rato y después tomé sol hasta el mediodía.",
+                "Después almorcé en una taberna de la playa.",
+                "Además, conocí a unos chicos de Rumania y jugamos al vóley con algunos de los lugareños.",
+                "Son todos muy amables."
+              ]
             },
             {
               "kind": "para",
-              "text": "In addition, I loved the hotel because it is fantastic, very modern, and it also has a pool. I liked the town, I walked around and took some photos. Then, I went to Delos to visit the ancient ruins. Finally, I went shopping yesterday and I bought you a nice present."
+              "text": "In addition, I loved the hotel because it is fantastic, very modern, and it also has a pool. I liked the town, I walked around and took some photos. Then, I went to Delos to visit the ancient ruins. Finally, I went shopping yesterday and I bought you a nice present.",
+              "gloss": [
+                "Además, me encantó el hotel porque es fantástico, muy moderno, y encima tiene pileta.",
+                "Me gustó el pueblo, lo caminé y saqué algunas fotos.",
+                "Después fui a Delos a visitar las ruinas antiguas.",
+                "Por último, ayer fui de compras y te compré un lindo regalo."
+              ]
             },
             {
               "kind": "para",
-              "text": "I hope you like it. See you when I get home. Love, Helen."
+              "text": "I hope you like it. See you when I get home. Love, Helen.",
+              "gloss": [
+                "Espero que te guste.",
+                "Nos vemos cuando vuelva a casa.",
+                "Cariños, Helen."
+              ]
             }
           ]
         }

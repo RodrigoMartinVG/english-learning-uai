@@ -5846,7 +5846,10 @@
           "blocks": [
             {
               "kind": "para",
-              "text": "People in Britain usually have three meals a day: breakfast between seven and nine in the morning, lunch between twelve and half past one, and dinner between half past six and eight in the evening."
+              "text": "People in Britain usually have three meals a day: breakfast between seven and nine in the morning, lunch between twelve and half past one, and dinner between half past six and eight in the evening.",
+              "gloss": [
+                "En Gran Bretaña se suele hacer tres comidas al día: el desayuno entre las siete y las nueve de la mañana, el almuerzo entre las doce y la una y media, y la cena entre las seis y media y las ocho de la tarde."
+              ]
             }
           ]
         },
@@ -5855,7 +5858,13 @@
           "blocks": [
             {
               "kind": "para",
-              "text": "The traditional English breakfast is a big meal: eggs, bacon, sausages, fried bread, baked beans and mushrooms. But today most people do not have time for it. They usually have cereal with milk, a slice of toast, orange juice and coffee. In winter some people prefer a bowl of hot porridge."
+              "text": "The traditional English breakfast is a big meal: eggs, bacon, sausages, fried bread, baked beans and mushrooms. But today most people do not have time for it. They usually have cereal with milk, a slice of toast, orange juice and coffee. In winter some people prefer a bowl of hot porridge.",
+              "gloss": [
+                "El desayuno inglés tradicional es una comida abundante: huevos, panceta, salchichas, pan frito, porotos en salsa y hongos.",
+                "Pero hoy la mayoría no tiene tiempo para eso.",
+                "Suelen tomar cereales con leche, una tostada, jugo de naranja y café.",
+                "En invierno algunos prefieren un plato de avena caliente."
+              ]
             }
           ]
         },
@@ -5864,7 +5873,12 @@
           "blocks": [
             {
               "kind": "para",
-              "text": "Lunch is a light meal. Many children take a packed lunch to school: a sandwich, a packet of crisps, a piece of fruit and a drink. Adults often eat a sandwich near the office."
+              "text": "Lunch is a light meal. Many children take a packed lunch to school: a sandwich, a packet of crisps, a piece of fruit and a drink. Adults often eat a sandwich near the office.",
+              "gloss": [
+                "El almuerzo es una comida liviana.",
+                "Muchos chicos llevan la vianda al colegio: un sándwich, un paquete de papas fritas, una fruta y una bebida.",
+                "Los adultos suelen comer un sándwich cerca de la oficina."
+              ]
             }
           ]
         },
@@ -5873,7 +5887,12 @@
           "blocks": [
             {
               "kind": "para",
-              "text": "The traditional dinner is meat and two vegetables, and on Sunday a roast dinner with gravy. But things have changed. A recent survey found that curry is now the most popular dish in Britain, and rice and pasta dishes have replaced the old British dinner in many homes."
+              "text": "The traditional dinner is meat and two vegetables, and on Sunday a roast dinner with gravy. But things have changed. A recent survey found that curry is now the most popular dish in Britain, and rice and pasta dishes have replaced the old British dinner in many homes.",
+              "gloss": [
+                "La cena tradicional es carne con dos verduras, y los domingos un asado al horno con su salsa.",
+                "Pero las cosas cambiaron.",
+                "Una encuesta reciente encontró que el curry es hoy el plato más popular de Gran Bretaña, y que los platos de arroz y pasta reemplazaron a la vieja cena británica en muchas casas."
+              ]
             }
           ]
         }

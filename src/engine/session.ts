@@ -9,7 +9,7 @@ import { atomInAspect, type Aspect, type Atom, type Course, type Skill } from '.
 import { mechanics } from '../mechanics/registry.ts';
 import { shuffle } from '../shared/shuffle.ts';
 
-export type SessionMode = 'discover' | 'drill' | 'review' | 'exam';
+export type SessionMode = 'discover' | 'drill' | 'review' | 'sweep' | 'exam';
 
 export type SessionScope =
   | { kind: 'aspect'; course: Course; unit: number; aspectId: string }
@@ -71,6 +71,15 @@ export interface Session {
 }
 
 export const DEFAULT_LENGTH = 12;
+
+/**
+ * El barrido va al doble: es una pasada de reconocimiento, no de estudio.
+ *
+ * Casi todos sus pasos son el peldaño más bajo del átomo (escuchar, reconocer),
+ * que cuestan bastante menos que producir, así que 24 no se siente como dos
+ * sesiones. Con este largo, una unidad de ~170 átomos se barre en ~7 tandas.
+ */
+export const SWEEP_LENGTH = 24;
 
 
 export function atomsInScope(scope: SessionScope, all: Atom[], aspects: Aspect[]): Atom[] {
@@ -305,6 +314,8 @@ export function buildSession(
     // material nuevo — es la acción de fijar la repetición espaciada. El repaso de
     // UN tema sí incorpora lo nuevo del tema, para poder avanzarlo.
     ordered = scheduleReview(candidates, spec.length, scheduler, spec.scope.kind !== 'due');
+  } else if (spec.mode === 'sweep' && scheduler) {
+    ordered = scheduleSweep(candidates, spec.length, scheduler);
   } else if (spec.mode === 'discover') {
     ordered = climbLadder(candidates, spec.length);
   } else {
@@ -411,19 +422,90 @@ function scheduleReview(
   const freshOrdered = [...startNewAtoms, ...otherFresh];
 
   // Cupo garantizado de nuevas (~1/3 de la tanda), con los átomos nuevos al frente.
-  // Lo vencido llena el resto y tiene prioridad; si sobra lugar, entra repaso
-  // adelantado y más material nuevo.
+  // Lo vencido llena el resto y tiene prioridad.
   const freshQuota = Math.min(freshOrdered.length, Math.max(1, Math.round(n / 3)));
   const chosen: { step: Step }[] = [
     ...due.slice(0, Math.max(0, n - freshQuota)),
     ...freshOrdered.slice(0, freshQuota),
   ];
   const room = () => n - chosen.length;
-  if (room() > 0) chosen.push(...spreadByMechanic(shuffle(rest)).slice(0, room()));
+  /**
+   * El relleno: primero lo vencido que no entró, después MÁS material nuevo, y
+   * recién al final `rest` — repaso adelantado de tarjetas que no vencen hoy.
+   *
+   * El orden importa y estaba al revés: `rest` se servía antes que las nuevas, así
+   * que una unidad recién empezada —pocas vencidas, cientos de átomos sin tocar—
+   * gastaba media tanda repitiendo lo que ya habías practicado hace dos días y
+   * todavía recordabas. Medido en en2.u1 con 22/169 practicadas: 2 vencidas + 4 del
+   * cupo nuevo + 6 repeticiones adelantadas, o sea la mitad de la sesión sin avanzar
+   * nada mientras 147 átomos esperaban. Repetir antes de tiempo no es gratis: le
+   * roba el lugar a lo que falta y le miente al SRS, que ya había decidido que esa
+   * tarjeta no tocaba hoy.
+   *
+   * `rest` sigue existiendo como último recurso: cuando no queda nada vencido ni
+   * nada nuevo, adelantar repaso es mejor que acortar la tanda.
+   */
+  if (room() > 0) chosen.push(...due.slice(Math.max(0, n - freshQuota)).slice(0, room()));
   if (room() > 0) chosen.push(...freshOrdered.slice(freshQuota, freshQuota + room()));
-  if (room() > 0) chosen.push(...due.slice(Math.max(0, n - freshQuota)));
+  if (room() > 0) chosen.push(...spreadByMechanic(shuffle(rest)).slice(0, room()));
 
   return spaceOut(chosen.slice(0, n).map((c) => c.step));
+}
+
+/**
+ * El barrido: cubrir el material, no sostenerlo.
+ *
+ * Es el tercer eje de la app, y el que faltaba. "Estudiar" y "Empezar" son los dos
+ * de RETENCIÓN: traen lo que estás por olvidar. Ninguno te lleva por lo que todavía
+ * no viste nunca, porque los dos le dan prioridad a lo vencido — y con razón. Pero
+ * en una unidad de 170 átomos recién empezada eso significa dar vueltas sobre los
+ * mismos 20 mientras 150 esperan. El barrido es la pasada de reconocimiento previa:
+ * tocar todo una vez, aunque sea por arriba.
+ *
+ * Tres reglas, y las tres importan:
+ *
+ *  · UNA tarjeta por ÁTOMO. No por tarjeta de SRS: el objetivo es cubrir material y
+ *    el contador de la unidad cuenta átomos distintos. Repetir el mismo átomo en
+ *    otra habilidad no barre nada.
+ *  · Los átomos SIN EMPEZAR primero, barajados. Es la única prioridad; las fechas
+ *    de vencimiento no participan. Cuando ya no quedan, el barrido se acabó y la
+ *    tanda se completa con lo menos recordado (ahí ya es repaso disfrazado, y está
+ *    bien: significa que la unidad está cubierta).
+ *  · Por el peldaño MÁS BAJO del átomo, como la escalera de Descubrir: se estrena
+ *    percibiendo, no produciendo. Entre las mecánicas que empatan en ese peldaño se
+ *    sortea, si no 24 pasos seguidos salen todos de la misma.
+ *
+ * Lo que el barrido NO hace es saltear el SRS: cada paso se registra como cualquier
+ * otro y queda programado. El barrido no esquiva el repaso — lo genera.
+ */
+function scheduleSweep(
+  candidates: { step: Step; level: number }[],
+  n: number,
+  sch: Scheduler
+): Step[] {
+  const startedAtoms = new Set(
+    candidates.filter((c) => !sch.isNew(c.step)).map((c) => c.step.atomId)
+  );
+
+  // Un candidato por átomo: sorteado entre los del peldaño más bajo que tenga.
+  const porAtomo = new Map<string, { step: Step; level: number }[]>();
+  for (const c of candidates) {
+    const g = porAtomo.get(c.step.atomId);
+    if (!g) porAtomo.set(c.step.atomId, [c]);
+    else if (c.level < g[0]!.level) porAtomo.set(c.step.atomId, [c]);
+    else if (c.level === g[0]!.level) g.push(c);
+  }
+  const unoPorAtomo = [...porAtomo.values()].map((g) => g[Math.floor(Math.random() * g.length)]!);
+
+  const sinTocar = shuffle(unoPorAtomo.filter((c) => !startedAtoms.has(c.step.atomId)));
+  const tocados = unoPorAtomo
+    .filter((c) => startedAtoms.has(c.step.atomId))
+    .sort((a, b) => sch.retrievability(a.step) - sch.retrievability(b.step));
+
+  // Recortar ANTES de mezclar: el orden (sin tocar primero) decide QUÉ entra; el
+  // reparto por mecánica solo decide en qué orden se sirve lo que ya entró.
+  const tanda = [...sinTocar, ...tocados].slice(0, n);
+  return spaceOut(spreadByMechanic(tanda).map((c) => c.step));
 }
 
 /** Evita dos pasos seguidos de la misma mecánica, sin reordenar por prioridad de más. */

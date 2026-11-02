@@ -10309,11 +10309,29 @@
           "blocks": [
             {
               "kind": "para",
-              "text": "These are my grandparents. They are very sweet but old. Grandma Jane is one metre seventy-two tall. She is pretty tall for a lady. She weighs about seventy kilos, so she is a bit fat. She has got curly hair. She has got a big nose but small ears. She has also got a big smile. Her face is square."
+              "text": "These are my grandparents. They are very sweet but old. Grandma Jane is one metre seventy-two tall. She is pretty tall for a lady. She weighs about seventy kilos, so she is a bit fat. She has got curly hair. She has got a big nose but small ears. She has also got a big smile. Her face is square.",
+              "gloss": [
+                "Estos son mis abuelos.",
+                "Son muy dulces, pero viejos.",
+                "La abuela Jane mide un metro setenta y dos.",
+                "Es bastante alta para una mujer.",
+                "Pesa alrededor de setenta kilos, así que es un poco gorda.",
+                "Tiene el pelo enrulado.",
+                "Tiene la nariz grande, pero las orejas chicas.",
+                "También tiene una gran sonrisa.",
+                "Su cara es cuadrada."
+              ]
             },
             {
               "kind": "para",
-              "text": "Grandpa John is very different. He is slim and about one metre fifty tall, so he is very short. His face is round and he is bald. He has also got a moustache. They both wear glasses."
+              "text": "Grandpa John is very different. He is slim and about one metre fifty tall, so he is very short. His face is round and he is bald. He has also got a moustache. They both wear glasses.",
+              "gloss": [
+                "El abuelo John es muy distinto.",
+                "Es flaco y mide alrededor de un metro cincuenta, así que es muy bajo.",
+                "Su cara es redonda y es pelado.",
+                "También tiene bigote.",
+                "Los dos usan anteojos."
+              ]
             }
           ]
         }

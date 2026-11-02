@@ -167,6 +167,24 @@
 /* Progreso global dentro de la unidad (no desaparece al entrar). */
 .unit__progress { margin-top: 16px; }
 .unit__study { margin-top: 16px; }
+/* Barrido: secundario al estudio, no compite con el primario. Solo aparece
+   mientras queda material sin tocar. */
+.unit__sweep {
+  margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: var(--surface-hi); border: 1px solid var(--border); color: var(--text-dim);
+}
+.unit__sweep:hover { border-color: var(--accent); color: var(--text); }
+/* Listening continuo: pasivo, por eso más apagado que estudiar y barrer. */
+.unit__listen {
+  margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: var(--surface-hi); border: 1px solid var(--border); color: var(--text-dim);
+}
+.unit__listen:hover { border-color: var(--accent); color: var(--text); }
+.unit__listen-note { font-size: 11px; color: var(--text-faint); }
+.unit__sweep-count {
+  font-family: var(--mono); font-size: 11px; color: var(--text-faint);
+  padding: 2px 8px; border-radius: 999px; background: var(--surface);
+}
 .unit__progress-label { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); }
 .today__stats { font-size: 12px; color: var(--text-faint); font-family: var(--mono); margin-top: 8px; }
 

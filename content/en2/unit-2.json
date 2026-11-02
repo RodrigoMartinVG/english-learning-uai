@@ -6128,19 +6128,35 @@
           "blocks": [
             {
               "kind": "para",
-              "text": "William Shakespeare was the greatest writer in the English language. He was born in 1564 in Stratford-upon-Avon, a small town in the centre of England."
+              "text": "William Shakespeare was the greatest writer in the English language. He was born in 1564 in Stratford-upon-Avon, a small town in the centre of England.",
+              "gloss": [
+                "William Shakespeare fue el mayor escritor de la lengua inglesa.",
+                "Nació en 1564 en Stratford-upon-Avon, un pueblo chico del centro de Inglaterra."
+              ]
             },
             {
               "kind": "para",
-              "text": "At the age of eighteen he married Anne Hathaway, who was eight years older than himself. They had three children. A few years later he moved to London, where he worked as an actor and a playwright."
+              "text": "At the age of eighteen he married Anne Hathaway, who was eight years older than himself. They had three children. A few years later he moved to London, where he worked as an actor and a playwright.",
+              "gloss": [
+                "A los dieciocho años se casó con Anne Hathaway, que era ocho años mayor que él.",
+                "Tuvieron tres hijos.",
+                "Unos años después se mudó a Londres, donde trabajó como actor y dramaturgo."
+              ]
             },
             {
               "kind": "para",
-              "text": "He wrote thirty-seven plays and one hundred and fifty-four sonnets. His most famous plays are the four great tragedies: Hamlet, Macbeth, King Lear and Othello."
+              "text": "He wrote thirty-seven plays and one hundred and fifty-four sonnets. His most famous plays are the four great tragedies: Hamlet, Macbeth, King Lear and Othello.",
+              "gloss": [
+                "Escribió treinta y siete obras de teatro y ciento cincuenta y cuatro sonetos.",
+                "Sus obras más famosas son las cuatro grandes tragedias: Hamlet, Macbeth, El rey Lear y Otelo."
+              ]
             },
             {
               "kind": "para",
-              "text": "Shakespeare died in Stratford-upon-Avon on the twenty-third of April, 1616, but his plays are still performed all over the world today."
+              "text": "Shakespeare died in Stratford-upon-Avon on the twenty-third of April, 1616, but his plays are still performed all over the world today.",
+              "gloss": [
+                "Shakespeare murió en Stratford-upon-Avon el veintitrés de abril de 1616, pero sus obras se siguen representando hoy en todo el mundo."
+              ]
             }
           ]
         }

@@ -118,7 +118,7 @@ export interface ModelScript {
   prompt: string;
   /** modelAnswer + modelVariants: las versiones alternativas del mismo texto.
    *  `chunks` son sus oraciones con audio propio (para el audio continuo). */
-  versions: { text: string; audioKey?: string; chunks: ScriptChunk[] }[];
+  versions: { label: string; text: string; audioKey?: string; chunks: ScriptChunk[] }[];
   speakerId: string;
   /** ¿Se puede reconstruir con "Armá el guion"? (Necesita pasos guía.) */
   buildable: boolean;
@@ -145,6 +145,13 @@ export function versionChunks(
   }));
 }
 
+/** El nombre de una versión: "Versión A" para el modelo; las variantes, por su nombre
+ *  propio (`modelVariantLabels`) o, si no tienen, por posición (B, C, D). */
+export function modelVersionLabel(p: Extract<Atom, { kind: 'production' }>, versionIdx: number): string {
+  if (versionIdx === 0) return 'Versión A';
+  return `Versión ${p.modelVariantLabels?.[versionIdx - 1] ?? String.fromCharCode(65 + versionIdx)}`;
+}
+
 /** Los scripts largos: producción con su modelo y sus versiones alternativas. */
 export function modelScripts(atoms: Atom[]): ModelScript[] {
   return atoms
@@ -152,8 +159,9 @@ export function modelScripts(atoms: Atom[]): ModelScript[] {
     .map((a) => {
       const p = a as Extract<Atom, { kind: 'production' }>;
       const versions = [
-        { text: p.modelAnswer, audioKey: `${p.id}.model`, chunks: versionChunks(p, 0) },
+        { label: modelVersionLabel(p, 0), text: p.modelAnswer, audioKey: `${p.id}.model`, chunks: versionChunks(p, 0) },
         ...(p.modelVariants ?? []).map((t, i) => ({
+          label: modelVersionLabel(p, i + 1),
           text: t,
           audioKey: `${p.id}.modelvar.${i}`,
           chunks: versionChunks(p, i + 1),

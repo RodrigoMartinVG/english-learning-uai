@@ -16,7 +16,7 @@ import { ShadowRun } from '../../ui/ShadowRun.tsx';
 import type { Recording } from '../../audio/Recorder.ts';
 import { LiveDictation, Highlighted, type DictationResult } from '../../ui/LiveDictation.tsx';
 import { stepQuestionKey } from '../../../content/schema.ts';
-import { versionChunks } from '../../data/reference.ts';
+import { modelVersionLabel, versionChunks } from '../../data/reference.ts';
 import { expectedWords } from './mechanic.ts';
 import type { MechanicViewProps } from '../types.ts';
 import type { ScriptBuilderRound } from './mechanic.ts';
@@ -79,7 +79,7 @@ export function ScriptBuilderView({ round, onDone }: MechanicViewProps<ScriptBui
   );
 
   const versionCount = 1 + variants.length;
-  const versionLabel = (v: number) => (v === 0 ? 'Versión A' : `Versión ${String.fromCharCode(65 + v)}`);
+  const versionLabel = (v: number) => modelVersionLabel(target, v);
   const versionText = (v: number) => (v === 0 ? target.modelAnswer : variants[v - 1]!);
   const versionWholeKey = (v: number) => (v === 0 ? `${target.id}.model` : `${target.id}.modelvar.${v - 1}`);
 

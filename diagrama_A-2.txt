@@ -1,0 +1,37 @@
+=============================================================================
+             TEA AND NINETEENTH CENTURY PHYSICS (THERMODYNAMICS)
+                            by Hannah Darken
+=============================================================================
+
+  [ 1. THE EVERYDAY FACT ]
+  • Hot cup of tea in a cooler room  --->  always cools down (never hotter)
+  • Thermodynamics = the theory of heat and heat flow (19th century)
+                                  |
+                                  v
+  [ 2. TWO KEY IDEAS ]
+  +------------------------------------+------------------------------------+
+  | IDEA 1: TEMPERATURE                | IDEA 2: ENTROPY                    |
+  | • A bulk (= collective) property   | • Many, many molecules in random   |
+  |   of atoms in motion               |   motion (we never see them)       |
+  | • Fast atoms  -> warm  (hot tea)   | • MICRO: many ways to arrange them |
+  | • Slow atoms  -> cold  (a frozen   | • MACRO: the same cup of tea       |
+  |   block of ice tea)                | • ENTROPY = the number of ways     |
+  +------------------------------------+------------------------------------+
+                                  |
+                                  v
+  [ 3. THE FOUR LAWS ]
+  • ZEROTH : A ~ C  and  B ~ C   -->   A ~ B
+             ~ = thermal equilibrium = no net flow of heat
+  • FIRST  : energy is never created or destroyed, only transferred
+  • SECOND : in an isolated system, ENTROPY (idea 2) tends to increase
+             --> it reaches a MAXIMUM at equilibrium
+  • THIRD  : as T -> absolute zero (-273.15 °C),
+             entropy -> a constant minimum
+                                  |
+                                  v
+  [ 4. IN ACTION ]
+  • Back to our cup:  hot tea --heat--> cooler room ... until equilibrium
+                      = the SECOND LAW in action
+  • Also explains: weather forecasting, planets & moons, black holes
+  • ... and big questions about information, time and life
+=============================================================================

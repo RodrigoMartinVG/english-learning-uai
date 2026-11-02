@@ -140,7 +140,7 @@ export function ReferenceView({
               {s.versions.map((v, i) => (
                 <div key={i} className="ref__version">
                   <div className="ref__version-head">
-                    <span>Versión {String.fromCharCode(65 + i)}</span>
+                    <span>{v.label}</span>
                     <button className="ref__play" onClick={() => say(v.text, v.audioKey, s.speakerId)}>
                       🔊 Escuchar
                     </button>

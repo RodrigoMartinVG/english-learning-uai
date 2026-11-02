@@ -107,6 +107,29 @@ test('repaso: un tema casi terminado estrena varios átomos nuevos, no uno', () 
   assert.ok(estrenados.size >= 3, `debería estrenar los 3 átomos nuevos, estrenó ${estrenados.size}`);
 });
 
+test('repaso: una unidad recién empezada trae material nuevo, no repaso adelantado', () => {
+  // El bug del progreso lento (22/169): pocas tarjetas practicadas, ninguna vencida
+  // todavía, y cientos de átomos sin tocar. El relleno servía `rest` —tarjetas que NO
+  // vencen hoy— antes que las nuevas, así que media tanda se iba en repetir lo mismo
+  // de la sesión anterior. Con nada vencido, la tanda tiene que ser casi toda nueva.
+  const reachable = atoms.filter((a) => mechanics.some((m) => m.accepts(a)));
+  const empezados = new Set(reachable.slice(0, 5).map((a) => a.id));
+  const sched: Scheduler = {
+    isDue: () => false, // nada vencido: todo lo empezado cae en `rest`
+    isNew: (s) => !empezados.has(s.atomId),
+    retrievability: () => 0.9,
+  };
+  const s = buildSession(
+    { scope: { kind: 'unit', course: 'en1', unit: 1 }, mode: 'review', length: 12 },
+    atoms,
+    aspects,
+    'u1',
+    sched
+  );
+  const nuevos = s.steps.filter((st) => !empezados.has(st.atomId)).length;
+  assert.ok(nuevos >= 10, `la tanda debería ser casi toda material nuevo, trajo ${nuevos}/12`);
+});
+
 test('repaso: no repite la misma tarjeta (átomo·habilidad·variante) en una tanda', () => {
   // Varias mecánicas comparten tarjeta; sin deduplicar, una sesión de 12 caía sobre
   // pocas tarjetas y el contador de vencidas casi no bajaba. Todo vencido → la tanda
@@ -121,6 +144,63 @@ test('repaso: no repite la misma tarjeta (átomo·habilidad·variante) en una ta
   );
   const keys = s.steps.map((st) => `${st.atomId}|${st.skill}|${st.variant ?? ''}`);
   assert.equal(new Set(keys).size, keys.length, `hay tarjetas repetidas: ${keys.join(', ')}`);
+});
+
+test('barrido: todos los pasos son de átomos distintos y sin tocar', () => {
+  // La promesa del barrido: 24 pasos = 24 átomos nuevos. Si repitiera átomo (otra
+  // habilidad del mismo) o trajera material ya practicado, no barrería nada.
+  const reachable = atoms.filter((a) => mechanics.some((m) => m.accepts(a)));
+  const empezados = new Set(reachable.slice(0, 5).map((a) => a.id));
+  const sched: Scheduler = {
+    isDue: () => true, // todo vencido: el barrido NO debe hacerle caso
+    isNew: (s) => !empezados.has(s.atomId),
+    retrievability: () => 0.1,
+  };
+  const s = buildSession(
+    { scope: { kind: 'unit', course: 'en1', unit: 1 }, mode: 'sweep', length: 24 },
+    atoms,
+    aspects,
+    'barrido',
+    sched
+  );
+  assert.equal(s.steps.length, 24);
+  const ids = s.steps.map((st) => st.atomId);
+  assert.equal(new Set(ids).size, ids.length, 'un átomo aparece dos veces en el barrido');
+  for (const id of ids) assert.ok(!empezados.has(id), `${id} ya estaba empezado`);
+});
+
+test('barrido: estrena por el peldaño más bajo del átomo', () => {
+  // Se entra percibiendo, no produciendo. Si el barrido estrenara por producción,
+  // sería un examen de material que nunca viste.
+  const sched: Scheduler = { isDue: () => false, isNew: () => true, retrievability: () => 1 };
+  const s = buildSession(
+    { scope: { kind: 'unit', course: 'en1', unit: 1 }, mode: 'sweep', length: 24 },
+    atoms,
+    aspects,
+    'barrido',
+    sched
+  );
+  for (const st of s.steps) {
+    const atom = atoms.find((a) => a.id === st.atomId)!;
+    const minLevel = Math.min(...mechanics.filter((m) => m.accepts(atom)).map((m) => m.level));
+    assert.equal(levelOf(st.mechanicId), minLevel, `${st.atomId} se estrenó por encima del piso`);
+  }
+});
+
+test('barrido: con la unidad cubierta se completa igual (no devuelve tanda vacía)', () => {
+  // Nada sin tocar: ya no hay nada que barrer, pero la tanda no puede salir vacía —
+  // se completa con lo menos recordado, que a esa altura es lo correcto.
+  const sched: Scheduler = { isDue: () => false, isNew: () => false, retrievability: () => 0.4 };
+  const s = buildSession(
+    { scope: { kind: 'unit', course: 'en1', unit: 1 }, mode: 'sweep', length: 24 },
+    atoms,
+    aspects,
+    'barrido',
+    sched
+  );
+  assert.equal(s.steps.length, 24);
+  const ids = s.steps.map((st) => st.atomId);
+  assert.equal(new Set(ids).size, ids.length, 'sigue siendo un átomo por paso');
 });
 
 test('cada paso apunta a un átomo y mecánica reales', () => {

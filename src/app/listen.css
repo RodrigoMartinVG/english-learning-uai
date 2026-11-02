@@ -1,0 +1,69 @@
+/* Listening continuo: una tira larga que se sigue con el oído, no con el ojo.
+   La lista manda; los controles quedan pegados arriba para no perderlos al bajar. */
+
+.listen { max-width: 900px; margin: 0 auto; padding-bottom: 48px; }
+.listen__eyebrow {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint);
+}
+.listen__title { margin: 4px 0 8px; }
+.listen__lead { color: var(--text-dim); font-size: 14px; max-width: 62ch; margin-bottom: 18px; }
+.listen__empty { color: var(--text-faint); font-size: 14px; }
+
+/* Barra de transporte: sticky, porque la lista es larga y se controla desde abajo. */
+.listen__bar {
+  position: sticky; top: 72px; z-index: 5;
+  display: flex; align-items: center; flex-wrap: wrap; gap: 8px;
+  padding: 10px; border: 1px solid var(--border); border-radius: var(--radius);
+  background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px);
+}
+.listen__nav { min-width: 44px; padding: 0 12px; font-size: 16px; }
+.listen__play { min-width: 140px; }
+.listen__repeats {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--text-faint); margin-left: auto;
+}
+.listen__repeats select {
+  background: var(--surface-hi); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px; padding: 6px 8px; font-size: 13px;
+}
+.listen__toggle { font-size: 12px; padding: 0 12px; color: var(--text-dim); }
+.listen__toggle--on { color: var(--accent); border-color: var(--accent); }
+
+.listen__status {
+  display: flex; align-items: center; gap: 12px; margin: 10px 2px 6px;
+  font-family: var(--mono); font-size: 12px; color: var(--text-faint); min-height: 20px;
+}
+.listen__voice { color: var(--accent); }
+.listen__dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--success);
+  animation: listen-pulse 1s ease-in-out infinite;
+}
+@keyframes listen-pulse { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
+
+.listen__list { list-style: none; margin: 0; padding: 0; }
+.listen__item {
+  display: grid; grid-template-columns: 36px 1fr 1fr; gap: 12px; align-items: baseline;
+  padding: 10px 12px; border-radius: var(--radius); cursor: pointer;
+  border: 1px solid transparent; transition: background var(--dur) var(--ease);
+}
+.listen__item:hover { background: var(--surface); }
+.listen__item--on {
+  background: var(--surface-hi); border-color: var(--accent);
+}
+.listen__num { font-family: var(--mono); font-size: 11px; color: var(--text-faint); }
+.listen__en { font-size: 15px; color: var(--text); }
+.listen__item--on .listen__en { font-weight: 600; }
+.listen__es { font-size: 13px; color: var(--text-faint); }
+/* De qué texto salió la oración. Marca discreta: importa de dónde viene, no tanto. */
+.listen__from {
+  margin-left: 8px; font-size: 10px; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--text-faint); border: 1px solid var(--border); border-radius: 999px;
+  padding: 1px 6px; vertical-align: middle;
+}
+
+/* En angosto, la traducción baja debajo del inglés en vez de apretarse al lado. */
+@media (max-width: 640px) {
+  .listen__item { grid-template-columns: 28px 1fr; }
+  .listen__es { grid-column: 2; }
+  .listen__repeats { margin-left: 0; }
+}
