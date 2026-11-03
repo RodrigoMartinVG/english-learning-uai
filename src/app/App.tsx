@@ -39,6 +39,8 @@ import { ResetPanel } from './ResetPanel.tsx';
 import { ReferenceView } from './ReferenceView.tsx';
 import { ReaderView } from './ReaderView.tsx';
 import { ListenView } from './ListenView.tsx';
+import { TalkView } from './TalkView.tsx';
+import { talkFor } from '../data/talks.ts';
 import { VoiceScratch } from '../ui/VoiceScratch.tsx';
 import { VoicePractice } from '../ui/VoicePractice.tsx';
 import { VoiceImprov } from '../ui/VoiceImprov.tsx';
@@ -116,6 +118,7 @@ type View =
   | { name: 'reference'; course: Course; unit: number; textId?: string; only?: 'guide' | 'scripts' }
   | { name: 'reader'; course: Course; unit: number; atomId: string }
   | { name: 'listen'; course: Course; unit: number }
+  | { name: 'talk'; course: Course; unit: number; atomId: string; version: number }
   | { name: 'session'; session: Session }
   | { name: 'reset' };
 
@@ -144,7 +147,8 @@ export default function App() {
     view.name === 'unit' ||
     view.name === 'reference' ||
     view.name === 'reader' ||
-    view.name === 'listen'
+    view.name === 'listen' ||
+    view.name === 'talk'
       ? view.course
       : undefined;
 
@@ -219,9 +223,13 @@ export default function App() {
                 const only = s.steps.filter((st) => st.variant === String(version));
                 start({ ...s, steps: only.length ? only : s.steps });
               }}
+              onTalk={(atomId, version) =>
+                push({ name: 'talk', course: view.course, unit: view.unit, atomId, version })
+              }
               onBack={back}
             />
           )}
+          {view.name === 'talk' && <TalkRoute atomId={view.atomId} version={view.version} />}
           {view.name === 'reader' && (
             <ReaderView atom={atoms.find((a) => a.id === view.atomId) as ReadingAtom} onBack={back} />
           )}
@@ -294,6 +302,14 @@ function CoursePicker({ onPick }: { onPick: (course: Course) => void }) {
  * a otra unidad. Va antes que las vistas: su cancel() corre primero, y si la vista
  * nueva auto-reproduce algo (una sesión), ese play gana.
  */
+/** La exposición con diagrama de una versión (la vista solo existe si la versión tiene una). */
+function TalkRoute({ atomId, version }: { atomId: string; version: number }) {
+  const atom = atoms.find((a) => a.id === atomId);
+  const talk = atom && talkFor(atom, version);
+  if (atom?.kind !== 'production' || !talk) return null;
+  return <TalkView atom={atom} versionIdx={version} talk={talk} />;
+}
+
 function StopAudioOnNav({ view }: { view: View }) {
   const audio = useAudio();
   useEffect(() => {

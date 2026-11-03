@@ -1,0 +1,185 @@
+/* TalkView — la exposición con el diagrama: esquema fijo + láser + subtítulos. */
+
+.talk {
+  /* El láser es un puntero, no un veredicto: por eso tiene su propio rojo y no usa
+     --error (que en la app significa "mal"). Acá no se corrige nada. */
+  --laser: #ff4d6a;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  /* El diagrama necesita más ancho que el texto corrido del shell: se ensancha
+     hasta ~1180px sin pasarse de la pantalla. */
+  margin-inline: calc(50% - min(590px, 50vw - 16px));
+}
+.talk h1 { font-size: 26px; letter-spacing: -.02em; }
+.talk__intro { color: var(--text-dim); font-size: 14px; }
+
+/* ── El escenario: el diagrama y, encima, el láser ─────────────────────────── */
+.talk__stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+/* Lo señalado no queda tapado por el header (arriba) ni por el dock (abajo). */
+.talk__stage [data-spot] { scroll-margin: 80px 0 230px; }
+
+.talk__head { text-align: center; padding: 4px 0 12px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+.talk__head h2 { font-size: 20px; letter-spacing: -.01em; }
+.talk__sep { color: var(--text-faint); }
+.talk__head p { color: var(--text-dim); font-size: 14px; margin-top: 4px; }
+.talk__head strong { color: var(--text); }
+
+.talk__box {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  padding: 12px 14px;
+}
+.talk__box-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.talk__line { font-size: 15px; line-height: 1.6; color: var(--text); }
+.talk__line::before { content: '• '; color: var(--text-faint); }
+.talk__line--i1 { padding-left: 1.2em; }
+.talk__line--i2 { padding-left: 2.6em; }
+.talk__line--i1::before,
+.talk__line--i2::before { content: none; }
+.talk__box strong { color: var(--text); font-weight: 700; letter-spacing: .01em; }
+/* Las flechas conectan palabras clave: se ven como conexiones, no como texto. */
+.talk__to { color: var(--accent); font-weight: 700; padding: 0 .15em; }
+
+.talk__arrow { text-align: center; color: var(--text-faint); font-size: 16px; line-height: 1; }
+
+.talk__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.talk__col { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; }
+.talk__col h4 { font-size: 14px; margin-bottom: 4px; }
+
+.talk__table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.talk__table th,
+.talk__table td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: top;
+  white-space: pre-line;
+  line-height: 1.45;
+}
+.talk__table th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-dim); font-weight: 600; }
+.talk__table td:first-child { font-weight: 600; text-transform: uppercase; font-size: 12px; letter-spacing: .05em; color: var(--text-dim); width: 90px; }
+
+/* El resaltado: un recuadro suave que se desliza de una parte a otra. */
+.talk__hl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--laser) 10%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--laser) 55%, transparent);
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 420ms var(--ease), width 420ms var(--ease), height 420ms var(--ease), opacity 300ms var(--ease);
+}
+.talk__hl--on { opacity: 1; }
+
+/* El punto del láser: viaja hasta el borde izquierdo de lo señalado. */
+.talk__laser {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--laser);
+  box-shadow: 0 0 6px 2px color-mix(in srgb, var(--laser) 70%, transparent), 0 0 18px 6px color-mix(in srgb, var(--laser) 30%, transparent);
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 480ms var(--ease), opacity 300ms var(--ease);
+}
+.talk__laser--on { opacity: 1; animation: talk-laser 1.6s ease-in-out infinite; }
+@keyframes talk-laser {
+  50% { box-shadow: 0 0 8px 3px color-mix(in srgb, var(--laser) 80%, transparent), 0 0 24px 9px color-mix(in srgb, var(--laser) 25%, transparent); }
+}
+
+/* ── El dock: subtítulo, línea de tiempo y controles, siempre a mano ──────── */
+.talk__dock {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 16px 14px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.talk__sub { font-size: 18px; line-height: 1.45; text-align: center; min-height: 2.9em; color: var(--text); }
+
+.talk__timeline { display: flex; gap: 2px; height: 10px; }
+.talk__seg {
+  position: relative;
+  flex-basis: 0;
+  min-width: 4px;
+  border-radius: 2px;
+  background: var(--surface-hi);
+  overflow: hidden;
+  transition: background var(--dur) var(--ease);
+}
+.talk__seg:hover { background: var(--border); }
+.talk__seg--past { background: var(--accent-dim); }
+.talk__seg--now { box-shadow: 0 0 0 1px var(--accent); }
+.talk__seg-fill { position: absolute; inset: 0 auto 0 0; background: var(--accent); }
+
+.talk__controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.talk__transport { display: flex; align-items: center; gap: 6px; }
+.talk__transport button {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-hi);
+  font-size: 15px;
+  transition: border-color var(--dur) var(--ease);
+}
+.talk__transport button:hover:not(:disabled) { border-color: var(--accent); }
+.talk__transport button:disabled { opacity: .35; cursor: default; }
+.talk__transport .talk__play { width: 46px; height: 46px; background: var(--accent); border-color: var(--accent); color: #fff; font-size: 17px; }
+.talk__time { font-size: 13px; color: var(--text-dim); margin-left: 8px; font-variant-numeric: tabular-nums; }
+
+.talk__options { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.talk__opt { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-dim); }
+.talk__opt select {
+  background: var(--surface-hi);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 5px 8px;
+  font: inherit;
+}
+.talk__rates { display: flex; gap: 4px; }
+.talk__rate {
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.talk__rate--on { border-color: var(--accent); color: var(--text); }
+
+@media (max-width: 640px) {
+  .talk__stage { padding: 12px; }
+  .talk__cols { grid-template-columns: 1fr; }
+  .talk__line { font-size: 14px; }
+  .talk__table { font-size: 13px; }
+  .talk__sub { font-size: 16px; }
+}

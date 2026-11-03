@@ -11,6 +11,7 @@ import { useMemo, useState } from 'react';
 import { useAudio } from '../audio/AudioProvider.tsx';
 import { atoms as allAtoms } from '../data/content.ts';
 import { expressionGuide, modelScripts } from '../data/reference.ts';
+import { talkFor } from '../data/talks.ts';
 import { AltVoices } from '../ui/AltVoices.tsx';
 import { ContinuousPlayer } from '../ui/ContinuousPlayer.tsx';
 import { MODEL_VOICES } from '../../content/kokoro-voices.ts';
@@ -22,6 +23,7 @@ export function ReferenceView({
   textId,
   only,
   onReconstruct,
+  onTalk,
   onBack,
 }: {
   unit: UnitFile;
@@ -33,6 +35,8 @@ export function ReferenceView({
    *  Acá es entrada manual: el alumno elige qué versión trabajar (a diferencia del
    *  repaso, donde el sistema propone versiones como ejercicios separados). */
   onReconstruct?: (atomId: string, version: number) => void;
+  /** Abre la exposición con el diagrama de esa versión (solo las que tienen una). */
+  onTalk?: (atomId: string, version: number) => void;
   onBack: () => void;
 }) {
   const audio = useAudio();
@@ -54,6 +58,10 @@ export function ReferenceView({
   }, [unitAtoms, textId]);
   const guide = useMemo(() => expressionGuide(unitAtoms), [unitAtoms]);
   const scripts = useMemo(() => modelScripts(unitAtoms), [unitAtoms]);
+  const hasTalk = (atomId: string, version: number) => {
+    const atom = unitAtoms.find((a) => a.id === atomId);
+    return !!atom && !!talkFor(atom, version);
+  };
 
   const say = (text: string, key?: string, speakerId?: string) =>
     void audio.speak({ key: key ?? 'ref', text, speakerId: speakerId ?? 'narrator' });
@@ -155,6 +163,11 @@ export function ReferenceView({
                     />
                   )}
                   <ContinuousPlayer chunks={v.chunks} speakerId={s.speakerId} />
+                  {onTalk && hasTalk(s.id, i) && (
+                    <button className="ref__talk" onClick={() => onTalk(s.id, i)}>
+                      🎬 Ver con el diagrama →
+                    </button>
+                  )}
                   {s.buildable && onReconstruct && (
                     <button
                       className="ref__reconstruct ref__reconstruct--version"

@@ -96,6 +96,9 @@ export interface TransportSnapshot {
   currentTime: number;
   /** Segundos. 0 si aún no se conoce la duración. */
   duration: number;
+  /** La clave del audio en curso (la de speak()); null en un clip suelto (playClip).
+   *  Sirve para no leer el avance de un clip como si fuera el del siguiente. */
+  key: string | null;
 }
 
 export interface AudioService {
@@ -210,6 +213,8 @@ export function createAudioService(
   const listeners = new Set<(s: AudioState) => void>();
 
   let current: HTMLAudioElement | null = null;
+  /** La clave de speak() que sonó en `current` (para el transporte). */
+  let currentKey: string | null = null;
   /** Cada speak() incrementa esto. Un token viejo que resuelve ya no manda. */
   let token = 0;
   let lastPlayed: LastPlayed | null = null;
@@ -284,7 +289,7 @@ export function createAudioService(
   const urlOf = (entry: { src: string; hash?: string }) =>
     AUDIO_BASE + entry.src + (entry.hash ? `?v=${entry.hash}` : '');
 
-  async function playFile(url: string, rate: number, _myToken: number): Promise<boolean> {
+  async function playFile(url: string, rate: number, _myToken: number, key: string | null = null): Promise<boolean> {
     const el = preloaded.get(url) ?? new Audio(url);
     el.playbackRate = rate;
     // Sin esto, bajar la velocidad baja el tono y la voz suena a cinta gastada.
@@ -296,6 +301,7 @@ export function createAudioService(
       /* metadata no cargada aún: arranca en 0 igual */
     }
     current = el;
+    currentKey = key;
     unbindTransport?.();
     unbindTransport = bindTransport(el);
     emitTransport();
@@ -398,12 +404,13 @@ export function createAudioService(
 
     getTransport() {
       const el = current;
-      if (!el) return { active: false, paused: true, currentTime: 0, duration: 0 };
+      if (!el) return { active: false, paused: true, currentTime: 0, duration: 0, key: null };
       return {
         active: true,
         paused: el.paused,
         currentTime: el.currentTime || 0,
         duration: Number.isFinite(el.duration) ? el.duration : 0,
+        key: currentKey,
       };
     },
 
@@ -486,7 +493,7 @@ export function createAudioService(
       const entry = manifest.entries[req.key];
       if (entry) {
         setState('speaking');
-        const ok = await playFile(urlOf(entry), req.rateFactor ?? 1, myToken);
+        const ok = await playFile(urlOf(entry), req.rateFactor ?? 1, myToken, req.key);
         // Nos pisó otro speak(): ni tocamos el estado ni mentimos diciendo que sonó.
         if (myToken !== token) return 'interrupted';
         if (ok) {
