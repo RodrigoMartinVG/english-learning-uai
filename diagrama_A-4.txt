@@ -1,0 +1,46 @@
+=============================================================================
+                 TEA AND NINETEENTH CENTURY PHYSICS  ·  Hannah Darken
+     PURPOSE --> thermodynamics for non-specialists · everyday example
+=============================================================================
+
+  [ 1. THE EVERYDAY FACT ]
+  • hot tea · table · cooler room --> cools down / never hotter
+  • WHY? --> THERMODYNAMICS (heat · heat flow)
+  • 19th century --> today: weather · black holes
+                                  |
+                                  v
+  [ 2. TWO KEY IDEAS ]
+  +------------------------------------+------------------------------------+
+  | TEMPERATURE                        | ENTROPY                            |
+  | • BULK PROPERTY <-- molecules +    | • re-arrange molecules             |
+  |   atoms in motion                  |   --> looks the same               |
+  | • tea cooling                      | • = HOW MANY WAYS                  |
+  |   --> molecules slowing            |                                    |
+  +------------------------------------+------------------------------------+
+                                  |
+                                  v
+  [ 3. THE FOUR LAWS ]
+  +--------+-----------------------------------+----------------------------+
+  | LAW    | THE TEXT                          | OUR CUP                    |
+  +--------+-----------------------------------+----------------------------+
+  | ZEROTH | A ~ C, B ~ C  -->  A ~ B          | thermometer: tea = room    |
+  |        | (~ no net heat flow)              | --> stops cooling          |
+  +--------+-----------------------------------+----------------------------+
+  | FIRST  | energy: not created,              | heat --> into the room     |
+  |        | not destroyed                     |                            |
+  +--------+-----------------------------------+----------------------------+
+  | SECOND | isolated system:                  | cup + room                 |
+  |        | entropy ^ --> MAX at equilibrium  | --> never hotter           |
+  +--------+-----------------------------------+----------------------------+
+  | THIRD  | T --> absolute zero (lowest)      |             —              |
+  |        | entropy --> constant MIN          |                            |
+  +--------+-----------------------------------+----------------------------+
+                                  |
+                                  v
+  [ 4. MY FUTURE PROFESSION: MATHEMATICS ]
+  • caught my attention:
+    (1) entropy = COUNTING --> combinatorics · probability
+    (2) author's method: hard idea + everyday example
+          --> TOOL: explain to non-specialists
+  • RECOMMEND --> other math students
+=============================================================================
